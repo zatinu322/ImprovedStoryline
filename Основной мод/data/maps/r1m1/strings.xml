@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_father"
+		modelSlot="1"
+		value="ОТЕЦ|Проснулся, лежебока! Уже битый час я жду тебя, чтобы сказать кое-что весьма важное, а ты опять спишь как сурок..."
+		sound="data\sounds\Speech\r1m1\r1m1_1_father.ogg"
+		time="11" />
+
+	<string
+		id="2"
+		modelName="mask_hero"
+		value="И тебе доброе утро. Чего нервничаешь?"
+		sound="data\sounds\Speech\r1m1\r1m1_2_hero.ogg"
+		time="3" />
+
+	<string
+		id="3"
+		modelName="mask_father"
+		modelSlot="1"
+		value="ОТЕЦ|Ладно, остынь. Вот так. Сегодня большой день в твоей жизни. Ты всегда был мне верным подспорьем и многому научился от меня... В общем, я решил, что настало время твоего совершеннолетия."
+		sound="data\sounds\Speech\r1m1\r1m1_3_father.ogg"
+		time="17" />
+
+	<string
+		id="31"
+		modelName="mask_father"
+		modelSlot="1"
+		value="ОТЕЦ|Теперь ты настоящий мужчина и можешь делать все, что пожелаешь, даже завести семью... Но лучше, конечно, сперва спросить разрешения."
+		sound="data\sounds\Speech\r1m1\r1m1_31_father.ogg"
+		time="12" />
+
+	<string
+		id="4"
+		modelName="mask_hero"
+		value="Неужели этот день настал?! Я думал, меня будут до старости мариновать на этой ферме!"
+		sound="data\sounds\Speech\r1m1\r1m1_4_hero.ogg"
+		time="6" />
+
+	<string
+		id="41"
+		modelName="mask_hero"
+		value="То есть, я хотел сказать, спасибо огромное, постараюсь оправдать оказанное мне доверие, сэр!"
+		sound="data\sounds\Speech\r1m1\r1m1_41_hero.ogg"
+		time="6" />
+
+	<string
+		id="5"
+		modelName="mask_father"
+		modelSlot="1"
+		value="ОТЕЦ|Опять ты ёрничаешь, а мне столько надо тебе сказать..."
+		sound="data\sounds\Speech\r1m1\r1m1_5_father.ogg"
+		time="5" />
+
+	<string
+		id="6"
+		modelName="mask_hero"
+		value="Что, прямо сейчас могу сесть и ехать куда захочу?"
+		sound="data\sounds\Speech\r1m1\r1m1_6_hero.ogg"
+		time="4" />
+
+	<string
+		id="7"
+		modelName="mask_father"
+		modelSlot="1"
+		value="ОТЕЦ|Ну, если ты так торопишься сесть за руль, то отправляйся в Южный и передай Серго этот пакет. А разговор отложим до твоего приезда."
+		sound="data\sounds\Speech\r1m1\r1m1_7_father.ogg"
+		time="12" />
+
+	<string
+		id="8"
+		modelName="mask_hero"
+		value="Ур-ра-а!!! Я мигом! Бывай, старик."
+		sound="data\sounds\Speech\r1m1\r1m1_8_hero.ogg"
+		time="4" />
+
+	<string
+		id="5963"
+		modelName="mask_hero"
+		value="Хорошо-хорошо, вот деньги, только не трогайте меня!"
+		sound=""
+		time="5" />
+
+	<string
+		id="5964"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Ладно, в этот раз тебе повезло. Больше не попадайся мне на глаза, иначе так просто не отделаешься. А теперь пошёл отсюда!"
+		sound=""
+		time="11" />
+
+	<string
+		id="1111"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="ЛИСА|Подожди-ка здесь, пока я закончу свои дела."
+		sound="data\sounds\Speech\r1m1\r1m1_1111_lisa.ogg"
+		time="3" />
+
+	<string
+		id="1112"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="ЛИСА|Готово. Поехали дальше."
+		sound="data\sounds\Speech\r1m1\r1m1_1112_lisa.ogg"
+		time="3" />
+
+	<string
+		id="1121"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="ЛИСА|Черт возьми, сколько времени потрачено впустую! Я же знаю, что он где-то здесь! Парень, мы точно объехали все здешние поселения?"
+		sound="data\sounds\Speech\r1m1\r1m1_1121_lisa.ogg"
+		time="7" />
+
+	<string
+		id="1122"
+		modelName="mask_hero"
+		value="Да, все деревни, как ты и сказала. Правда, осталось еще одно село, Глухое."
+		sound="data\sounds\Speech\r1m1\r1m1_1122_hero.ogg"
+		time="5" />
+
+	<string
+		id="1123"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="ЛИСА|Так что ты мне тут голову морочишь? Как туда проехать?"
+		sound="data\sounds\Speech\r1m1\r1m1_1123_lisa.ogg"
+		time="4" />
+
+	<string
+		id="1124"
+		modelName="mask_hero"
+		value="Вообще-то это на север отсюда за горами, совсем недалеко, но напрямик дороги нет. Нам придется ехать через Южный..."
+		sound="data\sounds\Speech\r1m1\r1m1_1124_hero.ogg"
+		time="7" />
+
+	<string
+		id="1125"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="ЛИСА|Здесь наши пути расходятся: надоело мне тащиться следом за твоей развалюхой. К тому же там, где для тебя нет дороги, моя машина пройдет с легкостью. Ты выполнил свою часть сделки. Держи свои деньги."
+		sound="data\sounds\Speech\r1m1\r1m1_1125_lisa.ogg"
+		time="11" />
+
+	<string
+		id="1126"
+		modelName="mask_hero"
+		value="Что же она искала? Пора и мне домой возвращаться. Узнаю, из-за чего отец так волновался."
+		sound="data\sounds\Speech\r1m1\r1m1_1126_hero.ogg"
+		time="7" />
+
+	<string
+		id="1131"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|А вот и наш возмутитель спокойствия. Мои источники сообщают, что ты подвязался к Лисе в помощники, а она – девушка щедрая... За скромный вклад в 1000 монет ты можешь продолжать свои грязные делишки и даже рассчитывать на нашу поддержку."
+		sound="data\sounds\Speech\r1m1\r1m1_1131_felix.ogg"
+		time="19" />
+
+	<string
+		id="1132"
+		modelName="mask_hero"
+		value="Да вы что? Откуда у меня такие деньги? И кто вы вообще такие?"
+		sound="data\sounds\Speech\r1m1\r1m1_1132_hero.ogg"
+		time="5" />
+
+	<string
+		id="1133"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Придется продать твою машину на запчасти, чтобы возместить нам моральный ущерб. Бей его!"
+		sound="data\sounds\Speech\r1m1\r1m1_1133_felix.ogg"
+		time="7" />
+
+	<string
+		id="1134"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Мы еще встретимся, щенок! Попомни мои слова: ты пожалеешь, что связался с Феликсом!"
+		sound="data\sounds\Speech\r1m1\r1m1_1134_felix.ogg"
+		time="8" />
+
+	<string
+		id="1141"
+		modelName="mask_hero"
+		value="О нет! Отец! Что за чудовище могло сотворить такое... Все, кого я любил и знал, мертвы ... "
+		sound="data\sounds\Speech\r1m1\r1m1_1141_hero.ogg"
+		time="11" />
+
+	<string
+		id="1142"
+		modelName="mask_hero"
+		value="..."
+		sound="data\sounds\Speech\r1m1\r1m1_1142_hero.ogg"
+		time="1" />
+
+	<string
+		id="1143"
+		modelName="mask_hero"
+		value="Я могу сделать для них только одно: отомстить! Как бы далеко ни прятался убийца, я найду его даже на краю земли! И уничтожу! Слышишь, я найду тебя!"
+		sound="data\sounds\Speech\r1m1\r1m1_1143_hero.ogg"
+		time="13" />
+
+	<string
+		id="1144"
+		modelName="mask_hero"
+		value="А вдруг это Феликс собрал дружков и напал на беззащитную деревню? Если это так, ему не жить! Он бывает в баре Южного. Там и начну поиски."
+		sound="data\sounds\Speech\r1m1\r1m1_1144_hero.ogg"
+		time="11" />
+
+	<string
+		id="1151"
+		modelName="mask_hero"
+		value="Я отомщу за смерть отца! "
+		sound="data\sounds\Speech\r1m1\r1m1_1151_hero.ogg"
+		time="3" />
+
+	<string
+		id="1152"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Ба, знакомые все лица. Покажите этому наглецу!"
+		sound="data\sounds\Speech\r1m1\r1m1_1152_felix.ogg"
+		time="6" />
+
+	<string
+		id="1153"
+		modelName="mask_hero"
+		value="Это все, что у тебя есть? Выходи сам на честный бой!"
+		sound="data\sounds\Speech\r1m1\r1m1_1153_hero.ogg"
+		time="5" />
+
+	<string
+		id="11540"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|А парень не промах... Где он взял такое вооружение? Ладно, хочешь сделать что-то хорошо, делай это сам. Посторонись."
+		sound="data\sounds\Speech\r1m1\r1m1_1154_felix.ogg"
+		time="10" />
+
+	<string
+		id="1155"
+		modelName="mask_hero"
+		value="Теперь ты умрешь за свои злодеяния!"
+		sound="data\sounds\Speech\r1m1\r1m1_1155_hero.ogg"
+		time="3" />
+
+	<string
+		id="1156"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Постой, я никого не убивал уже много лет. У нас уговор с местными! Это ты ворвался в мой дом и начал калечить моих людей!"
+		sound="data\sounds\Speech\r1m1\r1m1_1156_felix.ogg"
+		time="10" />
+
+	<string
+		id="1157"
+		modelName="mask_hero"
+		value="Только у тебя хватило бы сил и наглости сжечь целую деревню!"
+		sound="data\sounds\Speech\r1m1\r1m1_1157_hero.ogg"
+		time="5" />
+
+	<string
+		id="1158"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Так ты из Глухого! Поверь, это были не мы, а какие-то гастролёры из соседних областей!"
+		sound="data\sounds\Speech\r1m1\r1m1_1158_felix.ogg"
+		time="8" />
+
+	<string
+		id="1159"
+		modelName="mask_hero"
+		value="Ты лжёшь!"
+		sound="data\sounds\Speech\r1m1\r1m1_1159_hero.ogg"
+		time="1" />
+
+	<string
+		id="11510"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Клянусь могилой своего отца! Да спроси хоть у своей подружки Лисы. Она все видела."
+		sound="data\sounds\Speech\r1m1\r1m1_11510_felix.ogg"
+		time="7" />
+
+	<string
+		id="11511"
+		modelName="mask_hero"
+		value="Откуда ты знаешь?"
+		sound="data\sounds\Speech\r1m1\r1m1_11511_hero.ogg"
+		time="2" />
+
+	<string
+		id="11512"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Так она же нам про это и рассказала. А потом умчалась на север. В сторону Пешта."
+		sound="data\sounds\Speech\r1m1\r1m1_11512_felix.ogg"
+		time="6" />
+
+	<string
+		id="11513"
+		modelName="mask_hero"
+		value="Лиса... я чувствую, что она как-то со всем этим связана... Ладно, Феликс, я сохраню тебе жизнь. Иди на все четыре стороны. Только не смей больше показываться в этих краях!"
+		sound="data\sounds\Speech\r1m1\r1m1_11513_hero.ogg"
+		time="14" />
+
+	<string
+		id="11514"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="БАНДИТ ФЕЛИКС|Ты победил. Но мы еще встретимся, и тогда я буду лучше подготовлен."
+		sound="data\sounds\Speech\r1m1\r1m1_11514_felix.ogg"
+		time="5" />
+
+	<string
+		id="11515"
+		modelName="mask_hero"
+		value="До скорого!"
+		sound="data\sounds\Speech\r1m1\r1m1_11515_hero.ogg"
+		time="2" />
+
+	<string
+		id="2222"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="70"
+		modelSlot="1"
+		value="ПЬЯНИЦА ПЕТРО|Отлично, мы показали этим пройдохам, кто тут главный!"
+		sound="data\sounds\Speech\r1m1\r1m1_2222_ed.ogg"
+		time="4" />
+
+	<string
+		id="33330"
+		modelName="mask_father"
+		value="ОТЕЦ|...сынок...!"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m1\r1m1_33330_father.ogg"
+		time="3" />
+
+	<string
+		id="33331"
+		modelName="mask_hero"
+		value="О боже, отец! Что здесь произошло? Кто это сотворил?"
+		sound="data\sounds\Speech\r1m1\r1m1_33331_hero.ogg"
+		time="6" />
+
+	<string
+		id="33332"
+		modelName="mask_father"
+		modelSlot="1"
+		value="ОТЕЦ|Слушай внимательно. Ты - мой приемный сын. Возьми - это вещи твоего настоящего отца. Найди Бена Дросселя. Он исследователь. Он поможет... Сын... не дай ненависти... отравить твою... ду... шу...!"
+		sound="data\sounds\Speech\r1m1\r1m1_33332_father.ogg"
+		time="30" />
+
+	<string
+		id="33333"
+		modelName="mask_hero"
+		value="Моя жизнь... Что же мне делать дальше? У меня ведь никого не осталось...  и ничего... Только это письмо..."
+		sound="data\sounds\Speech\r1m1\r1m1_33333_hero.ogg"
+		time="10" />
+
+	<string
+		id="33334"
+		modelAutosized="true"
+		modelName="quest_letter"
+		modelSlot="1"
+		value="ПИСЬМО|&quot;...Сын, если ты читаешь это письмо, значит, я не смог вернуться и вырастить тебя сам. Я знаю, что Петр отлично справился с этой задачей. Я вижу тебя, такого молодого и полного сил, и сердце мое обливается слезами...&quot;"
+		sound="data\sounds\Speech\r1m1\r1m1_33334_letter.ogg"
+		time="16" />
+
+	<string
+		id="33335"
+		modelAutosized="true"
+		modelName="quest_letter"
+		modelSlot="1"
+		value="ПИСЬМО|&quot;...Я виню себя за то, что меня не было рядом, когда ты рос. И это мое страшное наказание. Но знай, что я не мог поступить иначе. Передо мной стоит задача всей жизни...&quot;"
+		sound="data\sounds\Speech\r1m1\r1m1_33335_letter.ogg"
+		time="12" />
+
+	<string
+		id="33336"
+		modelAutosized="true"
+		modelName="quest_letter"
+		modelSlot="1"
+		value="ПИСЬМО|&quot;...Только выполнив задуманное, смогу я успокоиться и вновь почувствовать себя человеком.  Если нет... значит, я недостоин жить.  Это письмо - извинение. Прости меня, если сможешь. Ты - всегда в моем сердце, сын.&quot;"
+		sound="data\sounds\Speech\r1m1\r1m1_33336_letter.ogg"
+		time="16" />
+
+	<string
+		id="33337"
+		modelName="mask_hero"
+		value="Это все? Никаких объяснений... Как я могу простить того, кого никогда не знал? Мне больше нечего здесь делать. Я отправлюсь на поиски Бена. Кто бы это ни был, надеюсь, он поможет мне обрести себя. Может быть в Южном слышали о нем?"
+		sound="data\sounds\Speech\r1m1\r1m1_33337_hero.ogg"
+		time="16" />
+
+	<string
+		id="8800"
+		value="Вы играете в первый раз. Хотите ли вы, чтобы обучающие сообщения объяснили вам, как играть?"
+		numButtons="2" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
+		value="Я не знаю, куда ведет эта дорога, поэтому останусь здесь."
+		time="3" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="Какое-то странное место. Лучше держаться отсюда подальше. "
+		time="3" />
+
+	<string
+		id="77771"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffffff|    История не сохранила точных сведений о темных временах, наступивших сразу после Катастрофы. Доподлинно известно лишь то, что люди выжили в отравленном воздухе благодаря защитным маскам. Это творение неизвестного изобретателя уравняло всех. Тонкая преграда, вставшая на пути неминуемой смерти, стала символом нового человечества. Маски сплотили людей и придали им силы бороться за место под солнцем.||    Возникли новые поселения вдали от прежних городов, ставших братскими могилами. Постепенно были налажены связи между разрозненными группами выживших. Фермеры, шахтеры, торговцы – возвращение к простым занятиям пошло только на пользу растерянным людям.||    Но человек остается человеком во все времена. Остались те, кто сохранял мудрость веков, чтобы делиться ею с миром. Были и те, кто предпочел созиданию разрушение."
+		sound="data\sounds\Speech\rolik\r1m1_969_narrator.ogg"
+		fontSize="18"
+		scrollSpeed="0.65"
+		time="68" />
+		
+	<string
+		id="77773"
+		value="Вы слишком долго пробыли в Глухом и были убиты вместе со всеми его жителями. Теперь вам никогда не узнать всей правды о вас и об этом мире."
+		sound="data\sounds\speech\rolik\ending3.ogg"
+		fontSize="12"
+		scrollSpeed="0.5"
+		time="11" />
+
+	<string
+		id="77776"
+		modelName=""
+		value="Разрушение форпоста Ньери, пришельцев из других миров, развязало руки Оракулу. Первым делом он взял под контроль орбитальное вооружение и нанес ядерный удар по Зармеку. Когда источник заражения был уничтожен, многие испытали шок, от которого не все смогли оправиться."
+		sound="data\sounds\Speech\rolik\ending21.ogg"
+		fontSize="18"
+		time="22" />
+	<string
+		id="77777"
+		modelName=""
+		value="Слишком глубоко укоренилось таинственное излучение в человеческой сущности. Пытаясь исправить причиненное зло, суперкомпьютер понемногу начал проникать во все области человеческой жизни. По его чертежам были восстановлены многочисленные полезные устройства."
+		sound="data\sounds\Speech\rolik\ending22.ogg"
+		fontSize="18"
+		time="20" />
+	<string
+		id="77778"
+		modelName=""
+		value="Всевозможные роботы-помощники были приставлены к каждому выжившему, чтобы помогать им по всём. Однако люди не приняли перемен. Многие отказались от даров Оракула и вернулись к простым занятиям. И все чаще кто-то жалел об исчезновении голоса, беспрестанно шепчущего о восхождении."
+		sound="data\sounds\Speech\rolik\ending23.ogg"
+		fontSize="18"
+		time="25" />
+	<string
+		id="77779"
+		modelName=""
+		value="В Фатерлянде впервые за долгое время воцарился мир. Группировка 'Бригада', постоянно терроризирующая северных торговцев, была полностью уничтожена, а оружие, найденное на их базе, используется теперь для защиты торговых караванов."
+		sound="data\sounds\speech\rolik\narator_r1m3_g.ogg"
+		fontSize="18"
+		time="14" />
+	<string
+		id="77780"
+		modelName=""
+		value="Новый мэр Минина не только наладил поставки нефти во все окрестные деревни, но и превратил город в крупнейшую торговую зону, где каждый свободный торговец может выгодно продать свой товар."
+		sound="data\sounds\speech\rolik\narator_r1m3_g2.ogg"
+		fontSize="18"
+		time="14" />
+	<string
+		id="77781"
+		modelName=""
+		value="В Рощу Друидов вернулось спокойствие. Благодаря спасению повстанцев из Улука Друидам удалось вовремя пресечь попытку покушения на Верховного Друида, а также на корню подавить восстание Детей Железа. Теперь все города в Роще живут в согласии друг с другом, а стальные монстры более никому не докучают."
+		sound="data\sounds\speech\rolik\narator_r3m1_g.ogg"
+		fontSize="18"
+		time="18" />
+	<string
+		id="77782"
+		modelName=""
+		value="После победы антимилитаристкого движения СНГ и АР прекратили своё существование. Теперь Аржан и Либриум объединены под эгидой Союза Свободных Стран - группировки, созданной лидерами антимилитаристов после победы в войне."
+		sound="data\sounds\speech\rolik\narator_r2m1_g.ogg"
+		fontSize="18"
+		time="17" />
+	<string
+		id="77783"
+		modelName=""
+		value="Пока рано об этом говорить, но всё идёт к тому, что Союз Свободных Стран станет первой группировкой, добившейся столь значительных успехов в управлении страной."
+		sound="data\sounds\speech\rolik\narator_r2m1_g2.ogg"
+		fontSize="18"
+		time="10" />
+	<string
+		id="77784"
+		modelName=""
+		value="Что же касается главного героя, то ему можно только позавидовать. Устав от вечной дороги и решения судьбы мира, он вместе с Лисой осел в Троицком и собирается прожить оставшуюся жизнь в спокойствии и счастье. Но неужели его приключения на этом закончились? Что ж, поживём - увидим."
+		sound="data\sounds\speech\rolik\narator_pl_g.ogg"
+		fontSize="18"
+		time="19" />
+	<string
+		id="77785"
+		modelName=""
+		value="Фатерлянд пришёл в упадок. Захватив Пешт, 'Бригада' перекрыла важнейший торговый путь, отрезав Минин от 70% его дохода. Окрестные деревни наполовину вымерли, сам Минин обеднел, и лишь лидеры 'Бригады' и при деньгах, и при власти."
+		sound="data\sounds\speech\rolik\narator_r1m3_b.ogg"
+		fontSize="18"
+		time="17" />
+	<string
+		id="77786"
+		modelName=""
+		value="Несмотря на недавние успехи 'Бригады' в войне с торговцами, последним удалось отбить Пешт и всё вернулось на круги своя. 'Бригада' по-прежнему уничтожает около 30% торговых караванов, а столица региона - Минин - по-прежнему бедствует."
+		sound="data\sounds\speech\rolik\narator_r1m3_n.ogg"
+		fontSize="18"
+		time="14" />
+	<string
+		id="77787"
+		modelName=""
+		value="На далёких островах Рощи Друидов нынче неспокойно. Хотя Друидам и удалось предотвратить покушение на Верховного Друида, регион охватила кровопролитная гражданская война."
+		sound="data\sounds\speech\rolik\narator_r3m1_n.ogg"
+		fontSize="18"
+		time="11" />
+	<string
+		id="77788"
+		modelName=""
+		value=" Всё больше молодых людей принимают религию Детей Железа и поднимают оружие против своих собратьев. И нельзя сказать точно, чем закончится это противостояние."
+		sound="data\sounds\speech\rolik\narator_r3m1_n2.ogg"
+		fontSize="18"
+		time="11" />
+	<string
+		id="77789"
+		modelName=""
+		value="Для Рощи Друидов наступили тёмные времена. После убийства Верховного Друида Дети Железа захватили власть в регионе и потребовали от Друидов отречься от их веры. Тех, кто отказывался, показательно казнили."
+		sound="data\sounds\speech\rolik\narator_r3m1_b.ogg"
+		fontSize="18"
+		time="14" />
+	<string
+		id="77790"
+		modelName=""
+		value="Опасаясь последующих событий, Оракул решил действовать превентивно и испепелил весь регион с помощью мощнейшего авиаудара. Теперь, вместо цветущей Рощи, на острове только выжженая земля."
+		sound="data\sounds\speech\rolik\narator_r3m1_b2.ogg"
+		fontSize="18"
+		time="12" />
+	<string
+		id="77791"
+		modelName=""
+		value="Несмотря на закрытие границ и значительные военные силы, северные торговцы в конце концов проиграли войну с рыбаками и вернулись обратно в Фатерлянд. Теперь в Хеле вновь воцарились мир и спокойствие."
+		sound="data\sounds\speech\rolik\narator_r1m4_g.ogg"
+		fontSize="18"
+		time="10" />
+	<string
+		id="77792"
+		modelName=""
+		value="Благодаря помощи со стороны, жителям Лиденклауда удалось дать отпор адептам и вовремя покинуть эти неспокойные земли. Они успешно добрались до Ле Канады и начали там новую жизнь, а Адепты вернулись в свои земли и более ни на кого не нападали."
+		sound="data\sounds\speech\rolik\narator_r1m6_g.ogg"
+		fontSize="18"
+		time="10" />
+
+	<string
+		id="10"
+		value="||@FF000000АААААААААААААААААА@FFFFFFFFКомпания @FFFFA600'Targem Games'@FF000000АААААААААААААААААА"
+		sound=""
+		fontSize="12"
+		time="5" />
+
+	<string
+		id="11"
+		value="||@FF000000АААААААААААААА@FFFFFFFFсовместно с издательством @FFFFA600'Бука'@FF000000ААААААААААААА"
+		sound=""
+		fontSize="12"
+		time="5" />
+
+	<string
+		id="12"
+		value="||@FF000000АААААААААААААААААААААААА@FFFFFFFFпредставляют@FF000000ААААААААААААААААААААААА"
+		sound=""
+		fontSize="12"
+		time="10" />
+
+	<string
+		id="13"
+		value="|@FF000000АААААААААААА@FFFFA600Ex Machina / Hard Truck Apocalypse@FF000000АААААААААААА||@FF000000АААААIАААААААААА@FFFF0000Improved Storyline v1.0.5.2"
+		sound=""
+		fontSize="12"
+		time="6" />
+
+	<string
+		id="14"
+		value="||@FF000000ААААААААААААААААААААА@FFFFFFFFНа следующий день@FF000000ААААААААААААААААААААА"
+		sound=""
+		fontSize="12"
+		time="6" />
+
+	<string
+		id="90000"
+		value="Отключить Мистера Шляпу? |(рекомендуется «Да» для первого прохождения мода)"
+		numButtons="2" />
+
+	<string
+		id="90001"
+		value="Improved Storyline v1.0.5.2||Перед началом игры настоятельно рекомендуется ознакомиться с мануалом к моду.|@00FFFFFFA"
+		numButtons="1" />
+
+	<string
+		id="5976"
+		value="Пароль для бонусной концовки: r*************|Более подробная информация содержится в мануале к моду." />
+
+	<string
+		id="5965"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Даже не верится. Буквально ещё вчера он метался из города в город в попытках разобраться, что происходит. А сегодня он уже добрался до пустыни… Как же быстро летит время…"
+		sound=""
+		time="14" />
+
+	<string
+		id="5966"
+		modelName="r4_man"
+		modelSkin="1"
+		modelCfg="111"
+		modelSlot="1"
+		value="СЕРГО|«Время», говоришь? Забавно слышать это от тебя."
+		sound=""
+		time="7" />
+
+	<string
+		id="5967"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Почему ты всё ещё здесь?"
+		sound=""
+		time="5" />
+
+	<string
+		id="5968"
+		modelName="r4_man"
+		modelSkin="1"
+		modelCfg="111"
+		modelSlot="1"
+		value="СЕРГО|Не переживай, я успею добраться до 'Повелителя' раньше него."
+		sound=""
+		time="7" />
+
+	<string
+		id="5969"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Хотелось бы верить. Слишком многое поставлено на кон. Ты ведь помнишь, что ничего не должен ему про меня рассказывать?"
+		sound=""
+		time="10" />
+
+	<string
+		id="5970"
+		modelName="r4_man"
+		modelSkin="1"
+		modelCfg="111"
+		modelSlot="1"
+		value="СЕРГО|Да, помню."
+		sound=""
+		time="5" />
+
+	<string
+		id="5971"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Отлично. Надеюсь, он сделает правильный выбор."
+		sound=""
+		time="6" />
+
+	<string
+		id="5972"
+		modelName="mask_hero"
+		value="Я не вижу смысла показывать Лисе Глухое. Всё равно там наверняка нету того, кого она ищёт."
+		sound=""
+		time="8" />
+
+	<string
+		id="5973"
+		modelName="mask_hero"
+		value="Поверить не могу…"
+		sound=""
+		time="4" />
+
+	<string
+		id="5974"
+		modelName="mask_father"
+		modelSkin="0"
+		modelSlot="1"
+		value="ОТЕЦ|Сынок, что-то ты долго. Серго принял товар? Никаких трудностей по пути не возникло?"
+		sound=""
+		time="7" />
+
+	<string
+		id="5975"
+		modelName="mask_hero"
+		value="Нет… Я не хочу тебя видеть! Исчезни! Ты мёртв!"
+		sound=""
+		time="6" />
+
+	<string
+		id="5977"
+		value="Пароль для бонусной концовки: *}************|Более подробная информация содержится в мануале к моду." />
+
+	<string
+		id="5978"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@00ffffff|АААААААААААААAAАААА@ffffa600Компания «Targem Games»| | | |@00ffffffААААААААAAАААААААААААААААА@ffffa600Продюсер||@00ffffffАААААААААAAAАААААААА@ffffffffСтанислав «scorp» Скорб| | |@00ffffffААААААAAААААAAАААА@ffffa600Технический директор проекта||@00ffffffАААААААААААAAAAААААААААА@ffffffffАлексей Скрябин| | |@00ffffffАААААAAАААААААААААААААА@ffffa600Менеджер проекта||@00ffffffААААААААААААAAAАААААА@ffffffffЕвгений «Hrrr» Хрунов| | |@00ffffffААААААААААААААAAАААААААААА@ffffa600Сценарий||@00ffffffАААААААAААААAAААААА@ffffffffАлексей «Alex TG» Честных| | |@00ffffffАААААААAIААААААААА@ffffa600Ведущий программист проекта||@00ffffffАААААIАААAAААААААААААА@ffffffffАнтон «anger» Савин| | |@00ffffffАААААААААAAАААААААА@ffffa600Главный дизайнер проекта||@00ffffffААААААAААААAAАААААА@ffffffffАлексей «Alex TG» Честных| | |@00ffffffААААААААААAAААААААА@ffffa600Ведущий художник проекта||@00ffffffАААААААAAАААААААА@ffffffffАлександр «Alex ML» Маргушин| | |@00ffffffАААААAAАААААААААААААААААА@ffffa600Дизайн игры||@00ffffffАААААААIААААААAAАААА@ffffffffДенис «mif2000» Галанин|@00ffffffААААААААААAAАААААА@ffffffffСергей «JSinx» Удюрминский|@00ffffffАААААААAAАААААААААА@ffffffffАлексей «Razaz» Ануфриев|@00ffffffАААААААААААAIAАААААА@ffffffffСтанислав «scorp» Скорб|@00ffffffАААААААAAАААААААААААА@ffffffffБорис «borg» Смирнов| | |@00ffffffААААААААAAААIАААААААААА@ffffa600Программирование||@00ffffffААААААААААAIIAААААА@ffffffffЕлена «SoftKitty» Евдокимова|@00ffffffАААААААААААААААAAААААА@ffffffffИван «Vano» Власов|@00ffffffАААААААAAААААААААААА@ffffffffИлья «phosgen» Рузаков|@00ffffffАААААААААААААААAAАА@ffffffffМаксим «Shadow» Сарманов|@00ffffffААААААААААAIAААААА@ffffffffСергей «Ice Cat» Ключковский|@00ffffffАААААААААAAААААААААА@ffffffffИгорь «Goryh» Дегтярев| | |@00ffffffААААААААААААAAАААААААААААА@ffffa600Графика||@00ffffffААААААААAAААААААА@ffffffffАлександр «Alex ML» Маргушин|@00ffffffААААААAAАААААААААААААААА@ffffffffИван Снигирев|@00ffffffАААААААААААААAAАААА@ffffffffЕвгений «Dzhin» Гольцов|@00ffffffААААААAAАААААААААА@ffffffffВладимир «Price» Селезнев|@00ffffffААААААААAAАААААААААА@ffffffffСтанислав «Staz» Черва|@00ffffffААААААААAAААААААААААА@ffffffffРустам «Rychi» Турей|@00ffffffАААААААААААAAАААААААААА@ffffffffЕвгений Токарев|@00ffffffАААААААААAAААААААААА@ffffffffСергей «Sega» Митряев|@00ffffffААААААААААAAАААААА@ffffffffВиктор «isymbosi» Корьякин|@00ffffffААААААААААААAAАААААААААА@ffffffffРоман Латынов| | |@00ffffffАААААААААААААAAААААААААА@ffffa600Дизайн миссий||@00ffffffААААААААIААААAAААААА@ffffffffДенис «mif2000» Галанин|@00ffffffАААААААААAAААААААА@ffffffffСергей «JSinx» Удюрминский|@00ffffffАААААААAAАААААIАААААА@ffffffffАртем «solo» Соловьев|@00ffffffАААААААААIААААAAАА@ffffffffКондратьев «HiKiller» Даниил|@00ffffffААААААААААAIAАААААААА@ffffffffСтанислав «Staz» Черва| | |@00ffffffАААААААAAААААААААААА@ffffa600Разработка интерфейсов||@00ffffffАААААААААААAAААААААА@ffffffffМихаил «Rai» Матвиенко| | |@00ffffffААААААААААААААААAAААААААА@ffffa600Спецэффекты||@00ffffffААААААAАААААААAAААААА@ffffffffАлексей «Hal» Лобанов| | |@00ffffffАААААААААААААААAAАААААААА@ffffa600Музыка/звуки||@00ffffffААААААААААААAAААААААААААА@ffffffffАнтон Попов|@00ffffffААААААААААAAАААААААААА@ffffffffЕкатерина Швеммер| | |@00ffffffААААААААААААААААAAААААААА@ffffa600Тестирование||@00ffffffАААААААААAААААAAАААААА@ffffffffВячеслав «ls» Авдеев| | |@00ffffffААААААААААAAААААААААААААА@ffffa600PR-менеджер||@00ffffffААААААААAAAАААААААА@ffffffffСветлана «Сrystal» Честных| | |@00ffffffAAAAA@ffffa600В игре использовались композиции победителей музыкального|@00ffffffААAAАААААААААААААААААААААА@ffffa600конкурса||@00ffffffААААААААААAAАААААААААА@ffffffffАлександр Чекстер|@00ffffffААААААААААААAAААААААААА@ffffffffБорис Веденский|@00ffffffАААААААААAAАААААААААААА@ffffffffАлександр Трегер|@00ffffffАААААААААААААAAААААААААА@ffffffffМихаил Сидоров|@00ffffffАААААААААААAAААААААААА@ffffffffАлександр Лисенков|@00ffffffААААААAAАААААААААААААААААА@ffffffffParalaxeen|@00ffffffАААААААААААAAААААААААААА@ffffffffИгорь Белоусов| | |@00ffffffАААААAAАААА@ffffa600Также принимали участие на разных этапах||@00ffffffААААААAAАААА@ffffffffКонстантин Сохарев - программирование|@00ffffffААААААААAAАААА@ffffffffСвятослав Паташников - руководство|@00ffffffАААААААААAAАААА@ffffffffАлексей Андрущенко - Веб-дизайн"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.7"
+		time="89" />
+
+	<string
+		id="5979"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@00ffffffАААААААААAAАААААААААААА@ffffa600Компания «Бука»| | | |@00ffffffААААААААAAАААААААААААААААА@ffffa600Продюсер||@00ffffffААААААААААААAAAАIАААААААА@ffffffffИван Бунаков| | |@00ffffffАААААААААААAAААААААААА@ffffa600Старший продюсер||@00ffffffААAAААААААААААААААААААААА@ffffffffИван Мороз| | |@00ffffffААААААААAAАААА@ffffa600Менеджеры по продвижению продуктов||@00ffffffААААААААААААААААААAAАААААА@ffffffffЮрий Вирич|@00ffffffААААААААААAАAAААААААААА@ffffffffАлексей Писклюков| | |@00ffffffАААААААAAААIАААААААААА@ffffa600Технический эксперт||@00ffffffААААААААAAIААААААААААА@ffffffffКирилл Бестемьянов| | |@00ffffffААААААААААААААААAIAААААА@ffffa600Эксперт по звуку||@00ffffffААААААААААААIАAAАААААААА@ffffffffРуслан Дмитриев| | |@00ffffffААААААААAAАААААААААА@ffffa600Дизайнеры-полиграфисты||@00ffffffААААAAААААААААААААААААААА@ffffffffСанан Ушанов|@00ffffffААААAAААIАААААААААААА@ffffffffДаниелла Климашевская| | |@00ffffffААААААААААААААААAAААААААА@ffffa600PR-менеджер||@00ffffffААААААААААААAAАААААААА@ffffffffАлексей Пастушенко| | |@00ffffffААААААAAАААААIААААААА@ffffa600Ассистент PR-менеджера||@00ffffffАААААААААAAАААААААААААААА@ffffffffОлег Морозов| | |@00ffffffААААААААAAААААААIААААА@ffffa600Ассистент продюсера||@00ffffffААААААААААААААIAAАААААА@ffffffffАлексей Пешехонов|@00ffffffААААААААAAАIААААААААААА@ffffffffНиколай Сафронов| | |@00ffffffААААААААААAAАААААА@ffffa600Менеджер по новым командам||@00ffffffААААААААААААAAААААААААА@ffffffffНиколай Сафронов| | |@00ffffffААААAAААААААААААААААА@ffffa600Выпускающий продюсер||@00ffffffАААААААААААAAAААААААААААА@ffffffffАлександр Пак| | |@00ffffffАААAAАААААААIААААААААА@ffffa600Старший тестировщик||@00ffffffАААААААAAАIАААААААААААААА@ffffffffЕвгений Попов|@00ffffffАААААААААААAAААIААААААААААА@ffffffffИван Рид| | |@00ffffffААААААAAААААIААААААААА@ffffa600Служба тестирования||@00ffffffАААААААААААААААААIАAAААААА@ffffffffАнтон Епишин|@00ffffffААААААААААААAIAАААААААААА@ffffffffАлексей Петров|@00ffffffААААААААIАAAААААААААААА@ffffffffАлександр Полосин|@00ffffffАААААААААААIААAAААААААААА@ffffffffЕвгений Попов|@00ffffffААААААААAAАААААААААААIАААА@ffffffffИван Райнов|@00ffffffАААААААААААААААААААIIАAAАААА@ffffffffИван Рид|@00ffffffААААААААААААAAАIААААААА@ffffffffАлексей Чеботарев| | |@00ffffffАААААААААААААAAАААААА@ffffa600Внешнее тестирование||@00ffffffАААААААААAAАААААААААААААА@ffffffffПетр Беляев|@00ffffffАААААААААAAААААААААААААА@ffffffffАлексей Бунак|@00ffffffААААААААAAААААААААААААА@ffffffffИгорь Дмитриев|@00ffffffАААААААAAАААААААААААААА@ffffffffМихаил Матюшов|@00ffffffАААААААААААAAААААААААААА@ffffffffДенис Соколов|@00ffffffАААААААААAAАААААААААААА@ffffffffИгорь Пешехонцев|@00ffffffАААААААААААAAААААААААААА@ffffffffДмитрий Чичков|@00ffffffААААААААААААААAAААААААА@ffffffffАлексей Шеховцов|@00ffffffАААААААААААAAАААААААААААА@ffffffffИлья Юсипов|@00ffffffААААААААААAAААААААААААААА@ffffffffТимур Юсипов| | |@00ffffffАААААААAAААААААААААААААА@ffffa600Служба продаж||@00ffffffАААААААAAААААААААААААА@ffffffffМаксим О. Алексеев|@00ffffffААААААААААААААAAАААААА@ffffffffМаксим Ю. Алексеев|@00ffffffААААААААAAАААААААААААА@ffffffffМаксим А. Алексеев|@00ffffffАААААААААAAАAААААААААА@ffffffffНаталья Анкундинова|@00ffffffААААААААAAАААААААААААААА@ffffffffЕлена Антонова|@00ffffffАААААААAAААААААААААААААА@ffffffffИлья Бровченко|@00ffffffААААААААААААAAААААААААА@ffffffffПавел Григорьев|@00ffffffАААААААAAАААIАААААААААА@ffffffffВиктория Киселева|@00ffffffААААAAААААААААААIАААААА@ffffffffАлександр Кочетков|@00ffffffАААААААAAАААААААAААIААААА@ffffffffПавел Круглов|@00ffffffААААААААAAАААААIААААААААА@ffffffffАндрей Осипов|@00ffffffАААААААААААААААAAАААА@ffffffffАлександр Петринский|@00ffffffАААААААААААAAААААААААА@ffffffffОльга Полковникова|@00ffffffААААААААAAААААААААААААА@ffffffffЛариса Савельева|@00ffffffАААААААAAАААААААААААААА@ffffffffЕвгений Самсонов|@00ffffffААААААААААAAАААААААААА@ffffffffСветлана Самсонова|@00ffffffААААААААААААААAAАААААА@ffffffffВалерий Тихвинский|@00ffffffАААААААAAААААААААААААААА@ffffffffСергей Федосов| | |@00ffffffААААААААААААAAАААААААА@ffffa600Торговый маркетинг||@00ffffffААААААААAAААААААААААААА@ffffffffТатьяна Васекина| | |@00ffffffАААААAAААААААААААААААА@ffffa600Комьюнити менеджер||@00ffffffАААААААААAAААAААААААААА@ffffffffАлександр Ковалев| | |@00ffffffААААААААAAААААААААААААА@ffffa600Экспертный совет||@00ffffffАААААААААААAAАААААААААА@ffffffffВладимир Миняев|@00ffffffААААААААAAАААААААААААА@ffffffffМаксим Н. Михалев|@00ffffffААААААААAAАААААААААААААААА@ffffffffИван Мороз|@00ffffffАААААААААААААААAAААААААА@ffffffffСергей Руденко|@00ffffffААААААААAАAAАААААААААА@ffffffffВиталий Харитоненко| | |@00ffffffАААААААAAААААААААААА@ffffa600Юридическая поддержка||@00ffffffАААААААAAАААААААААААААА@ffffffffГеоргий Виталиев| | |@00ffffffААААААААAAААIАААААААА@ffffa600Техническая поддержка||@00ffffffААААААААААААAAАIАААААААА@ffffffffЕвгений Дмитриев| | |@00ffffffААААААААААAAААААААААА@ffffa600Генеральный директор||@00ffffffААААААААAAАААААААААААА@ffffffffАлександр Михайлов| | |@00ffffffААААААAAААААААААААААА@ffffa600Финансовый директор||@00ffffffАAAАААААААААААААААААААААА@ffffffffМарина Равун| | |@00ffffffАААААААAAАAАААААА@ffffa600Руководитель отдела маркетинга||@00ffffffАААААААААAAААААААААААА@ffffffffМаксим Н. Михалев| | |@00ffffffААААААААAAAАААА@ffffa600Руководитель коммерческого отдела||@00ffffffААААААААAAААААААААААААА@ffffffffТатьяна Устинова| | |@00ffffffААААААААAAАAААААА@ffffa600Руководитель отдела разработок||@00ffffffАААААААААAAАААААААААААААА@ffffffffИван Бунаков| | |@00ffffffААААААAAАААААААААААААА@ffffa600Отдельное спасибо||@00ffffffААААААААААААААААAAААААААА@ffffffffЮлия Белова|@00ffffffААААААААААAAАААААААААААА@ffffffffСергей Бобков|@00ffffffАААААААAAААААААААААААААА@ffffffffИлья Бровченко|@00ffffffАААAAАААААААААААААААААА@ffffffffДмитрий Захаров|@00ffffffААААААААААААААAAААААААА@ffffffffДмитрий Кулешов|@00ffffffАААААААААААААAAААААААААА@ffffffffДмитрий Лесин|@00ffffffАААААААААААААААAAАААААА@ffffffffВладимир Миняев|@00ffffffААААААAAАААААААААААААААААА@ffffffffИван Мороз|@00ffffffАААААААААААAAАААААААААААА@ffffffffМарина Равун|@00ffffffАААААААААААAAАААААААIАААААА@ffffffffИван Рид|@00ffffffАААААААAAААААААААААААААА@ffffffffИнна Суцепина|@00ffffffАААААААААААААААAAААААААА@ffffffffИгорь Устинов|@00ffffffААААААААAAААААААААААААААА@ffffffffИрина Царева|@00ffffffАААААААААААAAААААААААААА@ffffffffВиктория Эннс"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.8"
+		time="118" />
+
+	<string
+		id="5980"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@00ffffffАААААААААААААААААА@ffffa600«Improved Storyline v1.0.5.2»| | | |@00ffffffАААААААААААААААААААА@ffffa600Заимствования из модов| |@00ffffffААААААAIААААААА@ffffffffBooster Mod - карты, текстуры, иконки|@00ffffffААААААААААААААА@ffffffffKraycity - импортирован полностью|@00ffffffАААААААААААААААААААААА@ffffffffSteel Dawn - иконки| | |@00ffffffАААААААААААААААААААА@ffffa600Музыкальные композиции| |@00ffffffААААААААААААА@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAАAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAАAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAФAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAАААAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffЦифеi - Футуро|@00ffffffAAAAAAAAAAАAAAAAAAAA@ffffffffЦифеi - Прощай, Атлантис|@00ffffffААААААААААААААААААААА@ffffffffЦифеi - Праздник жизни|@00ffffffААААААААААААААА@ffffffffЦифеi - Когда возвращаются близкие| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Отдельное спасибо| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne за модель локомотива|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red за модель медали АР|@00ffffffАААА..AААААА@ffffffffVarisane за многочисленные текстовые правки| |@00ffffffAAIAAAAAAAAA@ffffffffА также всем тестировщикам, багрепортерам|@00ffffffАAAAАААААAААААААА@ffffffffи тем, кто просто помог советом| | |@00ffffffAAAAAAAAAAIAAAAAAAAAAAAA@ffffa600Спасибо за игру!"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.7"
+		time="36" />
+	
+	<string
+		id="5981"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value=""
+		sound=""
+		fontSize="18"
+		scrollSpeed="0.5"
+		time="1" />
+
+	<string
+		id="5982"
+		value="Титры пропускаешь - пароль не получаешь." />
+
+	<string
+		id="5983"
+		value="Вы желаете перенестись сразу в Хель?"
+		numButtons="2" />
+</resource>

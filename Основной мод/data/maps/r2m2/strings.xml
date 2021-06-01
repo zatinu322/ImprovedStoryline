@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="1"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_1_cd_officer_radio.ogg"
+		value="РАДИО|Недалеко от тебя - почти беззащитная деревня. Если ты нападешь сейчас - врагу придется оттянуть силы от более важных объектов."
+		time="8" />
+
+	<string
+		id="2"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_2_cd_officer_radio.ogg"
+		value="РАДИО|Тогда мы и ударим в другом месте. Помни, твоя задача – продержаться как можно дольше, а не спалить деревню. Действуй."
+		time="8" />
+
+	<string
+		id="3"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_3_cd_officer_radio.ogg"
+		value="РАДИО|Отступай. Ты сделал свое дело."
+		time="4" />
+
+	<string
+		id="4"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_4_felix.ogg"
+		value="БАНДИТ ФЕЛИКС|Вот наши дорожки и пересеклись. Я же говорил, что мы еще встретимся. Теперь я готов к поединку, и тебе не уйти отсюда живым!"
+		time="8" />
+
+	<string
+		id="8810"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_5_felix.ogg"
+		value="БАНДИТ ФЕЛИКС|Вот наши дорожки и пересеклись..."
+		time="8" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_5_hero.ogg"
+		value="Ты стоишь между мной и моей целью. Я, не задумываясь, растопчу тебя."
+		time="4" />
+
+	<string
+		id="6"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_6_felix.ogg"
+		value="БАНДИТ ФЕЛИКС|Ты... действительно сильнее..."
+		time="4" />
+
+	<string
+		id="7"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_7_cd_officer_radio.ogg"
+		value="РАДИО|Ты доказал свою преданность общему делу.  На трупе одного предателя мы нашли записку, в которой говорится о скорой встрече с агентами СНГ."
+		time="8" />
+
+	<string
+		id="8"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_8_cd_officer_radio.ogg"
+		value="РАДИО|Ты встретишься с ним вместо повстанца и выяснишь, все что сможешь. Действуй по обстоятельствам. Встреча - в баре Тосканы. Пароль: «Ночь длинна», отзыв: «Но рассвет близок»."
+		time="8" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_9_hero.ogg"
+		value="Я все понял. Наша победа близка."
+		time="4" />
+
+	<string
+		id="10"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_10_cd_officer_radio.ogg"
+		value="РАДИО|Враги повержены! Без своих правителей, они не смогут противостоять нам! Ты приблизил славный час победы и будешь щедро вознагражден. Тебя ждет Зион, тайный  город Акселя."
+		time="8" />
+
+	<string
+		id="24"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_24_hero.ogg"
+		value="Вот он - момент истины! "
+		time="4" />
+
+	<string
+		id="11"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_11_axel.ogg"
+		value="АКСЕЛЬ|Стой, не стреляй! Что тебе нужно от меня? Ты даже не местный."
+		time="4" />
+
+	<string
+		id="12"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_12_hero.ogg"
+		value="Помнишь, как ты отправил людей совершить рейд на соседний регион? Тогда вы сожгли дотла мое родное село и убили моего отца!"
+		time="8" />
+
+	<string
+		id="13"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_13_axel.ogg"
+		value="АКСЕЛЬ|И ты поверил досужим россказням? Кто тебе наплел эту чушь? "
+		time="4" />
+
+	<string
+		id="14"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_14_hero.ogg"
+		value="Та, кто видела все своими глазами."
+		time="4" />
+
+	<string
+		id="15"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_15_axel.ogg"
+		value="АКСЕЛЬ|Красавицы на быстрой тачке и с опасными связями?"
+		time="4" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_16_hero.ogg"
+		value="Да. Ты ее весьма точно описал."
+		time="4" />
+
+	<string
+		id="17"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_17_axel.ogg"
+		value="АКСЕЛЬ|Это была Лиса, я знаю. У нее вместо языка змеиное жало. Своей ложью она уже отравила жизнь мне и многим другим. А вот теперь и ты попался на удочку."
+		time="8" />
+
+	<string
+		id="18"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_18_hero.ogg"
+		value="Ты готов сейчас сказать что угодно, чтобы спасти свою шкуру!"
+		time="4" />
+
+	<string
+		id="19"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_19_axel.ogg"
+		value="АКСЕЛЬ|Она пришла ко мне в поисках защиты от врагов, так она сказала. Я принял ее в свой дом, а она обокрала меня и сбежала. Я доверял ей... Я..."
+		time="8" />
+
+	<string
+		id="20"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_20_hero.ogg"
+		value="Ты хочешь сказать, что невиновен? "
+		time="4" />
+
+	<string
+		id="21"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_21_axel.ogg"
+		value="АКСЕЛЬ|Поверь, мне хватает проблем и в своей стране, чтобы конфликтовать еще и с восточными соседями. Уже много месяцев мои люди не покидали своих позиций и никогда не атаковали твоих деревень."
+		time="8" />
+
+	<string
+		id="22"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_22_hero.ogg"
+		value="Не могу поверить, что попался на ее удочку! Но это не извиняет тебя. Пусть ты и невиновен в одном преступлении, но зато совершил множество других. Что скажешь ты замученным тобою людям, сможешь ли вернуть им их близких? От твоих слов зависит твоя жизнь."
+		time="12" />
+
+	<string
+		id="23"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_23_axel.ogg"
+		value="АКСЕЛЬ|Я скажу, что спас свой народ от голодной смерти! Скажу, что крепкая власть - вот что спасет мир от полной деградации. Я взял на себя грехи целой страны и готов за них ответить. Я помню имена всех павших воинов и скорблю о них. Жалею только об одном: что теперь их смерть станет бессмысленной."
+		time="12" />
+
+	<string
+		id="25"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_25_axel.ogg"
+		value="АКСЕЛЬ|Стой, не стреляй! Что тебе нужно от меня? Ты не похож на обычного солдата СНГ. "
+		time="4" />
+
+	<string
+		id="26"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_26_hero.ogg"
+		value="Какая проницательность. Признаться, мне мало дела до ваших местных разборок. Я лишь хочу, наконец, добраться до Лисы!"
+		time="8" />
+
+	<string
+		id="27"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_27_axel.ogg"
+		value="АКСЕЛЬ|Ха-ха-ха! Можешь вставать в очередь! Так она успела и тебе насолить. Вот чертовка!"
+		time="4" />
+
+	<string
+		id="28"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_28_hero.ogg"
+		value="О чем ты говоришь?"
+		time="4" />
+
+	<string
+		id="29"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_29_axel.ogg"
+		value="АКСЕЛЬ|Она пришла ко мне в поисках защиты от врагов, так она сказала. Я принял ее в свой дом, а она обокрала меня и сбежала. Она использовала мои ресурсы и моих людей для своих целей. А ведь я почти полюбил ее..."
+		time="12" />
+
+	<string
+		id="30"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_30_hero.ogg"
+		value="Черт побери! Значит, я напрасно прошел этот путь?! Постой, я точно знаю, что Лиса где-то поблизости! Я проследил за ней до границ этого региона."
+		time="8" />
+
+	<string
+		id="31"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_31_axel.ogg"
+		value="АКСЕЛЬ|Мне тоже доложили, что она вернулась на нашу территорию... Последний раз ее видели в районе монастыря. Я как раз собирался нанести ей визит, когда ты меня так бесцеремонно прервал."
+		time="8" />
+
+	<string
+		id="32"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_32_hero.ogg"
+		value="Ну, теперь-то злодейка от меня не скроется! В монастырь! И пусть никто не стоит у меня на пути!"
+		time="4" />
+
+	<string
+		id="33"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_33_axel.ogg"
+		value="Я пощажу тебя. Но твое правление закончилось. Пусть люди сами решают, как им жить дальше."
+		time="4" />
+
+	<string
+		id="50"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_50_hero.ogg"
+		value="Ого! Забавное природное явление. Думаю, ученых в Мидгарде заинтересует этот феномен!"
+		time="4" />
+
+	<string
+		id="51"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_51_hero.ogg"
+		value="Сейчас ты умрешь!"
+		time="4" />
+
+	<string
+		id="52"
+		modelName="mask_hero"
+		sound=""
+		value="Кто ты такой? Мне сказали, что здесь меня встретит Аксель!"
+		time="4" />
+
+	<string
+		id="53"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="ПАЛАЧ АР|Ха-ха-ха, и ты всерьёз надеялся увидеть здесь Акселя? Знаешь, тот повстанец, которого ты привёз, рассказал на допросе много интересного про тебя!"
+		time="8" />
+
+	<string
+		id="54"
+		modelName="mask_hero"
+		sound=""
+		value="И вы ему поверили? Он грязный предатель, он был готов сказать что угодно, лишь бы вы его отпустили!"
+		time="4" />
+		
+	<string
+		id="55"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="ПАЛАЧ АР|Да, мы тоже так подумали. А потом один из сержантов припомнил, где же он тебя видел. Ты участвовал в битве у Петропавловска, причём отнюдь не на нашей стороне."
+		time="8" />
+
+	<string
+		id="56"
+		modelName="mask_hero"
+		sound=""
+		value="Какая разница, что было раньше?! Теперь я на вашей стороне! Видишь ли, я тут внезапно осознал, что мои планы несколько разнятся с планами моих бывших союзников."
+		time="7" />
+		
+	<string
+		id="57"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="ПАЛАЧ АР|Что ж, может, кодекс чести СНГ и допускает предательство и перебежничество, но мы здесь подобных вещей не уважаем. Любое предательство карается смертью. По закону военного времени приговор будет исполнен немедленно!"
+		time="7" />
+
+	<string
+		id="58"
+		modelName="mask_hero"
+		sound=""
+		value="Еле уцелел... Нужно срочно бежать с этих земель, пока они не начали полноценную охоту на меня!"
+		time="7" />
+
+	<string
+		id="59"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="ЕРЕТИК|Чёрт побери! Мы опоздали…"
+		time="5" />
+
+	<string
+		id="60"
+		modelName="mask_hero"
+		sound=""
+		value="Всех спасти невозможно…"
+		time="4" />
+
+	<string
+		id="61"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="ЕРЕТИК|Видит их несуществующий бог, я хотел по-хорошему! Я собирался провернуть свержение их духовенских задниц без кровопролития, но раз уж святые люди не чураются таких методов, то и я не собираюсь!"
+		time="13" />
+
+	<string
+		id="62"
+		modelName="mask_hero"
+		sound=""
+		value="Что ты собираешься делать?"
+		time="3" />
+
+	<string
+		id="63"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="ЕРЕТИК|Дать сигнал моим сторонникам о том, что пора действовать. Попы даже не представляют, какая сила им противостоит. Я возьму его машину, а ты оповестишь моих людей в Сараево и Астрии. Скажешь им, что пора начинать. Они знают, что делать."
+		time="16" />
+
+	<string
+		id="64"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="РАДИО|Приём. Это штаб. Как твои успехи?"
+		time="4" />
+
+	<string
+		id="65"
+		modelName="mask_hero"
+		sound=""
+		value="Полный провал. Ни одна из сторон не заинтересована в мирном урегулировании проблемы. В Марецции меня и слушать не стали."
+		time="8" />
+
+	<string
+		id="66"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="РАДИО|Всё произошло так, как мы и предполагали. Хорошо, тогда мы переходим к другой фазе нашей операции. Возвращайся на базу, там мы тебе всё объясним. Конец связи."
+		time="10" />
+
+	<string
+		id="67"
+		modelName="mask_hero"
+		sound=""
+		value="Меня прислали из..."
+		time="3" />
+
+	<string
+		id="68"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="ЕРЕТИК|Фух, в этот раз пришлось нелегко. Проклятые монахи как-то узнали о том, где я прячусь, и пришли меня убрать. Но ничего, это им аукнется сторицей!"
+		time="10" />
+
+	<string
+		id="69"
+		modelName="mask_hero"
+		sound=""
+		value="Из огня да в полымя, значит? Ну, тем лучше, быстрее закончим!"
+		time="6" />
+
+	<string
+		id="70"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="ЕРЕТИК|Мне плевать, откуда ты! Главное, что мы преследуем одинаковые цели. А теперь надо спешить, если напали на меня, то мой компаньон тоже в беде! Моя машина не заводится, так что поедем на твоей. Давай, прыгай за баранку, а я покажу, куда рулить!"
+		time="15" />
+
+	<string
+		id="71"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="ПАЛАЧ АР|Да, мы тоже так подумали. А потом один из сержантов припомнил, где же он тебя видел. Ты недавно приезжал к нам в город и собирался агитировать за антимилитаристов!"
+		time="8" />
+
+	<string
+		id="72"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="ПАЛАЧ АР|Что ж, может, кодекс чести антимилитаристов и допускает предательство и перебежничество, но мы здесь подобных вещей не уважаем. Любое предательство карается смертью. По закону военного времени приговор будет исполнен немедленно!"
+		time="7" />
+
+		
+	<string
+		id="8800"
+		value="Вы хотите покинуть Аржан и переплыть в Вахат?"
+		numButtons="2" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
+		value="Я не знаю, куда ведет эта дорога, поэтому останусь здесь."
+		time="3" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="Какое-то странное место. Лучше держаться отсюда подальше. "
+		time="3" />
+
+	<string
+		id="8804"
+		modelName=""
+		value="Ваша попытка вести двойную игру провалилась, и более антимилитаристы никогда не предпринимали попыток вылазки на вражескую территорию. Война затянулась, и в этой суматохе вам уже никогда не найти Лису."
+		sound="data\sounds\speech\rolik\ending7.ogg"
+		time="15" />	
+
+	<string
+		id="8805"
+		modelName=""
+		value="Ваша попытка вести двойную игру провалилась, и более СНГ никогда не предпринимали попыток вылазки на вражескую территорию. Война затянулась, и в этой суматохе вам уже никогда не найти Лису."
+		sound="data\sounds\speech\rolik\ending71.ogg"
+		time="15" />
+
+	<string
+		id="8807"
+		modelName="mask_hero"
+		sound=""
+		value="Ну-с, значится, проехать вдоль берега и направо в ущелье. Зачем я вообще всё это делаю?"
+		time="10" />
+
+	<string
+		id="8808"
+		modelName="mask_hero"
+		sound=""
+		value="Ого! Это кому же пришло в голову построить здесь грузовик из булыжника? Выглядит неплохо, но зачем этот странный человек показывает всё это мне?"
+		time="17" />
+
+	<string
+		id="8809"
+		value="Пароль для бонусной концовки: ***********a**|Более подробная информация содержится в мануале к моду." />
+
+	<string
+		id="8812"
+		value="Пароль для бонусной концовки: ************b*|Более подробная информация содержится в мануале к моду." />
+	
+	<string
+		id="8813"
+		modelName=""
+		value="Вы не смогли защитить Еретика, и теперь никто вам не поможет свергнуть Акселя и Церковь Света. Ваша миссия зашла в тупик, и более Антимилитаристы никогда не предпринимали попыток вылазки на вражескую территорию. Война затянулась, и в этой суматохе вам уже никогда не найти Лису."
+		sound="data\sounds\speech\rolik\ending72.ogg"
+		time="18" />
+
+	<string
+		id="8811"
+		modelName="mask_hero"
+		sound=""
+		value="Вот черт, кажется, головорезы подоспели раньше! Я должен защитить его, иначе мне никогда не свергнуть Акселя."
+		time="10" />
+</resource>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Paths>
+
+	<Path Name = "start_game">
+		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
+	</Path>
+
+	<Path Name = "MorassNoPath">
+		<Point coord="0 10 -50" rotation="0.0 0.0 0.0 0.0" zoom="1.0" />
+	</Path>
+
+	<Path Name = "circle">                         
+		<Point coord="36.712 260.283 64.978" rotation="-0.095 -0.742 0.108 0.654" zoom="1.0" />
+		<Point coord="59.839 257.949 33.428" rotation="-0.069 0.008 -0.001 0.998" zoom="2.0" />
+		<Point coord="78.272 264.514 55.376" rotation="-0.243 0.547 -0.170 0.783" zoom="0.7" />
+		<Point coord="66.793 253.438 85.261" rotation="-0.011 0.984 -0.065 0.168" zoom="1.0" />
+	</Path>
+
+	<Path Name = "relative">                         
+		<Point coord="0 10 -50" rotation="0.0 0.0 0.0 0.0" zoom="1.0" />
+	</Path>
+
+	<Path Name = "BolotoOF_cam01">                         
+		<Point  coord="1266.468 213.171 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
+		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
+	</Path>
+
+	<Path Name = "Boloto_cam01">                         
+		<Point coord="-4.510 1.500 20.571" rotation="0.090 -0.603 -0.068 0.790"/>
+	</Path>
+
+	<Path Name = "Boloto_cam02">                         
+		<Point  coord="0.000 2.000 0.000"/>
+	</Path>
+
+	<Path Name = "Boloto_cam03">                         
+		<Point  coord="878.287 241.002 1723.050" rotation="0.038 0.891 -0.075 -0.446"/>
+<!-- 		<Point  coord="878.287 240.002 1723.050" rotation="0.038 0.891 -0.075 -0.446"/>		 -->
+	</Path>
+
+
+	<Path Name = "Boloto_cam03Port">                         
+		<Point  coord="933.167 230.258 1670.495" rotation="0.049 0.579 0.035 0.813"/>
+		<Point  coord="946.653 240.801 1668.705" rotation="-0.007 0.626 -0.005 0.780"/>
+	</Path>
+
+	<Path Name = "PlaneOut_cam01">                         
+		<Point  coord="1117.126 234.753 1357.090" rotation="-0.266 -0.051 0.014 0.963"/>
+		<Point  coord="1115.771 242.544 1344.723" rotation="-0.095 -0.012 0.001 0.995"/>
+	</Path>
+
+	<Path Name = "PlaneOut_cam02">                         
+		<Point  coord="1465.230 225.361 1532.261" rotation="-0.021 0.428 -0.010 0.904"/>
+		<Point  coord="1473.342 225.361 1539.949" rotation="-0.052 0.345 -0.019 0.937"/>
+	</Path>
+
+	<Path Name = "PortOut_cam01">                         
+		<Point  coord="787.966 250.249 1703.446" rotation="-0.192 -0.703 0.207 0.652"/>
+		<Point  coord="771.337 262.521 1703.464" rotation="-0.047 -0.753 0.055 0.655"/>
+	</Path>
+
+	<Path Name = "Boss02_cam01">                         
+		<Point  coord="833.949 270.194 1368.301" rotation="0.029 0.423 0.013 0.906"/>
+		<Point  coord="833.575 275.535 1360.280" rotation="-0.046 0.106 -0.005 0.993"/>
+	</Path>
+
+	<Path Name = "Boss02_cam02">                         
+		<Point  coord="883.488 269.213 1362.053" rotation="0.025 0.974 0.133 0.184"/>
+		<Point  coord="866.306 269.213 1365.484" rotation="-0.006 0.980 0.198 -0.030"/>
+	</Path>
+
+	<Path Name = "Boss02_cam03">                         
+		<Point  coord="-2.000 5.000 -20.000"/>
+		<Point  coord="-4.000 1.500 -20.000"/>
+	</Path>
+
+	<Path Name = "Caravan_cam01">                         
+		<Point  coord="-2.000 3.500 -30.000"/>
+		<Point  coord="2.000 4.500 -40.000"/>
+	</Path>
+
+	<Path Name = "Caravan_cam02">                         
+		<Point  coord="-4.000 4.000 -20.000"/>
+		<Point  coord="4.000 6.500 -20.000"/>
+	</Path>
+
+	<Path Name = "Caravan_cam03">                         
+		<Point  coord="-4.000 3.000 10.000"/>
+		<Point  coord="4.000 6.500 20.000"/>
+	</Path>
+
+	<Path Name = "lodka1">                         
+		<Point  coord="677.241 227.649 701.626" rotation="-0.004 -0.268 0.001 0.963"/>
+		<Point  coord="775.616 227.649 683.385" rotation="-0.029 0.253 -0.008 0.967"/>
+
+	</Path>
+
+	<Path Name = "lodka2">                         
+		<Point  coord="785.818 228.727 787.916" rotation="-0.000 0.999 -0.003 0.043"/>
+		<Point  coord="785.818 228.727 787.916" rotation="-0.002 0.962 -0.007 0.273"/>
+	</Path>
+
+	<Path Name = "lodka3">                         
+		<Point  coord="680.886 220.828 766.145" rotation="-0.018 -0.814 0.026 0.580"/>
+		<Point  coord="680.886 220.828 766.145" rotation="-0.002 0.905 0.004 -0.426"/>
+	</Path>
+
+	<Path Name = "lodka4">                         
+		<Point  coord="712.726 160.000 67.000" rotation="0.000 -0.008 -0.000 -1.000"/>
+		<Point  coord="710.435 216.935 630.735" rotation="0.000 -0.008 -0.000 -1.000"/>
+	</Path>
+
+	<Path Name = "mishlen">                         
+		<Point  coord="3793.338 358.817 944.707" rotation="-0.037 0.946 -0.116 0.300"/>
+        <Point  coord="3425.447 328.539 107.705" rotation="-0.033 0.913 -0.076 0.399"/>
+	</Path>
+
+	<Path Name = "stranger_cam">                         
+		<Point  coord="937.426 276.849 1537.691" rotation="-0.056 0.211 -0.012 0.976"/>
+        <Point  coord="937.426 276.849 1537.691" rotation="-0.022 0.442 -0.011 0.896"/>
+	</Path>
+
+	<Path Name = "stranger_cam2">
+        <Point  coord="937.426 276.849 1537.691" rotation="-0.022 0.442 -0.011 0.896"/>
+	</Path>
+
+	<Path Name = "peregovor_cam">
+        <Point  coord="2533.030 263.052 1129.728" rotation="0.040 0.935 -0.113 -0.334"/>
+        <Point  coord="2531.537 260.775 1082.971" rotation="-0.106 -0.647 0.092 0.750"/>
+        <Point  coord="2543.274 260.775 1049.362" rotation="-0.107 -0.220 0.024 0.969"/>
+	</Path>
+
+	<Path Name = "Sklad_cam1">
+        <Point  coord="1247.267 320.713 2472.374" rotation="0.017 0.949 -0.053 -0.310"/>
+		<Point  coord="1273.234 320.713 2488.937" rotation="0.007 0.984 -0.043 -0.171"/>
+	</Path>
+
+	<Path Name = "Sklad_cam2">
+        <Point  coord="1320.392 307.617 2440.300" rotation="0.008 0.946 -0.024 -0.322"/>
+		<Point  coord="1320.336 308.891 2440.349" rotation="0.015 0.948 -0.044 -0.315"/>
+	</Path>
+
+	<Path Name = "Sklad_cam22">
+        <Point  coord="1320.392 307.617 2440.300" rotation="0.008 0.946 -0.024 -0.322"/>
+		<Point  coord="1320.336 308.891 2440.349" rotation="0.015 0.948 -0.044 -0.315"/>
+	</Path>
+
+	<Path Name = "Sklad_cam3">
+        <Point  coord="1322.648 308.872 2438.385" rotation="-0.025 0.355 -0.010 0.935"/>
+		<Point  coord="1322.648 308.872 2438.385" rotation="-0.023 0.287 -0.007 0.958"/>
+	</Path>
+
+	<Path Name = "Sklad_cam4">
+        <Point  coord="1324.415 308.927 2442.770" rotation="-0.049 0.874 -0.089 0.474"/>
+		<Point  coord="1324.415 308.927 2442.770" rotation="-0.050 0.847 -0.082 0.522"/>
+	</Path>
+
+	<Path Name = "Sklad_cam5">
+        <Point  coord="1328.196 341.219 2496.668" rotation="-0.043 0.949 -0.148 0.274"/>
+		<Point  coord="1338.321 347.287 2512.785" rotation="-0.043 0.949 -0.148 0.274"/>
+	</Path>
+
+	<Path Name = "Sklad_cam6">
+        <Point  coord="1302.180 309.762 2468.832" rotation="-0.001 0.999 -0.039 0.031"/>
+		<Point  coord="1271.351 309.762 2461.586" rotation="0.004 0.964 -0.016 -0.267"/>
+	</Path>
+
+	<Path Name = "Explos_cam1">
+        <Point  coord="2110.781 275.878 3501.775" rotation="-0.100 0.344 -0.037 0.933"/>
+		<Point  coord="2110.781 275.878 3501.775" rotation="-0.073 0.387 -0.031 0.919"/>
+	</Path>
+
+	<Path Name = "Explos_cam2">
+        <Point  coord="2114.383 257.143 3473.938" rotation="0.004 0.300 0.001 0.954"/>
+		<Point  coord="2113.875 257.151 3474.667" rotation="0.004 0.300 0.001 0.954"/>
+	</Path>
+
+	<Path Name = "KSGCamPath">
+        <Point  coord="1118.512 336.663 2316.101" rotation="-0.117 0.842 -0.203 0.486"/>
+		<Point  coord="1118.512 336.663 2316.101" rotation="-0.037 0.184 -0.007 0.982"/>
+	</Path>
+
+	<Path Name = "ChehlyCamPath">
+        <Point  coord="2051.533 309.556 3593.695" rotation="0.059 0.931 -0.316 -0.173"/>
+		<Point  coord="2214.717 309.556 3550.318" rotation="-0.039 0.957 -0.153 0.243"/>
+		<Point  coord="2185.050 264.544 3363.654" rotation="-0.074 0.415 -0.034 0.906"/>
+	</Path>
+
+	<Path Name = "PlayerSinkCamPath">
+        <Point  coord="1212.460 229.419 1679.307" rotation="-0.077 -0.825 0.116 0.548"/>
+		<Point  coord="1238.896 229.419 1714.096" rotation="0.062 0.928 -0.180 -0.321"/>
+	</Path>
+
+	<Path Name = "PlaneRCam1">
+        <Point  coord="2103.423 242.630 776.835" rotation="-0.094 0.770 -0.116 0.621"/>
+		<Point  coord="2082.321 242.630 807.729" rotation="-0.051 0.934 -0.148 0.322"/>
+	</Path>
+
+	<Path Name = "PlaneRCam2">
+        <Point  coord="2144.921 297.596 911.425" rotation="-0.061 0.920 -0.157 0.355"/>
+		<Point  coord="2030.482 297.596 961.174" rotation="0.004 0.982 -0.186 -0.020"/>
+	</Path>
+
+	<Path Name = "PlaneRCam3">
+        <Point  coord="1933.040 224.670 808.064" rotation="-0.000 0.779 -0.000 0.627"/>
+		<Point  coord="1932.850 224.670 808.867" rotation="-0.003 0.790 -0.004 0.614"/>
+	</Path>
+
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
+	<Path Name = "RTMRolikCam1">
+        <Point  coord="3494.994 298.878 3736.586" rotation="-0.000 1.000 -0.023 0.003"/>
+		<Point  coord="3494.994 298.878 3736.586" rotation="-0.020 0.841 -0.032 0.540"/>
+	</Path>
+
+	<Path Name = "RTMRolikCam2">
+		<Point  coord="3498.069 209.928 3694.331" rotation="0.024 -0.011 -0.000 1.000"/>
+		<Point  coord="3498.640 210.546 3715.595" rotation="-0.007 -0.014 0.000 1.000"/>
+	</Path>
+
+	<Path Name = "AivenSonClothes">
+        <Point  coord="3504.582 213.320 3698.208" rotation="-0.087 0.894 -0.198 0.393"/>
+		<Point  coord="3499.417 209.921 3693.460" rotation="-0.135 0.865 -0.336 0.347"/>
+	</Path>
+
+</Paths>

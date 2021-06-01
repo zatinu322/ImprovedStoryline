@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+
+	<string
+		id="1"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Н-да, мало того, что сама шахта обрушилась, так ещё и её вход завалило снегом. Как же давно это случилось?"
+		sound=""
+		time="10" />
+
+	<string
+		id="2"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="И как мне прикажете это расчищать? Ладно, будем по старинке - лопату в руки и вперёд!"
+		sound=""
+		time="10" />
+
+	<string
+		id="3"
+		modelName=""
+		value="@FF000000ААААААААААААААААА@FFFFFFFFНекоторое время спустя..."
+		sound=""
+		time="5" />
+
+	<string
+		id="4"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Уф-ф, вроде закончил... Тяжёлая работа, но кто-то должен был её сделать. Пора возвращаться в Ла Белль."
+		sound=""
+		time="10" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Вроде на этом всё. Откуда вообще взялось столько бандитов в этих местах? Надо будет спросить при случае. О, вот и другие уже возвращаются..."
+		sound=""
+		time="14" />
+
+	<string
+		id="6"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Так, тут перекрыто. Вряд ли похититель умеет летать, поэтому по этой дороге он выехать отсюда точно не мог. Сейчас проверим второй выезд."
+		sound=""
+		time="13" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="И здесь то же самое. Самое время поинтересоваться в Воложе, не проезжала ли через город незнакомая машина с дамой на борту."
+		sound=""
+		time="10" />
+
+	<string
+		id="8"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Эй, вы там! Я знаю, что вы внутри! Освободи Доброславу и катись отсюда! Давай разрешим этот конфликт без применения насилия!"
+		sound=""
+		time="11" />
+
+	<string
+		id="9"
+		modelName="mask_debik"
+		modelSkin="0"
+		modelSlot="1"
+		value="БРОДЯГА|Ха-ха-ха, насмешил! Ты и так ничего мне не сможешь сделать, лопни твой бензобак!"
+		sound=""
+		time="8" />
+
+	<string
+		id="10"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Хочешь проверить?"
+		sound=""
+		time="3" />
+
+	<string
+		id="11"
+		modelName="mask_debik"
+		modelSkin="0"
+		modelSlot="1"
+		value="БРОДЯГА|А почему бы и нет! Вот он я! Давай, стреляй, ядрён бензин!"
+		sound=""
+		time="6" />
+
+	<string
+		id="12"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="[Что за?! Моё тело меня не слушается! Этот человек… Меня охватывает животный страх при одном только его виде… Кто же это такой?!]"
+		sound=""
+		time="10" />
+
+	<string
+		id="13"
+		modelName="mask_debik"
+		modelSkin="0"
+		modelSlot="1"
+		value="БРОДЯГА|Ну, и что случилось? Почему не стреляешь? Руки не слушаются, да?"
+		sound=""
+		time="6" />
+
+	<string
+		id="14"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="[Да что же это такое чёрт возьми! Так, ладно, надо как-то сбить это оцепенение! Нужно сосредоточиться!]"
+		sound=""
+		time="8" />
+
+	<string
+		id="15"
+		modelName="mask_debik"
+		modelSkin="0"
+		modelSlot="1"
+		value="БРОДЯГА|Хм, ты не похож на местного… Да, местные так далеко бы не зашли. Но кто ты тогда такой, лопни мои покрышки?"
+		sound=""
+		time="9" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="[Ничего не получается!! Нет, я просто так не сдамся! Нужно пытаться пошевелиться!]"
+		sound=""
+		time="8" />
+
+	<string
+		id="17"
+		modelName="mask_debik"
+		modelSkin="0"
+		modelSlot="1"
+		value="БРОДЯГА|Меня пробирает мелкая дрожь при одном только взгляде на тебя. Это плохой знак. Значит, ты опасен для меня и мне придётся от тебя избавиться. Ничего личного, сверлить твой карбюратор, но тебя нужно убить, я чувствую это."
+		sound=""
+		time="17" />
+
+	<string
+		id="18"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="[Арггхх! Почти получилось!! Ещё чуть-чуть!!]"
+		sound=""
+		time="5" />
+
+	<string
+		id="19"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Есть! Теперь скорей к машине!"
+		sound=""
+		time="3" />
+
+	<string
+		id="20"
+		modelName="mask_debik"
+		modelSkin="0"
+		modelSlot="1"
+		value="БРОДЯГА|Что за?! Ты не должен был пошевелиться!! Чёрт! Чёрт! Чёрт!"
+		sound=""
+		time="6" />
+
+	<string
+		id="21"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Сбежал… Что это было, чёрт возьми? Если это он вызвал оцепенение, то как у него это получилось? Ладно, поразмыслю над этим позже, сейчас нужно вернуть Доброславу домой."
+		sound=""
+		time="14" />
+
+	<string
+		id="22"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Послушай, меня прислал твой отец, чтобы я тебя к нему отвёз."
+		sound=""
+		time="6" />
+
+	<string
+		id="23"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="108"
+		modelSlot="1"
+		sound=""
+		value="ДОБРОСЛАВА|Ладно, поехали."
+		time="3" />
+
+	<string
+		id="24"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="[Удивительная пассивность. Хотя мне же легче.]"
+		sound=""
+		time="5" />
+
+	<string
+		id="25"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Интересно... Очень интересно..."
+		sound=""
+		time="5" />
+
+	<string
+		id="26"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="А знаки-то всё красивее и красивее получаются. Думаю, в Мидгарде этим заинтересуются."
+		sound=""
+		time="9" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+</resource>

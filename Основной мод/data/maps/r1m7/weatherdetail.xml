@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<Weather>
+	<WeatherItem
+		name="r1m7_snowy">
+		<ColorType
+			name="sunrise"
+			LightmapTexture="lm_rise.tga"
+			CloudsTexture="skystormy.dds" />
+
+		<ColorType
+			name="day"
+			LightmapTexture="lm_day.tga"
+			CloudsTexture="skystormy.dds" />
+
+		<ColorType
+			name="sunset"
+			LightmapTexture="lm_set.tga"
+			CloudsTexture="skystormy.dds" />
+
+		<ColorType
+			name="night"
+			LightmapTexture="lm_night.tga"
+			CloudsTexture="skystormy.dds" />
+	</WeatherItem>
+</Weather>

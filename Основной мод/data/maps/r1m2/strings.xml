@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_hero"
+		value="Странная штука... Как будто след... Немудрено, что люди боятся: мне и самому здесь не по себе. Поеду лучше доложу в Мидгард об этом явлении."
+		sound="data\sounds\Speech\r1m2\r1m2_1_hero.ogg"
+		time="12" />
+
+	<string
+		id="20"
+		modelName="r1_man"
+		modelSkin="1"
+		modelCfg="70"
+		modelSlot="1"
+		value="БАНДИТ|Ага... Тебя-то здесь и не хватало..."
+		sound="data\sounds\speech\r1m2\r1m2_20_bandit.ogg"
+		time="4" />
+
+	<string
+		id="21"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Ты спас меня, незнакомец!!"
+		sound=""
+		time="7" />
+
+	<string
+		id="22"
+		modelName="mask_hero"
+		value="Меня послал торговец из Римского. Благодари его за своё спасение."
+		sound=""
+		time="6" />
+
+	<string
+		id="23"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Благодарить? За то, что он, зная про этих бандитов, всё равно отправил меня в рейс? Ни за что!"
+		sound=""
+		time="7" />
+
+	<string
+		id="24"
+		modelName="mask_hero"
+		value="Ну, это уже ты сам решай."
+		sound=""
+		time="4" />
+
+	<string
+		id="25"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Что тебе пообещали за моё спасение?"
+		sound=""
+		time="2" />
+
+	<string
+		id="26"
+		modelName="mask_hero"
+		value="Информацию. Я ищу одного исследователя, живущего у чёрта на рогах."
+		sound=""
+		time="11" />
+
+	<string
+		id="27"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Бена, что ли? В таком случае Стрыга тебя обдурил. Да о его жилище любой житель этих краёв знает!"
+		sound=""
+		time="6" />
+
+	<string
+		id="28"
+		modelName="mask_hero"
+		value="И ты тоже?"
+		sound=""
+		time="1" />
+
+	<string
+		id="29"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Конечно. Спустись со склона, на котором стоит Мидгард, и увидишь маленькую хижину. Это и есть жилище Бена. Домик там один, не перепутаешь."
+		sound=""
+		time="10" />
+
+	<string
+		id="210"
+		modelName="mask_hero"
+		value="Что же, спасибо за помощь."
+		sound=""
+		time="2" />
+
+	<string
+		id="211"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Не за что. Это меньшее, что я могу сделать за моё спасение."
+		sound=""
+		time="6" />
+
+	<string
+		id="212"
+		modelName="mask_hero"
+		value="Товар они, как я понимаю, разграбили?"
+		sound=""
+		time="3" />
+
+	<string
+		id="213"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Да, ничего не уцелело. Но это уже не твоя проблема. И даже не моя. Думаю, это мой последний рейс для этого торговца."
+		sound=""
+		time="10" />
+
+	<string
+		id="214"
+		modelName="mask_hero"
+		value="Куда планируешь податься дальше?"
+		sound=""
+		time="6" />
+
+	<string
+		id="215"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Попытаю счастья в Восточном. Говорят, что скоро оттуда будут регулярно ходить караваны в Южный. Было бы глупо упускать такую возможность."
+		sound=""
+		time="9" />
+
+	<string
+		id="2150"
+		modelName="mask_hero"
+		value="Да, с недавних пор в Южном стало напряжно с заезжими торговцами. Я сам из тех краёв, так что знаю не понаслышке."
+		sound=""
+		time="12" />
+
+	<string
+		id="216"
+		modelName="mask_hero"
+		value="Да, с недавних пор в Южном стало напряжно с заезжими торговцами. Я сам из тех краёв, так что знаю не понаслышке."
+		sound=""
+		time="4" />
+
+	<string
+		id="217"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Значит, если меня занесёт в Южный, я обязательно расскажу им, как ты спас мне жизнь."
+		sound=""
+		time="7" />
+
+	<string
+		id="218"
+		modelName="mask_hero"
+		value="Будет время, зайди в бар Дронна."
+		sound=""
+		time="3" />
+
+	<string
+		id="219"
+		modelName="r1_man"
+		modelSkin="4"
+		modelCfg="94"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Обязательно. Ну всё, дальше я сам."
+		sound=""
+		time="8" />
+
+	<string
+		id="220"
+		modelName="mask_hero"
+		value="Прощай. Спасибо за помощь."
+		sound="data\sounds\Speech\r1m2\r1m2_220_hero.ogg"
+		time="2" />
+
+	<string
+		id="221"
+		modelName="r1_man"
+		modelSkin="1"
+		modelCfg="62"
+		modelSlot="1"
+		value="ОРАТОР|Битва начинается."
+		sound="data\sounds\Speech\r1m2\r1m2_221_arbiter.ogg"
+		time="4" />
+
+	<string
+		id="222"
+		modelName="r1_man"
+		modelSkin="1"
+		modelCfg="62"
+		modelSlot="1"
+		value="ОРАТОР|Начнем же бой!"
+		sound="data\sounds\Speech\r1m2\r1m2_222_arbiter.ogg"
+		time="4" />
+
+	<string
+		id="223"
+		modelName="mask_hero"
+		value="Я победил! Сплав у меня!"
+		sound="data\sounds\Speech\r1m2\r1m2_223_hero.ogg"
+		time="4" />
+
+	<string
+		id="22224"
+		modelName="mask_hero"
+		value="Победа!"
+		sound="data\sounds\Speech\r1m2\r1m2_224_hero.ogg"
+		time="4" />
+
+	<string
+		id="666"
+		value="Караван уничтожен. Вы не смогли обеспечить его безопасность."
+		numButtons="1" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
+		value="Я не знаю, куда ведет эта дорога, поэтому останусь здесь."
+		time="3" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="Какое-то странное место. Лучше держаться отсюда подальше. "
+		time="3" />
+
+	<string
+		id="88055"
+		modelName="mask_hero"
+		sound=""
+		value="Да уж, теперь-то меня и на милю к этому городу не подпустят. Что же делать?"
+		time="7" />
+
+	<string
+		id="880555"
+		modelName="mask_hero"
+		sound=""
+		value="Может, в той деревеньке мне смогут помочь?"
+		time="5" />
+
+	<string
+		id="88056"
+		modelName="mask_hero"
+		sound=""
+		value="Что?! Как я здесь оказался?! Последнее, что я помню, как я пил чифир в домике бабули..."
+		time="7" />
+
+	<string
+		id="88057"
+		modelName="mask_hero"
+		sound=""
+		value="А, к чёрту! Даже знать не хочу, что произошло. Стоп. А это ещё что такое?!"
+		time="10" />
+
+	<string
+		id="88058"
+		modelName="mask_hero"
+		sound=""
+		value="Захватчики убиты. Думаю, стоит взять пару коробок в качестве доказательства. Вот эти подойдут."
+		time="10" />
+
+	<string
+		id="88059"
+		modelName="mask_hero"
+		sound=""
+		value="Полезай ко мне в кузов! Быстро! И чтобы без глупостей! Кое-кто очень хочет с тобой поговорить."
+		time="7" />
+	
+	<string
+		id="88060"
+		value="||@FF000000ААААААААААААААААААААА@FFFFFFFFНа следующий день"
+		sound=""
+		fontSize="12"
+		scrollSpeed="0.5"
+		time="7" />
+
+	<string
+		id="88061"
+		modelName="mask_hero"
+		sound=""
+		value="А, к чёрту! Даже знать не хочу, что произошло. Нужно съездить в Мидгард и узнать там о Бене."
+		time="10" />
+
+	<string
+		id="88062"
+		value="||@FF000000ААААААААААААААААААААААААА@FFFFFFFFСпустя час"
+		sound=""
+		fontSize="12"
+		scrollSpeed="0.5"
+		time="7" />
+
+	<string
+		id="224"
+		modelName="mask_hero"
+		sound=""
+		value="Что же я наделал... Каким же эгоистом я был..."
+		time="6" />
+
+	<string
+		id="225"
+		modelName="mask_hero"
+		sound=""
+		value="Пытаясь найти человека, которого не видел никогда в жизни, я не замечал людей, которые и были моей жизнью."
+		time="9" />
+	<string
+		id="226"
+		modelName="mask_hero"
+		sound=""
+		value="Лиса... Хоть, когда ты украла диски отца, я и хотел тебя убить, но я всегда знал, что ты хороший человек. Даже тогда, в Южном, когда здравый смысл подсказывал мне тебе отказать, я согласился тебе помочь."
+		time="15" />
+
+	<string
+		id="227"
+		modelName="mask_hero"
+		sound=""
+		value="Потому что я увидел в тебе то, чего не было в других людях. Идею. Цель. Ты была так сильно ей увлечена, что я счёл себя обязанным тебе помочь. Если бы я знал, к чему всё это приведёт..."
+		time="14" />
+	<string
+		id="228"
+		modelName="mask_hero"
+		sound=""
+		value="Бен... Ты всегда помогал мне, хотя вовсе и не обязан был. Ты поднял старые документы и подсказал, где искать Оракула. Ты подсказал мне, где найти Лису, хотя и не знал, что я сделаю, когда найду её."
+		time="15" />
+
+	<string
+		id="229"
+		modelName="mask_hero"
+		sound=""
+		value="Ты доверял мне. И ты до последнего пытался отговорить нас от путешествия в пустыню. Ты предчувствовал, чем всё это закончится, а мы тебя не слушали."
+		time="11" />
+	<string
+		id="230"
+		modelName="mask_hero"
+		sound=""
+		value="Это всё я. Это я не умею вовремя остановиться. Это я виноват в смерти Лисы и в самоубийстве Бена. Это всё моя вина."
+		time="11" />
+
+	<string
+		id="231"
+		modelName="mask_hero"
+		sound=""
+		value="В итоге я не только не смог увидеть отца, но также потерял двух единственных людей, которые нуждались во мне. И что самое ужасное - людей, в которых нуждался я сам."
+		time="11" />
+	<string
+		id="232"
+		modelName="mask_hero"
+		sound=""
+		value="Больше я не допущу ни одной ошибки! Хватит! Наконец-то я приму единственно правильное решение!"
+		time="8" />
+
+	<string
+		id="233"
+		modelName="mask_hero"
+		sound=""
+		value="Лиса..."
+		time="2" />
+	<string
+		id="234"
+		modelName="mask_hero"
+		sound=""
+		value="Бен..."
+		time="2" />
+
+	<string
+		id="235"
+		modelName="mask_hero"
+		sound=""
+		value="Прощайте..."
+		time="3" />
+
+	<string
+		id="5964"
+		value="Пароль для бонусной концовки: **z***********|Более подробная информация содержится в мануале к моду." />
+	<string
+		id="5963"
+		modelName="mask_hero"
+		sound=""
+		value="Вот ведь незадача, у меня не получилось защитить караван... В Мидгарде меня за это по головке не погладят, это уж точно."
+		time="10" />
+	
+	<string
+		id="5965"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@00ffffff|АААААААААААААAAАААА@ffffa600Компания «Targem Games»| | | |@00ffffffААААААААAAАААААААААААААААА@ffffa600Продюсер||@00ffffffАААААААААAAAАААААААА@ffffffffСтанислав «scorp» Скорб| | |@00ffffffААААААAAААААAAАААА@ffffa600Технический директор проекта||@00ffffffАААААААААААAAAAААААААААА@ffffffffАлексей Скрябин| | |@00ffffffАААААAAАААААААААААААААА@ffffa600Менеджер проекта||@00ffffffААААААААААААAAAАААААА@ffffffffЕвгений «Hrrr» Хрунов| | |@00ffffffААААААААААААААAAАААААААААА@ffffa600Сценарий||@00ffffffАААААААAААААAAААААА@ffffffffАлексей «Alex TG» Честных| | |@00ffffffАААААААAIААААААААА@ffffa600Ведущий программист проекта||@00ffffffАААААIАААAAААААААААААА@ffffffffАнтон «anger» Савин| | |@00ffffffАААААААААAAАААААААА@ffffa600Главный дизайнер проекта||@00ffffffААААААAААААAAАААААА@ffffffffАлексей «Alex TG» Честных| | |@00ffffffААААААААААAAААААААА@ffffa600Ведущий художник проекта||@00ffffffАААААААAAАААААААА@ffffffffАлександр «Alex ML» Маргушин| | |@00ffffffАААААAAАААААААААААААААААА@ffffa600Дизайн игры||@00ffffffАААААААIААААААAAАААА@ffffffffДенис «mif2000» Галанин|@00ffffffААААААААААAAАААААА@ffffffffСергей «JSinx» Удюрминский|@00ffffffАААААААAAАААААААААА@ffffffffАлексей «Razaz» Ануфриев|@00ffffffАААААААААААAIAАААААА@ffffffffСтанислав «scorp» Скорб|@00ffffffАААААААAAАААААААААААА@ffffffffБорис «borg» Смирнов| | |@00ffffffААААААААAAААIАААААААААА@ffffa600Программирование||@00ffffffААААААААААAIIAААААА@ffffffffЕлена «SoftKitty» Евдокимова|@00ffffffАААААААААААААААAAААААА@ffffffffИван «Vano» Власов|@00ffffffАААААААAAААААААААААА@ffffffffИлья «phosgen» Рузаков|@00ffffffАААААААААААААААAAАА@ffffffffМаксим «Shadow» Сарманов|@00ffffffААААААААААAIAААААА@ffffffffСергей «Ice Cat» Ключковский|@00ffffffАААААААААAAААААААААА@ffffffffИгорь «Goryh» Дегтярев| | |@00ffffffААААААААААААAAАААААААААААА@ffffa600Графика||@00ffffffААААААААAAААААААА@ffffffffАлександр «Alex ML» Маргушин|@00ffffffААААААAAАААААААААААААААА@ffffffffИван Снигирев|@00ffffffАААААААААААААAAАААА@ffffffffЕвгений «Dzhin» Гольцов|@00ffffffААААААAAАААААААААА@ffffffffВладимир «Price» Селезнев|@00ffffffААААААААAAАААААААААА@ffffffffСтанислав «Staz» Черва|@00ffffffААААААААAAААААААААААА@ffffffffРустам «Rychi» Турей|@00ffffffАААААААААААAAАААААААААА@ffffffffЕвгений Токарев|@00ffffffАААААААААAAААААААААА@ffffffffСергей «Sega» Митряев|@00ffffffААААААААААAAАААААА@ffffffffВиктор «isymbosi» Корьякин|@00ffffffААААААААААААAAАААААААААА@ffffffffРоман Латынов| | |@00ffffffАААААААААААААAAААААААААА@ffffa600Дизайн миссий||@00ffffffААААААААIААААAAААААА@ffffffffДенис «mif2000» Галанин|@00ffffffАААААААААAAААААААА@ffffffffСергей «JSinx» Удюрминский|@00ffffffАААААААAAАААААIАААААА@ffffffffАртем «solo» Соловьев|@00ffffffАААААААААIААААAAАА@ffffffffКондратьев «HiKiller» Даниил|@00ffffffААААААААААAIAАААААААА@ffffffffСтанислав «Staz» Черва| | |@00ffffffАААААААAAААААААААААА@ffffa600Разработка интерфейсов||@00ffffffАААААААААААAAААААААА@ffffffffМихаил «Rai» Матвиенко| | |@00ffffffААААААААААААААААAAААААААА@ffffa600Спецэффекты||@00ffffffААААААAАААААААAAААААА@ffffffffАлексей «Hal» Лобанов| | |@00ffffffАААААААААААААААAAАААААААА@ffffa600Музыка/звуки||@00ffffffААААААААААААAAААААААААААА@ffffffffАнтон Попов|@00ffffffААААААААААAAАААААААААА@ffffffffЕкатерина Швеммер| | |@00ffffffААААААААААААААААAAААААААА@ffffa600Тестирование||@00ffffffАААААААААAААААAAАААААА@ffffffffВячеслав «ls» Авдеев| | |@00ffffffААААААААААAAААААААААААААА@ffffa600PR-менеджер||@00ffffffААААААААAAAАААААААА@ffffffffСветлана «Сrystal» Честных| | |@00ffffffAAAAA@ffffa600В игре использовались композиции победителей музыкального|@00ffffffААAAАААААААААААААААААААААА@ffffa600конкурса||@00ffffffААААААААААAAАААААААААА@ffffffffАлександр Чекстер|@00ffffffААААААААААААAAААААААААА@ffffffffБорис Веденский|@00ffffffАААААААААAAАААААААААААА@ffffffffАлександр Трегер|@00ffffffАААААААААААААAAААААААААА@ffffffffМихаил Сидоров|@00ffffffАААААААААААAAААААААААА@ffffffffАлександр Лисенков|@00ffffffААААААAAАААААААААААААААААА@ffffffffParalaxeen|@00ffffffАААААААААААAAААААААААААА@ffffffffИгорь Белоусов| | |@00ffffffАААААAAАААА@ffffa600Также принимали участие на разных этапах||@00ffffffААААААAAАААА@ffffffffКонстантин Сохарев - программирование|@00ffffffААААААААAAАААА@ffffffffСвятослав Паташников - руководство|@00ffffffАААААААААAAАААА@ffffffffАлексей Андрущенко - Веб-дизайн"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.1"
+		time="137" />
+
+	<string
+		id="5966"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@00ffffffАААААААААAAАААААААААААА@ffffa600Компания «Бука»| | | |@00ffffffААААААААAAАААААААААААААААА@ffffa600Продюсер||@00ffffffААААААААААААAAAАIАААААААА@ffffffffИван Бунаков| | |@00ffffffАААААААААААAAААААААААА@ffffa600Старший продюсер||@00ffffffААAAААААААААААААААААААААА@ffffffffИван Мороз| | |@00ffffffААААААААAAАААА@ffffa600Менеджеры по продвижению продуктов||@00ffffffААААААААААААААААААAAАААААА@ffffffffЮрий Вирич|@00ffffffААААААААААAАAAААААААААА@ffffffffАлексей Писклюков| | |@00ffffffАААААААAAААIАААААААААА@ffffa600Технический эксперт||@00ffffffААААААААAAIААААААААААА@ffffffffКирилл Бестемьянов| | |@00ffffffААААААААААААААААAIAААААА@ffffa600Эксперт по звуку||@00ffffffААААААААААААIАAAАААААААА@ffffffffРуслан Дмитриев| | |@00ffffffААААААААAAАААААААААА@ffffa600Дизайнеры-полиграфисты||@00ffffffААААAAААААААААААААААААААА@ffffffffСанан Ушанов|@00ffffffААААAAААIАААААААААААА@ffffffffДаниелла Климашевская| | |@00ffffffААААААААААААААААAAААААААА@ffffa600PR-менеджер||@00ffffffААААААААААААAAАААААААА@ffffffffАлексей Пастушенко| | |@00ffffffААААААAAАААААIААААААА@ffffa600Ассистент PR-менеджера||@00ffffffАААААААААAAАААААААААААААА@ffffffffОлег Морозов| | |@00ffffffААААААААAAААААААIААААА@ffffa600Ассистент продюсера||@00ffffffААААААААААААААIAAАААААА@ffffffffАлексей Пешехонов|@00ffffffААААААААAAАIААААААААААА@ffffffffНиколай Сафронов| | |@00ffffffААААААААААAAАААААА@ffffa600Менеджер по новым командам||@00ffffffААААААААААААAAААААААААА@ffffffffНиколай Сафронов| | |@00ffffffААААAAААААААААААААААА@ffffa600Выпускающий продюсер||@00ffffffАААААААААААAAAААААААААААА@ffffffffАлександр Пак| | |@00ffffffАААAAАААААААIААААААААА@ffffa600Старший тестировщик||@00ffffffАААААААAAАIАААААААААААААА@ffffffffЕвгений Попов|@00ffffffАААААААААААAAААIААААААААААА@ffffffffИван Рид| | |@00ffffffААААААAAААААIААААААААА@ffffa600Служба тестирования||@00ffffffАААААААААААААААААIАAAААААА@ffffffffАнтон Епишин|@00ffffffААААААААААААAIAАААААААААА@ffffffffАлексей Петров|@00ffffffААААААААIАAAААААААААААА@ffffffffАлександр Полосин|@00ffffffАААААААААААIААAAААААААААА@ffffffffЕвгений Попов|@00ffffffААААААААAAАААААААААААIАААА@ffffffffИван Райнов|@00ffffffАААААААААААААААААААIIАAAАААА@ffffffffИван Рид|@00ffffffААААААААААААAAАIААААААА@ffffffffАлексей Чеботарев| | |@00ffffffАААААААААААААAAАААААА@ffffa600Внешнее тестирование||@00ffffffАААААААААAAАААААААААААААА@ffffffffПетр Беляев|@00ffffffАААААААААAAААААААААААААА@ffffffffАлексей Бунак|@00ffffffААААААААAAААААААААААААА@ffffffffИгорь Дмитриев|@00ffffffАААААААAAАААААААААААААА@ffffffffМихаил Матюшов|@00ffffffАААААААААААAAААААААААААА@ffffffffДенис Соколов|@00ffffffАААААААААAAАААААААААААА@ffffffffИгорь Пешехонцев|@00ffffffАААААААААААAAААААААААААА@ffffffffДмитрий Чичков|@00ffffffААААААААААААААAAААААААА@ffffffffАлексей Шеховцов|@00ffffffАААААААААААAAАААААААААААА@ffffffffИлья Юсипов|@00ffffffААААААААААAAААААААААААААА@ffffffffТимур Юсипов| | |@00ffffffАААААААAAААААААААААААААА@ffffa600Служба продаж||@00ffffffАААААААAAААААААААААААА@ffffffffМаксим О. Алексеев|@00ffffffААААААААААААААAAАААААА@ffffffffМаксим Ю. Алексеев|@00ffffffААААААААAAАААААААААААА@ffffffffМаксим А. Алексеев|@00ffffffАААААААААAAАAААААААААА@ffffffffНаталья Анкундинова|@00ffffffААААААААAAАААААААААААААА@ffffffffЕлена Антонова|@00ffffffАААААААAAААААААААААААААА@ffffffffИлья Бровченко|@00ffffffААААААААААААAAААААААААА@ffffffffПавел Григорьев|@00ffffffАААААААAAАААIАААААААААА@ffffffffВиктория Киселева|@00ffffffААААAAААААААААААIАААААА@ffffffffАлександр Кочетков|@00ffffffАААААААAAАААААААAААIААААА@ffffffffПавел Круглов|@00ffffffААААААААAAАААААIААААААААА@ffffffffАндрей Осипов|@00ffffffАААААААААААААААAAАААА@ffffffffАлександр Петринский|@00ffffffАААААААААААAAААААААААА@ffffffffОльга Полковникова|@00ffffffААААААААAAААААААААААААА@ffffffffЛариса Савельева|@00ffffffАААААААAAАААААААААААААА@ffffffffЕвгений Самсонов|@00ffffffААААААААААAAАААААААААА@ffffffffСветлана Самсонова|@00ffffffААААААААААААААAAАААААА@ffffffffВалерий Тихвинский|@00ffffffАААААААAAААААААААААААААА@ffffffffСергей Федосов| | |@00ffffffААААААААААААAAАААААААА@ffffa600Торговый маркетинг||@00ffffffААААААААAAААААААААААААА@ffffffffТатьяна Васекина| | |@00ffffffАААААAAААААААААААААААА@ffffa600Комьюнити менеджер||@00ffffffАААААААААAAААAААААААААА@ffffffffАлександр Ковалев| | |@00ffffffААААААААAAААААААААААААА@ffffa600Экспертный совет||@00ffffffАААААААААААAAАААААААААА@ffffffffВладимир Миняев|@00ffffffААААААААAAАААААААААААА@ffffffffМаксим Н. Михалев|@00ffffffААААААААAAАААААААААААААААА@ffffffffИван Мороз|@00ffffffАААААААААААААААAAААААААА@ffffffffСергей Руденко|@00ffffffААААААААAАAAАААААААААА@ffffffffВиталий Харитоненко| | |@00ffffffАААААААAAААААААААААА@ffffa600Юридическая поддержка||@00ffffffАААААААAAАААААААААААААА@ffffffffГеоргий Виталиев| | |@00ffffffААААААААAAААIАААААААА@ffffa600Техническая поддержка||@00ffffffААААААААААААAAАIАААААААА@ffffffffЕвгений Дмитриев| | |@00ffffffААААААААААAAААААААААА@ffffa600Генеральный директор||@00ffffffААААААААAAАААААААААААА@ffffffffАлександр Михайлов| | |@00ffffffААААААAAААААААААААААА@ffffa600Финансовый директор||@00ffffffАAAАААААААААААААААААААААА@ffffffffМарина Равун| | |@00ffffffАААААААAAАAАААААА@ffffa600Руководитель отдела маркетинга||@00ffffffАААААААААAAААААААААААА@ffffffffМаксим Н. Михалев| | |@00ffffffААААААААAAAАААА@ffffa600Руководитель коммерческого отдела||@00ffffffААААААААAAААААААААААААА@ffffffffТатьяна Устинова| | |@00ffffffААААААААAAАAААААА@ffffa600Руководитель отдела разработок||@00ffffffАААААААААAAАААААААААААААА@ffffffffИван Бунаков| | |@00ffffffААААААAAАААААААААААААА@ffffa600Отдельное спасибо||@00ffffffААААААААААААААААAAААААААА@ffffffffЮлия Белова|@00ffffffААААААААААAAАААААААААААА@ffffffffСергей Бобков|@00ffffffАААААААAAААААААААААААААА@ffffffffИлья Бровченко|@00ffffffАААAAАААААААААААААААААА@ffffffffДмитрий Захаров|@00ffffffААААААААААААААAAААААААА@ffffffffДмитрий Кулешов|@00ffffffАААААААААААААAAААААААААА@ffffffffДмитрий Лесин|@00ffffffАААААААААААААААAAАААААА@ffffffffВладимир Миняев|@00ffffffААААААAAАААААААААААААААААА@ffffffffИван Мороз|@00ffffffАААААААААААAAАААААААААААА@ffffffffМарина Равун|@00ffffffАААААААААААAAАААААААIАААААА@ffffffffИван Рид|@00ffffffАААААААAAААААААААААААААА@ffffffffИнна Суцепина|@00ffffffАААААААААААААААAAААААААА@ffffffffИгорь Устинов|@00ffffffААААААААAAААААААААААААААА@ffffffffИрина Царева|@00ffffffАААААААААААAAААААААААААА@ffffffffВиктория Эннс"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.2"
+		time="176" />
+
+	<string
+		id="5967"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@00ffffffАААААААААААААААААА@ffffa600«Improved Storyline v1.0.5.2»| | | |@00ffffffАААААААААААААААААААА@ffffa600Заимствования из модов| |@00ffffffААААААAIААААААА@ffffffffBooster Mod - карты, текстуры, иконки|@00ffffffААААААААААААААА@ffffffffKraycity - импортирован полностью|@00ffffffАААААААААААААААААААААА@ffffffffSteel Dawn - иконки| | |@00ffffffАААААААААААААААААААА@ffffa600Музыкальные композиции| |@00ffffffААААААААААААА@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAАAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAАAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAФAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAАААAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffЦифеi - Футуро|@00ffffffAAAAAAAAAAАAAAAAAAAA@ffffffffЦифеi - Прощай, Атлантис|@00ffffffААААААААААААААААААААА@ffffffffЦифеi - Праздник жизни|@00ffffffААААААААААААААА@ffffffffЦифеi - Когда возвращаются близкие| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Отдельное спасибо| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne за модель локомотива|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red за модель медали АР|@00ffffffАААА..AААААА@ffffffffVarisane за многочисленные текстовые правки| |@00ffffffAAIAAAAAAAAA@ffffffffА также всем тестировщикам, багрепортерам|@00ffffffАAAAАААААAААААААА@ffffffffи тем, кто просто помог советом| | |@00ffffffAAAAAAAAAAIAAAAAAAAAAAAA@ffffa600Спасибо за игру!"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.2"
+		time="50" />
+	
+	<string
+		id="5968"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value=""
+		sound=""
+		fontSize="18"
+		scrollSpeed="0.5"
+		time="1" />
+
+	<string
+		id="5969"
+		value="Титры пропускаешь - пароль не получаешь." />
+</resource>

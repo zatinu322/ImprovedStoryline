@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<ObjectNames>
+	<Object
+		Name="TheTown"
+		FullName="ЮЖНЫЙ" />
+
+	<Object
+		Name="TheTown_Workshop"
+		FullName="Гараж" />
+
+	<Object
+		Name="TheTown_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="TheTown_Bar"
+		FullName="Бар ''Долгий путь''" />
+
+	<Object
+		Name="TheTown_Bar_Barman"
+		FullName="Жена Бармена" />
+
+	<Object
+		Name="CaptainZhukov"
+		FullName="Капитан Жуков" />
+
+	<Object
+		Name="HurdTrucker"
+		FullName="Бармен Дронн" />
+
+	<Object
+		Name="Buyer"
+		FullName="Торговец Серго" />
+
+	<Object
+		Name="WorkGiver"
+		FullName="Фермер Дик" />
+
+	<Object
+		Name="Vasily"
+		FullName="Наёмник Василий" />
+
+	<Object
+		Name="VasilyBar"
+		FullName="Наёмник Василий" />
+
+	<Object
+		Name="FelixDecide"
+		FullName="" />
+
+	<Object
+		Name="TheGloohoeVillage_Bar"
+		FullName="Бар 'На грани'" />
+
+	<Object
+		Name="TheGloohoe_Bar_Barman"
+		FullName="Барменша Илона" />
+
+	<Object
+		Name="WorkGiver1"
+		FullName="Фермер Дик" />
+
+	<Object
+		Name="Lisa"
+		FullName="Лиса" />
+
+	<Object
+		Name="TheGloohoe"
+		FullName="ГЛУХОЕ" />
+
+	<Object
+		Name="TheGloohoe_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheGloohoe_Shop"
+		FullName="Супермаркет" />
+
+	<Object
+		Name="TheGloohoe_House"
+		FullName="Дом" />
+
+	<Object
+		Name="Father"
+		FullName="Отец" />
+		
+	<Object
+		Name="LisaSouth"
+		FullName="Лиса" />
+
+	<Object
+		Name="TheOilVillage"
+		FullName="ЗАИМКА" />
+
+	<Object
+		Name="TheOilVillage_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheOilVillage_Shop"
+		FullName="Базар" />
+
+	<Object
+		Name="TheOilVillage_Bar"
+		FullName="Закусочная ''Ять''" />
+
+	<Object
+		Name="TheOilVillage_Bar_Barman"
+		FullName="Продавщица Дара" />
+
+	<Object
+		Name="HaveBigBoom"
+		FullName="Писатель Квентин" />
+
+	<Object
+		Name="TheContraVillage"
+		FullName="ГУГУЛИНО" />
+
+	<Object
+		Name="TheContraVillage_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheContraVillage_Shop"
+		FullName="Рынок" />
+
+	<Object
+		Name="TheContraVillage_Bar"
+		FullName="Бар ''Меграт''" />
+
+	<Object
+		Name="TheContraVillage_Bar_Barman"
+		FullName="Барменша Уляна" />
+
+	<Object
+		Name="TheFreedom"
+		FullName="ТРОИЦКОЕ" />
+
+	<Object
+		Name="TheFreedom_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheFreedom_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="TheFreedom_Bar"
+		FullName="Закусочная ''Краб''" />
+
+	<Object
+		Name="TheFreedom_Bar_Barman"
+		FullName="Барменша Руха" />
+
+	<Object
+		Name="CS"
+		FullName="Пьяница Петро" />
+
+	<Object
+		Name="Botanik"
+		FullName="Ботаник Люкк" />
+
+	<Object
+		Name="Medik"
+		FullName="Казуал Вова" />
+
+	<Object
+		Name="Oldsolder"
+		FullName="Старый солдат" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="Заправка" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="Заправка" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="Заправка" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Мастерская" />
+<!-- локации -->
+	<Object
+		Name="ToR1M2"
+		FullName="Дорога в Риджин" />
+
+	<Object
+		Name="ToR1M3"
+		FullName="Дорога на Фатерлянд" />
+
+	<Object
+		Name="ToR4M1"
+		FullName="Дорога в Вахат" />
+
+	<Object
+		Name="TheContraVillage_defend"
+		FullName="ГУГУЛИНО" />
+
+	<Object
+		Name="TheTown_enter"
+		FullName="ЮЖНЫЙ" />
+
+	<Object
+		Name="TheFreedom_enter"
+		FullName="ТРОИЦКОЕ" />
+
+	<Object
+		Name="TheOilVillage_enter"
+		FullName="ЗАИМКА" />
+
+	<Object
+		Name="u1"
+		FullName="Чукча Джо" />
+
+	<Object
+		Name="u2"
+		FullName="Безрукий Макс" />
+
+	<Object
+		Name="u3"
+		FullName="Терминатор" />
+
+	<Object
+		Name="u4"
+		FullName="Безногий Бо" />
+
+	<Object
+		Name="u5"
+		FullName="Хомяк Би" />
+
+	<Object
+		Name="u6"
+		FullName="Тормоз" />
+
+	<Object
+		Name="u7"
+		FullName="Большой Бен" />
+
+	<Object
+		Name="u8"
+		FullName="Мо" />
+
+	<Object
+		Name="u9"
+		FullName="Корлей" />
+
+	<Object
+		Name="Sosnovka"
+		FullName="СОСНОВКА" />
+
+	<Object
+		Name="Sosnovka_Shop"
+		FullName="Рынок" />
+
+	<Object
+		Name="Sosnovka_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="Sosnovka_Bar"
+		FullName="Бар ''У лесопилки''" />
+
+	<Object
+		Name="Sosnovka_Bar_Barman"
+		FullName="Барменша Сова" />
+
+	<Object
+		Name="Sosnovka_enter"
+		FullName="СОСНОВКА" />
+
+	<Object
+		Name="Lukoil"
+		FullName="ЧЕСНОКОЙЛ" />
+
+	<Object
+		Name="Lukoil_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="Lukoil_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="Lukoil_Bar"
+		FullName="Бар ''Капля нефти''" />
+
+	<Object
+		Name="Lukoil_Bar_Barman"
+		FullName="Барменша Гайка" />
+
+	<Object
+		Name="Lukoil_enter"
+		FullName="ЧЕСНОКОЙЛ" />
+
+	<Object
+		Name="Svalka"
+		FullName="РЖАВЕНСК" />
+
+	<Object
+		Name="Svalka_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="Svalka_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="Svalka_Bar"
+		FullName="Бар ''Смазка''" />
+
+	<Object
+		Name="Svalka_Bar_Barman"
+		FullName="Бармен Литол " />
+
+	<Object
+		Name="Svalka_enter"
+		FullName="РЖАВЕНСК" />
+
+	<Object
+		Name="Ruin"
+		FullName="СТАРЫЙ ПОСЕЛОК" />
+
+	<Object
+		Name="Ruin_Shop"
+		FullName="Рынок" />
+
+	<Object
+		Name="Ruin_Workshop"
+		FullName="Гараж" />
+
+	<Object
+		Name="Ruin_Bar"
+		FullName="Бар ''Камень на камне''" />
+
+	<Object
+		Name="Ruin_Bar_Barman"
+		FullName="Бармен Книговед " />
+
+	<Object
+		Name="Ruin_enter"
+		FullName="СТАРЫЙ ПОСЕЛОК" />
+
+	<Object
+		Name="Kolhoz"
+		FullName="СЕРП И МОЛОТ" />
+
+	<Object
+		Name="Kolhoz_Shop"
+		FullName="Склад" />
+
+	<Object
+		Name="Kolhoz_Workshop"
+		FullName="Гараж" />
+
+	<Object
+		Name="Kolhoz_Bar"
+		FullName="Бар ''Пшеничка''" />
+
+	<Object
+		Name="Kolhoz_Bar_Barman"
+		FullName="Бармен Щавель" />
+
+	<Object
+		Name="Kolhoz_enter"
+		FullName="СЕРП И МОЛОТ" />
+
+	<Object
+		Name="FelixDecide"
+		FullName=" " />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Картограф" />
+
+	<Object
+		Name="AivenGo"
+		FullName="Айвен Го" />
+
+</ObjectNames>

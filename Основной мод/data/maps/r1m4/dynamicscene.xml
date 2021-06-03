@@ -298,12 +298,6 @@
 					PosY="95"
 					Flags="16"
 					Prototype="uralCab03" />
-					
-				<Item
-					PosX="5"
-					PosY="95"
-					Flags="16"
-					Prototype="zil130Cab03" />
 			</CabinsAndBaskets>
 
 			<Vehicles>

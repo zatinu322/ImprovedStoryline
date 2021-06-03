@@ -662,6 +662,19 @@
 			
 			StopPlayingCustomMusic()
 			
+			TDeactivate("cinMovePlToR3M1_Fade")
+			TDeactivate("cinMovePlToR3M1_cam02")
+			TDeactivate("cinMovePlToR3M1_cam03")
+			TDeactivate("subzaezd1")
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("subzaezd1")
+				vehPlayer:PlaceToEndOfPath("subzaezd1")
+				vehPlayer:SetGamePositionOnGround( CVector(805.680, 245.066, 986.181))
+				vehPlayer:SetRotation(Quaternion(-0.001, -0.006, -0.003, -1.000))
+			end
+			
 			TActivate("trStartMap")
 			
 			PassToMap("r3m1", "FromR1M4", 0 , 1)

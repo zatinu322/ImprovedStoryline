@@ -611,17 +611,6 @@
 					Flags="16"
 					Prototype="uralCab05" />
 
-				<Item
-					PosX="5"
-					PosY="100"
-					Flags="16"
-					Prototype="zil130Cab02" />
-					
-				<Item
-					PosX="5"
-					PosY="100"
-					Flags="16"
-					Prototype="zil130Cargo02" />
 			</CabinsAndBaskets>
 
 			<Vehicles>
@@ -646,32 +635,6 @@
 							present="1"
 							Flags="16"
 							Prototype="bugChassis" />
-					</Parts>
-
-					<Repository />
-				</Item>
-				
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="Zil130_01_01"
-					Pos="0.000 369.722 0.000">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="zil130Cargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="zil130Cab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="zil130Chassis" />
 					</Parts>
 
 					<Repository />

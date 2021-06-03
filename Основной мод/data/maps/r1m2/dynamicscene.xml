@@ -299,43 +299,6 @@
 					Flags="16"
 					Prototype="bugCargo03" />
 
-					
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo02" />
-
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo03" />
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="zil130Cab02" />
-					
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="zil164Cargo02" />
-
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="zil164Cargo03" />
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="zil164Cab01" />
-
 				<Item
 					PosX="5"
 					PosY="5"
@@ -470,57 +433,7 @@
 
 					<Repository />
 				</Item>
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="Zil130_01_01"
-					Pos="0.000 369.722 0.000">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="zil130Cargo02" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="zil130Cab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="zil130Chassis" />
-					</Parts>
-
-					<Repository />
-				</Item>
 				
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="Zil164_01_01"
-					Pos="0.000 369.722 0.000">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="zil164Cargo02" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="zil164Cab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="zil164Chassis" />
-					</Parts>
-
-					<Repository />
-				</Item>
 			</Vehicles>
 		</Object>
 
@@ -1137,71 +1050,6 @@
 					PosY="55"
 					Flags="16"
 					Prototype="mirotvorecCab02" />
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo02" />
-                <Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo02" />
-					
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo02" />
-					
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo03" />
-
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="zil130Cargo03" />
-
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="zil130Cab02" />
-					
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="zil130Cab02" />
-					
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="zil130Cab03" />
-					
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="zil164Cargo02" />
-
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="zil164Cargo03" />
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="zil164Cab01" />
 			</CabinsAndBaskets>
 
 			<Vehicles>

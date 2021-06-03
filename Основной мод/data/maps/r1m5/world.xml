@@ -2,7 +2,7 @@
 <World
 	name="Object612"
 	class="SgNode"
-	LastId="8475">
+	LastId="8531">
 	<Node
 		name="Object1"
 		class="SgAnimatedModelNode"
@@ -66454,7 +66454,7 @@
 		class="SgAnimatedModelNode"
 		org="2556.358 0.000 1051.812"
 		orgRel="1"
-		rot="0.000 0.730 0.000 -0.683"
+		rot="0.0000 0.7300 0.0000 -0.6830"
 		id="petrolstation"
 		ndmAction="0" />
 
@@ -68455,4 +68455,15 @@
 		rot="0.0000 0.2458 0.0000 0.9693"
 		id="seedbad_tomato"
 		ndmAction="0" />
+
+	<Node
+		name="ET_S_SNOW"
+		class="SgNode"
+		org="2279.755 397.424 2020.419"
+		orgRel="0">
+		<Node
+			name="noise"
+			class="SgSoundSourceNode"
+			id="S_SNOW" />
+	</Node>
 </World>

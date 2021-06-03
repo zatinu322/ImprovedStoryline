@@ -1568,4 +1568,12 @@
 			coord="2779.061 1806.862" />
 	</Path>
 
+	<Path
+		Name="OdettIsDead_path">
+		<Point
+			coord="3969.431 2817.284" />
+		<Point
+			coord="3907.163 2785.892" />
+	</Path>
+
 </Paths>

@@ -747,7 +747,8 @@
 	<trigger Name="RolikBegin_ToGoInSet" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
 			Fly("ToGoInSet_cam01", CINEMATIC_NO_AIM, 0, 10, 1,1 )
 			StartCinematic()
 
@@ -800,7 +801,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-
+		RestoreAllToleranceStatus()
+		
 		local vehPlayer = GetPlayerVehicle()
 
 		if vehPlayer then
@@ -808,9 +810,34 @@
 			vehPlayer:PlaceToEndOfPath("player_path07")
 		end
 
+		local FVehicle1 = GetEntityByName("RescueCars_vehicle_0")
+		local FVehicle2 = GetEntityByName("RescueCars_vehicle_1")
+		local FVehicle3 = GetEntityByName("RescueCars_vehicle_2")
+		
+		if FVehicle1 then
+			FVehicle1:SetExternalPathByName("Bezhen_Path1")
+		end
+
+		if FVehicle2 then
+			FVehicle2:SetExternalPathByName("Bezhen_Path1")
+		end
+
+		if FVehicle3 then
+			FVehicle3:SetExternalPathByName("Bezhen_Path1")
+		end
+
 		TDeactivate("trToGoInSet_cam01")
+		TActivate("RCarsInPlace")
 		SetCameraBehindPlayerVehicle()
 		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RCarsInPlace" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RCarsSet_loc" />
+		<script>
+			SetVar("BezhenAlive",1)
+			trigger:Deactivate()
 		</script>
 	</trigger>
 

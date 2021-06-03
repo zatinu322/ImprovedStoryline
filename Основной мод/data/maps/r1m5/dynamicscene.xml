@@ -4714,7 +4714,7 @@
 		Pos="2407.850 255.176 2168.875"
 		Rot="0.000 -0.888 0.000 -0.460"
 		PointOfViewInInterface="-76.431 41.168 62.278"
-		CaravansDest="TheSign_enter">
+		CaravansDest="">
 		<Object
 			Name="Esting_Bar"
 			Belong="1090"
@@ -4762,7 +4762,6 @@
 				Belong="1090"
 				Prototype="NPC"
 				ModelName="r1_man"
-				skin="0"
 				cfg="172"
 				helloReplyNames="Dlg_npc_003174"
 				SpokenCount="0" />
@@ -4786,7 +4785,6 @@
 				cfg="12"
 				helloReplyNames="Dlg_npc_003060"
 				SpokenCount="0" />
-
 		</Object>
 
 		<Object
@@ -4865,7 +4863,6 @@
 					PosY="75"
 					Flags="16"
 					Prototype="belazCargo03" />
-
 			</CabinsAndBaskets>
 
 			<Vehicles>
@@ -4935,6 +4932,24 @@
 					Prototype="additional_fuel_tank" />
 
 				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="additional_fuel_tank2_add_damage_guns" />
+
+				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="add_torque_and_stability" />
+
+				<Item
+					PosX="3"
+					PosY="0"
+					Flags="16"
+					Prototype="additional_fuel_tank2" />
+
+				<Item
 					PosX="0"
 					PosY="1"
 					Flags="16"
@@ -4969,24 +4984,6 @@
 					PosY="1"
 					Flags="16"
 					Prototype="cooling_system_guns_and_firing_rate_guns" />
-
-				<Item
-					PosX="6"
-					PosY="1"
-					Flags="16"
-					Prototype="additional_fuel_tank2_add_damage_guns" />
-
-				<Item
-					PosX="7"
-					PosY="1"
-					Flags="16"
-					Prototype="add_torque_and_stability" />
-
-				<Item
-					PosX="8"
-					PosY="1"
-					Flags="16"
-					Prototype="additional_fuel_tank2" />
 			</GunsAndGadgets>
 		</Object>
 
@@ -5286,13 +5283,11 @@
 		Name="PetrolStationTown1"
 		Belong="1090"
 		Prototype="r1m1_OilVillage"
-		Pos="2556.358 347.319 1051.812"
+		Pos="2556.358 356.121 1051.812"
 		Rot="0.000 0.730 0.000 -0.683"
-		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
-
-	<Object
+		<Object
 			Name="PS_Bar"
 			Belong="1090"
 			Prototype="bar">
@@ -5447,9 +5442,9 @@
 		Name="InfectionZone13"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -15710,9 +15705,9 @@
 		Name="InfectionZone14"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="FelixsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="FelixsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -15877,7 +15872,6 @@
 				cfg="28"
 				helloReplyNames="Dlg_npc_003017"
 				SpokenCount="0" />
-
 		</Object>
 
 		<Object
@@ -15956,7 +15950,6 @@
 					PosY="75"
 					Flags="16"
 					Prototype="belazCargo05" />
-
 			</CabinsAndBaskets>
 
 			<Vehicles>
@@ -16032,6 +16025,24 @@
 					Prototype="additional_durability" />
 
 				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="add_stability_and_speed" />
+
+				<Item
+					PosX="3"
+					PosY="0"
+					Flags="16"
+					Prototype="add_speed_and_torque" />
+
+				<Item
+					PosX="4"
+					PosY="0"
+					Flags="16"
+					Prototype="additional_torque2" />
+
+				<Item
 					PosX="0"
 					PosY="1"
 					Flags="16"
@@ -16084,24 +16095,6 @@
 					PosY="1"
 					Flags="16"
 					Prototype="add_damage_explosion_firing_rate_explosion" />
-
-				<Item
-					PosX="9"
-					PosY="1"
-					Flags="16"
-					Prototype="add_stability_and_speed" />
-
-				<Item
-					PosX="10"
-					PosY="1"
-					Flags="16"
-					Prototype="add_speed_and_torque" />
-
-				<Item
-					PosX="11"
-					PosY="1"
-					Flags="16"
-					Prototype="additional_torque2" />
 			</GunsAndGadgets>
 		</Object>
 
@@ -16299,7 +16292,7 @@
 		Pos="537.838 324.668 1190.172"
 		Rot="0.000 0.429 0.000 0.903"
 		PointOfViewInInterface="50.000 50.000 50.000"
-		CaravansDest="TheFreedom_enter">
+		CaravansDest="">
 		<Object
 			Name="TheOilVillage_Bar"
 			Belong="1090"
@@ -16323,7 +16316,6 @@
 				cfg="92"
 				helloReplyNames="Dlg_npc_002886 Dlg_npc_002933 Dlg_npc_002939"
 				SpokenCount="0" />
-
 		</Object>
 
 		<Object
@@ -17694,12 +17686,11 @@
 		Pos="451.443 334.260 2616.238"
 		Rot="0.000 0.429 0.000 0.903"
 		PointOfViewInInterface="50.000 50.000 50.000"
-		CaravansDest="TheOilVillage_enter">
+		CaravansDest="">
 		<Object
 			Name="TheContraVillage_Bar"
 			Belong="1090"
 			Prototype="bar">
-
 			<Object
 				Name="TheContraVillage_Bar_Barman"
 				Belong="1090"
@@ -17718,7 +17709,6 @@
 				cfg="6"
 				helloReplyNames="Dlg_npc_002883"
 				SpokenCount="0" />
-
 		</Object>
 
 		<Object
@@ -26680,7 +26670,7 @@
 		Name="Human3451"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2364.856 255.243 2203.554"
+		Pos="2360.790 255.000 2225.424"
 		Rot="0.000 0.131 0.000 0.991"
 		PathsNames="fciv01" />
 
@@ -26688,7 +26678,7 @@
 		Name="Human23452"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2345.280 255.000 2189.739"
+		Pos="2412.964 255.000 2244.689"
 		Rot="0.000 -0.508 0.000 0.862"
 		PathsNames="fciv01" />
 
@@ -26696,7 +26686,7 @@
 		Name="Human33453"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="2324.397 255.000 2176.522"
+		Pos="2459.688 255.000 2217.387"
 		Rot="0.000 0.997 0.000 0.078"
 		PathsNames="fciv01" />
 
@@ -26704,7 +26694,7 @@
 		Name="Human3454"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2303.608 255.243 2163.032"
+		Pos="2411.172 255.000 2281.437"
 		Rot="0.000 0.342 0.000 0.940"
 		PathsNames="fciv01" />
 
@@ -26712,7 +26702,7 @@
 		Name="Human23455"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2285.951 255.201 2141.008"
+		Pos="2427.896 255.000 2240.199"
 		Rot="0.000 1.000 0.000 -0.009"
 		PathsNames="fciv01" />
 
@@ -26720,7 +26710,7 @@
 		Name="Human3456"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2359.462 255.000 2195.063"
+		Pos="2319.179 255.000 2061.280"
 		Rot="0.000 -0.009 0.000 1.000"
 		PathsNames="fciv02" />
 
@@ -26728,7 +26718,7 @@
 		Name="Human23457"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2348.193 255.243 2215.288"
+		Pos="2341.363 255.236 2081.207"
 		Rot="0.000 -0.636 0.000 0.772"
 		PathsNames="fciv02" />
 
@@ -26736,7 +26726,7 @@
 		Name="Human33458"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="2333.031 255.202 2236.453"
+		Pos="2352.797 255.196 2142.084"
 		Rot="0.000 -0.165 0.000 0.986"
 		PathsNames="fciv02" />
 
@@ -26744,7 +26734,7 @@
 		Name="Human3459"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2322.439 255.190 2251.465"
+		Pos="2361.956 255.000 2177.748"
 		Rot="0.000 -0.156 0.000 0.988"
 		PathsNames="fciv02" />
 
@@ -26752,7 +26742,7 @@
 		Name="Human23460"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2308.318 255.217 2269.469"
+		Pos="2357.428 255.243 2103.917"
 		Rot="0.000 -0.026 0.000 1.000"
 		PathsNames="fciv02" />
 
@@ -26760,7 +26750,7 @@
 		Name="Human3461"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2326.609 255.120 2224.153"
+		Pos="2296.194 255.000 2177.394"
 		Rot="0.000 0.131 0.000 0.991"
 		PathsNames="fciv03" />
 
@@ -26768,7 +26758,7 @@
 		Name="Human23462"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2347.205 255.244 2236.138"
+		Pos="2254.417 255.000 2116.147"
 		Rot="0.000 0.937 0.000 -0.350"
 		PathsNames="fciv03" />
 
@@ -26776,7 +26766,7 @@
 		Name="Human33463"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="2362.329 255.237 2247.959"
+		Pos="2266.594 255.000 2129.136"
 		Rot="0.000 -0.431 0.000 0.902"
 		PathsNames="fciv03" />
 
@@ -26784,7 +26774,7 @@
 		Name="Human23464"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2375.517 255.146 2261.490"
+		Pos="2318.844 255.000 2220.292"
 		Rot="0.000 0.537 0.000 0.843"
 		PathsNames="fciv03" />
 
@@ -26792,7 +26782,7 @@
 		Name="Human3465"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2388.071 255.056 2274.560"
+		Pos="2280.774 255.000 2149.828"
 		Rot="0.000 0.914 0.000 -0.407"
 		PathsNames="fciv03" />
 
@@ -47336,7 +47326,7 @@
 		Name="Human6141"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2302.643 255.198 2259.598"
+		Pos="2228.548 255.000 2313.960"
 		Rot="0.000 0.113 0.000 0.994"
 		PathsNames="cciv01" />
 
@@ -47344,7 +47334,7 @@
 		Name="Human26142"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2334.220 255.143 2244.474"
+		Pos="2151.598 255.000 2376.268"
 		Rot="0.000 0.968 0.000 -0.250"
 		PathsNames="cciv01" />
 
@@ -47352,7 +47342,7 @@
 		Name="Human36143"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="2366.683 255.000 2221.782"
+		Pos="2184.908 255.000 2348.291"
 		Rot="0.000 0.972 0.000 0.233"
 		PathsNames="cciv01" />
 
@@ -47360,7 +47350,7 @@
 		Name="Human26144"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="2385.080 255.000 2208.258"
+		Pos="2388.918 255.000 2227.548"
 		Rot="0.000 -0.843 0.000 0.537"
 		PathsNames="cciv01" />
 
@@ -47368,7 +47358,7 @@
 		Name="Human36145"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="2312.925 255.243 2254.079"
+		Pos="2280.939 255.000 2276.862"
 		Rot="0.000 0.259 0.000 0.966"
 		PathsNames="cciv01" />
 
@@ -47376,7 +47366,7 @@
 		Name="Human6146"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2358.851 255.000 2225.919"
+		Pos="2318.951 255.136 2251.566"
 		Rot="0.000 0.879 0.000 -0.477"
 		PathsNames="cciv01" />
 
@@ -89361,9 +89351,9 @@
 		Name="InfectionZone15"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -89536,9 +89526,9 @@
 		Name="InfectionZone16"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -89645,9 +89635,9 @@
 		Name="InfectionZone17"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="FelixsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="FelixsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -89774,9 +89764,9 @@
 		Name="InfectionZone18"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -89883,9 +89873,9 @@
 		Name="InfectionZone19"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="FelixsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="FelixsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90000,9 +89990,9 @@
 		Name="InfectionZone20"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90089,9 +90079,9 @@
 		Name="InfectionZone21"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="FelixsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="FelixsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90174,9 +90164,9 @@
 		Name="InfectionZone22"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90271,9 +90261,9 @@
 		Name="InfectionZone23"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90396,9 +90386,9 @@
 		Name="InfectionZone24"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="FelixsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="FelixsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90505,9 +90495,9 @@
 		Name="InfectionZone25"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r1m2BanditsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="r1m2BanditsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90598,9 +90588,9 @@
 		Name="InfectionZone26"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="FelixsGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="FelixsGang"
+		InfectionLair="r3_BanditesTeam"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -90721,94 +90711,6 @@
 				x="3247.989"
 				y="2766.261" />
 		</DropOut>
-	</Object>
-
-	<Object
-		Name="r1m5_CaravanGlobalObject"
-		Belong="1003"
-		Prototype="LiveCaravanManager"
-		TeamCount="3"
-		RebornTimeout="30.000">
-		<Points>
-			<Point
-				Name="locVolkoz"
-				Coord="2341.000 2224.000"
-				Transition="true" />
-
-			<Point
-				Name="locGas1"
-				Coord="1861.000 1186.000"
-				Transition="false" />
-
-			<Point
-				Name="locBase1"
-				Coord="624.000 1201.000"
-				Transition="true" />
-
-			<Point
-				Name="locGas2"
-				Coord="1304.000 2398.000"
-				Transition="false" />
-
-			<Point
-				Name="locBase2"
-				Coord="546.000 2597.000"
-				Transition="true" />
-
-			<Point
-				Name="locExit1"
-				Coord="45.000 2763.000"
-				Transition="true" />
-
-			<Point
-				Name="locGas3"
-				Coord="3231.000 2644.000"
-				Transition="false" />
-
-			<Point
-				Name="locExit2"
-				Coord="3193.000 4021.000"
-				Transition="true" />
-
-			<Point
-				Name="locFarm"
-				Coord="2580.000 1089.000"
-				Transition="true" />
-		</Points>
-
-		<Caravans>
-			<Caravan
-				Prototype="r1m1_CaravanTeam"
-				Locations="locVolkoz locGas1 locBase1" />
-
-			<Caravan
-				Prototype="r1m1_CaravanTeam"
-				Locations="locVolkoz locGas2 locBase2 locExit1" />
-
-			<Caravan
-				Prototype="r1m1_CaravanTeam"
-				Locations="locVolkoz locGas3 locExit2" />
-
-			<Caravan
-				Prototype="r1m1_CaravanTeam"
-				Locations="locVolkoz locFarm" />
-
-			<Caravan
-				Prototype="r1m1_CaravanOne"
-				Locations="locFarm locVolkoz" />
-
-			<Caravan
-				Prototype="r1m1_CaravanOne"
-				Locations="locBase1 locGas1 locVolkoz" />
-
-			<Caravan
-				Prototype="r1m1_CaravanOne"
-				Locations="locExit1 locBase2 locGas2 locVolkoz" />
-
-			<Caravan
-				Prototype="r1m1_CaravanOne"
-				Locations="locExit2 locGas3 locVolkoz" />
-		</Caravans>
 	</Object>
 
 	<Object
@@ -91335,7 +91237,7 @@
 		Name="lamppost111658"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="3071.729 323.239 3137.853"
+		Pos="3071.729 327.787 3137.853"
 		Rot="0.000 0.288 0.000 0.958" />
 
 	<Object
@@ -91648,7 +91550,7 @@
 		Prototype="genericLocation"
 		Pos="3336.613 375.351 1688.277"
 		Radius="30.000"
-		LookingTimeOut="100.000" 
+		LookingTimeOut="100.000"
 		PassageAddress="r1m6 FromR1M5JD"
 		PassageActive="0" />
 
@@ -91658,14 +91560,14 @@
 		Prototype="genericLocation"
 		Pos="3352.024 372.368 1747.278"
 		Radius="30.000"
-		LookingTimeOut="10.000" 
+		LookingTimeOut="10.000"
 		ExitLocation="ToR1M6JD" />
 
 	<Object
 		Name="Shahta_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1492.967 256.815 2724.832"
+		Pos="1492.967 255.867 2724.832"
 		Radius="50.000"
 		LookingTimeOut="100.000" />
 
@@ -91673,7 +91575,7 @@
 		Name="Vyezd1_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3730.126 544.003 595.146"
+		Pos="3730.126 542.916 595.146"
 		Radius="30.000"
 		LookingTimeOut="100.000" />
 
@@ -91681,7 +91583,7 @@
 		Name="Vyezd2_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2806.468 401.629 209.854"
+		Pos="2806.468 399.214 209.854"
 		Radius="30.000"
 		LookingTimeOut="100.000" />
 
@@ -91689,7 +91591,7 @@
 		Name="Vyezd3_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3130.469 317.508 3120.864"
+		Pos="3130.469 315.185 3120.864"
 		Radius="30.000"
 		LookingTimeOut="100.000" />
 
@@ -91697,7 +91599,7 @@
 		Name="RPGSigns_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2188.279 257.340 2308.027"
+		Pos="2188.279 255.000 2308.027"
 		Radius="30.000"
 		LookingTimeOut="100.000" />
 
@@ -91962,10 +91864,6 @@
 		Rot="0.000 0.425 0.000 0.905" />
 
 	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
-
-	<Object
 		Name="Breakable_WoodFence111955"
 		Belong="1001"
 		Prototype="Breakable_WoodFence1"
@@ -92054,7 +91952,7 @@
 		Belong="1001"
 		Prototype="Breakable_WoodFence1"
 		Pos="2094.738 255.000 2200.976"
-		Rot="0.000 -0.524 0.000 0.851" />
+		Rot="0.000 -0.524 0.000 0.852" />
 
 	<Object
 		Name="Breakable_WoodFence111968"
@@ -92089,7 +91987,7 @@
 		Belong="1001"
 		Prototype="Breakable_WoodFence1"
 		Pos="2007.402 255.000 2040.242"
-		Rot="-0.010 -0.508 -0.005 0.862" />
+		Rot="-0.010 -0.508 -0.005 0.861" />
 
 	<Object
 		Name="Breakable_WoodFence111973"
@@ -92223,4 +92121,8 @@
 		Prototype="Breakable_WoodFence1"
 		Pos="1889.833 260.950 2235.540"
 		Rot="0.000 -0.548 0.000 0.836" />
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

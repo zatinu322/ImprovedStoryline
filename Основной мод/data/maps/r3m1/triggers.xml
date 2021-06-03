@@ -7,6 +7,7 @@
 		   SetVar("CanTalkResist",0)
 		   SetVar("MaxWalkHuman",14)
 		   SetVar("KnownMap",0)
+		   SetVar("BezhenAlive",0)
 		   trigger:Deactivate()
 		</script>
 	</trigger>
@@ -378,44 +379,6 @@
 			CompleteQuest("r3m1_RescueUlukCivil_RepelAttack")
 			TActivate("RolikBegin_ToGoInSet")
 			
-			local newControllerId1 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "RescCont1"
-			}
-
-			local newControllerId2 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "RescCont2"
-			}
-
-			local newControllerId3 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "RescCont3"
-			}
-
-			local newController1 = GetEntityByID(newControllerId1)
-			local newController2 = GetEntityByID(newControllerId2)
-			local newController3 = GetEntityByID(newControllerId3)
-
-			local FVehicle1 = GetEntityByName("RescueCars_vehicle_0")
-			local FVehicle2 = GetEntityByName("RescueCars_vehicle_1")
-			local FVehicle3 = GetEntityByName("RescueCars_vehicle_2")
-
-			if newController1 and FVehicle1 then
-				newController1:setVehicleUnderControl(FVehicle1)
-			end
-
-			if newController2 and FVehicle2 then
-				newController2:setVehicleUnderControl(FVehicle2)
-			end
-
-			if newController3 and FVehicle3 then
-				newController3:setVehicleUnderControl(FVehicle3)
-			end
-
---			AddCinematicMessage( 25, 0.25 )
---			AddCinematicMessage( 26, 0.25 )
-
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -451,8 +414,10 @@
 		<event	eventid="GE_OBJECT_DIE"	ObjName="RescueCars" />
 		<script>
 			FailQuestIfTaken("r3m1_RescueUlukCivil_TakeToSet")
-			FailQuest("r3m1_RescueUlukCivil_TakeToSet")
-
+--			FailQuest("r3m1_RescueUlukCivil_TakeToSet")
+			
+			SetVar("BezhenAlive", 2)
+			
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()

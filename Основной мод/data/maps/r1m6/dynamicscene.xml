@@ -46177,9 +46177,9 @@
 		Name="InfectionZone001"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46239,9 +46239,9 @@
 		Name="InfectionZone002"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46305,9 +46305,9 @@
 		Name="InfectionZone003"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46423,9 +46423,9 @@
 		Name="InfectionZone004"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46521,9 +46521,9 @@
 		Name="InfectionZone005"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46587,9 +46587,9 @@
 		Name="InfectionZone006"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46665,9 +46665,9 @@
 		Name="InfectionZone007"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46755,9 +46755,9 @@
 		Name="InfectionZone008"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46841,9 +46841,9 @@
 		Name="InfectionZone009"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -46939,9 +46939,9 @@
 		Name="InfectionZone010"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -47037,9 +47037,9 @@
 		Name="InfectionZone011"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -47127,9 +47127,9 @@
 		Name="InfectionZone012"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -50056,9 +50056,9 @@
 		Name="InfectionZone013"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -50150,9 +50150,9 @@
 		Name="InfectionZone014"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -50232,9 +50232,9 @@
 		Name="InfectionZone015"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="ARGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="ARGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>
@@ -50314,9 +50314,9 @@
 		Name="InfectionZone016"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="SNGGang"
+		InfectionTeamPrototypeName="r3_BanditesTeam"
 		DropOutTimeOut="20.000"
-		InfectionLair="SNGGang"
+		InfectionLair="r3_BanditesTeam"
 		CurrentDropOutTimeOut="100.000"
 		HadPlayerInside="0">
 		<Polygon>

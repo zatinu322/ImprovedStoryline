@@ -1104,14 +1104,14 @@
 	<string
 		id="5954"
 		modelName=""
-		value="||@FF000000ÀÀÀÀÀÀÀÀÀAAAAÀÀÀÀÀÀ@FFFFA600«Improved Storyline v1.0.5»"
+		value="||@FF000000ÀÀÀÀÀÀÀÀÀAAAAÀÀÀÀÀÀ@FFFFA600«Improved Storyline v1.0.5.1»"
 		sound=""
 		fontSize="18"
 		time="5" />
 	<string
 		id="5955"
 		modelName=""
-		value="@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Çàèìñòâîâàíèÿ èç ìîäîâ:||@FF000000ÀÀÀÀÀÀÀ@FFFFFFFFBooster Mod - ëîêàöèè, ìîäåëè, òåêñòóðû, ïîãîäà||@FF000000ÀÀÀÀ@FFFFFFFFKraycity by Rock (Overline) - èìïîðòèðîâàí ïîëíîñòüþ"
+		value="@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Çàèìñòâîâàíèÿ èç ìîäîâ:|@FF000000ÀÀÀÀÀÀÀ@FFFFFFFFBooster Mod - ëîêàöèè, ìîäåëè, òåêñòóðû, ïîãîäà|@FF000000ÀÀÀÀ@FFFFFFFFKraycity by Rock (Overline) - èìïîðòèðîâàí ïîëíîñòüþ|@FF000000AAAAAAAAAAAAAAAAAAAA@FFFFFFFFSteel Dawn - èêîíêè"
 		sound=""
 		fontSize="18"
 		time="7" />

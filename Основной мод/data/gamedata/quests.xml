@@ -2357,6 +2357,13 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
+
+	<quest
+		Name="OdettIsDead_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r2m1/—южетные/диск 2 оракулу-->
 	<quest
 		Name="Disk2OrakulLisa"

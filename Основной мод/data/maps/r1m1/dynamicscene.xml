@@ -155,6 +155,15 @@
 
 	<Object
 		Flags="21"
+		Name="LisaRolik2_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1169.960 300.102 2891.158"
+		Radius="43.863"
+		LookingTimeOut="15.000" />
+
+	<Object
+		Flags="21"
 		Name="FirstLisaLoc"
 		Belong="1100"
 		Prototype="genericLocation"

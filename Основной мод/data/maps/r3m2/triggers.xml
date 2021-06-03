@@ -492,7 +492,7 @@
 				CapturePlayerVehicle(0, "garage")
 --				LOG(4)
    				g_Player:AddChild(veh)
-				GetPlayerVehicle():setGodMode(1)
+				GetPlayerVehicle():setGodMode(0)
 				GetPlayerVehicle():SetCustomControlEnabled(0)
 				veh:SetExternalPathByName("ExitToGaragePath")
 			end
@@ -777,6 +777,16 @@
 				oracv:SetNodeAction(AT_RESERVED3)
 			end
 			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="tr_GMDis" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FactoryTerritory_loc" />
+		<script>
+			if QuestStatus("r3m2_TwoMagicThing_Return")==Q_TAKEN then
+				DisableGodMode()
+				trigger:Deactivate()
+			end
 		</script>
 	</trigger>
 

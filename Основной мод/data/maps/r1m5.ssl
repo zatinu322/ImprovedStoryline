@@ -6,7 +6,7 @@
 			name="WEATHERDETAIL">WeatherDetail.xml</Key>
 
 		<Key
-			name="WEATHERTYPE">r1m5_clear02</Key>
+			name="WEATHERTYPE">r1m5_snowy</Key>
 
 		<Key
 			name="CURRENTDAYTIME">1</Key>
@@ -63,7 +63,7 @@
 			name="MAXHEIGHT">2500.000</Key>
 
 		<Key
-			name="WATERLEVEL">0.000</Key>
+			name="WATERLEVEL">422.760</Key>
 
 		<Key
 			name="BASEWATERLEVEL">0.000</Key>
@@ -90,7 +90,7 @@
 			name="WATERABSGREEN">0.000</Key>
 
 		<Key
-			name="WATERABSBLUE">41984272.000</Key>
+			name="WATERABSBLUE">0.000</Key>
 
 		<Key
 			name="MINSAFEX">40.000</Key>
@@ -213,19 +213,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">3936.766</Key>
+			name="X">2272.265</Key>
 
 		<Key
-			name="Y">675.915</Key>
+			name="Y">407.405</Key>
 
 		<Key
-			name="Z">630.724</Key>
+			name="Z">2035.792</Key>
 
 		<Key
-			name="A">-48.321</Key>
+			name="A">-40.387</Key>
 
 		<Key
-			name="B">-0.804</Key>
+			name="B">-0.921</Key>
 
 		<Key
 			name="G">0.000</Key>

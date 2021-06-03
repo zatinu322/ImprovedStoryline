@@ -8,6 +8,7 @@
 			SetVar("ZasadaAR",0)
 			SetVar("DeadMer",0)
 			SetVar("QuickWay",0)
+			SetVar("QuickWayAlt",0)
 			SetVar("KnownMap",0)
 			trigger:Deactivate()
 		</script>

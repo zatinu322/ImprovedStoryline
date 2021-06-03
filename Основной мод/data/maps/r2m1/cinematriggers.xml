@@ -1876,7 +1876,7 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 
-			if IsQuestComplete("FinalBattle_Quest") and IsQuestComplete("r1m1_Construct_Quest2") and IsQuestComplete("PeregReturn") and IsQuestComplete("CaptureKateberg_Quest") and IsQuestComplete("FreeExtremistLeader_Quest5") then
+			if IsQuestComplete("FinalBattle_Quest") and IsQuestComplete("r1m1_Construct_Quest2") and IsQuestComplete("PeregReturn") and IsQuestComplete("CaptureKateberg_Quest") and IsQuestComplete("FreeExtremistLeader_Quest5") and (RS_NEUTRAL==GetTolerance(1100, 1003)) and (RS_NEUTRAL==GetTolerance(1100, 1004)) then
 				TakeQuest("BenGoodEnd")
 			else
 				TakeQuest("BenNormalEnd")
@@ -1925,6 +1925,172 @@
 			
 			SetTolerance(1100,1016,RS_NEUTRAL)
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OIDRolikBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Passage05")
+			
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(4010.742, 303.024, 2913.484), Quaternion(0, 0, 0, 0), 0)
+			
+			CreateVehicleEx("r1m2_CaravanBug01","FirstB_1",CVector(4078.927, 280.560, 2840.551), 1016)
+			
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			local vehPod = GetEntityByName("FirstB_1")
+			local vehPodID = vehPod:GetId()
+			
+			FlyLinked( "linkedcam", CTochID, 9.5, 1, 0, vehPodID )
+			Fly("OIDCam1", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+			Fly("OIDCam2", CINEMATIC_NO_AIM, 0, 20, 0, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 147, 0.1 )
+			AddCinematicMessage( 148, 0.1 )
+			AddCinematicMessage( 149, 0.1 )
+			
+			TActivate("OIDRolikFade")
+			TActivate("OIDRolikCam1")
+			TActivate("OIDRolikCam2")
+			TActivate("OIDRolikEnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OIDRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			TActivate("trVehSTOP")
+			
+			CreateVehicleEx("r1m2_hunter02","OdettCar",CVector(3907.163, 280.141, 2785.892), 1083)
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3883.937, 280.535, 2707.229))
+				vehPlayer:SetRotation(Quaternion(0.001, -0.463, 0.004, -0.887))
+			end
+			
+			local vehOdett = GetEntityByName("OdettCar")
+			if vehOdett then
+				vehOdett:SetRotation(Quaternion(-0.009, -0.860, 0.002, -0.511))
+			end
+			
+			local vehPod = GetEntityByName("FirstB_1")
+			if vehPod then
+				vehPod:SetRotation(Quaternion(0.003, 0.763, 0.002, -0.646))
+				vehPod:SetExternalPathByName("OdettIsDead_path")
+			end
+			
+			TActivate("OdettExplode")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OdettExplode" active="0">
+		<event	timeout="9.5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			PlayCustomMusic("Passage04")
+			
+			local vehOdett = GetEntityByName("OdettCar")
+			if vehOdett then
+				vehOdett:AddModifier("hp", "= 0")
+			end
+			
+			local vehPod = GetEntityByName("FirstB_1")
+			if vehPod then
+				vehPod:AddModifier("hp", "= 0")
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OIDRolikCam1" active="0">
+		<event flypath="OIDCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 150, 3 )
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OIDRolikCam2" active="0">
+		<event flypath="OIDCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			if IsQuestItemPresent("quest_medicine_box") then
+				AddCinematicMessage( 151, 1 )
+				AddCinematicMessage( 152, 0.1 )
+				AddCinematicMessage( 153, 0.1 )
+				AddCinematicMessage( 154, 0.1 )
+			else
+				AddCinematicMessage( 156, 1 )
+				AddCinematicMessage( 157, 0.1 )
+				AddCinematicMessage( 158, 0.1 )
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OIDRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			StopPlayingCustomMusic()
+			
+			SetCameraBehindPlayerVehicle()
+			
+			CompleteQuest("FinalBattle_Quest")
+			
+			TakeQuest("r2m2_FindLisAfterAxelAndFatherDie_Quest")
+			
+			CompleteQuest("r2m2_FindLisAfterAxelAndFatherDie_Quest")
+			
+			local vehOdett = GetEntityByName("OdettCar")
+			if vehOdett then
+				vehOdett:Remove()
+			end
+			
+			local vehPod = GetEntityByName("FirstB_1")
+			if vehPod then
+				vehPod:Remove()
+			end
+			
+			local CToch = GetEntityByName("CamTochka")
+			if CToch then
+				CToch:Remove()
+			end
+			
+			local vehOdett = GetEntityByName("Antimilit_vehicle_4")
+			if vehOdett then
+				vehOdett:Remove()
+			end
+			
+			if IsQuestItemPresent("quest_medicine_box") then
+				RemoveQuestItem("quest_medicine_box")
+				AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_medicine_box")
+			else
+				TakeQuest("OdettIsDead_Quest")
+				CompleteQuest("OdettIsDead_Quest")
+			end
+			
+			TActivate("LISAMOVETOGELVFROMR2M2")
+			TActivate("AntimilitRemove")
+			
+			TDeactivate("OIDRolikFade")
+			TDeactivate("OIDRolikCam1")
+			TDeactivate("OIDRolikCam2")
+			TDeactivate("OdettExplode")
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>

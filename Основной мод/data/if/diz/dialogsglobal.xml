@@ -3831,7 +3831,7 @@
 		name="Dlg_pl_002406"
 		text="Ты права, старики никуда не денутся, а эти ребята могут нам предоставить важную информацию. Давай сядем им на хвост."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r4m1_LisaKef2'); TakeQuest('r4m1_Tankisty'); TActivate('trTankistyCreate'); TActivate('TankiWarning'); LeaveTown()" />
+		scriptResult="CompleteQuest('r4m1_LisaKef2'); TakeQuest('r4m1_Tankisty'); TActivate('trTankistyCreate'); LeaveTown()" />
 <!--Root/r4m1/Сюжетные/Приехал в Бухару-->
 	<Reply
 		name="Buhara_Outside_Leader_1_N01"
@@ -4206,7 +4206,7 @@
 		name="Dlg_npc_002038"
 		text="Эй, ты что тут делаешь?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('r3m2_OracleMemory_Return') and GetCurNpc():GetSpokenCount( ) == 0 and (not(IsQuestComplete('KillOracleDefenders')))"
+		scriptCondition="IsQuestTaken('r3m2_OracleMemory_Return') and GetCurNpc():GetSpokenCount( ) == 0 and (not(RS_NEUTRAL>GetTolerance(1100, 1021)))"
 		nextReplies="Dlg_pl_002039" />
 
 	<Reply
@@ -4285,7 +4285,7 @@
 		name="Dlg_npc_002051"
 		text="Стоять на месте! Ты же тот самый тип, который перебил охрану Оракула!"
 		role="NPC"
-		scriptCondition="IsQuestComplete('KillOracleDefenders') and GetCurNpc():GetSpokenCount( ) == 0 and IsQuestTaken('r3m2_OracleMemory_Return')"
+		scriptCondition="RS_NEUTRAL>GetTolerance(1100, 1021) and GetCurNpc():GetSpokenCount( ) == 0 and IsQuestTaken('r3m2_OracleMemory_Return')"
 		nextReplies="Dlg_pl_002052" />
 
 	<Reply
@@ -4500,7 +4500,7 @@
 		name="Dlg_pl_002019"
 		text="Я всё сделаю."
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m2_OracleMemory'); TActivate('trVK1'); TActivate('OracleVrataClose'); AddQuestItem( 'quest_repair_robot1' ); AddQuestItem( 'quest_repair_robot2' ); AddQuestItem( 'quest_repair_robot3' ); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_repair_robot1'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_repair_robot2'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_repair_robot3'); GetCurNpc():SetSpokenCount(2) EndConversation()" />
+		scriptResult="TakeQuest('r3m2_OracleMemory'); TActivate('trVK1'); TActivate('OracleVrataClose'); TDeactivate('tr_GMDis'); AddQuestItem( 'quest_repair_robot1' ); AddQuestItem( 'quest_repair_robot2' ); AddQuestItem( 'quest_repair_robot3' ); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_repair_robot1'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_repair_robot2'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_repair_robot3'); GetCurNpc():SetSpokenCount(2) EndConversation()" />
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N01"
@@ -5304,7 +5304,7 @@
 		name="r3m1_NearUluk_Civilian1_1_P042"
 		text="Меня попросили узнать, что случилось - я узнал. Спасать беженцев в мои планы не входило, сами разбирайтесь."
 		role="PLAYER"
-		scriptResult="EndConversation();" />
+		scriptResult="SetVar('BezhenAlive', 2); EndConversation();" />
 
 	<Reply
 		name="r3m1_NearUluk_Civilian1_1_P041"
@@ -5316,14 +5316,14 @@
 		name="Set_Bar_Customer1_2_N01"
 		text="Что случилось в Улуке?"
 		role="NPC"
-		scriptCondition="QuestStatus('r3m1_KnowAboutUluk_GotoSet')==Q_TAKEN"
+		scriptCondition="QuestStatus('r3m1_KnowAboutUluk_GotoSet')==Q_TAKEN and GetVar('BezhenAlive').AsInt>0 "
 		nextReplies="Set_Bar_Customer2_2_P021 Set_Bar_Customer2_2_P022" />
 
 	<Reply
 		name="Set_Bar_Customer2_2_P022"
 		text="Старейшина уверовал в новых богов и поклоняется теперь металлическим монстрам."
 		role="PLAYER"
-		scriptCondition="QuestStatus('r3m1_KnowAboutUluk_GotoSet')==Q_TAKEN and QuestStatus('r3m1_RescueUlukCivil_TakeToSet')~=Q_TAKEN"
+		scriptCondition="QuestStatus('r3m1_KnowAboutUluk_GotoSet')==Q_TAKEN and GetVar('BezhenAlive').AsInt==2  "
 		scriptResult="CompleteQuest('r3m1_KnowAboutUluk_GotoSet'); FailQuestIfTaken('r3m1_RescueUlukCivil');"
 		nextReplies="Set_Bar_Customer2_2_N032" />
 
@@ -5337,13 +5337,13 @@
 		name="Set_Bar_Customer2_2_P042"
 		text="Прощайте."
 		role="PLAYER"
-		scriptResult="EndConversation();" />
+		scriptResult="SetVar('BezhenAlive', 0); EndConversation();" />
 
 	<Reply
 		name="Set_Bar_Customer2_2_P021"
 		text="Старейшина уверовал в новых богов и поклоняется теперь металлическим монстрам. Впрочем, эти люди тебе все лучше расскажут."
 		role="PLAYER"
-		scriptCondition="QuestStatus('r3m1_RescueUlukCivil_TakeToSet')==Q_TAKEN"
+		scriptCondition="QuestStatus('r3m1_RescueUlukCivil_TakeToSet')==Q_TAKEN and GetVar('BezhenAlive').AsInt==1"
 		scriptResult="CompleteQuest('r3m1_RescueUlukCivil_TakeToSet'); CompleteQuest('r3m1_KnowAboutUluk_GotoSet');"
 		nextReplies="Set_Bar_Customer2_2_N031" />
 
@@ -5357,7 +5357,7 @@
 		name="Set_Bar_Customer2_2_P041"
 		text="Спасибо и вам. Я рад, что еще остались люди, живущие в согласии с природой."
 		role="PLAYER"
-		scriptResult="TActivate('trRescueEnd'); TDeactivate('trRescArmyDie'); EndConversation();" />
+		scriptResult="TActivate('trRescueEnd'); TDeactivate('trRescArmyDie'); SetVar('BezhenAlive', 0); EndConversation();" />
 <!--Root/r3m1/С лисой у разбойников-->
 	<Reply
 		name="RazVill_Bar_Lisa_1_N01"
@@ -5479,7 +5479,7 @@
 
 	<Reply
 		name="Dlg_npc_002201"
-		text="Езжай пока один. Я выдвинусь через день. Как закончишь с чертежом, приезжай к моего отцу, я буду у него."
+		text="Езжай пока один. Я выдвинусь через день. Как закончишь с чертежом, приезжай к моему отцу, я буду у него."
 		role="NPC"
 		nextReplies="Dlg_pl_002202" />
 
@@ -5708,7 +5708,7 @@
 		name="SektantMain_hellodlg0"
 		text="Приветствую тебя, заблудшая душа. Я вижу в тебе пустоту и бездуховность. Помоги нашей церкви и сможешь встать на путь истинный."
 		role="NPC"
-		scriptCondition="not(IsQuestComplete('Podderzhka_Quest')) and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_COMPLETED and not(QuestStatus('d_FindVerbInAM_Quest')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001133" />
 
 	<Reply
@@ -8209,7 +8209,7 @@ TakeQuest('d_FindVerbInAM_Quest');
 		name="Dlg_pl_002266"
 		text="Выполняю."
 		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindVerbInSNG_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands2_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); CompleteQuestIfTaken('d_FindVerbInAM_Quest'); TakeQuest('Podderzhka_Quest');  AddHistory(  'r2_AM_00'  );  AddFadingMsgId( 'fm_history_got' ); SetTolerance(1100,1083,RS_ALLY); EndConversation()" />
+		scriptResult="TakeQuest('d_FindVerbInAM_Quest'); CompleteQuest('d_FindVerbInSNG_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands2_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); CompleteQuestIfTaken('d_FindVerbInAM_Quest'); TakeQuest('Podderzhka_Quest');  AddHistory(  'r2_AM_00'  );  AddFadingMsgId( 'fm_history_got' ); SetTolerance(1100,1083,RS_ALLY); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002267"
@@ -10161,7 +10161,7 @@ TakeQuest('d_FindVerbInAM_Quest');
 
 	<Reply
 		name="Dlg_npc_001863"
-		text="Моей жене нужно срочно попасть домой к её больной матушке, а наша машина сломалась. Не подвезёте?"
+		text="Мы молодая семейная пара - Кони и Блайд. Моей жене нужно срочно попасть домой к её больной матушке, а наша машина сломалась. Не подвезёте?"
 		role="NPC"
 		nextReplies="Dlg_pl_001864" />
 
@@ -10243,7 +10243,7 @@ TakeQuest('d_FindVerbInAM_Quest');
 		name="Dlg_pl_001871"
 		text="Мерзавцы…"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_BonnyAndKlideQuest');  AddPlayerMoney( -10000000); GetPlayerVehicle():TakeOffAllGuns();  EndConversation()" />
+		scriptResult="CompleteQuest('r1m3_BonnyAndKlideQuest');  AddPlayerMoney( -GetPlayerMoney()); GetPlayerVehicle():TakeOffAllGuns();  EndConversation()" />
 <!--Root/r1m3/Опциональные/Безумец в Пеште-->
 	<Reply
 		name="CrazyMan_hellodlg0"
@@ -12691,7 +12691,7 @@ TakeQuest('d_FindVerbInAM_Quest');
 		name="Dlg_pl_002643"
 		text="Всё-всё, считай меня уже нет."
 		role="PLAYER"
-		scriptResult="SetVar('ZasadaAR',0); AddPlayerMoney( -10000000); GetPlayerVehicle():TakeOffAllGuns(); TActivate('trZasadaAR_Delete'); EndConversation()" />
+		scriptResult="SetVar('ZasadaAR',0); AddPlayerMoney( -GetPlayerMoney()); GetPlayerVehicle():TakeOffAllGuns(); TActivate('trZasadaAR_Delete'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002640"
@@ -12807,7 +12807,7 @@ TakeQuest('d_FindVerbInAM_Quest');
 		name="Dlg_pl_002068"
 		text="Значит, мне придётся проследовать за ним. Нехорошо получается…"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_FindThiefFromFatherHouse'); TakeQuest('r1m3_TalkWithThiefFromFatherHouse'); SetTolerance(1100,1012,RS_NEUTRAL); TActivate('ArmiaCreate'); SetVar('QuickWay',2);  EndConversation()" />
+		scriptResult="CompleteQuest('r1m3_FindThiefFromFatherHouse'); TakeQuest('r1m3_TalkWithThiefFromFatherHouse'); SetTolerance(1100,1012,RS_NEUTRAL); TActivate('ArmiaCreate'); SetVar('QuickWayAlt',1); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Диалог с Вором-->
 	<Reply
 		name="Thief_hellodlg0"
@@ -12995,7 +12995,7 @@ TakeQuest('d_FindVerbInAM_Quest');
 
 	<Reply
 		name="Dlg_npc_002533"
-		text="Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий 'злобно выглядящий тип в просторном балахоне и тряпьём на голове'."
+		text="Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий 'злобно выглядящий тип в просторном балахоне и тряпьём на голове'. "
 		role="NPC"
 		nextReplies="Dlg_pl_002534" />
 
@@ -13012,13 +13012,6 @@ TakeQuest('d_FindVerbInAM_Quest');
 		nextReplies="Dlg_pl_002536 Dlg_pl_002536_extra Dlg_pl_002881" />
 
 	<Reply
-		name="Dlg_pl_002881"
-		text="Что ж, это объясняет его спешку. Спасибо за информацию."
-		role="PLAYER"
-		scriptCondition="GetVar('QuickWay').AsInt==2"
-		scriptResult="SetVar('QuickWay',0); EndConversation()" />
-
-	<Reply
 		name="Dlg_pl_002536"
 		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
 		role="PLAYER"
@@ -13026,79 +13019,108 @@ TakeQuest('d_FindVerbInAM_Quest');
 		scriptResult="CompleteQuest('Zachisti4_Quest'); TakeQuest('r1m3_MoveToOraculAfterThief'); TActivate('TRIGGER_LISAAFTERTHIEF'); EndConversation()" />
 
 	<Reply
-		name="Dlg_pl_002536_extra"
-		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
-		role="PLAYER"
-		scriptCondition="IsQuestComplete('d_GiveMoneyToBase_Quest') and IsQuestComplete('r3m2_OracleMemory') and GetCurNpc():GetSpokenCount() == 0 and not(IsQuestTaken('FightForPesht')) and not(IsQuestComplete('FightForPesht'))"
-		nextReplies="Dlg_npc_002562" />
-
-	<Reply
-		name="Dlg_npc_002562"
-		text="Постой! Я вижу, ты в состоянии за себя постоять. Да и вооружение твоего грузовика довольно на уровне."
-		role="NPC"
-		nextReplies="Dlg_pl_002563" />
-
-	<Reply
-		name="Dlg_pl_002563"
-		text="Ближе к делу, чего ты хочешь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002564" />
-
-	<Reply
-		name="Dlg_npc_002564"
-		text="Мы тут формируем тяжело вооружённый отряд, чтобы разгромить бандитов, завахтивших Пешт, и вернуть город под наше управление. И ты бы там очень приходился."
-		role="NPC"
-		nextReplies="Dlg_pl_002565 Dlg_pl_002566" />
-
-	<Reply
-		name="Dlg_pl_002566"
-		text="Нет, спасибо. Сами решайте свои проблемы."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002565"
-		text="Звучит здорово, я в деле. Но задарма я воевать не буду!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002545" />
-
-	<Reply
-		name="Dlg_npc_002545"
-		text="Тебе заплатят. 25000 монет за успех операции. Встреться с командиром армии вот здесь, он тебе всё расскажет."
-		role="NPC"
-		nextReplies="Dlg_pl_002567" />
-
-	<Reply
-		name="Dlg_pl_002567"
-		text="Выдвигаюсь."
-		role="PLAYER"
-		scriptResult="TakeQuest('FightForPesht'); TActivate('trFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1100,1012,RS_ENEMY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002543"
+		name="Dlg_npc_003193"
 		text="И снова привет. Ну как, нашёл на севере то, что искал?"
 		role="NPC"
-		scriptCondition="IsQuestComplete('d_GiveMoneyToBase_Quest') and IsQuestComplete('r3m2_OracleMemory') and GetCurNpc():GetSpokenCount() == 0 and not(IsQuestTaken('FightForPesht')) and not(IsQuestComplete('FightForPesht'))"
-		nextReplies="Dlg_pl_002544" />
+		scriptCondition="(IsQuestComplete('d_GiveMoneyToBase_Quest') or GetVar('QuickWayAlt').AsInt==1) and IsQuestComplete('r1m3_FindThiefFromFatherHouse') and GetCurNpc():GetSpokenCount() == 0 "
+		scriptResult="SetVar('QuickWayAlt',2); GetCurNpc():SetSpokenCount(1)"
+		nextReplies="Dlg_pl_003194" />
 
 	<Reply
-		name="Dlg_pl_002544"
+		name="Dlg_pl_003194"
 		text="Можно и так сказать."
 		role="PLAYER"
-		nextReplies="Dlg_npc_002561" />
+		nextReplies="Dlg_npc_003195" />
 
 	<Reply
-		name="Dlg_npc_002561"
+		name="Dlg_npc_003195"
 		text="Кстати, я тут поспрашивал людей насчёт этого твоего Серго, и, что вполне ожидаемо, никто не смог его вспомнить."
 		role="NPC"
-		nextReplies="Dlg_pl_002474" />
+		nextReplies="Dlg_pl_003196" />
 
 	<Reply
-		name="Dlg_npc_002882"
-		text="И снова привет. Ну как, нашёл на севере то, что искал?"
+		name="Dlg_pl_003196"
+		text="Очень странно."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003197" />
+
+	<Reply
+		name="Dlg_npc_003197"
+		text="Я тоже так подумал, и потом решил поспрашивать не конкретно про Серго, а просто про необычно одетых чужестранцев, говорящих с заметным акцентом. И тут один работяга кое-что припомнил."
 		role="NPC"
-		scriptCondition="GetVar('QuickWay').AsInt==2"
-		nextReplies="Dlg_pl_002544" />
+		nextReplies="Dlg_pl_003198" />
+
+	<Reply
+		name="Dlg_pl_003198"
+		text="Я весь внимание."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003199" />
+
+	<Reply
+		name="Dlg_npc_003199"
+		text="Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий 'злобно выглядящий тип в просторном балахоне и тряпьём на голове'. "
+		role="NPC"
+		nextReplies="Dlg_pl_003200" />
+
+	<Reply
+		name="Dlg_pl_003200"
+		text="Быть этого не может..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003201" />
+
+	<Reply
+		name="Dlg_npc_003201"
+		text="Дальше интересней. Этот работяга поделился этой информацией с Айвеном, и тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
+		role="NPC"
+		nextReplies="Dlg_pl_003202" />
+
+	<Reply
+		name="Dlg_pl_003202"
+		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003203" />
+
+	<Reply
+		name="Dlg_npc_003203"
+		text="Постой! Я вижу, ты в состоянии за себя постоять. Да и вооружение твоего грузовика довольно на уровне."
+		role="NPC"
+		nextReplies="Dlg_pl_003204" />
+
+	<Reply
+		name="Dlg_pl_003204"
+		text="Ближе к делу, чего ты хочешь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003205" />
+
+	<Reply
+		name="Dlg_npc_003205"
+		text="Мы тут формируем тяжело вооружённый отряд, чтобы разгромить бандитов, завахтивших Пешт, и вернуть город под наше управление. И ты бы там очень приходился."
+		role="NPC"
+		nextReplies="Dlg_pl_003206 Dlg_pl_003207" />
+
+	<Reply
+		name="Dlg_pl_003207"
+		text="Звучит здорово, я в деле. Но задарма я воевать не буду!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003208" />
+
+	<Reply
+		name="Dlg_npc_003208"
+		text="Тебе заплатят. 25000 монет за успех операции. Встреться с командиром армии вот здесь, он тебе всё расскажет."
+		role="NPC"
+		nextReplies="Dlg_pl_003209" />
+
+	<Reply
+		name="Dlg_pl_003209"
+		text="Выдвигаюсь."
+		role="PLAYER"
+		scriptResult="TakeQuest('FightForPesht'); TActivate('trFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003206"
+		text="Нет, спасибо. Сами решайте свои проблемы."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 <!--Root/r1m3/Сюжетные/Искать Лису в Пеште и у Бена-->
 	<Reply
 		name="Dlg_npc_002079"
@@ -16742,12 +16764,62 @@ TakeQuest('d_FindVerbInAM_Quest');
 
 	<Reply
 		name="Dlg_npc_002650"
-		text="Вот и за это тебе огромное спасибо.|Ну всё, хватит о войне! Пойду я тоже отдыхать."
+		text="Вот и за это тебе огромное спасибо."
 		role="NPC"
-		nextReplies="Dlg_pl_002651" />
+		nextReplies="Dlg_pl_003184" />
 
 	<Reply
-		name="Dlg_pl_002651"
+		name="Dlg_pl_003184"
+		text="Кстати говоря, как там Одетт?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003185 Dlg_npc_003186" />
+
+	<Reply
+		name="Dlg_npc_003186"
+		text="Она... Она умерла. Помощь пришла слишком поздно... "
+		role="NPC"
+		scriptCondition="QuestStatus('OdettIsDead_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_pl_003190" />
+
+	<Reply
+		name="Dlg_pl_003190"
+		text="Жаль это слышать, она была отличным человеком, и погибла, сражаясь за правое дело. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_003191" />
+
+	<Reply
+		name="Dlg_npc_003191"
+		text="Да, наверное...|Но меня не покидает навязчивое ощущение, что всего этого можно было бы избежать."
+		role="NPC"
+		nextReplies="Dlg_pl_003192" />
+
+	<Reply
+		name="Dlg_pl_003192"
+		text="Может быть и так..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003188" />
+
+	<Reply
+		name="Dlg_npc_003185"
+		text="О, ей уже гораздо лучше. Ей своевременно оказали помощь и теперь она идёт на поправку. "
+		role="NPC"
+		scriptCondition="not(QuestStatus('OdettIsDead_Quest')==Q_COMPLETED)"
+		nextReplies="Dlg_pl_003187" />
+
+	<Reply
+		name="Dlg_pl_003187"
+		text="Очень рад это слышать. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_003188" />
+
+	<Reply
+		name="Dlg_npc_003188"
+		text="Ну всё, хватит о войне! Пойду я тоже отдыхать."
+		role="NPC"
+		nextReplies="Dlg_pl_003189" />
+
+	<Reply
+		name="Dlg_pl_003189"
 		text="Да, надо бы. Завтра начнётся новое приключение."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(3); StopPlayingCustomMusic(); TActivate('NextDayTr'); EndConversation()" />

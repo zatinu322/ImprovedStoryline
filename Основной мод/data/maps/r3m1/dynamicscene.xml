@@ -11,7 +11,15 @@
 		Prototype="genericLocation"
 		Pos="1784.210 286.275 1453.526"
 		Radius="62.835" />
-	
+
+	<Object
+		Flags="21"
+		Name="RCarsSet_loc"
+		Belong="1064"
+		Prototype="genericLocation"
+		Pos="1510.462 288.000 2567.540"
+		Radius="30.000" />
+
 	<Object
 		Flags="21"
 		Name="SkripRob_loc"

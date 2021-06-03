@@ -1195,11 +1195,7 @@
 			
 			CompleteQuest("GoBackToHel_Quest")
 			TakeQuest("Chehly_Quest")
-			
-			if QuestStatus("RybakToOlm_Quest")==Q_COMPLETED then
-				TActivate("RrybakRoadStart")
-			end
-			
+
 			if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
 				SetCoordinateForQuest( "d_chehol1" ,   CVector(getPos("ToR3M1")))
 				SetCoordinateForQuest( "RPGSigns_Quest2" ,   CVector(getPos("ToR3M1")))
@@ -1208,6 +1204,11 @@
 				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd03", 1010, CVector(2776.965, 226.000, 358.073), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),0 )
 				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd04", 1010, CVector(2744.304, 226.000, 357.439), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),0 )
 				TDeactivate("trConv")
+				
+				if QuestStatus("RybakToOlm_Quest")==Q_COMPLETED then
+					TActivate("RrybakRoadStart")
+				end
+				
 				TeamCreate("BorderTSPGuards",1010,CVector(2763.220, 226.405, 485.677),{"MirotvorecShot", "MirotvorecShot"})
 				local bg1 = GetEntityByName("BorderTSPGuards_vehicle_0")
 				local bg2 = GetEntityByName("BorderTSPGuards_vehicle_1")

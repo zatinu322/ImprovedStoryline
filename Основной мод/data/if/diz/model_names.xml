@@ -2092,4 +2092,9 @@
 		locForm="0"
 		value="Лекарства для Лисы" />
 
+	<Item
+		id="Odett_hunter"
+		locForm="0"
+		value="Одетт" />
+
 </ModelNames>

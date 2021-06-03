@@ -245,6 +245,7 @@
 <!-- Lisa встреча в городе -->
 	<trigger Name="loc_lisa" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="LisaRolik_loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="LisaRolik2_loc" />
 		<script>
 			RuleConsole("cinematic_spring_coeff 1.7")
 

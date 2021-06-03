@@ -466,6 +466,7 @@
 			SetCameraBehindPlayerVehicle()
 			StopPlayingCustomMusic()
 			DisableGodMode()
+			AddBelongToEncyclopaedia( 1030 )
 			trigger:Deactivate()
 		</script>
 	</trigger>

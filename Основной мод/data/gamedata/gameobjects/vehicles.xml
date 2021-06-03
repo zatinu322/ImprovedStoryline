@@ -190,6 +190,61 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		</Wheels>
 	</Prototype>
 
+        <Prototype
+		Class				= "Vehicle"
+		Name				= "Robot04"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio			= "8.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+
+		SteeringSpeed		= "1.5"
+		
+		HornSound		= "ET_S_HORN01"
+
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius			= "400.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.3"
+		MassSize			= "4 1 1"
+		MassTranslation		= "0 -1.6 0"
+		AdditionalWheelsHover = " -0.1"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "ROBOT3_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "ROBOT1_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="BASKET_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "robot03Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "robot1Wheel01_L"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel01_R"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel02_L"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel02_R"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel03_L" />
+			<Wheel Prototype = "robot1Wheel03_R" />
+			<Wheel Prototype = "robot1Wheel04_L" />
+			<Wheel Prototype = "robot1Wheel04_R" />
+			<Wheel Prototype = "robot1Wheel05_L" />
+			<Wheel Prototype = "robot1Wheel05_R" />
+			<Wheel Prototype = "robot1Wheel05_L" />
+			<Wheel Prototype = "robot1Wheel05_R" />
+		</Wheels>
+	</Prototype>
 
 	<Prototype
 		Class				= "Vehicle"
@@ -1391,6 +1446,19 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 	<Prototype
 		Class			= "Vehicle"
 		Name			= "r1m2_hunter02"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" /> 
+			<Part id = "CABIN_BIG_GUN"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Odett_hunter"
 		ParentPrototype 	= "Hunter">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "hunterCab02" />
@@ -3144,7 +3212,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		Class				= "Vehicle"
 		Name				= "RobotMetatron"
 		VisibleInEncyclopedia   = "false"
-		ParentPrototype 		= "Robot03">
+		ParentPrototype 		= "Robot04">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "robot01Cab03" />
 			<Part id = "BASKET"			Prototype = "fakeCargo" />

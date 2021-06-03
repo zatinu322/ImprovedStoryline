@@ -581,5 +581,18 @@
 
 </Path>
 
-</Paths>
+<Path Name="OIDCam1">
+	<Point  coord="3967.816 302.284 2720.773" rotation="-0.097 0.340 -0.035 0.935"/>
+	<Point  coord="3875.132 302.284 2682.831" rotation="-0.108 -0.128 0.014 0.986"/>
+</Path>
 
+<Path Name="OIDCam2">
+	<Point  coord="4036.299 302.025 2864.314" rotation="-0.039 0.854 -0.065 0.514"/>
+	<Point  coord="3937.402 286.628 2809.813" rotation="-0.030 0.860 -0.052 0.507"/>
+</Path>
+
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
+</Paths>

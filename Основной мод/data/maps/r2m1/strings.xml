@@ -775,6 +775,107 @@
 		time="10" />
 
 	<string
+		id="147"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="104"
+		modelSlot="1"
+		sound=""
+		value="ОДЕТТ|Что это за машина? Почему она без оружия?"
+		time="3.5" />
+
+	<string
+		id="148"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="ЖИЛЬБЕР|Не подпускайте её близко! Огонь!"
+		time="3" />
+
+	<string
+		id="149"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="104"
+		modelSlot="1"
+		sound=""
+		value="ОДЕТТ|Чёрт побери! Стреляйте же!"
+		time="3" />
+
+	<string
+		id="150"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="ЖИЛЬБЕР|Все сюда, лидер ранена! У кого-нибудь есть, чем остановить кровь?"
+		time="5" />
+
+	<string
+		id="151"
+		modelName="mask_hero"
+		sound=""
+		value="Да, вот, держите. Это должно помочь!"
+		time="4" />
+
+	<string
+		id="152"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="ЖИЛЬБЕР|Какая удача! Спасибо тебе огромное! Теперь её шансы выжить возросли многократно!"
+		time="6" />
+
+	<string
+		id="153"
+		modelName="mask_hero"
+		sound=""
+		value="Я могу ещё чем-нибудь помочь?"
+		time="4" />
+
+	<string
+		id="154"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="ЖИЛЬБЕР|Нет, дальше мы займёмся сами. А ты отправляйся в Гельвецию, путь туда теперь свободен. Удачи!"
+		time="6" />
+
+	<string
+		id="156"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="ЖИЛЬБЕР|Она погибнет, если ей срочно не оказать помощь! Нужно немедленно отвезти её в Сибиллу!"
+		time="6" />
+
+	<string
+		id="157"
+		modelName="mask_hero"
+		sound=""
+		value="Я могу как-нибудь помочь?"
+		time="4" />
+
+	<string
+		id="158"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="ЖИЛЬБЕР|Нет, у нас всё схвачено. Спасибо тебе за помощь, но дальше мы сами. А ты отправляйся в Гельвецию, путь туда теперь свободен."
+		time="9" />
+
+	<string
 		id="70"
 		modelName="mask_hero"
 		sound="data\sounds\speech\r2m1\r2m1_70_hero.ogg"

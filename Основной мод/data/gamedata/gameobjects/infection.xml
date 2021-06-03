@@ -158,58 +158,56 @@ $Id: Infection.xml,v 1.47 2005/11/17 06:42:59 anton Exp $
 		DesiredCount 				= "1-3"
 		partOfSchwartzForCabin 			= "0.15"  
 		partOfSchwartzForBasket 		= "0.15"
-		partOfSchwartzForGuns 			= "0.54"
-		partOfSchwartzForWares 			= "0.20" >
+		partOfSchwartzForGuns 			= "0.34"
+		partOfSchwartzForWares 			= "0.40" >
 		<Description 
 			VehiclesPrototypes	="Scout01 Sml201"		
 			WaresPrototypes="firewood"
 			GunAffixGeneratorPrototype="townaffixGenerator"
-			PartOfSchwartz="0.35" />
+			PartOfSchwartz="0.1" />
 		<Description 
 			VehiclesPrototypes	="Sml101 Sml201" 	
 			WaresPrototypes="firewood"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.1" />
 		<Description 
 			VehiclesPrototypes	="Sml101 Sml201" 	
 			WaresPrototypes="firewood"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.1" />
 		<Description 
 			VehiclesPrototypes	="Bug01 Scout02" 	
 			WaresPrototypes="scrap_metal"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-
+			PartOfSchwartz="0.2" />
+		<Description 
+			VehiclesPrototypes	="Molokovoz02 Fighter02 Scout02" 	
+			WaresPrototypes="scrap_metal"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.2" />
 		<Description 
 			VehiclesPrototypes	="Ural01 Hunter01 Scout03" 	
-			WaresPrototypes="scrap_metal"
+			WaresPrototypes="scrap_metal oil"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.2" />
 		<Description 
 			VehiclesPrototypes	="Ural02 Fighter02 Scout03" 	
-			WaresPrototypes="scrap_metal"
+			WaresPrototypes="scrap_metal oil"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.2" />
 
 		<Description 
 			VehiclesPrototypes	="Molokovoz02 Fighter02 Scout02" 	
 			WaresPrototypes="scrap_metal"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-		<Description 
-			VehiclesPrototypes	="Molokovoz02 Hunter02 Scout02" 	
-			WaresPrototypes="scrap_metal"
-			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-
+			PartOfSchwartz="0.2" />
 	</Prototype>
 
 	<Prototype
 		Class			= "InfectionTeam"
 		Name			= "r1m3BanditsGang"
 		DecisionMatrix	= "teammain.lua"
-		VehiclesGenerator = "r1m2BanditsGangGenerator">
+		VehiclesGenerator = "r1m3BanditsGangGenerator">
 		<Vehicles/>
 	</Prototype>
 	<Prototype
@@ -219,49 +217,47 @@ $Id: Infection.xml,v 1.47 2005/11/17 06:42:59 anton Exp $
 		partOfSchwartzForCabin 			= "0.15"  
 		partOfSchwartzForBasket 		= "0.15"
 		partOfSchwartzForGuns 			= "0.54"
-		partOfSchwartzForWares 			= "0.20" >
+		partOfSchwartzForWares 			= "0.10" >
 		<Description 
-			VehiclesPrototypes	="Scout01 Scout02"		
+			VehiclesPrototypes	="Ural01 Hunter01 Scout03"		
 			WaresPrototypes="scrap_metal"
 			GunAffixGeneratorPrototype="townaffixGenerator"
-			PartOfSchwartz="0.35" />
-		<Description 
-			VehiclesPrototypes	="Scout01 Sml201 Sml301" 	
-			WaresPrototypes="scrap_metal"
-			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-		<Description 
-			VehiclesPrototypes	="Sml101 Sml201 Sml301 Sml401" 	
-			WaresPrototypes="scrap_metal"
-			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-		<Description 
-			VehiclesPrototypes	="Bug01 Scout02" 	
-			WaresPrototypes="oil"
-			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-
+			PartOfSchwartz="0.15" />
 		<Description 
 			VehiclesPrototypes	="Ural01 Hunter01 Scout03" 	
 			WaresPrototypes="oil"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.1" />
+		<Description 
+			VehiclesPrototypes	="Molokovoz02 Fighter02 Scout02" 	
+			WaresPrototypes="scrap_metal"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.15" />
 		<Description 
 			VehiclesPrototypes	="Ural02 Fighter02 Scout03" 	
 			WaresPrototypes="oil"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
-
+			PartOfSchwartz="0.1" />
 		<Description 
 			VehiclesPrototypes	="Molokovoz02 Fighter02 Scout02" 	
 			WaresPrototypes="oil"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.1" />
+		<Description 
+			VehiclesPrototypes	="Ural02 Fighter02 Scout03" 	
+			WaresPrototypes="scrap_metal"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.15" />
 		<Description 
 			VehiclesPrototypes	="Molokovoz02 Hunter02 Scout02" 	
 			WaresPrototypes="oil"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
-			PartOfSchwartz="0.3" />
+			PartOfSchwartz="0.1" />
+		<Description 
+			VehiclesPrototypes	="Molokovoz02 Hunter02 Scout02" 	
+			WaresPrototypes="scrap_metal"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.15" />
 
 	</Prototype>
 
@@ -549,12 +545,12 @@ $Id: Infection.xml,v 1.47 2005/11/17 06:42:59 anton Exp $
 		partOfSchwartzForGuns 			= "0.24"
 		partOfSchwartzForWares 			= "0.35" >
 		<Description 
-			VehiclesPrototypes	="RobotTron"		
+			VehiclesPrototypes	="RobotMetatron"		
 			WaresPrototypes="tobacco bottle"
 			GunAffixGeneratorPrototype="townaffixGenerator"
 			PartOfSchwartz="0.35" />
 		<Description 
-			VehiclesPrototypes	="RobotTron" 	
+			VehiclesPrototypes	="RobotMetatron" 	
 			WaresPrototypes="tobacco bottle"
 			GunAffixGeneratorPrototype="villageaffixGenerator"
 			PartOfSchwartz="0.3" />

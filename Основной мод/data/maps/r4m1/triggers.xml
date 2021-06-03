@@ -1236,24 +1236,20 @@
 	<trigger	Name="trTankistyCreate"	active="0">
 		<event	timeout="0.01"			eventid="GE_TIME_PERIOD" />
 		<script>
-		
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
+
 			TeamCreate("Tankisty",1025,CVector(6244.019, 251.303, 5029.185),{"Tank01"})
 			
 			local tank1 = GetEntityByName("Tankisty_vehicle_0")
 			if tank1 then
 				tank1:SetRotation(Quaternion(0.002, 0.926, -0.002, -0.378))
+				tank1:LimitMaxSpeed(20)
 				tank1:SetExternalPathByName("TankistyPath")
 				tank1:setImmortalMode(1)
 			end
-			
+
 			TActivate("SPYTANKI")
 			TActivate("SPYTANKIEND")
-			
-			TDeactivate("trSetTolNeutral")
-			TDeactivate("trSetTolEnemy")
-			
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1327,8 +1323,6 @@
 		<script>
 			GameFiltersUse()
 
-			RestoreAllToleranceStatus()
-
 			local r1 = GetEntityByName ("Tankisty_vehicle_0")
 			if r1 then r1:Remove() end
 
@@ -1353,11 +1347,6 @@
 			CompleteQuestIfTaken("r4m1_Tankisty")
 			
 			StartConversation("Tankist")
-			
-			RestoreAllToleranceStatus()
-			
-			TActivate("trSetTolNeutral")
-			TActivate("trSetTolEnemy")
 
 			trigger:Deactivate()
 		</script>
@@ -1600,14 +1589,6 @@
 		<event	timeout="11"		eventid="GE_TIME_PERIOD" />
 		<script>
 		SpawnMessageBox( "8903" )
-		trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="TankiWarning" active="0">
-		<event	timeout="5"		eventid="GE_TIME_PERIOD" />
-		<script>
-		SpawnMessageBox( "8904" )
 		trigger:Deactivate()
 		</script>
 	</trigger>

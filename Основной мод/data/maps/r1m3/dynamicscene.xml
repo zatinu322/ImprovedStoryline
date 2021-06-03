@@ -853,7 +853,7 @@
 				Prototype="NPC"
 				ModelName="r1_man"
 				cfg="58"
-				helloReplyNames="MininWorker2_hellodlg0 Dlg_npc_002077 Dlg_npc_002543 Dlg_npc_002882"
+				helloReplyNames="MininWorker2_hellodlg0 Dlg_npc_002077 Dlg_npc_003193"
 				SpokenCount="0" />
 
 			<Object

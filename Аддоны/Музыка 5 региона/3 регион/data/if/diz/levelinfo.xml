@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<LevelInfoResource>
+	<LevelInfo
+		name="mainmenu"
+		file="data\maps\mainmenu.ssl"
+		fullName="Хель"
+		diz0=""
+		diz1=""
+		image0="data\if\map\r1m4.dds"
+		image1="data\if\ico\GlobalMap\gmap_ico_2.dds"
+		splashes="data\if\ico\Splashes\mainmenu\1.dds"
+		musicBlocks="" />
+
+	<LevelInfo
+		name="t"
+		file="data\maps\t.ssl"
+		fullName="Край1"
+		diz0=""
+		diz1=""
+		image0="data\if\map\r1m1.dds"
+		image1="data\if\ico\GlobalMap\gmap_ico_2.dds"
+		splashes="data\if\ico\Splashes\plane.dds"
+		musicBlocks="block0 block1" />
+
+	<LevelInfo
+		name="r1m1"
+		file="data\maps\r1m1.ssl"
+		fullName="Край"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r1m1.dds"
+		image1="data\if\ico\GlobalMap\r1m1.dds"
+		splashes="data\if\ico\Splashes\r1m1\1.dds data\if\ico\Splashes\r1m1\2.dds data\if\ico\Splashes\r1m1\3.dds data\if\ico\Splashes\r1m1\4.dds data\if\ico\Splashes\r1m1\5.dds data\if\ico\Splashes\r1m1\6.dds data\if\ico\Splashes\r1m1\7.dds data\if\ico\Splashes\r1m1\8.dds data\if\ico\Splashes\r1m1\9.dds data\if\ico\Splashes\r1m1\10.dds data\if\ico\Splashes\r1m1\11.dds data\if\ico\Splashes\r1m1\12.dds data\if\ico\Splashes\r1m1\13.dds data\if\ico\Splashes\r1m1\14.dds"
+		musicBlocks="block0 block1" />
+
+	<LevelInfo
+		name="r1m2"
+		file="data\maps\r1m2.ssl"
+		fullName="Риджин"
+		diz0=""
+		diz1=""
+		image0="data\if\map\r1m2.dds"
+		image1="data\if\ico\GlobalMap\r1m2.dds"
+		splashes="data\if\ico\Splashes\r1m2\1.dds data\if\ico\Splashes\r1m2\2.dds data\if\ico\Splashes\r1m2\3.dds data\if\ico\Splashes\r1m2\4.dds data\if\ico\Splashes\r1m2\5.dds data\if\ico\Splashes\r1m2\6.dds data\if\ico\Splashes\r1m2\7.dds data\if\ico\Splashes\r1m2\8.dds data\if\ico\Splashes\r1m2\9.dds data\if\ico\Splashes\r1m2\10.dds data\if\ico\Splashes\r1m2\11.dds data\if\ico\Splashes\r1m2\12.dds data\if\ico\Splashes\r1m2\13.dds data\if\ico\Splashes\r1m2\14.dds data\if\ico\Splashes\r1m2\15.dds data\if\ico\Splashes\r1m2\16.dds"
+		musicBlocks="block0 block1" />
+
+	<LevelInfo
+		name="r1m3"
+		file="data\maps\r1m3.ssl"
+		fullName="Фатерлянд"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r1m3.dds"
+		image1="data\if\ico\GlobalMap\r1m3.dds"
+		splashes="data\if\ico\Splashes\r1m3\1.dds data\if\ico\Splashes\r1m3\2.dds data\if\ico\Splashes\r1m3\3.dds data\if\ico\Splashes\r1m3\4.dds data\if\ico\Splashes\r1m3\5.dds data\if\ico\Splashes\r1m3\6.dds data\if\ico\Splashes\r1m3\7.dds data\if\ico\Splashes\r1m3\8.dds data\if\ico\Splashes\r1m3\9.dds data\if\ico\Splashes\r1m3\10.dds data\if\ico\Splashes\r1m3\11.dds data\if\ico\Splashes\r1m3\12.dds data\if\ico\Splashes\r1m3\13.dds"
+		musicBlocks="block0 block1" />
+
+	<LevelInfo
+		name="r1m4"
+		file="data\maps\r1m4.ssl"
+		fullName="Хель"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r1m4.dds"
+		image1="data\if\ico\GlobalMap\r1m4.dds"
+		splashes="data\if\ico\Splashes\r1m4\1.dds data\if\ico\Splashes\r1m4\2.dds data\if\ico\Splashes\r1m4\3.dds data\if\ico\Splashes\r1m4\4.dds data\if\ico\Splashes\r1m4\5.dds data\if\ico\Splashes\r1m4\6.dds data\if\ico\Splashes\r1m4\7.dds data\if\ico\Splashes\r1m4\8.dds data\if\ico\Splashes\r1m4\9.dds data\if\ico\Splashes\r1m4\10.dds data\if\ico\Splashes\r1m4\11.dds"
+		musicBlocks="r1_4" />
+
+	<LevelInfo
+		name="r2m1"
+		file="data\maps\r2m1.ssl"
+		fullName="Либриум"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r2m1.dds"
+		image1="data\if\ico\GlobalMap\r2m1.dds"
+		splashes="data\if\ico\Splashes\r2m1\1.dds data\if\ico\Splashes\r2m1\2.dds data\if\ico\Splashes\r2m1\3.dds data\if\ico\Splashes\r2m1\4.dds data\if\ico\Splashes\r2m1\5.dds data\if\ico\Splashes\r2m1\6.dds data\if\ico\Splashes\r2m1\7.dds data\if\ico\Splashes\r2m1\8.dds data\if\ico\Splashes\r2m1\9.dds data\if\ico\Splashes\r2m1\10.dds"
+		musicBlocks="r2_1 r2_2" />
+
+	<LevelInfo
+		name="r2m2"
+		file="data\maps\r2m2.ssl"
+		fullName="Аржан"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r2m2.dds"
+		image1="data\if\ico\GlobalMap\r2m2.dds"
+		splashes="data\if\ico\Splashes\r2m2\1.dds data\if\ico\Splashes\r2m2\2.dds data\if\ico\Splashes\r2m2\3.dds data\if\ico\Splashes\r2m2\4.dds data\if\ico\Splashes\r2m2\5.dds data\if\ico\Splashes\r2m2\6.dds data\if\ico\Splashes\r2m2\7.dds data\if\ico\Splashes\r2m2\8.dds data\if\ico\Splashes\r2m2\9.dds"
+		musicBlocks="r2_1 r2_2" />
+
+	<LevelInfo
+		name="r3m1"
+		file="data\maps\r3m1.ssl"
+		fullName="Роща друидов"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r3m1.dds"
+		image1="data\if\ico\GlobalMap\r3m1.dds"
+		splashes="data\if\ico\Splashes\r3m1\1.dds data\if\ico\Splashes\r3m1\2.dds data\if\ico\Splashes\r3m1\3.dds data\if\ico\Splashes\r3m1\4.dds data\if\ico\Splashes\r3m1\5.dds"
+		musicBlocks="r3_1 r3_2" />
+
+	<LevelInfo
+		name="r3m2"
+		file="data\maps\r3m2.ssl"
+		fullName="Игнотт"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r3m2.dds"
+		image1="data\if\ico\GlobalMap\r3m2.dds"
+		splashes="data\if\ico\Splashes\r3m2\1.dds data\if\ico\Splashes\r3m2\2.dds data\if\ico\Splashes\r3m2\3.dds data\if\ico\Splashes\r3m2\4.dds data\if\ico\Splashes\r3m2\5.dds"
+		musicBlocks="r3_1 r3_2" />
+
+	<LevelInfo
+		name="r1m5"
+		file="data\maps\r1m5.ssl"
+		fullName="Горы Мудрецов"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r1m5.dds"
+		image1="data\if\ico\GlobalMap\r1m5.dds"
+		splashes="data\if\ico\Splashes\r1m5\1.dds data\if\ico\Splashes\r1m5\2.dds data\if\ico\Splashes\r1m5\3.dds data\if\ico\Splashes\r1m5\4.dds data\if\ico\Splashes\r1m5\5.dds data\if\ico\Splashes\r1m5\6.dds data\if\ico\Splashes\r1m5\7.dds data\if\ico\Splashes\r1m5\8.dds data\if\ico\Splashes\r1m5\9.dds data\if\ico\Splashes\r1m5\10.dds data\if\ico\Splashes\r1m5\11.dds data\if\ico\Splashes\r1m5\12.dds data\if\ico\Splashes\r1m5\13.dds data\if\ico\Splashes\r1m5\14.dds"
+		musicBlocks="r3_1 r3_2" />
+
+	<LevelInfo
+		name="r1m6"
+		file="data\maps\r1m6.ssl"
+		fullName="Лиденклауд"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r1m6.dds"
+		image1="data\if\ico\GlobalMap\r1m6.dds"
+		splashes="data\if\ico\Splashes\r1m6\1.dds data\if\ico\Splashes\r1m6\2.dds data\if\ico\Splashes\r1m6\3.dds data\if\ico\Splashes\r1m6\4.dds data\if\ico\Splashes\r1m6\5.dds data\if\ico\Splashes\r1m6\6.dds data\if\ico\Splashes\r1m6\7.dds data\if\ico\Splashes\r1m6\8.dds data\if\ico\Splashes\r1m6\9.dds"
+		musicBlocks="r3_1 r3_2" />
+
+	<LevelInfo
+		name="r1m7"
+		file="data\maps\r1m7.ssl"
+		fullName="Лабиринт Мудрецов"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r1m7.dds"
+		image1="data\if\ico\GlobalMap\r1m6.dds"
+		splashes="data\if\ico\Splashes\r1m7\1.dds"
+		musicBlocks="r3_1 r3_2" />
+
+	<LevelInfo
+		name="r4m1"
+		file="data\maps\r4m1.ssl"
+		fullName="Вахат"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r4m1.dds"
+		image1="data\if\ico\GlobalMap\r4m1.dds"
+		splashes="data\if\ico\Splashes\r4m1\1.dds data\if\ico\Splashes\r4m1\2.dds data\if\ico\Splashes\r4m1\3.dds data\if\ico\Splashes\r4m1\4.dds data\if\ico\Splashes\r4m1\5.dds data\if\ico\Splashes\r4m1\6.dds data\if\ico\Splashes\r4m1\7.dds data\if\ico\Splashes\r4m1\8.dds data\if\ico\Splashes\r4m1\9.dds data\if\ico\Splashes\r4m1\10.dds"
+		musicBlocks="r4_1 r4_2" />
+
+	<LevelInfo
+		name="r4m2"
+		file="data\maps\r4m2.ssl"
+		fullName="Зармек"
+		diz0=""
+		diz1=""
+		north="0 0 1"
+		image0="data\if\map\r4m2.dds"
+		image1="data\if\ico\GlobalMap\r4m2.dds"
+		splashes="data\if\ico\Splashes\r4m2\1.dds data\if\ico\Splashes\r4m2\2.dds data\if\ico\Splashes\r4m2\3.dds data\if\ico\Splashes\r4m2\4.dds data\if\ico\Splashes\r4m2\5.dds"
+		musicBlocks="r4_1 r4_2" />
+</LevelInfoResource>

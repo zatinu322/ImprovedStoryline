@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<DynamicScene
+	LastId="0">
+	<TargetNamesForDestroy
+		Names="" />
+
+	<Object
+		Name="Player1"
+		Belong="1100"
+		Prototype="player">
+		<Object
+			Name="MyCar"
+			Belong="1100"
+			Prototype="LabirintUral"
+			Pos="3416.932 257.481 2068.385"
+			Rot="0.000 -0.800 0.000 0.600"
+			Skin="2">
+			<Parts />
+
+			<Repository />
+		</Object>
+	</Object>
+
+	<Object
+		Name="Priezd_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3416.932 255.000 2068.385"
+		Radius="30.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="Explos_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3076.352 257.306 2115.378"
+		Radius="30.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="LabExit_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1485.498 255.000 2191.299"
+		Radius="30.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="PetrolStationTown1"
+		Belong="1080"
+		Prototype="PetrolStationTown"
+		Pos="3399.963 255.000 2054.784"
+		Rot="0.0000 -0.0393 0.0000 0.9992"
+		MaxDefenders="0"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravansDest="">
+		<Object
+			Flags="21"
+			Name="PetrolStationTown86_enter"
+			Belong="1080"
+			Prototype="genericLocation"
+			Pos="3419.432 255.000 2052.278"
+			Rot="0.000 0.653 0.000 -0.758"
+			Radius="30.000" />
+
+		<Object
+			Name="PetrolStationTown1_Workshop"
+			Belong="1080"
+			Prototype="workshop" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
+</DynamicScene>

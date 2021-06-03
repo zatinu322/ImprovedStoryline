@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Paths>
+	<Path Name = "start_game">
+		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
+	</Path>
+
+	<Path Name = "start_rolik1">
+		<Point  coord="3351.999 388.020 3301.754" rotation="-0.010 0.582 -0.007 0.813"/>   
+		<Point  coord="3348.970 369.043 3302.484" rotation="0.052 0.593 0.038 0.803"/>   
+	</Path>
+	<Path Name = "start_rolik11">
+		<Point  coord="3348.970 369.043 3302.484" rotation="0.052 0.593 0.038 0.803"/>   
+	</Path>
+	<Path Name = "start_rolik2">
+		<Point  coord="3344.750 369.521 3303.303" rotation="0.080 0.657 0.070 0.746"/>   
+		<Point  coord="3344.850 369.521 3303.403" rotation="0.080 0.657 0.070 0.746"/>   
+	</Path>
+	<Path Name = "start_rolik3">
+		<Point  coord="3340.705 373.665 3292.612" rotation="-0.146 -0.244 0.037 0.958"/>  
+		<Point  coord="3342.872 373.665 3291.333" rotation="-0.145 -0.182 0.027 0.972"/>  
+	</Path>
+	<Path Name = "start_rolik4">
+		<Point  coord="3358.524 370.779 3276.579" rotation="-0.019 0.059 -0.001 0.998"/>  
+		<Point  coord="3359.000 370.779 3277.000" rotation="-0.019 0.059 -0.001 0.998"/>
+	</Path>
+	<Path Name = "start_rolik5">
+		<Point  coord="3347.710 371.891 3285.348" rotation="-0.025 0.132 -0.003 0.991"/>   
+		<Point  coord="3347.910 371.891 3285.548" rotation="-0.025 0.132 -0.003 0.991"/>   
+	</Path>
+	<Path Name = "start_rolik6">
+		<Point  coord="3344.738 370.324 3303.042" rotation="-0.113 0.285 -0.034 0.951"/>   
+		<Point  coord="3344.638 370.324 3302.942" rotation="-0.113 0.286 -0.035 0.952"/>   
+	</Path>
+	<Path Name = "start_rolik7">
+		<Point  coord="3344.738 370.324 3303.042" rotation="-0.113 0.285 -0.034 0.951"/>   
+		<Point  coord="3344.750 369.521 3303.303" rotation="0.080 0.657 0.070 0.746"/>   
+	</Path>
+	<Path Name = "start_rolik8">
+		<Point  coord="3344.628 369.596 3305.261" rotation="0.030 0.924 0.074 0.375"/>  
+		<Point  coord="3348.161 369.948 3308.872" rotation="-0.006 0.925 -0.015 0.378"/> 
+	</Path>
+	<Path Name = "AltEnding3">
+		<Point  coord="3422.170 389.896 3225.362" rotation="-0.086 0.495 -0.049 0.863" 
+		zoom ="1.5" />
+		<Point  coord="3407.462 389.896 3206.752" rotation="-0.091 0.352 -0.034 0.931" 
+		zoom ="1" />
+	</Path>
+
+
+
+	<Path Name = "begin">
+		<Point  coord="3368 387 3008" rotation="-0.265 -0.146 0.041 0.952"/>   
+		<Point  coord="3391 383 3036" rotation="-0.034 0.162 -0.006 0.986"/>   
+		<Point  coord="3373 381 3077" rotation="-0.028 0.188 -0.005 0.982"/>
+		<Point  coord="3327 376 3250" rotation="-0.098 -0.124 0.012 0.987"/>   
+		<Point  coord="3303 385 3328" rotation="0.094 0.879 -0.195 -0.425"/>   
+		<Point  coord="3389 389 3285" rotation="-0.207 0.583 -0.157 0.770"/>
+		<Point  coord="3389 389 3285" rotation="-0.207 0.583 -0.157 0.770"/>   
+	</Path>
+
+	<Path Name = "flylisa1">
+		<Point  coord="2084 308 3582" rotation="1.3  0.3 0 0"/> 
+	</Path>
+
+	<Path Name = "flylisa2">
+		<Point  coord="970 322 3664" rotation="0.5 0.1 0 0"/>   
+	</Path>
+
+	<Path Name = "flylisa3">
+		<Point  coord="654 308 2747" rotation="2.7 0.1 0 0"/>   
+	</Path>
+
+	<Path Name = "flyfelix1">
+		<Point  coord="2910 359 740" rotation="2.4 0.2 0 0"/>   
+	</Path>
+
+	<Path Name = "flyfelix2">
+		<Point  coord="1192 322 2351" rotation="2.6 0.2 0 0"/>   
+	</Path>
+
+	<Path Name = "flyfather">
+		<Point  coord="653 320 809" rotation="2.5 0.05 0 0"/>  
+	</Path>
+
+
+	<Path Name = "waterbeautyfull">
+		<Point  coord="1294.880 331.017 1618.440" rotation="-0.126 0.636 -0.106 0.754"/> 
+ 		<Point  coord="1269.359 331.017 1452.288" rotation="-0.120 0.636 -0.101 0.755"/> 
+	</Path>
+
+	<Path Name = "cam01">
+		<Point  coord="2944.139 333.339 2370.245" rotation="0.073 0.832 0.113 0.538"/>
+		<Point  coord="2950.096 334.628 2381.249" rotation="0.007 0.932 0.018 0.363"/>
+	</Path>
+
+
+	<Path Name = "cam011">
+		<Point  coord="-12.000 2.000 -15.000"	 rotation="-0.023 -0.433 0.011 0.901"/>
+		<Point  coord="-32.000 5.000 -35.000"	 rotation="-0.023 -0.433 0.011 0.901"/>
+	</Path>
+
+	<Path Name = "Lisassscam011">
+		<Point  coord="1296.969 306.799 2823.738" rotation="-0.061 0.478 -0.033 0.875"/>
+		<Point  coord="1248.526 308.580 2847.534" rotation="-0.128 0.361 -0.050 0.923"/>
+		<Point  coord="1179.376 311.301 2877.967" rotation="-0.049 -0.158 0.008 0.986"/>
+		<Point  coord="1182.600 311.019 2918.999" rotation="-0.066 -0.083 0.005 0.994"/>
+	</Path>
+
+	<Path Name = "Sity_cam01">
+		<Point  coord="25.000 1.000 30.000"	 rotation="0.005 0.916 0.012 0.401"/>
+		<Point  coord="14.000 6.000 -7.000"	 rotation="-0.049 0.540 -0.032 0.839"/>
+		<Point  coord="35.000 15.000 -27.000"	 rotation="-0.049 0.540 -0.032 0.839"/>
+		<Point  coord="55.000 25.000 -47.000"	 rotation="-0.018 0.509 -0.011 0.860"/>
+	</Path>
+
+	<Path Name = "Sity_cam02">
+		<Point  coord="1230.821 333.356 3100.142" rotation="0.013 0.930 -0.033 -0.366"/>
+		<Point  coord="1372.290 344.591 3044.915" rotation="-0.044 0.889 -0.088 0.447"/>
+	</Path>
+
+	<Path Name = "lisa_cam01">
+		<Point  coord="1275.287 293.238 2844.756" rotation="-0.022 0.600 -0.016 0.799"/>
+		<Point  coord="1275.287 297.173 2844.756" rotation="-0.022 0.600 -0.016 0.799"/>
+	</Path>
+
+	<Path Name = "lisa_cam02">
+		<Point  coord="-9.757 4.154 0.000"/>
+		<Point  coord="-15.00 6.000 0.000"/>
+	</Path>
+
+	<Path Name = "lisa_cam03">
+		<Point  coord="-15.00 6.000 0.000"	  rotation="-0.059 -0.216 0.013 0.974"/>
+	</Path>
+
+	<Path Name = "lisa1_cam01">
+		<Point  coord="651.808 277.967 3697.396" rotation="-0.050 0.765 -0.060 0.640"/>
+		<Point  coord="653.376 277.967 3673.449" rotation="-0.037 0.613 -0.029 0.788"/>
+	</Path>
+
+	<Path Name = "lisa1_cam02">
+		<Point  coord="578.984 285.939 3660.240" rotation="-0.161 -0.263 0.045 0.950"/>
+		<Point  coord="578.984 285.939 3660.240" rotation="-0.135 -0.327 0.047 0.934"/>
+	</Path>
+
+	<Path Name = "lisa2_cam01">
+		<Point  coord="2218.447 369.736 1919.916" rotation="-0.043 0.931 -0.118 0.343"/>
+		<Point  coord="2228.795 369.736 1911.091" rotation="-0.057 0.890 -0.117 0.437"/>
+	</Path>
+
+	<Path Name = "lisa2_cam02">
+		<Point  coord="2140.452 376.724 1861.375" rotation="-0.122 -0.476 0.067 0.868"/>
+		<Point  coord="2136.231 376.724 1870.220" rotation="-0.085 -0.546 0.056 0.832"/>
+	</Path>
+
+	<Path Name = "lisa3_cam01">
+		<Point  coord="1636.533 318.064 2070.729" rotation="-0.056 0.867 -0.099 0.486"/>
+		<Point  coord="1645.622 318.064 2055.892" rotation="-0.056 0.823 -0.082 0.560"/>
+	</Path>
+
+	<Path Name = "lisa3_cam02">
+		<Point  coord="1594.492 318.064 1982.981" rotation="-0.105 0.028 -0.003 0.994"/>
+		<Point  coord="1594.458 315.764 1996.790" rotation="-0.082 0.001 -0.000 0.997"/>
+	</Path>
+
+	<Path Name = "lisa4_cam01">
+		<Point  coord="1362.524 303.593 268.395" rotation="-0.119 -0.496 0.069 0.857"/>
+		<Point  coord="1362.524 303.593 268.395" rotation="-0.082 -0.587 0.060 0.803"/>
+	</Path>
+
+	<Path Name = "lisa4_cam02">
+		<Point  coord="1457.292 309.295 362.030" rotation="-0.031 0.958 -0.114 0.260"/>
+		<Point  coord="1448.436 303.212 343.753" rotation="-0.032 0.964 -0.141 0.221"/>
+	</Path>
+
+	<Path Name = "lisa5_cam01">
+		<Point  coord="1989.807 302.758 842.544" rotation="0.008 0.696 0.008 0.718"/>
+		<Point  coord="1989.761 302.758 841.095" rotation="0.008 0.692 0.008 0.722"/>
+<!--		<Point  coord="10.054 3.223 10.540"/>  -->
+	</Path>
+
+	<Path Name = "lisa5_cam02">
+		<Point coord="1982.806 302.914 832.923" rotation="0.018 0.950 0.057 0.307"/>
+		<Point coord="1980.758 302.914 834.375" rotation="0.014 0.968 0.057 0.244"/>
+	</Path>
+
+	<Path Name = "lisa5_cam03">
+		<Point coord="1958.151 312.634 785.513" rotation="-0.130 -0.170 0.023 0.977"/>
+		<Point coord="1971.192 312.634 783.314" rotation="-0.136 -0.015 0.002 0.991"/>
+	</Path>
+
+	<Path Name = "lisa6_cam01">
+		<Point coord="3051.592 320.033 434.158" rotation="-0.030 -0.569 0.020 0.822"/>
+		<Point coord="3056.158 320.033 421.880" rotation="-0.017 -0.578 0.012 0.816"/>
+	</Path>
+
+	<Path Name = "lisa6_cam02">
+		<Point coord="3144.014 340.711 363.468" rotation="-0.121 0.178 -0.022 0.976"/>
+		<Point coord="3158.825 340.862 369.741" rotation="-0.131 0.295 -0.041 0.946"/>
+	</Path>
+
+	<Path Name = "lisa6_cam03">
+		<Point coord="3089.025 319.576 422.007" rotation="0.021 -0.706 -0.021 0.708"/>
+		<Point coord="3088.997 319.576 431.617" rotation="0.024 -0.693 -0.023 0.720"/>
+	</Path>
+
+	<Path Name = "lisa7_cam01">
+		<Point  coord="3800.384 357.907 1633.454" rotation="-0.076 0.031 -0.002 0.997"/>
+		<Point  coord="3801.357 360.315 1617.869" rotation="-0.076 0.006 -0.000 0.997"/>
+	</Path>
+
+	<Path Name = "lisa7_cam02">
+		<Point  coord="3784.538 353.877 1730.984" rotation="0.000 1.000 -0.022 -0.014"/>
+		<Point  coord="3785.256 352.752 1706.021" rotation="-0.000 1.000 -0.009 0.002"/>
+	</Path>
+
+	<Path Name = "lisa8_cam01">
+		<Point  coord="3176.496 328.397 1144.681" rotation="-0.087 -0.005 0.000 0.996"/>
+		<Point  coord="3176.496 336.915 1144.681" rotation="-0.087 -0.005 0.000 0.996"/>
+	</Path>
+
+	<Path Name = "lisa8_cam02">
+		<Point  coord="3202.996 323.166 1237.920" rotation="-0.034 0.818 -0.049 0.572"/>
+		<Point  coord="3200.395 323.166 1245.148" rotation="-0.020 0.897 -0.042 0.440"/>
+	</Path>
+
+	<Path Name = "lisa8_cam021">
+		<Point  coord="3171.316 349.993 1305.297" rotation="0.002 0.988 -0.151 -0.012"/>
+		<Point  coord="3181.633 349.856 1303.892" rotation="-0.008 0.986 -0.157 0.053"/>
+	</Path>
+
+	<Path Name = "lisa8_cam03">
+		<Point  coord="3215.562 324.523 1145.334" rotation="0.009 0.522 0.005 0.853"/>
+		<Point  coord="3211.473 324.523 1137.317" rotation="0.009 0.522 0.005 0.853"/>
+	</Path>
+
+	<Path Name = "lisa8_cam04">
+		<Point  coord="3185.324 321.607 1232.695" rotation="0.032 0.265 0.009 0.964"/>
+		<Point  coord="3187.434 321.607 1233.964" rotation="0.026 0.325 0.009 0.945"/>
+	</Path>
+
+	<Path Name = "felix1_cam01">
+		<Point  coord="2014.381 322.770 2428.558" rotation="-0.030 0.700 -0.029 0.713"/>
+		<Point  coord="2014.076 322.770 2438.160" rotation="-0.011 0.774 -0.014 0.633"/>
+	</Path>
+
+	<Path Name = "felix1_cam02">
+		<Point  coord="1973.413 322.973 2433.509" rotation="-0.062 0.807 -0.086 0.580"/>
+		<Point  coord="1974.076 322.858 2431.320" rotation="-0.059 0.735 -0.064 0.673"/>
+	</Path>
+
+	<Path Name = "felix1_cam03">
+		<Point  coord="1992.125 322.180 2434.562" rotation="-0.019 -0.646 0.016 0.763"/>
+		<Point  coord="1996.998 321.990 2421.288" rotation="0.011 -0.620 -0.008 0.784"/>
+	</Path>
+
+	<Path Name = "felix1_cam04">
+		<Point  coord="1962.340 325.599 2412.853" rotation="-0.008 -0.404 0.004 0.915"/>
+		<Point  coord="1962.340 325.599 2412.853" rotation="0.017 -0.595 -0.013 0.803"/>
+	</Path>
+
+	<Path Name = "FatherDe_cam01">
+		<Point  coord="3351.284 369.726 3303.019" rotation="-0.010 0.916 0.022 -0.401"/>
+	</Path>
+
+	<Path Name = "FatherDe_cam02">
+		<Point  coord="3353.681 369.440 3299.189" rotation="0.014 0.937 -0.038 -0.346"/>
+	</Path>
+
+	<Path Name = "FatherDe_cam03">
+
+	<Point  coord="3356.199 368.905 3301.198" rotation="0.006 0.964 0.036 0.216"  speed="1"/>
+	<Point  coord="3356.199 368.905 3301.198" rotation="0.006 0.974 0.026 0.226"  speed="1"/>
+	<Point  coord="3356.199 368.905 3301.198" rotation="0.120 0.835 0.499 0.200"  speed="3"/>
+	<Point  coord="3356.199 368.905 3301.198" rotation="0.110 0.825 0.489 0.210"  speed="1"/>
+	</Path>
+
+	<Path Name = "FatherDe_cam05">
+		<Point  coord="3359.158 369.985 3307.304" rotation="-0.004 0.985 -0.025 0.172"/>
+		<Point  coord="3356.823 369.985 3308.005" rotation="-0.002 0.989 -0.013 0.146"/>
+	</Path>
+
+	<Path Name = "FatherDe_cam04">
+		<Point  coord="3422.170 389.896 3225.362" rotation="-0.086 0.495 -0.049 0.863" 
+		zoom ="1.5" />
+		<Point  coord="3407.462 389.896 3206.752" rotation="-0.091 0.352 -0.034 0.931" 
+		zoom ="1" />
+	</Path>
+
+	<Path Name = "Father_cam01">
+		<Point  coord="3351.807 368.527 3302.623" rotation="-0.007 -0.723 0.007 0.691"/>
+		<Point  coord="3352.696 368.510 3302.582" rotation="-0.007 -0.723 0.007 0.691"/>
+
+	</Path>
+
+	<Path Name = "Father_cam02">
+		<Point  coord="3354.282 370.407 3303.857" rotation="0.055 0.877 -0.467 -0.103"
+		  speed="1"/>
+		<Point  coord="3352.800 374.079 3303.618" rotation="0.304 0.696 -0.472 -0.447"
+		  speed="1"/>
+		<Point  coord="3345.040 389.036 3301.598" rotation="-0.394 -0.568 0.355 0.630"
+		  speed="3"/>
+	</Path>
+
+	<Path Name = "Father_cam03">
+		 <Point  coord="3353.614 368.487 3303.540" rotation="-0.017 0.879 0.032 -0.476"/>
+		 <Point  coord="3354.031 368.523 3303.271" rotation="-0.023 0.877 0.042 -0.478"/>
+		
+<!--		 <Point  coord="3360.531 368.668 3303.607" rotation="0.241 0.724 0.308 0.568"/>
+		 <Point  coord="3360.531 368.668 3303.607" rotation="0.041 0.771 0.050 0.634"/>  -->
+	</Path>
+
+	<Path Name = "Father_cam04">
+		 <Point  coord="3350.652 376.536 3320.969" rotation="0.027 0.972 -0.135 -0.192"/>
+		 <Point  coord="3342.852 376.536 3316.088" rotation="0.049 0.915 -0.117 -0.383"/>
+	</Path>
+
+	<Path Name = "Father_cam05">
+		 <Point  coord="3359.908 369.002 3303.074" rotation="-0.010 0.730 -0.011 0.683"/>
+		 <Point  coord="3361.545 369.051 3303.183" rotation="-0.010 0.730 -0.011 0.683"/>
+	</Path>
+
+	<Path Name = "Father_cam06">
+		 <Point  coord="3352.119 374.017 3298.091" rotation="-0.358 -0.261 0.105 0.890"/>
+		 <Point  coord="3350.857 374.017 3299.219" rotation="-0.342 -0.394 0.160 0.838"/>
+	</Path>
+
+	<Path Name = "Father_cam07">
+		 <Point  coord="3353.699 368.914 3303.790" rotation="-0.037 0.888 0.074 -0.452"/>
+		 <Point  coord="3353.362 368.914 3303.118" rotation="0.041 -0.813 -0.058 0.578"/>
+	</Path>
+
+	<Path Name = "felix2_cam01">
+		 <Point  coord="1.961 8.822 -9.352"/>
+		 <Point  coord="8.079 27.074 -18.463"/>
+	</Path>
+
+	<Path Name = "felix2_cam02">
+		 <Point  coord="484.431 307.398 1790.589" rotation="0.024 0.337 0.009 0.941"/>
+		 <Point  coord="486.568 307.398 1792.399" rotation="0.032 0.375 0.013 0.926"/>
+	</Path>
+
+	<Path Name = "felix3_cam01">
+		 <Point  coord="-3.000 1.000 -7.000"/>
+		 <Point  coord="-1.000 2.500 -10.000"/>
+	</Path>
+
+	<Path Name = "Felix4_cam01">
+		 <Point  coord="471.067 309.809 1815.207" rotation="-0.063 0.595 -0.047 0.800" />
+		 <Point  coord="471.177 309.810 1815.317" rotation="-0.063 0.595 -0.047 0.800" />
+	</Path>
+
+	<Path Name = "Felix4_cam02">
+		 <Point  coord="461.400 308.113 1821.075" rotation="-0.005 0.966 -0.019 0.258" />
+		 <Point  coord="461.710 308.114 1821.385" rotation="-0.005 0.966 -0.019 0.258" />
+	</Path>
+
+	<Path Name = "Felix4_cam03">
+		 <Point  coord="460.499 307.715 1816.206" rotation="0.020 -0.257 -0.005 0.966" />
+		 <Point  coord="460.610 307.716 1816.316" rotation="0.020 -0.257 -0.005 0.966" />
+	</Path>
+
+	<Path Name = "Felix4_cam04">
+		 <Point  coord="462.560 308.022 1818.758" rotation="-0.015 0.791 -0.019 0.611" />
+		 <Point  coord="462.770 308.023 1818.968" rotation="-0.015 0.791 -0.019 0.611" />
+	</Path>
+
+	<Path Name = "Felix4_cam05">
+		 <Point  coord="460.313 307.616 1818.684" rotation="0.075 -0.712 -0.077 0.694" />
+		 <Point  coord="460.423 307.617 1818.794" rotation="0.075 -0.712 -0.077 0.694" />
+	</Path>
+
+	<Path Name = "Felix4_cam06">
+		 <Point  coord="464.181 308.360 1820.729" rotation="-0.029 0.870 -0.051 0.490" />
+		 <Point  coord="464.391 308.361 1820.939" rotation="-0.029 0.870 -0.051 0.490" />
+	</Path>
+
+	<Path Name = "Felix4_cam07">
+		 <Point  coord="461.105 307.902 1817.023" rotation="0.003 -0.290 -0.001 0.957" />
+		 <Point  coord="461.215 307.903 1817.133" rotation="0.003 -0.290 -0.001 0.957" />
+	</Path>
+
+	<Path Name = "Felix4_cam08">
+		 <Point  coord="456.391 308.004 1821.860" rotation="0.010 0.895 -0.020 -0.446" />
+		 <Point  coord="456.501 308.005 1821.970" rotation="0.010 0.895 -0.020 -0.446" />
+	</Path>
+
+	<Path Name = "Felix4_cam09">
+		 <Point  coord="459.650 307.355 1815.857" rotation="0.053 -0.315 -0.017 0.948" />
+		 <Point  coord="459.960 307.356 1816.167" rotation="0.053 -0.315 -0.017 0.948" />
+	</Path>
+
+	<Path Name = "Felix4_cam10">
+		 <Point  coord="463.230 312.768 1836.694" rotation="-0.011 0.987 -0.137 0.078"/>
+		 <Point  coord="462.968 312.296 1835.050" rotation="-0.011 0.987 -0.137 0.078"/>
+	</Path>
+
+	<Path Name = "Felix4_cam11">
+		 <Point  coord="454.292 308.138 1820.751" rotation="-0.005 -0.792 0.007 0.611" />
+		 <Point  coord="454.402 308.139 1820.861" rotation="-0.005 -0.792 0.007 0.611" />
+	</Path>
+	
+	<Path Name = "Opening_End">
+		<Point  coord="1160.251 316.301 2892.039" rotation="-0.042 -0.848 0.068 0.525"/>
+		<Point  coord="1278.718 298.366 2848.238" rotation="-0.031 -0.820 0.044 0.569"/>
+		<Point  coord="1598.081 321.700 2727.021" rotation="0.017 -0.824 -0.025 0.566"/>
+		<Point  coord="1836.623 328.474 2627.243" rotation="-0.033 -0.862 0.057 0.502"/>
+		<Point  coord="1883.424 324.439 2594.026" rotation="0.004 0.973 -0.018 -0.228"/>
+		<Point  coord="1919.835 326.524 2472.173" rotation="-0.013 0.879 0.024 -0.476"/>
+		<Point  coord="1998.332 331.209 2430.635" rotation="0.015 -0.768 -0.018 0.641"/>
+		<Point  coord="2062.536 333.930 2422.305" rotation="-0.023 0.950 0.071 -0.303"/>
+		<Point  coord="2101.423 350.460 2351.098" rotation="-0.015 0.963 0.056 -0.264"/>
+		<Point  coord="2141.596 355.971 2297.533" rotation="0.001 -0.665 -0.001 0.747"/>
+		<Point  coord="2297.435 358.093 2335.318" rotation="-0.005 -0.621 0.004 0.784"/>
+		<Point  coord="2425.023 362.975 2330.354" rotation="0.006 -0.752 -0.007 0.659"/>
+		<Point  coord="2839.070 363.540 2311.997" rotation="-0.008 -0.684 0.007 0.729"/>
+		<Point  coord="3170.474 374.570 2536.556" rotation="0.016 -0.436 -0.008 0.900"/>
+		<Point  coord="3366.887 419.581 2778.481" rotation="0.018 -0.221 -0.004 0.975"/>
+		<Point  coord="3455.971 437.729 2969.287" rotation="-0.042 0.145 -0.006 0.988"/>
+		<Point  coord="3520.721 429.683 3201.384" rotation="-0.033 0.479 -0.018 0.877"/>
+		<Point  coord="3431.363 418.060 3285.490" rotation="-0.051 0.634 -0.042 0.770"/>
+		<Point  coord="3351.999 388.020 3301.754" rotation="-0.010 0.582 -0.007 0.813"/>
+	</Path>
+
+	<Path Name = "OpeningOpen">
+		 <Point  coord="1120.973 317.971 2883.776" rotation="-0.081 0.518 -0.049 0.850"/>
+		 <Point  coord="1137.537 317.971 2958.951" rotation="-0.062 0.714 -0.063 0.695"/>
+	</Path>
+
+	<Path Name = "OpeningOpen2">
+		<Point  coord="1914.485 321.752 827.426" rotation="-0.090 -0.541 0.059 0.834"/>
+		<Point  coord="1914.485 321.752 827.426" rotation="0.012 0.911 -0.026 -0.412"/>
+	</Path>
+
+	<Path Name = "Opening1">
+		 <Point  coord="495.108 293.732 390.902" rotation="-0.005 0.890 0.009 -0.455"/>
+		 <Point  coord="495.108 293.732 390.902" rotation="-0.001 -0.427 0.001 0.904"/>
+	</Path>
+
+	<Path Name = "Opening11">
+		<Point  coord="803.747 301.765 620.645" rotation="-0.070 0.575 -0.049 0.813"/>
+		<Point  coord="803.747 301.765 620.645" rotation="-0.004 -0.038 0.000 0.999"/>
+	</Path>
+
+	<Path Name = "Opening2">
+		 <Point  coord="478.625 309.172 1802.385" rotation="-0.007 0.361 -0.003 0.932"/>
+		 <Point  coord="488.382 310.239 1791.937" rotation="-0.022 0.364 -0.009 0.931"/>
+	</Path>
+
+	<Path Name = "Opening22">
+		<Point  coord="2512.513 345.541 1753.524" rotation="-0.005 0.994 -0.093 0.056"/>
+		<Point  coord="2512.513 345.541 1753.524" rotation="0.012 0.922 -0.028 -0.385"/>
+	</Path>
+
+	<Path Name = "Opening3">
+		<Point  coord="1123.271 332.014 1279.940" rotation="-0.131 -0.071 0.009 0.989"/>
+		<Point  coord="1152.514 304.625 1427.074" rotation="-0.022 -0.097 0.002 0.995"/>
+		<Point  coord="1177.595 302.255 1556.238" rotation="-0.006 -0.094 0.001 0.996"/>
+		<Point  coord="1192.534 301.410 1631.562" rotation="-0.004 -0.106 0.000 0.994"/>
+		<Point  coord="1215.236 301.799 1705.708" rotation="-0.013 -0.130 0.002 0.991"/>
+	</Path>
+
+	<Path Name = "Opening4">
+		<Point  coord="2191.357 494.434 2938.922" rotation="-0.071 0.921 -0.325 0.202"/>
+		<Point  coord="2036.259 494.434 2942.350" rotation="0.104 0.894 -0.338 -0.274"/>
+	</Path>
+
+	<Path Name = "Opening5">
+		<Point  coord="1198.445 316.301 2707.351" rotation="-0.133 -0.399 0.058 0.905"/>
+		<Point  coord="1145.808 316.301 2800.191" rotation="-0.053 -0.684 0.050 0.726"/>
+		<Point  coord="1160.251 316.301 2892.039" rotation="-0.042 -0.848 0.068 0.525"/>
+	</Path>
+
+	<Path Name = "NewDay">
+		<Point  coord="1167.189 342.915 3003.012" rotation="-0.102 -0.823 0.156 0.536"/>
+		<Point  coord="1154.792 342.915 2939.576" rotation="-0.150 -0.557 0.103 0.811"/>
+	</Path>
+
+	<Path Name = "Narrators">
+		<Point  coord="3082.304 354.818 1179.762" rotation="-0.083 -0.502 0.049 0.859"/>
+		<Point  coord="3118.518 354.818 1120.358" rotation="-0.103 -0.232 0.025 0.967"/>
+		<Point  coord="3212.896 354.818 1108.726" rotation="-0.092 0.075 -0.007 0.993"/>
+		<Point  coord="3290.750 379.212 1103.150" rotation="-0.139 0.291 -0.043 0.946"/>
+		<Point  coord="3373.255 418.518 1212.333" rotation="-0.167 0.611 -0.134 0.762"/>
+		<Point  coord="3345.694 418.518 1375.326" rotation="-0.101 0.874 -0.205 0.430"/>
+	</Path>
+
+	<Path Name = "preTitry">
+		<Point  coord="3345.694 418.518 1375.326" rotation="-0.101 0.874 -0.205 0.430"/>
+		<Point  coord="3216.731 337.240 1266.322" rotation="-0.036 0.954 -0.127 0.271"/>
+	</Path>
+
+	<Path Name = "Titry">
+		<Point  coord="3216.731 337.240 1266.322" rotation="-0.036 0.954 -0.127 0.271"/>
+		<Point  coord="3175.760 327.440 1177.874" rotation="-0.001 0.977 -0.004 0.214"/>
+		<Point  coord="3105.105 360.032 1040.430" rotation="-0.002 0.985 -0.014 0.169"/>
+		<Point  coord="3141.793 333.119 612.009" rotation="-0.000 0.995 -0.097 0.004"/>
+		<Point  coord="3108.305 326.942 468.731" rotation="-0.004 0.974 -0.017 0.224"/>
+		<Point  coord="2890.251 325.835 383.003" rotation="-0.011 0.688 -0.011 0.725"/>
+		<Point  coord="2656.135 331.174 459.817" rotation="-0.019 0.574 -0.013 0.818"/>
+		<Point  coord="2424.548 331.417 447.443" rotation="-0.053 0.707 -0.054 0.703"/>
+		<Point  coord="2186.958 331.787 570.789" rotation="-0.042 0.490 -0.024 0.870"/>
+		<Point  coord="2038.368 340.144 729.768" rotation="-0.106 0.339 -0.039 0.934"/>
+		<Point  coord="1803.004 331.726 916.413" rotation="0.018 0.425 0.008 0.905"/>
+		<Point  coord="1466.453 332.166 1172.510" rotation="-0.034 0.529 -0.021 0.847"/>
+		<Point  coord="1282.227 318.948 1215.107" rotation="-0.007 0.748 -0.008 0.663"/>
+		<Point  coord="1145.540 324.771 1084.146" rotation="-0.007 0.952 -0.021 0.307"/>
+		<Point  coord="979.821 331.840 870.318" rotation="-0.026 0.898 -0.054 0.435"/>
+		<Point  coord="734.085 316.005 583.969" rotation="-0.002 0.935 -0.005 0.355"/>
+		<Point  coord="411.764 381.539 504.486" rotation="0.047 0.585 0.034 0.809"/>
+		<Point  coord="220.590 443.762 654.378" rotation="-0.042 0.015 -0.001 0.999"/>
+		<Point  coord="341.881 407.024 1125.901" rotation="-0.052 -0.173 0.009 0.983"/>
+		<Point  coord="445.458 393.991 1434.090" rotation="-0.032 -0.077 0.002 0.997"/>
+		<Point  coord="497.966 342.222 1749.243" rotation="-0.111 0.032 -0.004 0.993"/>
+		<Point  coord="467.406 358.600 2083.490" rotation="0.011 -0.033 -0.000 0.999"/>
+		<Point  coord="423.555 348.357 2379.140" rotation="-0.029 0.151 -0.004 0.988"/>
+		<Point  coord="444.910 358.121 2600.833" rotation="0.010 -0.195 -0.002 0.981"/>
+		<Point  coord="538.466 368.113 2730.222" rotation="-0.065 -0.660 0.058 0.746"/>
+		<Point  coord="751.018 350.800 2696.572" rotation="-0.016 -0.737 0.018 0.675"/>
+		<Point  coord="941.008 310.143 2792.832" rotation="-0.110 -0.316 0.037 0.942"/>
+		<Point  coord="1082.913 319.470 3000.944" rotation="-0.020 -0.559 0.013 0.829"/>
+		<Point  coord="1588.934 313.212 3163.314" rotation="-0.027 -0.609 0.021 0.793"/>
+		<Point  coord="2127.816 314.973 3330.238" rotation="0.022 -0.848 -0.036 0.529"/>
+		<Point  coord="2310.349 370.523 3034.710" rotation="0.001 0.999 -0.043 -0.016"/>
+		<Point  coord="2232.161 339.484 2820.776" rotation="-0.009 0.888 -0.017 0.460"/>
+		<Point  coord="2163.558 338.509 2830.365" rotation="-0.037 0.299 -0.012 0.953"/>
+		<Point  coord="2127.572 340.757 2878.814" rotation="0.002 0.782 0.002 0.624"/>
+		<Point  coord="2075.682 350.812 2852.473" rotation="0.018 0.973 0.083 0.215"/>
+		<Point  coord="2058.099 366.111 2789.222" rotation="-0.001 0.948 0.004 -0.318"/>
+		<Point  coord="2149.750 371.543 2732.935" rotation="0.000 0.876 -0.001 -0.482"/>
+		<Point  coord="2388.494 373.897 2552.542" rotation="-0.005 0.955 0.016 -0.295"/>
+		<Point  coord="2564.440 369.951 2337.166" rotation="-0.031 -0.833 0.048 0.550"/>
+		<Point  coord="2846.247 360.075 2288.716" rotation="-0.002 -0.467 0.001 0.884"/>
+		<Point  coord="3206.308 359.321 2612.368" rotation="-0.038 -0.240 0.009 0.970"/>
+		<Point  coord="3265.339 352.747 2734.924" rotation="-0.010 -0.215 0.002 0.977"/>
+		<Point  coord="3299.156 353.020 2826.832" rotation="0.007 0.091 0.001 0.996"/>
+		<Point  coord="3223.526 367.982 2936.775" rotation="-0.014 -0.121 0.002 0.992"/>
+		<Point  coord="3309.314 390.513 3147.859" rotation="-0.035 -0.170 0.006 0.985"/>
+		<Point  coord="3312.914 391.289 3346.145" rotation="0.027 0.257 0.007 0.966"/>
+		<Point  coord="3314.668 418.446 3565.290" rotation="-0.010 -0.498 0.006 0.867"/>
+		<Point  coord="3543.924 413.852 3606.032" rotation="0.002 0.977 -0.010 -0.213"/>
+		<Point  coord="3600.361 422.620 3352.734" rotation="0.001 0.992 0.006 0.125"/>
+		<Point  coord="3366.361 428.030 2843.262" rotation="-0.023 0.950 -0.071 0.303"/>
+		<Point  coord="2933.836 382.109 2288.976" rotation="0.002 0.996 -0.023 -0.088"/>
+		<Point  coord="3042.607 352.941 1898.793" rotation="-0.003 0.997 -0.056 0.054"/>
+		<Point  coord="2821.451 377.305 1738.093" rotation="-0.027 0.823 -0.040 0.566"/>
+		<Point  coord="2363.230 348.930 1611.696" rotation="-0.020 0.790 -0.025 0.612"/>
+		<Point  coord="2074.892 356.304 1572.758" rotation="0.001 0.986 0.007 0.166"/>
+		<Point  coord="2174.961 349.933 1181.535" rotation="-0.022 -0.827 0.032 0.560"/>
+		<Point  coord="2495.447 349.520 1232.523" rotation="-0.006 -0.586 0.004 0.810"/>
+		<Point  coord="2781.324 356.860 1309.906" rotation="-0.083 -0.676 0.077 0.728"/>
+		<Point  coord="2843.973 414.736 1266.074" rotation="-0.040 -0.841 0.063 0.536"/>
+		<Point  coord="3031.233 384.580 1118.374" rotation="-0.109 -0.479 0.060 0.869"/>
+		<Point  coord="3152.813 328.059 1105.624" rotation="-0.011 -0.150 0.002 0.989"/>
+		<Point  coord="3179.112 326.207 1193.736" rotation="-0.016 -0.130 0.002 0.991"/>
+	</Path>
+
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
+	<Path Name = "ATGRolikCam1">
+		<Point  coord="3361.109 368.986 3286.049" rotation="-0.027 0.046 -0.001 0.999"/>
+		<Point  coord="3361.467 369.208 3281.931" rotation="-0.087 0.014 -0.001 0.996"/>
+	</Path>
+
+	<Path Name = "ATGRolikCam2">
+		<Point  coord="3363.433 369.000 3289.556" rotation="-0.015 0.984 -0.126 0.121"/>
+		<Point  coord="3364.372 370.006 3293.288" rotation="-0.015 0.984 -0.126 0.121"/>
+	</Path>
+
+	<Path Name = "ATGRolikCam3">
+		<Point  coord="3383.332 406.705 3366.709" rotation="-0.033 0.954 -0.275 0.114"/>
+		<Point  coord="3392.140 430.206 3402.975" rotation="-0.029 0.962 -0.249 0.111"/>
+	</Path>
+
+</Paths>

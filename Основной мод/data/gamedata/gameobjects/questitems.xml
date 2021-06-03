@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: QuestItems.xml,v 1.11 2005/10/18 06:12:48 anton Exp $
+-->
+
+<Prototypes>
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_start_father_letter"
+		ModelFile		= "quest_letter"
+		ResourceType	= "QUEST_START_FATHER_LETTER" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_potato"
+		ModelFile		= "parsel"
+		ResourceType	= "QUEST_POTATO" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_medicine_box"
+		ModelFile	= "quest_medicine_box"
+		ResourceType	= "QUEST_MEDICINE_BOX" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_chehly_box"
+		ModelFile	= "parsel"
+		ResourceType	= "QUEST_CHEHLY_BOX" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_explosive"
+		ModelFile	= "quest_bomb"
+		ResourceType	= "QUEST_EXPLOSIVE" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_wine_barrels"
+		ModelFile		= "quest_wine_barrels"
+		ResourceType	= "QUEST_WINEBARRELS" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name		= "quest_komp_splav"
+		ModelFile	= "quest_komp_splav"
+		ResourceType	= "QUEST_KOMPAZITNIY_SPLAV" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_shaman_head1"
+		ModelFile		= "quest_head1"
+		ResourceType	= "QUEST_SHAMAN_HEAD1" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_shaman_head2"
+		ModelFile		= "quest_head2"
+		ResourceType	= "QUEST_SHAMAN_HEAD2" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_old_digital"
+		ModelFile		= "segments_big_01"
+		ResourceType	= "QUEST_OLD_DIGITAL" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_art_masterpice"
+		ModelFile		= "shkatulka_a"
+		ResourceType	= "QUEST_ART_MASTERPICE" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_mafia_narcotik"
+		ModelFile		= "quest_drags"
+		ResourceType	= "QUEST_MAFIA_NARCOTIK" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_first_canistra"
+		ModelFile		= "kanistr"
+		ResourceType	= "QUEST_FIRST_CANISTRA" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_disk_1"
+		ModelFile		= "quest_cd1"
+		ResourceType	= "QUEST_DISK_1" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_disk_2"
+		ModelFile		= "quest_cd2"
+		ResourceType	= "QUEST_DISK_2" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_key_for_submarine"
+		ModelFile		= "quest_key_for_submarine"
+		ResourceType	= "QUEST_KEY_FOR_SUBMARINE" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_key_for_tunnel"
+		ModelFile		= "quest_key_for_tunnel"
+		ResourceType	= "QUEST_KEY_FOR_TUNNEL" />
+
+
+
+
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_monster_head"
+		ModelFile	= "monster_head"
+		ResourceType	= "QUEST_MONSTER_HEAD" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_magic_thing1"
+		ModelFile	= "artefact1"
+		ResourceType	= "QUEST_MAGIC_THING1" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_magic_thing2"
+		ModelFile	= "artefact2"
+		ResourceType	= "QUEST_MAGIC_THING2" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_explosion_stone"
+		ModelFile	= "mol_stone"
+		ResourceType	= "QUEST_EXPLOSION_STONE" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_repair_robot1"
+		ModelFile	= "repair_robot"
+		ResourceType	= "QUEST_REPROBOT" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_repair_robot2"
+		ModelFile	= "repair_robot"
+		ResourceType	= "QUEST_REPROBOT" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "quest_repair_robot3"
+		ModelFile	= "repair_robot"
+		ResourceType	= "QUEST_REPROBOT" />
+
+</Prototypes>

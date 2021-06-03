@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+	<trigger Name="GlobalVar" active="1">
+		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="trFirstRolik" active="1">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			g_ObjCont:SetGameTime( 10, 0, 10, 9, 2234 )
+
+			SetRadarUpgrade(1)
+
+			Fly("start_game", CINEMATIC_NO_AIM, 0, 68, 1, 1 )
+			StartCinematic()
+			UpdateCinematic( 1 )
+
+			AddCinematicMessage( 77771, 0.1)
+
+			TActivate("trFirstRolikMusic")
+			TActivate("StartOpening")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trFirstRolikMusic" active="0">
+		<event timeout="0.25" eventid="GE_TIME_PERIOD" />
+		<script>
+			PlayCustomMusic("Bio07unloop")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="End3" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Ending3" />
+		<script>
+            CompleteQuestIfTaken("CheckTheEast")
+            
+            EnableGodMode()
+            
+            GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+            GetPlayerVehicle():SetThrottle( 0 )
+			
+			TeamCreate("FirstB2",1002,CVector(3724.793, 343.032, 2817.423),{"CoolBelaz"})
+			
+			GetPlayerVehicle():setImmortalMode(1)
+			
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("Ending3")))
+			
+			TActivate("End32")
+			
+			TDeactivate( "triggerExitToMap41" )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="End32" active="0">
+		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			SetWeather(0)
+
+			PlayCustomMusic("Sadness1")
+
+			Fly("AltEnding3", CINEMATIC_NO_AIM, 0, 57, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 77773, 0.1)
+			AddCinematicMessage( 77774, 0.1)
+			AddCinematicMessage( 77775, 0.1)
+
+			TActivate("End33")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="End33" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			ShowDeathMenu()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="StartGame" active="0">
+		<event flypath="start_rolik1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		
+			RestoreAllToleranceStatus()
+
+			PlayCustomMusic("QuietDialogue01")
+
+			
+			
+
+
+			CreateNewDummyObject( "dweller_player", "hero1Dw", -1, -1, CVector(3343.495, 368.166, 3304.762), Quaternion(0.0000, -0.9610, 0.0000, -0.2760), 0)
+			CreateNewDummyObject( "dweller_father", "fatherDw", -1, -1, CVector(3342.860, 368.167, 3303.460), Quaternion(0.0000, 0.4320, 0.000, 0.9020), 2)
+
+				
+
+				
+
+			getObj("fatherDw"):SetNodeAction(AT_RESERVED1) 
+			getObj("fatherDw"):SetNextForAnimation(AT_RESERVED1, AT_STAND1) 
+
+			AddCinematicMessage( 1, 2.5)
+			AddCinematicMessage( 2, 0.25 )
+			AddCinematicMessage( 3, 0.25  )
+
+			TActivate("StartRolikGame")
+
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+
+	<trigger Name="StartOpening" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			SetWeather(0)
+
+			GameFiltersUse()
+			PlayCustomMusic("GreenLeaves")
+			
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
+			Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+			Fly("Opening1", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening11", CINEMATIC_NO_AIM, 0, 7.5, 0, 0 )
+			Fly("Opening2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening22", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening3", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening4", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening5", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
+			Fly("Opening_End", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
+			Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 35, 0, 0 )
+			Fly("start_rolik11", CINEMATIC_NO_AIM, 0, 1.5, 0, 0 )
+			Fly("start_rolik5", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+			Fly("start_rolik6", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
+			Fly("start_rolik2", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("start_rolik3", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("start_rolik8", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+			Fly("start_rolik4", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+			StartCinematic()
+			UpdateCinematic(1)
+
+			TActivate( "OpeningOpen1" )
+			TActivate( "Opening1" )
+			TActivate( "Opening11" )
+			TActivate( "Opening2" )
+			TActivate( "Opening22" )
+			TActivate( "Opening3" )
+			TActivate( "Opening4" )
+			TActivate( "Opening5" )
+			TActivate( "StartGame" )
+			TActivate( "ROLIK15" )
+			TActivate( "ROLIK16" )
+			TActivate( "ROLIK12" )
+			TActivate( "ROLIK13" )
+			TActivate( "ROLIK18" )
+			TActivate( "ROLIK14" )
+			TActivate( "Finish00" )
+			TActivate( "DeleteDrisnya" )
+
+			AddCinematicMessage( 10, 1)
+			AddCinematicMessage( 11, 0.25 )
+			
+			
+			TakeQuest( "Buyer_Quest1" )
+
+			AddQuestItem("quest_potato")
+
+			AddHistory( "r1_Firsy_History_00" )
+			AddFadingMsgId( "fm_history_got" )
+			
+			CreateNewDummyObject( "quest_medicine_box", "medicine_box", -1, -1, CVector(2607.000, 322.000, 1614.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="OpeningOpen1" active="0">
+		<event flypath="OpeningOpen2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 12, 0.25  )
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening1" active="0">
+		<event flypath="Opening1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			TeamCreate("CARLISA",1042,CVector(517.976, 289.554, 336.855),{"LisaCar"})
+			
+			GetEntityByName("CARLISA_vehicle_0"):SetRotation(Quaternion(0.050, 0.091, -0.004, 0.995))
+			GetEntityByName("CARLISA_vehicle_0"):SetSkin(2)
+			GetEntityByName("CARLISA_vehicle_0"):SetExternalPathByName("LisaPath1")
+			GetEntityByName("CARLISA_vehicle_0"):SetCustomLinearVelocity( 70 )
+			
+			AddCinematicMessage( 13, 0.1  )
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening11" active="0">
+		<event flypath="Opening11" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			GetEntityByName("CARLISA_vehicle_0"):Remove()
+		
+			TeamCreate("CARLISA1",1042,CVector(708.568, 276.223, 670.710),{"LisaCar"})
+			
+			GetEntityByName("CARLISA1_vehicle_0"):SetRotation(Quaternion(-0.030, 0.454, -0.010, 0.891))
+			GetEntityByName("CARLISA1_vehicle_0"):SetSkin(2)
+			GetEntityByName("CARLISA1_vehicle_0"):SetExternalPathByName("LisaPath11")
+			GetEntityByName("CARLISA1_vehicle_0"):SetCustomLinearVelocity( 70 )
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening2" active="0">
+		<event flypath="Opening2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
+			local vehLisa = GetEntityByName("CARLISA1_vehicle_0")
+			if vehLisa then
+				vehLisa:Remove()
+			end
+			
+			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(467.180, 306.161, 1812.266), Quaternion(-0.000, -0.925, 0.001, -0.381), 1)
+			
+			getObj("felix01"):SetNodeAction(AT_RESERVED1)
+			getObj("felix01"):SetNextForAnimation(AT_RESERVED1, AT_STAND2) 
+			getObj("felix01"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+			
+			TeamCreate("FelixVehicle1",1013,CVector(470.355, 306.646, 1814.503),{"FelixVehicle"})
+			
+			GetEntityByName("FelixVehicle1_vehicle_0"):SetRotation(Quaternion(-0.010, -0.914, 0.001, -0.406))
+			GetEntityByName("FelixVehicle1_vehicle_0"):SetSkin(4)
+			
+			TeamCreate("FelixGang",1013,CVector(475.182, 305.881, 1797.556),{"Sml101", "Scout02"})
+			GetEntityByName("FelixGang_vehicle_0"):SetRotation(Quaternion(0.002, 0.159, 0.038, -0.987))
+			GetEntityByName("FelixGang_vehicle_0"):SetGamePositionOnGround( CVector(476.224, 306.309, 1799.276))
+			GetEntityByName("FelixGang_vehicle_1"):SetRotation(Quaternion(0.048, 0.758, 0.048, -0.649))
+			GetEntityByName("FelixGang_vehicle_1"):SetGamePositionOnGround( CVector(480.517, 305.814, 1808.392))
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening22" active="0">
+		<event flypath="Opening22" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		
+			TeamCreate("Bolnoy",1002,CVector(2464.338, 322.302, 1643.903),{"Sml101"})
+			
+			GetEntityByName("Bolnoy_vehicle_0"):SetRotation(Quaternion(0.012, 0.604, 0.014, 0.796))
+			GetEntityByName("Bolnoy_vehicle_0"):SetExternalPathByName("BolnoyPath1")
+			GetEntityByName("Bolnoy_vehicle_0"):SetCustomLinearVelocity( 70 )
+			
+		
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening3" active="0">
+		<event flypath="Opening3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			TeamCreate("CARLISA",1042,CVector(1200.022, 293.044, 1651.715),{"LisaCar"})
+			
+			GetEntityByName("CARLISA_vehicle_0"):SetRotation(Quaternion(0.014, 0.166, -0.017, 0.986))
+			GetEntityByName("CARLISA_vehicle_0"):SetSkin(2)
+			GetEntityByName("CARLISA_vehicle_0"):SetExternalPathByName("LisaPath21")
+			GetEntityByName("CARLISA_vehicle_0"):SetCustomLinearVelocity( 70 )
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening4" active="0">
+		<event flypath="Opening4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			GetEntityByName("CARLISA_vehicle_0"):Remove()
+			
+			TeamCreate("Venchik",1002,CVector(2057.125, 356.855, 2778.083),{"Bug02"})
+			
+			GetEntityByName("Venchik_vehicle_0"):SetRotation(Quaternion(0.068, 0.918, 0.092, 0.379))
+			GetEntityByName("Venchik_vehicle_0"):SetExternalPathByName("VenchikPath1")
+			GetEntityByName("Venchik_vehicle_0"):SetCustomLinearVelocity( 70 )
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Opening5" active="0">
+		<event flypath="Opening5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			TeamCreate("CARLISA",1042,CVector(1276.246, 289.375, 2724.471),{"LisaCar"})
+			
+			GetEntityByName("CARLISA_vehicle_0"):SetRotation(Quaternion(-0.003, 0.092, -0.058, -0.994))
+			GetEntityByName("CARLISA_vehicle_0"):SetSkin(2)
+			GetEntityByName("CARLISA_vehicle_0"):SetExternalPathByName("LisaPath3")
+			GetEntityByName("CARLISA_vehicle_0"):SetCustomLinearVelocity( 70 )
+			
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="CreateGloohoe" active="1">
+		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewDummyObject( "workshop2",	"hs01", -1, -1, CVector(3355.214,  368, 3322.013), Quaternion(0.0000, -0.9998, 0.0000, -0.0196),1 )
+			CreateNewDummyObject( "house1",	"hs02", -1, -1, CVector(3396.989,  370, 3311.444), Quaternion(0.0000, -0.7880, 0.0000, 0.6157),1 )
+			CreateNewDummyObject( "house2",	"hs03", -1, -1, CVector(3391.955,  368, 3280.512), Quaternion(0.0000, -0.5682, 0.0000, 0.8229),1 )
+			CreateNewDummyObject( "townhall",	"hs04", -1, -1, CVector(3333.442, 368, 3299.207), Quaternion(0.0000, 0.6820, 0.0000, 0.7314),1 )
+			CreateNewDummyObject( "house3",	"hs05", -1, -1, CVector(3339.008, 368, 3288.451), Quaternion(0.0000, 0.6478, 0.0000, 0.7618),1 )
+			CreateNewDummyObject( "house2",	"hs06", -1, -1, CVector(3337.264, 368, 3311.947), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),1 )
+			CreateNewDummyObject( "house3",	"hs07", -1, -1, CVector(3390.944, 371, 3329.290), Quaternion(0.0000, 0.928, 0.0000, -0.3726),1 )
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="DestroyGloohoe" active="0">
+		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			local town = GetEntityByName ("TheGloohoe")
+			if town then
+				town:SetOpenGateToPlayer(false)
+			end
+
+			local hs = GetEntityByName ("hs01")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("hs02")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("hs03")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("hs04")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("hs05")	
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("hs06")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("hs07")
+			if hs then hs:Remove() end
+
+			CreateNewDummyObject( "ruins1", "hs01", -1, -1, CVector(3355.214,  368, 3322.013), Quaternion(0.0000, -0.9998, 0.0000, -0.0196) )
+			CreateNewDummyObject( "ruins2", "hs02", -1, -1, CVector(3396.989,  370, 3311.444), Quaternion(0.0000, -0.7880, 0.0000, 0.6157) )
+			CreateNewDummyObject( "ruins3", "hs03", -1, -1, CVector(3391.955,  368, 3280.512), Quaternion(0.0000, -0.5682, 0.0000, 0.8229) )
+			CreateNewDummyObject( "ruins1", "hs04", -1, -1, CVector(3333.442, 368, 3299.207), Quaternion(0.0000, 0.6820, 0.0000, 0.7314) )
+			CreateNewDummyObject( "ruins2", "hs05", -1, -1, CVector(3339.008, 368, 3288.451), Quaternion(0.0000, 0.6478, 0.0000, 0.7618) )
+			CreateNewDummyObject( "ruins3", "hs06", -1, -1, CVector(3337.264, 368, 3311.947), Quaternion(0.0000, 0.0000, 0.0000, 1.0000) )
+			CreateNewDummyObject( "ruins3", "hs07", -1, -1, CVector(3390.944, 371, 3329.290), Quaternion(0.0000, 0.928, 0.0000, -0.3726) )
+
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(3336, 360, 3305), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(3309, 360, 3233), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(3321, 360, 3363), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(3393, 360, 3278), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(3337, 360, 3235), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(3338, 360, 3290), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="GAMER_FUN" active="1">
+		<event timeout="300" eventid="GE_TIME_PERIOD" />
+		<script>
+			local RandModel = {	"r1m1_bug01",
+							"r1m1_bug02",
+							"r1m1_bug03",
+							"r1m1_sml01",
+							"r1m1_sml02",
+							"r1m1_sml03",
+							"r1m1_sml04",
+							"r1m1_scout01",
+							"r1m1_scout02",
+							"r1m1_scout03"
+			}
+
+			local RandCoordStart = {	CVector(498,288,246),
+								CVector(2080,314,3718)
+			}
+
+			local RandBelong = {	1002,
+							1003
+			}
+
+			local r4 = random(2)
+			local r
+
+			if r4 == 1 then	r = 10
+			else	r = 3
+			end
+
+			local r1 = random(r)
+			local r2 = random(2)
+			local nom = random(1000)
+
+			TeamCreateWithWarez("BrodiagaCar"..nom,RandBelong[r4], RandCoordStart[r2], {RandModel[r1]}, nil, 1)
+			
+			local RandWay = {		CVector(1318, 287, 2841),
+							CVector(1129, 289, 1375),
+							CVector(1907, 318, 2429),
+							CVector(2692, 329, 1279),
+							CVector(3072, 319, 920),
+							CVector(3042, 317, 417),
+							CVector(2339, 302, 571)
+			}
+
+			local r1 = random(2)
+			local r2 = random(7)
+			local r3 = random(7)
+			local r4 = random(7)
+			local r5 = random(7)
+
+			local tt = GetEntityByName("BrodiagaCar"..nom)
+			if tt then
+				tt:StackOpen()
+				tt:SetDestination( RandWay[r1] )
+				tt:SetDestination( RandWay[r2] )
+				tt:SetDestination( RandWay[r3] )
+				tt:SetDestination( RandWay[r4] )
+				tt:SetDestination( RandWay[r5] )
+				tt:StackLoop()
+				tt:StackClose()
+			end
+
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="REVOLUTIONTIME" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreate("Punishers",1051,CVector(3168, 319, 1144),{"Revolutioner1","Revolutioner1"},CVector(2845,330,1333), 1)
+
+			local terr = TeamCreate("Terrorists",1013,CVector(2845,336,1319),{"Scout01","Scout02","Scout03"}, nil, 1)
+			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
+			terr:_AdjustBehaviour ()
+
+			TActivate("REVOLUTIONTIMEEND")
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="REVOLUTIONTIMEEND" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Terrorists" />
+		<script>
+			if IsQuestTaken("d_PunishBandits_Quest") then
+				CompleteQuest( "d_PunishBandits_Quest" )
+
+				CinemaFiltersUse()
+
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				local Plf = GetPlayerVehicle()
+				local PlfID = GetPlayerVehicleId()
+				local PlfCoor = Plf:GetPosition()
+				PlfCoor.y = PlfCoor.y + 25*0.74
+				PlfCoor.z = PlfCoor.z + 25*0.74
+
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+				AddCinematicMessage( 2222, 1 )
+
+				TActivate( "REVOLUTIONTIMEENDFade" )
+				TActivate( "REVOLUTIONTIMEEND_EndCinema" )
+
+				trigger:Deactivate() 
+			else
+				trigger:Deactivate() 
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="REVOLUTIONTIMEENDFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local FVehicle = GetEntityByName("Punishers_vehicle_0")
+			if FVehicle then FVehicle:Remove() end
+			local FVehicle = GetEntityByName("Punishers_vehicle_1")
+			if FVehicle then FVehicle:Remove() end
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="REVOLUTIONTIMEEND_EndCinema" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+
+
+
+	<trigger Name="LISA1" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheOilVillageQ" />
+		<script>
+			if  IsQuestTaken("d_Village1_Quest") and not(IsQuestComplete("d_Village1_Quest") or IsQuestFailed("d_Village1_Quest")) then
+				CompleteQuest( "d_Village1_Quest" )
+
+				TActivate( "RolikBegin_LISA1" )
+
+				trigger:Deactivate() 
+			end   
+		</script>
+	</trigger>
+
+	<trigger Name="LISA2" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheContraQ" />
+		<script>
+			if  IsQuestTaken( "d_Village2_Quest" ) and not(IsQuestComplete("d_Village2_Quest") or IsQuestFailed("d_Village2_Quest")) then
+				CompleteQuest( "d_Village2_Quest" )
+
+				TActivate( "RolikBegin_LISA2" )
+
+				trigger:Deactivate() 
+			end   
+		</script>
+	</trigger>
+
+	<trigger Name="LISA3" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheFreedomQ" />
+		<script>
+			if  IsQuestTaken( "d_Village3_Quest" ) and not(IsQuestComplete("d_Village3_Quest") or IsQuestFailed("d_Village3_Quest")) then
+				TActivate ("RolikBegin_Lisa3")
+
+				CompleteQuest( "d_Village3_Quest" )
+
+				AddHistory( "r1_Three_Villages_00" );
+				AddFadingMsgId( "fm_history_got" );
+
+				TActivate("DestroyGloohoe");
+ 				TActivate("RETURN_TO_FATHER");
+
+ 				TakeQuest("TalkWithFather_Quest");
+
+				trigger:Deactivate() 
+			end   
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="METALFELIX" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixSouthLoc" />
+		<script>
+			if IsQuestComplete("Buyer_Quest1") and IsQuestComplete("d_Lisa_Quest") then
+				TActivate( "RolikBegin_Felix1")
+
+				trigger:Deactivate() 
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="METALFELIXDIE1" active="0">
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="FelixBanditCars_vehicle_0" />
+		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="FelixSouthLoc2" />
+		<script>
+			CinemaFiltersUse()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			FlyAround( 1, 0, 35, 10, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 1134, 1 )
+
+			TActivate( "METALFELIXDIE1ENDROLIK" )
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="METALFELIXDIE1ENDROLIK" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local FVehicle = GetEntityByName("FelixBanditCars_vehicle_0")
+			if FVehicle then FVehicle:Remove() end
+
+			local FVehicle = GetEntityByName("FelixBanditCarsBand_vehicle_0")
+			if FVehicle then FVehicle:Remove() end
+
+			local FVehicle = GetEntityByName("FelixBanditCarsBand_vehicle_1")
+			if FVehicle then FVehicle:Remove() end
+
+			AddHistory( "r1_First_Felix_Meet_00" )
+			AddFadingMsgId( "fm_history_got" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+
+
+
+	<trigger Name="RETURN_TO_FATHER" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheGloohoeQ" />
+		<script>
+			FailQuestIfTaken( "WorkGiver_Quest1" )
+
+			if  not(IsQuestComplete("d_Lisa_Quest")) and IsQuestComplete("Buyer_Quest1") then
+				local town = GetEntityByName ("TheGloohoe")
+				if town then
+					town:SetRuined(true)
+				end
+
+ 				FailQuestIfTaken('d_Village1_Quest');
+				FailQuestIfTaken('d_Village2_Quest');
+				FailQuestIfTaken('d_Village3_Quest');
+
+				TActivate("RolikBegin_Father")
+
+				TActivate("LISAREMOVE2")
+
+				CompleteQuest( "TalkWithFather_Quest" )
+				TakeQuest("BenSouth_Quest")
+
+				AddHistory( "r1_After_Gloohoe_To_Ben_01" )
+				AddHistory( "r1_After_Letter_00" )
+				AddFadingMsgId( "fm_history_got" )
+
+				AddQuestItem("quest_start_father_letter")
+				AddQuestItem("quest_disk_1")
+
+				TActivate("ZASADA_5")
+
+				trigger:Deactivate() 
+			end 
+
+			if  IsQuestComplete("d_Lisa_Quest") and IsQuestComplete("Buyer_Quest1") then
+				local town = GetEntityByName ("TheGloohoe")
+				if town then
+					town:SetRuined(true)
+				end
+
+				TActivate("RolikBegin_Father")
+
+				CompleteQuest( "TalkWithFather_Quest" )
+				TakeQuest( "BenSouth_Quest" )
+
+				AddHistory( "r1_After_Gloohoe_To_Ben_01" )
+				AddHistory( "r1_After_Letter_00" )
+				AddFadingMsgId( "fm_history_got" )
+
+				AddQuestItem("quest_start_father_letter")
+				AddQuestItem("quest_disk_1")
+
+				TActivate("ZASADA_5")
+
+				trigger:Deactivate() 
+			end 
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="METALFELIX2" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixBaseLoc" />
+		<script>
+			TActivate( "RolikBegin_Felix2" )
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="METALFELIXDIE2" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="FelixBanditCars2" />
+		<script>
+			TActivate( "RolikBegin_Felix3" )
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="METALFELIXDIE3" active="0">
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="FelixBanditCars3_vehicle_0" />
+		<script>
+			local FVehicle = GetEntityByName("FelixBanditCars3_vehicle_0")
+			if FVehicle then FVehicle:Remove() end
+
+			TActivate( "RolikBegin_Felix4" )
+
+			CompleteQuest( "KillFelix_Quest" )
+
+			AddHistory( "r1_Kill_Felix_00" );
+			AddFadingMsgId( "fm_history_got" );
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="HOSPITAL" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Hospital_Loc" />
+		<script>
+			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_medicine_box")
+
+			local rrr = GetEntityByName ("medicine_box")
+			if rrr then rrr:Remove() end
+
+			CompleteQuestIfTaken( "r1m1_Hospital_Quest" )
+	
+			AddQuestItem("quest_medicine_box")
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="BOTANIK" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="BotanicHouse" />
+		<script>
+			CompleteQuestIfTaken( "r1m1_FindBotanik_Quest" )
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="LISAACTIVE" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			SetTolerance( 1100, 1042, RS_ALLY )
+			SetTolerance( 1002, 1042, RS_ENEMY )
+			SetTolerance( 1013, 1042, RS_ENEMY )
+
+			local newControllerId = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName		= "LisaCont"
+			}
+
+			local newController = GetEntityByID(newControllerId)
+			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
+			if FVehicle then
+				newController:setVehicleUnderControl(FVehicle)
+			end
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="LISAREMOVE" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			SetTolerance( 1100, 1042, RS_ALLY )
+
+			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
+			if FVehicle then
+				FVehicle:SetExternalPathByName("lisarunout_path")
+			end
+
+			TActivate( "LISAREMOVE3" )
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="LISAREMOVE2" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			SetTolerance( 1100, 1042, RS_ALLY )
+
+			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
+			if FVehicle then
+				FVehicle:Remove()
+			end
+
+			local vehLisa = GetEntityByName("vehLisa_0")
+			if vehLisa then
+				vehLisa:Remove()
+			end
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="LISAREMOVE3" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="loc_LisaRunOut" />
+		<script>
+			SetTolerance( 1100, 1042, RS_ALLY )
+
+			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
+			if FVehicle then
+				FVehicle:Remove()
+			end
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="ZASADA_2" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VeryBigFun1_Loc" />
+		<script>
+			local terr = TeamCreate("SecondB",1002,CVector(2099,339,2343),{"Sml101","Sml101"},CVector(2429,334,2354), 1)
+			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
+			terr:_AdjustBehaviour ()
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="ZASADA_3" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VeryBigFun2_Loc" />
+		<script>
+			local terr = TeamCreate("ThirdB",1002,CVector(1136,289,2257),{"r1m1_scout03"},CVector(1260,287,2650), 1)
+			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
+			terr:_AdjustBehaviour ()
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="ZASADA_4" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			local terr = TeamCreate("FourthB",1005,CVector(2022.755, 315, 2426.375),{"Sml101","Sml201"}, nil, 1)
+			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
+			terr:_AdjustBehaviour ()
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<trigger Name="ZASADA_5" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			local terr = TeamCreate("FivthB", 1005, CVector(3116.254, 335.064, 2483.916), {"Sml201","Sml201"}, nil, 1)
+			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
+			terr:_AdjustBehaviour ()
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="triggerExitToMap12" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M2" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			if IsQuestComplete("BackToYouzhniy_Quest") then 
+				local b = SpawnMessageBox( "8801" )
+				if b == 1 then
+					PassToMap("r1m2", "FromR1M1", -1 )
+
+					local hs = GetEntityByName ("FIRE01")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE02")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE03")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE04")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE05")	
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE06")
+					if hs then hs:Remove() end
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap12")
+					TActivate ("RolikENDExitToMap12")
+				end
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 8803, 0.5 )
+
+				TActivate ("RolikExitToMap12")
+				TActivate ("RolikENDExitToMap12")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap12" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CinemaFiltersUse()
+
+			RotationPlayerByPoints(CVector(getPos("ToR1M2")), CVector(getPos("FromR1M2")))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap12" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GameFiltersUse()
+
+			RestoreAllToleranceStatus()
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
+
+			TDeactivate( "RolikExitToMap12" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="triggerExitToMap13" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M3" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			if IsQuestComplete("d_FindHouseOfBen_Quest") then 
+				local b = SpawnMessageBox( "8801" )
+				if b == 1 then
+					PassToMap("r1m3", "FromR1M1", -1 )
+
+					local hs = GetEntityByName ("FIRE01")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE02")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE03")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE04")
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE05")	
+					if hs then hs:Remove() end
+					local hs = GetEntityByName ("FIRE06")
+					if hs then hs:Remove() end
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap13")
+					TActivate ("RolikENDExitToMap13")
+				end
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+				AddCinematicMessage( 8802, 0.5 )
+
+				TActivate ("RolikExitToMap13")
+				TActivate ("RolikENDExitToMap13")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap13" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CinemaFiltersUse()
+
+			RotationPlayerByPoints(CVector(getPos("ToR1M3")), CVector(getPos("FromR1M3")))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap13" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GameFiltersUse()
+
+			RestoreAllToleranceStatus()
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
+
+			TDeactivate( "RolikExitToMap13" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="triggerExitToMap41" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR4M1" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			if IsQuestTaken("r3m2_FindInfoAboutFather") or IsQuestTaken("r3m2_RevengeDestroyVillage") then 
+				local b = SpawnMessageBox( "8801" )
+				if b == 1 then
+					PassToMap("r4m1", "FromR1M1", -1 )
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap41")
+					TActivate ("RolikENDExitToMap41")
+				end
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 8803, 2 )
+
+				TActivate ("RolikExitToMap41")
+				TActivate ("RolikENDExitToMap41")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap41" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CinemaFiltersUse()
+
+			RotationPlayerByPoints(CVector(getPos("ToR4M1")), CVector(getPos("FromR4M1")))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR4M1")))
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap41" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GameFiltersUse()
+
+			RestoreAllToleranceStatus()
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR4M1")))
+
+			TDeactivate( "RolikExitToMap41" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="TRAKTOR_FUN" active="1">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreateWithWarez("11Traktor1", 1008, CVector(979.867, 290.134, 2700.000), {"Traktor01"}, nil, 1)
+
+			local t = GetEntityByName("11Traktor1")
+			if t then
+				t:StackOpen()
+				t:SetDestination( CVector(987, 287, 2728) )
+				t:SetDestination( CVector(1001, 287, 2814) )
+				t:SetDestination( CVector(1086, 287, 2802) )
+				t:SetDestination( CVector(1077, 287, 2730) )
+				t:StackLoop()
+				t:StackClose()
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="tr_Tutotial_Start" active="0">
+		<event 	timeout="5" eventid="GE_TIME_PERIOD" />
+		<script>
+			 
+
+			EnableAutoHelp( false )
+
+			local b = SpawnMessageBox( "90000" )
+			if b == 1 then
+				TakeQuest("FirstTimePlay")
+				
+				CompleteQuest("FirstTimePlay")
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="triggerExitToSouth" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToSouth" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 8802, 0.5 )
+
+				TActivate ("RolikExitToSouth")
+				TActivate ("RolikENDExitToSouth")
+
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToSouth" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CinemaFiltersUse()
+
+			RotationPlayerByPoints(CVector(getPos("ToSouth")), CVector(getPos("FromSouth")))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromSouth")))
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToSouth" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GameFiltersUse()
+
+			RestoreAllToleranceStatus()
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromSouth")))
+
+			TDeactivate( "RolikExitToSouth" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="NextDayFly" active="0">
+		<event	timeout="6"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			SetGameTime( 9, 0 )
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+			
+			Fly("NewDay", CINEMATIC_NO_AIM, 0, 7, 1, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 14, 0.25 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="DeleteDrisnya" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+		
+			local vehLisa = GetEntityByName("CARLISA_vehicle_0")
+			if vehLisa then
+				vehLisa:Remove()
+			end
+			
+			local vehLisa1 = GetEntityByName("FelixVehicle1_vehicle_0")
+			if vehLisa1 then
+				vehLisa1:Remove()
+			end
+			
+			local vehLisa2 = GetEntityByName("FelixGang_vehicle_0")
+			if vehLisa2 then
+				vehLisa2:Remove()
+			end
+			
+			local vehLisa3 = GetEntityByName("FelixGang_vehicle_1")
+			if vehLisa3 then
+				vehLisa3:Remove()
+			end
+			
+			local vehLisa4 = GetEntityByName("felix01")
+			if vehLisa4 then
+				vehLisa4:Remove()
+			end
+			
+			local vehLisa5 = GetEntityByName("Venchik_vehicle_0")
+			if vehLisa5 then
+				vehLisa5:Remove()
+			end
+			
+			local vehLisa6 = GetEntityByName("Bolnoy_vehicle_0")
+			if vehLisa6 then
+				vehLisa6:Remove()
+			end
+			
+			local vehLisa7 = GetEntityByName("CARLISA1_vehicle_0")
+			if vehLisa7 then
+				vehLisa7:Remove()
+			end
+			
+			TActivate("tr_Tutotial_Start")
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="GoodEndAlmostHere" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheFreedomQ" />
+		<script>
+			
+			SetGameTime( 9, 0 )
+			
+			local vehPlayer = GetPlayerVehicle()
+			local vehLisa = getObj("CARLISAS")
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+			
+			if vehLisa then
+				vehLisa:Remove()
+			end
+		
+			CompleteQuest("VisitTroick")
+			
+			TActivate("GoodEndCin")
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="Create_ConstructionPlace01" active="0">
+		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewSgNodeObject( "ET_PS_HLIGHT",      "constlight01", -1, -1, CVector(1538.165, 306.032, 3254.301), Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
+
+			 CreateNewDummyObject( "factory_box",       "constbox01",   -1, -1, CVector(1537.821, 305.904, 3248.180),   Quaternion(-0.0477, 0.0048, -0.1001, 0.9938)  )
+			 CreateNewDummyObject( "pack",              "constpck01",   -1, -1, CVector(1539.686, 307.000, 3259.838),   Quaternion(0.0493, 0.3579, -0.0700, 0.9298)   )
+			 CreateNewDummyObject( "pack",              "constpck02",   -1, -1, CVector(1544.301, 305.500, 3254.510),   Quaternion(-0.0744, -0.4663, -0.0852, 0.8774) )
+			 CreateNewDummyObject( "pack",              "constpck03",   -1, -1, CVector(1531.284, 308.054, 3256.912),   Quaternion(-0.0135, -0.3143, -0.0698, 0.9467) )
+			 CreateNewDummyObject( "factory_box", "constcnt01",   -1, -1, CVector(1529.463, 307.055, 3249.927),   Quaternion(-0.0614, -0.3087, -0.0363, 0.9485) )
+
+
+			 CreateNewDummyObject( "factory_box",       "constbox02",   -1, -1, CVector(1569.746, 295.000, 3107.854),   Quaternion(0.0000, -0.4285, 0.0000, 0.9035)  )
+			 CreateNewDummyObject( "pack",              "constpck04",   -1, -1, CVector(1562.311, 295.000, 3107.815),   Quaternion(0.0000, 0.7009, 0.0000, 0.7133)   )
+			 CreateNewDummyObject( "pack",              "constpck05",   -1, -1, CVector(1571.102, 295.000, 3113.075),   Quaternion(0.0000, -0.5244, 0.0000, 0.8515) )
+			 CreateNewDummyObject( "pack",              "constpck06",   -1, -1, CVector(1563.571, 294.000, 3119.301),   Quaternion(0.0065, 0.0004, 0.0676, 0.9977) )
+			 CreateNewDummyObject( "factory_box",       "constbox03",   -1, -1, CVector(1571.197, 295.000, 3117.813),   Quaternion(0.0000, 0.5610, 0.0000, 0.8278) )
+
+
+
+
+			TActivate("Trigged_ConstructionPlace01")
+			trigger:Deactivate()
+
+		</script>
+	</trigger>
+
+
+
+	<trigger Name="Trigged_ConstructionPlace01" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ConstructionPlace01" />
+		<script>
+
+		local hs = GetEntityByName ("constlight01")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constbox01")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constpck01")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constpck02")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constpck03")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constcnt01")
+		if hs then hs:Remove() end
+
+
+		TeamCreate("Defenders",1008,CVector(1311, 288, 2832),{"BelazTSP","TSPFighter"}, CVector(1549, 288, 3185), 1)
+
+		TActivate("Build_ConstructionPlace01")
+		TActivate("Create_ConstructionPlace02")
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger Name="Build_ConstructionPlace01" active="0">
+		<event 	timeout="10" eventid="GE_TIME_PERIOD" />
+		<script>
+
+		CreateNewBreakableObject( "bandit_base_defense_2","bbd01", 1008, CVector(1538.165, 304.032, 3254.301), Quaternion(0.000, 0.685, 0.000, 0.728),0 )
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="Create_ConstructionPlace02" active="0">
+		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewSgNodeObject( "ET_PS_HLIGHT",      "constlight02", -1, -1, CVector(1565.589, 295.000, 3113.854),   Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
+
+
+			TActivate("Trigged_ConstructionPlace02")
+			trigger:Deactivate()
+
+		</script>
+	</trigger>
+
+
+	<trigger Name="Trigged_ConstructionPlace02" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ConstructionPlace02" />
+		<script>
+
+		local hs = GetEntityByName ("constlight02")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constbox02")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constpck04")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constpck05")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constpck06")
+		if hs then hs:Remove() end
+		local hs = GetEntityByName ("constbox03")
+		if hs then hs:Remove() end
+
+		TActivate("Build_ConstructionPlace02")
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+	<trigger Name="Build_ConstructionPlace02" active="0">
+		<event 	timeout="10" eventid="GE_TIME_PERIOD" />
+		<script>
+
+		CreateNewBreakableObject( "bandit_base_defense_2","bbd02", 1008, CVector(1565.589, 295.000, 3113.854), Quaternion(0.000, 0.605, 0.000, 0.796),0 )
+
+		TActivate("Const_mis_Attack")
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger Name="Const_mis_Attack" active="0">
+		<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+		<script>
+
+		TeamCreate("CMBandits1",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
+
+		local FVehicle = GetEntityByName("CMBandits1_vehicle_0")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits1_vehicle_1")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits1_vehicle_2")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits1_vehicle_3")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits1_vehicle_4")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+
+		TActivate("Const_mis_Attack2")
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="Const_mis_Attack2" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CMBandits1" />
+		<script>
+
+		TeamCreate("CMBandits2",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
+
+		local FVehicle = GetEntityByName("CMBandits2_vehicle_0")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits2_vehicle_1")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits2_vehicle_2")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits2_vehicle_3")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+		local FVehicle = GetEntityByName("CMBandits2_vehicle_4")
+		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+
+		TActivate("Const_mis_complete")
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+	<trigger Name="Const_mis_complete" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CMBandits2" />
+		<script>
+		 
+		CompleteQuest( "r1m1_Construct_Quest" )	
+
+		trigger:Deactivate()
+
+		</script>
+	</trigger>
+
+</triggers>

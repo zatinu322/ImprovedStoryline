@@ -839,8 +839,6 @@
 			TDeactivate( "trLisa5" )
 			TDeactivate( "trLisa5_cam03" )
 			TDeactivate( "trLisa5_cam02" )
-			
-			TActivate("LISA5")
 
 			local Plf = GetPlayerVehicle()
 			Plf:PlaceToEndOfPath()
@@ -953,8 +951,6 @@
 			TDeactivate( "trLisa6_cam02" )
 			TDeactivate( "trLisa6_cam03" )
 			TDeactivate( "trLisa6" )
-			
-			TActivate("LISA7")
 
 			local Plf = GetPlayerVehicle()
 			Plf:PlaceToEndOfPath()

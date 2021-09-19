@@ -6,6 +6,13 @@
 		    SetVar("KnownMap",0)
 		    SetVar("FelixRevenge",0)
 		    SetVar("FelixChoise",0)
+
+			if getObj("Ruin") then
+				SetVar("KrayCity", 1)
+			else
+				SetVar("KrayCity", 0)
+			end
+
 		    trigger:Deactivate()
 		</script>
 	</trigger>
@@ -678,64 +685,80 @@
 	<trigger Name="LISA4" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheOilVillageQ" />
 		<script>
+			if GetVar("KrayCity").AsInt == 0 then
+				CompleteQuest("d_Village1_NoKC_Quest")
+				TActivate("LISA6")
+			elseif GetVar("KrayCity").AsInt == 1 then
 				CompleteQuest( "d_Village4_Quest" )
+				TActivate("LISA5")
+			end
 
-				TActivate( "RolikBegin_LISA5" )
+			TActivate( "RolikBegin_LISA5" )
 
-				trigger:Deactivate() 
+			trigger:Deactivate() 
 		</script>
 	</trigger>
 
 	<trigger Name="LISA5" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RuinQ" />
 		<script>
-				CompleteQuest( "d_Village5_Quest" )
+			CompleteQuest( "d_Village5_Quest" )
 
-				TActivate( "RolikBegin_LISA4" )
+			TActivate( "RolikBegin_LISA4" )
 
-				trigger:Deactivate() 
+			trigger:Deactivate() 
 		</script>
 	</trigger>
 
 	<trigger Name="LISA6" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheContraQ" />
 		<script>
+			if GetVar("KrayCity").AsInt == 0 then
+				CompleteQuest("d_Village2_NoKC_Quest")
+				TActivate("LISA8")
+			elseif GetVar("KrayCity").AsInt == 1 then
 				CompleteQuest( "d_Village6_Quest" )
+				TActivate("LISA7")
+			end
 
-				TActivate( "RolikBegin_LISA6" )
+			TActivate( "RolikBegin_LISA6" )
 
-				trigger:Deactivate() 
+			trigger:Deactivate() 
 		</script>
 	</trigger>
 
 	<trigger Name="LISA7" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="KolhozQ" />
 		<script>
-				CompleteQuest( "d_Village7_Quest" )
+			CompleteQuest( "d_Village7_Quest" )
 
-				TActivate( "RolikBegin_LISA7" )
+			TActivate( "RolikBegin_LISA7" )
 
-				trigger:Deactivate() 
+			trigger:Deactivate() 
 		</script>
 	</trigger>
 
 	<trigger Name="LISA8" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheFreedomQ" />
 		<script>
-				TActivate ("RolikBegin_Lisa8")
-
+			if GetVar("KrayCity").AsInt == 0 then
+				CompleteQuest("d_Village3_NoKC_Quest")
+			elseif GetVar("KrayCity").AsInt == 1 then
 				CompleteQuest( "d_Village8_Quest" )
+			end
 
-				AddHistory( "r1_Three_Villages_00" );
-				AddFadingMsgId( "fm_history_got" );
+			TActivate ("RolikBegin_Lisa8")
 
-				TActivate("DestroyGloohoe");
- 				TActivate("RETURN_TO_FATHER");
- 				TDeactivate("trZapretGluhoeStart")
+			AddHistory( "r1_Three_Villages_00" )
+			AddFadingMsgId( "fm_history_got" )
 
- 				TakeQuest("TalkWithFather_Quest");
+			TActivate("DestroyGloohoe")
+ 			TActivate("RETURN_TO_FATHER")
+ 			TDeactivate("trZapretGluhoeStart")
 
-				trigger:Deactivate() 
+ 			TakeQuest("TalkWithFather_Quest")
+
+			trigger:Deactivate() 
 		</script>
 	</trigger>
 
@@ -747,7 +770,7 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixSouthLoc" />
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixSouthLoc2" />
 		<script>
-			if IsQuestComplete("Buyer_Quest1") and IsQuestComplete("d_Lisa_Quest") then
+			if IsQuestComplete("Buyer_Quest1") and (IsQuestComplete("d_Lisa_Quest") or IsQuestComplete("d_Lisa_Quest_NoKC")) then
 				TActivate( "RolikBegin_Felix1")
 
 				trigger:Deactivate() 
@@ -819,7 +842,7 @@
 				RemoveQuestItem("FarmerDik_P")
 			end
 
-			if  IsQuestComplete("d_Lisa_Quest") and IsQuestComplete("Buyer_Quest1") then
+			if  (IsQuestComplete("d_Lisa_Quest") or IsQuestComplete("d_Lisa_Quest_NoKC")) and IsQuestComplete("Buyer_Quest1") then
 				local town = GetEntityByName ("TheGloohoe")
 				if town then
 					town:SetRuined(true)
@@ -948,6 +971,14 @@
 				FVehicle:PlaceToEndOfPath()
 				newController:setVehicleUnderControl(FVehicle)
 				
+			end
+
+			if GetVar("KrayCity").AsInt == 0 then
+				TActivate("LISA4") 
+				TakeQuest("d_Lisa_Quest_NoKC")
+			elseif GetVar("KrayCity").AsInt == 1 then
+				TActivate("LISA1") 
+				TakeQuest("d_Lisa_Quest")
 			end
 
 			trigger:Deactivate() 
@@ -1613,7 +1644,7 @@
 	<trigger Name="trZapretGluhoeStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZapterGluhoe_Loc" />
 		<script>
-			if QuestStatus("d_Lisa_Quest")==Q_TAKEN then
+			if QuestStatus("d_Lisa_Quest")==Q_TAKEN or QuestStatus("d_Lisa_Quest_NoKC")==Q_TAKEN then
 				TActivate("trZapretGluhoe")
 			end
 			

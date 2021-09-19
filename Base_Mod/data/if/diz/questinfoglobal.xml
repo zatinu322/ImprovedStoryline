@@ -2949,10 +2949,16 @@
 		questName="d_Lisa_Quest"
 		briefDiz="Показать Лисе местность"
 		fullDiz="После продолжительного разговора с Лисой в баре я согласился показать ей местность."
-		isMainQuest="0">
+		isMainQuest="1">
 		<Map
 			name="r1m1" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Lisa_Quest_NoKC"
+		briefDiz="Показать Лисе местность"
+		fullDiz="После продолжительного разговора с Лисой в баре я согласился показать ей местность."
+		isMainQuest="1" />
 
 	<QuestInfo
 		questName="d_MeetLeaderGelvetcia_Quest"
@@ -3312,6 +3318,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="d_Village1_NoKC_Quest"
+		briefDiz="Показать Заимку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheOilVillage" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="d_Village1_Quest"
 		briefDiz="Показать Ржавенск"
 		isMainQuest="1">
@@ -3321,12 +3336,30 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="d_Village2_NoKC_Quest"
+		briefDiz="Показать Гугулино"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheContraVillage" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="d_Village2_Quest"
 		briefDiz="Показать Сосновку"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
 			targetObjName="Sosnovka" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village3_NoKC_Quest"
+		briefDiz="Показать Троицкое"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheFreedom" />
 	</QuestInfo>
 
 	<QuestInfo

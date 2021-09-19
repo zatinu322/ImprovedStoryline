@@ -8521,7 +8521,7 @@
 
 	<Reply
 		name="Dlg_npc_001909"
-		text="Ты бы так не говорил, увидь \ его машину! Чудо, а не техника. Никто из местных бандитов не смог бы с ним справиться."
+		text="Ты бы так не говорил, увидь ты его машину! Чудо, а не техника. Никто из местных бандитов не смог бы с ним справиться."
 		role="NPC"
 		nextReplies="Dlg_pl_001910" />
 
@@ -18363,7 +18363,7 @@
 		name="Dlg_pl_001375"
 		text="Так и сделаю. Встретимся у ворот."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); CompleteQuest('LisaAtSouth'); AddPlayerMoney(250);  TActivate('LISAACTIVE'); TActivate('LISA1');  TakeQuest('d_Lisa_Quest'); AddHistory(  'r1_Yes_Lisa_History_01'  );  AddFadingMsgId( 'fm_history_got' ); TActivate('trZapretGluhoeStart');  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); CompleteQuest('LisaAtSouth'); AddPlayerMoney(250); TActivate('LISAACTIVE'); AddHistory(  'r1_Yes_Lisa_History_01'  ); AddFadingMsgId( 'fm_history_got' ); TActivate('trZapretGluhoeStart');  EndConversation()" />
 <!--Root/r1m1/Сюжетные/Василий-->
 	<Reply
 		name="Vasily1"

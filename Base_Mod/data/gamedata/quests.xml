@@ -3823,6 +3823,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Buyer_Quest1"
 		OnComplete="AddPlayerMoney(250)">
 		<quest
 			Name="d_Village1_Quest"
@@ -3904,6 +3905,42 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnTake='ShowCircleOnMinimapByName("TheTown")' />
+
+	<quest
+		Name="d_Lisa_Quest_NoKC"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Buyer_Quest1"
+		OnComplete="AddPlayerMoney(250)">
+		<quest
+			Name="d_Village1_NoKC_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_Lisa_Quest_NoKC"
+			OnTake='ShowCircleOnMinimapByName("TheOilVillage")' />
+
+		<quest
+			Name="d_Village2_NoKC_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_Village1_NoKC_Quest"
+			OnTake='ShowCircleOnMinimapByName("TheContraVillage")' />
+
+		<quest
+			Name="d_Village3_NoKC_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_Village2_NoKC_Quest"
+			OnTake='ShowCircleOnMinimapByName("TheFreedom")' />
+	</quest>
 <!--Root/r1m1/Сюжетные/Найти Лису на Севере -->
 	<quest
 		Name="d_FindLisaOnSever_Quest"

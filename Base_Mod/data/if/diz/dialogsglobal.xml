@@ -9477,7 +9477,7 @@
 
 	<Reply
 		name="Olme_Bar_Customer2_1_N03"
-		text="Так-так. Переговорщик действительн нужен. Но должен спросить: чем вызван интерес чужака к проблемам местных?"
+		text="Так-так. Переговорщик нам действительно нужен. Но должен спросить: чем вызван интерес чужака к проблемам местных?"
 		role="NPC"
 		nextReplies="Olme_Bar_Customer2_1_P04" />
 
@@ -16950,7 +16950,7 @@
 		name="Dlg_pl_001497"
 		text="Готов как никогда! Поехали!"
 		role="PLAYER"
-		scriptResult="TakeQuest( 'd_PunishBandits_Quest' );  TActivate('REVOLUTIONTIME'); EndConversation()" />
+		scriptResult="TActivate('REVOLUTIONTIME'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_001498"

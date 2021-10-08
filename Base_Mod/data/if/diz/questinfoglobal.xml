@@ -3128,7 +3128,7 @@
 		isMainQuest="0">
 		<Map
 			name="r1m1"
-			targetObjName="RevolutionTimeEndLoc" />
+			targetObjName="Terrorists" />
 	</QuestInfo>
 
 	<QuestInfo

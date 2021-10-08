@@ -572,6 +572,8 @@
 			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
 			terr:_AdjustBehaviour ()
 
+			TakeQuest( "d_PunishBandits_Quest" )
+
 			TActivate("REVOLUTIONTIMEEND")
 			TActivate("REVOLUTIONTIMEDEAD")
 

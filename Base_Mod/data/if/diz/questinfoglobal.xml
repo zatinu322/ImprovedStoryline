@@ -50,7 +50,6 @@
 	<QuestInfo
 		questName="BackToSouth_Quest"
 		briefDiz="Рассказать о судьбе Феликса бармену Южного"
-		fullDiz="Необходимо рассказать Бармену о том, что Феликс их больше не побеспокоит."
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -65,16 +64,6 @@
 		<Map
 			name="r1m1"
 			targetObjName="TheFreedom" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="BackToYouzhniy_Quest"
-		briefDiz="Рассказать о судьбе Феликса бармену Южного"
-		fullDiz="Необходимо рассказать Бармену о том, что Феликс их больше не побеспокоит."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheTown" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -478,6 +467,57 @@
 		<Map
 			name="r1m6"
 			targetObjName="Dir_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest"
+		briefDiz="Защитить Южный"
+		fullDiz="Чтобы помочь жителям Южного в обороне города, мне необходимо доставить материалы для постройки двух дотов, которые примут на себя основной удар в битве с бандитами, а после сразиться с этой напастью в первых рядах."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="DefendSowth_Quest1"
+		briefDiz="Доставить материалы на первую точку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ConstructionPlace01" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest2"
+		briefDiz="Доставить материалы на вторую точку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ConstructionPlace02" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest3"
+		briefDiz="Отразить первое нападение"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="CMBandits1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest4"
+		briefDiz="Отразить второе нападение"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="CMBandits2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest5"
+		briefDiz="Вернуться в Южный"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1017,16 +1057,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="GetPushka_Quest"
-		briefDiz="Найти мощное оружие в Заимке"
-		fullDiz="Бармен Южного поделился со мной подозрениями о причастности Феликса к нападению на Глухое и рассказал о человеке, который может поделиться со мной мощным вооружением."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheOilVillage" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="GoBackToHel_Quest"
 		briefDiz="Вернуться в Хель"
 		fullDiz="Теперь у меня есть композит, поэтому меня больше ничто не держит в этих ледяных землях."
@@ -1180,16 +1210,6 @@
 		<Map
 			name="r1m4"
 			targetObjName="StorageVil_enter" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="KillFelix_Quest"
-		briefDiz="Убить Феликса"
-		fullDiz="Теперь, когда мощное оружие у меня, я нападу на базу Феликса и убью его."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="FelixBaseLoc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2365,6 +2385,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="d_ArriveAtFelixBase_Quest"
+		briefDiz="Приехать на базу бандитов"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="FelixBaseLoc" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="d_BarForTunel_Quest"
 		briefDiz="Поговорить с барменом в Асгарде"
 		fullDiz="Судя по всему, жители этого города знают, как проехать через горы на запад. "
@@ -2937,12 +2966,21 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="d_KillFelixGuards_Quest"
+		briefDiz="Убить охрану Феликса"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="FelixBanditCars2" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="d_KillFelix_Quest"
 		briefDiz="Убить Феликса"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
-			targetObjName="FelixBaseLoc" />
+			targetObjName="FelixBanditCars3" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3216,11 +3254,7 @@
 		questName="d_SinFather_Quest"
 		briefDiz="Отомстить за смерть отца"
 		fullDiz="Где бы ни прятался убийца, я найду его и накажу за преступления!"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheOilVillage" />
-	</QuestInfo>
+		isMainQuest="1" />
 
 	<QuestInfo
 		questName="d_SkladMidgardBen_Quest"
@@ -3583,26 +3617,6 @@
 		<Map
 			name="r1m1"
 			targetObjName="BotanicHouse" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r1m1_Construct_Quest"
-		briefDiz="Построить доты"
-		fullDiz="Чтобы помочь жителям Южного в обороне города, мне необходимо построить два дота, которые примут на себя основной удар в битве с бандитами."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="Constructmiscoord" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r1m1_Construct_Quest2"
-		briefDiz="Вернуться в Южный"
-		fullDiz="Все бандиты разгромлены, осталось только сообщить об этом в Южный."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheTown" />
 	</QuestInfo>
 
 	<QuestInfo

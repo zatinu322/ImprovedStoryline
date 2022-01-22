@@ -1942,7 +1942,7 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 
-			if IsQuestComplete("FinalBattle_Quest") and IsQuestComplete("r1m1_Construct_Quest2") and IsQuestComplete("PeregReturn") and IsQuestComplete("CaptureKateberg_Quest") and IsQuestComplete("FreeExtremistLeader_Quest5") and (GetTolerance(1100, 1003)>1.499) and (GetTolerance(1100, 1004)>1.499) then
+			if IsQuestComplete("FinalBattle_Quest") and IsQuestComplete("DefendSowth_Quest") and IsQuestComplete("PeregReturn") and IsQuestComplete("CaptureKateberg_Quest") and IsQuestComplete("FreeExtremistLeader_Quest5") and (GetTolerance(1100, 1003)>1.499) and (GetTolerance(1100, 1004)>1.499) then
 				TakeQuest("BenGoodEnd")
 			else
 				TakeQuest("BenNormalEnd")

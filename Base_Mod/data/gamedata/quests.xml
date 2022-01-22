@@ -3768,14 +3768,6 @@
 		Levels="r1m1" />
 <!--Root/r1m1/Опциональные/Защитить Южный-->
 	<quest
-		Name="r1m1_Construct_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Constructmiscoord")' />
-
-	<quest
 		Name="TalkToBarmenBeforeDesert"
 		Automatic="1"
 		SubQuestsCondition="and"
@@ -3784,14 +3776,52 @@
 		PrecedingQuests="ZashitaGotova" />
 
 	<quest
-		Name="r1m1_Construct_Quest2"
-		Automatic="1"
+		Name="DefendSowth_Quest"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="r1m1_Construct_Quest"
-		OnComplete="AddPlayerMoney(20000)"
-		OnTake='ShowCircleOnMinimapByName("TheTown")' />
+		PrecedingQuests="TalkToBarmenBeforeDesert">
+		<quest
+			Name="DefendSowth_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="DefendSowth_Quest" />
+
+		<quest
+			Name="DefendSowth_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="DefendSowth_Quest1" />
+
+		<quest
+			Name="DefendSowth_Quest3"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="DefendSowth_Quest2" />
+
+		<quest
+			Name="DefendSowth_Quest4"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="DefendSowth_Quest3" />
+
+		<quest
+			Name="DefendSowth_Quest5"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="DefendSowth_Quest4" />
+	</quest>
 <!--Root/r1m1/Сюжетные/  продать картошку-->
 	<quest
 		Name="Buyer_Quest1"
@@ -4029,24 +4059,40 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(200)">
+		OnComplete="AddPlayerMoney(250)">
 		<quest
 			Name="d_GetBigBoom_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete"
+			ConditionToGive="all taken"
 			PrecedingQuests="d_SinFather_Quest"
 			OnTake='ShowCircleOnMinimapByName("TheOilVillage")' />
 
 		<quest
-			Name="d_KillFelix_Quest"
+			Name="d_ArriveAtFelixBase_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="d_GetBigBoom_Quest"
 			OnTake='ShowCircleOnMinimapByName("FelixBaseLoc")' />
+
+		<quest
+			Name="d_KillFelixGuards_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_ArriveAtFelixBase_Quest" />
+
+		<quest
+			Name="d_KillFelix_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_KillFelixGuards_Quest" />
 
 		<quest
 			Name="BackToSouth_Quest"
@@ -4075,33 +4121,6 @@
 		ConditionToGive="all complete"
 		OnTake='ShowCircleOnMinimapByName("Ending3")'
 		Levels="r1m1" />
-<!--Root/r1m1/Сюжетные/Месть за отца-->
-	<quest
-		Name="GetPushka_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="BenSouth_Quest"
-		OnTake='ShowCircleOnMinimapByName("TheOilVillage")' />
-
-	<quest
-		Name="KillFelix_Quest"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="GetPushka_Quest"
-		OnTake='ShowCircleOnMinimapByName("FelixBaseLoc")' />
-
-	<quest
-		Name="BackToYouzhniy_Quest"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="KillFelix_Quest"
-		OnTake='ShowCircleOnMinimapByName("TheTown")' />
 <!--Root/r1m1/Сюжетные/Поиски Бена-->
 	<quest
 		Name="BenSouth_Quest"
@@ -4118,7 +4137,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="any complete"
-		PrecedingQuests="BackToYouzhniy_Quest BenSouth_Quest"
+		PrecedingQuests="BenSouth_Quest BackToSouth_Quest"
 		OnTake='ShowCircleOnMinimapByName("ToR1M2"); ShowCircleOnMinimap("r1m2",CVector(1664.596,80.325,5261.399))' />
 
 	<quest

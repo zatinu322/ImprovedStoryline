@@ -3752,14 +3752,14 @@
 		name="Dlg_pl_003227"
 		text="Да, ты мне, кажется, рассказывала в пути, что это были какие-то заезжие бандиты на необычной технике. Если это всё, в чём ты хотела..."
 		role="PLAYER"
-		scriptCondition="QuestStatus('KillFelix_Quest')~=Q_COMPLETED"
+		scriptCondition="QuestStatus('d_SinFather_Quest')~=Q_COMPLETED"
 		nextReplies="Dlg_npc_002395" />
 
 	<Reply
 		name="Dlg_pl_002394"
 		text="Да, мне Феликс рассказывал, что это были какие-то заезжие бандиты на необычной технике. Если это всё, в чём ты хотела…"
 		role="PLAYER"
-		scriptCondition="QuestStatus('KillFelix_Quest')==Q_COMPLETED"
+		scriptCondition="QuestStatus('d_SinFather_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_npc_002395" />
 
 	<Reply
@@ -17654,7 +17654,7 @@
 		name="HaveBigBoom_hellodlg0"
 		text="Вы что-то хотели?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('GetPushka_Quest')  and  not(IsQuestComplete('GetPushka_Quest')) and not(IsQuestTaken('KillFelix_Quest')) "
+		scriptCondition="QuestStatus('d_GetBigBoom_Quest')==Q_TAKEN"
 		nextReplies="HaveBigBoom_hellodlg0_P1" />
 
 	<Reply
@@ -17709,6 +17709,7 @@
 		name="Dlg_pl_001427"
 		text="Шторм."
 		role="PLAYER"
+		scriptResult="AddPlayerItemsWithBox( 'storm01', 1, 0, CVector(3229,319,1254))"
 		nextReplies="Dlg_npc_001428" />
 
 	<Reply
@@ -17721,25 +17722,14 @@
 		name="Dlg_pl_001429"
 		text="Прекрасно. Скоро убийц настигнет возмездие."
 		role="PLAYER"
-		scriptResult="AddPlayerItemsWithBox( 'storm01', 1, 0, CVector(3229,319,1254));  CompleteQuest('GetPushka_Quest');  TActivate('METALFELIX2');  EndConversation()" />
+		scriptResult="CompleteQuest('d_GetBigBoom_Quest');  TActivate('METALFELIX2');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001418"
 		text="Корд."
 		role="PLAYER"
-		nextReplies="Dlg_npc_001425" />
-
-	<Reply
-		name="Dlg_npc_001425"
-		text="Отлично! Ребята, грузите этот ящик ему в кузов."
-		role="NPC"
-		nextReplies="Dlg_pl_001426" />
-
-	<Reply
-		name="Dlg_pl_001426"
-		text="Прекрасно. Скоро убийц настингет возмездие."
-		role="PLAYER"
-		scriptResult="AddPlayerItemsWithBox( 'kord01', 1, 0, CVector(3229,319,1254));  CompleteQuest('GetPushka_Quest');  TActivate('METALFELIX2');  EndConversation()" />
+		scriptResult="AddPlayerItemsWithBox( 'kord01', 1, 0, CVector(3229,319,1254))"
+		nextReplies="Dlg_npc_001428" />
 <!--Root/r1m1/Сюжетные/Бармен Южного-->
 	<Reply
 		name="HurdTrucker_hellodlg0"
@@ -18051,13 +18041,13 @@
 		name="Dlg_pl_002598"
 		text="Спасибо за всё. Феликс будет повержен."
 		role="PLAYER"
-		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('GetPushka_Quest'); AddHistory(  'r1_South_About_Felix_00'  ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('d_SinFather_Quest'); AddHistory(  'r1_South_About_Felix_00'  ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 
 	<Reply
 		name="HurdTrucker_hellodlg2"
 		text="Рад, что  ты жив."
 		role="NPC"
-		scriptCondition="IsQuestTaken('BackToYouzhniy_Quest') and (GetCurNpc():GetSpokenCount() == 0)"
+		scriptCondition="QuestStatus('BackToSouth_Quest')==Q_TAKEN"
 		nextReplies="HurdTrucker_hellodlg2_P1" />
 
 	<Reply
@@ -18100,7 +18090,7 @@
 		name="Dlg_pl_001433"
 		text="Прощай! Не знаю, увидимся ли мы когда-нибудь снова, но я всегда буду помнить родные места."
 		role="PLAYER"
-		scriptResult="AddPlayerMoney( 250 ); CompleteQuest('BackToYouzhniy_Quest'); TakeQuest('BenEast_Quest'); GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
+		scriptResult="CompleteQuest('BackToSouth_Quest'); TakeQuest('BenEast_Quest'); GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002546"
@@ -18142,34 +18132,35 @@
 
 	<Reply
 		name="Dlg_npc_002572"
-		text="Да, есть. Нужен доброволец, который построит два дота вот в этом месте, и поможет нам отразить атаку бандитов. Пока что никто не осмеливается на такое."
+		text="Да, есть. Нужен доброволец, который доставит материалы для постройки дотов две наши опорные точки, а после поможет нам отразить атаку бандитов. Пока что никто не осмеливается на такое - все боятся высунуть нос из города."
 		role="NPC"
+		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert');"
 		nextReplies="Dlg_pl_002573 Dlg_pl_002574" />
 
 	<Reply
 		name="Dlg_pl_002574"
 		text="Я готов сделать это. Я не могу допустить, чтобы на моих родных землях заправляли мерзкие бандиты!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert'); TakeQuest('r1m1_Construct_Quest'); TActivate('Create_ConstructionPlace01'); SetWeather(1); EndConversation()" />
+		scriptResult="TakeQuest('DefendSowth_Quest'); TActivate('Create_ConstructionPlace01'); SetWeather(1); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002573"
 		text="Что ж, надеюсь, кто-нибудь согласится. А мне пора. Удачи вам!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); EndConversation()" />
+		scriptResult="TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002549"
 		text="Воистину весь наш город благодарен тебе. После такой взбучки бандиты ещё очень долго не сунутся в наши края. Вот, прими это денежное вознаграждение, ты его заслужил!"
 		role="NPC"
-		scriptCondition="IsQuestTaken('r1m1_Construct_Quest2') and not(IsQuestComplete('r1m1_Construct_Quest2'))"
+		scriptCondition="QuestStatus('DefendSowth_Quest5')==Q_TAKEN"
 		nextReplies="Dlg_pl_002550" />
 
 	<Reply
 		name="Dlg_pl_002550"
 		text="Спасибо, оно мне пригодится. Удачи вам."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m1_Construct_Quest2'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); TActivate('TheSowthDefRemove'); EndConversation()" />
+		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); TActivate('TheSowthDefRemove'); EndConversation()" />
 <!--Root/r1m1/Сюжетные/Лиса-->
 	<Reply
 		name="Lisa_hellodlg0"

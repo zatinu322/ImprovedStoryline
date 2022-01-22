@@ -1985,6 +1985,8 @@
 
 			TActivate( "METALFELIXDIE2" )
 
+			TakeQuest("d_KillFelixGuards_Quest")
+
 			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate()
@@ -2085,6 +2087,8 @@
 			TDeactivate( "trFelix2_cam03" )
 
 			TActivate( "METALFELIXDIE3" )
+
+			TakeQuest("d_KillFelix_Quest")
 
 			SetCameraBehindPlayerVehicle()
 

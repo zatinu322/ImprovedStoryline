@@ -19,7 +19,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			if QuestStatus("KillFelix_Quest")==Q_COMPLETED then
+			if QuestStatus("d_SinFather_Quest")==Q_COMPLETED then
 				Fly("FELIXMONAX_cam01", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
 			else
 				Fly("FELIXMONAX_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
@@ -55,7 +55,7 @@
 				vehPlayer:SetRotation(Quaternion(-0.070, -0.997, 0.003, 0.028))
 			end
 
-			if QuestStatus("KillFelix_Quest")==Q_COMPLETED then
+			if QuestStatus("d_SinFather_Quest")==Q_COMPLETED then
 				AddCinematicMessage( 4, 1 )
 			else
 				AddCinematicMessage( 8810, 1 )

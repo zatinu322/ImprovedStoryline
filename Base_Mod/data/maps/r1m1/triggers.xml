@@ -887,6 +887,8 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixBaseLoc" />
 		<script>
 			TActivate( "RolikBegin_Felix2" )
+			
+			CompleteQuest("d_ArriveAtFelixBase_Quest")
 
 			trigger:Deactivate() 
 		</script>
@@ -896,6 +898,8 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="FelixBanditCars2" />
 		<script>
 			TActivate( "RolikBegin_Felix3" )
+
+			CompleteQuest("d_KillFelixGuards_Quest")
 
 			trigger:Deactivate() 
 		</script>
@@ -909,7 +913,7 @@
 
 			TActivate( "RolikBegin_Felix4" )
 
-			CompleteQuest( "KillFelix_Quest" )
+			CompleteQuest( "d_KillFelix_Quest" )
 
 			AddHistory( "r1_Kill_Felix_00" );
 			AddFadingMsgId( "fm_history_got" );
@@ -1100,7 +1104,7 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if IsQuestComplete("BackToYouzhniy_Quest") or GetVar("FelixRevenge").AsInt==1 then 
+			if IsQuestComplete("d_SinFather_Quest") or GetVar("FelixRevenge").AsInt==1 then 
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
@@ -1445,6 +1449,8 @@
 		</script>
 	</trigger>
 
+
+	<!-- Защита Южного -->
 	<trigger Name="Create_ConstructionPlace01" active="0">
 		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1468,30 +1474,31 @@
 		</script>
 	</trigger>
 
-
-
 	<trigger Name="Trigged_ConstructionPlace01" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ConstructionPlace01" />
 		<script>
 
-		local hs = GetEntityByName ("constlight01")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constbox01")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constpck01")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constpck02")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constpck03")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constcnt01")
-		if hs then hs:Remove() end
+			local hs = GetEntityByName ("constlight01")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constbox01")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constpck01")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constpck02")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constpck03")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constcnt01")
+			if hs then hs:Remove() end
+			
+			TeamCreate("Defenders",1008,CVector(1311, 288, 2832),{"BelazTSP","TSPFighter"}, CVector(1549, 288, 3185), 1)
+			
+			TActivate("Build_ConstructionPlace01")
+			TActivate("Create_ConstructionPlace02")
 
-		TeamCreate("Defenders",1008,CVector(1311, 288, 2832),{"BelazTSP","TSPFighter"}, CVector(1549, 288, 3185), 1)
+			CompleteQuest("DefendSowth_Quest1")
 
-		TActivate("Build_ConstructionPlace01")
-		TActivate("Create_ConstructionPlace02")
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1500,15 +1507,11 @@
 		<event 	timeout="10" eventid="GE_TIME_PERIOD" />
 		<script>
 
-		CreateNewBreakableObject( "bandit_base_defense_2","bbd01", 1008, CVector(1538.165, 304.032, 3254.301), Quaternion(0.000, 0.685, 0.000, 0.728),0 )
+			CreateNewBreakableObject( "bandit_base_defense_2","bbd01", 1008, CVector(1538.165, 304.032, 3254.301), Quaternion(0.000, 0.685, 0.000, 0.728),0 )
 
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
-
-
-
-
 
 	<trigger Name="Create_ConstructionPlace02" active="0">
 		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
@@ -1517,68 +1520,71 @@
 
 
 			TActivate("Trigged_ConstructionPlace02")
-			trigger:Deactivate()
 
+			trigger:Deactivate()
 		</script>
 	</trigger>
-
 
 	<trigger Name="Trigged_ConstructionPlace02" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ConstructionPlace02" />
 		<script>
 
-		local hs = GetEntityByName ("constlight02")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constbox02")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constpck04")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constpck05")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constpck06")
-		if hs then hs:Remove() end
-		local hs = GetEntityByName ("constbox03")
-		if hs then hs:Remove() end
+			local hs = GetEntityByName ("constlight02")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constbox02")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constpck04")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constpck05")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constpck06")
+			if hs then hs:Remove() end
+			local hs = GetEntityByName ("constbox03")
+			if hs then hs:Remove() end
 
-		TActivate("Build_ConstructionPlace02")
-		trigger:Deactivate()
+			TActivate("Build_ConstructionPlace02")
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
-
-
 
 	<trigger Name="Build_ConstructionPlace02" active="0">
 		<event 	timeout="10" eventid="GE_TIME_PERIOD" />
 		<script>
 
-		CreateNewBreakableObject( "bandit_base_defense_2","bbd02", 1008, CVector(1565.589, 295.000, 3113.854), Quaternion(0.000, 0.605, 0.000, 0.796),0 )
+			CreateNewBreakableObject( "bandit_base_defense_2","bbd02", 1008, CVector(1565.589, 295.000, 3113.854), Quaternion(0.000, 0.605, 0.000, 0.796), 0 )
 
-		TActivate("Const_mis_Attack")
-		trigger:Deactivate()
+			CompleteQuest("DefendSowth_Quest2")
+
+			TActivate("Const_mis_Attack")
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
 
 	<trigger Name="Const_mis_Attack" active="0">
-		<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+		<event 	timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
 
-		TeamCreate("CMBandits1",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
+			TeamCreate("CMBandits1",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
 
-		local FVehicle = GetEntityByName("CMBandits1_vehicle_0")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits1_vehicle_1")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits1_vehicle_2")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits1_vehicle_3")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits1_vehicle_4")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits1_vehicle_0")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits1_vehicle_1")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits1_vehicle_2")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits1_vehicle_3")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits1_vehicle_4")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
 
-		TActivate("Const_mis_Attack2")
+			TakeQuest("DefendSowth_Quest3")
 
-		trigger:Deactivate()
+			TActivate("Const_mis_Attack2")
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1586,22 +1592,26 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="CMBandits1" />
 		<script>
 
-		TeamCreate("CMBandits2",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
+			CompleteQuest("DefendSowth_Quest3")
 
-		local FVehicle = GetEntityByName("CMBandits2_vehicle_0")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits2_vehicle_1")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits2_vehicle_2")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits2_vehicle_3")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
-		local FVehicle = GetEntityByName("CMBandits2_vehicle_4")
-		if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			TeamCreate("CMBandits2",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
 
-		TActivate("Const_mis_complete")
+			local FVehicle = GetEntityByName("CMBandits2_vehicle_0")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits2_vehicle_1")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits2_vehicle_2")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits2_vehicle_3")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
+			local FVehicle = GetEntityByName("CMBandits2_vehicle_4")
+			if FVehicle then FVehicle:SetCruisingSpeed(130) end
 
-		trigger:Deactivate()
+			TakeQuest("DefendSowth_Quest4")
+
+			TActivate("Const_mis_complete")
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1609,10 +1619,9 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="CMBandits2" />
 		<script>
 		 
-		CompleteQuest( "r1m1_Construct_Quest" )
+			CompleteQuest("DefendSowth_Quest4")
 
-		trigger:Deactivate()
-
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1638,6 +1647,7 @@
 		<script>
 			if QuestStatus("r3m2_FindInfoAboutFather")==Q_TAKEN then
 				TActivate("AivenRolikBegin")
+
 				trigger:Deactivate()
 			end
 		</script>
@@ -1653,6 +1663,7 @@
 			if QuestStatus("ATGloohoe_Quest")==Q_TAKEN then
 				TActivate("ATGRolikBegin")
 				CompleteQuest("ATGloohoe_Quest")
+
 				trigger:Deactivate()
 			end
 		</script>
@@ -1686,6 +1697,7 @@
 			if b == 1 then
 				PassToMap("r1m4","FromR1M3", -1, true)
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

@@ -27,15 +27,6 @@
 
 	<Object
 		Flags="21"
-		Name="MZKillRaiders"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="6482.708 73.095 536.868"
-		Radius="10.000"
-		LookingTimeOut="10.000" />
-
-	<Object
-		Flags="21"
 		Name="MisterShlyapaFM"
 		Belong="1100"
 		Prototype="genericLocation"

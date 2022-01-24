@@ -58,20 +58,12 @@
 			PrecedingQuests="r1m2_TalkAboutRedkiyMineral_Quest" />
 
 		<quest
-			Name="r1m2_Glagiators_Quest"
-			Automatic="0"
+			Name="r1m2_MovemineralToMidgard_Quest"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="r1m2_RedkiyMineral_Quest" />
-
-		<quest
-			Name="r1m2_MovemineralToMidgard_Quest"
-			Automatic="0"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="any complete"
-			PrecedingQuests="r1m2_Glagiators_Quest r1m2_RedkiyMineral_Quest" />
 	</quest>
 <!--Root/Доехать до локации и вернуться -->
 	<quest
@@ -2724,7 +2716,23 @@
 		ConditionToGive="all complete"
 		OnComplete="SetTolerance(1100,1012,RS_NEUTRAL)"
 		OnFail='TDeactivate("trFightForPesht"); TDeactivate("BrigadaIsDead"); SetTolerance(1100,1012,RS_NEUTRAL)'
-		Levels="r1m3" />
+		Levels="r1m3">
+		<quest
+			Name="FightForPesht1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="FightForPesht" />
+
+		<quest
+			Name="FightForPesht2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="FightForPesht1" />
+	</quest>
 <!--Root/r1m3/Сюжетные/ Попробовать проехать через бандитов -->
 	<quest
 		Name="d_RideAcrossBase_Quest"
@@ -2781,7 +2789,16 @@
 			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="d_BombInAsgard2_Quest" />
+
+		<quest
+			Name="d_BombShahtsReturn_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_BombShahtsAtakBandits_Quest" />
 	</quest>
 <!--Root/r1m3/Сюжетные/ Взорвать мост -->
 	<quest
@@ -2793,7 +2810,23 @@
 		PrecedingQuests="d_GetBomb_Quest"
 		OnComplete="AddPlayerMoney(200)"
 		OnFail='RemoveQuestItem("quest_explosive")'
-		OnTake='ShowCircleOnMinimapByName("BaseGuardian_enter")' />
+		OnTake='ShowCircleOnMinimapByName("BaseGuardian_enter")'>
+		<quest
+			Name="d_DestroyBridge_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_DestroyBridge_Quest" />
+
+		<quest
+			Name="d_DestroyBridge_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_DestroyBridge_Quest1" />
+	</quest>
 <!--Root/r1m3/Сюжетные/ Наладить добычу нефти -->
 	<quest
 		Name="d_GetHelpWorkersInMinin_Quest"
@@ -2823,7 +2856,7 @@
 
 		<quest
 			Name="d_DriveBanditFromOilMine_Quest"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -2848,7 +2881,23 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="d_DriveBanditFromOilMine_Quest"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 350, "specter01", 3, 10)'
-		OnTake='ShowCircleOnMinimapByName("OilMineRuner")' />
+		OnTake='ShowCircleOnMinimapByName("OilMineRuner")'>
+		<quest
+			Name="d_FindBanditBaseOfOilMine_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_FindBanditBaseOfOilMine_Quest" />
+
+		<quest
+			Name="d_FindBanditBaseOfOilMine_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_FindBanditBaseOfOilMine_Quest1" />
+	</quest>
 <!--Root/r1m3/Сюжетные/ Разобраться в интриге  -->
 	<quest
 		Name="d_IntrigaOfMerMinin_Quest"
@@ -2953,7 +3002,7 @@
 <!--Root/r1m3/Сюжетные/Проследить за машиной -->
 	<quest
 		Name="d_SerchCarTunel_Quest"
-		Automatic="1"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
@@ -3122,26 +3171,29 @@
 
 	<quest
 		Name="Zachisti2_Quest"
-		Automatic="0"
+		Automatic="1"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Zachisti1_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheBase")' />
 
 	<quest
 		Name="Zachisti3_Quest"
-		Automatic="0"
+		Automatic="1"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Zachisti2_Quest"
 		OnTake='ShowCircleOnMinimapByName("Minin")' />
 
 	<quest
 		Name="Zachisti4_Quest"
-		Automatic="0"
+		Automatic="1"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Zachisti3_Quest"
 		OnTake='ShowCircleOnMinimapByName("Minin")' />
 <!--Root/r1m3/Сюжетные/Поиски Лисы с диском-->
 	<quest
@@ -3178,7 +3230,23 @@
 		OnComplete="AddPlayerMoney(175)"
 		OnFail='TDeactivate("KOLIZEYFIGHTDIE1");'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
-		Levels="r1m2" />
+		Levels="r1m2">
+		<quest
+			Name="CombatInKollizey_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="CombatInKollizey_Quest" />
+
+		<quest
+			Name="CombatInKollizey_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="CombatInKollizey_Quest1" />
+	</quest>
 
 	<quest
 		Name="ReturnToDirector2_Quest"
@@ -3243,6 +3311,34 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="MidgardTalkKollizey_Quest PortoTalkKollizey_Quest EastTalkKollizey_Quest"
 			OnTake='ShowCircleOnMinimapByName("TheTickets")' />
+	</quest>
+
+	<quest
+		Name="r1m2_Glagiators_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r1m2_RedkiyMineral_Quest"
+		OnComplete="AddPlayerMoney(15000)"
+		OnFail='TDeactivate("KOLIZEYFIGHTDIE2")'
+		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
+		Levels="r1m2">
+		<quest
+			Name="r1m2_Glagiators_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r1m2_Glagiators_Quest" />
+
+		<quest
+			Name="r1m2_Glagiators_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r1m2_Glagiators_Quest1" />
 	</quest>
 <!--Root/r1m2/Опциональные/ Спасти руины -->
 	<quest
@@ -3532,7 +3628,7 @@
 
 		<quest
 			Name="BenMZ2_Quest"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -3570,6 +3666,14 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="BenRim2_Quest" />
+
+		<quest
+			Name="BenRim4_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="BenRim3_Quest" />
 	</quest>
 
 	<quest

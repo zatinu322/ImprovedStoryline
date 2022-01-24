@@ -24,7 +24,6 @@
 				TActivate("trMoveFromR1M4")
 
 				SetCoordinateForQuest( "r1m2_TalkAboutRedkiyMineral_Quest" , CVector(getPos("ToR1M4")))
-				SetCoordinateForQuest( "r1m2_Glagiators_Quest" , CVector(getPos("ToR1M4")))
 				SetCoordinateForQuest( "r1m2_MovemineralToMidgard_Quest" , CVector(getPos("ToR1M4")))
 
 				SetCoordinateForQuest( "r2m2_GiveDisk2ToOrakul",	CVector(7738.129, 286.901, 4949.968), "r2m1")
@@ -38,7 +37,6 @@
 			    TActivate("trMoveFromR2M1")
 
 				SetCoordinateForQuest( "r1m2_TalkAboutRedkiyMineral_Quest" , CVector(getPos("ToR2M1")))
-				SetCoordinateForQuest( "r1m2_Glagiators_Quest" , 			 CVector(getPos("ToR2M1")))
 				SetCoordinateForQuest( "r1m2_MovemineralToMidgard_Quest" ,   CVector(getPos("ToR2M1")))
 
 				SetCoordinateForQuest( "r2m2_GiveDisk2ToOrakul",	CVector(2114.268, 235.762, 5967.831), "r2m1")
@@ -76,7 +74,6 @@
 				TActivate("trMoveFromR1M4")
 
 				SetCoordinateForQuest( "r1m2_TalkAboutRedkiyMineral_Quest" , CVector(getPos("ToR1M4")))
-				SetCoordinateForQuest( "r1m2_Glagiators_Quest" , CVector(getPos("ToR1M4")))
 				SetCoordinateForQuest( "r1m2_MovemineralToMidgard_Quest" , CVector(getPos("ToR1M4")))
 
 				SetCoordinateForQuest( "r2m2_GiveDisk2ToOrakul",	CVector(7738.129, 286.901, 4949.968), "r2m1")
@@ -89,7 +86,6 @@
 				TActivate("trMoveFromR2M1")
 
 				SetCoordinateForQuest( "r1m2_TalkAboutRedkiyMineral_Quest" , CVector(getPos("ToR2M1")))
-				SetCoordinateForQuest( "r1m2_Glagiators_Quest" , 			 CVector(getPos("ToR2M1")))
 				SetCoordinateForQuest( "r1m2_MovemineralToMidgard_Quest" ,   CVector(getPos("ToR2M1")))
 
 				SetCoordinateForQuest( "r2m2_GiveDisk2ToOrakul",	CVector(2114.268, 235.762, 5967.831), "r2m1")
@@ -99,7 +95,7 @@
 --				SetCoordinateForQuest( "r3m2_ReadyToTravel" , CVector(getPos("ToR2M1")))
 			end
 			
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 

@@ -482,6 +482,8 @@
 			SetTolerance(1045, 1002, RS_NEUTRAL)
 			SetTolerance(1045, 1005, RS_NEUTRAL)
 
+			TakeQuest("d_IntrigaOfMerMinin_Quest")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -777,12 +779,14 @@
 				vehP:SetSkin(4)
 				vehP:SetExternalPathByName("pioneer_path")
 				SetCameraDirectionToObj( vehP:GetId() )
+				vehP:SetCanBeDistractedFromMoving( true )
 			end
 
 			TActivate( "RUNTOPIONEER" )
---			TActivate( "PIONEERDEAD" )
-			TActivate("PIONEERDEADANYWAY")
+			TActivate( "PIONEERDEAD" )
 			TActivate( "PIONEERASGARD" )
+
+			TakeQuest("d_SerchCarTunel_Quest")
 
 			StopPlayingCustomMusic()
 
@@ -825,6 +829,11 @@
 		<script>
 			PlayCustomMusic("Bio02")
 
+			local veh= GetEntityByName("Pioneer_vehicle_0")
+			if veh then
+				veh:Remove ()
+			end
+
 			local vehP = GetEntityByName("vehPioneer")
 			if vehP then
 				vehP:SetGamePositionOnGround( CVector(3649.857, 290.299, 6200.682))
@@ -843,11 +852,6 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
-			end
-
-			local veh= GetEntityByName("Pioneer_vehicle_0")
-			if veh then
-				veh:Remove ()
 			end
 
 			trigger:Deactivate()
@@ -1973,6 +1977,8 @@
 			TActivate("BrigadaIsDead")
 			
 			SetTolerance(1100,1012,RS_ENEMY)
+
+			CompleteQuest("FightForPesht1")
 			
 			trigger:Deactivate()
 		</script>
@@ -1997,7 +2003,7 @@
 			
 			AddCinematicMessage( 8812, 1 )
 			
-			CompleteQuest("FightForPesht")
+			CompleteQuest("FightForPesht2")
 				
 			TActivate ("tr_OpenTownAndShowButtonInPesht")
 			TActivate("BrigadaIsDeadEnd")

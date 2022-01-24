@@ -280,13 +280,13 @@
 	<trigger Name="KOLIZEYFIGHT" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Kolizey_location" />
 		<script>
-			if IsQuestTaken("CombatInKollizey_Quest") and not(IsQuestComplete("CombatInKollizey_Quest") or IsQuestFailed("CombatInKollizey_Quest"))   then
+			if IsQuestTaken("CombatInKollizey_Quest1") and not(IsQuestComplete("CombatInKollizey_Quest1") or IsQuestFailed("CombatInKollizey_Quest1"))   then
 				TActivate( "RolikBegin_Kolizey1" )
 
 				trigger:Deactivate()
 			end
 
-			if IsQuestTaken("r1m2_Glagiators_Quest") and not(IsQuestComplete("r1m2_Glagiators_Quest") or IsQuestFailed("r1m2_Glagiators_Quest")) then
+			if IsQuestTaken("r1m2_Glagiators_Quest1") and not(IsQuestComplete("r1m2_Glagiators_Quest1") or IsQuestFailed("r1m2_Glagiators_Quest1")) then
 				TActivate( "RolikBegin_Kolizey2" )
 
 				trigger:Deactivate()
@@ -297,7 +297,7 @@
 	<trigger Name="KOLIZEYFIGHTDIE1" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator1" />
 		<script>
-			CompleteQuestIfTaken( "CombatInKollizey_Quest" )
+			CompleteQuestIfTaken( "CombatInKollizey_Quest2" )
 
 			CinemaFiltersUse()
 
@@ -346,7 +346,7 @@
 	<trigger Name="KOLIZEYFIGHTDIE2" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator2" />
 		<script>
-			CompleteQuestIfTaken( "r1m2_Glagiators_Quest" )
+			CompleteQuestIfTaken( "r1m2_Glagiators_Quest2" )
 			TakeQuest("r1m2_MovemineralToMidgard_Quest")
 
 			CinemaFiltersUse()
@@ -399,6 +399,8 @@
 		<script>
 			TeamCreate("CarOfAntiSiencer",1002,CVector(7468.556, 184.763, 5213.779),{"DemoBandit"}, nil, 1)
 
+			TakeQuest("HelpRuins_Quest")
+
 			TActivate("RUINSWAR1")
 
 			trigger:Deactivate()
@@ -409,7 +411,8 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			TeamCreate("CarOfSiencer",1032,CVector(7468.556, 184.763, 5213.779),{"r1m1_bug02"}, nil, 1)
---			TeamCreate("CarOfAntiSiencer",1003,CVector(6713.479, 102.893, 4048.343),{"DemoBandit"},CVector(7468.556, 184.763, 5213.779), 1)
+
+			TakeQuest("DestroyRuins_Quest")
 
 			TActivate("RUINSWAR2")
 
@@ -446,6 +449,8 @@
 		<script>
 			TActivate( "RolikPlenlisa" )
 
+			CompleteQuest( "BenRim3_Quest" )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -453,7 +458,7 @@
 	<trigger Name="PLENLISADIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="LisaInBanditDen" />
 		<script>
-			CompleteQuest( "BenRim3_Quest" )
+			CompleteQuest( "BenRim4_Quest" )
 
 			TakeQuest( "d_FindHouseOfBen_Quest" )
 
@@ -664,7 +669,10 @@
 
 			TeamCreate("CarOfRaider",1002,CVector(6471.031, 73.844, 546.496),{"DemoMolokovoz1","Scout03"})
 
+			TakeQuest("BenMZ2_Quest")
+
 			TActivate ("RaidersDie")
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>

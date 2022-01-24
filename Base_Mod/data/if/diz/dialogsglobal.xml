@@ -5438,7 +5438,7 @@
 		name="Dlg_pl_002200"
 		text="А вот с этим есть небольшая проблема..."
 		role="PLAYER"
-		scriptCondition="IsQuestComplete('BenRim3_Quest') or (IsQuestComplete('QuickFindBen') and IsQuestFailed('FindBenMZ_Quest'))"
+		scriptCondition="IsQuestComplete('BenRim4_Quest') or (IsQuestComplete('QuickFindBen') and IsQuestFailed('FindBenMZ_Quest'))"
 		nextReplies="Dlg_npc_002204" />
 
 	<Reply
@@ -10942,7 +10942,7 @@
 		name="Bomber_hellodlg1"
 		text="Ну и ну, это было просто потрясающе! Где ты научился так сражаться?"
 		role="NPC"
-		scriptCondition="QuestStatus('d_BombInShahts_Quest')==Q_TAKEN and QuestStatus('d_BombShahtsAtakBandits_Quest')==Q_COMPLETED"
+		scriptCondition="QuestStatus('d_BombShahtsReturn_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_dd2170" />
 
 	<Reply
@@ -10967,7 +10967,7 @@
 		name="Dlg_pl_001794"
 		text="Звучит как выгодное предложение! Сейчас я им покажу!"
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken( 'd_BombInAsgard2_Quest'); TakeQuest( 'd_BombShahtsAtakBandits_Quest' );  TActivate('SHAHTSBANDIT');  GetCurNpc():SetSpokenCount( 1 );  LeaveTown(true)" />
+		scriptResult="CompleteQuestIfTaken( 'd_BombInAsgard2_Quest'); CompleteQuestIfTaken( 'd_BombInShahts_Quest' );  TActivate('SHAHTSBANDIT');  GetCurNpc():SetSpokenCount( 1 );  LeaveTown(true)" />
 
 	<Reply
 		name="Dlg_npc_001795"
@@ -10991,7 +10991,7 @@
 		name="Dlg_pl_001798"
 		text="Ещё раз спасибо. А насчёт шерифа можешь не переживать. Никто не будет оплакивать этих людей."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_BombInShahts_Quest' ); FailQuest('d_RideAcrossBase_Quest'); FailQuest('d_GiveMoneyToBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1);  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
+		scriptResult="CompleteQuest( 'd_BombShahtsReturn_Quest' ); CompleteQuestIfTaken( 'd_GetBomb_Quest' ); FailQuestIfTaken('d_RideAcrossBase_Quest'); FailQuestIfTaken('d_GiveMoneyToBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1); TakeQuest('d_DestroyBridge_Quest');  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Мер Минина-->
 	<Reply
 		name="MininMer_hellodlg0"
@@ -12296,7 +12296,7 @@
 		name="Dlg_pl_d3d240"
 		text="Есть такое. Сиди тут, никуда не уходи. Я скоро вернусь."
 		role="PLAYER"
-		scriptResult="TakeQuest('d_IntrigaOfMerMinin_Quest'); CompleteQuest('d_ReturntoMerOfMinin_Quest');  TActivate('SPYMER'); RemoveQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'OilBandit_P');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest');  TActivate('SPYMER'); RemoveQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'OilBandit_P');  LeaveTown(true)" />
 
 	<Reply
 		name="Dlg_pl_d3d242"
@@ -12834,7 +12834,7 @@
 		name="Dlg_pl_002076"
 		text="Хорошо, я к нему зайду."
 		role="PLAYER"
-		scriptResult="CompleteQuest('Zachisti3_Quest'); TakeQuest('Zachisti4_Quest'); SetTolerance( 1100, 1012, RS_ALLY ); EndConversation()" />
+		scriptResult="CompleteQuest('Zachisti3_Quest'); SetTolerance( 1100, 1012, RS_ALLY ); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002077"
@@ -13263,7 +13263,7 @@
 		name="Dlg_pl_001730"
 		text="Я разберусь с ним."
 		role="PLAYER"
-		scriptResult="TActivate('ANTICWAR'); TakeQuest('HelpRuins_Quest'); EndConversation()" />
+		scriptResult="TActivate('ANTICWAR'); EndConversation()" />
 <!--Root/r1m2/Опциональные/Бандит в деревне рядом с Порто-->
 	<Reply
 		name="Antisincer_hellodlg0"
@@ -13306,7 +13306,7 @@
 		name="Dlg_pl_001735"
 		text="Звучит просто. Жди меня с прорабом."
 		role="PLAYER"
-		scriptResult="TActivate('ANTISIENCER'); TakeQuest('DestroyRuins_Quest'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
+		scriptResult="TActivate('ANTISIENCER'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
 	<Reply
 		name="Antisincer_hellodlg0_P1_2"
@@ -15323,13 +15323,13 @@
 		name="Dlg_pl_002591"
 		text="Почему бы и нет. На арену!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m2_RedkiyMineral_Quest'); TakeQuest('r1m2_Glagiators_Quest'); TActivate('KOLIZEYFIGHT');  AddBook('r1_book_kollizey_flyer2');   EndConversation()" />
+		scriptResult="CompleteQuest('r1m2_RedkiyMineral_Quest'); TakeQuest('r1m2_Glagiators_Quest'); TActivate('KOLIZEYFIGHT'); AddBook('r1_book_kollizey_flyer2'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002590"
 		text="Мне неинтересны бои на арене. Всего тебе хорошего."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m2_RedkiyMineral_Quest'); TakeQuest('r1m2_Glagiators_Quest'); CompleteQuest('r1m2_Glagiators_Quest'); TakeQuest('r1m2_MovemineralToMidgard_Quest'); AddBook('r1_book_kollizey_flyer2');  EndConversation()" />
+		scriptResult="CompleteQuest('r1m2_RedkiyMineral_Quest'); AddBook('r1_book_kollizey_flyer2');  EndConversation()" />
 <!--Root/r1m2/Сюжетные/Гладиатор без материала-->
 	<Reply
 		name="Fighter2_hellodlg0"

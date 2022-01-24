@@ -122,17 +122,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m2"
-			targetObjName="MZKillRaiders" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="BenMZ2_Quest1"
-		briefDiz="Убить рейдеров, захвативших склад"
-		fullDiz="Вор из Малой Земли расскажет мне о жилище Бена, если я выгоню бандитов из его схрона."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="MZKillRaiders" />
+			targetObjName="CarOfRaider" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -243,6 +233,15 @@
 		<Map
 			name="r1m2"
 			targetObjName="LisaInBanditPlen" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenRim4_Quest"
+		briefDiz="Уничтожить грабителей"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="LisaInBanditDen" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -444,10 +443,24 @@
 		questName="CombatInKollizey_Quest"
 		briefDiz="Показательное выступление"
 		fullDiz="Я должен устроить в Колизее показательное сражение, чтобы привлечь публику."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="CombatInKollizey_Quest1"
+		briefDiz="Приехать на Арену"
 		isMainQuest="0">
 		<Map
 			name="r1m2"
 			targetObjName="Kolizey_location" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CombatInKollizey_Quest2"
+		briefDiz="Победить в поединке"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Gladiator1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -570,7 +583,7 @@
 		isMainQuest="0">
 		<Map
 			name="r1m2"
-			targetObjName="Ruins_location" />
+			targetObjName="CarOfSiencer" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -755,7 +768,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m2"
-			targetObjName="EretikCar_vehicle_0" />
+			targetObjName="EretikCar" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -776,10 +789,24 @@
 		questName="FightForPesht"
 		briefDiz="Отбить Пешт"
 		fullDiz="Из-за моих неосмотрительных действий в прошлом бандиты из Бригады захватили Пешт. Я должен помочь торговцам отбить его."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="FightForPesht1"
+		briefDiz="Добраться до союзников"
 		isMainQuest="0">
 		<Map
 			name="r1m3"
 			targetObjName="locFightForPesht" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FightForPesht2"
+		briefDiz="Уничтожить оборону города"
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="ArmiaBrigada" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1193,7 +1220,7 @@
 		isMainQuest="0">
 		<Map
 			name="r1m2"
-			targetObjName="Ruins_location" />
+			targetObjName="CarOfAntiSiencer" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1224,7 +1251,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m2"
-			targetObjName="Palach_vehicle_0" />
+			targetObjName="Palach" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2327,7 +2354,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="TheBase" />
+			targetObjName="ThiefCar" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2381,7 +2408,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="CaravanTuzz_vehicle_0" />
+			targetObjName="CaravanTuzz" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2419,7 +2446,6 @@
 	<QuestInfo
 		questName="d_BombInAsgard2_Quest"
 		briefDiz="Спросить бармена Асгарда про другие магазины со взрывчаткой"
-		fullDiz="Продавец в Асгарде наотрез отказался иметь со мной дела. Думаю, стоит узнать у местного бармена про другие подобные магазины."
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -2450,6 +2476,15 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
+			targetObjName="ShahtsBoss" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BombShahtsReturn_Quest"
+		briefDiz="Вернуться в посёлок"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
 			targetObjName="TheShahts" />
 	</QuestInfo>
 
@@ -2468,7 +2503,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m2"
-			targetObjName="KARAVANMIDGARD_vehicle_0" />
+			targetObjName="KARAVANMIDGARD" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2477,13 +2512,27 @@
 		isMainQuest="1">
 		<Map
 			name="r1m2"
-			targetObjName="KARAVANPORTO_vehicle_0" />
+			targetObjName="KARAVANPORTO" />
 	</QuestInfo>
 
 	<QuestInfo
 		questName="d_DestroyBridge_Quest"
 		briefDiz="Заложить бомбу"
 		fullDiz="У меня есть взрывчатка. Осталось только заминировать мост."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_DestroyBridge_Quest1"
+		briefDiz="Нейтрализовать охрану моста"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="OhranaBridge" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_DestroyBridge_Quest2"
+		briefDiz="Взорвать мост"
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -2496,7 +2545,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="TheBanditOilMine" />
+			targetObjName="OilMineBoss" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2533,10 +2582,24 @@
 		questName="d_FindBanditBaseOfOilMine_Quest"
 		briefDiz="Найти и уничтожить лагерь бандитов"
 		fullDiz="Последний противник убегает. Я могу проследить за ним до базы бандитов и уничтожить это паучье гнездо."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="d_FindBanditBaseOfOilMine_Quest1"
+		briefDiz="Проследить за бандитом"
 		isMainQuest="0">
 		<Map
 			name="r1m3"
-			targetObjName="OilMineRuner_vehicle_0" />
+			targetObjName="OilMineRuner" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindBanditBaseOfOilMine_Quest2"
+		briefDiz="Уничтожить всех бандитов на базе"
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="OilMineBaseBoss" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2821,7 +2884,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="KARAVANvvt_vehicle_0" />
+			targetObjName="KARAVANvvt" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2962,7 +3025,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="Pioneer1_vehicle_0" />
+			targetObjName="Pioneer" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3081,7 +3144,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="MerCar_vehicle_0" />
+			targetObjName="MerCar" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3189,7 +3252,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="KARAVANvvt_vehicle_0" />
+			targetObjName="KARAVANvvt" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3237,7 +3300,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="KARAVANvvt_vehicle_0" />
+			targetObjName="KARAVANvvt" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3247,7 +3310,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="Pioneer_vehicle_0" />
+			targetObjName="Pioneer" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3651,28 +3714,26 @@
 
 	<QuestInfo
 		questName="r1m2_Glagiators_Quest"
-		briefDiz="Победить гладиатора на Арене"
-		isMainQuest="1">
+		briefDiz="Победить Сару на Арене"
+		fullDiz="Несмотря на то, что в Колизее не оказалось нужного мне материала, я не смог отказаться от предложенного поединка."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="r1m2_Glagiators_Quest1"
+		briefDiz="Добраться до Арены"
+		isMainQuest="0">
 		<Map
 			name="r1m2"
 			targetObjName="Kolizey_location" />
+	</QuestInfo>
 
+	<QuestInfo
+		questName="r1m2_Glagiators_Quest2"
+		briefDiz="Одолеть Сару"
+		isMainQuest="0">
 		<Map
-			name="r1m3" />
-
-		<Map
-			name="r1m4"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r2m1" />
-
-		<Map
-			name="r3m1" />
-
-		<Map
-			name="r3m2"
-			targetObjName="ToR3M1" />
+			name="r1m2"
+			targetObjName="Gladiator2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3930,7 +3991,7 @@
 		isMainQuest="0">
 		<Map
 			name="r1m3"
-			targetObjName="OldTownOutsiderCar2_vehicle_0" />
+			targetObjName="OldTownOutsiderCar2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3940,7 +4001,7 @@
 		isMainQuest="0">
 		<Map
 			name="r1m3"
-			targetObjName="OldTownOutsiderCar_vehicle_0" />
+			targetObjName="OldTownOutsiderCar" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -4131,7 +4192,7 @@
 		isMainQuest="0">
 		<Map
 			name="r2m1"
-			targetObjName="CaravanWithNarcotikCars_vehicle_0" />
+			targetObjName="CaravanWithNarcotikCars" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -4229,7 +4290,7 @@
 		isMainQuest="0">
 		<Map
 			name="r2m2"
-			targetObjName="LisaRunCar_vehicle_0" />
+			targetObjName="LisaRunCar" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -4289,7 +4350,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="KaravanSNGTill_vehicle_0" />
+			targetObjName="KaravanSNGTill" />
 
 		<Map
 			name="r2m2"
@@ -4344,7 +4405,7 @@
 		isMainQuest="0">
 		<Map
 			name="r2m2"
-			targetObjName="ShamanCar1_vehicle_0" />
+			targetObjName="ShamanCar1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -4353,7 +4414,7 @@
 		isMainQuest="0">
 		<Map
 			name="r2m2"
-			targetObjName="ShamanCar2_vehicle_0" />
+			targetObjName="ShamanCar2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -5328,7 +5389,7 @@
 		isMainQuest="1">
 		<Map
 			name="r4m1"
-			targetObjName="Buharers_vehicle_0" />
+			targetObjName="Buharers" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -5360,7 +5421,7 @@
 		isMainQuest="1">
 		<Map
 			name="r4m1"
-			targetObjName="Tankisty_vehicle_0" />
+			targetObjName="Tankisty" />
 	</QuestInfo>
 
 	<QuestInfo

@@ -237,6 +237,8 @@
 		<script>
 			TeamCreate("ShahtsBoss",1002,CVector(2202, 285, 6936),{"r1m1_molokovoz02","r1m3_Fighter01","r1m1_CaravanBug02"}, CVector(2041, 287, 7182), 1)
 
+			TakeQuest("d_BombShahtsAtakBandits_Quest")
+
 			TActivate("SHAHTSBANDITBOSSDIE")
 
 			trigger:Deactivate()
@@ -258,6 +260,8 @@
 		<script>
    			TActivate( "BOOOM" )
 
+			CompleteQuest("d_DestroyBridge_Quest1")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -266,10 +270,10 @@
 	<trigger Name="BOOOM" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheDestroyBridgeLoc" />
 		<script>
-  			if IsQuestTaken("d_DestroyBridge_Quest") then
+  			if IsQuestTaken("d_DestroyBridge_Quest2") then
 				RemoveQuestItem("quest_explosive")
 
-   				CompleteQuest( "d_DestroyBridge_Quest" )
+   				CompleteQuest( "d_DestroyBridge_Quest2" )
    
 				AddFadingMsg("Вы воспользовались предметом: Взрывчатка")
 
@@ -356,6 +360,8 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			TeamCreate("OilMineBoss",1002,CVector(6969,257,7068),{"Sml401","r1m3_Fighter01","r1m1_scout02"}, nil, 1)
+
+			TakeQuest("d_DriveBanditFromOilMine_Quest")
 
 			TActivate("BOSSOILMINEDIE")
 
@@ -535,8 +541,25 @@
 	<trigger Name="RUNTORUNERENDRACE" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="EndRaceLoc" />
 		<script>
-			TeamCreate("OilMineBaseBoss",1002,CVector(4483, 265, 7496),{"r1m3_Fighter01","r1m3_Fighter02"},CVector(4546, 263, 7479), 1)
+			TeamCreate("OilMineBaseBoss",1002,CVector(4483, 265, 7496),{"r1m3_Fighter01","r1m3_Fighter02", "DemoBandit"},CVector(4546, 263, 7479), 1)
 
+			local runner = GetEntityByName("OilMineRuner_vehicle_0")
+			local runner_new = GetEntityByName("OilMineBaseBoss"):GetVehicle(2)
+
+			CompleteQuest( "d_FindBanditBaseOfOilMine_Quest1" )
+
+			if runner and runner_new then
+				local runner_pos = runner:GetPosition()
+				local runner_rot = runner:GetRotation()
+				local runner_skin = runner:GetSkin()
+
+				runner_new:SetGamePositionOnGround(runner_pos)
+				runner_new:SetRotation(runner_rot)
+				runner_new:SetSkin(runner_skin)
+
+				runner:Remove()
+			end
+			
 			SetTolerance( 1100, 1044, RS_ENEMY )
 
 			TActivate("KILLBOSSOILMINEBASE")
@@ -550,7 +573,7 @@
 	<trigger Name="KILLBOSSOILMINEBASE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="OilMineBaseBoss" />
 		<script>
-   			CompleteQuest( "d_FindBanditBaseOfOilMine_Quest" )
+   			CompleteQuest( "d_FindBanditBaseOfOilMine_Quest2" )
    			
    			TActivate("KILLBOSSOILMINEBASE2")
 
@@ -703,141 +726,64 @@
 				len = Dist(pl, run)
 
 				if (15 > len) then
-					TDeactivate("PIONEERDEAD")
-					TDeactivate("PIONEERDEADANYWAY")
 					SetTolerance( 1100, 1046, RS_ENEMY )
-					local car1 = GetEntityByName("Pioneer_vehicle_0")
-					if car1 then
-						cpos = car1:GetPosition()
-						cquat = car1:GetRotation()
-						chp = car1:GetHealth()
-						car1:Remove()
+
+					local parentrun = GetEntityByName("Pioneer")
+					if parentrun then
+						parentrun:SetDestination(pl:GetPosition())
 					end
-
-					TeamCreate("Pioneer1",1046,CVector(cpos),{"Cruiser02"}, nil, nil, Quaternion(cquat))
-					local vehPion = GetEntityByName("Pioneer1_vehicle_0")
-					if vehPion then vehPion:SetSkin(4) end
-
-					TActivate("trCruiserHealthCheck")
 
 					FailQuest( "d_SerchCarTunel_Quest" )
 					FailQuest("d_FindKeyInTunel_Quest")
 					TakeQuest("d_KillCarTunel_Quest")
 
-					TActivate("PIONEERDEAD")
 					TDeactivate( "PIONEERASGARD" )
 
-					cpos = nil
-					cquat = nil
-
 					trigger:Deactivate()
+
 				elseif (len > 305) then
-					TDeactivate("PIONEERDEAD")
-					TDeactivate("PIONEERDEADANYWAY")
-					local car1 = GetEntityByName("Pioneer_vehicle_0")
-					if car1 then
-						car1:Remove()
-					end
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					local Plf = GetPlayerVehicle()
+					local PlfID = GetPlayerVehicleId()
+					local PlfCoor = Plf:GetPosition()
+					PlfCoor.y = PlfCoor.y + 25*0.74
+					PlfCoor.z = PlfCoor.z + 25*0.74
+
+					Plf:SetCustomControlEnabled( true )
+					Plf:SetCustomLinearVelocity( 0 )
+					Plf:SetThrottle( 0 )
+					Plf:SetCustomControlEnabled( false )
+
+					FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
+					StartCinematic()
+
+					AddCinematicMessage( 18, 1 )
+
+					TActivate("PIONEERDEAD_cp")
 
 					TDeactivate( "PIONEERASGARD" )
-					FailQuest( "d_SerchCarTunel_Quest" )
-					TActivate("trCinPioneerUdral")
+					TDeactivate("PIONEERDEAD")
+
+					FailQuest("d_SerchCarTunel_Quest")
 
 					trigger:Deactivate()
+
 				elseif 1.499>(GetTolerance(1100, 1046)) then
-					TDeactivate("PIONEERDEAD")
-					TDeactivate("PIONEERDEADANYWAY")
-					local car1 = GetEntityByName("Pioneer_vehicle_0")
-					if car1 then
-						cpos = car1:GetPosition()
-						cquat = car1:GetRotation()
-						chp = car1:GetHealth()
-						car1:Remove()
-					end
-
-					TeamCreate("Pioneer1",1046,CVector(cpos),{"Cruiser02"}, nil, nil, Quaternion(cquat))
-					local vehPion = GetEntityByName("Pioneer1_vehicle_0")
-					if vehPion then vehPion:SetSkin(4) end
-
-					TActivate("trCruiserHealthCheck")
-
 					FailQuest( "d_SerchCarTunel_Quest" )
 					FailQuest("d_FindKeyInTunel_Quest")
 					TakeQuest("d_KillCarTunel_Quest")
 
-					TActivate("PIONEERDEAD")
 					TDeactivate( "PIONEERASGARD" )
-
-					cpos = nil
-					cquat = nil
 
 					trigger:Deactivate()
 				end
-
 			end
-		</script>
-	</trigger>
-
-	<trigger Name="PIONEERDEADANYWAY" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Pioneer" />
-		<script>
-			TDeactivate( "PIONEERASGARD" )
-			TDeactivate( "RUNTOPIONEER" )
-			TDeactivate("PIONEERDEAD")
-			TActivate( "TRIGGER_TUNNELOPEN" )
-
-			CinemaFiltersUse()
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 3, 1)
-			StartCinematic()
-
-			AddCinematicMessage(9, 2)
-
-			TActivate( "PIONEERDEAD_cp" )
-
-			FailQuestIfTaken( "d_SerchCarTunel_Quest" )
-			FailQuestIfTaken("d_FindKeyInTunel_Quest")
-			TakeQuest("d_KillCarTunel_Quest")
-			CompleteQuestIfTaken("d_KillCarTunel_Quest")
-			TakeQuest( "d_OpenTunel_Quest" )
-   			
-
-			AddQuestItem("quest_key_for_tunnel")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_key_for_tunnel")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trCruiserHealthCheck" active="0">
-		<event        timeout="0.5"        eventid="GE_TIME_PERIOD" />
-		<script>
-			local vehPion = getObj("Pioneer1_vehicle_0")
-			if vehPion then
-				vehPion:AddModifier("HP", "= "..chp)
-			end
-
-			chp = nil
-
-			trigger:Deactivate()
 		</script>
 	</trigger>
 
 	<trigger Name="PIONEERDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Pioneer1" />
+		<event eventid="GE_OBJECT_DIE" ObjName="Pioneer" />
 		<script>
 			TDeactivate( "PIONEERASGARD" )
 			TDeactivate( "RUNTOPIONEER" )
@@ -867,7 +813,7 @@
 
 			FailQuestIfTaken( "d_SerchCarTunel_Quest" )
 			FailQuestIfTaken("d_FindKeyInTunel_Quest")
-			CompleteQuest("d_KillCarTunel_Quest")
+			CompleteQuestIfTaken("d_KillCarTunel_Quest")
 			TakeQuest( "d_OpenTunel_Quest" )
    			
 
@@ -887,6 +833,11 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			local run = GetEntityByName("Pioneer_vehicle_0")
+			if run then
+				run:Remove()
+			end
+
 			trigger:Deactivate() 
 		</script>
 	</trigger>
@@ -899,49 +850,9 @@
 			
 			TDeactivate( "PIONEERDEAD" )
 			TDeactivate( "RUNTOPIONEER" )
-			TDeactivate("PIONEERDEADANYWAY")
 
 			TActivate( "RolikBegin_PIONEERASGARD" )
 
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trCinPioneerUdral" active="0">
-		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
-			StartCinematic()
-
-			AddCinematicMessage( 18, 1 )
-
-			TActivate("trCinPioneerUdralEnd")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trCinPioneerUdralEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -996,11 +907,9 @@
 
    			CompleteQuestIfTaken( "r1m3_FightWithThief" )
    			CompleteQuestIfTaken( "Zachisti2_Quest" )
-   			if IsQuestComplete( "Zachisti2_Quest" ) then
-   				TakeQuest( "Zachisti3_Quest" )
-   			else
+
+   			if not(IsQuestComplete( "Zachisti2_Quest" )) then
    				TakeQuest( "r1m3_MoveToOraculAfterThief" )
-   			
    				TActivate("TRIGGER_LISAAFTERTHIEF")
    			end
    			
@@ -1647,7 +1556,6 @@
 			TActivate("TRIGGER_THIEFDIE")
    			
    			CompleteQuest( "Zachisti1_Quest" )
-   			TakeQuest( "Zachisti2_Quest" )
    			
 			trigger:Deactivate()
 		</script>
@@ -1807,8 +1715,8 @@
 	<trigger Name="trFightForPesht" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFightForPesht" />
 		<script>
-		TActivate("cinFightForPesht")
-		trigger:Deactivate()
+			TActivate("cinFightForPesht")
+			trigger:Deactivate()
 		</script>
 	</trigger>
 

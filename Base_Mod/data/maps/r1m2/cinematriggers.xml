@@ -79,6 +79,8 @@
 
 			TeamCreate("LisaInBanditDen",1002,CVector(5476,49,4567),{"molokovozBandos","r1m2_bug04", "r1m1_scout01"})
 
+			TakeQuest("BenRim4_Quest")
+
 			TActivate("PLENLISADIE")
 
 			SetCameraBehindPlayerVehicle()
@@ -488,6 +490,8 @@
 
 			TeamCreate("Gladiator1",1002,CVector(7244.941, 156, 3477.613),{"MolokovozKolizey"},CVector(7117, 156, 3758))
 
+			CompleteQuest("CombatInKollizey_Quest1")
+
 			TDeactivate("trKol1_cam02")
 
 			TActivate("KOLIZEYFIGHTDIE1")
@@ -614,6 +618,8 @@
 			TDeactivate("trKol2_cam03")
 			StopPlayingCustomMusic()
 			RuleConsole("cinematic_spring_coeff 0.7")
+
+			CompleteQuest("r1m2_Glagiators_Quest1")
 
 			TActivate("KOLIZEYFIGHTDIE2")
 

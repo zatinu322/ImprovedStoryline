@@ -2508,7 +2508,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="FreeExtremistLeader_Quest3"
+			PrecedingQuests="FreeExtremistLeader_Quest3_1 FreeExtremistLeader_Quest3_2"
 			Levels="r1m4" />
 
 		<quest
@@ -2518,6 +2518,22 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="FreeExtremistLeader_Quest4" />
+
+		<quest
+			Name="FreeExtremistLeader_Quest3_1"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="FreeExtremistLeader_Quest3" />
+
+		<quest
+			Name="FreeExtremistLeader_Quest3_2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="FreeExtremistLeader_Quest3" />
 	</quest>
 
 	<quest
@@ -2537,7 +2553,7 @@
 
 		<quest
 			Name="WaitTillEnd2"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"

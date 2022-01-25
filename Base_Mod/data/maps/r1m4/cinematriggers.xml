@@ -539,6 +539,8 @@
 		TDeactivate("trCaravan_cam02")           
 		TDeactivate("trCaravan_cam03")           
 		SetCameraBehindPlayerVehicle()
+		CompleteQuest("FreeExtremistLeader_Quest3")
+		TakeQuest("FreeExtremistLeader_Quest3_1")
 		trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1149,6 +1151,8 @@
 				tsp5:SetGamePositionOnGround( CVector(1170.192, 307.382, 2625.289))
 				tsp5:SetRotation(Quaternion(-0.001, -0.995, 0.007, -0.097))
 			end
+
+			TakeQuest("WaitTillEnd2")
 			
 			TActivate("ArmiaRybakovDIE")
 			

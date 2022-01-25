@@ -8,6 +8,7 @@
 			SetVar("SubMarPh",0)
 			SetVar("Ryba",0)
 			SetVar("KnownMap",0)
+			SetVar("MainCarDead",0)
 			
 			CreateNewDummyObject( "big_crag_5", "kamexp1", -1, -1, CVector(2059.066, 257.000, 3559.212), Quaternion(0.3953, -0.0829, -0.2476, 0.8807), 0)
 			CreateNewDummyObject( "big_crag_12", "kamexp2", -1, -1, CVector(2052.101, 263.000, 3567.510), Quaternion(-0.3090, 0.0000, 0.0000, 0.9511), 0)
@@ -190,6 +191,13 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="LeaderGuardTeam" />
 		<event eventid="GE_OBJECT_DIE" ObjName="LeaderCar_vehicle_0" />
 		<script>
+			if getObj("LeaderCar_vehicle_0"):IsAlive() or GetVar("MainCarDead").AsInt==1 then
+				CompleteQuest("FreeExtremistLeader_Quest3_1")
+			else
+				CompleteQuest("FreeExtremistLeader_Quest3_2")
+				SetVar("MainCarDead", 1)
+			end
+
 			trigger:IncCount()
 			local count = trigger:GetCount()
 		    if 2>count then
@@ -235,6 +243,14 @@
 		
 			RestoreAllToleranceStatus()
 			StopPlayingCustomMusic()
+
+			if getObj("LeaderCar_vehicle_0") then
+				getObj("LeaderCar_vehicle_0"):Remove()
+			end
+
+			CompleteQuestIfTaken("FreeExtremistLeader_Quest3_1")
+			CompleteQuestIfTaken("FreeExtremistLeader_Quest3_2")
+
 			AddQuestItem("ExtLeader_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ExtLeader_P")
 			trigger:Deactivate()
@@ -249,6 +265,8 @@
 --		    println("trLeaderCar DIEEEEEEEEEEEEEEEEEEEE")
 			FailQuestIfTaken("TRS_Quest3b")
 			FailQuestIfTaken("FreeExtremistLeader_Quest3")
+			FailQuestIfTaken("FreeExtremistLeader_Quest3_1")
+			FailQuestIfTaken("FreeExtremistLeader_Quest3_2")
 			FailQuestIfTaken("FreeExtremistLeader_Quest1")
 --			TakeQuest("KillExtremist_Quest1")
 

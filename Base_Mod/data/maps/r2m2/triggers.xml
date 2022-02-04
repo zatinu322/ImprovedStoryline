@@ -149,6 +149,8 @@
 
 			TeamCreate("SNGInVill1",1016,CVector(1367, 261, 3709),{"r2m1_scout01","r2m2_Fighter01","r2m1_scout02"}, CVector(1233, 261, 3656), 1)
 
+			TakeQuest("r2m2_GiveBardakToSideVillage1")
+
 			TActivate( "INVILL1DIE" )
 
 			trigger:Deactivate() 
@@ -160,6 +162,8 @@
 		<script>
 			TeamCreate("SNGInVill2",1016,CVector(1143, 261, 3951),{"r2m1_scout03","r2m1_scout01","r2m1_scout02","r2m1_scout03"}, CVector(1233, 261, 3656), 1)
 
+			CompleteQuest("r2m2_GiveBardakToSideVillage1")
+
 			TActivate( "INVILL2DIE" )
 
 			trigger:Deactivate()
@@ -169,7 +173,7 @@
 	<trigger	Name="INVILL2DIE" active="0">
 		<event	eventid="GE_OBJECT_DIE" ObjName="SNGInVill2" />
 		<script>
-			CompleteQuest( "r2m2_GiveBardakToSideVillage" )
+			CompleteQuest( "r2m2_GiveBardakToSideVillage2" )
 
 			CinemaFiltersUse()
 
@@ -225,7 +229,7 @@
 	<trigger Name="FELIXMONAXDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="FelixCars" />
 		<script>
-			CompleteQuest( "r2m2_FightFelix" )
+			CompleteQuest( "r2m2_FightFelix2" )
 
 			CinemaFiltersUse()
 
@@ -294,6 +298,8 @@
 			TeamCreate("LagerCarrrs",1040,CVector(812,248,2453),{"r2m1_scout01","r2m2_Molokovoz01","r2m2_Ural01","r2m1_scout02","r2m1_scout03"}, CVector(932,248,2591), 1)
 			TeamCreate("ARRR",1015,CVector(1149,247,2787),{"r2m2_Fighter02","r2m2_Hunter01","r2m1_scout03"}, CVector(863,248,2519))
 
+			CompleteQuest("r2m2_ToKillAllSNGPeople1")
+
 			TActivate( "LAGERWARBEGINDIE" )
 
 			trigger:Deactivate()    
@@ -303,7 +309,7 @@
 	<trigger	Name="LAGERWARBEGINDIE"	active="0">
 		<event	eventid="GE_OBJECT_DIE" ObjName="LagerCarrrs" />
 		<script>
-			CompleteQuest( "r2m2_ToKillAllSNGPeople" )
+			CompleteQuest( "r2m2_ToKillAllSNGPeople2" )
 
 			CinemaFiltersUse()
 
@@ -355,6 +361,8 @@
 			SetTolerance( 1100, 1016, RS_ENEMY )
 
 			TeamCreate("LeadersSNG",1016,CVector(770,261,3281),{"r2m2_Hunter01","r2m2_scout01","r2m2_Ural01"}, nil, 1)
+
+			CompleteQuest("r2m2_AfterAfera")
 
 			TActivate( "LEADERMEETDIE" )
 
@@ -427,7 +435,7 @@
 		<script>
 			GameFiltersUse()
 
-			CompleteQuest( "r2m2_FightWithAxelInArena_Quest" )
+			CompleteQuest( "r2m2_FightWithAxelInArena_Quest2" )
 
 			TActivate("RolikBegin_AXELARENADIE2")
 				
@@ -677,6 +685,8 @@
 
 			TActivate ("Shaman1TriggerDie")
 			TActivate ("Shaman2TriggerDie")
+
+			TakeQuest('r2m2_HeadsHunterQuest')
 
 			trigger:Deactivate()    
 		</script>
@@ -1302,6 +1312,8 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(1526.627, 292, 2444.976), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			
 			TActivate("EretFriendDIE")
+
+			TakeQuest("Eretik_Friend")
 
 			trigger:Deactivate()
 		</script>

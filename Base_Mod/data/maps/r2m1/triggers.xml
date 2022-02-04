@@ -35,6 +35,8 @@
 		<script>
 			CreateVehicleEx("r2m1_CaravanMolokovoz02","KARAVANvvt_vehicle_0", CVector(2594.703, 260, 1755.095), 1016)
 
+			TakeQuest("d_SecondVillage_Quest")
+
 			TActivate( "trCaravanDIE" )
 			TActivate( "trCaravanToVill15sec" )
 			TActivate( "trCaravanToVill1INPLACE" )
@@ -67,7 +69,7 @@
 	<trigger Name="trCaravanToVill1INPLACE" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill1_Loc" />
 		<script>
-			CompleteQuest( "d_FirstVillage_Quest" )
+			CompleteQuest( "d_SecondVillage_Quest" )
 
 			CinemaFiltersUse()
 
@@ -121,7 +123,7 @@
 	<trigger Name="trCaravanToVill2INPLACE" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill2_Loc" />
 		<script>
-			CompleteQuest( "d_SecondVillage_Quest" )
+			CompleteQuest( "d_FirstVillage_Quest" )
 
 			CinemaFiltersUse()
 
@@ -328,9 +330,9 @@
 
 
 	<trigger Name="Start000" active="1">
-		<event timeout="1" eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
-			if IsQuestTaken("r2m2_FindSNGKaravan") and not( IsQuestComplete("r2m2_FindSNGKaravan"))  then
+			if IsQuestTaken("r2m2_GoToR2M1") and not( IsQuestComplete("r2m2_GoToR2M1")) then
 				SetTolerance( 1100, 1016, RS_ENEMY )
 				SetTolerance( 1100, 1083, RS_ENEMY )
 
@@ -344,6 +346,8 @@
 				}
 				
 				TeamCreate("KaravanSNGTill", 1016, RandCoord1[r1], {"r2m1_scout01","r2m1_Molokovoz01","r2m1_scout02"}, RandCoord2[r2], 1)
+
+				CompleteQuest("r2m2_GoToR2M1")
 
 				TActivate ("KARAVANSNGDIE")
 
@@ -489,6 +493,8 @@
 
 			TActivate("RAZBOYINVILLAGEDEAD")
 
+			CompleteQuest( "d_HelpSideVillageSNG_Quest1" )
+
 			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate() 
@@ -530,7 +536,7 @@
 
 			TActivate( "RAZBOYINVILLAGEDEAD_ce" )
 
-			CompleteQuest( "d_HelpSideVillageSNG_Quest" )
+			CompleteQuest( "d_HelpSideVillageSNG_Quest2" )
 
 			trigger:Deactivate()
 		</script>
@@ -604,6 +610,8 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			CompleteQuest( "d_FreeTunel_Quest1" )
+
 			trigger:Deactivate() 
 		</script>
 	</trigger>
@@ -632,7 +640,7 @@
 
 			TActivate ("TUNELFIGHTERDEAD_ce")
 
-			CompleteQuest( "d_FreeTunel_Quest" )
+			CompleteQuest( "d_FreeTunel_Quest2" )
 
 			trigger:Deactivate()
 		</script>
@@ -674,6 +682,8 @@
 			TActivate ("TAKEBOSSARDEAD")
 			TActivate ("RolikBegin_TAKEBOSSARLOC")
 
+			CompleteQuest( "d_TakeGeneralOfBandits_Quest1" )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -701,7 +711,7 @@
 
 			TActivate( "TAKEBOSSARDEAD_ce" )
 
-			CompleteQuest( "d_TakeGeneralOfBandits_Quest" )
+			CompleteQuest( "d_TakeGeneralOfBandits_Quest2" )
 			CompleteQuest( "d_FindAksel_Quest" )
 
 			trigger:Deactivate()
@@ -849,6 +859,8 @@
 	<trigger Name="Trigger_Antipod_Die" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="GulikCar" />
 		<script>
+
+			CompleteQuest( "r2m1_ArtGulik_Quest" )
 		
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
@@ -878,8 +890,6 @@
 		<script>
 		
 			RestoreAllToleranceStatus()
-			
-			CompleteQuest( "r2m1_ArtGulik_Quest" )
 
 			AddQuestItem("quest_art_masterpice")
 			
@@ -909,6 +919,8 @@
 
 			TActivate("Trigger_NarcotikCaravan_Die")
 
+			TakeQuest("r2m1_KillNarcoticsCaravan_Quest")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -936,6 +948,8 @@
 			TeamCreate("BossNarcotikCar",1002,CVector(3838.786, 227.205, 6982.742),{"CoolBelaz_2"}, nil, 1)
 
 			TActivate("Trigger_NarcotikBoss_Die")
+
+			TakeQuest("r2m1_KillGodFather_Quest")
 
 			trigger:Deactivate()
 		</script>
@@ -1342,6 +1356,8 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			CompleteQuest("Tunnel_Quest1")
+
 			trigger:Deactivate() 
 		</script>
 	</trigger>
@@ -1370,7 +1386,7 @@
 
 			TActivate ("TUNELFIGHTERDEAD_ce1")
 
-			CompleteQuest( "Tunnel_Quest" )
+			CompleteQuest( "Tunnel_Quest2" )
 
 			trigger:Deactivate()
 		</script>
@@ -1402,6 +1418,7 @@
 	<trigger Name="FinalBattleEnd" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="SNGLeaders" />
 		<script>
+			CompleteQuest("FinalBattle_Quest2")
 			SetTolerance(1100,1016,RS_ALLY)
 			SetTolerance(1083,1016,RS_ALLY)
 

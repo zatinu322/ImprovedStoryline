@@ -485,9 +485,6 @@
 				vehPlayer:PlaceToEndOfPath("player_path03")
 			end
 
-			CompleteQuest( "d_FindLisaInGelvetcia_Quest" )
-			CompleteQuest( "r1m3_LisaWithOberegAndDisk_Quest" )
-
 			TeamCreate("LisaInCar",1042,CVector(6032.294, 249, 6565.459),{"LisaCar"})
 			local FVehicle = GetEntityByName("LisaInCar_vehicle_0")
 			if FVehicle then
@@ -496,6 +493,9 @@
 				FVehicle:setImmortalMode(1)
 				SetCameraDirectionToObj(FVehicle:GetId())
 			end
+
+			CompleteQuest( "d_FindLisaInGelvetcia_Quest" )
+			CompleteQuest( "r1m3_LisaWithOberegAndDisk_Quest" )
 
 			TActivate ("LISADIED")
 
@@ -2153,7 +2153,7 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			CompleteQuest("FinalBattle_Quest")
+			CompleteQuest("FinalBattle_Quest2")
 			
 			TakeQuest("r2m2_FindLisAfterAxelAndFatherDie_Quest")
 			
@@ -2242,6 +2242,8 @@
 			end
 			
 			TActivate("FinalBattleEnd")
+
+			CompleteQuest("FinalBattle_Quest1")
 
 			trigger:Deactivate()
 		</script>

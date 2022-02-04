@@ -60,26 +60,12 @@
 --				 	println(4)
 					  veh:SetExternalPathByName("OracleDef"..(i+1).."_1")
 					  veh:setGodMode(1)
+					  veh:setImmortalMode(1)
 			 	   end
 			 	end
 			end
 --		 	println(5)
 			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trCreateMonster"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-		    local mnstr = TeamCreate("TeamBigMonster",1022,CVector(getPos("Monster_loc")),{"RobotTron"})
-		    if mnstr then
-			    TActivate("trBigMonsterDie")
-				mnstr:GetVehicle(0):AddItemsToRepository("firing_rate_guns_and_add_damage_guns", 1)
-		    end
-		    
-			CreateBoxWithAffixGun(CVector(getPos("Monster_loc")), "hammer01", random(3))
-		    
-		    trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -94,6 +80,8 @@
 		 	   if veh then 
 --		 	   	  println("OracleDefenders_vehicle_"..i)
 				  veh:setGodMode(0)
+				  veh:AddModifier("hp", "+ 1")
+				  veh:setImmortalMode(0)
 		 	   end
 		 	end
 		    trigger:Deactivate()
@@ -107,6 +95,7 @@
 	        CompleteQuest("r3m2_OvercomeOracleGuard")
 	        TDeactivate("trBigMonsterDie")
 	        FailQuestIfTaken("r3m2_MonterHead")
+			TActivate("OracleCinStart")
 	        StopPlayingCustomMusic()
 	        trigger:Deactivate()
 		</script>
@@ -115,11 +104,7 @@
 	<trigger	Name="trOracleDefendersDie2"		active="0">
 		<event	eventid="GE_OBJECT_DIE"	ObjName="OracleDefenders" />
 		<script>
-	        TakeQuest("KillOracleDefenders")
-	        CompleteQuest("KillOracleDefenders")
-	        StopPlayingCustomMusic()
 			SetVar("SOAgressor", 1)
-			TActivate("OracleCinStart")
 	        trigger:Deactivate()
 		</script>
 	</trigger>
@@ -127,7 +112,7 @@
 	<trigger	Name="trNearMonster"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearMonster_loc" />
 		<script>
-			TActivate("trCreateMonster")
+			-- TActivate("trCreateMonster")
 			TActivate("cinNearMonster")
 			trigger:Deactivate()
 		</script>
@@ -143,6 +128,7 @@
 --				println("AAAAAAAAAAAAAAAAA")
 --				CompleteQuestIfTaken("r3m2_MonterHead")
 				TActivate("cinMonsterDie")
+				CompleteQuest("r3m2_MonterHead2")
 				AddQuestItem("quest_monster_head")
 				AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_monster_head")
 			else

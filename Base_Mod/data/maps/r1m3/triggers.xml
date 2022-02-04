@@ -373,6 +373,8 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="OilMineBoss" />
 		<script>
 
+			CompleteQuest( "d_DriveBanditFromOilMine_Quest" )
+
 			SetTolerance( 1100, 1047, RS_NEUTRAL )
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -404,7 +406,7 @@
 			for i = 0,2 do
 				if GetEntityByName("OilMineBoss_vehicle_"..i) then
 					GetEntityByName("OilMineBoss_vehicle_"..i):Remove()
-					println("Removed vehicle "..i)
+					-- println("Removed vehicle "..i)
 				end
 			end
 
@@ -438,7 +440,7 @@
 				vehP:SetSkin(4)
 			end
 
-			CompleteQuest( "d_DriveBanditFromOilMine_Quest" )
+			TakeQuest("d_FindBanditBaseOfOilMine_Quest")
 
 			TActivate("RUNTORUNER")
 			TActivate("RUNTORUNERENDRACE")

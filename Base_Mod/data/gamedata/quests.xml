@@ -1268,14 +1268,31 @@
 		ConditionToGive="all taken"
 		PrecedingQuests="r3m2_OvercomeOracleGuard"
 		OnComplete="AddPlayerMoney(5000)"
-		OnTake='ShowCircleOnMinimapByName("Monster_loc") TActivate("trNearMonster")' />
+		OnTake='ShowCircleOnMinimapByName("Monster_loc") TActivate("trNearMonster")'>
+		<quest
+			Name="r3m2_MonterHead1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r3m2_MonterHead" />
 
-	<quest
-		Name="KillOracleDefenders"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
+		<quest
+			Name="r3m2_MonterHead2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r3m2_MonterHead1" />
+
+		<quest
+			Name="r3m2_MonterHead3"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r3m2_MonterHead2" />
+	</quest>
 <!--Root/r3m2/Сюжетные/Оракул 1 раз-->
 	<quest
 		Name="r3m2_TwoMagicThing"
@@ -1508,11 +1525,11 @@
 		OnComplete="AddPlayerMoney(5000)">
 		<quest
 			Name="r3m1_ClearSanctuary_KillMonster"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="r3m1_ClearSanctuary"
+			ConditionToGive="all complete"
+			PrecedingQuests="r3m1_ClearSanctuary_Arrive"
 			OnTake='ShowCircleOnMinimapByName("NearStoneHendj_loc")' />
 
 		<quest
@@ -1540,6 +1557,14 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="r3m1_ClearSanctuary_DestroyOut" />
+
+		<quest
+			Name="r3m1_ClearSanctuary_Arrive"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r3m1_ClearSanctuary" />
 	</quest>
 <!--Root/r3m1/опциональные/Спасти жителей улука от чокнутых-->
 	<quest
@@ -1717,7 +1742,23 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r2m2_GiveBardakToEnemy"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000, "storm01", 3, 3)'
-		OnTake='ShowCircleOnMinimapByName("VillDesLoc")' />
+		OnTake='ShowCircleOnMinimapByName("VillDesLoc")'>
+		<quest
+			Name="r2m2_GiveBardakToSideVillage1"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r2m2_GiveBardakToSideVillage" />
+
+		<quest
+			Name="r2m2_GiveBardakToSideVillage2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r2m2_GiveBardakToSideVillage1" />
+	</quest>
 <!--Root/r2m2/Сюжетные/Вернуться в Мареццию-->
 	<quest
 		Name="r2m2_ReturnToMarecciaFromVillage"
@@ -1742,9 +1783,8 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="r2m2_DestroySNGKaravan"
-			OnTake='ShowCircleOnMinimapByName("ToR2M1");' />
+			ConditionToGive="all complete"
+			PrecedingQuests="r2m2_GoToR2M1" />
 
 		<quest
 			Name="r2m2_ReturnToMarecciaFromKaravanSNG"
@@ -1754,6 +1794,15 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r2m2_FindSNGKaravan"
 			OnTake='ShowCircleOnMinimapByName("ToR2M2"); ShowCircleOnMinimap("r2m2",CVector(1829.361, 316.000, 3300.456))' />
+
+		<quest
+			Name="r2m2_GoToR2M1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r2m2_DestroySNGKaravan"
+			OnTake='ShowCircleOnMinimapByName("ToR2M1");' />
 	</quest>
 <!--Root/r2m2/Сюжетные/Привезти вина-->
 	<quest
@@ -1773,7 +1822,23 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000,"storm01",3,4)'
-		OnTake='ShowCircleOnMinimapByName("Arena")' />
+		OnTake='ShowCircleOnMinimapByName("Arena")'>
+		<quest
+			Name="r2m2_FightFelix1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r2m2_FightFelix" />
+
+		<quest
+			Name="r2m2_FightFelix2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r2m2_FightFelix1" />
+	</quest>
 <!--Root/r2m2/Сюжетные/Отчитаться в Марецции-->
 	<quest
 		Name="r2m2_ReturnToMarecciaFromCastle"
@@ -1792,7 +1857,23 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r2m2_ReturnToMarecciaFromCastle"
 		OnComplete="AddPlayerMoney(1000)"
-		OnTake='ShowCircleOnMinimapByName("Lager")' />
+		OnTake='ShowCircleOnMinimapByName("Lager")'>
+		<quest
+			Name="r2m2_ToKillAllSNGPeople1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r2m2_ToKillAllSNGPeople" />
+
+		<quest
+			Name="r2m2_ToKillAllSNGPeople2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r2m2_ToKillAllSNGPeople1" />
+	</quest>
 <!--Root/r2m2/Сюжетные/Спасти лидера повстанцев-->
 	<quest
 		Name="r2m2_HelpAllSNGPeople"
@@ -1849,7 +1930,23 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000,"pkt01",3,9)'
-		OnTake='ShowCircleOnMinimapByName("Arena")' />
+		OnTake='ShowCircleOnMinimapByName("Arena")'>
+		<quest
+			Name="r2m2_FightWithAxelInArena_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r2m2_FightWithAxelInArena_Quest" />
+
+		<quest
+			Name="r2m2_FightWithAxelInArena_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r2m2_FightWithAxelInArena_Quest1" />
+	</quest>
 <!--Root/r2m2/Сюжетные/ После драки с Акселем искать Лису в Туззе, так как она обманула со смертью родителей -->
 	<quest
 		Name="r2m2_FindLisAfterAxelAndFatherDie_Quest"
@@ -2003,7 +2100,7 @@
 		Levels="r2m1">
 		<quest
 			Name="r2m1_KillNarcoticsCaravan_Quest"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all taken"
@@ -2086,7 +2183,23 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="d_PatrulSideSNG_Quest"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000, "pkt01", 3, 10)'
-		OnTake='ShowCircleOnMinimapByName("TheUnderAttaks")' />
+		OnTake='ShowCircleOnMinimapByName("TheUnderAttaks")'>
+		<quest
+			Name="d_HelpSideVillageSNG_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_HelpSideVillageSNG_Quest" />
+
+		<quest
+			Name="d_HelpSideVillageSNG_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_HelpSideVillageSNG_Quest1" />
+	</quest>
 <!--Root/r2m1/Сюжетные/  Вернeуться в Тузз -->
 	<quest
 		Name="d_ReturnTuzz_Quest"
@@ -2111,13 +2224,13 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="d_CaravanFromTuzzToVillage_Quest"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_SecondVillage_Quest"
 			OnTake='ShowCircleOnMinimapByName("TheVill1_Loc")' />
 
 		<quest
 			Name="d_SecondVillage_Quest"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all taken"
@@ -2142,7 +2255,23 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="d_CaravanFromTuzzToVillage_Quest"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000, "pkt01", 3, 10)'
-		OnTake='ShowCircleOnMinimapByName("TunnelAttackLocation")' />
+		OnTake='ShowCircleOnMinimapByName("TunnelAttackLocation")'>
+		<quest
+			Name="d_FreeTunel_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_FreeTunel_Quest" />
+
+		<quest
+			Name="d_FreeTunel_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_FreeTunel_Quest1" />
+	</quest>
 <!--Root/r2m1/Сюжетные/ В Гельветцию  -->
 	<quest
 		Name="d_FromTuzzToGelvetcia_Quest"
@@ -2197,7 +2326,23 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("BossARLocation")' />
+		OnTake='ShowCircleOnMinimapByName("BossARLocation")'>
+		<quest
+			Name="d_TakeGeneralOfBandits_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_TakeGeneralOfBandits_Quest" />
+
+		<quest
+			Name="d_TakeGeneralOfBandits_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_TakeGeneralOfBandits_Quest1" />
+	</quest>
 <!--Root/r2m1/Сюжетные/ В Гельвецию с генералом -->
 	<quest
 		Name="d_MoveWithGeneralToGelvetcia_Quest"
@@ -2365,7 +2510,7 @@
 
 		<quest
 			Name="Eretik_Friend"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -2417,7 +2562,23 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="ReturnQuest" />
+		PrecedingQuests="ReturnQuest">
+		<quest
+			Name="Tunnel_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Tunnel_Quest" />
+
+		<quest
+			Name="Tunnel_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Tunnel_Quest1" />
+	</quest>
 
 	<quest
 		Name="FinalBattle_Quest"
@@ -2426,7 +2587,23 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="Tunnel_Quest"
-		OnComplete="AddPlayerMoney(100000)" />
+		OnComplete="AddPlayerMoney(100000)">
+		<quest
+			Name="FinalBattle_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="FinalBattle_Quest" />
+
+		<quest
+			Name="FinalBattle_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="FinalBattle_Quest1" />
+	</quest>
 
 	<quest
 		Name="d_FindVerbInAM_Quest"
@@ -2891,7 +3068,7 @@
 <!--Root/r1m3/Сюжетные/ Найти базу бандитов со скважины -->
 	<quest
 		Name="d_FindBanditBaseOfOilMine_Quest"
-		Automatic="1"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"

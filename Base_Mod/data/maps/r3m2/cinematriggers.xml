@@ -158,25 +158,15 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			GetPlayerVehicle():SetThrottle(0)
 			SaveAllToleranceStatus(RS_NEUTRAL)
-			local monster = getObj("TeamBigMonster_vehicle_0")
---			ASSERT(monster~=nil, "Error map R3M2: Monster not exists")
-			setPos(monster,CVector(getPos("Monster_loc")))
-			if monster then
-				TActivate("cinStopMusik_End")
-				TActivate("cinNearMonster_FadeIn")
-				TActivate("cinNearMonster_End")
-				PlayCustomMusic("IntenseDialogue01")
-			    pos = CVector(monster:GetPosition())
-			    monsterid = monster:GetId()
-    			pos.y = pos.y + 20
-				pos.z = pos.z + 15
-				Fly("NearMonster_Path1", CINEMATIC_NO_AIM, nil, 13, 1,1)
-				StartCinematic()
-			else
-				LOG("----------------- Trigger Error -------------------------------------------------")
-				LOG("Error map R3M2: Monster not exists")
-				LOG("---------------------------------------------------------------------------------")
-			end
+
+			TActivate("cinStopMusik_End")
+			TActivate("cinNearMonster_FadeIn")
+			TActivate("cinNearMonster_End")
+
+			PlayCustomMusic("IntenseDialogue01")
+
+			Fly("NearMonster_Path1", CINEMATIC_NO_AIM, nil, 13, 1,1)
+			StartCinematic()
 
 			trigger:Deactivate()
 		</script>
@@ -186,10 +176,34 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 --			println("!!!!!!!!!!!")
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetThrottle(0)
+
+			local mnstr = TeamCreate("TeamBigMonster",1022,CVector(getPos("Monster_loc")),{"RobotTron"})
+			if mnstr then
+				TActivate("trBigMonsterDie")
+				mnstr:GetVehicle(0):AddItemsToRepository("firing_rate_guns_and_add_damage_guns", 1)
+				mnstr:GetVehicle(0):AddItemsToRepository("hammer01", 1)
+			end
+			
+			local monster = getObj("TeamBigMonster_vehicle_0")
+			if monster then
+				setPos(monster,CVector(getPos("Monster_loc")))
+				pos = CVector(monster:GetPosition())
+			    monsterid = monster:GetId()
+    			pos.y = pos.y + 20
+				pos.z = pos.z + 15
+			end
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle(0)
+				vehPlayer:SetGamePositionOnGround(CVector(1261.543, 330.976, 1402.082))
+				vehPlayer:SetRotation(Quaternion(-0.113, 0.524, 0.041, 0.843))
+			end
+
 			AddCinematicMessage( 12, 1 )
 			AddCinematicMessage( 13, 1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -201,6 +215,7 @@
 			StopPlayingCustomMusic()
 			SetCameraDirectionToObj(getObj("TeamBigMonster_vehicle_0"):GetId())
 			RestoreAllToleranceStatus()
+			CompleteQuest("r3m2_MonterHead1")
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -261,7 +276,10 @@
 			end
 			local veh = getObj("OracleDefenders_vehicle_0")
 			if veh then
-			  veh:SetExternalPathByName("OracleDef1_2")
+				veh:SetExternalPathByName("OracleDef1_1")
+				veh:PlaceToEndOfPath("OracleDef1_1")
+				veh:SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
+			  	veh:SetExternalPathByName("OracleDef1_2")
 			end
 			trigger:Deactivate()
 		</script>

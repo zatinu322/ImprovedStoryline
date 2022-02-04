@@ -233,19 +233,23 @@
 				vehPlayer:SetCustomControlEnabled( false )
 			end
 
-			local rbteam = TeamCreate("TeamLoggers",1022,CVector(2828.247, 326.091, 2871.083),{"RobotBobot02", "RobotBobot02", "RobotBobot01"})
+			local rbteam = TeamCreate("TeamLoggers",1022,CVector(2828.247, 326.091, 2871.083),{"RobotBobot02", "RobotBobot01", "RobotBobot02"})
 			if rbteam then
 				rbteam:GetVehicle(0):AddItemsToRepository("fuel", 3)
-				rbteam:GetVehicle(0):AddItemsToRepository("scrap_metal", 20)
-				rbteam:GetVehicle(1):AddItemsToRepository("fuel", 3)
-				rbteam:GetVehicle(1):AddItemsToRepository("scrap_metal", 20)
+				rbteam:GetVehicle(0):AddItemsToRepository("scrap_metal", 3)
+				rbteam:GetVehicle(2):AddItemsToRepository("fuel", 3)
+				rbteam:GetVehicle(2):AddItemsToRepository("scrap_metal", 3)
 				for i=1,3 do
 					setPos(rbteam:GetVehicle(i-1), CVector(getPos("StoneRobot"..i.."_loc")))
 				end
 
-				AddVehicleGunsWithRandomAffix( rbteam:GetVehicle(2), "omega01", 3, 8+random(2))
+				AddVehicleGunsWithRandomAffix( rbteam:GetVehicle(1), "omega01", 3, 8+random(2))
 			end
+
+			TakeQuest("r3m1_ClearSanctuary_KillMonster")
+
 			TActivate("trLoggersDie")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -659,13 +663,16 @@
 			Fly("SkripRob_cam", CINEMATIC_NO_AIM, 0, 11, 1, 1 )
 			StartCinematic()
 
-			if QuestStatus("r3m1_ClearSanctuary_KillMonster")==Q_TAKEN then			
+			if QuestStatus("r3m1_ClearSanctuary_Arrive")==Q_TAKEN then
+				CompleteQuest("r3m1_ClearSanctuary_Arrive")
 				AddCinematicMessage( 27, 1 )
 				TActivate("trCreateLoggersMech")
-			else
+			elseif QuestStatus("r3m1_ClearSanctuary_DestroyOut")==Q_TAKEN then
 				AddCinematicMessage( 28, 1 )
 				TActivate("trCreateLoggersMech2")
 				TActivate("trDestroyExitFromDung")
+			else
+				println("ERROR! UNEXPECTED CONDITION!")
 			end
 
 			TActivate("RobotsCinem1_End")

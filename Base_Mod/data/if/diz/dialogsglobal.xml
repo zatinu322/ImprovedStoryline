@@ -4038,6 +4038,7 @@
 		name="r3m1_NearOracle_ODefenders_1_N042"
 		text="Я искренне желаю стать верующим. Примите меня в свои ряды."
 		role="PLAYER"
+		scriptCondition="GetTolerance(1100, 1021) > 1.5"
 		nextReplies="r3m1_NearOracle_ODefenders_1_N052" />
 
 	<Reply
@@ -4188,7 +4189,7 @@
 		text="Вот его голова! Я выполнил то, что вы просили."
 		role="PLAYER"
 		scriptCondition="IsQuestItemPresent( 'quest_monster_head' )"
-		scriptResult="CompleteQuest('r3m2_MonterHead')"
+		scriptResult="CompleteQuest('r3m2_MonterHead3')"
 		nextReplies="r3m1_NearOracle_ODefenders_2_N032" />
 
 	<Reply
@@ -4207,6 +4208,7 @@
 		name="r3m1_NearOracle_ODefenders_2_N021"
 		text="Пока я не смог с ним справиться."
 		role="PLAYER"
+		scriptCondition="not(IsQuestItemPresent( 'quest_monster_head' ))"
 		scriptResult="TActivate('trPlTurnRoundOracleDef'); StopPlayingCustomMusic(); EndConversation()" />
 
 	<Reply
@@ -5740,7 +5742,7 @@
 		name="Dlg_pl_001248"
 		text="Я согласен помочь церкви!"
 		role="PLAYER"
-		scriptResult="TActivate('ShamanesTriggerCreate'); TakeQuest('r2m2_HeadsHunterQuest');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
+		scriptResult="TActivate('ShamanesTriggerCreate');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
 
 	<Reply
 		name="SektantMain_hellodlg1"
@@ -6235,9 +6237,7 @@
 		name="Dlg_pl_000528"
 		text="Я хочу участвовать в операции!"
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'r2m2_AfterAfera' ); 
- TActivate('LEADERMEET'); 
- EndConversation()" />
+		scriptResult="TActivate('LEADERMEET'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002143"
@@ -6379,7 +6379,7 @@
 		name="Monah_hellodlg0out"
 		text="Здравствуй, сын мой. В последнее время ты совершил немало славных деяний во имя нашего общего дела, что не укрылось от нашего внимания. Мы решили узнать тебя поближе."
 		role="NPC"
-		scriptCondition="IsQuestTaken('r2m2_FindROMinCastle')  and  not(IsQuestComplete('r2m2_FindROMinCastle'))  and  IsQuestComplete('d_SinFather_Quest')  and  not(IsQuestTaken('r2m2_FightFelix'))  and  not(IsQuestComplete('r2m2_FightFelix'))"
+		scriptCondition="QuestStatus('r2m2_FindROMinCastle')==Q_TAKEN and QuestStatus('d_SinFather_Quest')==Q_COMPLETED and not(IsQuestTaken('r2m2_FightFelix'))"
 		nextReplies="Dlg_pl_000482" />
 
 	<Reply
@@ -6440,7 +6440,7 @@
 		name="Monah_hellodlg1"
 		text="Здравствуй, сын мой. В последнее время ты совершил много славных деяний во имя нашего общего дела, что не укрылось от нашего внимания. Мы решили узнать тебя поближе."
 		role="NPC"
-		scriptCondition="IsQuestTaken('r2m2_FindROMinCastle')  and  not(IsQuestComplete('r2m2_FindROMinCastle'))  and  not(IsQuestComplete('d_SinFather_Quest')) and not(IsQuestTaken('r2m2_FightFelix')) and not(IsQuestComplete('r2m2_FightFelix'))"
+		scriptCondition="QuestStatus('r2m2_FindROMinCastle')==Q_TAKEN and not(IsQuestTaken('r2m2_FightFelix'))"
 		nextReplies="Dlg_pl_000489" />
 
 	<Reply
@@ -6688,10 +6688,7 @@
 		name="Dlg_pl_000516"
 		text="Мне больше нет места в Алом Рассвете. Я теперь тоже беглец. Садись, я отвезу тебя. "
 		role="PLAYER"
-		scriptResult="FailQuest( 'r2m2_ToKillAllSNGPeople' ); 
- TActivate('LAGERNOWAR'); 
- GetCurNpc():SetSpokenCount( 1 ); 
- EndConversation()" />
+		scriptResult="FailQuest( 'r2m2_ToKillAllSNGPeople' ); TActivate('LAGERNOWAR'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000513"
@@ -7285,7 +7282,7 @@
 		name="Dlg_pl_002871"
 		text="Ладно, я проверю. Если найду его там, то убью. Если нет, то будем надеяться, что он нас не найдёт."
 		role="PLAYER"
-		scriptResult=" TActivate ('Trigger_NarcotikBoss');  CompleteQuest('r2m1_ReturnNarcotics_Quest');  TakeQuest('r2m1_KillGodFather_Quest');  RemoveQuestItem('quest_mafia_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_mafia_narcotik');  EndConversation()" />
+		scriptResult=" TActivate ('Trigger_NarcotikBoss');  CompleteQuest('r2m1_ReturnNarcotics_Quest'); RemoveQuestItem('quest_mafia_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_mafia_narcotik');  EndConversation()" />
 <!--Root/r2m1/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_002537"
@@ -8141,11 +8138,11 @@
 		name="Dlg_npc_002254"
 		text="Ну, в принципе, у тебя есть три варианта. Ты либо воюешь на стороне СНГ, либо на стороне АР, либо ты принимаешь единственно верное решение и помогаешь нам прекратить это бессмысленное кровопролитие."
 		role="NPC"
-		nextReplies="Dlg_pl_002255 Dlg_pl_002258" />
+		nextReplies="Dlg_pl_002258 Dlg_pl_002255" />
 
 	<Reply
 		name="Dlg_pl_002258"
-		text="Мне нужно подумать, взвесить все ‘за’ и ‘против’."
+		text='Мне нужно подумать, взвесить все "за" и "против".'
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 
@@ -8220,7 +8217,7 @@
 		text="Ну что, обмозговал?"
 		role="NPC"
 		scriptCondition="QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_TAKEN and (GetCurNpc():GetSpokenCount() > 0) and not(QuestStatus('r2m2_HeadsHunterQuest')==Q_COMPLETED)"
-		nextReplies="Dlg_pl_002268 Dlg_pl_002270" />
+		nextReplies="Dlg_pl_002270 Dlg_pl_002268" />
 
 	<Reply
 		name="Dlg_pl_002270"
@@ -10203,7 +10200,7 @@
 		name="Dlg_npc_001867"
 		text="Э-э-э, ну почти. У тебя карта неправильная, в этом месте на самом деле есть небольшой городок. Ну так что, ты подвезёшь нас?"
 		role="NPC"
-		nextReplies="Dlg_pl_001868 Dlg_pl_001869" />
+		nextReplies="Dlg_pl_001869 Dlg_pl_001868" />
 
 	<Reply
 		name="Dlg_pl_001869"

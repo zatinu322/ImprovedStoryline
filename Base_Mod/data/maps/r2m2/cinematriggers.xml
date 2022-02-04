@@ -103,6 +103,8 @@
 				SetCameraDirectionToObj(FVehicle:GetId())
 			end
 
+			CompleteQuest("r2m2_FightFelix1")
+
 			TActivate( "FELIXMONAXDIE" )
 	
 			trigger:Deactivate()
@@ -193,6 +195,8 @@
 			TDeactivate("trAXELARENA_cam01")
 
 			PlayCustomMusic("Passage03")
+
+			CompleteQuest("r2m2_FightWithAxelInArena_Quest1")
 
 			trigger:Deactivate()
 		</script>

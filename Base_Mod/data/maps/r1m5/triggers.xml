@@ -133,6 +133,8 @@
 				amb2:SetGamePositionOnGround( CVector(634.285, 317.646, 1164.478))
 				amb2:SetRotation(Quaternion(-0.033, -0.565, 0.045, -0.823))
 			end
+
+			TakeQuest("LaBelleHelp_Quest4")
 						
 			TActivate("trLBDie1")
 			
@@ -143,26 +145,16 @@
 	<trigger Name="trLBDie1" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="LBBandits1" />
 		<script>
-			
-			TActivate("trLBProtect2")
-
-			CompleteQuest("LaBelleHelp_Quest4")
-
-			AddImportantFadingMsg("Новые враги были замечены дальше по дороге")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trLBProtect2" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
 			TeamCreate("LBBandits2",1092,CVector(1291.134, 295.554, 1145.771),{"Molokovoz02","Molokovoz02","UralShot"}, CVector(710.581, 309.349, 1204.370), 1)
 
 			local vehLBA = GetEntityByName("ArmiaLaBelle")
 			if vehLBA then
 				vehLBA:SetDestination(CVector(1291.134, 295.554, 1145.771))
 			end
+
+			CompleteQuest("LaBelleHelp_Quest4")
+
+			AddImportantFadingMsg("Новые враги были замечены дальше по дороге")
 						
 			TActivate("trLBDie2")
 			
@@ -174,26 +166,17 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="LBBandits2" />
 		<script>
 			
-			TActivate("trLBProtect3")
-
-			CompleteQuest("LaBelleHelp_Quest5")
-
-			AddImportantFadingMsg("Ещё больше врагов было замечено дальше по дороге")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trLBProtect3" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
 			TeamCreate("LBBandits3",1092,CVector(1699.530, 258.284, 1163.742),{"UralShot","UralShot","OL_Belaz"}, CVector(710.581, 309.349, 1204.370), 1)
 
 			local vehLBA = GetEntityByName("ArmiaLaBelle")
 			if vehLBA then
 				vehLBA:SetDestination(CVector(1699.530, 258.284, 1163.742))
 			end
-						
+
+			CompleteQuest("LaBelleHelp_Quest5")
+
+			AddImportantFadingMsg("Ещё больше врагов было замечено дальше по дороге")
+
 			TActivate("trLBDie3")
 			
 			trigger:Deactivate()
@@ -204,26 +187,17 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="LBBandits3" />
 		<script>
 			
-			TActivate("trLBProtect4")
-
-			CompleteQuest("LaBelleHelp_Quest6")
-
-			AddImportantFadingMsg("Враги подбираются к деревне! Скорее туда!")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trLBProtect4" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
 			TeamCreate("LBBandits4",1092,CVector(1291.134, 295.554, 1145.771),{"OL_Belaz","OL_Belaz","AKF_Cruiser1"}, CVector(710.581, 309.349, 1204.370), 1)
 
 			local vehLBA = GetEntityByName("ArmiaLaBelle")
 			if vehLBA then
 				vehLBA:SetDestination(CVector(1291.134, 295.554, 1145.771))
 			end
-						
+
+			CompleteQuest("LaBelleHelp_Quest6")
+
+			AddImportantFadingMsg("Враги подбираются к деревне! Скорее туда!")
+
 			TActivate("trLBDie4")
 			
 			trigger:Deactivate()
@@ -234,26 +208,17 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="LBBandits4" />
 		<script>
 			
-			TActivate("trLBProtect5")
-
-			CompleteQuest("LaBelleHelp_Quest7")
-
-			AddImportantFadingMsg("Главарь нападающей группировки был замечен у самого Ла Белля. Не дайте ему уйти!")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trLBProtect5" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
 			TeamCreate("LBBandits5",1092,CVector(924.444, 299.674, 1077.717),{"AKF_Cruiser1","MirotvorecShot1"}, CVector(710.581, 309.349, 1204.370), 1)
 
 			local vehLBA = GetEntityByName("ArmiaLaBelle")
 			if vehLBA then
 				vehLBA:SetDestination(CVector(924.444, 299.674, 1077.717))
 			end
-						
+
+			CompleteQuest("LaBelleHelp_Quest7")
+
+			AddImportantFadingMsg("Главарь нападающей группировки был замечен у самого Ла Белля. Не дайте ему уйти!")
+
 			TActivate("trLBDie5")
 			
 			trigger:Deactivate()

@@ -193,8 +193,15 @@
 		<script>
 			if getObj("LeaderCar_vehicle_0"):IsAlive() or GetVar("MainCarDead").AsInt==1 then
 				CompleteQuest("FreeExtremistLeader_Quest3_1")
+				TakeQuest("FreeExtremistLeader_Quest3_2")
 			else
-				CompleteQuest("FreeExtremistLeader_Quest3_2")
+				if not(IsQuestTaken("FreeExtremistLeader_Quest3_2")) then
+					TakeQuest("FreeExtremistLeader_Quest3_2")
+					CompleteQuest("FreeExtremistLeader_Quest3_2")
+				else
+					CompleteQuestIfTaken("FreeExtremistLeader_Quest3_2")
+				end
+
 				SetVar("MainCarDead", 1)
 			end
 

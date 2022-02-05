@@ -428,6 +428,8 @@
 	<trigger Name="trAdeptArmyDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AdeptArmy" />
 		<script>
+			CompleteQuest("CaptureMoskaDuring")
+
 			SetTolerance(1100,1091,RS_ALLY)
 			SetTolerance(1091,1088,RS_ALLY)
 			SetTolerance(1100,1088,RS_ALLY)
@@ -470,8 +472,6 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			CompleteQuest("CaptureMoskaDuring")
-			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -480,6 +480,8 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Village1_loc" />
 		<script>
 			TeamCreate("AdeptArmyVil1",1089,CVector(2461.162, 257.495, 1564.141),{"AKF_Belaz2", "AKF_Cruiser1", "AKF_Belaz1", "AKF_Cruiser2"}, CVector(2745.438, 257.598, 1325.056), 1)
+
+			CompleteQuest("DefendVillagePre1")
 			
 			TActivate("trVil1stDIE")
 			
@@ -490,6 +492,9 @@
 	<trigger Name="trVil1stDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AdeptArmyVil1" />
 		<script>
+
+			CompleteQuest("DefendVillage1")
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			Fly("FLRolikCam", CINEMATIC_NO_AIM, 0, 17, 1, 1 )
@@ -529,8 +534,6 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			CompleteQuest("DefendVillage1")
-			
 			SetTolerance(1100,1088,RS_ALLY)
 			
 			TActivate("trVil2nd")
@@ -543,6 +546,8 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Village2_loc" />
 		<script>
 			TeamCreate("AdeptArmyVil2",1089,CVector(1006.921, 275.372, 2434.896),{"AKF_Belaz2", "AKF_Cruiser1", "AKF_Belaz1"},CVector(658.125, 257.602, 2556.624),1)
+
+			CompleteQuest("DefendVillagePre2")
 			
 			TActivate("trVil2ndDIE")
 			
@@ -623,7 +628,6 @@
 	<trigger Name="PKERolikStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="PreKateberg_loc" />
 		<script>
-			CompleteQuest("CaptureKatebergBefore")
 			TActivate("PKERolikBegin")
 			trigger:Deactivate()
 		</script>
@@ -785,7 +789,6 @@
 	<trigger Name="TSRolikStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SerafimaFight_loc" />
 		<script>
-			CompleteQuest("TortSera_Quest1")
 			TActivate("TSRolikBegin")
 			trigger:Deactivate()
 		</script>
@@ -795,6 +798,8 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="LocalsArmy" />
 		<script>
 			CompleteQuest("TortSera_Quest2")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
@@ -810,7 +815,26 @@
 			
 			AddCinematicMessage( 96, 1 )
 			AddCinematicMessage( 97, 0.1 )
+
+			TActivate("LocalsArmyDIE_END")
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="LocalsArmyDIE_END" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			SetCameraBehindPlayerVehicle()
+
+			local aal1 = GetEntityByName("AdeptAlly_vehicle_0")
+			if aal1 then aal1:Remove() end
+			local aal2 = GetEntityByName("AdeptAlly_vehicle_1")
+			if aal2 then aal2:Remove() end
+
 			SetTolerance(1100, 1089, RS_ALLY)
 			
 			local tp = GetEntityByName("TheTown")
@@ -818,12 +842,6 @@
 			
 			SetConditionalClosingForTown( "TheTown", "r1m6", false )
 			
-			local aal1 = GetEntityByName("AdeptAlly_vehicle_0")
-			if aal1 then aal1:Remove() end
-			local aal2 = GetEntityByName("AdeptAlly_vehicle_1")
-			if aal2 then aal2:Remove() end
-			local sera = GetEntityByName("Serafima")
-			if sera then sera:Remove() end
 			trigger:Deactivate()
 		</script>
 	</trigger>

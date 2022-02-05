@@ -328,7 +328,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
-			targetObjName="TheTown" />
+			targetObjName="AdeptArmy1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -361,7 +361,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
-			targetObjName="Esting" />
+			targetObjName="AdeptArmy" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -539,7 +539,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
-			targetObjName="Village1_loc" />
+			targetObjName="AdeptArmyVil1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -548,7 +548,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
-			targetObjName="Village2_loc" />
+			targetObjName="AdeptArmyVil2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -558,6 +558,24 @@
 		<Map
 			name="r1m6"
 			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillagePre1"
+		briefDiz="Добраться до Рязанского"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Village1_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillagePre2"
+		briefDiz="Добраться до Чугуевки"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Village2_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1334,12 +1352,30 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
+			targetObjName="LocalsDef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest2_0"
+		briefDiz="Добраться до Чугуевки"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
 			targetObjName="BurnVil1_loc" />
 	</QuestInfo>
 
 	<QuestInfo
 		questName="KillStar2_Quest3"
 		briefDiz="Уничтожить Рязанское"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="LocalsDef1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest3_0"
+		briefDiz="Добраться до Рязанского"
 		isMainQuest="1">
 		<Map
 			name="r1m6"
@@ -1441,7 +1477,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m5"
-			coordinate="924.444 299.674 1077.717" />
+			targetObjName="LBBandits1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1450,7 +1486,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m5"
-			coordinate="1291.134 295.554 1145.771" />
+			targetObjName="LBBandits2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1459,7 +1495,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m5"
-			coordinate="1699.530 258.284 1163.742" />
+			targetObjName="LBBandits3" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1468,7 +1504,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m5"
-			coordinate="1291.134 295.554 1145.771" />
+			targetObjName="LBBandits4" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1477,7 +1513,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m5"
-			coordinate="924.444 299.674 1077.717" />
+			targetObjName="LBBandits5" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2002,7 +2038,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
-			targetObjName="Serafima" />
+			targetObjName="PohititAd" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2237,7 +2273,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m6"
-			targetObjName="SerafimaFight_loc" />
+			targetObjName="LocalsArmy" />
 	</QuestInfo>
 
 	<QuestInfo

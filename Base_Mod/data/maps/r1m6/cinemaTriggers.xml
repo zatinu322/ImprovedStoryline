@@ -837,6 +837,7 @@
 			if sera then
 				sera:SetRotation(Quaternion(0.044, -0.059, 0.020, 0.997))
 				sera:setGodMode(1)
+				sera:setImmortalMode(1)
 				sera:SetSkin(7)
 			end
 			
@@ -881,6 +882,8 @@
 			SetCameraBehindPlayerVehicle()
 			
 			SetTolerance(1088,1089,RS_ALLY)
+
+			TakeQuest("SaveSerafimaFight")
 			
 			TActivate("SaveSeraTrig")
 			
@@ -950,6 +953,8 @@
 				carS:SetGamePositionOnGround( CVector(1544.352, 265.338, 1049.008))
 				carS:SetRotation(Quaternion(-0.026, -0.657, 0.011, -0.754))
 				carS:setGodMode(0)
+				carS:AddModifier("hp", "+ 1500")
+				carS:setImmortalMode(0)
 			end
 			
 			local vehPlayer = GetPlayerVehicle()
@@ -1383,6 +1388,8 @@
 			RestoreAllToleranceStatus()
 			
 			SetCameraBehindPlayerVehicle()
+
+			TakeQuest("CaptureMoskaDuring")
 			
 			TeamCreate("AdeptArmy",1089,CVector(1852.092, 265.817, 640.742),{"AKF_Belaz1", "AKF_Belaz2", "AKF_Cruiser1", "AKF_Cruiser1", "AKF_Cruiser2"})
 			local aa1 = GetEntityByName("AdeptArmy_vehicle_0")
@@ -1634,6 +1641,8 @@
 			if CToch1 then CToch1:Remove() end
 			local CToch2 = GetEntityByName("CamTochka2")
 			if CToch2 then CToch2:Remove() end
+
+			CompleteQuest("CaptureKatebergBefore")
 			
 			TActivate("KateAdeptDIE")
 			TDeactivate("trPKERolikStM")
@@ -1673,23 +1682,23 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			TeamCreate("AdeptArmy1",1089,CVector(1852.092, 265.817, 640.742),{"AKF_Belaz1", "AKF_Belaz2", "AKF_Cruiser1", "MirotvorecShot"})
-			local aa1 = GetEntityByName("AdeptArmy1_vehicle_0")
+			TeamCreate("AdeptArmy1",1089,CVector(1852.092, 265.817, 640.742),{"MirotvorecShot", "AKF_Cruiser1", "AKF_Belaz2", "AKF_Belaz1"}) 
+			local aa1 = GetEntityByName("AdeptArmy1_vehicle_3")
 			if aa1 then
 				aa1:SetGamePositionOnGround( CVector(1675.051, 409.741, 2212.310))
 				aa1:SetRotation(Quaternion(0.034, -0.996, -0.004, 0.087))
 			end
-			local aa2 = GetEntityByName("AdeptArmy1_vehicle_1")
+			local aa2 = GetEntityByName("AdeptArmy1_vehicle_2")
 			if aa2 then
 				aa2:SetGamePositionOnGround( CVector(1557.791, 387.181, 2221.931))
 				aa2:SetRotation(Quaternion(0.091, -0.243, 0.016, 0.966))
 			end
-			local aa3 = GetEntityByName("AdeptArmy1_vehicle_2")
+			local aa3 = GetEntityByName("AdeptArmy1_vehicle_1")
 			if aa3 then
 				aa3:SetGamePositionOnGround( CVector(1601.067, 374.986, 2364.894))
 				aa3:SetRotation(Quaternion(0.080, 0.504, -0.035, 0.859))
 			end
-			local aa4 = GetEntityByName("AdeptArmy1_vehicle_3")
+			local aa4 = GetEntityByName("AdeptArmy1_vehicle_0")
 			if aa4 then
 				aa4:SetGamePositionOnGround( CVector(1808.119, 353.839, 2324.316))
 				aa4:SetRotation(Quaternion(0.005, 0.952, -0.065, 0.299))
@@ -1736,6 +1745,8 @@
 			if CToch1 then CToch1:Remove() end
 			local CToch2 = GetEntityByName("CamTochka2")
 			if CToch2 then CToch2:Remove() end
+
+			CompleteQuest("CaptureKatebergBefore")
 			
 			TActivate("KateAdeptDIE")
 			TDeactivate("trPKERolikStM")
@@ -2030,15 +2041,16 @@
 				vehPlayer:SetRotation(Quaternion(0.029, -0.995, 0.029, -0.095))
 			end
 			
-			TeamCreate("AdeptAlly",1091,CVector(1687.917, 255.640, 480.811),{"AKF_Belaz2", "AKF_Cruiser1"})
-			CreateVehicleEx("SeraFighter01","Serafima",CVector(1703.895, 256.670, 454.819), 1100)
-			local aal1 = GetEntityByName("AdeptAlly_vehicle_0")
+			CreateVehicleEx("AKF_Belaz2", "AdeptCar1", CVector(1687.917, 255.640, 480.811), 1091)
+			CreateVehicleEx("AKF_Cruiser1", "AdeptCar2", CVector(1727.932, 255.941, 502.914), 1091)
+			CreateVehicleEx("SeraFighter01","Serafima",CVector(1703.895, 256.670, 454.819), 1088)
+
+			local aal1 = GetEntityByName("AdeptCar1")
 			if aal1 then aal1:SetRotation(Quaternion(-0.018, 0.021, -0.009, -1.000)) end
-			local aal2 = GetEntityByName("AdeptAlly_vehicle_1")
-			if aal2 then
-				aal2:SetGamePositionOnGround( CVector(1727.932, 255.941, 502.914))
-				aal2:SetRotation(Quaternion(-0.025, 0.516, -0.004, -0.856))
-			end
+
+			local aal2 = GetEntityByName("AdeptCar2")
+			if aal2 then aal2:SetRotation(Quaternion(-0.025, 0.516, -0.004, -0.856)) end
+
 			local sera = GetEntityByName("Serafima")
 			if sera then sera:SetRotation(Quaternion(-0.037, -0.001, -0.026, -0.999)) end
 			
@@ -2049,7 +2061,7 @@
 	<trigger Name="TSRolikCam2" active="0">
 		<event flypath="SeraTortPath2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			TeamCreate("LocalsArmy",1088,CVector(1633.362, 258.330, 771.834),{"OL_Ural", "DemoMolokovoz3"})
+			TeamCreate("LocalsArmy1",1088,CVector(1633.362, 258.330, 771.834),{"OL_Ural", "DemoMolokovoz3"})
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2072,22 +2084,22 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			local aal1 = GetEntityByName("AdeptAlly_vehicle_0")
+			local aal1 = GetEntityByName("AdeptCar1")
 			if aal1 then aal1:Remove() end
-			local aal2 = GetEntityByName("AdeptAlly_vehicle_1")
+			local aal2 = GetEntityByName("AdeptCar2")
 			if aal2 then aal2:Remove() end
-			local ll1 = GetEntityByName("LocalsArmy_vehicle_0")
+			local ll1 = GetEntityByName("LocalsArmy1_vehicle_0")
 			if ll1 then ll1:Remove() end
-			local ll2 = GetEntityByName("LocalsArmy_vehicle_1")
+			local ll2 = GetEntityByName("LocalsArmy1_vehicle_1")
 			if ll2 then ll2:Remove() end
+
 			TeamCreate("LocalsArmy",1088,CVector(1633.362, 258.330, 771.834),{"OL_Ural", "DemoMolokovoz3"})
 			TeamCreate("AdeptAlly",1091,CVector(1687.917, 255.640, 480.811),{"AKF_Belaz2", "AKF_Cruiser1"})
+
 			local sera = GetEntityByName("Serafima")
 			if sera then sera:Remove() end
 			
-			CreateVehicleEx("SeraFighter01","Serafima",CVector(1703.895, 256.670, 454.819), 1100)
-			local sera1 = GetEntityByName("Serafima")
-			if sera1 then sera1:SetRotation(Quaternion(-0.037, -0.001, -0.026, -0.999)) end
+			CompleteQuest("TortSera_Quest1")
 			
 			TActivate("LocalsArmyDIE")
 			TDeactivate("TSRolikCam2")
@@ -2175,6 +2187,8 @@
 			if newController2 and FVehicle2 then
 				newController2:setVehicleUnderControl(FVehicle2)
 			end
+
+			CompleteQuest("KillStar2_Quest2_0")
 			
 			TActivate("BV1DEAD")
 			trigger:Deactivate()
@@ -2260,6 +2274,8 @@
 			if newController2 and FVehicle2 then
 				newController2:setVehicleUnderControl(FVehicle2)
 			end
+
+			CompleteQuest("KillStar2_Quest3_0")
 			
 			TActivate("BV2DEAD")
 			trigger:Deactivate()

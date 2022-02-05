@@ -340,7 +340,7 @@
 
 		<quest
 			Name="LaBelleHelp_Quest4"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -628,7 +628,7 @@
 
 		<quest
 			Name="SaveSerafimaFight"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -653,7 +653,7 @@
 
 		<quest
 			Name="CaptureMoskaDuring"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -681,8 +681,8 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="DefendVillages_Quest" />
+			ConditionToGive="all complete"
+			PrecedingQuests="DefendVillagePre1" />
 
 		<quest
 			Name="DefendVillage2"
@@ -690,7 +690,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="DefendVillage1" />
+			PrecedingQuests="DefendVillagePre2" />
 
 		<quest
 			Name="DefendVillageBack"
@@ -699,6 +699,22 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="DefendVillage2" />
+
+		<quest
+			Name="DefendVillagePre1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="DefendVillages_Quest" />
+
+		<quest
+			Name="DefendVillagePre2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="DefendVillage1" />
 	</quest>
 <!--Root/r5m1/Напасть на Кейтберг-->
 	<quest
@@ -864,7 +880,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="KillStar2_Quest1" />
+			PrecedingQuests="KillStar2_Quest2_0" />
 
 		<quest
 			Name="KillStar2_Quest3"
@@ -872,7 +888,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="KillStar2_Quest2" />
+			PrecedingQuests="KillStar2_Quest3_0" />
 
 		<quest
 			Name="KillStar2_Quest4"
@@ -897,6 +913,22 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="KillStar2_Quest5" />
+
+		<quest
+			Name="KillStar2_Quest2_0"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="KillStar2_Quest1" />
+
+		<quest
+			Name="KillStar2_Quest3_0"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="KillStar2_Quest2" />
 	</quest>
 <!--Root/r5m1/Отправиться к мудрецам2-->
 	<quest
@@ -2706,7 +2738,7 @@
 
 		<quest
 			Name="FreeExtremistLeader_Quest3_2"
-			Automatic="1"
+			Automatic="0"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
@@ -4325,11 +4357,10 @@
 
 	<quest
 		Name="FindBenAgain_Quest"
-		Automatic="1"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="d_SinFather_Quest"
 		OnComplete="AddPlayerMoney(500)">
 		<quest
 			Name="d_FindBenInEast_Quest"

@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="76483015">
+	LastId="76483091">
 	<Node
 		name="Object3"
 		class="SgAnimatedModelNode"
@@ -17207,9 +17207,9 @@
 	<Node
 		name="Object76480876"
 		class="SgAnimatedModelNode"
-		org="616.986 0.000 3705.589"
+		org="616.986 -0.070 3705.589"
 		orgRel="1"
-		rot="0.0000 0.3461 0.0000 0.9382"
+		rot="-0.0226 0.3454 -0.0614 0.9362"
 		id="civilhouse2_skin"
 		ndmAction="0" />
 

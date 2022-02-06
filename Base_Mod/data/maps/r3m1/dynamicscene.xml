@@ -1550,21 +1550,21 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph2"
-				Belong="1020"
-				Prototype="NPC"
-				ModelName="r3_man"
-				cfg="1137"
-				helloReplyNames="Dlg_npc_003026"
-				SpokenCount="0" />
-
-			<Object
 				Name="Uluk_Bar_Customer1"
 				Belong="1020"
 				Prototype="NPC"
 				ModelName="r3_man"
 				cfg="1272"
 				helloReplyNames="Uluk_Bar_Customer1_3_N01"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph2"
+				Belong="1020"
+				Prototype="NPC"
+				ModelName="r3_man"
+				cfg="1137"
+				helloReplyNames="Dlg_npc_003026"
 				SpokenCount="0" />
 		</Object>
 

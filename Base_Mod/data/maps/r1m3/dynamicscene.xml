@@ -279,16 +279,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph2"
-				Belong="1011"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
-				cfg="60"
-				helloReplyNames="Dlg_npc_003011"
-				SpokenCount="0" />
-
-			<Object
 				Name="UnknownFromTunel"
 				Belong="1011"
 				Prototype="NPC"
@@ -296,6 +286,16 @@
 				skin="2"
 				cfg="164"
 				helloReplyNames="UnknownFromTunel_hellodlg0 Dlg_npc_002633"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph2"
+				Belong="1011"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="60"
+				helloReplyNames="Dlg_npc_003011"
 				SpokenCount="0" />
 		</Object>
 
@@ -620,6 +620,15 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="CrazyRoadRiders"
+				Belong="1011"
+				Prototype="NPC"
+				ModelName="r1_man"
+				cfg="94"
+				helloReplyNames="CrazyMan_hellodlg0 Dlg_npc_002079"
+				SpokenCount="0" />
+			
+			<Object
 				Name="Kartograph1"
 				Belong="1011"
 				Prototype="NPC"
@@ -627,15 +636,6 @@
 				skin="3"
 				cfg="60"
 				helloReplyNames="Dlg_npc_003011"
-				SpokenCount="0" />
-
-			<Object
-				Name="CrazyRoadRiders"
-				Belong="1011"
-				Prototype="NPC"
-				ModelName="r1_man"
-				cfg="94"
-				helloReplyNames="CrazyMan_hellodlg0 Dlg_npc_002079"
 				SpokenCount="0" />
 		</Object>
 
@@ -826,16 +826,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph3"
-				Belong="1010"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
-				cfg="60"
-				helloReplyNames="Dlg_npc_003011"
-				SpokenCount="0" />
-
-			<Object
 				Name="MininWorker2"
 				Belong="1010"
 				Prototype="NPC"
@@ -862,6 +852,16 @@
 				skin="1"
 				cfg="36"
 				helloReplyNames="AboutThief_hellodlg0 Dlg_npc_002069"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph3"
+				Belong="1010"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="60"
+				helloReplyNames="Dlg_npc_003011"
 				SpokenCount="0" />
 		</Object>
 

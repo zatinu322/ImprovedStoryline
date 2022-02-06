@@ -149,17 +149,8 @@
 		Name="LisaRolik_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1239.533 292.591 2862.537"
-		Radius="43.863"
-		LookingTimeOut="15.000" />
-
-	<Object
-		Flags="21"
-		Name="LisaRolik2_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1169.960 299.627 2891.158"
-		Radius="43.863"
+		Pos="1227.048 300.228 2900.870"
+		Radius="79.863"
 		LookingTimeOut="15.000" />
 
 	<Object
@@ -185,8 +176,8 @@
 		Name="GameLoc_1"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3116.254 335.281 2483.916"
-		Radius="60.000"
+		Pos="3032.641 334.981 2430.012"
+		Radius="145.000"
 		LookingTimeOut="15.000" />
 
 	<Object
@@ -274,8 +265,8 @@
 		Name="TheOilVillageQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1953.200 300.604 836.926"
-		Radius="40.000" />
+		Pos="1968.085 300.481 832.931"
+		Radius="51.000" />
 
 	<Object
 		Flags="21"
@@ -300,8 +291,8 @@
 		Name="TheFreedomQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3172.948 319.888 1191.971"
-		Radius="65.928"
+		Pos="3185.824 320.015 1239.976"
+		Radius="101.928"
 		LookingTimeOut="70.000" />
 
 	<Object

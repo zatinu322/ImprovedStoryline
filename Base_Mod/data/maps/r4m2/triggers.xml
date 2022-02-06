@@ -11,10 +11,6 @@
 				CompleteQuest("r4m1_RescueBuharsCivilian")
 				TakeQuest("r4m1_GotoAivenGo")
 			end
-
-			IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-
-			IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
 			
 			trigger:Deactivate()
 		</script>

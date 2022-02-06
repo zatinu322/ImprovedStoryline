@@ -52,16 +52,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph1"
-				Belong="1010"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
-				cfg="180"
-				helloReplyNames="Dlg_npc_003014"
-				SpokenCount="0" />
-
-			<Object
 				Name="Olme_Bar_Customer2"
 				Belong="1010"
 				Prototype="NPC"
@@ -88,6 +78,16 @@
 				skin="2"
 				cfg="70"
 				helloReplyNames="Dlg_npc_002652"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph1"
+				Belong="1010"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="180"
+				helloReplyNames="Dlg_npc_003014"
 				SpokenCount="0" />
 		</Object>
 

@@ -184,7 +184,7 @@ function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPan
 	WaitWhenStop, InterpolateFromPrevious )
 	
 	local cinematic = GetCinematic()
-	RuleConsole("FogOfWar 0")	
+	-- RuleConsole("FogOfWar 0")	
 
 	SetCinematicFadeParams( StartFade, EndFade )
 
@@ -223,7 +223,7 @@ function FlyAround( Phi, Theta, Radius, PlayTime, curPos, Id, StartFade, EndFade
 	WaitWhenStop, InterpolateFromPrevious )
 	
 	local cinematic = GetCinematic()
-	RuleConsole("FogOfWar 0")
+	-- RuleConsole("FogOfWar 0")
 
 	SetCinematicFadeParams( StartFade, EndFade )
 	
@@ -258,7 +258,7 @@ function Fly( PathName, AimType, Target, Time, StartFade, EndFade, VisPanel,
 	WaitWhenStop, InterpolateFromPrevious )
 	
 	local cinematic = GetCinematic()
-	RuleConsole("FogOfWar 0")
+	-- RuleConsole("FogOfWar 0")
 
 	if not cinematic then
 		println( "Error: couldn't get cinematic" )
@@ -329,6 +329,9 @@ function StartCinematic()
 	end
 	
 	UpdateCinematic( 0 ) -- by Anton: don't touch this!
+
+	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
+	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP_MSG" )
 end
 
 -- Подготавливает игру к проигрыванию скриптового ролика
@@ -742,7 +745,7 @@ function GetItemsAmount(name)
 	   while pl:HasAmountOfItemsInRepository( name,i+1 ) == 1 do
 	   		i = i + 1
 	   end
-	   println( "Get result = "..tostring(i) )
+	   -- println( "Get result = "..tostring(i) )
 	   return i
 	end
 	return nil
@@ -760,7 +763,7 @@ function AddPlayerItems(name, count)
 		while (pl:AddItemsToRepository(name,i) == nil) and (i>=1) do
 			i = i - 1
 		end
-		println( "Add result = "..tostring(i))
+		-- println( "Add result = "..tostring(i))
 		if 0>=i then
 			return nil
 		else
@@ -776,9 +779,9 @@ function AddPlayerItemsWithBox(name, count, boxtype, pos)
 	local WasAdd=AddPlayerItems(name, count)
 	if WasAdd==nil then WasAdd=0 end
 	if count==nil or 0>count then count=1 end
-	println("WasAdd = "..WasAdd.." Count = "..count)
+	-- println("WasAdd = "..WasAdd.." Count = "..count)
 	if count>WasAdd then
-println("count>WasAdd")
+		-- println("count>WasAdd")
 		local chestID = CreateNewObject{	prototypeName = "someChest",
 											objName = "ItemsChest"..random(1000)
 								  	   }	
@@ -788,9 +791,9 @@ println("count>WasAdd")
 			pos.z = pos.z + GetPlayerVehicle():GetSize().z + 1
 		end
 		MyChest:SetPosition(pos)
-println("pos = "..pos)
+		-- println("pos = "..pos)
 		for i=WasAdd+1, count do
-			println(" i = "..i)
+			-- println(" i = "..i)
 			local itemID = CreateNewObject{	prototypeName = name,
 												objName = name..random(1000)
 									  	   }
@@ -959,7 +962,7 @@ end
 
 function PlayerDead ( ppp )
 	LOG("Player DEAD")
-	println("Player DEAD")
+	-- println("Player DEAD")
 --    local ppp, rrr = GetCameraPos()
     local pos = CVector(ppp)
 	CreateNewDummyObject("cub", "yashik", -1, 1100, pos, Quaternion(0.0, 0.0, 0.0, 1.0), 0)

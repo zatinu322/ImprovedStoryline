@@ -442,8 +442,8 @@
 	</Path>
 
 	<Path Name = "Opening2">
-		 <Point  coord="478.625 309.172 1802.385" rotation="-0.007 0.361 -0.003 0.932"/>
-		 <Point  coord="488.382 310.239 1791.937" rotation="-0.022 0.364 -0.009 0.931"/>
+		<Point  coord="456.295 307.974 1832.341" rotation="0.031 0.928 -0.080 -0.363"/>
+		<Point  coord="456.716 307.867 1831.885" rotation="0.023 0.927 -0.057 -0.369"/>
 	</Path>
 
 	<Path Name = "Opening22">

@@ -295,7 +295,7 @@
 		<Node
 			name="r1m6_ico"
 			class="ImageWnd"
-			org="706.000 201.000 64.000 64.000"
+			org="647.000 315.000 64.000 64.000"
 			style="512"
 			order="11"
 			id="300000"
@@ -318,7 +318,53 @@
 		<Node
 			name="r1m5_ico"
 			class="ImageWnd"
-			org="873.000 301.000 64.000 64.000"
+			org="755.000 423.000 64.000 64.000"
+			style="512"
+			order="12"
+			id="300000"
+			caption="Control"
+			tip=""
+			backimage=""
+			paneName="defaultWnd"
+			scrollPaneName="Scroll1"
+			paneFlags="0"
+			wrap="2"
+			format="1"
+			font="0"
+			clientEdges="0.000 0.000 0.000 0.000"
+			wndColor="00000000"
+			textColor="ffffffff"
+			image="data\if\ico\GlobalMap\Gmap_Ico_2.dds">
+			<Animations />
+		</Node>
+		
+		<Node
+			name="r1m7_ico"
+			class="ImageWnd"
+			org="0.000 0.000 0.000 0.000"
+			style="512"
+			order="12"
+			id="300000"
+			caption="Control"
+			tip=""
+			backimage=""
+			paneName="defaultWnd"
+			scrollPaneName="Scroll1"
+			paneFlags="0"
+			wrap="2"
+			format="1"
+			font="0"
+			clientEdges="0.000 0.000 0.000 0.000"
+			wndColor="00000000"
+			textColor="ffffffff"
+			image="data\if\ico\GlobalMap\Gmap_Ico_2.dds">
+			<Animations />
+		</Node>
+	
+		<Node
+			name="mainmenu_ico"
+			class="ImageWnd"
+			org="0.000 0.000 0.000 0.000"
 			style="512"
 			order="12"
 			id="300000"

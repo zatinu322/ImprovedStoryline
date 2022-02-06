@@ -805,10 +805,7 @@
 
 	<trigger Name="BadEndingBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-			IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
-			
+		<script>			
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("Death01")

@@ -850,16 +850,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph2"
-				Belong="1009"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="5"
-				cfg="60"
-				helloReplyNames="Dlg_npc_003007"
-				SpokenCount="0" />
-
-			<Object
 				Name="ChemistMan"
 				Belong="1009"
 				Prototype="NPC"
@@ -877,6 +867,16 @@
 				skin="1"
 				cfg="248"
 				helloReplyNames="Kollizey1_hellodlg0"
+				SpokenCount="0" />
+
+			<Object
+				Name="Kartograph2"
+				Belong="1009"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="5"
+				cfg="60"
+				helloReplyNames="Dlg_npc_003007"
 				SpokenCount="0" />
 		</Object>
 
@@ -1565,16 +1565,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph3"
-				Belong="1009"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="5"
-				cfg="60"
-				helloReplyNames="Dlg_npc_003007"
-				SpokenCount="0" />
-
-			<Object
 				Name="Karavanshik"
 				Belong="1009"
 				Prototype="NPC"
@@ -1600,6 +1590,16 @@
 				skin="2"
 				cfg="248"
 				helloReplyNames="Kollizey2_hellodlg0"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph3"
+				Belong="1009"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="5"
+				cfg="60"
+				helloReplyNames="Dlg_npc_003007"
 				SpokenCount="0" />
 		</Object>
 

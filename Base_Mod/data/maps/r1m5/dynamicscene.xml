@@ -3209,16 +3209,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph1"
-				Belong="1090"
-				Prototype="NPC"
-				ModelName="r1_woman"
-				skin="2"
-				cfg="28"
-				helloReplyNames="Dlg_npc_003017"
-				SpokenCount="0" />
-
-			<Object
 				Name="IeronimFarm"
 				Belong="1090"
 				Prototype="NPC"
@@ -3226,6 +3216,16 @@
 				skin="5"
 				cfg="12"
 				helloReplyNames="Dlg_npc_003060"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph1"
+				Belong="1090"
+				Prototype="NPC"
+				ModelName="r1_woman"
+				skin="2"
+				cfg="28"
+				helloReplyNames="Dlg_npc_003017"
 				SpokenCount="0" />
 		</Object>
 

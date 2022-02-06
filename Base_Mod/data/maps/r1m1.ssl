@@ -66,7 +66,7 @@
 			name="WATERLEVEL">286.440</Key>
 
 		<Key
-			name="BASEWATERLEVEL">2539.000</Key>
+			name="BASEWATERLEVEL">286.560</Key>
 
 		<Key
 			name="REFLECTIONTINT">255 255 255</Key>
@@ -213,19 +213,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">3344.895</Key>
+			name="X">3089.346</Key>
 
 		<Key
-			name="Y">379.514</Key>
+			name="Y">364.553</Key>
 
 		<Key
-			name="Z">3366.770</Key>
+			name="Z">440.909</Key>
 
 		<Key
-			name="A">75.350</Key>
+			name="A">-47.171</Key>
 
 		<Key
-			name="B">-0.650</Key>
+			name="B">-1.027</Key>
 
 		<Key
 			name="G">0.000</Key>

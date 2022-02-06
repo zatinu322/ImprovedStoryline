@@ -77,15 +77,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph1"
-				Belong="1023"
-				Prototype="NPC"
-				ModelName="r4_man"
-				cfg="12"
-				helloReplyNames="Dlg_npc_003032"
-				SpokenCount="0" />
-
-			<Object
 				Name="LisaGadad"
 				Belong="1023"
 				Prototype="NPC"
@@ -111,6 +102,15 @@
 				skin="2"
 				cfg="85"
 				helloReplyNames="r4_Dlg_npc_000007"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph1"
+				Belong="1023"
+				Prototype="NPC"
+				ModelName="r4_man"
+				cfg="12"
+				helloReplyNames="Dlg_npc_003032"
 				SpokenCount="0" />
 		</Object>
 
@@ -635,15 +635,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph2"
-				Belong="1025"
-				Prototype="NPC"
-				ModelName="r4_man"
-				cfg="12"
-				helloReplyNames="Dlg_npc_003032"
-				SpokenCount="0" />
-
-			<Object
 				Name="LisaKef"
 				Belong="1025"
 				Prototype="NPC"
@@ -659,6 +650,15 @@
 				ModelName="r2_man"
 				cfg="427"
 				helloReplyNames="Dlg_npc_002580"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph2"
+				Belong="1025"
+				Prototype="NPC"
+				ModelName="r4_man"
+				cfg="12"
+				helloReplyNames="Dlg_npc_003032"
 				SpokenCount="0" />
 		</Object>
 
@@ -1175,21 +1175,21 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kartograph3"
-				Belong="1060"
-				Prototype="NPC"
-				ModelName="r4_man"
-				cfg="12"
-				helloReplyNames="Dlg_npc_003032"
-				SpokenCount="0" />
-
-			<Object
 				Name="Kazif_Bar_Customer1"
 				Belong="1060"
 				Prototype="NPC"
 				ModelName="r4_man"
 				skin="1"
 				cfg="257"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Kartograph3"
+				Belong="1060"
+				Prototype="NPC"
+				ModelName="r4_man"
+				cfg="12"
+				helloReplyNames="Dlg_npc_003032"
 				SpokenCount="0" />
 		</Object>
 

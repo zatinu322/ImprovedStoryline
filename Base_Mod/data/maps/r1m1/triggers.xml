@@ -20,10 +20,6 @@
 	<trigger Name="trFirstRolik" active="1">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-
-			IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
-
 			g_ObjCont:SetGameTime( 10, 0, 10, 9, 2234 )
 
 			SetRadarUpgrade(1)
@@ -210,14 +206,14 @@
 			StartCinematic()
 			UpdateCinematic(1)
 
-			TActivate( "OpeningOpen1" )
-			TActivate( "Opening1" )
-			TActivate( "Opening11" )
-			TActivate( "Opening2" )
-			TActivate( "Opening22" )
-			TActivate( "Opening3" )
-			TActivate( "Opening4" )
-			TActivate( "Opening5" )
+			TActivate( "trOpeningOpen1" )
+			TActivate( "trOpening1" )
+			TActivate( "trOpening11" )
+			TActivate( "trOpening2" )
+			TActivate( "trOpening22" )
+			TActivate( "trOpening3" )
+			TActivate( "trOpening4" )
+			TActivate( "trOpening5" )
 			TActivate( "trOpeningEnd" )
 			TActivate( "StartGame" )
 			TActivate( "ROLIK15" )
@@ -245,7 +241,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="OpeningOpen1" active="0">
+	<trigger Name="trOpeningOpen1" active="0">
 		<event flypath="OpeningOpen2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			AddCinematicMessage( 12, 0.25  )
@@ -253,7 +249,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Opening1" active="0">
+	<trigger Name="trOpening1" active="0">
 		<event flypath="Opening1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
@@ -273,7 +269,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Opening11" active="0">
+	<trigger Name="trOpening11" active="0">
 		<event flypath="Opening11" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
@@ -289,42 +285,39 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Opening2" active="0">
+	<trigger Name="trOpening2" active="0">
 		<event flypath="Opening2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 						
-			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(467.180, 306.161, 1812.266), Quaternion(-0.000, -0.925, 0.001, -0.381), 1)
-			
-			getObj("felix01"):SetNodeAction(AT_RESERVED1)
-			getObj("felix01"):SetNextForAnimation(AT_RESERVED1, AT_STAND1) 
-			
-			TeamCreate("FelixVehicle1",1013,CVector(470.355, 306.646, 1814.503),{"FelixVehicle"})
-			
-			local vehFelix = GetEntityByName("FelixVehicle1_vehicle_0")
+			CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(458.527, 305.991, 1830.930), Quaternion(0.0000, 0.9837, 0.0000, 0.1801), 0)
+			CreateNewDummyObject("dweller_felix", "humFelix", -1, -1, CVector(458.701, 306.203, 1829.930), Quaternion(0.0000, -0.0763, 0.0000, 0.9971), 0)
+
+			getObj("humLisa"):SetNodeAction(AT_STAND2)
+			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+			getObj("humFelix"):SetNodeAction(AT_RESERVED1)
+			getObj("humFelix"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("LisaPath11")
+				vehPlayer:PlaceToEndOfPath("LisaPath11")
+				vehPlayer:SetCustomLinearVelocity(0)
+				vehPlayer:SetThrottle(0)
+				vehPlayer:SetGamePositionOnGround(CVector(467.548, 306.966, 1823.528))
+				vehPlayer:SetRotation(Quaternion(-0.013, -0.992, -0.001, -0.124))
+			end
+
+			local vehFelix = CreateVehicleEx("FelixVehicle", "FelixCarPrologue", CVector(459.665, 307.187, 1816.056), 1013)
 			if vehFelix then
-				vehFelix:SetRotation(Quaternion(-0.010, -0.914, 0.001, -0.406))
+				vehFelix:SetRotation(Quaternion(-0.001, -0.788, -0.001, -0.615))
 				vehFelix:SetSkin(4)
-			end
-			
-			TeamCreate("FelixGang",1013,CVector(475.182, 305.881, 1797.556),{"Sml101", "Scout02"})
-
-			local FelixGang1 = GetEntityByName("FelixGang_vehicle_0")
-			if FelixGang1 then
-				FelixGang1:SetRotation(Quaternion(0.002, 0.159, 0.038, -0.987))
-				FelixGang1:SetGamePositionOnGround( CVector(476.224, 306.309, 1799.276))
-			end
-
-			local FelixGang2 = GetEntityByName("FelixGang_vehicle_1")
-			if FelixGang2 then
-				FelixGang2:SetRotation(Quaternion(0.048, 0.758, 0.048, -0.649))
-				FelixGang2:SetGamePositionOnGround( CVector(480.517, 305.814, 1808.392))
 			end
 
 			trigger:Deactivate()    
 		</script>
 	</trigger>
 
-	<trigger Name="Opening22" active="0">
+	<trigger Name="trOpening22" active="0">
 		<event flypath="Opening22" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 		
@@ -349,7 +342,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Opening3" active="0">
+	<trigger Name="trOpening3" active="0">
 		<event flypath="Opening3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
@@ -365,7 +358,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Opening4" active="0">
+	<trigger Name="trOpening4" active="0">
 		<event flypath="Opening4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			
@@ -396,7 +389,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Opening5" active="0">
+	<trigger Name="trOpening5" active="0">
 		<event flypath="Opening5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			
@@ -1282,6 +1275,16 @@
 				if b == 1 then
 
 					PassToMap("r4m1", "FromR1M1", -1 )
+
+					if getObj("TheContraDot1") then
+						LOG("TheContra and TheFreedom dots already exists.")
+					else
+						CreateNewBreakableObject( "brick_dot1_vulcan","TheContraDot1", 1008, CVector(3075.444, 317.966, 405.052), Quaternion(0.000, -0.707, 0.000, 0.707),0)
+						CreateNewBreakableObject( "brick_dot1_vulcan","TheContraDot2", 1008, CVector(3128.200, 318.012, 440.179), Quaternion(0.000, -0.543, 0.000, 0.840),0)
+						CreateNewBreakableObject( "staticAutoGun04","TheFreedomDot1", 1008, CVector(3159.318, 319.755, 1167.116), Quaternion(0.009, 1.000, 0.000, -0.002),0)
+						CreateNewBreakableObject( "staticAutoGun04","TheFreedomDot2", 1008, CVector(3187.464, 319.924, 1167.089), Quaternion(0.000, 1.000, 0.000, -0.017),0)
+						LOG("Created 4 TheContra and TheFreedom dots")
+					end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -1364,8 +1367,6 @@
 	<trigger Name="tr_Tutotial_Start" active="0">
 		<event 	timeout="0.5" eventid="GE_TIME_PERIOD" />
 		<script>
-			 
-
 			EnableAutoHelp( false )
 
 			SpawnMessageBox( "90001" )
@@ -1373,8 +1374,10 @@
 			local b = SpawnMessageBox( "90000" )
 			if b == 1 then
 				TakeQuest("FirstTimePlay")
-				
 				CompleteQuest("FirstTimePlay")
+				AddImportantFadingMsg("Мистер Шляпа отключен.")
+			else
+				AddImportantFadingMsg("Мистер Шляпа включен.")
 			end
 			trigger:Deactivate()
 		</script>
@@ -1691,7 +1694,7 @@
 	</trigger>
 
 	<trigger Name="TeleportToR1M4" active="0">
-	<event        timeout="0.1"        eventid="GE_TIME_PERIOD" />
+		<event        timeout="0.1"        eventid="GE_TIME_PERIOD" />
 		<script>
 			local b = SpawnMessageBox("5983")
 			if b == 1 then
@@ -1701,5 +1704,4 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
 </triggers>

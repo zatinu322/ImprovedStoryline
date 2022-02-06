@@ -149,17 +149,8 @@
 		Name="LisaRolik_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1239.533 291.901 2862.537"
-		Radius="43.863"
-		LookingTimeOut="15.000" />
-
-	<Object
-		Flags="21"
-		Name="LisaRolik2_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1169.960 299.627 2891.158"
-		Radius="43.863"
+		Pos="1227.048 300.228 2900.870"
+		Radius="79.863"
 		LookingTimeOut="15.000" />
 
 	<Object
@@ -185,8 +176,8 @@
 		Name="GameLoc_1"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3116.254 335.281 2483.916"
-		Radius="60.000"
+		Pos="3032.641 334.981 2430.012"
+		Radius="145.000"
 		LookingTimeOut="15.000" />
 
 	<Object
@@ -274,48 +265,48 @@
 		Name="TheOilVillageQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1953.200 300.352 836.926"
-		Radius="40.000" />
+		Pos="1968.085 300.481 832.931"
+		Radius="51.000" />
 
 	<Object
 		Flags="21"
 		Name="SvalkaQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="677.463 256.474 3700.197"
-		Radius="40.000" />
+		Pos="629.781 260.871 3687.442"
+		Radius="99.000" />
 
 	<Object
 		Flags="21"
 		Name="LukoilQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2253.030 349.385 1915.785"
-		Radius="40.000" />
+		Pos="2231.828 350.755 1891.178"
+		Radius="95.000" />
 
 	<Object
 		Flags="21"
 		Name="SosnovkaQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1593.224 302.937 2032.128"
-		Radius="50.000" />
+		Pos="1594.073 302.847 2049.076"
+		Radius="81.000" />
 
 	<Object
 		Flags="21"
 		Name="RuinQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1372.853 292.899 270.014"
-		Radius="50.000" />
+		Pos="1348.795 293.895 265.221"
+		Radius="95.000" />
 
 	<Object
 		Flags="21"
 		Name="KolhozQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3696.802 346.965 1594.374"
-		Radius="40.000" />
+		Pos="3800.820 346.985 1654.570"
+		Radius="131.000" />
 
 	<Object
 		Flags="21"
@@ -340,8 +331,8 @@
 		Name="TheFreedomQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3172.948 319.888 1191.971"
-		Radius="65.928"
+		Pos="3185.824 320.015 1239.976"
+		Radius="101.928"
 		LookingTimeOut="70.000" />
 
 	<Object
@@ -32325,7 +32316,7 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object4892"
-			PostTiePos="1030.421 357.522 3669.938"
+			PostTiePos="1030.421 365.651 3669.938"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -32341,7 +32332,7 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object4892"
-			PostTiePos="1060.181 357.522 3657.837"
+			PostTiePos="1060.181 365.651 3657.837"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -32351,13 +32342,13 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object4892"
-			PostTiePos="1030.421 357.522 3669.938"
+			PostTiePos="1030.421 365.651 3669.938"
 			LpName="LP_PART01" />
 
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object4893"
-			PostTiePos="1117.908 371.727 3885.153"
+			PostTiePos="1117.908 379.218 3885.153"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -32367,13 +32358,13 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object4892"
-			PostTiePos="1060.181 357.522 3657.837"
+			PostTiePos="1060.181 365.651 3657.837"
 			LpName="LP_PART02" />
 
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object4893"
-			PostTiePos="1147.668 371.727 3873.052"
+			PostTiePos="1147.668 379.218 3873.052"
 			LpName="LP_PART02" />
 	</Object>
 

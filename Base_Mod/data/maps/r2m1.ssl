@@ -63,7 +63,7 @@
 			name="MAXHEIGHT">2500.000</Key>
 
 		<Key
-			name="WATERLEVEL">707.031</Key>
+			name="WATERLEVEL">204.960</Key>
 
 		<Key
 			name="BASEWATERLEVEL">204.960</Key>
@@ -213,19 +213,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">653.555</Key>
+			name="X">6478.269</Key>
 
 		<Key
-			name="Y">342.473</Key>
+			name="Y">352.974</Key>
 
 		<Key
-			name="Z">2519.026</Key>
+			name="Z">3247.304</Key>
 
 		<Key
-			name="A">-8.854</Key>
+			name="A">-29.000</Key>
 
 		<Key
-			name="B">-0.535</Key>
+			name="B">-0.595</Key>
 
 		<Key
 			name="G">0.000</Key>

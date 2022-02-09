@@ -772,9 +772,6 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			AddHistory( "r5_LisaKidnapped" )
-			AddFadingMsgId( "fm_history_got" )
-			
 			TDeactivate("TrapRolikCam1")
 			TDeactivate("TrapRolikCam2")
 			TDeactivate("TrapRolikCam4")

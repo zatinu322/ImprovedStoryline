@@ -526,7 +526,7 @@
 			end
 
 			if not(getObj("RustyCar")) then
-				CreateNewDummyObject( "car_cemetery04", "RustyCar", -1, -1, CVector(885.480, 269.000, 1324.966), Quaternion(0.0000, 0.5931, 0.0000, 0.8052), 0)
+				CreateNewDummyObject( "car_cemetery04", "RustyCar", -1, -1, CVector(882.838, 268.263, 1320.603), Quaternion(0.0000, 0.5931, 0.0000, 0.8052), 0)
 			end                                                                                  
 --			if not(getObj("CloseGateStr32")) then
 --				CreateNewDummyObject( "metal_plate1", "CloseGateStr32", -1, -1, CVector(839.651, 267.612, 1183.307), Quaternion(-0.6788, 0.0000, 0.0000, 0.7343), 0)

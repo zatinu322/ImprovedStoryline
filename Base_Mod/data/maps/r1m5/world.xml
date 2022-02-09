@@ -2,7 +2,7 @@
 <World
 	name="Object612"
 	class="SgNode"
-	LastId="20110">
+	LastId="20138">
 	<Node
 		name="Object1"
 		class="SgAnimatedModelNode"
@@ -2101,9 +2101,9 @@
 	<Node
 		name="Object255"
 		class="SgAnimatedModelNode"
-		org="2805.473 0.000 338.603"
+		org="2805.473 -0.257 338.603"
 		orgRel="1"
-		rot="0.0000 0.4226 0.0000 -0.9063"
+		rot="-0.1554 0.4163 -0.0725 -0.8929"
 		scale="0.960 0.960 0.960"
 		id="boulder_stone3"
 		ndmAction="0" />

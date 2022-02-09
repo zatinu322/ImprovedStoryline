@@ -1697,7 +1697,7 @@
 			Name="staticAutoGun015"
 			Belong="1016"
 			Prototype="staticAutoGun01"
-			Pos="6308.631 289.128 3097.604"
+			Pos="6307.526 289.125 3096.688"
 			Rot="0.000 0.332 0.000 0.943">
 			<Parts />
 		</Object>
@@ -10825,7 +10825,7 @@
 		Name="stolb1337"
 		Belong="-1"
 		Prototype="Breakable_Stolb1"
-		Pos="6429.830 289.172 3187.560"
+		Pos="6429.020 289.000 3193.022"
 		Rot="0.000 -0.992 0.000 0.130" />
 
 	<Object
@@ -15504,7 +15504,7 @@
 		Name="poddon1002"
 		Belong="-1"
 		Prototype="poddon"
-		Pos="6419.068 288.590 3228.216"
+		Pos="6419.696 289.000 3223.553"
 		Rot="0.000 1.000 0.000 0.030"
 		NodeScale="0.889" />
 
@@ -15512,7 +15512,7 @@
 		Name="poddon1003"
 		Belong="-1"
 		Prototype="poddon"
-		Pos="6316.042 292.936 3055.828"
+		Pos="6321.625 289.000 3058.683"
 		Rot="0.000 0.637 0.000 0.771"
 		NodeScale="0.903" />
 
@@ -27901,7 +27901,7 @@
 		Name="r2_deadtree52597"
 		Belong="-1"
 		Prototype="Breakable_r2_deadtree5"
-		Pos="926.990 252.608 2608.900"
+		Pos="877.223 257.350 2614.932"
 		Rot="0.000 0.566 0.000 0.824"
 		NodeScale="1.100" />
 
@@ -52176,7 +52176,7 @@
 		<Post
 			ServerObjName="stolb1337"
 			NodesNameHierarchy=""
-			PostTiePos="6429.072 295.581 3187.521"
+			PostTiePos="6428.262 295.409 3192.983"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -52192,7 +52192,7 @@
 		<Post
 			ServerObjName="stolb1337"
 			NodesNameHierarchy=""
-			PostTiePos="6430.292 295.238 3187.196"
+			PostTiePos="6429.481 295.065 3192.657"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -52202,7 +52202,7 @@
 		<Post
 			ServerObjName="stolb1337"
 			NodesNameHierarchy=""
-			PostTiePos="6429.072 295.581 3187.521"
+			PostTiePos="6428.262 295.409 3192.983"
 			LpName="LP_PART01" />
 
 		<Post
@@ -52218,7 +52218,7 @@
 		<Post
 			ServerObjName="stolb1337"
 			NodesNameHierarchy=""
-			PostTiePos="6430.292 295.238 3187.196"
+			PostTiePos="6429.481 295.065 3192.657"
 			LpName="LP_PART02" />
 
 		<Post

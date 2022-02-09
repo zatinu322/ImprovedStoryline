@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76488667">
+	LastId="76488845">
 	<Node
 		name="Object9"
 		class="SgAnimatedModelNode"
@@ -3449,16 +3449,6 @@
 		rot="0.0000 0.6293 0.0000 0.7771"
 		scale="0.783 0.783 0.783"
 		id="brick_debris1"
-		ndmAction="0" />
-
-	<Node
-		name="Object1160"
-		class="SgAnimatedModelNode"
-		org="737.515 0.000 1430.463"
-		orgRel="1"
-		rot="0.0000 0.8829 0.0000 -0.4695"
-		scale="0.986 0.986 0.986"
-		id="brick_wall2_dyn"
 		ndmAction="0" />
 
 	<Node
@@ -19290,9 +19280,9 @@
 	<Node
 		name="Object8387"
 		class="SgAnimatedModelNode"
-		org="864.383 0.000 1298.857"
+		org="864.383 0.080 1298.857"
 		orgRel="1"
-		rot="0.0000 -0.2588 0.0000 0.9659"
+		rot="0.0102 -0.2586 -0.0379 0.9652"
 		scale="0.801 0.801 0.801"
 		id="car_cemetery01"
 		ndmAction="0" />
@@ -19330,9 +19320,9 @@
 	<Node
 		name="Object8392"
 		class="SgAnimatedModelNode"
-		org="858.895 0.000 1311.437"
+		org="865.340 0.000 1323.871"
 		orgRel="1"
-		rot="0.0000 0.9799 0.0000 0.1994"
+		rot="0.0000 0.9328 0.0000 -0.3604"
 		scale="1.120 1.120 1.120"
 		id="rusty_car_5"
 		ndmAction="0" />
@@ -19340,9 +19330,9 @@
 	<Node
 		name="Object8434"
 		class="SgAnimatedModelNode"
-		org="852.458 0.000 1324.242"
+		org="852.458 -0.555 1324.242"
 		orgRel="1"
-		rot="0.0000 -0.5132 0.0000 0.8583"
+		rot="-0.0187 -0.5131 -0.0112 0.8581"
 		id="car_cemetery04"
 		ndmAction="0" />
 

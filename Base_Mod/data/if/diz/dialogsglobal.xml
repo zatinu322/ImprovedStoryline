@@ -225,7 +225,7 @@
 		text="“ак-так-так, а вот это вот уже интересно."
 		role="NPC"
 		scriptCondition="QuestStatus('CivilOrAdept1')==Q_TAKEN"
-		scriptResult="CompleteQuest('CivilOrAdept1')"
+		scriptResult="CompleteQuest('CivilOrAdept1'); AddHistory( 'r5_LisaKidnapped' ); AddFadingMsgId( 'fm_history_got' );"
 		nextReplies="Dlg_pl_002749" />
 
 	<Reply

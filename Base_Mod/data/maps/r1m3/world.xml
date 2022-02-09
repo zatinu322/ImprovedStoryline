@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76484233">
+	LastId="76484296">
 	<Node
 		name="Object27"
 		class="SgAnimatedModelNode"
@@ -32310,7 +32310,7 @@
 		class="SgAnimatedModelNode"
 		org="7001.101 0.000 848.536"
 		orgRel="1"
-		rot="0.0000 -0.0213 0.0000 0.9998"
+		rot="0.0000 -0.9998 0.0000 0.0201"
 		id="lamppost2"
 		ndmAction="0" />
 
@@ -32319,7 +32319,7 @@
 		class="SgAnimatedModelNode"
 		org="6999.302 0.000 890.824"
 		orgRel="1"
-		rot="0.0000 -0.0213 0.0000 0.9998"
+		rot="0.0000 0.9993 0.0000 -0.0376"
 		id="lamppost2"
 		ndmAction="0" />
 
@@ -32328,7 +32328,7 @@
 		class="SgAnimatedModelNode"
 		org="6997.502 0.000 933.111"
 		orgRel="1"
-		rot="0.0000 -0.0213 0.0000 0.9998"
+		rot="0.0000 0.9999 0.0000 0.0169"
 		id="lamppost2"
 		ndmAction="0" />
 
@@ -32337,16 +32337,16 @@
 		class="SgAnimatedModelNode"
 		org="6995.703 0.000 975.399"
 		orgRel="1"
-		rot="0.0000 -0.0213 0.0000 0.9998"
+		rot="0.0000 1.0000 0.0000 0.0038"
 		id="lamppost2"
 		ndmAction="0" />
 
 	<Node
 		name="Object76483751"
 		class="SgAnimatedModelNode"
-		org="6993.904 0.000 1017.687"
+		org="7000.020 0.000 1010.155"
 		orgRel="1"
-		rot="0.0000 -0.0213 0.0000 0.9998"
+		rot="0.0000 -0.9365 0.0000 0.3507"
 		id="lamppost2"
 		ndmAction="0" />
 

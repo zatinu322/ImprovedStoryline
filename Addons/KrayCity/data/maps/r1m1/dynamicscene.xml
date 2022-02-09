@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="4598">
+	LastId="4599">
 	<TargetNamesForDestroy
 		Names="u1 u2 u3 u4 u5 u6 u7 u8 u9" />
 
@@ -29798,68 +29798,70 @@
 		Name="brick_wall14080"
 		Belong="-1"
 		Prototype="Breakable_BrickWall1"
-		Pos="3157.376 320.910 405.777" />
+		Pos="3147.409 319.000 391.898"
+		Rot="0.000 -0.364 0.000 0.931" />
 
 	<Object
 		Name="brick_wall14081"
 		Belong="-1"
 		Prototype="Breakable_BrickWall1"
-		Pos="3137.933 319.000 384.198"
-		Rot="0.000 0.581 0.000 0.814" />
+		Pos="3140.952 319.000 387.227"
+		Rot="0.000 0.968 0.000 0.252" />
 
 	<Object
 		Name="brick_wall14082"
 		Belong="-1"
 		Prototype="Breakable_BrickWall1"
-		Pos="3120.954 318.904 395.175"
-		Rot="0.000 -0.113 0.000 0.994" />
+		Pos="3121.401 318.892 395.595"
+		Rot="-0.002 0.344 -0.001 0.939" />
 
 	<Object
 		Name="brick_wall14083"
 		Belong="-1"
 		Prototype="Breakable_BrickWall1"
-		Pos="3152.706 318.511 418.684"
-		Rot="0.000 0.997 0.000 0.079" />
+		Pos="3154.500 318.517 417.285"
+		Rot="0.008 0.864 0.015 -0.503" />
 
 	<Object
 		Name="brick_wall14084"
 		Belong="-1"
 		Prototype="Breakable_BrickWall1"
-		Pos="3132.223 319.000 383.876"
-		Rot="0.000 -0.208 0.000 0.978" />
+		Pos="3133.679 319.000 386.155"
+		Rot="0.000 0.109 0.000 0.994" />
 
 	<Object
 		Name="brick_wall14085"
 		Belong="-1"
 		Prototype="Breakable_BrickWall1"
-		Pos="3111.724 318.232 409.698" />
+		Pos="3111.724 318.232 409.698"
+		Rot="0.000 0.506 0.000 0.863" />
 
 	<Object
 		Name="brick_wall24086"
 		Belong="-1"
 		Prototype="Breakable_BrickWall2"
 		Pos="3143.936 318.376 431.197"
-		Rot="0.000 -0.113 0.000 0.994" />
+		Rot="0.000 0.393 0.000 0.920" />
 
 	<Object
 		Name="brick_wall24087"
 		Belong="-1"
 		Prototype="Breakable_BrickWall2"
 		Pos="3115.650 318.789 402.811"
-		Rot="0.000 -0.044 0.000 0.999" />
+		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="brick_wall24088"
 		Belong="-1"
 		Prototype="Breakable_BrickWall2"
-		Pos="3126.376 319.000 389.223"
-		Rot="0.000 -0.148 0.000 0.989" />
+		Pos="3127.171 319.000 389.929"
+		Rot="0.000 0.407 0.000 0.914" />
 
 	<Object
 		Name="sosna14089"
 		Belong="-1"
 		Prototype="Breakable_Sosna1"
-		Pos="3131.754 319.000 387.203" />
+		Pos="3130.849 319.000 388.309" />
 
 	<Object
 		Name="tankeg4090"
@@ -51726,6 +51728,45 @@
 	</Object>
 
 	<Object
+		Name="Breakable_BrickWall14598"
+		Belong="1001"
+		Prototype="Breakable_BrickWall1"
+		Pos="3152.816 318.892 397.824"
+		Rot="0.000 -0.442 0.000 0.897" />
+
+	<Object
 		Belong="1100"
 		Prototype="someRecollection" />
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="stolb22868"
+			NodesNameHierarchy=""
+			PostTiePos="3190.166 323.788 1025.036"
+			LpName="LP_PART01" />
+
+		<Post
+			ServerObjName="stolb22870"
+			NodesNameHierarchy=""
+			PostTiePos="3221.355 325.701 1144.675"
+			LpName="LP_PART01" />
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="stolb22868"
+			NodesNameHierarchy=""
+			PostTiePos="3188.853 323.414 1025.036"
+			LpName="LP_PART02" />
+
+		<Post
+			ServerObjName="stolb22870"
+			NodesNameHierarchy=""
+			PostTiePos="3220.043 325.327 1144.675"
+			LpName="LP_PART02" />
+	</Object>
 </DynamicScene>

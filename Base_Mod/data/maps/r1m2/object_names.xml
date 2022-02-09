@@ -67,9 +67,17 @@
 	<Object
 		Name="Professor"
 		FullName="Профессор Мал" />
+	
+	<Object
+		Name="Professor_1"
+		FullName="Профессор Мал" />
 
 	<Object
 		Name="Kollizey2"
+		FullName="Кассирша Кристин" />
+	
+	<Object
+		Name="Kollizey2_1"
 		FullName="Кассирша Кристин" />
 
 	<Object
@@ -254,7 +262,7 @@
 
 	<Object
 		Name="TheTickets_Bar"
-		FullName="Бар ''Азарт''" />
+		FullName="Бар &quot;Азарт&quot;" />
 
 	<Object
 		Name="TheTickets_ZAO"
@@ -270,6 +278,10 @@
 
 	<Object
 		Name="Antisincer"
+		FullName="Бездельник Ден" />
+	
+	<Object
+		Name="Antisincer_1"
 		FullName="Бездельник Ден" />
 
 	<Object

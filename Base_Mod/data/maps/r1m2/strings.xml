@@ -191,8 +191,8 @@
 		id="220"
 		modelName="mask_hero"
 		value="Прощай. Спасибо за помощь."
-		sound="data\sounds\Speech\r1m2\r1m2_220_hero.ogg"
-		time="2" />
+		sound=""
+		time="3" />
 
 	<string
 		id="221"

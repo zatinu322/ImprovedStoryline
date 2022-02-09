@@ -25,6 +25,11 @@
 		<Point  coord="0.000 1.000 0.000"/>  
 	</Path>
 
+	<Path Name = "ZASADA_AR_cam01">
+		<Point  coord="0.000 0.000 0.000"/>
+		<Point  coord="0.000 -3.000 0.000"/>  
+	</Path>
+
 	<Path Name = "NormalEnd_PathCam">
 		<Point  coord="20.000 20.000 -50.000"/>  
 	</Path>
@@ -299,8 +304,8 @@
 	</Path>
 
 	<Path Name = "NeftVyshCam">
-		<Point  coord="6931.543 280.175 7110.825" rotation="0.041 0.959 -0.192 -0.202"/>
-		<Point  coord="6931.543 280.175 7110.825" rotation="-0.019 0.954 -0.062 0.291"/>
+		<Point  coord="6931.543 280.175 7110.825" rotation="0.044 0.955 -0.187 -0.224"/>
+		<Point  coord="6931.543 280.175 7110.825" rotation="-0.005 0.993 -0.103 0.050"/>
 	</Path>
 
 </Paths>

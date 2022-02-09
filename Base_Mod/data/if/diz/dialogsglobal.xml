@@ -12293,7 +12293,7 @@
 		name="Dlg_pl_d3d240"
 		text="Есть такое. Сиди тут, никуда не уходи. Я скоро вернусь."
 		role="PLAYER"
-		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest');  TActivate('SPYMER'); RemoveQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'OilBandit_P');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest'); TActivate('SPYMER'); RemoveQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'OilBandit_P'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_d3d242"

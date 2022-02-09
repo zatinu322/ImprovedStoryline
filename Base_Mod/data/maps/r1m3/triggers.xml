@@ -40,6 +40,8 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(4045.008, 234.819, 1037.936), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(4221.199, 231.304, 1010.331), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 
+			TActivate("tr_Start0")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -61,7 +63,7 @@
 	</trigger>
 
 
-	<trigger Name="tr_Start0" active="1">
+	<trigger Name="tr_Start0" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			if IsQuestTaken("d_FindRealFatherRoom_Quest") then
@@ -376,9 +378,11 @@
 			CompleteQuest( "d_DriveBanditFromOilMine_Quest" )
 
 			SetTolerance( 1100, 1047, RS_NEUTRAL )
+
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly( "NeftVyshCam", CINEMATIC_NO_AIM, 0, 10, 1, 1)
+			Fly( "NeftVyshCam", CINEMATIC_NO_AIM, 0, 13, 1, 1)
 			StartCinematic() 
 
 			AddCinematicMessage( 20, 1 )
@@ -433,7 +437,7 @@
 			local vehR = GetEntityByName("vehicleRunner")
 			if vehR then vehR:Remove() end
 
-			TeamCreate("OilMineRuner",1044,CVector(6895,260,7002),{"DemoBandit"}, nil, 1)
+			TeamCreate("OilMineRuner",1044,CVector(6897.545, 261.550, 7004.525),{"DemoBandit"}, nil, 1, Quaternion(-0.002, 0.930, 0.007, -0.367))
 			local vehP = GetEntityByName("OilMineRuner_vehicle_0")
 			if vehP then
 				vehP:SetExternalPathByName("banditoilmine_path")
@@ -555,11 +559,11 @@
 				local runner_rot = runner:GetRotation()
 				local runner_skin = runner:GetSkin()
 
+				runner:Remove()
+
 				runner_new:SetGamePositionOnGround(runner_pos)
 				runner_new:SetRotation(runner_rot)
 				runner_new:SetSkin(runner_skin)
-
-				runner:Remove()
 			end
 			
 			SetTolerance( 1100, 1044, RS_ENEMY )
@@ -597,7 +601,8 @@
 
 <!-- Догнать мера -->
 	<trigger Name="SPYMER" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			TActivate( "RolikBegin_SPYMER" )
 
@@ -1743,7 +1748,7 @@
 	</trigger>
 
 	<trigger Name="trZasadaAR_Delete" active="0">
-		<event	timeout="15"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			local zas1 = GetEntityByName("ZasadaAR1")
 			local zas2 = GetEntityByName("ZasadaAR2")
@@ -1771,7 +1776,7 @@
 				zas2:Remove()
 			end
 			
-			TeamCreate("ZasadaARTeam",1015,CVector(1863.212, 279.410, 5490.969),{"Cruiser01", "CoolBelaz_2"})
+			TeamCreate("ZasadaARTeam",1015,CVector(1798.483, 279.056, 5487.830),{"Cruiser01", "CoolBelaz_2"})
 			
 			TActivate("trZasadaAR_Dead")
 			

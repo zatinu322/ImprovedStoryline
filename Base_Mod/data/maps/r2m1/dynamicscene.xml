@@ -1506,7 +1506,7 @@
 			Belong="1016"
 			Prototype="barWithoutBarman">
 			<Object
-				Name="Senat"
+				Name="Senat_1"
 				Belong="1016"
 				Prototype="NPC"
 				ModelName="r2_man"
@@ -1866,7 +1866,7 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Senat"
+				Name="Senat_2"
 				Belong="1016"
 				Prototype="NPC"
 				ModelName="r2_man"

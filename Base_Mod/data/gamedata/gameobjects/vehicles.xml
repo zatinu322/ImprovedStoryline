@@ -1286,6 +1286,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		ParentPrototype 	= "Scout">
 		<Parts>
 			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
 			<Part id = "BASKET"		Prototype = "fakeCargo" />
 		</Parts>
 	</Prototype>

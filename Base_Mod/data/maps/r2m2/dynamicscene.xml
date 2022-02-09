@@ -2026,7 +2026,7 @@
 		Radius="30.000"
 		LookingTimeOut="10.000">
 		<Object
-			Name="Eretik"
+			Name="Eretik_1"
 			Belong="1100"
 			Prototype="NPC"
 			ModelName="r2_man"

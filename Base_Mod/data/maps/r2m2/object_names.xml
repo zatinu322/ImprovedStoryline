@@ -47,6 +47,10 @@
 	<Object
 		Name="Eretik"
 		FullName="Еретик" />
+	
+	<Object
+		Name="Eretik_1"
+		FullName="Еретик" />
 
 	<Object
 		Name="Monah"

@@ -141,8 +141,8 @@
 		Name="ZasadaAR_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1815.406 278.000 5560.719"
-		Radius="227.000" />
+		Pos="1715.803 280.008 5500.715"
+		Radius="245.000" />
 
 	<Object
 		Flags="21"
@@ -210,8 +210,8 @@
 		Name="OraculEndLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2509.000 278.209 5863.000"
-		Radius="100.000"
+		Pos="2575.615 278.109 5833.329"
+		Radius="171.000"
 		LookingTimeOut="10.000">
 		<Object
 			Name="DecidePlz"
@@ -55846,56 +55846,56 @@
 		Name="wood_fence29098"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6863.614 263.460 7084.628"
+		Pos="6864.812 263.559 7085.038"
 		Rot="0.000 0.870 0.000 0.494" />
 
 	<Object
 		Name="wood_fence29099"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6862.865 262.760 7078.763"
+		Pos="6864.279 262.506 7076.003"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="wood_fence29100"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6868.129 261.922 7069.829"
+		Pos="6869.542 261.670 7067.069"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="wood_fence29101"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6873.393 261.107 7060.896"
+		Pos="6874.807 260.871 7058.136"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="wood_fence29102"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6878.656 260.439 7051.962"
+		Pos="6880.069 260.295 7049.202"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="wood_fence29103"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6883.920 259.987 7043.028"
+		Pos="6885.333 259.901 7040.268"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="wood_fence29104"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6889.184 259.587 7034.095"
+		Pos="6890.598 259.311 7031.335"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
 		Name="wood_fence29105"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="6894.447 258.638 7025.161"
+		Pos="6895.860 258.643 7022.401"
 		Rot="0.000 0.496 0.000 0.868" />
 
 	<Object
@@ -59527,21 +59527,21 @@
 		Rot="0.000 0.998 0.000 0.070" />
 
 	<Object
-		Name="Object76483516"
+		Name="Object76483516_1"
 		Belong="-1"
 		Prototype="Breakable_Listvenoe3"
 		Pos="4523.044 233.109 1508.162"
 		Rot="0.000 0.914 0.000 0.407" />
 
 	<Object
-		Name="Object76483518"
+		Name="Object76483518_1"
 		Belong="-1"
 		Prototype="Breakable_Listvenoe3"
 		Pos="4705.526 236.191 1844.393"
 		Rot="0.000 0.485 0.000 0.875" />
 
 	<Object
-		Name="Object76483519"
+		Name="Object76483519_1"
 		Belong="-1"
 		Prototype="Breakable_Listvenoe3"
 		Pos="4670.821 234.982 1929.032"
@@ -60129,7 +60129,7 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483747"
-			PostTiePos="7000.096 304.899 848.593"
+			PostTiePos="7000.096 304.899 848.592"
 			LpName="LP_PART02" />
 
 		<Post
@@ -60183,7 +60183,7 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483750"
-			PostTiePos="6996.689 315.116 975.423"
+			PostTiePos="6996.689 315.116 975.422"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -60202,10 +60202,6 @@
 			PostTiePos="6994.696 315.116 975.407"
 			LpName="LP_PART02" />
 	</Object>
-
-	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
 
 	<Object
 		Belong="-1"
@@ -60277,7 +60273,7 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483751"
-			PostTiePos="7000.774 316.036 1009.520"
+			PostTiePos="7000.774 316.036 1009.519"
 			LpName="LP_PART01" />
 
 		<Post
@@ -60293,7 +60289,7 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483751"
-			PostTiePos="6999.271 316.036 1010.829"
+			PostTiePos="6999.271 316.036 1010.828"
 			LpName="LP_PART02" />
 
 		<Post
@@ -60309,13 +60305,13 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483750"
-			PostTiePos="6996.689 315.116 975.423"
+			PostTiePos="6996.689 315.116 975.422"
 			LpName="LP_PART01" />
 
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483751"
-			PostTiePos="7000.774 316.036 1009.520"
+			PostTiePos="7000.774 316.036 1009.519"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -60331,7 +60327,11 @@
 		<Post
 			ServerObjName=""
 			NodesNameHierarchy="Object76483751"
-			PostTiePos="6999.271 316.036 1010.829"
+			PostTiePos="6999.271 316.036 1010.828"
 			LpName="LP_PART02" />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

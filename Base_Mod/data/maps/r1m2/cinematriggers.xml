@@ -106,7 +106,8 @@
 			local vehLisa = CreateVehicleEx("MolokovozMenu","MolokovozMenu",CVector(5320.740, 53.949, 4678.966), 1011)
 
 			CreateNewDummyObject( "cargo", "camToch01", -1, -1, CVector(5615.775, 68.402, 4058.987), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
-			CreateNewDummyObject( "cargo", "camToch02", -1, -1, CVector(5114.468, 165.310, 3582.015), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			CreateNewDummyObject( "cargo", "camToch02", -1, -1, CVector(5143.547, 153.030, 3545.455), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			
 
 			local camToch01 = GetEntityByName("camToch01")
 			local camToch02 = GetEntityByName("camToch02")
@@ -118,8 +119,8 @@
 			FlyLinked( "LisaPlenDie_cam01", PlfID, 28, 1, 0, LisaID )
 			FlyLinked( "LisaPlenDie_cam02", camToch01ID, 34, 0, 0, LisaID )
 			FlyLinked( "LisaPlenDie_cam03", LisaID, 14, 0, 0, PlfID )
-			FlyLinked( "LisaPlenDie_cam04", camToch02ID, 38, 0, 0, LisaID )
-			FlyLinked( "LisaPlenDie_cam05", PlfID, 16, 0, 0, LisaID )
+			FlyLinked( "LisaPlenDie_cam04", camToch02ID, 28, 0, 0, LisaID )
+			FlyLinked( "LisaPlenDie_cam05", PlfID, 23, 0, 0, LisaID )
 			FlyLinked( "LisaPlenDie_cam06", LisaID, 12, 0, 1, PlfID )
 			StartCinematic()
 
@@ -142,7 +143,7 @@
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(5514.857, 54.877, 4538.720))
+				vehPlayer:SetGamePositionOnGround( CVector(5511.771, 53.723, 4543.106))
 				vehPlayer:SetRotation(Quaternion(-0.003, 0.954, 0.011, 0.301))
 				vehPlayer:LimitMaxSpeed(11)
 				vehPlayer:SetCustomControlEnabled( true )       
@@ -213,6 +214,7 @@
 		<event flypath="LisaPlenDie_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 --			PlayCustomMusic("QuietDialogue03")
+			GetPlayerVehicle():LimitMaxSpeed(12)
 
 			AddCinematicMessage( 2150, 0.25  )
 			AddCinematicMessage( 217, 0.25  )

@@ -2579,7 +2579,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m2"
-			targetObjName="KARAVANMIDGARD" />
+			targetObjName="KARAVANMIDGARD_vehicle_0" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2588,7 +2588,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m2"
-			targetObjName="KARAVANPORTO" />
+			targetObjName="KARAVANPORTO_vehicle_0" />
 	</QuestInfo>
 
 	<QuestInfo

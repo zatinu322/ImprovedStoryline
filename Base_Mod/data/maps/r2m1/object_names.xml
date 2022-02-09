@@ -73,6 +73,14 @@
 		FullName="Сенатор Шварц" />
 
 	<Object
+		Name="Senat_1"
+		FullName="Сенатор Шварц" />
+
+	<Object
+		Name="Senat_2"
+		FullName="Сенатор Шварц" />
+
+	<Object
 		Name="Gulik"
 		FullName="Жулик Инкс" />
 

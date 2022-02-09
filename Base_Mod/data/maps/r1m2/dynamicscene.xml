@@ -860,7 +860,7 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Kollizey2"
+				Name="Kollizey2_1"
 				Belong="1009"
 				Prototype="NPC"
 				ModelName="r1_woman"
@@ -895,7 +895,7 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Professor"
+				Name="Professor_1"
 				Belong="1009"
 				Prototype="NPC"
 				ModelName="r1_man"
@@ -1591,7 +1591,7 @@
 				cfg="248"
 				helloReplyNames="Kollizey2_hellodlg0"
 				SpokenCount="0" />
-			
+
 			<Object
 				Name="Kartograph3"
 				Belong="1009"
@@ -2456,7 +2456,7 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Antisincer"
+				Name="Antisincer_1"
 				Belong="1009"
 				Prototype="NPC"
 				ModelName="r1_man"
@@ -10460,40 +10460,42 @@
 		Name="wood_fence2153"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="1599.293 75.115 5399.534" />
+		Pos="1545.588 74.962 5392.487"
+		Rot="0.000 0.115 0.000 0.993" />
 
 	<Object
 		Name="wood_fence2154"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="1583.367 75.040 5408.884" />
+		Pos="1580.924 75.192 5409.593"
+		Rot="0.000 0.395 0.000 0.919" />
 
 	<Object
 		Name="wood_fence1155"
 		Belong="-1"
 		Prototype="Breakable_WoodFence1"
-		Pos="1595.523 76.060 5395.450"
-		Rot="0.000 0.379 0.000 0.925" />
+		Pos="1595.571 76.413 5393.935"
+		Rot="0.017 0.379 0.042 0.924" />
 
 	<Object
 		Name="wood_fence1156"
 		Belong="-1"
 		Prototype="Breakable_WoodFence1"
-		Pos="1588.387 75.551 5403.149"
+		Pos="1588.435 75.591 5401.634"
 		Rot="0.000 0.379 0.000 0.925" />
 
 	<Object
 		Name="wood_fence1157"
 		Belong="-1"
 		Prototype="Breakable_WoodFence1"
-		Pos="1578.295 75.197 5412.846"
+		Pos="1572.476 74.936 5416.788"
 		Rot="0.000 0.309 0.000 0.951" />
 
 	<Object
 		Name="wood_fence1158"
 		Belong="-1"
 		Prototype="Breakable_WoodFence1"
-		Pos="1568.555 74.499 5419.979"
+		Pos="1563.072 74.124 5422.837"
 		Rot="0.000 0.309 0.000 0.951" />
 
 	<Object

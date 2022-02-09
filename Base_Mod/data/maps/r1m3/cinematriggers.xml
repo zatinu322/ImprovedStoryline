@@ -438,7 +438,7 @@
 				vehM:SetCruisingSpeed(20)
 			end
 			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(6255.426, 279.764, 5912.385))
+				vehPlayer:SetGamePositionOnGround( CVector(6255.426, 279.864, 5912.385))
 				vehPlayer:SetRotation(Quaternion(0.011, -0.989, 0.011, -0.149))
 				vehPlayer:SetThrottle( 0 )
 			end
@@ -508,7 +508,7 @@
 			local CTochID = CToch:GetId()
 
 			FlyLinked( "THESPY_cam01", CTochID, 15, 1, 0, vehMID )
-			Fly("THESPY_cam02", CINEMATIC_NO_AIM, 0, 15, 0, 1 )
+			Fly("THESPY_cam02", CINEMATIC_NO_AIM, 0, 19, 0, 1 )
 			StartCinematic()
 
 			TActivate("trTHESPY_fade")
@@ -554,7 +554,9 @@
 
 			local vehM = GetEntityByName("vehMer")
 			if vehM then
-				vehM:Remove()
+				vehM:PlaceToEndOfPath("TheSpyMerRolik_path")
+				vehM:SetGamePositionOnGround( CVector(5020.611, 203.523, 3995.869))
+				vehM:SetRotation(Quaternion(0.052, -0.145, 0.021, -0.988))
 			end
 
 			AddCinematicMessage( 17, 1 )
@@ -567,7 +569,12 @@
 		<event timeout="3" eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("Passage03a")
-
+			
+			local vehM = GetEntityByName("vehMer")
+			if vehM then
+				vehM:SetExternalPathByName("OutSpyMerRolik_path")
+			end
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2047,29 +2054,29 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			PlayCustomMusic("Battle02")
+			PlayCustomMusic("IntenseDialogue01")
 			
-			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(1718.630, 292.877, 5468.031), Quaternion(0, 0, 0, 0), 0)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1820.286, 288.019, 5475.828), Quaternion(0, 0, 0, 0), 1)
 			
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 			local vehPlayer = GetPlayerVehicle()
 			local vehPID = vehPlayer:GetId()
 			
-			FlyLinked( "SPYMER_cam01", CTochID, 9, 1, 1, vehPID )
+			FlyLinked( "ZASADA_AR_cam01", CTochID, 13, 1, 1, vehPID )
 			StartCinematic()
 			
-			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1869.509, 278.948, 5467.099), 1015)
-			CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1865.491, 278.877, 5511.826), 1015)
+			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1015)
+			CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1800.970, 280.535, 5493.521), 1015)
 			
 			local zas1 = GetEntityByName("ZasadaAR1")
 			if zas1 then
-				zas1:SetRotation(Quaternion(-0.012, 0.355, 0.011, -0.935))
+				zas1:SetRotation(Quaternion(-0.027, -0.711, -0.027, 0.702))
 			end
 			
 			local zas2 = GetEntityByName("ZasadaAR2")
 			if zas2 then
-				zas2:SetRotation(Quaternion(-0.001, 0.897, -0.002, -0.441))
+				zas2:SetRotation(Quaternion(-0.000, -0.706, 0.004, 0.709))
 			end
 			
 			TActivate("RolikZasadaARFade")
@@ -2086,8 +2093,8 @@
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(1772.579, 280.668, 5487.087))
-				vehPlayer:SetRotation(Quaternion(0.009, 0.711, 0.001, 0.703))
+--				vehPlayer:SetGamePositionOnGround( CVector(1772.579, 280.668, 5487.087))
+--				vehPlayer:SetRotation(Quaternion(0.009, 0.711, 0.001, 0.703))
 				vehPlayer:SetExternalPathByName("player_path06")
 			end
 
@@ -2102,6 +2109,8 @@
 			RestoreAllToleranceStatus()
 			
 			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
 			
 			StartConversation("UnknownFromTunel")
 

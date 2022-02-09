@@ -216,10 +216,10 @@
 	<Path
 		Name="OutSpyMerRolik_path">
 		<Point
-			coord="5022.234 4030.077" />
+			coord="5029.377 4006.862" />
 
 		<Point
-			coord="5040.563 4021.656" />
+			coord="5043.352 4017.057" />
 
 		<Point
 			coord="5053.669 4020.397" />
@@ -336,7 +336,7 @@
 	<Path
 		Name="banditoilmine_path">
 		<Point
-			coord="6902.604 7010.112" />
+			coord="6884.130 6990.195" />
 
 		<Point
 			coord="6663.171 7091.674" />
@@ -1503,7 +1503,22 @@
 	<Path
 		Name="player_path06">
 		<Point
-			coord="1836.545 5489.379" />
+			coord="1515.749 5543.922" />
+
+		<Point
+			coord="1567.864 5534.833" />
+
+		<Point
+			coord="1608.881 5522.207" />
+
+		<Point
+			coord="1655.299 5508.422" />
+
+		<Point
+			coord="1713.089 5495.228" />
+
+		<Point
+			coord="1771.787 5490.707" />
 	</Path>
 
 	<Path

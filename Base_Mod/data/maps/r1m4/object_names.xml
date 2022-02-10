@@ -211,6 +211,10 @@
 	<Object
 		Name="FVBerko_Bar_Customer2"
 		FullName="Неил" />
+	
+	<Object
+		Name="FVBerko_Bar_Customer2_1"
+		FullName="Неил" />
 
 	<Object
 		Name="FVBerko_Bar_Barman"

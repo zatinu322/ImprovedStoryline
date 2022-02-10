@@ -379,10 +379,18 @@
 
 			SetTolerance( 1100, 1047, RS_NEUTRAL )
 
+			CreateVehicleEx("DemoBandit", "vehicleRunner", CVector(7006.653, 258.253, 7163.328), 1044)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(6931.543, 280.175, 7110.825), Quaternion(0, 0, 0, 0), 1)
+
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			local camCar = GetEntityByName("vehicleRunner")
+			local camCarID = camCar:GetId()
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly( "NeftVyshCam", CINEMATIC_NO_AIM, 0, 13, 1, 1)
+--			Fly( "NeftVyshCam", CINEMATIC_NO_AIM, 0, 13, 1, 1)
+			FlyLinked( "SPYMER_cam01", CTochID, 13, 1, 1, camCarID )
 			StartCinematic() 
 
 			AddCinematicMessage( 20, 1 )
@@ -414,9 +422,10 @@
 				end
 			end
 
-			CreateVehicleEx("DemoBandit", "vehicleRunner", CVector(6954.294, 259.027, 7065.042), 1044)
+			
 			local vehR = GetEntityByName("vehicleRunner")
 			if vehR then
+				vehR:SetGamePositionOnGround(CVector(6954.294, 259.027, 7065.042))
 				vehR:SetRotation(Quaternion(0.008, 0.931, 0.020, -0.364))
 				vehR:SetSkin(4)
 				vehR:SetExternalPathByName("banditoilmine_path")
@@ -436,6 +445,9 @@
 
 			local vehR = GetEntityByName("vehicleRunner")
 			if vehR then vehR:Remove() end
+
+			local CToch = GetEntityByName("camTochka")
+			if CToch then CToch:Remove() end
 
 			TeamCreate("OilMineRuner",1044,CVector(6897.545, 261.550, 7004.525),{"DemoBandit"}, nil, 1, Quaternion(-0.002, 0.930, 0.007, -0.367))
 			local vehP = GetEntityByName("OilMineRuner_vehicle_0")

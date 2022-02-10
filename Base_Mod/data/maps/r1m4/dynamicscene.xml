@@ -624,7 +624,7 @@
 				Prototype="NPC"
 				ModelName="r1_man"
 				cfg="188"
-				helloReplyNames="Dlg_npc_001927 Dlg_npc_002873 Dlg_npc_002971"
+				helloReplyNames="Dlg_npc_001927 Dlg_npc_002971"
 				SpokenCount="0" />
 
 			<Object
@@ -2315,6 +2315,23 @@
 		Prototype="genericLocation"
 		Pos="1120.466 225.481 1288.744"
 		Radius="10.000" />
+	
+	<Object
+		Flags="21"
+		Name="AfterWinterFisher_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="0.000 0.000 0.000"
+		Radius="1.000">
+		<Object
+			Name="FVBerko_Bar_Customer2_1"
+			Belong="1085"
+			Prototype="NPC"
+			ModelName="r1_man"
+			cfg="188"
+			helloReplyNames="Dlg_npc_002873"
+			SpokenCount="0" />
+	</Object>
 
 	<Object
 		Name="TraderCaravans"

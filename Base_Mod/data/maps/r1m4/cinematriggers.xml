@@ -688,7 +688,7 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("peregovor_cam", CINEMATIC_NO_AIM, 0, 44.5, 1, 1 )
+			Fly("peregovor_cam", CINEMATIC_NO_AIM, 0, 44.5, 0, 1 )
 			StartCinematic()
 			
 			local vehPlayer = GetPlayerVehicle()
@@ -697,23 +697,15 @@
 				vehPlayer:SetRotation(Quaternion(-0.000, 0.900, 0.000, -0.436))
 			end
 			
-			TActivate("PeregovorRolikFade")
 			TActivate("PeregovorRolikEnd")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
 
-	<trigger Name="PeregovorRolikFade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
 			AddCinematicMessage( 8805, 1 )
 			AddCinematicMessage( 8806, 0.1 )
 			AddCinematicMessage( 8807, 0.1 )
 			AddCinematicMessage( 8808, 0.1 )
 			AddCinematicMessage( 8809, 0.1 )
 			AddCinematicMessage( 8810, 0.1 )
-
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1373,7 +1365,7 @@
 			local CToch = GetEntityByName("CamTochka")
 			if CToch then CToch:Remove() end
 			
-			StartConversation( "FVBerko_Bar_Customer2" )
+			StartConversation( "FVBerko_Bar_Customer2_1" )
 			
 			trigger:Deactivate()
 		</script>

@@ -9512,7 +9512,7 @@
 		name="Dlg_pl_002671"
 		text="Ладно, посмотрим, чего они хотят."
 		role="PLAYER"
-		scriptResult="CompleteQuest('GomerSklad'); SetTolerance(1100, 1084, RS_NEUTRAL); TActivate('AddEventToPeregovorRolik'); LeaveTown();" />
+		scriptResult="CompleteQuest('GomerSklad'); SetTolerance(1100, 1084, RS_NEUTRAL); TActivate('trPrePeregovorRolikStart'); LeaveTown();" />
 
 	<Reply
 		name="Olme_Bar_Customer2_2_N01"

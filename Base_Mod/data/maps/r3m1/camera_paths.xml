@@ -30,6 +30,10 @@
 			coord="0 2 -30" />
 	</Path>
 
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 0.000 0.000"/>
+	</Path>
+
 	<Path	Name="AmbushDruid_cam01">
 			<Point  coord="1982.074 311.208 1471.162" rotation="-0.081 0.561 -0.055 0.822" />
 			<Point  coord="1986.278 315.158 1469.753" rotation="-0.090 0.565 -0.062 0.818"/>
@@ -139,8 +143,8 @@
 	</Path>
 
 	<Path	Name="SubmMove1">
-			<Point  coord="4085.434 230.635 1890.995" rotation="-0.006 -0.592 -0.001 0.806"/>
-			<Point  coord="4010.692 245.000 1890.384" rotation="-0.006 -0.592 -0.001 0.806"/>
+			<Point  coord="4010.692 200.000 1890.384" rotation="-0.006 -0.592 -0.001 0.806"/>
+			<Point  coord="4010.692 245.977 1890.384" rotation="-0.006 -0.592 -0.001 0.806"/>
 	</Path>
 
 	<Path	Name="MoveFromR2M1_cam01">
@@ -184,4 +188,3 @@
 	</Path>
 
 </Paths>
-

@@ -4980,7 +4980,7 @@
 		isMainQuest="0">
 		<Map
 			name="r3m1"
-			targetObjName="RescueCars" />
+			targetObjName="BezhenVeh2" />
 	</QuestInfo>
 
 	<QuestInfo

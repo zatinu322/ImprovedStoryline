@@ -344,8 +344,6 @@
 			RemoveQuestItem( "quest_repair_robot3" )
 			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot3")
 
-			TeamCreate("Fanatik",1021,CVector(1370.991, 287.842, 1128.789),{"Cruiser02"})
-
 			Fly("3rdHelper", CINEMATIC_NO_AIM, nil, 6, 1,0)
 			Fly("FanatikPriehal2", CINEMATIC_NO_AIM, nil, 16, 0,1)
 			StartCinematic()
@@ -364,6 +362,7 @@
 	<trigger Name="cin_FanatikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			CreateVehicleEx("Cruiser02", "Fanatic_Cruiser", CVector(1370.991, 287.842, 1128.789), 1021)
 			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff3", -1, -1, CVector(1214.700, 322.100, 1255.800), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
 			local Plf = GetPlayerVehicle()
 
@@ -392,12 +391,14 @@
 				vehPlayer:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
 			end
 			
-			local vehLisa = GetEntityByName("Fanatik_vehicle_0")
-			if vehLisa then
-				vehLisa:SetRotation(Quaternion(-0.043, -0.905, -0.031, 0.422))
-				vehLisa:SetExternalPathByName("FanatikVmeshalsa")
-				vehLisa:SetCustomLinearVelocity( 30 )
-				vehLisa:SetThrottle( 1 )
+			local vehFanatik = GetEntityByName("Fanatic_Cruiser")
+			if vehFanatik then
+				vehFanatik:SetRotation(Quaternion(-0.043, -0.905, -0.031, 0.422))
+				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
+				vehFanatik:SetCustomLinearVelocity( 30 )
+				vehFanatik:SetThrottle( 1 )
+				vehFanatik:SetRandomSkin()
+				fan_skin = vehFanatik:GetSkin()
 			end
 			
 			trigger:Deactivate()
@@ -408,11 +409,34 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			TeamCreate("Fanatik",1021,CVector(1370.991, 287.842, 1128.789),{"Cruiser02"})
+			TeamCreate("FanatikCrew",1021,CVector(1159.899, 296.939, 1134.574),{"r1m2_hunter02", "Fighter02", "Scout03"})
 		
-			local vehLisa = GetEntityByName("Fanatik_vehicle_0")
-			if vehLisa then
-				vehLisa:SetExternalPathByName("FanatikVmeshalsa")
-				vehLisa:PlaceToEndOfPath("FanatikVmeshalsa")
+			local vehFanatik = GetEntityByName("Fanatik_vehicle_0")
+			if vehFanatik then
+				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
+				vehFanatik:PlaceToEndOfPath("FanatikVmeshalsa")
+				vehFanatik:SetSkin(fan_skin)
+				fan_skin = nil
+			end
+
+			local vehCrew0 = GetEntityByName("FanatikCrew_vehicle_0")
+			if vehCrew0 then
+				vehCrew0:SetGamePositionOnGround( CVector(1238.950, 302.213, 1168.080))
+				vehCrew0:SetRotation(Quaternion(-0.002, -0.477, 0.017, 0.879))
+			end
+
+			local vehCrew1 = GetEntityByName("FanatikCrew_vehicle_1")
+			if vehCrew1 then
+				vehCrew1:SetGamePositionOnGround( CVector(1244.295, 302.624, 1179.895))
+				vehCrew1:SetRotation(Quaternion(0.000, 0.501, 0.002, -0.865))
+			end
+
+			local vehCrew2 = GetEntityByName("FanatikCrew_vehicle_2")
+			if vehCrew2 then
+				vehCrew2:SetGamePositionOnGround( CVector(1225.993, 302.560, 1160.077))
+				vehCrew2:SetRotation(Quaternion(0.022, -0.508, -0.012, 0.861))
 			end
 			
 			StartConversation( "OracleGuardian_2" )
@@ -429,22 +453,16 @@
 
 	<trigger	Name="FanatikiPeace"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			TeamCreate("FanatikCrew",1021,CVector(1159.899, 296.939, 1134.574),{"r1m2_hunter02", "Fighter02", "Scout03"})
-		
-			GetEntityByName("Fanatik_vehicle_0"):SetExternalPathByName("FanatikiLeaveWithPeace")
-			local vehCrew1 = GetEntityByName("FanatikCrew_vehicle_0")
-			local vehCrew2 = GetEntityByName("FanatikCrew_vehicle_1")
-			local vehCrew3 = GetEntityByName("FanatikCrew_vehicle_2")
-			if vehCrew1 then
-				vehCrew1:SetExternalPathByName("FanatikiLeaveWithPeace")
+		<script>		
+			local vehCrew = GetEntityByName("Fanatic_Cruiser")
+			if vehCrew then vehCrew:SetExternalPathByName("FanatikiLeaveWithPeace") end
+
+			local FanTeam = GetEntityByName("FanatikCrew")
+			for i = 0,2 do
+				if FanTeam:GetVehicle(i) then FanTeam:GetVehicle(i):SetExternalPathByName("FanatikiLeaveWithPeace") end
+--				println("Path set to Fanatik "..i)
 			end
-			if vehCrew2 then
-				vehCrew2:SetExternalPathByName("FanatikiLeaveWithPeace")
-			end
-			if vehCrew3 then
-				vehCrew3:SetExternalPathByName("FanatikiLeaveWithPeace")
-			end
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>

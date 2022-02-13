@@ -33,10 +33,10 @@
 	<Path
 		Name="ExitToGaragePath">
 		<Point
-			coord="2767.459 2104.173" />
+			coord="2765.233 2101.572" />
 
 		<Point
-			coord="2733.520 2132.432" />
+			coord="2726.689 2130.329" />
 	</Path>
 
 	<Path
@@ -46,6 +46,84 @@
 
 		<Point
 			coord="2417.000 2664.000" />
+	</Path>
+
+	<Path
+		Name="FanatikVmeshalsa">
+		<Point
+			coord="1370.991 1128.789" />
+
+		<Point
+			coord="1324.106 1118.666" />
+
+		<Point
+			coord="1251.132 1160.468" />
+
+		<Point
+			coord="1212.627 1185.885" />
+	</Path>
+
+	<Path
+		Name="FanatikiLeaveWithPeace">
+		<Point
+			coord="1192.226 1142.290" />
+
+		<Point
+			coord="1147.753 1133.300" />
+
+		<Point
+			coord="1117.048 1164.142" />
+
+		<Point
+			coord="1107.215 1221.502" />
+
+		<Point
+			coord="1049.289 1325.505" />
+
+		<Point
+			coord="1039.279 1387.625" />
+
+		<Point
+			coord="1055.335 1425.710" />
+
+		<Point
+			coord="1077.120 1446.629" />
+
+		<Point
+			coord="1094.984 1462.585" />
+
+		<Point
+			coord="1099.136 1487.577" />
+
+		<Point
+			coord="1077.633 1534.726" />
+
+		<Point
+			coord="1040.338 1576.622" />
+
+		<Point
+			coord="967.247 1629.956" />
+
+		<Point
+			coord="923.445 1702.459" />
+
+		<Point
+			coord="899.125 1780.303" />
+
+		<Point
+			coord="836.597 1833.009" />
+
+		<Point
+			coord="817.010 1912.231" />
+
+		<Point
+			coord="816.685 1984.532" />
+
+		<Point
+			coord="803.211 2059.199" />
+
+		<Point
+			coord="741.882 2166.771" />
 	</Path>
 
 	<Path
@@ -793,6 +871,15 @@
 	</Path>
 
 	<Path
+		Name="OraclePriezdPath">
+		<Point
+			coord="770.762 3164.915" />
+
+		<Point
+			coord="726.561 3186.738" />
+	</Path>
+
+	<Path
 		Name="ReturnPathR3M1">
 		<Point
 			coord="2899.089 189.593" />
@@ -812,43 +899,4 @@
 		<Point
 			coord="1353.576 2804.104" />
 	</Path>
-
-	<Path
-		Name="FanatikVmeshalsa">
-		<Point
-			coord="1370.991 1128.789" />
-		<Point
-			coord="1324.106 1118.666" />
-		<Point
-			coord="1251.132 1160.468" />
-		<Point
-			coord="1212.627 1185.885" />
-	</Path>
-
-	<Path
-		Name="FanatikiLeaveWithPeace">
-		<Point
-			coord="1144.478 1138.983" />
-		<Point
-			coord="1068.668 1295.613" />
-		<Point
-			coord="1098.732 1484.264" />
-		<Point
-			coord="972.032 1629.100" />
-		<Point
-			coord="885.873 1789.762" />
-		<Point
-			coord="822.452 1919.805" />
-		<Point
-			coord="751.991 2166.345" />
-	</Path>
-
-	<Path
-		Name="OraclePriezdPath">
-		<Point
-			coord="770.762 3164.915" />
-		<Point
-			coord="726.561 3186.738" />
-	</Path>
-
 </Paths>

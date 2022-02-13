@@ -14,9 +14,7 @@
 		PlayCustomMusic("Battle02")
 		TActivate("RolikEnd_PostFist")
 		TActivate("trPostFist_cam01")
---		TActivate("trPostFist_cam02")
 		RuleConsole("cinematic_spring_coeff 1.7")
---		RuleConsole("fov 180")
 
 		CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(3500.806, 248.391, 1500.019), Quaternion(0, 0, 0, 0), 0)
 
@@ -28,11 +26,8 @@
 		local PlfID = GetPlayerVehicleId()
 		local vehProtect01 = GetEntityByName("Protection01")
 		local vehProtect01ID = vehProtect01:GetId()
---		local vehProtect02 = GetEntityByName("Protection02")
---		local vehProtect02ID = vehProtect02:GetId()
 
 		FlyLinked("PostFist_cam01", CTochID, 7, 1, 1, vehProtect01ID, nil, nil, nil, nil )
---		FlyLinked("PostFist_cam02", CTochID, 10, 0, 1, vehProtect02ID, nil, nil, nil, nil )
 		StartCinematic()
 
 		trigger:Deactivate()
@@ -64,23 +59,14 @@
 			vehProtect01:SetSkin(6)
 		end
 		if vehProtect02 then
-			vehProtect02:SetGamePositionOnGround( CVector(3444.530, 255.166, 1488.398))
-			vehProtect02:SetRotation(Quaternion(0.000, 0.851, 0.000, 0.524))
+			vehProtect02:SetGamePositionOnGround( CVector(3450.712, 254.828, 1460.543))
+			vehProtect02:SetRotation(Quaternion(-0.005, -0.519, 0.014, -0.855))
 			vehProtect02:SetExternalPathByName("vehProtect_path02")
 			vehProtect02:SetSkin(6)
 		end
 		trigger:Deactivate()
 		</script>
 	</trigger>
-
-<!-- 	<trigger Name="trPostFist_cam02" active="0">
-		<event flypath="PostFist_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-
-
-			trigger:Deactivate()
-		</script>
-	</trigger>	 -->
 
 	<trigger Name="RolikEnd_PostFist" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
@@ -94,7 +80,6 @@
 		if vehProtect01 then  vehProtect01:Remove() end
 		if vehProtect02 then vehProtect02:Remove() end
 
-		TActivate("trCreateFistDefend")
 		StartConversation("r3m1_NearFist_Guard1")
 
 		TDeactivate("RolikBegin_PostFist")
@@ -105,15 +90,20 @@
 --		RuleConsole("fov 90")
 
 
-			TeamCreate("FistDefenders",1019,CVector(getPos("FistGuardSpawn_loc")),{"Revolutioner1","Revolutioner1"})
-			TeamCreate("FistDefenders2",1019,CVector(getPos("FistGuardSpawn2_loc")),{"Revolutioner1","Revolutioner1"})
-			local veh1 = GetEntityByName("FistDefenders_vehicle_0")
-			local veh2 = GetEntityByName("FistDefenders_vehicle_1")
-			if veh1 and veh2 then
-				veh1:SetSkin(6)
-				veh2:SetSkin(6)
-			end
-			TActivate("trCreateFistDefend")
+		TeamCreate("FistDefenders",1019,CVector(getPos("FistGuardSpawn_loc")),{"Revolutioner1","Revolutioner1"})
+		TeamCreate("FistDefenders2",1019,CVector(getPos("FistGuardSpawn2_loc")),{"Revolutioner1","Revolutioner1"})
+		local veh1 = GetEntityByName("FistDefenders_vehicle_0")
+		local veh2 = GetEntityByName("FistDefenders_vehicle_1")
+		if veh1 and veh2 then
+			veh1:SetSkin(6)
+			veh1:SetGamePositionOnGround(CVector(3461.994, 249.639, 1449.962))
+			veh1:SetRotation(Quaternion(0.009, -0.431, 0.007, -0.902))
+			veh2:SetSkin(6)
+			veh2:SetGamePositionOnGround(CVector(3455.952, 249.646, 1459.107))
+			veh2:SetRotation(Quaternion(-0.002, -0.410, -0.010, -0.912))
+		end
+
+		TActivate("trCreateFistDefend")
 
 		StopPlayingCustomMusic()
 		SetCameraBehindPlayerVehicle()
@@ -385,11 +375,10 @@
 		</script>
 	</trigger>
 
-<!-- 		Взрыв у пищеры				 -->
+<!-- 		Взрыв у пещеры				 -->
 
 	<trigger Name="trExplosionCave" active="0">
 		<event timeout="7" eventid="GE_TIME_PERIOD" />
-		<!--event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ExplosionCave_Loc" /-->
 		<script>
 
 		CreateEffectInsertedInRemove( "ET_PS_BRIDGE_EXP_MAIN", CVector(3198.084, 400, 3379.527), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
@@ -405,6 +394,9 @@
 
 		CreateNewObject{prototypeName = "ZavalR3m1_02",objName = "Zaval02",belong = 1100}
 		getObj("Zaval02"):SetPosition( CVector(3193.610, 430.741, 3396.857))
+
+		CreateNewDummyObject("crag_boulder2", "zaval_crag_1", -1, -1, CVector(3189.254, 395.111, 3391.938), Quaternion(0.0000, 0.9873, 0.0000, 0.1586), 0)
+		CreateNewSgNodeObject( "crag_boulder1", "zaval_crag_2", -1, -1, CVector(3213.506, 395.073, 3427.925), Quaternion(0.0000, -0.1413, 0.0000, 0.9900), 1.416) 
 
 		CreateEffectTTLed("ET_PS_HOUSE_MED_FIRE", CVector(3212.125, 397.336, 3416.416), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600)
 
@@ -527,9 +519,18 @@
 
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 
-			Fly("RescuePeople_cam01", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
+			CreateVehicleEx("Bug01","vehUlukArmy01",CVector(1338.213, 271.588, 868.520), 1020)
+			CreateVehicleEx("Ural01","vehUlukArmy02",CVector(1329.951, 270.648, 871.197), 1020)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1497.361, 265.454, 888.848), Quaternion(0, 0, 0, 0), 1)
+
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			local camCar = GetEntityByName("vehUlukArmy01")
+			local camCarID = camCar:GetId()
+
+			Fly("RescuePeople_cam01", CINEMATIC_NO_AIM, 0, 25, 1, 0 )
 			Fly("RescuePeople_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-			Fly("RescuePeople_cam03", CINEMATIC_NO_AIM, 0, 10, 0, 1 )
+			FlyLinked( "linkedcam", CTochID, 13, 0, 1, camCarID )
 			StartCinematic()
 
 			CreateHuman( "Human", 1100, CVector( 1422.838, 261.208, 876.479 ), "Human_dead", "HumanRolik_Path04" )
@@ -547,58 +548,55 @@
  		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 
-		CreateVehicleEx("Bug01","vehUlukArmy01",CVector(1338.213, 271.588, 868.520), 1020)
-		CreateVehicleEx("Ural01","vehUlukArmy02",CVector(1329.951, 270.648, 871.197), 1020)
+			local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
+			local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
 
-		local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
-		local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
+			if vehUlukArmy01 then 
+				vehUlukArmy01:SetRotation(Quaternion(0.000, 0.305, 0.000, 0.952))
+				vehUlukArmy01:SetSkin(2)
+			end
 
-		if vehUlukArmy01 then 
-			vehUlukArmy01:SetRotation(Quaternion(0.000, 0.305, 0.000, 0.952))
-			vehUlukArmy01:SetSkin(2)
-		end
+			if vehUlukArmy02 then 
+				vehUlukArmy02:SetRotation(Quaternion(0.000, 0.328, 0.000, 0.945))
+				vehUlukArmy02:SetSkin(2)
+			end
 
-		if vehUlukArmy02 then 
-			vehUlukArmy02:SetRotation(Quaternion(0.000, 0.328, 0.000, 0.945))
-			vehUlukArmy02:SetSkin(2)
-		end
+			local human01 = CreateHuman( "Human", 1100, CVector(1813.922, 249.461, 1193.859), "Human01", "HumanRolik_Path01" )
+			human01:AddWalkPathByName("HumanRolik_Path02")
+			human01:AddWalkPathByName("HumanRolik_Path03")
 
-		local human01 = CreateHuman( "Human", 1100, CVector(1813.922, 249.461, 1193.859), "Human01", "HumanRolik_Path01" )
-		human01:AddWalkPathByName("HumanRolik_Path02")
-		human01:AddWalkPathByName("HumanRolik_Path03")
+			local human02 = CreateHuman( "Human", 1100, CVector(1838.717, 253.623, 1199.879), "Human02", "HumanRolik_Path02" )
+			human02:AddWalkPathByName("HumanRolik_Path03")
 
-		local human02 = CreateHuman( "Human", 1100, CVector(1838.717, 253.623, 1199.879), "Human02", "HumanRolik_Path02" )
-		human02:AddWalkPathByName("HumanRolik_Path03")
+			local human03 = CreateHuman( "Human", 1100, CVector(1872.263, 258.239, 1196.465), "Human03", "HumanRolik_Path02" )
+			human03:AddWalkPathByName("HumanRolik_Path03")
 
-		local human03 = CreateHuman( "Human", 1100, CVector(1872.263, 258.239, 1196.465), "Human03", "HumanRolik_Path02" )
-		human03:AddWalkPathByName("HumanRolik_Path03")
+			local human04 = CreateHuman( "Human", 1100, CVector(1809.559, 249.000, 1150.102), "Human04", "HumanRolik_Path01" )
+			human04:AddWalkPathByName("HumanRolik_Path02")
 
-		local human04 = CreateHuman( "Human", 1100, CVector(1809.559, 249.000, 1150.102), "Human04", "HumanRolik_Path01" )
-		human04:AddWalkPathByName("HumanRolik_Path02")
+			CreateHuman( "Human", 1100, CVector(1795.704, 249.000, 1173.837), "Human05", "HumanRolik_Path01" )
 
-		CreateHuman( "Human", 1100, CVector(1795.704, 249.000, 1173.837), "Human05", "HumanRolik_Path01" )
+			local human06 = CreateHuman( "Human", 1100, CVector(1817.278, 249.010, 1144.879), "Human06", "HumanRolik_Path01" )
+			human06:AddWalkPathByName("HumanRolik_Path02")
 
-		local human06 = CreateHuman( "Human", 1100, CVector(1817.278, 249.010, 1144.879), "Human06", "HumanRolik_Path01" )
-		human06:AddWalkPathByName("HumanRolik_Path02")
+			CreateHuman( "Human", 1100, CVector(1907.227, 257.672, 1161.841), "Human07", "HumanRolik_Path03" )
 
-		CreateHuman( "Human", 1100, CVector(1907.227, 257.672, 1161.841), "Human07", "HumanRolik_Path03" )
-
-		CreateHuman( "Human", 1100, CVector(1871.425, 250.918, 1134.600), "Human08", "HumanRolik_Path01" )
+			CreateHuman( "Human", 1100, CVector(1871.425, 250.918, 1134.600), "Human08", "HumanRolik_Path01" )
 
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetGamePositionOnGround( CVector(1949.991, 252.998, 1069.733))
-			vehPlayer:SetRotation(Quaternion(-0.085, -0.339, 0.068, 0.934))
-			vehPlayer:SetThrottle( 1 )
-			vehPlayer:SetCustomLinearVelocity( 20 )
-			vehPlayer:SetExternalPathByName("player_path06")
-		end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(1949.991, 252.998, 1069.733))
+				vehPlayer:SetRotation(Quaternion(-0.085, -0.339, 0.068, 0.934))
+				vehPlayer:SetThrottle( 1 )
+				vehPlayer:SetCustomLinearVelocity( 20 )
+				vehPlayer:SetExternalPathByName("player_path06")
+			end
 
---		println(8)
-		AddCinematicMessage( 22, 5 )
-		AddCinematicMessage( 23, 0.25 )
-		trigger:Deactivate()
+			AddCinematicMessage( 22, 5 )
+			AddCinematicMessage( 23, 0.25 )
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -612,7 +610,7 @@
 	</trigger>
 
 	<trigger Name="trRescuePeople_cam03" active="0">
-		<event flypath="RescuePeople_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
 		local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
@@ -625,8 +623,8 @@
 		end
 
 		if vehUlukArmy02 then 
---			vehUlukArmy02:SetThrottle( 1 )
---			vehUlukArmy02:SetCustomLinearVelocity( 20 )
+			vehUlukArmy02:SetThrottle( 1 )
+			vehUlukArmy02:SetCustomLinearVelocity( 20 )
 			vehUlukArmy02:SetExternalPathByName("UlukArmy_Bug")
 		end
 
@@ -671,32 +669,34 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
-		TeamCreate("UlukArmy",1020,CVector(1625.560, 259.948, 879.053),{"Bug01","Ural01"}, CVector(1913.881, 260.062, 989.066), 1, Quaternion(0.014, 0.504, -0.016, 0.864))
-		TActivate("trUlukArmyDie")
+			TeamCreate("UlukArmy",1020,CVector(1625.560, 259.948, 879.053),{"Bug01","Ural01"}, CVector(1913.881, 260.062, 989.066), 1, Quaternion(0.014, 0.504, -0.016, 0.864))
+			TActivate("trUlukArmyDie")
 
-		local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
-		local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
-		local HumanDead = GetEntityByName("Human_dead")
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetExternalPathByName("player_path06")
-			vehPlayer:PlaceToEndOfPath("player_path06")
-		end
+			local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
+			local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
+			local HumanDead = GetEntityByName("Human_dead")
+			local CToch = GetEntityByName("CamTochka")
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("player_path06")
+				vehPlayer:PlaceToEndOfPath("player_path06")
+			end
 
-		if vehUlukArmy01 then vehUlukArmy01:Remove() end
-		if vehUlukArmy02 then vehUlukArmy02:Remove() end
-		if HumanDead	 then HumanDead:Remove() end
+			if vehUlukArmy01 then vehUlukArmy01:Remove() end
+			if vehUlukArmy02 then vehUlukArmy02:Remove() end
+			if HumanDead	 then HumanDead:Remove() end
+			if CToch then CToch:Remove() end
 
-		StopPlayingCustomMusic()
-		TDeactivate("trRescuePeople_cam01")
-		TDeactivate("trRescuePeople_cam02")
-		TDeactivate("trRescuePeople_cam03")
-		TDeactivate("trShootingOnPeople")
-		TDeactivate("trShooting")
-		SetCameraBehindPlayerVehicle()
-		RestoreAllToleranceStatus()
-		TakeQuest("r3m1_RescueUlukCivil_RepelAttack")
-		trigger:Deactivate()
+			StopPlayingCustomMusic()
+			TDeactivate("trRescuePeople_cam01")
+			TDeactivate("trRescuePeople_cam02")
+			TDeactivate("trRescuePeople_cam03")
+			TDeactivate("trShootingOnPeople")
+			TDeactivate("trShooting")
+			SetCameraBehindPlayerVehicle()
+			RestoreAllToleranceStatus()
+			TakeQuest("r3m1_RescueUlukCivil_RepelAttack")
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -763,6 +763,8 @@
 		<script>
 		RestoreAllToleranceStatus()
 		
+		SetCameraBehindPlayerVehicle()
+
 		local vehPlayer = GetPlayerVehicle()
 
 		if vehPlayer then
@@ -771,39 +773,35 @@
 		end
 
 		local FVehicle1 = GetEntityByName("RescueCars_vehicle_0")
+		if FVehicle1 then FVehicle1:Remove() end
 		local FVehicle2 = GetEntityByName("RescueCars_vehicle_1")
-		local FVehicle3 = GetEntityByName("RescueCars_vehicle_2")
-		
+		if FVehicle2 then FVehicle2:Remove() end
+
+		local FVehicle1 = CreateVehicleEx("DemoMolokovoz1", "BezhenVeh1", CVector(1908.233, 250.992, 1085.887), 1064)
 		if FVehicle1 then
-			FVehicle1:SetGamePositionOnGround( CVector(1880.616, 249.790, 1087.037))
-			FVehicle1:SetRotation(Quaternion(-0.010, 0.229, 0.004, 0.973))
+			FVehicle1:SetRotation(Quaternion(-0.061, 0.822, -0.023, 0.566))
 			FVehicle1:SetExternalPathByName("Bezhen_Path1")
+			FVehicle1:SetCruisingSpeed(20)
 		end
 
+		local FVehicle2 = CreateVehicleEx("r1m1_bug02", "BezhenVeh2", CVector(1881.191, 250.156, 1095.800), 1064)
 		if FVehicle2 then
-			FVehicle2:SetGamePositionOnGround( CVector(1907.178, 251.537, 1091.776))
-			FVehicle2:SetRotation(Quaternion(-0.066, -0.042, 0.050, 0.996))
+			FVehicle2:SetRotation(Quaternion(-0.029, 0.821, -0.006, 0.571))
 			FVehicle2:SetExternalPathByName("Bezhen_Path1")
+			FVehicle2:SetCruisingSpeed(20)
 		end
 
-		if FVehicle3 then
-			FVehicle3:SetGamePositionOnGround( CVector(1929.334, 258.478, 1119.231))
-			FVehicle3:SetRotation(Quaternion(0.003, -0.621, 0.115, 0.776))
-			FVehicle3:SetExternalPathByName("Bezhen_Path1")
-		end
+		TakeQuest("r3m1_RescueUlukCivil_TakeToSet")
 
 		TDeactivate("trToGoInSet_cam01")
-		TActivate("RCarsInPlace")
-		SetCameraBehindPlayerVehicle()
-		trigger:Deactivate()
-		</script>
-	</trigger>
 
-	<trigger Name="RCarsInPlace" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RCarsSet_loc" />
-		<script>
-			SetVar("BezhenAlive",1)
-			trigger:Deactivate()
+		TActivate("RCarsInPlace")
+		TActivate("tr_RescueCarsDist")
+		TActivate("RBezhenVeh1InPlace")
+		TActivate("RBezhenVeh2InPlace")
+		TActivate("trRescArmyDie2")
+
+		trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -813,7 +811,7 @@
 <!--		getObj("Subm"):SetNextForAnimation(AT_STAND1, AT_STAND2) -->
 <!-- 	CreateNewDummyObject( "submarina",	"Subm", -1, -1, CVector(4010.692, 245.000, 1890.384), Quaternion(-0.006, -0.592, -0.001, 0.806),0 )		 -->
 
-<!-- 			Ролик приплытия подводной лодки			 -->
+<!-- 			Ролик отплытия подводной лодки (переход в Хель)			 -->
 
 
 	<trigger Name="RolikBegin_ToComeSubmarine" active="0">
@@ -899,11 +897,13 @@
 				vehPlayer:UnlimitMaxSpeed()
 			end
 						
-			PassToMap("r1m4", "FromR3M1", 0 , 1)
+			PassToMap("r1m4", "FromR3M1", -90 , 1)
 			TDeactivate("trToGoInSet_cam01")
 			TDeactivate("UlukBattle2")
 			SetTolerance(1020,1002,RS_ENEMY)
 			TActivate("SubmarDelete")
+			TActivate("trMoveFromR1M4")
+			TActivate("CutsceneDisable")
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -921,7 +921,7 @@
 		</script>
 	</trigger>
 
-<!-- 					Ролик отплытия субмарины				 -->
+<!-- 					Ролик приплытия субмарины (прибытие из Хеля)				 -->
 
 
 
@@ -936,7 +936,7 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			TDeactivate("trMovePlToR1M4")
 
-			CreateNewDummyObject( "submarina",	"Subm1", -1, -1, CVector(4010.692, 245.000, 1890.384), Quaternion(-0.006, -0.592, -0.001, 0.806),0 )
+			CreateNewDummyObject( "submarina",	"Subm1", -1, -1, CVector(4010.692, 245.977, 1890.384), Quaternion(-0.006, -0.592, -0.001, 0.806),0 )
 
 			Fly("ToSailSubmarine_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
 			Fly("ToSailSubmarine_cam02", CINEMATIC_NO_AIM, 0, 3, 0, 0 )
@@ -962,7 +962,7 @@
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetPosition( CVector(3945.953, 248.234, 1916.991))
+				vehPlayer:SetPosition( CVector(3945.953, 249.211, 1916.991))
 				vehPlayer:SetRotation(Quaternion(-0.007, -0.682, -0.001, 0.731))
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomLinearVelocity( 0 )
@@ -1013,19 +1013,12 @@
 --		LOG(6)
 		TDeactivate("trToSailSubmarine_cam03")
 		TActivate("trMovePlToR1M4")
+		TActivate("")
 --		LOG(5)
 		SetCameraBehindPlayerVehicle()
 		trigger:Deactivate()
 		</script>
 	</trigger>
-
-<!-- 		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetPosition( CVector(865.810, 288.003, 977.006))
-			vehPlayer:SetRotation(Quaternion(0.024, 0.810, -0.029, 0.585))
-			vehPlayer:SetThrottle( 0 )
-			vehPlayer:SetCustomLinearVelocity( 0 )
-		end -->
 
 <!-- 			Приехали с Лисой на карту				 -->
 
@@ -1062,7 +1055,6 @@
 
 	<trigger Name="trMoveFromR2M1_cam01" active="0">
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
-		<!--event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" /-->
 		<script>
 			local lcar = getObj("LisaInCar")
 			if lcar then lcar:Remove() end

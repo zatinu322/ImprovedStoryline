@@ -268,7 +268,7 @@
 		Prototype="r3_NearOracul"
 		Pos="1238.891 319.685 2712.405"
 		Rot="0.000 -0.676 0.000 0.737"
-		PointOfViewInInterface="5.000 20.000 5.000"
+		PointOfViewInInterface="50.000 30.000 50.000"
 		CaravansDest="">
 		<Object
 			Name="NearOracul_defend"
@@ -1217,8 +1217,8 @@
 		Name="NearMonster_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1269.329 330.079 1387.760"
-		Radius="56.589" />
+		Pos="1341.193 341.074 1397.859"
+		Radius="89.589" />
 
 	<Object
 		Flags="21"

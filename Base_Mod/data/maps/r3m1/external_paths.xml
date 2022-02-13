@@ -106,13 +106,40 @@
 
 		<Point
 			coord="1478.094 2605.922" />
+	</Path>
+
+	<Path
+		Name="Bezhen_Path2">
+		<Point
+			coord="1506.885 2574.662" />
 
 		<Point
-			coord="1510.462 2567.540" />
+			coord="1525.331 2556.317" />
+	</Path>
+
+	<Path
+		Name="Bezhen_Path3">
+		<Point
+			coord="1505.426 2577.993" />
+
+		<Point
+			coord="1527.878 2589.566" />
 	</Path>
 
 	<Path
 		Name="FistGuard1_1">
+		<Point
+			coord="3469.319 1458.486" />
+
+		<Point
+			coord="3483.723 1458.111" />
+
+		<Point
+			coord="3487.054 1467.539" />
+	</Path>
+
+	<Path
+		Name="FistGuard2_1">
 		<Point
 			coord="3463.804 1463.046" />
 
@@ -121,18 +148,6 @@
 
 		<Point
 			coord="3477.051 1478.734" />
-	</Path>
-
-	<Path
-		Name="FistGuard2_1">
-		<Point
-			coord="3469.319 1458.486" />
-
-		<Point
-			coord="3482.960 1461.797" />
-
-		<Point
-			coord="3485.750 1472.933" />
 	</Path>
 
 	<Path
@@ -870,13 +885,13 @@
 			coord="895.498 1024.215" />
 
 		<Point
-			coord="907.532 1018.563" />
+			coord="906.713 1049.213" />
 
 		<Point
-			coord="920.138 1003.343" />
+			coord="870.320 1085.116" />
 
 		<Point
-			coord="932.117 988.096" />
+			coord="751.241 1153.904" />
 	</Path>
 
 	<Path
@@ -885,7 +900,7 @@
 			coord="852.856 961.535" />
 
 		<Point
-			coord="858.457 975.187" />
+			coord="873.309 992.429" />
 	</Path>
 
 	<Path
@@ -894,7 +909,7 @@
 			coord="1122.441 3746.177" />
 
 		<Point
-			coord="1115.098 3728.858" />
+			coord="1110.618 3722.601" />
 	</Path>
 
 	<Path
@@ -985,18 +1000,6 @@
 	</Path>
 
 	<Path
-		Name="UlukArmy_path314">
-		<Point
-			coord="1432.197 845.310" />
-
-		<Point
-			coord="1549.562 874.497" />
-
-		<Point
-			coord="1653.322 896.522" />
-	</Path>
-
-	<Path
 		Name="UlukArmy_ural">
 		<Point
 			coord="1345.638 878.703" />
@@ -1056,7 +1059,7 @@
 			coord="1730.208 1459.453" />
 
 		<Point
-			coord="1687.694 1456.767" />
+			coord="1674.489 1476.657" />
 
 		<Point
 			coord="1650.251 1448.621" />
@@ -1065,13 +1068,13 @@
 			coord="1619.259 1429.597" />
 
 		<Point
-			coord="1580.888 1415.462" />
+			coord="1575.429 1425.089" />
 
 		<Point
-			coord="1544.495 1398.970" />
+			coord="1543.022 1422.809" />
 
 		<Point
-			coord="1516.381 1367.332" />
+			coord="1517.047 1387.709" />
 
 		<Point
 			coord="1511.762 1330.594" />
@@ -1205,9 +1208,6 @@
 
 	<Path
 		Name="vehProtect_path02">
-		<Point
-			coord="3448.413 1478.464" />
-
 		<Point
 			coord="3464.669 1468.954" />
 

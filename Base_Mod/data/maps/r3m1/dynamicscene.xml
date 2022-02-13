@@ -48,7 +48,7 @@
 		Name="RescueCiv_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1837.639 258.000 1094.107"
+		Pos="1850.808 249.861 1158.190"
 		Radius="80.820" />
 
 	<Object
@@ -117,8 +117,8 @@
 		Name="NearFist_TalkGuard_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3417.872 249.196 1439.255"
-		Radius="97.405" />
+		Pos="3396.927 268.335 1489.185"
+		Radius="128.405" />
 
 	<Object
 		Flags="21"
@@ -153,8 +153,8 @@
 		Name="RescueLeader_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1450.651 256.238 848.098"
-		Radius="100.000">
+		Pos="1511.062 249.000 669.630"
+		Radius="186.000">
 		<Object
 			Name="r3m1_NearUluk_RescueMan1"
 			Belong="1100"
@@ -1557,7 +1557,7 @@
 				cfg="1272"
 				helloReplyNames="Uluk_Bar_Customer1_3_N01"
 				SpokenCount="0" />
-			
+
 			<Object
 				Name="Kartograph2"
 				Belong="1020"

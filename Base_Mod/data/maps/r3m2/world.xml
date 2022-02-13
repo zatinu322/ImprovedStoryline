@@ -2,7 +2,7 @@
 <World
 	name="Object16"
 	class="SgNode"
-	LastId="76475868">
+	LastId="76475947">
 	<Node
 		name="ET_PS_AUTOCANNON_STAND"
 		class="SgNode"
@@ -23057,5 +23057,41 @@
 		orgRel="1"
 		scale="1.200 1.200 1.200"
 		id="bochka1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76475943"
+		class="SgAnimatedModelNode"
+		org="2424.418 2.352 2880.850"
+		orgRel="1"
+		rot="0.0000 0.1951 0.0000 0.9808"
+		id="rr_vagon1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76475944"
+		class="SgAnimatedModelNode"
+		org="2418.957 3.819 2867.839"
+		orgRel="1"
+		rot="0.0000 0.2058 0.0000 0.9786"
+		id="rr_vagon2"
+		ndmAction="0" />
+
+	<Node
+		name="Object76475945"
+		class="SgAnimatedModelNode"
+		org="2413.713 4.056 2855.101"
+		orgRel="1"
+		rot="0.0000 0.1972 0.0000 0.9804"
+		id="rr_vagon3"
+		ndmAction="0" />
+
+	<Node
+		name="Object76475946"
+		class="SgAnimatedModelNode"
+		org="2408.144 3.931 2841.898"
+		orgRel="1"
+		rot="0.0000 0.2015 0.0000 0.9795"
+		id="rr_vagon2"
 		ndmAction="0" />
 </World>

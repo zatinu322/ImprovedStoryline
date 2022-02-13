@@ -5,9 +5,10 @@
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 --			println("--- ABVBVB")
+			SaveAllToleranceStatus(RS_NEUTRAL)
 			TActivate("cinExchangeVehFirst_End")
 			TActivate("cinExchangeVehFirst_FadeIn")
-			Fly("Garage_Path_First", CINEMATIC_NO_AIM, nil, 7, 1,0)
+			Fly("Garage_Path_First", CINEMATIC_NO_AIM, nil, 15, 1,0)
 			StartCinematic()
 			AddCinematicMessage( 8, 0.25 )
 			AddCinematicMessage( 9, 0.25 )
@@ -23,6 +24,13 @@
 				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PlCarPos_loc")))
 			end
+
+			if GetEntityByName("PlayerScout") then
+				GetEntityByName("PlayerScout"):SetGamePositionOnGround(CVector(2780.496, 264.953, 2087.660))
+				GetEntityByName("PlayerScout"):SetRotation(Quaternion(0.001, -0.000, 0.000, 1.000))
+				GetEntityByName("PlayerScout"):SetCustomLinearVelocity(0)
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -34,6 +42,7 @@
 		<script>
 			TActivate("trExcahgeVehAction")
 --			println("EEEEEEEEEEEEENNNNNNNNNNNDDDDDDDDDDDD")
+			RestoreAllToleranceStatus()
 			SetCameraBehindPlayerVehicle()
 			trigger:Deactivate()
 		</script>

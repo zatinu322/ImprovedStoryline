@@ -413,12 +413,19 @@
 			TeamCreate("Fanatik",1021,CVector(1370.991, 287.842, 1128.789),{"Cruiser02"})
 			TeamCreate("FanatikCrew",1021,CVector(1159.899, 296.939, 1134.574),{"r1m2_hunter02", "Fighter02", "Scout03"})
 		
+			local vehFanCut = GetEntityByName("Fanatic_Cruiser")
+			if vehFanCut then vehFanCut:Remove() end
+
 			local vehFanatik = GetEntityByName("Fanatik_vehicle_0")
 			if vehFanatik then
 				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
 				vehFanatik:PlaceToEndOfPath("FanatikVmeshalsa")
-				vehFanatik:SetSkin(fan_skin)
-				fan_skin = nil
+				if fan_skin then
+					vehFanatik:SetSkin(fan_skin)
+					fan_skin = nil
+				else
+					vehFanatik:SetRandomSkin()
+				end	
 			end
 
 			local vehCrew0 = GetEntityByName("FanatikCrew_vehicle_0")
@@ -454,7 +461,7 @@
 	<trigger	Name="FanatikiPeace"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>		
-			local vehCrew = GetEntityByName("Fanatic_Cruiser")
+			local vehCrew = GetEntityByName("Fanatik_vehicle_0")
 			if vehCrew then vehCrew:SetExternalPathByName("FanatikiLeaveWithPeace") end
 
 			local FanTeam = GetEntityByName("FanatikCrew")

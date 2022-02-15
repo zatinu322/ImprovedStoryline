@@ -174,7 +174,7 @@
 
 			PlayCustomMusic("IntenseDialogue01")
 
-			Fly("NearMonster_Path1", CINEMATIC_NO_AIM, nil, 13, 1,1)
+			Fly("NearMonster_Path1", CINEMATIC_NO_AIM, nil, 16.5, 1,1)
 			StartCinematic()
 
 			trigger:Deactivate()
@@ -247,7 +247,7 @@
 			Plf:SetThrottle(0)
 --			Plf:SetCustomControlEnabled(false)
 
-			FlyAround(6, 0.3, 25, 11, PlfCoor, PlfID, 1, 1)
+			FlyAround(6, 0.3, 25, 23, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
 			AddCinematicMessage( 1001, 0.25 )
 			AddCinematicMessage( 1002, 0.25 )

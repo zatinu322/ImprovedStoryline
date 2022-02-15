@@ -41,6 +41,7 @@
 			TActivate( "trCaravanToVill15sec" )
 			TActivate( "trCaravanToVill1INPLACE" )
 			TActivate( "trCaravanLength" )
+			TDeactivate("triggerExitToMap13")
 
 			trigger:Deactivate()
 		</script>
@@ -51,6 +52,7 @@
 		<script>
 			FailQuestIfTaken( "d_CaravanFromTuzzToVillage_Quest" )
 
+			TActivate("triggerExitToMap13")
 			TActivate("CaravDeadEnd1")
 
 			trigger:Deactivate()
@@ -180,6 +182,7 @@
 
 			TDeactivate( "trCaravanDIE" )
 			TDeactivate( "trCaravanLength" )
+			TActivate( "triggerExitToMap13" )
 
 			trigger:Deactivate()
 		</script>
@@ -980,7 +983,7 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if IsQuestTaken("d_FindVerbInAR_Quest") then 
+			if IsQuestTaken("d_FindVerbInAR_Quest") and QuestStatus("d_CaravanFromTuzzToVillage_Quest")~=Q_TAKEN then 
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 					PassToMap("r2m2", "FromR2M1", -1 )

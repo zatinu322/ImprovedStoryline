@@ -998,7 +998,7 @@
 				vehPlayer:SetCustomLinearVelocity(0)
 			end
 
-			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(2205.656, 250.162, 5925.173), Quaternion(0, 0, 0, 0), 0)
+			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(2181.949, 250.742, 5855.640), Quaternion(0, 0, 0, 0), 0)
 
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()

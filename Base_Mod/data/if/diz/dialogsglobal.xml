@@ -4032,7 +4032,7 @@
 		name="r3m1_NearOracle_ODefenders_1_N03"
 		text="Никто не может увидеть Его, кроме истинно верующих!"
 		role="NPC"
-		nextReplies="r3m1_NearOracle_ODefenders_1_N041 r3m1_NearOracle_ODefenders_1_N042" />
+		nextReplies="r3m1_NearOracle_ODefenders_1_N042 r3m1_NearOracle_ODefenders_1_N041" />
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N042"
@@ -4069,7 +4069,7 @@
 		name="r3m1_NearOracle_ODefenders_1_N092"
 		text="Оракул милостью своей защитит тебя в твоих странствиях."
 		role="NPC"
-		nextReplies="r3m1_NearOracle_ODefenders_1_N1021 r3m1_NearOracle_ODefenders_1_N1022" />
+		nextReplies="r3m1_NearOracle_ODefenders_1_N1022 r3m1_NearOracle_ODefenders_1_N1021" />
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N1022"
@@ -4288,7 +4288,7 @@
 		name="Dlg_pl_002048"
 		text="Ты сам напросился!"
 		role="PLAYER"
-		scriptResult="SetTolerance(1100, 1021, RS_ENEMY); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+		scriptResult="SetTolerance(1100, 1021, RS_ENEMY); GetCurNpc():SetSpokenCount( 1 ); SetVar('SOAgressor', 1); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002051"
@@ -4782,6 +4782,37 @@
 		text="Поеду, погляжу на знаки."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TakeQuest('q_PlaceWithSign'); TActivate('trSignPlace'); EndConversation();" />
+
+	<Reply
+		name="Dlg_npc_003245"
+		text="Приветствую тебя, путник."
+		role="NPC"
+		scriptCondition="(1.5>=GetTolerance(1100, 1021)) and GetVar('SOAgressor').AsInt == 0"
+		nextReplies="Dlg_pl_003246" />
+
+	<Reply
+		name="Dlg_pl_003246"
+		text="У меня возникла одна проблема: я поссорился с группировкой Служители Оракула..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003247" />
+
+	<Reply
+		name="Dlg_npc_003247"
+		text="Я знаю, что Служители Оракула не желают иметь с тобой никаких дел. За скромное вознаграждение в 15 процентов от твоих денежных запасов я могу помочь тебе приобрести какой-никакой авторитет среди них."
+		role="NPC"
+		nextReplies="Dlg_pl_003248 Dlg_pl_003249" />
+
+	<Reply
+		name="Dlg_pl_003249"
+		text="Я предпочту отказаться."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003248"
+		text="Конечно, я согласен."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(-(GetPlayerMoney()*0.15)); SetTolerance(1100, 1021, RS_NEUTRAL); EndConversation()" />
 <!--Root/r3m2/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003029"
@@ -10862,7 +10893,7 @@
 		name="Dlg_npc_001773"
 		text="Нет, это значит, что ты останешься в живых. А если так уж нужно проехать, плати 10000 монет."
 		role="NPC"
-		nextReplies="Dlg_pl_001774 Dlg_pl_001775" />
+		nextReplies="Dlg_pl_001775 Dlg_pl_001774" />
 
 	<Reply
 		name="Dlg_pl_001775"
@@ -17929,7 +17960,7 @@
 		name="Dlg_npc_001409"
 		text="Повторю ещё раз: мне очень слабо верится, что Феликс причастен к этому. Но тебя, я вижу, это мало интересует. "
 		role="NPC"
-		nextReplies="Dlg_pl_001410 Dlg_pl_002595" />
+		nextReplies="Dlg_pl_002595 Dlg_pl_001410" />
 
 	<Reply
 		name="Dlg_pl_002595"

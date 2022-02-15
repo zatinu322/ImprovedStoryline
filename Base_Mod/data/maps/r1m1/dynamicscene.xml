@@ -149,8 +149,8 @@
 		Name="LisaRolik_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1227.048 300.228 2900.870"
-		Radius="79.863"
+		Pos="1228.575 306.107 2924.284"
+		Radius="83.863"
 		LookingTimeOut="15.000" />
 
 	<Object
@@ -335,8 +335,8 @@
 		Name="FelixBaseLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="493.000 303.063 1883.000"
-		Radius="100.000"
+		Pos="496.095 303.849 1801.254"
+		Radius="139.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -24352,27 +24352,6 @@
 		Rot="0.000 -0.703 0.000 0.711" />
 
 	<Object
-		Name="wood_fence13043"
-		Belong="-1"
-		Prototype="Breakable_WoodFence1"
-		Pos="1205.616 289.660 2825.655"
-		Rot="0.000 -0.703 0.000 0.711" />
-
-	<Object
-		Name="wood_fence13044"
-		Belong="-1"
-		Prototype="Breakable_WoodFence1"
-		Pos="1205.668 289.708 2806.423"
-		Rot="0.000 -0.703 0.000 0.711" />
-
-	<Object
-		Name="wood_fence13045"
-		Belong="-1"
-		Prototype="Breakable_WoodFence1"
-		Pos="1205.572 289.697 2818.749"
-		Rot="0.000 -0.696 0.000 -0.718" />
-
-	<Object
 		Name="wood_fence13046"
 		Belong="-1"
 		Prototype="Breakable_WoodFence1"
@@ -38193,10 +38172,6 @@
 		Rot="0.000 -0.442 0.000 0.897" />
 
 	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
-
-	<Object
 		Belong="-1"
 		Prototype="Cable">
 		<Post
@@ -38259,4 +38234,8 @@
 			PostTiePos="3220.043 325.327 1144.675"
 			LpName="LP_PART02" />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

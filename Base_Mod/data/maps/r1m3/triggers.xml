@@ -454,6 +454,7 @@
 			if vehP then
 				vehP:SetExternalPathByName("banditoilmine_path")
 				vehP:SetSkin(4)
+				vehP:SetCruisingSpeed(30)
 			end
 
 			TakeQuest("d_FindBanditBaseOfOilMine_Quest")

@@ -248,7 +248,7 @@
 				ModelName="r3_man"
 				skin="2"
 				cfg="2173"
-				helloReplyNames="r3m2_AloneDruid1_2_N01 r3m2_AloneDruid1_1_N01"
+				helloReplyNames="r3m2_AloneDruid1_2_N01 r3m2_AloneDruid1_1_N01 Dlg_npc_003245"
 				SpokenCount="0" />
 		</Object>
 
@@ -1217,8 +1217,8 @@
 		Name="NearMonster_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1341.193 341.074 1397.859"
-		Radius="89.589" />
+		Pos="1317.669 340.948 1396.207"
+		Radius="100.589" />
 
 	<Object
 		Flags="21"

@@ -470,6 +470,7 @@
 			if veh then
 				veh:SetSkin(1)
 				veh:SetExternalPathByName("mer_path")
+				veh:SetCruisingSpeed(20)
 			end
 
 			TActivate("RUNMER")

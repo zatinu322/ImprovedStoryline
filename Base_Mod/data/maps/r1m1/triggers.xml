@@ -901,9 +901,6 @@
 	<trigger Name="METALFELIXDIE3" active="0">
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="FelixBanditCars3_vehicle_0" />
 		<script>
-			local FVehicle = GetEntityByName("FelixBanditCars3_vehicle_0")
-			if FVehicle then FVehicle:Remove() end
-
 			TActivate( "RolikBegin_Felix4" )
 
 			CompleteQuest( "d_KillFelix_Quest" )

@@ -405,6 +405,11 @@
 				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1)
 				StartCinematic()
 
+				Plf = GetPlayerVehicle()
+				if Plf then
+					Plf:SetExternalPathByName("ReturnPath")
+				end
+
 				TActivate("trConv_End")
 			end
  		</script>

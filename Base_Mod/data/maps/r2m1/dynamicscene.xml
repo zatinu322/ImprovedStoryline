@@ -360,12 +360,6 @@
 
 				<Item
 					PosX="0"
-					PosY="25"
-					Flags="16"
-					Prototype="belazCargo03" />
-
-				<Item
-					PosX="0"
 					PosY="35"
 					Flags="16"
 					Prototype="mirotvorecCargo01" />
@@ -7550,9 +7544,9 @@
 			Name="TheNewSibilla_enter"
 			Belong="1083"
 			Prototype="genericLocation"
-			Pos="515.201 253.755 2081.858"
+			Pos="519.011 253.490 2087.411"
 			Rot="0.000 -0.737 0.000 0.676"
-			Radius="70.000" />
+			Radius="97.000" />
 
 		<Parts />
 

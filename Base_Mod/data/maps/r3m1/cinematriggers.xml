@@ -841,7 +841,7 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 
-			CreateNewDummyObject( "submarina",	"Subm", -1, -1, CVector(4035.027, 200.270, 1620.457), Quaternion(-0.144, -0.057, -0.008, 0.988),0 )
+			CreateNewDummyObject( "submarina",	"Subm", -1, -1, CVector(4010.692, 190.000, 1890.384), Quaternion(-0.006, -0.592, -0.001, 0.806),0 )
 
 			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
 			local mover = GetEntityByID( moverId ) 
@@ -866,6 +866,7 @@
 			vehPlayer:SetCustomLinearVelocity( 0 )
 		end
 
+		getObj("Subm"):SetPosition( CVector(4010.692, 245.000, 1890.384))
 		getObj("Subm"):SetNodeAction(AT_STAND2)
 
 		trigger:Deactivate()

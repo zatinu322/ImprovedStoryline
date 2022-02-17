@@ -149,8 +149,8 @@
 		Name="LisaRolik_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1227.048 300.228 2900.870"
-		Radius="79.863"
+		Pos="1228.575 306.107 2924.284"
+		Radius="83.863"
 		LookingTimeOut="15.000" />
 
 	<Object
@@ -375,8 +375,8 @@
 		Name="FelixBaseLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="493.000 302.986 1883.000"
-		Radius="100.000"
+		Pos="496.095 303.849 1801.254"
+		Radius="139.000"
 		LookingTimeOut="100.000" />
 
 	<Object

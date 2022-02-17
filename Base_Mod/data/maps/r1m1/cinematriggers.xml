@@ -5,8 +5,6 @@
 	<trigger Name="StartRolikGame" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			trigger:Deactivate()    
@@ -108,8 +106,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			TeamCreate("HospitalEnemy",1002,CVector(2648.307, 321.213, 1661.576),{"Sml301"})
@@ -190,8 +186,6 @@
 	<trigger Name="ZASADA_1" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="GameLoc_1" />
 		<script>
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			PlayCustomMusic("Battle02")
@@ -245,8 +239,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local FVehicle = GetEntityByName("FirstB_0")
@@ -314,8 +306,6 @@
 	<trigger Name="RolikBegin_Lisa" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local PlVehicle = GetPlayerVehicle()
 			if PlVehicle then
 				PlVehicle:SetGamePositionOnGround( CVector(1245.248, 291.696, 2853.315) )
@@ -348,8 +338,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			StartConversation( "Lisa" )
@@ -752,8 +740,6 @@
 	<trigger Name="trLisa5" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local vehLisa
 			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
 			if FVehicle then
@@ -804,8 +790,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
@@ -863,8 +847,6 @@
 	<trigger Name="trLisa6" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local vehLisa
 			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
 			if FVehicle then
@@ -917,8 +899,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehLisa = GetEntityByName("vehLisa_0")
@@ -1065,8 +1045,6 @@
 	<trigger Name="trLisa8" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local vehLisa
 			local FVehicle = GetEntityByName("CARLISA_vehicle_0")
 			if FVehicle then
@@ -1205,8 +1183,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			TDeactivate( "trMsg01" )
@@ -1290,8 +1266,6 @@
 	<trigger Name="trFelix1" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local vehFelix0 = CreateVehicleEx("FelixVehicle","FelixVehicle01",CVector(2004.950, 321.673, 2438.249), 1013)
 			if vehFelix0 then
 				vehFelix0:SetRotation(Quaternion(-0.003, -0.699, 0.012, 0.715))
@@ -1399,8 +1373,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			StopPlayingCustomMusic()
 
 			RestoreAllToleranceStatus()
@@ -1507,8 +1479,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			StopPlayingCustomMusic()
 
 			RestoreAllToleranceStatus()
@@ -1538,8 +1508,6 @@
 	<trigger Name="RolikBegin_FatherDeath" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
 		<script>
-			CinemaFiltersUse()
-
 			PlayCustomMusic("Death01")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -1625,8 +1593,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehPlayer = GetPlayerVehicle()
@@ -1671,8 +1637,6 @@
 	<trigger Name="RolikBegin_Father" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
 		<script>
-			CinemaFiltersUse()
-
 			PlayCustomMusic("Sadness1")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -1812,8 +1776,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehPlayer = GetPlayerVehicle()
@@ -1898,8 +1860,6 @@
 	<trigger Name="trFelix2" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(479.414, 305.863, 1801.109), Quaternion(0.031, 0.925, 0.003, 0.379), 1)
 
 			local vehFelix0 = CreateVehicleEx("FelixVehicle","FelixVehicle01",CVector(477.554, 306.603, 1799.010), 1013)
@@ -1934,8 +1894,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			StopPlayingCustomMusic()
@@ -1982,8 +1940,6 @@
 	<trigger Name="RolikBegin_Felix3" active="0">
 		<event timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
-			CinemaFiltersUse()
-
 			PlayCustomMusic("Passage03")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -2048,8 +2004,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehFelix = GetEntityByName("FelixVehicle01")
@@ -2086,8 +2040,6 @@
 	<trigger Name="RolikBegin_Felix4" active="0">
 		<event timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
-			CinemaFiltersUse()
-
 			PlayCustomMusic("IntenseDialogue03")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -2298,8 +2250,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehPlayer = GetPlayerVehicle()

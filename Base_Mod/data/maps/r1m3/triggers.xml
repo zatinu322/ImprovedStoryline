@@ -152,8 +152,6 @@
 		<script>
 			LeaveTown()
 
-			CinemaFiltersUse()
-
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
@@ -195,8 +193,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			local Plf = GetPlayerVehicle()
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
@@ -215,8 +211,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			local Plf = GetPlayerVehicle()
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
@@ -439,8 +433,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehR = GetEntityByName("vehicleRunner")
@@ -483,8 +475,6 @@
 				len = Dist(pl, run)
 
 				if (len > 305) or (15 > len) then
-					CinemaFiltersUse()
-
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
 					local Plf = GetPlayerVehicle()
@@ -510,8 +500,6 @@
 					trigger:Deactivate()
 				end
 			else
-				CinemaFiltersUse()
-
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
 				local Plf = GetPlayerVehicle()
@@ -542,8 +530,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local r = GetEntityByName ("OilMineRuner")
@@ -633,8 +619,6 @@
 			if run and run:IsAlive()  then
 				len = Dist(pl, run)
 				if (len > 305) or (15 > len) then
-					CinemaFiltersUse()
-
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
 					local Plf = GetPlayerVehicle()
@@ -674,8 +658,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local r = GetEntityByName ("MerCar")
@@ -809,8 +791,6 @@
 			TDeactivate( "RUNTOPIONEER" )
 			TActivate( "TRIGGER_TUNNELOPEN" )
 
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -847,8 +827,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -903,8 +881,6 @@
 	<trigger Name="TRIGGER_THIEFDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="ThiefCar" />
 		<script>
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -942,8 +918,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 			
 			local ArmyVeh1 = GetEntityByName("ArmiaTSP_vehicle_0")
@@ -1223,8 +1197,6 @@
 	<trigger Name="RolikExitToMap11" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M1")), CVector(getPos("FromR1M1")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M1")))
 
@@ -1235,8 +1207,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M1")))
@@ -1296,8 +1266,6 @@
 	<trigger Name="RolikExitToMap12" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M2")), CVector(getPos("FromR1M2")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
 
@@ -1308,8 +1276,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
@@ -1373,8 +1339,6 @@
 	<trigger Name="RolikExitToMap14" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M4")), CVector(getPos("FromR1M4")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M4")))
 
@@ -1385,8 +1349,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M4")))
@@ -1445,8 +1407,6 @@
 	<trigger Name="RolikExitToMap21" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR2M1")), CVector(getPos("FromR2M1")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1")))
 
@@ -1457,8 +1417,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1")))

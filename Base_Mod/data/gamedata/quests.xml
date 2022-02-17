@@ -2015,51 +2015,60 @@
 		Levels="r2m2 r2m1 r3m1 r3m2" />
 <!--Root/r2m2/Сюжетные/Сдать повстанцев в Маррецию-->
 	<quest
-		Name="PredatSNG_Quest"
+		Name="r2m2_BetrateAMorSNG"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Marezzia")' />
+		ConditionToGive="any failed"
+		PrecedingQuests="d_MeetLeaderGelvetcia_Quest Shpion1_Quest">
+		<quest
+			Name="PredatSNG_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r2m2_BetrateAMorSNG" />
 
-	<quest
-		Name="Ozhidanie1_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
+		<quest
+			Name="Ozhidanie1_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="PredatSNG_Quest" />
 
-	<quest
-		Name="Ozhidanie2_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Marezzia")' />
+		<quest
+			Name="Ozhidanie2_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Ozhidanie1_Quest" />
 
-	<quest
-		Name="Kontsovka5_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Ending5_loc")' />
+		<quest
+			Name="Kontsovka5_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Ozhidanie2_Quest" />
 
-	<quest
-		Name="KillPalach"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Palach_vehicle_0")' />
+		<quest
+			Name="KillPalach"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Kontsovka5_Quest" />
 
-	<quest
-		Name="EscapeArzhan"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("ToR2M1")' />
+		<quest
+			Name="EscapeArzhan"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="KillPalach" />
+	</quest>
 <!--Root/r2m2/Сюжетные/Мистер Шляпа 3-->
 	<quest
 		Name="MrShlyapa3_Quest"

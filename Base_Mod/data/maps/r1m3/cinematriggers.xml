@@ -667,8 +667,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehPlayer = GetPlayerVehicle()
@@ -2131,8 +2129,6 @@
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			
-			CinemaFiltersUse()
-
 			PlayCustomMusic("IntenseDialogue03")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -2167,8 +2163,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-			
 			StopPlayingCustomMusic()
 			
 			local stat = GetVar("DeadMer").AsInt

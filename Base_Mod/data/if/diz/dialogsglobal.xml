@@ -6330,7 +6330,7 @@
 		name="Dlg_pl_002158"
 		text="Что ещё остаётся, буду ждать..."
 		role="PLAYER"
-		scriptResult="CompleteQuest('PredatSNG_Quest'); TakeQuest('Ozhidanie1_Quest'); TActivate('trOzhidai'); RemoveQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'SNGSpy_P'); EndConversation()" />
+		scriptResult="CompleteQuest('PredatSNG_Quest'); TActivate('trOzhidai'); RemoveQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'SNGSpy_P'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002147"
@@ -6367,7 +6367,7 @@
 		name="Dlg_pl_002152"
 		text="Вот и здорово."
 		role="PLAYER"
-		scriptResult="CompleteQuest('Ozhidanie2_Quest'); TakeQuest('Kontsovka5_Quest'); TActivate('preEnding5'); TActivate('Ending5_begin'); EndConversation()" />
+		scriptResult="CompleteQuest('Ozhidanie2_Quest'); TActivate('preEnding5'); TActivate('Ending5_begin'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002279"
@@ -6682,7 +6682,7 @@
 		name="Dlg_pl_002142"
 		text="[Вот и славно. А теперь в Маррецию! Наверняка там обрадуются моему подарку.]"
 		role="PLAYER"
-		scriptResult="FailQuestIfTaken('d_MeetLeaderGelvetcia_Quest'); FailQuestIfTaken('Shpion1_Quest'); TakeQuest('PredatSNG_Quest'); GetCurNpc():SetSpokenCount( 1 ); TActivate('MarezziaOpen'); SetTolerance(1100,1015,RS_NEUTRAL); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P');  EndConversation()" />
+		scriptResult="FailQuestIfTaken('d_MeetLeaderGelvetcia_Quest'); FailQuestIfTaken('Shpion1_Quest'); TakeQuest('r2m2_BetrateAMorSNG'); GetCurNpc():SetSpokenCount( 1 ); TActivate('MarezziaOpen'); SetTolerance(1100,1015,RS_NEUTRAL); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002135"
@@ -7047,7 +7047,7 @@
 		name="Dlg_pl_002328"
 		text="Будет сделано."
 		role="PLAYER"
-		scriptResult=" TakeQuest( 'r2m2_FightWithAxelInArena_Quest' ); CompleteQuest('Eretik_Meet');  TActivate('AXELARENA'); TActivate('OhranaAxel'); TActivate('EretOff'); AddHistory(  'r2_Before_Axel_00'  );   AddFadingMsgId( 'fm_history_got' );  EndConversation()" />
+		scriptResult="TakeQuest( 'r2m2_FightWithAxelInArena_Quest' ); CompleteQuest('Eretik_Meet'); TActivate('AXELARENA'); TActivate('OhranaAxel'); TActivate('EretOff'); AddHistory(  'r2_Before_Axel_00'  ); AddFadingMsgId( 'fm_history_got' ); GetPlayerVehicle():SetCustomLinearVelocity(0); GetPlayerVehicle():SetThrottle(0); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002329"

@@ -5,6 +5,12 @@
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			SetVar("KnownMap",0)
+
+			local zeon = getObj("Zeon_enter")
+			if zeon then
+				zeon:SetProperty("Active", 0)
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -63,8 +69,6 @@
 	<trigger Name="RolikStoneUralZapret" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("Shlyapa32_loc")), CVector(getPos("Shlyapa33_loc")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("Shlyapa33_loc")))
 
@@ -75,8 +79,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("Shlyapa33_loc")))
@@ -111,8 +113,6 @@
 		<script>
 			CompleteQuest( "r2m2_GiveBardakToEnemy" )
 
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -141,8 +141,6 @@
 		<event eventid="GE_SKIP_CINEMATIC"	ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC"	ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -175,8 +173,6 @@
 		<script>
 			CompleteQuest( "r2m2_GiveBardakToSideVillage2" )
 
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -204,8 +200,6 @@
 		<event eventid="GE_SKIP_CINEMATIC"	ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC"	ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -230,8 +224,6 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="FelixCars" />
 		<script>
 			CompleteQuest( "r2m2_FightFelix2" )
-
-			CinemaFiltersUse()
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -262,8 +254,6 @@
 		<event eventid="GE_SKIP_CINEMATIC"	ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC"	ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 			SetTolerance( 1100, 1013, RS_ENEMY )
 
@@ -311,8 +301,6 @@
 		<script>
 			CompleteQuest( "r2m2_ToKillAllSNGPeople2" )
 
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -342,8 +330,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -375,8 +361,6 @@
 		<script>
 			CompleteQuest( "r2m2_KillMrPresidentAndOther" )
 
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -407,11 +391,11 @@
 		<event eventid="GE_SKIP_CINEMATIC"	ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC"	ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
+
+			TActivate("ZeonOpen")
 
 			trigger:Deactivate() 
 		</script>
@@ -433,8 +417,6 @@
 	<trigger Name="AXELARENADIE" active="0">
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="AxelCarWar_vehicle_0" />
 		<script>
-			GameFiltersUse()
-
 			CompleteQuest( "r2m2_FightWithAxelInArena_Quest2" )
 
 			TActivate("RolikBegin_AXELARENADIE2")
@@ -467,7 +449,6 @@
 			if IsQuestTaken("r2m2_Znaki2_Quest") and not( IsQuestComplete("r2m2_Znaki2_Quest")) then
 				CompleteQuest("r2m2_Znaki2_Quest")
 
-				CinemaFiltersUse()
 				TActivate("RolikBegin_ZNAKIZNAKI")
 
 				trigger:Deactivate() 
@@ -618,8 +599,6 @@
 				vehPlayer:UnlimitMaxSpeed()
 		   	end
 
-			GameFiltersUse()
-
 			StopPlayingCustomMusic()
 
 			DisableGodMode()
@@ -654,8 +633,6 @@
 		<event	eventid="GE_SKIP_CINEMATIC"	ObjName="Player1" />
 		<event	eventid="GE_END_CINEMATIC"	ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehPlayer = GetPlayerVehicle()
@@ -758,8 +735,6 @@
 	<trigger Name="RolikExitToMap21" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR2M1")), CVector(getPos("FromR2M1")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1")))
 
@@ -770,8 +745,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1")))
@@ -821,6 +794,8 @@
 					TActivate ("RolikENDExitToMap21small")
 				end
 			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
 				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 				AddCinematicMessage( 8803, 0.5 )
@@ -833,8 +808,6 @@
 	<trigger Name="RolikExitToMap21small" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR2M1small")), CVector(getPos("FromR2M1small")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1small")))
 
@@ -845,8 +818,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1small")))
@@ -863,7 +834,6 @@
 		<event	timeout="30" eventid="GE_TIME_PERIOD" />
 		<script>
 			CompleteQuest("Ozhidanie1_Quest")
-			TakeQuest("Ozhidanie2_Quest")
 
 			trigger:Deactivate()
 		</script>
@@ -874,11 +844,13 @@
 		<event	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 
-			TeamCreate("Palach",1015,CVector(783.123, 263.580, 3303.772),{"CoolBelaz"})
+			CreateVehicleEx("CoolBelaz", "PalachVehicle", CVector(CVector(783.123, 263.580, 3303.772)), 1015)
 
-			local vehPal = GetEntityByName("Palach_vehicle_0")
+			local vehPal = GetEntityByName("PalachVehicle")
 			if vehPal then
 				vehPal:SetRotation(Quaternion(-0.000, 1.000, -0.005, -0.001))
+				vehPal:setGodMode(1)
+				vehPal:setImmortalMode(1)
 			end
 			
 			trigger:Deactivate()
@@ -890,12 +862,9 @@
 		<script>
 			
 			CompleteQuest("KillPalach")
-			
-			TakeQuest("EscapeArzhan")
-			
+						
 			TActivate("PalachIsDead")
-			TActivate("PalachIsDead2")
-			
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -919,6 +888,8 @@
 			StartCinematic()
 
 			AddCinematicMessage( 58, 1 )
+
+			TActivate("PalachIsDead2")
 			
 			trigger:Deactivate()
 		</script>
@@ -975,6 +946,9 @@
 		<script>
 			
 			StopPlayingCustomMusic()
+			
+			CompleteQuest("EscapeArzhan")
+
 			SpawnMessageBox("8809")
 			ShowDeathMenu()
 
@@ -1126,6 +1100,19 @@
 				end
 
 			SetConditionalClosingForTown( "Monastery", "r2m2", true )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ZeonOpen" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local zeon = getObj("Zeon_enter")
+			if zeon then
+				zeon:SetProperty("Active", 1)
+			end
 
 			trigger:Deactivate()
 		</script>

@@ -24,8 +24,6 @@
 	<trigger Name="trLisaPlen" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local Plf = GetPlayerVehicle()
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
@@ -52,8 +50,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehLisa = GetEntityByName("MolokovozMenu")
@@ -139,8 +135,6 @@
 	<trigger Name="trLisaPlenDie_cam01" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetGamePositionOnGround( CVector(5511.771, 53.723, 4543.106))
@@ -238,8 +232,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehLisa = GetEntityByName("MolokovozMenu")
@@ -308,8 +300,6 @@
 	<trigger Name="RolikBegin_BenHause_Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			if IsQuestTaken("BenBadEnd") then
 				PlayCustomMusic("PromiseGuitar")
 			else
@@ -336,8 +326,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local obj01 = GetEntityByName("HumanBen")
@@ -427,7 +415,6 @@
 				PlVehicle:SetCustomControlEnabled( false )
 			end
 
-			CinemaFiltersUse()
 			FlyLinked( "Kol2_cam01", PlID, 8, 1, 0, PlID )
 			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
 			FlyLinked( "Kol2_cam03", CTochID, 12, 0, 1, RGlad2ID )
@@ -461,8 +448,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			StopPlayingCustomMusic()
@@ -533,7 +518,6 @@
 				PlVehicle:SetCustomLinearVelocity( 30 )
 			end
 
-			CinemaFiltersUse()
 			FlyLinked( "Kol2_cam01", PlID, 8, 1, 0, PlID )
 			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			FlyLinked( "Kol2_cam21", RGlad2ID, 3, 0, 0, nil, nil, true )
@@ -583,8 +567,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local PlVehicle = GetPlayerVehicle()
@@ -670,8 +652,6 @@
 	<trigger Name="RolikBegin_BenHause2_Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			PlayCustomMusic("QuietDialogue01")
 
 			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3787.429, 121.943, 1824.044), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
@@ -695,8 +675,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local obj01 = GetEntityByName("HumanBen")
@@ -754,8 +732,6 @@
 	<trigger Name="RolikBegin_BenHause3_Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			PlayCustomMusic("QuietDialogue01")
 
 			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3787.429, 121.943, 1824.044), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
@@ -779,8 +755,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local obj01 = GetEntityByName("HumanBen")

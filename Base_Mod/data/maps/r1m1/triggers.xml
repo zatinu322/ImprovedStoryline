@@ -180,7 +180,6 @@
 		<script>
 			SetWeather(0)
 
-			GameFiltersUse()
 			PlayCustomMusic("GreenLeaves")
 			
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -590,8 +589,6 @@
 			if IsQuestTaken("d_PunishBandits_Quest") then
 				CompleteQuest( "d_PunishBandits_Quest" )
 
-				CinemaFiltersUse()
-
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
 				local Plf = GetPlayerVehicle()
@@ -777,8 +774,6 @@
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="FelixBanditCars_vehicle_0" />
 		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="FelixSouthLoc2" />
 		<script>
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -1139,8 +1134,6 @@
 	<trigger Name="RolikExitToMap12" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M2")), CVector(getPos("FromR1M2")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
 
@@ -1151,8 +1144,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
@@ -1225,8 +1216,6 @@
 	<trigger Name="RolikExitToMap13" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M3")), CVector(getPos("FromR1M3")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
 
@@ -1237,8 +1226,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
@@ -1307,8 +1294,6 @@
 	<trigger Name="RolikExitToMap41" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR4M1")), CVector(getPos("FromR4M1")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR4M1")))
 
@@ -1319,8 +1304,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR4M1")))
@@ -1411,8 +1394,6 @@
 	<trigger Name="RolikExitToSouth" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToSouth")), CVector(getPos("FromSouth")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromSouth")))
 
@@ -1423,8 +1404,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromSouth")))

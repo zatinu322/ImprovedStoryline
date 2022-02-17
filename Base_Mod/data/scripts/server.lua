@@ -63,8 +63,6 @@ function InitPlayer()
 
 	if not g_Player then
  		LOG "Could not find global g_Player!!!"
-        else
-                GameFiltersUse()
 	end
 end
 
@@ -610,24 +608,6 @@ function setRot(name, rotation)
 	else
 		return nil
 	end
-end
-
-
--- Значение Фильтров в Игровом режиме
-function GameFiltersUse()
---			g_EnableBloom (true, 0.75, 0.25)
-
---                      g_EnableBloom (false)
---                      g_EnableMotionBlur (false)
-
---                      g_EnableBloom( GetProfileBloom() )
---                      g_EnableMotionBlur( GetProfileMotionBlur(), GetProfileMotionBlurAlpha() )
-end
-
--- Значение Фильтров в Кинематографическом режиме
-function CinemaFiltersUse()
---			g_EnableBloom (true, 0.75, 0.55)
---			g_EnableMotionBlur (true, 0.25)
 end
 
 -- special function for creating vehicle

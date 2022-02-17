@@ -232,8 +232,6 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sign_location" />
 		<script>
 			if IsQuestTaken("SeeSigns_Quest")  then
-				CinemaFiltersUse()
-
 				SaveAllToleranceStatus(RS_NEUTRAL)
 				
 				PlayCustomMusic("Bio02")
@@ -262,8 +260,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -299,8 +295,6 @@
 		<script>
 			CompleteQuestIfTaken( "CombatInKollizey_Quest2" )
 
-			CinemaFiltersUse()
-
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -333,8 +327,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -348,8 +340,6 @@
 		<script>
 			CompleteQuestIfTaken( "r1m2_Glagiators_Quest2" )
 			TakeQuest("r1m2_MovemineralToMidgard_Quest")
-
-			CinemaFiltersUse()
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -381,8 +371,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
@@ -514,8 +502,6 @@
 	<trigger Name="RolikExitToMap11" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M1")), CVector(getPos("FromR1M1")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M1")))
 
@@ -526,8 +512,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M1")))
@@ -594,8 +578,6 @@
 	<trigger Name="RolikExitToMap13" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CinemaFiltersUse()
-
 			RotationPlayerByPoints(CVector(getPos("ToR1M3")), CVector(getPos("FromR1M3")))
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
 
@@ -606,8 +588,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))

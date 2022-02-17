@@ -1431,11 +1431,9 @@
 	<QuestInfo
 		questName="Kontsovka5_Quest"
 		briefDiz="Встериться с Акселем в условленном месте"
-		fullDiz="Начальник стражи сообщил мне, что Аксель лично хочет вручитьмне награду и будет ожидать меня в его секретном месте. Наконец-то я узнаю, где прячется Лиса!"
 		isMainQuest="1">
 		<Map
-			name="r2m2"
-			targetObjName="Ending5_loc" />
+			name="r2m2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1789,13 +1787,14 @@
 	<QuestInfo
 		questName="Ozhidanie1_Quest"
 		briefDiz="Подождать окончания допроса"
-		fullDiz="Я привёз изменника в Маррецию, теперь мне необходимо подождать, пока с ним потолкуют как следует. Чем бы заняться, чтобы скоротать время?"
-		isMainQuest="1" />
+		isMainQuest="1">
+		<Map
+			name="r2m2" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="Ozhidanie2_Quest"
 		briefDiz="Поговорить с начальником охраны в Марреции"
-		fullDiz="Уже прошло достаточно времени, так что допрос, скорее всего, уже закончен."
 		isMainQuest="1">
 		<Map
 			name="r2m2"
@@ -1892,7 +1891,6 @@
 	<QuestInfo
 		questName="PredatSNG_Quest"
 		briefDiz="Привезти лидера повстанцев в Маррецию"
-		fullDiz="Чем пытаться вывести шпиона из пекла войны, я решил, что гораздо проще будет отдать его Акселю и получить нужную мне информацию из первых уст."
 		isMainQuest="1">
 		<Map
 			name="r2m2"
@@ -4378,6 +4376,12 @@
 			name="r2m2"
 			targetObjName="Marezzia" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_BetrateAMorSNG"
+		briefDiz="Перейти на сторону Алого Рассвета"
+		fullDiz="Чем пытаться вывести шпиона из пекла войны, я решил, что гораздо проще будет отдать его Акселю и получить нужную мне информацию из первых уст."
+		isMainQuest="1" />
 
 	<QuestInfo
 		questName="r2m2_DestroySNGKaravan"

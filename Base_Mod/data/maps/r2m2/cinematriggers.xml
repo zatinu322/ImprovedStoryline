@@ -479,6 +479,8 @@
 			TDeactivate("trAXELARENADIE2_msg33")
 			TDeactivate("trExplosion")
 
+			TActivate("ZeonOpen")
+
 			StopPlayingCustomMusic()
 
 			SetCameraBehindPlayerVehicle()
@@ -568,10 +570,8 @@
 			if vehPlayer then
 				vehPlayer:SetGamePositionOnGround( CVector(892.959, 263.152, 3159.999))
 				vehPlayer:SetRotation(Quaternion(-0.014, 0.392, 0.026, -0.919))
-				vehPlayer:SetCustomLinearVelocity( 50 )
-				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 10 )
 				vehPlayer:SetExternalPathByName("koncovka55")
-				vehPlayer:SetCustomControlEnabled( false )
 			end
 			
 			trigger:Deactivate()
@@ -596,21 +596,30 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			RestoreAllToleranceStatus()
+
+			TeamCreate("Palach",1015,CVector(783.123, 263.580, 3303.772),{"CoolBelaz"}, nil, nil, Quaternion(-0.000, 1.000, -0.005, -0.001))
+
+			local vehPal = GetEntityByName("PalachVehicle")
+			if vehPal then vehPal:Remove() end
 		
-			GetPlayerVehicle():PlaceToEndOfPath()
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath()
+			end
 			
 			PlayCustomMusic("Passage03a")
-			
-			RestoreAllToleranceStatus()
 			
 			SetTolerance(1100,1015,RS_ENEMY)
 			
 			TActivate("KvestNaEnding5")
 			
 			CompleteQuest("Kontsovka5_Quest")
-			
-			TakeQuest("KillPalach")
-			
+
+			TDeactivate("Ending5_FadeIn")
+			TDeactivate("Ending5_FadeIn2")
+						
 			trigger:Deactivate()
 		</script>
 	</trigger>

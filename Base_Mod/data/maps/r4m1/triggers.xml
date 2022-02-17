@@ -595,8 +595,6 @@
 				vehPlayer:UnlimitMaxSpeed()
 		   	end
 			
-			GameFiltersUse()
-			
 			StopPlayingCustomMusic()
 			
 			DisableGodMode()
@@ -620,8 +618,6 @@
 		<event	eventid="GE_SKIP_CINEMATIC"	ObjName="Player1" />
 		<event	eventid="GE_END_CINEMATIC"	ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local vehPlayer = GetPlayerVehicle()
@@ -1279,8 +1275,6 @@
 			if run and run:IsAlive()  then
 				len = Dist(pl, run)
 				if (len > 305) or (15 > len) then
-					CinemaFiltersUse()
-
 
 					local Plf = GetPlayerVehicle()
 					local PlfID = GetPlayerVehicleId()
@@ -1307,8 +1301,7 @@
 					trigger:Deactivate()
 				end
 			else
-				CinemaFiltersUse()
-
+				
 				local Plf = GetPlayerVehicle()
 				local PlfID = GetPlayerVehicleId()
 				local PlfCoor = Plf:GetPosition()
@@ -1339,8 +1332,6 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
-			GameFiltersUse()
-
 			RestoreAllToleranceStatus()
 
 			local r1 = GetEntityByName ("Tankisty_vehicle_0")

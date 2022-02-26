@@ -36,34 +36,39 @@
 		<Point  coord="3095.573 343.287 3224.637" rotation="-0.010 0.952 -0.033 0.303"/>
 	</Path>
 
-	<Path Name = "VRRolikCam2">
-		<Point  coord="3070.032 325.752 3149.216" rotation="0.002 0.996 -0.025 -0.089"/>
-		<Point  coord="3069.435 325.728 3148.253" rotation="0.003 0.993 -0.025 -0.117"/>
+	<Path Name = "VRRolikCam2"> 
+		<Point  coord="3050.917 337.518 3170.973" rotation="-0.014 0.874 -0.025 0.486"/>
+		<Point  coord="3041.854 336.908 3165.342" rotation="-0.014 0.874 -0.025 0.486"/>
 	</Path>
 
-	<Path Name = "VRRolikCam3">
-		<Point  coord="3071.470 327.597 3167.041" rotation="0.006 -0.040 -0.000 0.999"/>
-		<Point  coord="3072.090 327.597 3167.060" rotation="0.001 0.155 0.000 0.988"/>
+	<Path Name = "VRRolikCam3"> 
+		<Point  coord="3068.326 331.716 3204.178" rotation="-0.076 -0.432 0.036 0.898"/>
+		<Point  coord="3068.886 331.594 3204.627" rotation="-0.034 -0.432 0.016 0.901"/>
 	</Path>
 
-	<Path Name = "VRRolikCam4">
-		<Point  coord="3071.123 325.647 3141.525" rotation="0.004 0.011 0.000 1.000"/>
-		<Point  coord="3071.101 325.656 3142.465" rotation="0.006 -0.011 -0.000 1.000"/>
+	<Path Name = "VRRolikCam4"> 
+		<Point  coord="3083.987 341.921 3179.659" rotation="-0.030 0.873 -0.054 0.484"/>
+		<Point  coord="3068.723 341.921 3195.260" rotation="-0.016 0.952 -0.051 0.303"/>
 	</Path>
 
 	<Path Name = "VRRolikCam5">
-		<Point  coord="3072.614 327.746 3170.361" rotation="-0.002 0.998 -0.051 0.044"/>
-		<Point  coord="3070.666 327.790 3170.130" rotation="0.002 0.998 -0.063 -0.030"/>
+		<Point  coord="3073.280 331.451 3207.662" rotation="-0.009 0.933 -0.024 0.359"/>
+		<Point  coord="3072.757 331.411 3207.086" rotation="-0.007 0.924 -0.017 0.381"/>
 	</Path>
 
 	<Path Name = "VRRolikCam6">
-		<Point  coord="3070.173 324.643 3145.980" rotation="-0.013 0.968 0.248 -0.049"/>
-		<Point  coord="3070.121 324.364 3146.486" rotation="-0.013 0.968 0.248 -0.049"/>
+		<Point  coord="3045.425 360.758 3211.449" rotation="-0.028 0.971 -0.187 0.146"/>
+		<Point  coord="3043.707 358.412 3205.854" rotation="-0.028 0.971 -0.187 0.146"/>
 	</Path>
 
 	<Path Name = "VRRolikCam7">
-		<Point  coord="3071.528 327.593 3166.432" rotation="-0.028 -0.013 0.000 1.000"/>
-		<Point  coord="3070.468 327.593 3166.429" rotation="-0.010 -0.250 0.003 0.968"/>
+		<Point  coord="3062.207 332.944 3195.582" rotation="-0.061 -0.361 0.024 0.930"/>
+		<Point  coord="3058.879 332.944 3200.292" rotation="-0.071 -0.538 0.045 0.838"/>
+	</Path>
+
+	<Path Name = "VRRolikCam8">
+		<Point  coord="3074.763 331.019 3157.943" rotation="-0.021 0.782 -0.026 0.622"/>
+		<Point  coord="3069.783 331.043 3156.849" rotation="-0.004 0.780 -0.005 0.626"/>
 	</Path>
 
 	<Path Name = "VRRolikCam9">

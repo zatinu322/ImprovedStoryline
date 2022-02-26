@@ -10,6 +10,7 @@
 			end
 			
 			SetVar("KnownMap",0)
+			SetVar("Tikhomir",0)
 
 			CreateNewDummyObject("minin", "rinolskbuilding", -1, -1, CVector(1949.495, 255.193, 338.593), Quaternion(-0.004, -0.666, -0.005, -0.746), 0)
 			CreateNewDummyObject("big_gate01", "rinolskgate", -1, -1, CVector(1919.866, 258.721, 341.483), Quaternion(-0.004, -0.659, -0.005, -0.752), 0)
@@ -275,6 +276,16 @@
 		</script>
 	</trigger>
 
+	<trigger Name="trhumPlayerRemove" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local humP = GetEntityByName("humPlayer1")
+			if humP then humP:Remove() end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<trigger Name="VyezdRolik2Start" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Vyezd2_loc" />
 		<script>
@@ -293,15 +304,28 @@
 		</script>
 	</trigger>
 
-	<trigger Name="CreateBrodyagaCar" active="0">
+	<trigger Name="CreateTikhomirCar" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateVehicleEx("Scout01","BrodyagaCar",CVector(3053.686, 329.370, 3152.573), 1050)
-			local bcar = GetEntityByName("BrodyagaCar")
+			CreateVehicleEx("UralTikhomir","TikhomirCar",CVector(3053.686, 329.370, 3152.573), 1092)
+			local bcar = GetEntityByName("TikhomirCar")
 			if bcar then
 				bcar:SetRotation(Quaternion(-0.007, 0.340, -0.085, 0.937))
 				bcar:setGodMode(1)
+				bcar:setImmortalMode(1)
+				bcar:SetRandomSkin()
 			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trTikhomirsCarDIE" active="0">
+	<event eventid="GE_OBJECT_DIE" ObjName="TikhomirAgressor" />
+		<script>
+			TActivate("trVRRolikFinal")
+
+			CompleteQuest("KillTikhomir_Quest1")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

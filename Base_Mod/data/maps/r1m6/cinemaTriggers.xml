@@ -788,6 +788,7 @@
 		</script>
 	</trigger>
 
+	<!-- Спасаем Серафиму на заводе -->
 	<trigger Name="PSSRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -891,6 +892,7 @@
 		</script>
 	</trigger>
 
+	<!-- Спасли Серафиму. Сопровождение. -->
 	<trigger Name="ASSRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -986,6 +988,7 @@
 		</script>
 	</trigger>
 
+	<!-- Доехали до ж/д станции -->
 	<trigger Name="StationRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1084,6 +1087,7 @@
 		</script>
 	</trigger>
 
+	<!-- Доехали до дома. Едем обратно. -->
 	<trigger Name="HomeRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1325,6 +1329,7 @@
 		</script>
 	</trigger>
 
+	<!-- Перед битвой за Кейтберг -->
 	<trigger Name="MBRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -2397,7 +2402,7 @@
 			
 			SetWeather(0)
 			
-			PlayCustomMusic("Bio02Loco")
+			PlayCustomMusic("Bio02")
 			
 			CreateNewDummyObject( "rr_locovagon", "loco1", -1, -1, CVector(2471.498, 255.000, 1895.675), Quaternion(0.0000, 0.1132, 0.0000, 0.9936), 0)
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2381.886, 282.310, 2955.780), Quaternion(0, 0, 0, 0), 1)
@@ -2433,7 +2438,6 @@
 	<trigger Name="ETLLRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			PlayCustomMusic("Bio02Loco")
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )

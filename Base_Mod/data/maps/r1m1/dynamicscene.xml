@@ -409,6 +409,16 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="TraiderAfterStryga"
+				Belong="1008"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="4"
+				cfg="94"
+				helloReplyNames="Dlg_npc_003264"
+				SpokenCount="0" />
+
+			<Object
 				Name="LisaSouth"
 				Belong="1008"
 				Prototype="NPC"

@@ -1072,6 +1072,16 @@
 				cfg="86"
 				helloReplyNames="r1m4_UnknownBar_Customer3_1_N01"
 				SpokenCount="0" />
+			
+			<Object
+				Name="TikhomirInSorrow"
+				Belong="1085"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="4"
+				cfg="84"
+				helloReplyNames="Dlg_npc_003256"
+				SpokenCount="0" />
 		</Object>
 
 		<Object

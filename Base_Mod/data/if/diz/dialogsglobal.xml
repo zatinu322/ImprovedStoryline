@@ -997,6 +997,25 @@
 		text="Да."
 		role="PLAYER"
 		scriptResult="SetVar('FelixChoise',3); TActivate('FelixPayRolik1'); AddPlayerMoney( -1000 ); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003253"
+		text="Как поступить?"
+		role="NPC"
+		scriptCondition="QuestStatus('FindDaughter_Quest6')==Q_COMPLETED and GetVar('Tikhomir').AsInt == 0"
+		nextReplies="Dlg_pl_003254 Dlg_pl_003255" />
+
+	<Reply
+		name="Dlg_pl_003255"
+		text="Убить Тихомира и вернуть Доброславу домой."
+		role="PLAYER"
+		scriptResult="SetVar('Tikhomir', 2); TActivate('trVRRolikContinue'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003254"
+		text="Отпустить Тихомира и Доброславу."
+		role="PLAYER"
+		scriptResult="SetVar('Tikhomir', 1); TActivate('trVRRolikContinue'); EndConversation()" />
 <!--Root/Финалы-->
 	<Reply
 		name="Dlg_npc_003103"
@@ -1678,13 +1697,13 @@
 
 	<Reply
 		name="Dlg_pl_002980"
-		text="Да. За последние несколько дней через город не проезжало никаких незнакомых машин?"
+		text="Да. За последние несколько дней через город не проезжало никаких машин на северо-восток?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002981" />
 
 	<Reply
 		name="Dlg_npc_002981"
-		text="Дай-ка припомню. Кроме твоей машины, из незнакомых была всего одна. Направлялась на север. Я ещё тогда подумал: ‘На кой чёрт ему туда нужно, там, кроме заброшенной фермы, ничего больше нет!’, но значения этому особо не придал."
+		text="Дай-ка припомню. В том направлении, кажется, два дня назад проезжал Тихомир, но я не видел, чтобы он возвращался. Я ещё тогда подумал: ‘На кой чёрт ему туда нужно, там, кроме заброшенной фермы, ничего больше нет!’, но значения этому особо не придал."
 		role="NPC"
 		nextReplies="Dlg_pl_002982" />
 
@@ -1692,7 +1711,7 @@
 		name="Dlg_pl_002982"
 		text="Спасибо, проверю эту ферму."
 		role="PLAYER"
-		scriptResult="TActivate('CreateBrodyagaCar'); TActivate('VyezdRolik3Start'); EndConversation()" />
+		scriptResult="TActivate('CreateTikhomirCar'); TActivate('VyezdRolik3Start'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002983"
@@ -1796,7 +1815,7 @@
 
 	<Reply
 		name="Dlg_npc_003182"
-		text="Дай-ка припомню. Кроме твоей машины, из незнакомых была всего одна. Направлялась на север. Я ещё тогда подумал: 'На кой чёрт ему туда нужно, там, кроме заброшенной фермы, ничего больше нет!', но значения этому особо не придал."
+		text="Дай-ка припомню. В том направлении, кажется, два дня назад проезжал Тихомир, но я не видел, чтобы он возвращался. Я ещё тогда подумал: 'На кой чёрт ему туда нужно, там, кроме заброшенной фермы, ничего больше нет!', но значения этому особо не придал."
 		role="NPC"
 		nextReplies="Dlg_pl_003183" />
 
@@ -1804,7 +1823,7 @@
 		name="Dlg_pl_003183"
 		text="Спасибо, проверю эту ферму."
 		role="PLAYER"
-		scriptResult="TActivate('CreateBrodyagaCar'); TActivate('VyezdRolik3Start'); SetTolerance(1100,1050,RS_ALLY); EndConversation()" />
+		scriptResult="TActivate('CreateTikhomirCar'); TActivate('VyezdRolik3Start'); SetTolerance(1100,1050,RS_ALLY); EndConversation()" />
 <!--Root/r5m2/Ринольск-->
 	<Reply
 		name="Dlg_npc_002885"
@@ -2048,7 +2067,7 @@
 
 	<Reply
 		name="Dlg_npc_002949"
-		text="Да. Подойди вон к тому дому и спроси Всеволода, он тебе сам всё расскажет."
+		text="Да. Нам всегда она нужна. Подойди вон к тому дому и спроси Всеволода, он тебе сам всё расскажет."
 		role="NPC"
 		nextReplies="Dlg_pl_002950" />
 
@@ -2086,25 +2105,25 @@
 
 	<Reply
 		name="Dlg_npc_002955"
-		text="…но сами никогда от помощи не отказываемся. Беда у меня случилась: пропала моя единственная дочь - Доброслава. Несколько дней назад она покинула дом вместе с одним добрым путником и до сих пор не вернулась."
+		text="…но сами никогда от помощи не отказываемся. Беда у меня случилась: пропала моя единственная дочь - Доброслава. Несколько дней назад она ушла на прогулку вместе со своим кавалером и больше не возвращалась."
 		role="NPC"
 		nextReplies="Dlg_pl_002956" />
 
 	<Reply
 		name="Dlg_pl_002956"
-		text="Выглядит как умышленное похищение. Кем был этот путник?"
+		text="Выглядит как умышленное похищение, но я пока что плохо знаю эту местность. Есть идеи, куда они могли поехать?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002957" />
 
 	<Reply
 		name="Dlg_npc_002957"
-		text="Это был очередной чужестранец, прибывший сюда в поисках ответов на вопросы. Он тоже выполнял какие-то поручения мудрецов, а потом я и глазом моргнуть не успел, как он покинул деревню вместе с Доброславой. Также исчезла и моя старая карта местности, на которой указаны выезды, которых сейчас уже нет."
+		text="Совершенно никаких. Правда, вместе с Доброславой пропала также и моя старая карта местности, на которой указаны выезды, которых сейчас уже нет."
 		role="NPC"
 		nextReplies="Dlg_pl_002958" />
 
 	<Reply
 		name="Dlg_pl_002958"
-		text="Значит, нужно искать его у этих выездов, пока он окончательно не покинул эти земли. Можешь показать мне на карте, где располагались эти выезды?"
+		text="Значит, сначала проверю эти выезды. Можешь показать мне на карте, где они расположены?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002959" />
 
@@ -2136,14 +2155,36 @@
 		name="Dlg_npc_002963"
 		text="Ты нашёл мою дочь?"
 		role="NPC"
-		scriptCondition="QuestStatus('FindDaughter_Quest7')==Q_TAKEN"
-		scriptResult="CompleteQuest('FindDaughter_Quest7'); CompleteQuest('HelpVillages_Quest');"
-		nextReplies="Dlg_pl_002964" />
+		scriptCondition="QuestStatus('GoBackWithoutDobr_Quest')==Q_TAKEN or QuestStatus('KillTikhomir_Quest2')==Q_TAKEN"
+		scriptResult="CompleteQuest('HelpVillages_Quest');"
+		nextReplies="Dlg_pl_002964 Dlg_pl_003250" />
+
+	<Reply
+		name="Dlg_pl_003250"
+		text="Сожалею, но я не успел. И шёл по их следу вплоть до выезда в Лиденклауд, но дальше их следы теряются. Не уверен, что мне удастся их выследить в текущей послевоенной разрухи."
+		role="PLAYER"
+		scriptCondition="QuestStatus('GoBackWithoutDobr_Quest')==Q_TAKEN"
+		scriptResult="CompleteQuest('GoBackWithoutDobr_Quest')"
+		nextReplies="Dlg_npc_003251" />
+
+	<Reply
+		name="Dlg_npc_003251"
+		text="Значит, Доброслава нас покинула. Я сообщу об этом в Волож. И о том, что ты мне помог - тоже."
+		role="NPC"
+		nextReplies="Dlg_pl_003252" />
+
+	<Reply
+		name="Dlg_pl_003252"
+		text="Помог?! Но я же...|А впрочем, ладно. Счастливо тебе. А мне пора бы переговорить с Верховным Мудрецом."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002964"
 		text="Да, вот она, живая и здоровая."
 		role="PLAYER"
+		scriptCondition="QuestStatus('KillTikhomir_Quest2')==Q_TAKEN"
+		scriptResult="CompleteQuest('KillTikhomir_Quest2')"
 		nextReplies="Dlg_npc_002965" />
 
 	<Reply
@@ -10189,6 +10230,55 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() >= 10000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-10000); EndConversation()" />
+<!--Root/r1m4/Опциональные/Тихомир-->
+	<Reply
+		name="Dlg_npc_003256"
+		text="А, это ты..."
+		role="NPC"
+		scriptCondition="QuestStatus('LastIspytanie_Quest')==Q_COMPLETED and not(IsQuestTaken('r4m2_DestroyPlate')) and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_003257" />
+
+	<Reply
+		name="Dlg_pl_003257"
+		text="Тихомир! Вот так встреча! Рад, что ты удачно добрался до тёплых земель. А Доброслава где?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003258" />
+
+	<Reply
+		name="Dlg_npc_003258"
+		text="Я думал, что смогу её спасти... Думал, что её оцепенение спадёт, если я увезу её из этого ледяного ада. Но всё тщетно... Она умерла."
+		role="NPC"
+		nextReplies="Dlg_pl_003259" />
+
+	<Reply
+		name="Dlg_pl_003259"
+		text="Мне очень жаль."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003260" />
+
+	<Reply
+		name="Dlg_npc_003260"
+		text="Мне тоже... Мне тоже.|Знаешь, надо было тебе тогда меня убить. Тогда хотя бы один из нас остался сейчас жив. Но ничего уже не воротишь."
+		role="NPC"
+		nextReplies="Dlg_pl_003261" />
+
+	<Reply
+		name="Dlg_pl_003261"
+		text="Не вини себя. Ты не мог этого предвидеть. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_003262" />
+
+	<Reply
+		name="Dlg_npc_003262"
+		text="А что если мог? Мог, но не хотел?|А теперь оставь меня. Не мешай мне топить горе в выпивке."
+		role="NPC"
+		nextReplies="Dlg_pl_003263" />
+
+	<Reply
+		name="Dlg_pl_003263"
+		text="Прощай."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); CompleteQuest('ToCordanToTikhomir_Quest'); EndConversation()" />
 <!--Root/r1m3/Сюжетные--><!--Root/r1m3/Опциональные--><!--Root/r1m3/Опциональные/Кони и Блайд-->
 	<Reply
 		name="KonnyBlide_hellodlg0"
@@ -18189,6 +18279,19 @@
 		text="Спасибо, оно мне пригодится. Удачи вам."
 		role="PLAYER"
 		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); TActivate('TheSowthDefRemove'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003264"
+		text="Да?"
+		role="NPC"
+		scriptCondition="QuestStatus('FindBenMZ_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_003265" />
+
+	<Reply
+		name="Dlg_pl_003265"
+		text="Пизда?"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 <!--Root/r1m1/Сюжетные/Лиса-->
 	<Reply
 		name="Lisa_hellodlg0"

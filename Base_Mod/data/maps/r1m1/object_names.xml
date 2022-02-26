@@ -388,4 +388,8 @@
 		Name="AivenGo"
 		FullName="Айвен Го" />
 
+	<Object
+		Name="TraiderAfterStryga"
+		FullName="Караванщик Мадс" />
+
 </ObjectNames>

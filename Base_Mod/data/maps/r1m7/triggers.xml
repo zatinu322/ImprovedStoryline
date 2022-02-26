@@ -44,14 +44,6 @@
 			local excarname="LABCAR"
 			local oldcarname="OldCarPlayer2"
 			GetPlayerVehicle():SetNameFromScript( oldcarname )
---			GetPlayerVehicle():GetName()
---			if oldcarname==nil then
---				oldcarname="OldCarPlayer"..random(1000)
---				GetPlayerVehicle():SetNameFromScript( oldcarname )
---			end
---			if excarname=="LABCAR" then
---			   SaveWeaponGroups()
---			end
 			SaveWeaponGroups()
 			local veh=getObj(excarname)
 			local oldveh=GetPlayerVehicle()
@@ -71,9 +63,8 @@
 			SetVar("GarVehName",oldcarname)
 
 			GetPlayerVehicle():setGodMode(0)
+			GetPlayerVehicle():AddItemsToRepository("add_stability_and_speed2", 2)
 
-			
-			
 			TActivate("NachRolikBegin")
 			
 			trigger:Deactivate()
@@ -85,11 +76,6 @@
 		<script>
 			local excarname="OldCarPlayer2"
 			local oldcarname="LABCAR"
---			if oldcarname==nil then
---				oldcarname="OldCarPlayer"..random(1000)
---				GetPlayerVehicle():SetNameFromScript( oldcarname )
---			end
---			SaveWeaponGroups()
 			local veh=getObj(excarname)
 			local oldveh=GetPlayerVehicle()
 			if veh then

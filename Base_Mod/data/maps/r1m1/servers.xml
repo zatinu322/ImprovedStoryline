@@ -7,10 +7,6 @@
 			file="data\models\AnimModels.xml"/>
 
 		<Item
-			id="rr_locovagon"
-			file="data\models\AnimModels.xml" />
-
-		<Item
 			id="box"
 			file="data\models\AnimModels.xml" />
 		<Item

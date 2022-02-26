@@ -447,6 +447,16 @@
 				cfg="150"
 				helloReplyNames="Dlg_npc_002546 Dlg_npc_002549"
 				SpokenCount="0" />
+			
+			<Object
+				Name="TraiderAfterStryga"
+				Belong="1008"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="4"
+				cfg="94"
+				helloReplyNames="Dlg_npc_003264"
+				SpokenCount="0" />
 
 			<Object
 				Name="LisaSouth"

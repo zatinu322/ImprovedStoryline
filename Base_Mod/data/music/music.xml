@@ -340,15 +340,6 @@
 		id="Region5Intro"
 		file="data\music\cinematics\region5.ogg" />
 	<model
-		id="Bio02Loco"
-		file="data\music\cinematics\Bio02Loco.ogg" />
-	<model
-		id="Bio04Loco"
-		file="data\music\cinematics\Bio04Loco.ogg" />
-	<model
-		id="QuietDialogue01Loco"
-		file="data\music\cinematics\QuietDialogue01Loco.ogg" />
-	<model
 		id="SpecEndSong"
 		file="data\music\cinematics\SpecEndSong.ogg" />
 </Music>

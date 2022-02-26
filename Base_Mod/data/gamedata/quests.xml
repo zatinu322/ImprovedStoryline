@@ -433,23 +433,47 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="FindDaughter_Quest5" />
+	</quest>
+
+	<quest
+		Name="KillTikhomir_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="FindDaughter_Quest">
+		<quest
+			Name="KillTikhomir_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="KillTikhomir_Quest" />
 
 		<quest
-			Name="FindDaughter_Quest7"
+			Name="KillTikhomir_Quest2"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="FindDaughter_Quest6" />
+			PrecedingQuests="KillTikhomir_Quest1" />
 	</quest>
+
+	<quest
+		Name="GoBackWithoutDobr_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="FindDaughter_Quest" />
 <!--Root/r5m2/Лабиринт-->
 	<quest
 		Name="LastIspytanie_Quest"
 		Automatic="1"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="HelpVillages_Quest">
+		ConditionToGive="any complete"
+		PrecedingQuests="KillTikhomir_Quest GoBackWithoutDobr_Quest">
 		<quest
 			Name="LastIspytanie_Quest1"
 			Automatic="1"
@@ -2900,6 +2924,14 @@
 		ConditionToGive="all complete"
 		OnFail='TDeactivate("MisterShlyapaTr");'
 		OnTake='ShowCircleOnMinimapByName("Mishlen_loc")'
+		Levels="r1m4" />
+<!--Root/r1m4/Тихомир-->
+	<quest
+		Name="ToCordanToTikhomir_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
 		Levels="r1m4" />
 <!--Root/r1m3/Сюжетные--><!--Root/r1m3/Опциональные--><!--Root/r1m3/Опциональные/Бонни и Клайд-->
 	<quest

@@ -3219,6 +3219,14 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="PlayerAboutTikhomirsFate"
+				Belong="1090"
+				Prototype="NPC"
+				ModelName="mask_hero"
+				helloReplyNames="Dlg_npc_003253"
+				SpokenCount="0" />
+
+			<Object
 				Name="Kartograph1"
 				Belong="1090"
 				Prototype="NPC"
@@ -57384,7 +57392,7 @@
 		Name="Shahta_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1492.967 255.867 2724.832"
+		Pos="1490.373 264.488 2788.938"
 		Radius="50.000"
 		LookingTimeOut="100.000" />
 
@@ -57392,23 +57400,23 @@
 		Name="Vyezd1_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3730.126 542.916 595.146"
-		Radius="30.000"
+		Pos="3832.398 548.488 572.338"
+		Radius="63.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="Vyezd2_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2806.468 399.214 209.854"
-		Radius="30.000"
+		Pos="2851.371 426.131 129.623"
+		Radius="65.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="Vyezd3_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3130.469 315.185 3120.864"
+		Pos="3055.654 327.713 3164.776"
 		Radius="130.000"
 		LookingTimeOut="100.000" />
 
@@ -57416,8 +57424,8 @@
 		Name="RPGSigns_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2188.279 255.000 2308.027"
-		Radius="30.000"
+		Pos="2091.030 255.000 2296.661"
+		Radius="51.000"
 		LookingTimeOut="100.000" />
 
 	<Object

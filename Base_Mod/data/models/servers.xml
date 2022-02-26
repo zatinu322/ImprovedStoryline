@@ -85,10 +85,6 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
-			id="dweller_brodyaga"
-			file="data\models\AnimModels.xml" />
-
-		<Item
 			id="segments01"
 			file="data\models\AnimModels.xml" />
 
@@ -147,10 +143,6 @@
 <!-- masks -->
 		<Item
 			id="mask_hero"
-			file="data\models\AnimModels.xml" />
-
-		<Item
-			id="mask_debik"
 			file="data\models\AnimModels.xml" />
 
 		<Item

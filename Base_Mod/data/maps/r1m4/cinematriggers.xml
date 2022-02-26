@@ -1255,6 +1255,10 @@
 			CompleteQuest("GoBackToHel_Quest")
 			TakeQuest("Chehly_Quest")
 
+			if QuestStatus("GoBackWithoutDobr_Quest")==Q_COMPLETED then
+				TakeQuest("ToCordanToTikhomir_Quest")
+			end
+
 			if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
 				SetCoordinateForQuest( "d_chehol1" ,   CVector(getPos("ToR3M1")))
 				SetCoordinateForQuest( "RPGSigns_Quest2" ,   CVector(getPos("ToR3M1")))

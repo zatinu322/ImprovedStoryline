@@ -270,15 +270,6 @@
 		composite="0" />
 
 	<model
-		id="dweller_brodyaga"
-		file="data\models\objects\dweller_debik.gam"
-		shadow="1"
-		shadowVolume="1"
-		windwavy="0"
-		trans="0"
-		composite="0" />
-
-	<model
 		id="dweller_father"
 		file="data\models\objects\otcm02.gam"
 		shadow="1"
@@ -436,14 +427,6 @@
 	<model
 		id="mask_hero"
 		file="data\models\Masks\Main\player01.gam"
-		shadow="1"
-		windwavy="0"
-		trans="0"
-		composite="0" />
-
-	<model
-		id="mask_debik"
-		file="data\models\Masks\Main\mask_debik.gam"
 		shadow="1"
 		windwavy="0"
 		trans="0"
@@ -14430,7 +14413,16 @@
 		shadowVolume="1"
 		shadow="1"
 		windwavy="0"
-		trans="0" />
+		trans="0">
+		<action
+			name="STAND1">
+		<lp
+			id=""
+			effect_id="ET_PS_S_LOCOMOTIVE01"
+			restartOnAnimationChange="0"
+			ImmediateRemove="0" />
+		</action>
+	</model>
 
 	<model
 		id="rr_column1"

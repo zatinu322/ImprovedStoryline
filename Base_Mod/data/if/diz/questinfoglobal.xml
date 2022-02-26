@@ -1148,6 +1148,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="GoBackWithoutDobr_Quest"
+		briefDiz="Вернуться ко Всеволоду"
+		fullDiz="Придётся сказать Всеволоду, что Доброслава к нему больше не вернётся. Надеюсь, он не убьёт меня на месте после этих слов."
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="PetrolStationTown1" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="GoToLiden_Quest"
 		briefDiz="Отправиться в Лиденклауд"
 		fullDiz="Теперь, когда нам удалось достать тёплую одежду, только каменный завал отделяет меня от места, где можно найти композит."
@@ -1420,6 +1430,30 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="KillTikhomir_Quest"
+		briefDiz="Вернуть Доброславу домой"
+		fullDiz="Тихомиру не удастся меня одурачить! Я убью его, а Доброславу доставлю домой в целости и сохранности."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="KillTikhomir_Quest1"
+		briefDiz="Убить Тихомира"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TikhomirAgressor" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillTikhomir_Quest2"
+		briefDiz="Отвезти Доброславу ко Всеволоду"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="PetrolStationTown1" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="Kollizey_Quest"
 		briefDiz="Помочь организовать работу Колизея"
 		fullDiz="Предприниматели хотят снова открыть Колизей. К сожалению, рекламный бюджет у них просто неприлично мал. Да и опыта кот наплакал. Но я все равно согласился помочь им в этом нелегком деле."
@@ -1562,7 +1596,7 @@
 
 	<QuestInfo
 		questName="LastIspytanie_Quest4"
-		briefDiz="вернуться в волож"
+		briefDiz="Вернуться в волож"
 		isMainQuest="1">
 		<Map
 			name="r1m5"
@@ -2248,6 +2282,16 @@
 		<Map
 			name="r3m1"
 			targetObjName="ToR1M4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ToCordanToTikhomir_Quest"
+		briefDiz="Заехать в Кордан"
+		fullDiz="Надо бы заехать в Кордан. Кто знает, вдруг я там встречу кого-нибудь знакомого."
+		isMainQuest="0">
+		<Map
+			name="r1m4"
+			targetObjName="FVCordan" />
 	</QuestInfo>
 
 	<QuestInfo

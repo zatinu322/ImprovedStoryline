@@ -244,10 +244,11 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			local humP = GetEntityByName("humPlayer")
+			local humP = GetEntityByName("humPlayer1")
 			if humP then humP:Remove() end
 			
 			TActivate("VyezdRolik2Start")
+			TActivate("trhumPlayerRemove")
 			
 			trigger:Deactivate()
 		</script>
@@ -274,7 +275,7 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 			
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(3831.671, 548.901, 577.268), Quaternion(0.0000, 0.4127, 0.0000, 0.9109), 1)
+			CreateNewDummyObject( "dweller_player", "humPlayer1", -1, -1, CVector(3831.671, 548.901, 577.268), Quaternion(0.0000, 0.4127, 0.0000, 0.9109), 1)
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -305,31 +306,20 @@
 		</script>
 	</trigger>
 
+	<!-- Диалог с Тихомиром -->
 	<trigger Name="VyezdRolik3Begin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("IntenseDialogue02")
-			
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(3041.186, 351.866, 3240.167), Quaternion(0, 0, 0, 0), 1)
-			
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
-			local bcar = GetEntityByName("BrodyagaCar")
-			local bcarID = bcar:GetId()
-			
-			Fly("VRRolikCam1", CINEMATIC_NO_AIM, 0, 24, 1, 0 )
-			Fly("VRRolikCam2", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-			Fly("VRRolikCam3", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
-			Fly("VRRolikCam4", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
-			Fly("VRRolikCam5", CINEMATIC_NO_AIM, 0, 19, 0, 0 )
-			Fly("VRRolikCam6", CINEMATIC_NO_AIM, 0, 18, 0, 0 )
-			Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-			FlyLinked( "linkedcam", CTochID, 15, 0, 0, bcarID )
-			Fly("VRRolikCam9", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("VRRolikCam10", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
-			Fly("VRRolikCam11", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+						
+			Fly("VRRolikCam1", CINEMATIC_NO_AIM, 0, 27, 1, 0 )
+			Fly("VRRolikCam2", CINEMATIC_NO_AIM, 0, 14.5, 0, 0 )
+			Fly("VRRolikCam3", CINEMATIC_NO_AIM, 0, 7.5, 0, 0 )
+			Fly("VRRolikCam4", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+			Fly("VRRolikCam5", CINEMATIC_NO_AIM, 0, 13.5, 0, 0 )
+			Fly("VRRolikCam6", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 			StartCinematic()
 			
 			AddCinematicMessage( 8, 1 )
@@ -342,11 +332,6 @@
 			TActivate("trVRRolikCam4")
 			TActivate("trVRRolikCam5")
 			TActivate("trVRRolikCam6")
-			TActivate("trVRRolikCam7")
-			TActivate("trVRRolikCam8")
-			TActivate("trVRRolikCam9")
-			TActivate("trVRRolikCam10")
-			TActivate("trVRRolikCam11")
 			TActivate("VRRolikEnd")
 			
 			trigger:Deactivate()
@@ -362,8 +347,14 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(3077.178, 328.818, 3187.056))
-				vehPlayer:SetRotation(Quaternion(0.073, 0.992, -0.049, -0.087))
+				vehPlayer:SetGamePositionOnGround( CVector(3074.990, 329.470, 3203.431))
+				vehPlayer:SetRotation(Quaternion(-0.087, -0.936, 0.012, 0.342))
+			end
+
+			local vehTikh = GetEntityByName("TikhomirCar")
+			if vehTikh then
+				vehTikh:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573))
+				vehTikh:SetRotation(Quaternion(-0.007, 0.340, -0.085, 0.937))
 			end
 			trigger:Deactivate()
 		</script>
@@ -374,12 +365,7 @@
 		<script>
 			
 			PlayCustomMusic("IntenseDialogue01")
-			
-			CreateNewDummyObject( "dweller_brodyaga", "humBrodyaga", -1, -1, CVector(3070.365, 323.842, 3144.150), Quaternion(0.0000, -0.0698, 0.0000, 0.9976), 0)
-			
-			getObj("humBrodyaga"):SetNodeAction(AT_STAND2)
-			getObj("humBrodyaga"):SetNextForAnimation(AT_STAND2, AT_STAND1)
-			
+						
 			AddCinematicMessage( 11, 1 )
 			
 			trigger:Deactivate()
@@ -389,10 +375,10 @@
 	<trigger Name="trVRRolikCam3" active="0">
 		<event flypath="VRRolikCam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(3071.552, 325.906, 3168.462), Quaternion(0.0000, 0.9985, 0.0000, -0.0545), 1)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(3070.723, 329.770, 3206.292), Quaternion(0.0000, -0.9288, 0.0000, 0.3706), 1)
 
-			getObj("humPlayer"):SetNodeAction(AT_STAND1)
-			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
+			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
+			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 			
 			AddCinematicMessage( 12, 1 )
 			
@@ -404,7 +390,7 @@
 		<event flypath="VRRolikCam4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			AddCinematicMessage( 13, 1 )
-			AddCinematicMessage( 14, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -412,11 +398,10 @@
 	<trigger Name="trVRRolikCam5" active="0">
 		<event flypath="VRRolikCam5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			getObj("humBrodyaga"):SetNodeAction(AT_STAND2)
-			getObj("humBrodyaga"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
+			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 
-			AddCinematicMessage( 15, 1 )
-			AddCinematicMessage( 16, 0.1 )
+			AddCinematicMessage( 14, 0.1 )
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -424,87 +409,121 @@
 	<trigger Name="trVRRolikCam6" active="0">
 		<event flypath="VRRolikCam6" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			
-			getObj("humBrodyaga"):SetNodeAction(AT_STAND2)
-			getObj("humBrodyaga"):SetNextForAnimation(AT_STAND2, AT_STAND1)
-			
-			AddCinematicMessage( 17, 1 )
-			trigger:Deactivate()
-		</script>
-	</trigger>
 
-	<trigger Name="trVRRolikCam7" active="0">
-		<event flypath="VRRolikCam7" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			AddCinematicMessage( 18, 1 )
-			AddCinematicMessage( 19, 0.1 )
-			
-			TActivate("trPlayerAnim")
+			AddCinematicMessage( 15, 1 )
 			
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="trPlayerAnim" active="0">
-		<event msgid="19" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+	<trigger Name="VRRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
 			
-			PlayCustomMusic("Passage02")
+			TDeactivate("VRRolikFade")
+			TDeactivate("trVRRolikCam2")
+			TDeactivate("trVRRolikCam3")
+			TDeactivate("trVRRolikCam4")
+			TDeactivate("trVRRolikCam5")
+			TDeactivate("trVRRolikCam6")
+
+			StartConversation("PlayerAboutTikhomirsFate")
 			
-			getObj("humPlayer"):SetNodeAction(AT_STAND2)
-			getObj("humPlayer"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Продолжение разговора с Тихомиром, последствия выбора -->
+	<trigger Name="trVRRolikContinue" active="0">
+	<event	timeout="0"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("Tikhomir").AsInt == 1 then
+				CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(3041.186, 351.866, 3240.167), Quaternion(0, 0, 0, 0), 1)
+
+				local CToch = GetEntityByName("CamTochka")
+				local CTochID = CToch:GetId()
+				local bcar = GetEntityByName("TikhomirCar")
+				local bcarID = bcar:GetId()
+
+				PlayCustomMusic("QuietDialogue02")
+
+				if QuestStatus("GoToMudrec_Quest")==Q_COMPLETED then
+					Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+					Fly("VRRolikCam8", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+					FlyLinked( "linkedcam", CTochID, 15, 0, 0, bcarID )
+					Fly("VRRolikCam11", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+					StartCinematic()
+
+					AddCinematicMessage(18, 1)
+
+				elseif QuestStatus("GoToMudr_Quest")==Q_COMPLETED then
+					Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 21.5, 0, 0 )
+					Fly("VRRolikCam8", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+					FlyLinked( "linkedcam", CTochID, 15, 0, 0, bcarID )
+					Fly("VRRolikCam11", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+					StartCinematic()
+
+					AddCinematicMessage(18, 1)
+					AddCinematicMessage(19, 0.1)
+				end
+
+				TActivate("trVRRolikCam_linked")
+				TActivate("trVRRolikCam11")
+				
+			elseif GetVar("Tikhomir").AsInt == 2 then
+				Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+				Fly("VRRolikCam8", CINEMATIC_NO_AIM, 0, 9, 0, 1 )
+				StartCinematic()
+
+				AddCinematicMessage(16, 1)
+			end
+
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(3070.723, 329.770, 3206.292), Quaternion(0.0000, -0.9288, 0.0000, 0.3706), 1)
+
+			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
+			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+
+			TActivate("trVRRolikCam8")
+			TActivate("trVRRolikEnd2")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
 	<trigger Name="trVRRolikCam8" active="0">
+		<event flypath="VRRolikCam8" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
+			if GetVar("Tikhomir").AsInt == 1 then
+				AddCinematicMessage(20, 1)
+			elseif GetVar("Tikhomir").AsInt == 2 then
+				AddCinematicMessage(17, 1)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+	
+	<trigger Name="trVRRolikCam_linked" active="0">
 		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			
 			local humP = GetEntityByName("humPlayer")
 			if humP then humP:Remove() end
 			
-			local humB = GetEntityByName("humBrodyaga")
-			if humB then humB:Remove() end
-			
-			local bcar = GetEntityByName("BrodyagaCar")
+			local bcar = GetEntityByName("TikhomirCar")
 			if bcar then
 				bcar:SetGamePositionOnGround( CVector(3098.850, 322.701, 3148.021))
 				bcar:SetRotation(Quaternion(0.044, 0.926, -0.057, 0.371))
 				bcar:SetExternalPathByName("Brodyaga_path1")
 			end
 			
-			AddCinematicMessage( 20, 1 )
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trVRRolikCam9" active="0">
-		<event flypath="VRRolikCam9" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(3083.589, 327.576, 3183.131))
-				vehPlayer:SetRotation(Quaternion(0.064, 0.996, -0.056, 0.038))
-			end
-			
 			AddCinematicMessage( 21, 1 )
 			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trVRRolikCam10" active="0">
-		<event flypath="VRRolikCam10" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			
-			PlayCustomMusic("QuietDialogue02")
-			
-			AddCinematicMessage( 22, 1 )
-			AddCinematicMessage( 23, 0.1 )
-			AddCinematicMessage( 24, 0.1 )
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -518,48 +537,130 @@
 		</script>
 	</trigger>
 
-	<trigger Name="VRRolikEnd" active="0">
+	<trigger Name="trVRRolikEnd2" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
-			
+
 			StopPlayingCustomMusic()
-			
+
 			SetCameraBehindPlayerVehicle()
-			
-			AddQuestItem("Dobroslava_P")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "Dobroslava_P")
-			
+
 			local humP = GetEntityByName("humPlayer")
 			if humP then humP:Remove() end
-			
-			local humA = GetEntityByName("humAiven")
-			if humA then humA:Remove() end
-			
-			local humB = GetEntityByName("humBrodyaga")
-			if humB then humB:Remove() end
-			
-			local bcar = GetEntityByName("BrodyagaCar")
+
+			local bcar = GetEntityByName("TikhomirCar")
 			if bcar then bcar:Remove() end
-			
-			local bcar1 = GetEntityByName("CamTochka")
-			if bcar1 then bcar1:Remove() end
-			
-			TDeactivate("trVRRolikCam2")
-			TDeactivate("trVRRolikCam3")
-			TDeactivate("trVRRolikCam4")
-			TDeactivate("trVRRolikCam5")
-			TDeactivate("trVRRolikCam6")
-			TDeactivate("trVRRolikCam7")
+
 			TDeactivate("trVRRolikCam8")
-			TDeactivate("trVRRolikCam9")
-			TDeactivate("trVRRolikCam10")
-			TDeactivate("trVRRolikCam11")
-			TDeactivate("trPlayerAnim")
-			
+
+			if GetVar("Tikhomir").AsInt == 1 then
+
+				local humA = GetEntityByName("humAiven")
+				if humA then humA:Remove() end
+
+				local bcar1 = GetEntityByName("CamTochka")
+				if bcar1 then bcar1:Remove() end
+
+				TakeQuest("GoBackWithoutDobr_Quest")
+
+				TDeactivate("trVRRolikCam_linked")
+				TDeactivate("trVRRolikCam11")
+
+			elseif GetVar("Tikhomir").AsInt == 2 then
+
+				TeamCreate("TikhomirAgressor", 1092, CVector(3053.686, 329.370, 3152.573), {"UralTikhomir"}, nil, nil, Quaternion(-0.007, 0.340, -0.085, 0.937))
+
+				TakeQuest("KillTikhomir_Quest")
+
+				TActivate("trTikhomirsCarDIE")
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- После смерти Тихомира -->
+	<trigger Name="trVRRolikFinal" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 25, 10, PlfCoor, PlfID, 1, 0 )
+			Fly("VRRolikCam10", CINEMATIC_NO_AIM, 0, 15.5, 0, 0 )
+			Fly("VRRolikCam11", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 171, 2 )
+
+			TActivate("trVRRolikFinalFade")
+			TActivate("trVRRolikCam10")
+			TActivate("trVRRolikCam11")
+			TActivate("trVRRolikFinalEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trVRRolikFinalFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trVRRolikCam10" active="0">
+		<event flypath="VRRolikCam10" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3074.990, 329.470, 3203.431))
+				vehPlayer:SetRotation(Quaternion(-0.087, -0.936, 0.012, 0.342))
+			end
+			
+			AddCinematicMessage( 22, 1 )
+			AddCinematicMessage( 23, 0.1 )
+			AddCinematicMessage( 24, 0.1 )
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trVRRolikFinalEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
+
+			AddQuestItem("Dobroslava_P")
+			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "Dobroslava_P")
+
+			local humA = GetEntityByName("humAiven")
+			if humA then humA:Remove() end
+
+			TDeactivate("trVRRolikFinalFade")
+			TDeactivate("trVRRolikCam11")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
 </triggers>

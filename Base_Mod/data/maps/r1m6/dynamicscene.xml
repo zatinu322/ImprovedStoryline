@@ -16940,16 +16940,16 @@
 		Name="Dir_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1041.411 255.000 1014.165"
-		Radius="30.000"
+		Pos="1055.682 255.000 974.236"
+		Radius="99.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="Trap_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1132.909 282.648 599.494"
-		Radius="30.000"
+		Pos="1130.776 284.545 552.521"
+		Radius="77.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -16988,16 +16988,16 @@
 		Name="SerTalk_loc"
 		Belong="1088"
 		Prototype="genericLocation"
-		Pos="2199.418 255.065 2179.869"
-		Radius="30.000"
+		Pos="2191.750 255.013 2142.774"
+		Radius="65.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="MoskaBattle_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2000.185 255.000 1162.073"
-		Radius="30.000"
+		Pos="2019.185 255.000 1173.968"
+		Radius="65.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -17005,7 +17005,7 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="682.238 255.000 2538.770"
-		Radius="30.000"
+		Radius="43.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -17013,7 +17013,7 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="2775.524 255.000 1314.767"
-		Radius="30.000"
+		Radius="49.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -17021,15 +17021,15 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="1286.446 315.345 2377.239"
-		Radius="30.000"
+		Radius="71.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="Uplyli_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="517.144 255.000 729.836"
-		Radius="30.000"
+		Pos="517.474 255.000 760.878"
+		Radius="95.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -17037,15 +17037,15 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="1957.270 255.000 1567.133"
-		Radius="30.000"
+		Radius="69.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="Zasada2_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="518.842 255.000 755.134"
-		Radius="30.000"
+		Pos="517.829 255.000 760.269"
+		Radius="91.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -17053,7 +17053,7 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="843.550 255.922 2441.933"
-		Radius="30.000"
+		Radius="67.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -17061,7 +17061,7 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="2589.490 255.000 1434.995"
-		Radius="30.000"
+		Radius="65.000"
 		LookingTimeOut="100.000" />
 
 	<Object

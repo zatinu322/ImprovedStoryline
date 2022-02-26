@@ -23,6 +23,7 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			CreateVehicleEx("r1m3_CaravanMolokovoz01","KARAVANPORTO_vehicle_0", CVector(4340.774, 260, 881.814), 1009)
+			if GetEntityByName("KARAVANPORTO_vehicle_0") then GetEntityByName("KARAVANPORTO_vehicle_0"):SetRandomSkin() end
 
 			SetTolerance(1100,1009,RS_ALLY)
 
@@ -96,9 +97,14 @@
 	<trigger Name="trCaravanToMidgard" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			GetEntityByName("KARAVANPORTO_vehicle_0"):Remove()
+			if GetEntityByName("KARAVANPORTO_vehicle_0") then 
+				kskin = GetEntityByName("KARAVANPORTO_vehicle_0"):GetSkin()
+				GetEntityByName("KARAVANPORTO_vehicle_0"):Remove()
+			end
 
 			CreateVehicleEx("r1m3_CaravanMolokovoz02","KARAVANMIDGARD_vehicle_0", CVector(6797.209, 260, 6501.624), 1009)
+			if kskin and GetEntityByName("KARAVANMIDGARD_vehicle_0") then GetEntityByName("KARAVANMIDGARD_vehicle_0"):SetSkin(kskin) end
+			kskin = nil
 
 			TakeQuest("d_CaravanToMidgardBen_Quest")
 

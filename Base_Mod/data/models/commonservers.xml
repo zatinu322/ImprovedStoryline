@@ -682,8 +682,6 @@
 		<Item id="ToastTo" />
 		<Item id="PromiseGuitar" />
 		<Item id="Region5Intro" />
-		<Item id="Bio02Loco" />
-		<Item id="Bio04Loco" />
 		<Item id="Passage05" />
 		<Item id="QuietDialogue01" />
 		<Item id="QuietDialogue02" />
@@ -695,7 +693,6 @@
 		<Item id="Techno02" />
 		<Item id="Techno03" />
 		<Item id="Techno04" />
-		<Item id="QuietDialogue01Loco" />
 		<Item id="SpecEndSong" />
 
 			

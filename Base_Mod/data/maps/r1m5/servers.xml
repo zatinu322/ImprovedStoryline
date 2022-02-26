@@ -2195,10 +2195,6 @@
         <Item
 			id="dweller_father"
 			file="data\models\AnimModels.xml" />
-
-		<Item
-			id="dweller_brodyaga"
-			file="data\models\AnimModels.xml" />
 		
 		<Item
 			id="dweller_player"
@@ -2224,10 +2220,6 @@
 
 		<Item
 			id="mask_snowlisa"
-			file="data\models\AnimModels.xml" />
-		
-		<Item
-			id="mask_debik"
 			file="data\models\AnimModels.xml" />
 		
 		<Item

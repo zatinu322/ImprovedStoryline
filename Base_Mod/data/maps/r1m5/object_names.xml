@@ -236,4 +236,8 @@
 		Name="FelixBandit"
 		FullName="Феликс" />
 
+	<Object
+		Name="PlayerAboutTikhomirsFate"
+		FullName=" " />
+
 </ObjectNames>

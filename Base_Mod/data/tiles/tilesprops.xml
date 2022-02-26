@@ -28,6 +28,13 @@
 			wheeltracetexture="data\fx\protectors\protector_grass.tga"
 			friction="1.0"
 			resistance="0.3" />
+		
+		<type 
+			name="SNOW_GENERAL"
+			splash="ROCK"
+			wheeltracetexture="data\fx\protectors\protector_rock.tga"
+			friction="1.0"
+			resistance="0.3" />
 	</types>
 
 	<tiles>
@@ -77,15 +84,15 @@
 		<grass_fall		 	type="GRASS_GENERAL" />
 		<grass_fall_leaf 		type="GRASS_GENERAL" />
 		<grass_fall_leaf_brown	type="GRASS_GENERAL" />
-		<snow_marcescent_dark	type="GRASS_GENERAL" />
-		<snow_crag1			type="SAND_GENERAL" />
-		<snow_ground1		type="SAND_GENERAL" />
-		<snow_ground2		type="SAND_GENERAL" />
-		<grass_swamp		type="GRASS_GENERAL" />
-		<grass_1			type="GRASS_GENERAL" />
-		<grass_2			type="GRASS_GENERAL" />
-		<grass_3			type="GRASS_GENERAL" />
-		<grass_4			type="GRASS_GENERAL" />
+		<snow_marcescent_dark	type="SNOW_GENERAL" />
+		<snow_crag1				type="SNOW_GENERAL" />
+		<snow_ground1			type="SNOW_GENERAL" />
+		<snow_ground2			type="SNOW_GENERAL" />
+		<grass_swamp			type="GRASS_GENERAL" />
+		<grass_1				type="GRASS_GENERAL" />
+		<grass_2				type="GRASS_GENERAL" />
+		<grass_3				type="GRASS_GENERAL" />
+		<grass_4				type="GRASS_GENERAL" />
 
 		<swamp 			type="GROUND_GENERAL" />
 		<ground_fall 		type="GROUND_GENERAL" />

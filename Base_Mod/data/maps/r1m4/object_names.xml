@@ -331,5 +331,9 @@
 	<Object
 		Name="AivenGo"
 		FullName="Айвен Го" />
+	
+	<Object
+		Name="TikhomirInSorrow"
+		FullName="Тихомир" />
 
 </ObjectNames>

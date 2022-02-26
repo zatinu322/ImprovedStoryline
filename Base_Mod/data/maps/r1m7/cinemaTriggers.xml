@@ -46,7 +46,7 @@
 	<trigger Name="trNachRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			PlayCustomMusic("Bio04Loco")
+			PlayCustomMusic("Bio04")
 			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
 			local mover = GetEntityByID( moverId ) 
 			local controlledObj = GetEntityByName("loco2")
@@ -215,7 +215,7 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			PlayCustomMusic("QuietDialogue01Loco")
+			PlayCustomMusic("QuietDialogue01")
 			
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1428.869, 274.342, 2021.783), Quaternion(0, 0, 0, 0), 1)
 			local CToch = GetEntityByName("CamTochka")

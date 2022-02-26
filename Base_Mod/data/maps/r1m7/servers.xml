@@ -1860,6 +1860,7 @@
 		<Item id="S_FOREST" />
 		<Item id="S_DESERT" />
 		<Item id="S_JUNGLE" />
+		<Item id="S_LOCOMOTIVE01" />
 
 		<Item id="S_OIL_FIELD" />
 		<Item id="S_VILLAGE01" />

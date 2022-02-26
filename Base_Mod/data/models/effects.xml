@@ -10,6 +10,10 @@
 		<Node name="Sound3" class="SgSoundSourceNode" id="S_VILLAGE01" looped="1"/>
 	</Node>
 
+	<Node name="ET_PS_S_LOCOMOTIVE01" class="SgNode">
+		<Node name="Sound3" class="SgSoundSourceNode" id="S_LOCOMOTIVE01" looped="1"/>
+	</Node>
+
 	<Node name="ET_PS_WHEEL_HIT" class="SgNode">
 		<Node name="Object1" class="SgParticlesNode" id="PS_SPECIAL01_FIRE_MAIN_1" psNumEmitterMesh="-1" />
 		<Node name="Sound3" class="SgSoundSourceNode" id="S_CARJUMP" looped="0"/>

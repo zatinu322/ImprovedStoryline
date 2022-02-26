@@ -1546,7 +1546,7 @@
 		<Item 
 			id="scoutCab02" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 2 8;" />
 
 		<Item 
 			id="scoutCab03" 
@@ -2688,6 +2688,7 @@
 
 		<Item id="S_OIL_FIELD" />
 		<Item id="S_VILLAGE01" />
+		<Item id="S_LOCOMOTIVE01" />
 		<Item id="S_VILLAGE_BURNING01" />
 
 		<Item id="S_MAN_DEATH01"/>

@@ -1557,10 +1557,16 @@
 		/>
 
 		<model
-		id="S_VILLAGE01"
-		file="data\sounds\CutScenes\r1m1\vilage01.wav"
-		group="FACTORY_1"
-		/>
+			id="S_VILLAGE01"
+			file="data\sounds\CutScenes\r1m1\vilage01.wav"
+			group="FACTORY_1"
+			/>
+		
+		<model
+			id="S_LOCOMOTIVE01"
+			file="data\sounds\cinematicsound\locomotive.wav"
+			group="LOCOMOTIVE"
+			/>
 
 		<model
 		id="S_VILLAGE_BURNING01"

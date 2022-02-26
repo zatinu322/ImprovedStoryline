@@ -1936,6 +1936,11 @@
 		id="Dozer02"
 		locForm="0"
 		value="Миколка" />
+	
+	<Item
+		id="UralTikhomir"
+		locForm="0"
+		value="Тихомир" />
 
 	<Item
 		id="OL_Ural"

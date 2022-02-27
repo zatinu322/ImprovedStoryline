@@ -209,18 +209,18 @@
 		modelSkin="1"
 		modelCfg="111"
 		modelSlot="1"
-		value="СЕРГО|Ты слышал его рассказ про Горы Мудрецов? Это то, о чём я думаю?"
+		value="СЕРГО|Думаешь, он понял?"
 		sound=""
-		time="6" />
+		time="3" />
 
 	<string
 		id="516"
 		modelName="mask_father"
 		modelSkin="1"
 		modelSlot="1"
-		value="Да. Но я уже разобрался с этой проблемой."
+		value="Вряд ли. Он ещё не готов. Пока что он искренне полагает, что сможет всех спасти."
 		sound=""
-		time="4" />
+		time="6.5" />
 
 	<string
 		id="517"
@@ -228,37 +228,18 @@
 		modelSkin="1"
 		modelCfg="111"
 		modelSlot="1"
-		value="СЕРГО|И как же?"
+		value="СЕРГО|И что мы будем делать дальше?"
 		sound=""
-		time="3" />
+		time="4" />
 
 	<string
 		id="518"
 		modelName="mask_father"
 		modelSkin="1"
 		modelSlot="1"
-		value="Отправил того паренька куда подальше, чтобы не путался под ногами, когда начнётся финальная стадия. Больше он нас не потревожит."
+		value="Ничего. Мы и так уже сделали всё, что могли. Дальше всё зависит только от него самого."
 		sound=""
-		time="9" />
-
-	<string
-		id="519"
-		modelName="r4_man"
-		modelSkin="1"
-		modelCfg="111"
-		modelSlot="1"
-		value="СЕРГО|А что насчёт Оракула?"
-		sound=""
-		time="3" />
-
-	<string
-		id="520"
-		modelName="mask_father"
-		modelSkin="1"
-		modelSlot="1"
-		value="Посмотрим. Всё зависит только от него."
-		sound=""
-		time="4" />
+		time="6.5" />
 
 	<string
 		id="8801"

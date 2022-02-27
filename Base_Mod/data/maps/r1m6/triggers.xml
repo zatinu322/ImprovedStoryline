@@ -656,13 +656,14 @@
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 35, PlfCoor, PlfID, 1, 1 )
+			FlyAround(6, 0, 25, 46.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 66, 1 )
 			AddCinematicMessage( 67, 0.1 )
 			AddCinematicMessage( 68, 0.1 )
 			AddCinematicMessage( 69, 0.1 )
+			AddCinematicMessage( 691, 0.1 )
 			
 			TActivate("FGRolikStart")
 			

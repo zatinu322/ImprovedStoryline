@@ -541,7 +541,7 @@
 			local vehPID = vehP:GetId()
 			
 			FlyLinked( "linkedcam", CTochID, 15, 1, 0, vehPID )
-			Fly("PlayerLeave_Cam", CINEMATIC_NO_AIM, 0, 34, 0, 1 )
+			Fly("PlayerLeave_Cam", CINEMATIC_NO_AIM, 0, 18.5, 0, 1 )
 			StartCinematic()
 			
 			TActivate("SergoAivenTalk2")
@@ -577,8 +577,7 @@
 			AddCinematicMessage( 516, 0.1 )
 			AddCinematicMessage( 517, 0.1 )
 			AddCinematicMessage( 518, 0.1 )
-			AddCinematicMessage( 519, 0.1 )
-			AddCinematicMessage( 520, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

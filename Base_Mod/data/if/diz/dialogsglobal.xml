@@ -3621,7 +3621,7 @@
 		name="Dlg_pl_002380"
 		text="я понимаю твои опасени€, но в данном случае тебе просто придЄтс€ поверить мне на слово. ¬ любом случае выбора у теб€ особо-то и нет.  огда € найду оптимальный дл€ теб€ способ побега - € приеду. ≈сли € теб€ там не найду - пен€й на себ€, ждать не буду."
 		role="PLAYER"
-		scriptResult="TActivate('trEngineerGoAway'); CompleteQuest('r4m1_KNO_FindSpecialist') EndConversation();" />
+		scriptResult="TActivate('trEngineerGoAway'); CompleteQuest('r4m1_KNO_FindSpecialist'); EndConversation();" />
 
 	<Reply
 		name="Dlg_npc_002411"
@@ -18217,7 +18217,7 @@
 		text="ƒа, есть. Ќужен доброволец, который доставит материалы дл€ постройки дотов две наши опорные точки, а после поможет нам отразить атаку бандитов. ѕока что никто не осмеливаетс€ на такое - все бо€тс€ высунуть нос из города."
 		role="NPC"
 		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert');"
-		nextReplies="Dlg_pl_002573 Dlg_pl_002574" />
+		nextReplies="Dlg_pl_002574 Dlg_pl_002573" />
 
 	<Reply
 		name="Dlg_pl_002574"

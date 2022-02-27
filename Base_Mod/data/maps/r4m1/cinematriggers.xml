@@ -86,9 +86,10 @@
 			if veh then
 --	            LOG("A3")
 				veh:SetExternalPathByName("playerMolokPath")
+				veh:SetCruisingSpeed(15)
 			end
 --            LOG("A4")
-			Fly("molokovozExit", CINEMATIC_NO_AIM, nil, 15, 1,1)
+			Fly("molokovozExit", CINEMATIC_NO_AIM, nil, 11, 1,1)
 			StartCinematic()
 --            LOG("A5")
 			trigger:Deactivate()
@@ -164,7 +165,7 @@
 
 
             Fly("EngineerCamPath1", CINEMATIC_NO_AIM, nil, 7.3, 1,0)
-			Fly("EngineerCamPath2", CINEMATIC_NO_AIM, nil, 3, 0,0)
+			Fly("EngineerCamPath2", CINEMATIC_NO_AIM, nil, 7, 0,1)
 			StartCinematic()
 			trigger:Deactivate()
 		</script>
@@ -176,17 +177,18 @@
 			if GetPlayerVehicle() then
 				GetPlayerVehicle():SetGamePositionOnGround(CVector(4396.869, 300, 5880.139))
 				GetPlayerVehicle():SetRotation(Quaternion(-0.018, -0.664, 0.004, 0.748))
-				GetPlayerVehicle():SetMaxTorque(400)
-				GetPlayerVehicle():SetMaxSpeed(60)
-				GetPlayerVehicle():SetCruisingSpeed(60)
+--				GetPlayerVehicle():SetMaxTorque(400)
+				GetPlayerVehicle():SetMaxSpeed(30)
+				GetPlayerVehicle():SetCruisingSpeed(30)
+				GetPlayerVehicle():SetForcedMaxTorque(350)
 				GetPlayerVehicle():SetExternalPathByName("NearEngineerPlayerPath")
 			end
 
 			local enveh=CreateVehicleEx("Sml101","EngCar",CVector(4273.473, 300, 5923.936), 1060)
 			if enveh then
-				enveh:SetMaxTorque(150)
-				enveh:SetMaxSpeed(70)
-				enveh:SetCruisingSpeed(75)
+				enveh:SetMaxTorque(100)
+				enveh:SetMaxSpeed(50)
+				enveh:SetCruisingSpeed(50)
 				enveh:SetRotation(Quaternion(-0.002, -0.490, -0.011, 0.872))
 				enveh:SetExternalPathByName("NearEngineerEngineerPath")
 				enveh:setGodMode(1)
@@ -209,9 +211,9 @@
 				enveh:PlaceToEndOfPath("NearEngineerEngineerPath")
 				enveh:SetGamePositionOnGround(CVector(4114.627, 249.640, 6045.154))
 				enveh:SetRotation(Quaternion(-0.008, 0.221, 0.002, 0.975))
-				enveh:SetMaxTorque(100)
-				enveh:SetMaxSpeed(80)
-				enveh:SetCruisingSpeed(80)
+				enveh:SetMaxTorque(80)
+				enveh:SetMaxSpeed(40)
+				enveh:SetCruisingSpeed(40)
 			end
 
 			local torq = GetVar("PlTorque").AsInt
@@ -224,9 +226,10 @@
 				GetPlayerVehicle():PlaceToEndOfPath("NearEngineerPlayerPath")
 				GetPlayerVehicle():SetGamePositionOnGround(CVector(4097.918, 249.925, 6058.852))
 				GetPlayerVehicle():SetRotation(Quaternion(-0.016, 0.831, 0.003, 0.555))
-				GetPlayerVehicle():SetMaxTorque(torq)
+--				GetPlayerVehicle():SetMaxTorque(torq)
 				GetPlayerVehicle():SetMaxSpeed(speed)
 				GetPlayerVehicle():SetCruisingSpeed(crspeed)
+				GetPlayerVehicle():ResetForcedMaxTorque()
 
 			end
 			StopPlayingCustomMusic()
@@ -239,17 +242,16 @@
 	</trigger>
 
 	<trigger	Name="cinEngineerMustDieFirst"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			ShowHostileVehicles(false)
 			TActivate("cinEngineerMustDie_End")
-			TActivate("cinEngineerMustDie_StartFly")
 			local enveh=getObj("EngCar")
 			if enveh then
 				enveh:setGodMode( false )
 				enveh:SetExternalPathByName("engineerWantDiePath")
-				Fly("EngineerCamPath3", CINEMATIC_NO_AIM, nil, 6, 1,0)
+				Fly("EngineerCamPath3", CINEMATIC_NO_AIM, nil, 6, 0,0)
 				Fly("EngineerCamPath4", CINEMATIC_NO_AIM, nil, 3.5, 0,1)
 				StartCinematic()
 				AddCinematicMessage( 16, 0.5 )
@@ -286,7 +288,7 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			TActivate("cinBuhArmy_End")
 
-			Fly("BuharsAttackPath", CINEMATIC_NO_AIM, nil, 6, 1,1)
+			Fly("BuharsAttackPath", CINEMATIC_NO_AIM, nil, 8, 1,1)
 			StartCinematic()
 
 			trigger:Deactivate()
@@ -374,6 +376,9 @@
 			else
 				TakeQuest("r4m1_GotoAivenGo")
 			end
+
+			local a = GetEntityByName("StartGonka_loc")
+			if a then a:SetProperty("Active",1) end
 			
 			AddHistory(  'r4_LisaBecameCrazy'  )
 			AddFadingMsgId( 'fm_history_got' )
@@ -451,8 +456,12 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("ExitTo42Return", CINEMATIC_NO_AIM, nil, 4, 1,1)
+			Fly("ExitTo42Return", CINEMATIC_NO_AIM, nil, 6, 1,1)
 			StartCinematic()
+
+			if QuestStatus("r4m1_RescueBuharsCivilian")~=Q_COMPLETED then
+				AddCinematicMessage( 8802, 0.5 )
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -461,8 +470,8 @@
 	<trigger	Name="cinExit42Return_FadeIn"	active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(7479.856, 274.318, 3697.699))
-			GetPlayerVehicle():SetRotation(Quaternion(0.020, -0.770, 0.030, 0.637))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(7469.020, 274.164, 3698.224))
+			GetPlayerVehicle():SetRotation(Quaternion(0.019, -0.761, 0.027, 0.648))
 			GetPlayerVehicle():SetExternalPathByName("ReturnPathR4M2")
 			trigger:Deactivate()
 		</script>
@@ -543,8 +552,8 @@
 	<trigger	Name="cinExit11Return_FadeIn"	active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(3101.792, 274.133, 7493.445))
-			GetPlayerVehicle():SetRotation(Quaternion(0.034, 0.925, 0.009, 0.378))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(3113.161, 274.148, 7483.117))
+			GetPlayerVehicle():SetRotation(Quaternion(0.011, 0.919, -0.008, 0.393))
 			GetPlayerVehicle():SetExternalPathByName("ReturnPathR1M1")
 			trigger:Deactivate()
 		</script>

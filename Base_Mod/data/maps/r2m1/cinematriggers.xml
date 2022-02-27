@@ -1941,11 +1941,15 @@
 	<trigger Name="VyborFinala" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-
-			if IsQuestComplete("FinalBattle_Quest") and IsQuestComplete("DefendSowth_Quest") and IsQuestComplete("PeregReturn") and IsQuestComplete("CaptureKateberg_Quest") and IsQuestComplete("FreeExtremistLeader_Quest5") and (GetTolerance(1100, 1003)>1.499) and (GetTolerance(1100, 1004)>1.499) then
+			local ending = DefineTheEnding()
+			
+			if ending==1 then
 				TakeQuest("BenGoodEnd")
-			else
+			elseif ending==0 then
 				TakeQuest("BenNormalEnd")
+			else
+				println("CRITICAL! CAN NOT DEFINE THE ENDING!")
+				LOG("CRITICAL! CAN NOT DEFINE THE ENDING!")
 			end
 
 			trigger:Deactivate()

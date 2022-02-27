@@ -33,8 +33,8 @@
 		Name="Explos_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3076.352 255.000 2115.378"
-		Radius="30.000"
+		Pos="3068.088 255.000 2114.715"
+		Radius="41.000"
 		LookingTimeOut="100.000" />
 
 	<Object
@@ -77,10 +77,6 @@
 
 		<ExitPath />
 	</Object>
-
-	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
 
 	<Object
 		Name="elka1snow0"
@@ -314,7 +310,7 @@
 		Name="elka1snow38"
 		Belong="-1"
 		Prototype="Breakable_Elka1snow"
-		Pos="3346.157 255.179 2070.663" />
+		Pos="3346.157 255.178 2070.663" />
 
 	<Object
 		Name="elka1snow39"
@@ -615,4 +611,8 @@
 		Belong="-1"
 		Prototype="Breakable_Elka1snow"
 		Pos="3465.570 255.000 2015.057" />
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

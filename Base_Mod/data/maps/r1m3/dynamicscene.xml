@@ -125,8 +125,8 @@
 		Name="Chehly_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1554.720 260.565 3990.035"
-		Radius="15.000" />
+		Pos="1555.811 260.558 3988.994"
+		Radius="7.000" />
 
 	<Object
 		Flags="21"
@@ -149,8 +149,8 @@
 		Name="Chehly1_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2189.506 255.352 3689.864"
-		Radius="30.000" />
+		Pos="2175.720 254.126 3647.986"
+		Radius="101.000" />
 
 	<Object
 		Flags="21"

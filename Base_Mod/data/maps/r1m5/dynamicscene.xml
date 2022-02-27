@@ -2137,18 +2137,18 @@
 
 	<Object
 		Name="barricade4_wGw72"
-		Belong="1002"
+		Belong="1092"
 		Prototype="barricade4_wGw"
 		Pos="3439.005 441.404 440.130"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade4_wGw72_Team"
-			Belong="1002"
+			Belong="1092"
 			Prototype="settlementTeam">
 			<Object
 				Name="barricade4_wGw72_Child1"
-				Belong="1002"
+				Belong="1092"
 				Prototype="r2m1_scout01"
 				Pos="3439.005 442.645 440.130"
 				Rot="0.000 0.409 0.000 0.913"
@@ -2160,7 +2160,7 @@
 
 			<Formation
 				Name="barricade4_wGw72_Team_Formation"
-				Belong="1002"
+				Belong="1092"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -9667,7 +9667,7 @@
 
 	<Object
 		Name="heavy_dot3_vulcan1963"
-		Belong="1002"
+		Belong="1092"
 		Prototype="heavy_dot3_vulcan"
 		Pos="2213.003 330.147 409.676"
 		Rot="0.000 -0.706 0.000 0.709">
@@ -9676,18 +9676,18 @@
 
 	<Object
 		Name="barricade4_wGw73"
-		Belong="1002"
+		Belong="1092"
 		Prototype="barricade4_wGw"
 		Pos="1879.570 255.000 382.523"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade4_wGw73_Team"
-			Belong="1002"
+			Belong="1092"
 			Prototype="settlementTeam">
 			<Object
 				Name="barricade4_wGw73_Child2"
-				Belong="1002"
+				Belong="1092"
 				Prototype="r2m1_scout01"
 				Pos="1889.408 255.000 397.565"
 				Rot="0.000 -0.319 0.000 0.948"
@@ -9699,7 +9699,7 @@
 
 			<Formation
 				Name="barricade4_wGw73_Team_Formation"
-				Belong="1002"
+				Belong="1092"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -57080,18 +57080,18 @@
 
 	<Object
 		Name="barricade4_wGw78"
-		Belong="1005"
+		Belong="1092"
 		Prototype="barricade4_wGw"
 		Pos="3395.854 370.528 1723.503"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade4_wGw78_Team"
-			Belong="1005"
+			Belong="1092"
 			Prototype="settlementTeam">
 			<Object
 				Name="barricade4_wGw78_Child3"
-				Belong="1005"
+				Belong="1092"
 				Prototype="r1m1_bug02"
 				Pos="3406.536 370.558 1723.352"
 				Rot="0.000 -0.111 0.000 0.994"
@@ -57103,7 +57103,7 @@
 
 			<Object
 				Name="barricade4_wGw78_Child2"
-				Belong="1005"
+				Belong="1092"
 				Prototype="r1m1_bug02"
 				Pos="3379.121 370.558 1725.822"
 				Rot="-0.003 0.244 -0.024 0.969"
@@ -57115,7 +57115,7 @@
 
 			<Object
 				Name="barricade4_wGw78_Child1"
-				Belong="1005"
+				Belong="1092"
 				Prototype="r1m2_bug04"
 				Pos="3392.804 370.558 1723.598"
 				Rot="0.000 0.068 0.000 0.998"
@@ -57127,7 +57127,7 @@
 
 			<Formation
 				Name="barricade4_wGw78_Team_Formation"
-				Belong="1005"
+				Belong="1092"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"

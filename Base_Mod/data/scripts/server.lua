@@ -1288,3 +1288,67 @@ function RestoreAllToleranceStatus()
     	end
     end
 end
+
+function DefineTheEnding()
+	good = 1
+
+	LOG("Selecting appropriate ending...")
+
+	if QuestStatus("FinalBattle_Quest")==Q_COMPLETED then
+		LOG("Antimilitarists: True")
+	else
+		LOG("Antimilitarists: False")
+		good = 0
+	end
+
+	if QuestStatus("DefendSowth_Quest")==Q_COMPLETED then
+		LOG("Sowth Defend: True")
+	else
+		LOG("Sowth Defend: False")
+		good = 0
+	end
+
+	if QuestStatus("PeregReturn")==Q_COMPLETED then
+		LOG("Oil Engineer: True")
+	else
+		LOG("Oil Engineer: False")
+		good = 0
+	end
+
+	if QuestStatus("CaptureKateberg_Quest")==Q_COMPLETED then
+		LOG("Liddencloud Locals: True")
+	else
+		LOG("Liddencloud Locals: False")
+		good = 0
+	end
+
+	if QuestStatus("FreeExtremistLeader_Quest5")==Q_COMPLETED then
+		LOG("Fishermen: True")
+	else
+		LOG("Fishermen: False")
+		good = 0
+	end
+
+	if QuestStatus("GoBackWithoutDobr_Quest")==Q_COMPLETED then
+		LOG("Tikhomir: True")
+	else
+		LOG("Tikhomir: False")
+		good = 0
+	end
+
+	if (GetTolerance(1100, 1003)>1.499) then
+		LOG("Adventurers Tolerance: True")
+	else
+		LOG("Adventurers Tolerance: False")
+		good = 0
+	end
+
+	if (GetTolerance(1100, 1004)>1.499) then
+		LOG("Explorers Tolerance: True")
+	else
+		LOG("Explorers Tolerance: False")
+		good = 0
+	end
+
+	return good
+end

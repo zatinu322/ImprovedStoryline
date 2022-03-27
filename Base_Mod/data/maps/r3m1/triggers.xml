@@ -38,12 +38,11 @@
 	<trigger	Name="CutsceneDisable2"	active="0">
 		<event	timeout="2"	eventid="GE_TIME_PERIOD" />
 		<script>
-			println("checking tig status")
+
 			local trig = getObj("trMoveFromR1M4")
 			if trig then
 				if trig:IsActivated() == 1 then
 				TDeactivate("trMoveFromR1M4")
-				println("DisabledCutscene")
 				end
 			end
 

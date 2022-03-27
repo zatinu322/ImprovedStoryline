@@ -1202,7 +1202,7 @@
 				cfg="427"
 				helloReplyNames="Dlg_npc_002176"
 				SpokenCount="0" />
-			
+
 			<Object
 				Name="Kartograph2"
 				Belong="1043"
@@ -6228,27 +6228,19 @@
 		NodeScale="1.097" />
 
 	<Object
-		Name="wood_fence2321"
-		Belong="-1"
-		Prototype="Breakable_WoodFence2"
-		Pos="2390.151 259.078 1416.056"
-		Rot="0.000 -0.696 0.000 0.718"
-		NodeScale="1.119" />
-
-	<Object
 		Name="wood_fence2322"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="2384.222 258.272 1411.167"
-		Rot="0.000 0.033 0.000 0.999"
+		Pos="2385.008 258.427 1412.399"
+		Rot="-0.003 -0.089 0.037 0.995"
 		NodeScale="1.119" />
 
 	<Object
 		Name="wood_fence2323"
 		Belong="-1"
 		Prototype="Breakable_WoodFence2"
-		Pos="2373.936 256.779 1411.899"
-		Rot="0.000 0.033 0.000 0.999"
+		Pos="2374.609 256.905 1411.486"
+		Rot="0.003 0.031 0.107 0.994"
 		NodeScale="1.119" />
 
 	<Object
@@ -13641,7 +13633,7 @@
 		Name="r2_deadtree51258"
 		Belong="-1"
 		Prototype="Breakable_r2_deadtree5"
-		Pos="555.117 262.279 2979.166"
+		Pos="551.029 261.391 2959.233"
 		Rot="0.000 0.131 0.000 0.991"
 		NodeScale="1.523" />
 

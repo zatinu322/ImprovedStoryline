@@ -2,7 +2,7 @@
 <World
 	name="Object16"
 	class="SgNode"
-	LastId="76473754">
+	LastId="76473799">
 	<Node
 		name="Object12"
 		class="SgAnimatedModelNode"
@@ -11525,7 +11525,7 @@
 	<Node
 		name="Object7502"
 		class="SgAnimatedModelNode"
-		org="2385.175 0.000 1431.280"
+		org="2389.021 -0.949 1425.434"
 		orgRel="1"
 		rot="0.0000 -0.8077 0.0000 -0.5895"
 		scale="0.938 0.938 0.938"

@@ -659,34 +659,20 @@
 		</script>
 	</trigger>
 
-<!--
-**************************************************************************************************
-**   Гонки
-**************************************************************************************************
--->
 	<trigger	Name="trA"	active="0">
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
---			println("Capture car")
+
 			if GetPlayerVehicle() then 
---				SetVar("PlayerCarNameRace",GetPlayerVehicle():GetName())
 				GetPlayerVehicle():SetNameFromScript( "PlayerCarGonki" )
+				GetPlayerVehicle():SetGamePositionOnGround(CVector(4422.050, 280.216, 2025.034))
+				GetPlayerVehicle():SetRotation(Quaternion(-0.001, -0.703, -0.000, -0.711))
 				SaveWeaponGroups()
 			end
---			println("Name = "..GetVar("PlayerCarName").AsString)
+
 			CapturePlayerVehicle(0, "PlayerRace")
 			AddPlayerMoney(-10000)
---			if team then 
---			   team:SetDestination(CVector(getPos("MolokovozSpawn_loc")))
---			end
---			if veh then
---			   veh:SetExternalPathByName("molokovozPath1")
---			   local pl=g_Player
---	   		   g_Player:AddChild(veh)
---			end
-  
 
---			println("Create Formula 1 vehicles")
 			local maxcar = GetVar("CountCar").AsInt
 			for i=1,maxcar-1 do
 				local veh = CreateVehicleEx("Formula01","FormulaCar"..i,  CVector(getPos("RaceStart"..i.."_loc"))+CVector(0,1,0), 1100)
@@ -697,7 +683,7 @@
 				   while sk==2 do
 				   	  sk=random(8)-1
 				   end
---				   veh:SetSkin(sk)
+
 				   veh:SetRandomSkin()
 				   veh:SetForcedMaxTorque(1500)
 				   veh:SetMaxSpeed(2000)
@@ -719,7 +705,7 @@
 			for j=0,7 do
 				SetVar("LapCount"..j,0)
 			end
---			SetVar("LapCount",1)
+
 			SetVar("CarCurSide1","2")
 			SetVar("CarCurSide2","1")
 			SetVar("CarCurSide3","3")
@@ -740,7 +726,7 @@
 			TActivate("trRaceCarDie")
 			TActivate("trCheckPoints")
 			TActivate("trPlayerFormulaDie")
---			TActivate("trStartRace")
+
 			AllowSave( false )
 			trigger:Deactivate()
 		</script>
@@ -750,13 +736,12 @@
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			local nummsg=GetVar("nummsg").AsInt
---			AddFadingMsgId( "fm_race_start_"..nummsg )
+
 			AddFadingMsgByStrIdFormatted( "fm_race_start_1", nummsg)
 			AddImportantFadingMsgByStrIdFormatted( "fm_race_start_1", nummsg)
 			SetVar("nummsg",nummsg-1)
 			if nummsg==1 then 
-			   TActivate("trStartRace")
---				AddFadingMsgId( "fm_race_start_0" )			   
+				TActivate("trStartRace")		   
 				trigger:Deactivate()
 			end
 		</script>
@@ -767,7 +752,6 @@
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 		
---			println("trStartRace run")
 			AddFadingMsgId( "fm_race_start_0" )
 			AddImportantFadingMsgByStrIdFormatted( "fm_race_start_0" )
 			TDeactivate("trFalseStar")
@@ -818,15 +802,12 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="FormulaPath18_loc" />
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="FormulaPath19_loc" />
 		<script>
---			println("~~~~~~~~~~~~~~~~~~~~~~")
 			local amount = trigger:GetTriggeredObjectAmount()
 			for i=0, amount-1 do
 			   local guestID = trigger:GetTriggeredObjectID(i)
 			   local guest = getObj(guestID)
 			   if guest then
 			   	  local name = guest:GetName()
---			      println("Guest Name = "..name)
---			      LOG("Guest Name = "..name)
 
 				  if strsub(name,1,10)=="FormulaCar" then
 						local locname = trigger:GetCallObjName()
@@ -840,20 +821,13 @@
 
 						local newnums = canmovearr[nums][random(3)]
 						SetVar("CarCurSide"..carnum,newnums)
---						println("Location Name = "..locname)
---						LOG("Location Name = "..locname)
 
---						local nextpath = "Gonka_"..locnum.."-"..locnum+1.."_"..let[newnums]
 						local nextpath = "Gonka_"..locnum.."-"..(locnum+1).."_"..let[newnums]
---						nextpath = nextpath.."_"
---						println(nextpath)
---						LOG(nextpath)
+
 						guest:SetExternalPathByName(nextpath)
---						guest:SetDestination(CVector(getPos("FormulaPath"..locnum+1.."_loc")))
 					end
 			   end
 			end
---			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -867,7 +841,6 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint7_loc" />
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint8_loc" />
 		<script>
---			println("!!!!!!!!!!!!")
 
 			local amount = trigger:GetTriggeredObjectAmount()
 			for i=0, amount-1 do
@@ -876,13 +849,8 @@
 			   if guest then
 			   	  local name = guest:GetName()
 
---			      println("Guest Name = "..name)
---				  LOG("Guest Name = "..name)
-
 				  local locname = trigger:GetCallObjName()
 				  local carnum=tonumber(strsub(name,11,11))
-
---				  println("Location Name = "..locname)
 
                   if name=="PlayerFormula" then
                      carnum = 0
@@ -892,58 +860,49 @@
 				  local locnum = tonumber(strsub(locname,11,11))
 				  local CurCarCounter=GetVar("PointCarCount"..lap.."_"..locnum).AsInt+1
 
---				  println("Curent Lap = "..lap.." locnum = "..locnum.." Counter = "..CurCarCounter.." / "..maxcar)
---				  LOG("Curent Lap = "..lap.." locnum = "..locnum.." Counter = "..CurCarCounter.." / "..maxcar)
-
---				  println(1)
 					if name=="PlayerFormula" then
---					  println(2)
 						local pointnum = GetVar("NextPoint").AsInt
---игрок приехал в правильный чекпоинт
 						if locnum==pointnum then
---					  println(3)
-							AddFadingMsgId( "fm_race_chekpoint" )
-							AddImportantFadingMsgByStrIdFormatted( "fm_race_chekpoint" )
 
 							SetVar("PointCarCount"..lap.."_"..locnum,CurCarCounter)
 							SetVar("PlayerPlace",CurCarCounter)
 
---							println(GetVar("PointCarCount"..locnum).AsInt)
+
 							if 3>=CurCarCounter then
 								AddFadingMsgId( "fm_race_finish_"..CurCarCounter)
 								AddImportantFadingMsgId( "fm_race_finish_"..CurCarCounter)
 							else
---								AddFadingMsgId( "fm_race_finish_less")
 								AddFadingMsgByStrIdFormatted( "fm_race_finish_less", CurCarCounter, maxcar)
 								AddImportantFadingMsgByStrIdFormatted( "fm_race_finish_less", CurCarCounter, maxcar)
 							end
+
 							SetVar("NextPoint",pointnum+1)
---						end
---					  println(4)
+
 							if pointnum==8 then
 								SetVar("NextPoint",1)
 							elseif pointnum==1 then
 								if lap == 0 then
-									AddFadingMsgId( "fm_race_firslap" )
-									AddImportantFadingMsgId( "fm_race_firslap" )
-							    elseif lap >= 1 then
+--									AddFadingMsgId( "fm_race_firslap" )
+--									AddImportantFadingMsgId( "fm_race_firslap" )
+--							    elseif lap >= 1 then
 									AddFadingMsgId( "fm_race_finish" )
 									AddImportantFadingMsgByStrIdFormatted( "fm_race_finish" )
---									println(1)
+
 									guest:SetCustomControlEnabled(1)
---									println(2)
+
 									guest:SetExternalPathByName("Gonka_Finish_8")
---									println(3)
---									println("RACE STOP. Place = "..CurCarCounter)
+
 									TActivate("trFinishRace")
 							    end
---							    println("Car Num = "..carnum.." NextLap = "..(lap+1))
---							    LOG("Car Num = "..carnum.." NextLap = "..(lap+1))
+
 							    SetVar("LapCount"..carnum,lap+1)
 							end
+						else
+							AddFadingMsgId( "fm_race_chekpoint_notright" )
+							AddImportantFadingMsgByStrIdFormatted( "fm_race_chekpoint_notright" )
 						end
 					elseif strsub(name,1,10)=="FormulaCar" then
---						println("==== +1")
+
 						if locnum==1 then
 							SetVar("LapCount"..carnum,lap+1)
 						end
@@ -952,10 +911,6 @@
 						end
 						SetVar("PointCarCount"..lap.."_"..locnum,CurCarCounter)
 					end
---					if CurCarCounter>=maxcar then
---						SetVar("PointCarCount"..laplocnum,0)
---						println("CheckPoint "..locnum.." reset")
---					end
 			   end
 			end
 		</script>
@@ -970,7 +925,6 @@
 		<event	eventid="GE_OBJECT_DIE"		ObjName="FormulaCar6" />
 		<event	eventid="GE_OBJECT_DIE"		ObjName="FormulaCar7" />
 		<script>
---			println("Some Car Die")
 			local CarCount=GetVar("CountCar").AsInt
 			AddFadingMsgId( "fm_race_somedie" )
 			SetVar("CountCar",CarCount-1)
@@ -982,8 +936,7 @@
 
 
 	<trigger	Name="trFinishRace"	active="0">
-<!--		<event	timeout="1"		eventid="GE_TIME_PERIOD" />-->
-		<event eventid="GE_TARGET_REACHED" ObjName="PlayerFormula"/>
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 		    local place = GetVar("PlayerPlace").AsInt
 		    if place==1 then
@@ -996,27 +949,30 @@
 				place=4
 			end
 
---			local plcar = GetPlayerVehicle()
 			local healthmax=GetPlayerMaxHealth()
 			local healthcur=GetPlayerHealth()
 			local cenahp = 5000/healthmax
 			local ostcena=healthcur*cenahp
---			println("Ostatok = "..ostcena)
+
 			AddPlayerMoney(ostcena)
 
 
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(4176.459, 284.317, 2168.970), Quaternion(0, 0, 0, 0), 1)
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+--			local PlfCoor = Plf:GetPosition()
+--			PlfCoor.y = PlfCoor.y + 25*0.74
+--			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			Plf:SetCustomControlEnabled(true)
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-			Plf:SetCustomControlEnabled(false)
+--			Plf:SetCustomControlEnabled(true)
+--			Plf:SetCustomLinearVelocity(0)
+--			Plf:SetThrottle(0)
+--			Plf:SetCustomControlEnabled(false)
 
-			FlyAround(6, 0, 6, 6, PlfCoor, PlfID, 1, 1 )
+			FlyLinked("linkedcam", CTochID, 5, 0, 1, PlfID)
+--			FlyAround(6, 0, 6, 6, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 		    AddCinematicMessage( place+3, 0.5 )
@@ -1042,9 +998,8 @@
 				Plf:SetCustomControlEnabled(false)
 
 				FlyAround(6, 0, 6, 6, PlfCoor, PlfID, 1, 1 )
---				Plf:setImmortalMode(0)
---				Plf:AddModifier("hp","- 1000")
 				StartCinematic()
+
 			    AddCinematicMessage( 8, 0.5 )
 			end
 		    TActivate("trRemoveAllRace")
@@ -1079,7 +1034,6 @@
 
 
 	<trigger	Name="trRemoveAllRace"	active="0">
-<!--		<event	timeout="1"		eventid="GE_TIME_PERIOD" /> -->
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 
@@ -1105,11 +1059,9 @@
 			end
 
 			local plcarname=GetVar("PlayerCarNameRace").AsString
---			println("Name = "..plcarname)
 			local pl=g_Player
 			local plcar=getObj("PlayerCarGonki")
 			if pl and plcar then
---				println("GiveCar")
 				pl:AddChild(plcar)
 				RestoreWeaponGroups()
 			end
@@ -1182,8 +1134,7 @@
 		<event	timeout="1"			eventid="GE_TIME_PERIOD" />
 		<script>
 			local team=getObj("EngCar")
-			if team then
---			   team:SetDestination()    
+			if team then 
 			   team:SetExternalPathByName("engineerGoAwayPath")
 			   team:setImmortalMode(1)
 			   TActivate("trEngineerFree")
@@ -1246,8 +1197,8 @@
 		<event	timeout="0.001"			eventid="GE_TIME_PERIOD" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			setPos(GetPlayerVehicle(),CVector(getPos("PlayerCarOnRacePos_loc")))
-			setRot(GetPlayerVehicle(),Quaternion(0.001, 0.571, 0.000, 0.821))
+			setPos(GetPlayerVehicle(),CVector(4422.050, 280.216, 2025.034))
+			setRot(GetPlayerVehicle(),Quaternion(-0.001, -0.703, -0.000, -0.711))
 			trigger:Deactivate()
 		</script>
 	</trigger>

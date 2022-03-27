@@ -1014,9 +1014,9 @@
 			CreateNewDummyObject( "dweller_lisa", "humLisa", -1, -1, CVector(6153.725, 254.982, 7702.738), Quaternion(0.000, -0.156, 0.000, 0.988), 0)
 
 			getObj("humPlayer"):SetNodeAction(AT_STAND1)
-			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_RESERVED1, AT_STAND2, AT_STAND1)
+			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
 			getObj("humLisa"):SetNodeAction(AT_STAND2)
-			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND2)
+			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
 
 			AddCinematicMessage( 33, 0.5 )
 
@@ -2053,8 +2053,6 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			PlayCustomMusic("IntenseDialogue01")
-			
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1820.286, 288.019, 5475.828), Quaternion(0, 0, 0, 0), 1)
 			
 			local CToch = GetEntityByName("CamTochka")
@@ -2062,7 +2060,7 @@
 			local vehPlayer = GetPlayerVehicle()
 			local vehPID = vehPlayer:GetId()
 			
-			FlyLinked( "ZASADA_AR_cam01", CTochID, 13, 1, 1, vehPID )
+			FlyLinked( "ZASADA_AR_cam01", CTochID, 17.5, 1, 1, vehPID )
 			StartCinematic()
 			
 			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1015)
@@ -2079,10 +2077,19 @@
 			end
 			
 			TActivate("RolikZasadaARFade")
+			TActivate("RolikZasadaARMusic")
 			TActivate("RolikZasadaAREnd")
 			
 			SetVar("ZasadaAR",2)
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikZasadaARMusic" active="0">
+	<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			PlayCustomMusic("IntenseDialogue01")
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2095,6 +2102,7 @@
 --				vehPlayer:SetGamePositionOnGround( CVector(1772.579, 280.668, 5487.087))
 --				vehPlayer:SetRotation(Quaternion(0.009, 0.711, 0.001, 0.703))
 				vehPlayer:SetExternalPathByName("player_path06")
+				vehPlayer:LimitMaxSpeed(20)
 			end
 
 			trigger:Deactivate()
@@ -2117,11 +2125,15 @@
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("player_path06")
 				vehPlayer:PlaceToEndOfPath("player_path06")
+				vehPlayer:UnlimitMaxSpeed()
 			end
 			
 			local CToch = GetEntityByName("CamTochka")
 			if CToch then CToch:Remove() end
 			trigger:Deactivate()
+
+			TDeactivate("RolikZasadaARFade")
+			TDeactivate("RolikZasadaARMusic")
 		</script>
 	</trigger>
 

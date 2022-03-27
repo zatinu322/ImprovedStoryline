@@ -78,7 +78,7 @@
 
 	<Object
 		Name="Marezzia_Bar"
-		FullName="Бар ''Василек''" />
+		FullName="Бар &quot;Василек&quot;" />
 
 	<Object
 		Name="Marezzia_Bar_Barman"
@@ -130,7 +130,7 @@
 
 	<Object
 		Name="Toskana_Bar"
-		FullName="Кафе ''Ностальгия''" />
+		FullName="Кафе &quot;Ностальгия&quot;" />
 
 	<Object
 		Name="Toskana_Bar_Barman"
@@ -190,7 +190,7 @@
 
 	<Object
 		Name="NewVillage_Bar"
-		FullName="Бар ''Заблудший''" />
+		FullName="Бар &quot;Заблудший&quot;" />
 
 	<Object
 		Name="NewVillage_Bar_Barman"

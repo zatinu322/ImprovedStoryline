@@ -663,7 +663,7 @@
 			TActivate ("Shaman1TriggerDie")
 			TActivate ("Shaman2TriggerDie")
 
-			TakeQuest('r2m2_HeadsHunterQuest')
+			TakeQuest("r2m2_HeadsHunterQuest")
 
 			trigger:Deactivate()    
 		</script>

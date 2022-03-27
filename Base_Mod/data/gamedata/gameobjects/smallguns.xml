@@ -31,7 +31,7 @@ $Id: SmallGuns.xml,v 1.57 2005/11/17 06:42:59 anton Exp $
 
 		Durability		= "20" 
 		
-		ShellsPoolSize		= "25"
+		ShellsPoolSize		= "51"
 		WithShellsPoolLimit	= "true"
 		
 		AccelerationValue	= "1.6"

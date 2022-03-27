@@ -106,7 +106,7 @@
 
 	<Object
 		Name="TheSel_Bar"
-		FullName="Бар ''Лавин''" />
+		FullName="Бар &quot;Лавин&quot;" />
 
 	<Object
 		Name="TheSel_Bar_Barman"

@@ -938,10 +938,16 @@
 			TDeactivate("trMovePlToR1M4")
 
 			CreateNewDummyObject( "submarina",	"Subm1", -1, -1, CVector(4010.692, 245.977, 1890.384), Quaternion(-0.006, -0.592, -0.001, 0.806),0 )
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(3918.764, 265.498, 1859.115), Quaternion(0, 0, 0, 0), 1)
+
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			local vehPID = GetPlayerVehicleId()
 
 			Fly("ToSailSubmarine_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
 			Fly("ToSailSubmarine_cam02", CINEMATIC_NO_AIM, 0, 3, 0, 0 )
-			Fly("ToSailSubmarine_cam03", CINEMATIC_NO_AIM, 0, 8, 0, 1 )
+--			Fly("ToSailSubmarine_cam03", CINEMATIC_NO_AIM, 0, 8, 0, 1 )
+			FlyLinked( "linkedcam", CTochID, 8, 0, 1, vehPID)
 			StartCinematic()
 
 
@@ -975,7 +981,7 @@
 
 
 	<trigger Name="trToSailSubmarine_cam03" active="0">
-		<event flypath="ToSailSubmarine_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
 			local vehPlayer = GetPlayerVehicle()
@@ -1005,16 +1011,17 @@
 		end
 --		LOG(3)
 		local submar = getObj("Subm1")
-		if submar then
-			submar:Remove()
-		end
+		if submar then submar:Remove() end
+
+		local CToch = GetEntityByName("CamTochka")
+		if CToch then CToch:Remove() end
+
 --		LOG(4)
 		StopPlayingCustomMusic()
 		TDeactivate("trToSailSubmarine_cam01")
 --		LOG(6)
 		TDeactivate("trToSailSubmarine_cam03")
 		TActivate("trMovePlToR1M4")
-		TActivate("")
 --		LOG(5)
 		SetCameraBehindPlayerVehicle()
 		trigger:Deactivate()

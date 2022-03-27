@@ -14,7 +14,7 @@
 			CreateNewDummyObject( "big_crag_12", "kamexp2", -1, -1, CVector(2052.101, 263.000, 3567.510), Quaternion(-0.3090, 0.0000, 0.0000, 0.9511), 0)
 			CreateNewDummyObject( "big_stone4", "kamexp3", -1, -1, CVector(2057.401, 261.000, 3551.166), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
 			CreateNewDummyObject( "big_stone2", "kamexp4", -1, -1, CVector(2070.257, 260.000, 3555.813), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
-			CreateNewDummyObject( "berth", "motsGomer", -1, -1, CVector(3500.933, 207.000, 3694.143), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+--			CreateNewDummyObject( "berth", "motsGomer", -1, -1, CVector(3500.933, 207.000, 3694.143), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
 
 			local i=1
 			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","bumblebee01"}
@@ -675,7 +675,8 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			GetPlayerVehicle():SetThrottle(0)
 			TActivate("MisterShlyapaTr2")
-			Fly("mishlen", CINEMATIC_NO_AIM, 0, 15, 1, 1 )
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			Fly("mishlen", CINEMATIC_NO_AIM, 0, 17, 1, 1 )
 			StartCinematic()
 			PlayCustomMusic("Bio07unloop")
 			AddCinematicMessage( 8804, 1 )
@@ -687,6 +688,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			RestoreAllToleranceStatus()
 
 			StopPlayingCustomMusic()
 
@@ -705,8 +708,8 @@
 	<trigger Name="DeleteHomerRybak" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			local shit1 = GetEntityByName("humGomer")
-			if shit1 then shit1:Remove() end
+			local humGom = GetEntityByName("humGomer")
+			if humGom then humGom:Remove() end
 			trigger:Deactivate()
 		</script>
 	</trigger>

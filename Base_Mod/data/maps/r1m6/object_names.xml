@@ -92,7 +92,7 @@
 
 	<Object
 		Name="TheTown_Bar"
-		FullName="Бар 'Златоглавый'" />
+		FullName="Бар &quot;Златоглавый&quot;" />
 
 
 
@@ -116,7 +116,7 @@
 
 	<Object
 		Name="TheDreenorVillage_Bar"
-		FullName="Трактир 'Куриное Гузно'" />
+		FullName="Трактир &quot;Куриное Гузно&quot;" />
 
 	<Object
 		Name="Starosta"

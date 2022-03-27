@@ -586,6 +586,12 @@
 	</Path>
 
 	<Path
+		Name="felix_path02">
+		<Point
+			coord="542.332 1806.847" />
+	</Path>
+
+	<Path
 		Name="fun1_5road">
 		<Point
 			coord="2956.889 2387.648" />
@@ -1380,7 +1386,13 @@
 	<Path
 		Name="lisa_vil_3">
 		<Point
-			coord="1602.645 2107.917" />
+			coord="1593.041 2027.280" />
+
+		<Point
+			coord="1591.539 1993.281" />
+
+		<Point
+			coord="1586.305 1962.454" />
 	</Path>
 
 	<Path
@@ -1753,11 +1765,5 @@
 		Name="water_rolik">
 		<Point
 			coord="1179.000 1641.000" />
-	</Path>
-
-	<Path
-		Name="felix_path02">
-		<Point
-			coord="542.332 1806.847" />
 	</Path>
 </Paths>

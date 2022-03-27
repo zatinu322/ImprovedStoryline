@@ -894,7 +894,7 @@
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
+			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
 
 			AddCinematicMessage(31, 1 )

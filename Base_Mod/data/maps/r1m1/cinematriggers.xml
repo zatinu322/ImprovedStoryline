@@ -151,6 +151,19 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			EnableAutoHelp( false )
+
+			SpawnMessageBox( "90001" )
+
+			local b = SpawnMessageBox( "90000" )
+			if b == 1 then
+				TakeQuest("FirstTimePlay")
+				CompleteQuest("FirstTimePlay")
+				AddImportantFadingMsg("Мистер Шляпа отключен.")
+			else
+				AddImportantFadingMsg("Мистер Шляпа включен.")
+			end
+
 			TDeactivate( "ROLIK11" )
 			TDeactivate( "ROLIK15" )
 			TDeactivate( "ROLIK16" )
@@ -171,7 +184,6 @@
 			TDeactivate( "StartGame" )
 			TActivate("triggerExitToMap12")
 			TActivate("loc_lisa")
-			TActivate("tr_Tutotial_Start") 
 			TActivate("BotanikVanCreate")
 
 			trigger:Deactivate() 
@@ -568,19 +580,19 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(1601.832, 303.112, 2032.036))
-				vehPlayer:SetRotation(Quaternion(-0.010, -0.020, 0.024, -0.999))
+				vehPlayer:SetGamePositionOnGround( CVector(1583.228, 303.736, 2007.674))
+				vehPlayer:SetRotation(Quaternion(0.019, 0.013, 0.011, 1.000))
 			end
 			
 			if vehLisa then
 				vehLisa:SetGamePositionOnGround( CVector(1264.659, 308.451, 2967.498))
 			end
 			
-			CreateVehicleEx("LisaCar","vehLisa_0",CVector(1583.980, 303.488, 2051.497), 1042)
+			CreateVehicleEx("LisaCar","vehLisa_0",CVector(1601.875, 302.842, 2045.860), 1042)
 			
 			local vehLisa1 = GetEntityByName("vehLisa_0")
 			if vehLisa1 then
-				vehLisa1:SetRotation(Quaternion(-0.013, 0.958, -0.002, 0.288))
+				vehLisa1:SetRotation(Quaternion(0.059, 0.998, 0.006, 0.017))
 				vehLisa1:SetSkin(2)
 			end
 			

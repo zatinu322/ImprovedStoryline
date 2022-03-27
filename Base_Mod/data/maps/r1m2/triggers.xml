@@ -248,7 +248,7 @@
 				Plf:SetThrottle( 0 )
 				Plf:SetCustomControlEnabled( false )
 
-				Fly("signfly", CINEMATIC_AIM_TO_POINT, CVector(960,70,4004), 14, 1, 1 )
+				Fly("signfly", CINEMATIC_AIM_TO_POINT, CVector(960,70,4004), 15, 1, 1 )
 				StartCinematic()
 
 				AddCinematicMessage( 1, 1 )
@@ -701,7 +701,7 @@
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 18, PlfCoor, PlfID, 1, 1 )
+			FlyAround(6, 0, 25, 19, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			AddCinematicMessage( 88056, 1 )
 			if IsQuestComplete("FirstTimePlay") then
@@ -768,8 +768,8 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("Bio07unloop")
-			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 7, 1, 0 )
-			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
+			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
 			StartCinematic()
 			AddCinematicMessage( 88055, 1 )
 			
@@ -836,12 +836,28 @@
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			FlyAround(6, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			AddCinematicMessage( 88058, 0.25 )
 
 			AddQuestItem("quest_thief_package")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_thief_package")
+
+			TActivate("cinAfterKillRaiderEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterKillRaiderEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>
@@ -861,7 +877,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1 )
+			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			AddCinematicMessage( 88059, 1 )
 

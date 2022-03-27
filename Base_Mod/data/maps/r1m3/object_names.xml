@@ -6,7 +6,7 @@
 
 	<Object
 		Name="ExplosiveShop"
-		FullName="Магазин 'Пиротехник'" />
+		FullName="Магазин &quot;Пиротехник&quot;" />
 
 	<Object
 		Name="Asgard_Workshop"
@@ -18,7 +18,7 @@
 
 	<Object
 		Name="Asgard_Bar"
-		FullName="Бар ''Асгард''" />
+		FullName="Бар &quot;Асгард&quot;" />
 
 	<Object
 		Name="Asgard_Bar_Barman"
@@ -70,7 +70,7 @@
 
 	<Object
 		Name="Pesht_Bar"
-		FullName="Бар ''Пешт''" />
+		FullName="Бар &quot;Пешт&quot;" />
 
 	<Object
 		Name="Pesht_Bar_Barman"
@@ -94,7 +94,7 @@
 
 	<Object
 		Name="TheForgotten_Bar"
-		FullName="Бар ''В Прошлом''" />
+		FullName="Бар &quot;В Прошлом&quot;" />
 
 	<Object
 		Name="TheForgotten_Bar_Barman"
@@ -118,7 +118,7 @@
 
 	<Object
 		Name="Minin_Bar"
-		FullName="Бар ''Раб''" />
+		FullName="Бар &quot;Раб&quot;" />
 
 	<Object
 		Name="Mer_House"
@@ -170,7 +170,7 @@
 
 	<Object
 		Name="TheShahts_Bar"
-		FullName="Столовая ''Заря''" />
+		FullName="Столовая &quot;Заря&quot;" />
 
 	<Object
 		Name="TheShahts_Bar_Barman"
@@ -238,7 +238,7 @@
 
 	<Object
 		Name="TheBase_Bar"
-		FullName="Салун ''Мерзкий''" />
+		FullName="Салун &quot;Мерзкий&quot;" />
 
 	<Object
 		Name="Thief"

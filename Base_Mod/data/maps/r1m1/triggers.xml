@@ -9,8 +9,10 @@
 
 			if getObj("Ruin") then
 				SetVar("KrayCity", 1)
+				LOG("KRAYCITY ADDON IS INSTALLED.")
 			else
 				SetVar("KrayCity", 0)
+				LOG("KRAYCITY ADDON IS NOT INSTALLED.")
 			end
 
 		    trigger:Deactivate()
@@ -1339,33 +1341,6 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-
-
-
-
-	<trigger Name="tr_Tutotial_Start" active="0">
-		<event 	timeout="0.5" eventid="GE_TIME_PERIOD" />
-		<script>
-			EnableAutoHelp( false )
-
-			SpawnMessageBox( "90001" )
-
-			local b = SpawnMessageBox( "90000" )
-			if b == 1 then
-				TakeQuest("FirstTimePlay")
-				CompleteQuest("FirstTimePlay")
-				AddImportantFadingMsg("Мистер Шляпа отключен.")
-			else
-				AddImportantFadingMsg("Мистер Шляпа включен.")
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
-
 
 	<trigger Name="triggerExitToSouth" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToSouth" />

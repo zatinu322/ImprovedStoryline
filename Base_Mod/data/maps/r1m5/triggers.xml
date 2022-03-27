@@ -155,7 +155,8 @@
 
 			CompleteQuest("LaBelleHelp_Quest4")
 
-			AddImportantFadingMsg("Новые враги были замечены дальше по дороге")
+			AddImportantFadingMsg("Новые враги были замечены дальше по дороге.")
+			AddFadingMsg("Новые враги были замечены дальше по дороге.")
 						
 			TActivate("trLBDie2")
 			
@@ -176,7 +177,8 @@
 
 			CompleteQuest("LaBelleHelp_Quest5")
 
-			AddImportantFadingMsg("Ещё больше врагов было замечено дальше по дороге")
+			AddImportantFadingMsg("Ещё больше врагов было замечено дальше по дороге.")
+			AddFadingMsg("Ещё больше врагов было замечено дальше по дороге.")
 
 			TActivate("trLBDie3")
 			
@@ -198,6 +200,7 @@
 			CompleteQuest("LaBelleHelp_Quest6")
 
 			AddImportantFadingMsg("Враги подбираются к деревне! Скорее туда!")
+			AddFadingMsg("Враги подбираются к деревне! Скорее туда!")
 
 			TActivate("trLBDie4")
 			
@@ -219,6 +222,7 @@
 			CompleteQuest("LaBelleHelp_Quest7")
 
 			AddImportantFadingMsg("Главарь нападающей группировки был замечен у самого Ла Белля. Не дайте ему уйти!")
+			AddFadingMsg("Главарь нападающей группировки был замечен у самого Ла Белля. Не дайте ему уйти!")
 
 			TActivate("trLBDie5")
 			

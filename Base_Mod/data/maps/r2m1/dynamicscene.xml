@@ -198,8 +198,8 @@
 		Name="LisaFindLocation"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="6017.000 249.000 6571.000"
-		Radius="75.000" />
+		Pos="6279.450 248.139 6721.837"
+		Radius="400.000" />
 
 	<Object
 		Flags="21"
@@ -53119,4 +53119,36 @@
 	<Object
 		Belong="1100"
 		Prototype="someRecollection" />
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="stolb1149"
+			NodesNameHierarchy=""
+			PostTiePos="2832.515 231.185 6051.539"
+			LpName="LP_PART01" />
+
+		<Post
+			ServerObjName="stolb1148"
+			NodesNameHierarchy=""
+			PostTiePos="2880.093 216.731 6067.280"
+			LpName="LP_PART01" />
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="stolb1149"
+			NodesNameHierarchy=""
+			PostTiePos="2832.911 230.842 6050.340"
+			LpName="LP_PART02" />
+
+		<Post
+			ServerObjName="stolb1148"
+			NodesNameHierarchy=""
+			PostTiePos="2880.489 216.388 6066.081"
+			LpName="LP_PART02" />
+	</Object>
 </DynamicScene>

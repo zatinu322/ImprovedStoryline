@@ -2395,14 +2395,13 @@
 		</script>
 	</trigger>
 
+	<!-- Из Гор Мудрецов по секретному тоннелю. -->
 	<trigger Name="ETLLRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			SetWeather(0)
-			
-			PlayCustomMusic("Bio02")
 			
 			CreateNewDummyObject( "rr_locovagon", "loco1", -1, -1, CVector(2471.498, 255.000, 1895.675), Quaternion(0.0000, 0.1132, 0.0000, 0.9936), 0)
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2381.886, 282.310, 2955.780), Quaternion(0, 0, 0, 0), 1)
@@ -2414,7 +2413,7 @@
 			
 			Fly("ETLLRolikCam1", CINEMATIC_NO_AIM, 0, 26, 1, 0 )
 			Fly("ETLLRolikCam2", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
-			Fly("ETLLRolikCam3", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+			Fly("ETLLRolikCam3", CINEMATIC_NO_AIM, 0, 19, 0, 0 )
 			Fly("ETLLRolikCam4", CINEMATIC_NO_AIM, 0, 28, 0, 0 )
 			Fly("ETLLRolikCam5", CINEMATIC_NO_AIM, 0, 30, 0, 0 )
 			FlyLinked( "linkedcam", CTochID, 18, 0, 1, poezdID )
@@ -2438,6 +2437,9 @@
 	<trigger Name="ETLLRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+
+			PlayCustomMusic("Bio02")
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -2476,7 +2478,7 @@
 			local mover = GetEntityByID( moverId ) 
 			local controlledObj = GetEntityByName("loco1")
 			if controlledObj then
-				mover:SetObjAndPath( controlledObj:GetId(), "LocoSudaPath", 40 )
+				mover:SetObjAndPath( controlledObj:GetId(), "LocoSudaPath", 25 )
 			end
 			
 			trigger:Deactivate()
@@ -2524,7 +2526,7 @@
 			local mover = GetEntityByID( moverId ) 
 			local controlledObj = GetEntityByName("loco1")
 			if controlledObj then
-				mover:SetObjAndPath( controlledObj:GetId(), "LocoTudaPath", 40 )
+				mover:SetObjAndPath( controlledObj:GetId(), "LocoTudaPath", 25 )
 			end
 			trigger:Deactivate()
 		</script>

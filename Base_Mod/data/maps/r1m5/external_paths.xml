@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
-		Name="Player_path1">
+		Name="Brodyaga_path1">
 		<Point
-			coord="1499.415 2787.132" />
+			coord="3069.389 3167.706" />
+
 		<Point
-			coord="1503.455 2831.537" />
+			coord="3133.959 3117.869" />
+
+		<Point
+			coord="3149.177 3077.503" />
+
+		<Point
+			coord="3169.680 3070.530" />
+
+		<Point
+			coord="3246.650 3067.420" />
+
+		<Point
+			coord="3254.978 3019.194" />
+
+		<Point
+			coord="3256.589 2957.361" />
+
+		<Point
+			coord="3254.388 2885.756" />
 	</Path>
 
 	<Path
-		Name="Brodyaga_path1">
+		Name="Player_path1">
 		<Point
-			coord="3195.045 3048.627" />
+			coord="1499.415 2787.132" />
+
 		<Point
-			coord="3254.750 2979.873" />
-		<Point
-			coord="3241.366 2707.859" />
+			coord="1503.455 2831.537" />
 	</Path>
 
 	<Path
@@ -740,5 +758,4 @@
 		<Point
 			coord="1984.529 296.330" />
 	</Path>
-
 </Paths>

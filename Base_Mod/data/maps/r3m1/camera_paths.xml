@@ -148,8 +148,9 @@
 	</Path>
 
 	<Path	Name="MoveFromR2M1_cam01">
-			<Point  coord="880.759 299.689 1001.228" rotation="0.002 0.943 0.007 0.334"/>
-			<Point  coord="881.577 291.975 1001.826" rotation="0.025 0.941 0.072 0.330"/>
+			<Point  coord="899.927 298.689 1025.292" rotation="0.002 0.943 0.007 0.334"/>
+			<Point  coord="900.745 290.975 1025.890" rotation="0.025 0.941 0.072 0.330"/>
+
 	</Path>
 
 	<Path	Name="MoveFromR2M1_cam02">

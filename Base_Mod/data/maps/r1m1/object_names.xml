@@ -14,7 +14,7 @@
 
 	<Object
 		Name="TheTown_Bar"
-		FullName="Бар ''Долгий путь''" />
+		FullName="Бар &quot;Долгий путь&quot;" />
 
 	<Object
 		Name="TheTown_Bar_Barman"
@@ -50,7 +50,7 @@
 
 	<Object
 		Name="TheGloohoeVillage_Bar"
-		FullName="Бар 'На грани'" />
+		FullName="Бар &quot;На грани&quot;" />
 
 	<Object
 		Name="TheGloohoe_Bar_Barman"
@@ -102,7 +102,7 @@
 
 	<Object
 		Name="TheOilVillage_Bar"
-		FullName="Закусочная ''Ять''" />
+		FullName="Закусочная &quot;Ять&quot;" />
 
 	<Object
 		Name="TheOilVillage_Bar_Barman"
@@ -126,7 +126,7 @@
 
 	<Object
 		Name="TheContraVillage_Bar"
-		FullName="Бар ''Меграт''" />
+		FullName="Бар &quot;Меграт&quot;" />
 
 	<Object
 		Name="TheContraVillage_Bar_Barman"
@@ -146,7 +146,7 @@
 
 	<Object
 		Name="TheFreedom_Bar"
-		FullName="Закусочная ''Краб''" />
+		FullName="Закусочная &quot;Краб&quot;" />
 
 	<Object
 		Name="TheFreedom_Bar_Barman"
@@ -270,7 +270,7 @@
 
 	<Object
 		Name="Sosnovka_Bar"
-		FullName="Бар ''У лесопилки''" />
+		FullName="Бар &quot;У лесопилки&quot;" />
 
 	<Object
 		Name="Sosnovka_Bar_Barman"
@@ -294,7 +294,7 @@
 
 	<Object
 		Name="Lukoil_Bar"
-		FullName="Бар ''Капля нефти''" />
+		FullName="Бар &quot;Капля нефти&quot;" />
 
 	<Object
 		Name="Lukoil_Bar_Barman"
@@ -318,7 +318,7 @@
 
 	<Object
 		Name="Svalka_Bar"
-		FullName="Бар ''Смазка''" />
+		FullName="Бар &quot;Смазка&quot;" />
 
 	<Object
 		Name="Svalka_Bar_Barman"
@@ -342,7 +342,7 @@
 
 	<Object
 		Name="Ruin_Bar"
-		FullName="Бар ''Камень на камне''" />
+		FullName="Бар &quot;Камень на камне&quot;" />
 
 	<Object
 		Name="Ruin_Bar_Barman"
@@ -366,7 +366,7 @@
 
 	<Object
 		Name="Kolhoz_Bar"
-		FullName="Бар ''Пшеничка''" />
+		FullName="Бар &quot;Пшеничка&quot;" />
 
 	<Object
 		Name="Kolhoz_Bar_Barman"

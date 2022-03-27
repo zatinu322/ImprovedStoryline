@@ -1728,8 +1728,8 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		VisibleInEncyclopedia	= "false">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "dozerCab01" />
-			<Part id = "CABIN_SMALL_GUN"	Prototype = "kpvt01" />
-			<Part id = "CHASSIS_BIG_GUN"	Prototype = "octopus01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "octopus01" />
+			<Part id = "CHASSIS_BIG_GUN"	Prototype = "kpvt01" />
 			<Part id = "BASKET"		Prototype = "fakeCargo" />
 		</Parts>
 	</Prototype>

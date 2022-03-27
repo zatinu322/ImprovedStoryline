@@ -498,7 +498,7 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 
 			Fly("Pole1", CINEMATIC_NO_AIM, nil, 5, 1,0)
-			Fly("Pole2", CINEMATIC_NO_AIM, nil, 15, 0,1)
+			Fly("Pole2", CINEMATIC_NO_AIM, nil, 18, 0,1)
 			StartCinematic()
 
 			trigger:Deactivate()

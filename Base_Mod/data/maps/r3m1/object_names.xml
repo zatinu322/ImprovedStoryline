@@ -6,7 +6,7 @@
 
 	<Object
 		Name="Set_Bar"
-		FullName="Кафетерий 'У дуба'" />
+		FullName="Кафетерий &quot;У дуба&quot;" />
 
 	<Object
 		Name="Set_Bar_Barman"
@@ -38,7 +38,7 @@
 
 	<Object
 		Name="Fist_Bar"
-		FullName="Бар 'Скала'" />
+		FullName="Бар &quot;Скала&quot;" />
 
 	<Object
 		Name="Fist_Bar_Barman"
@@ -58,7 +58,7 @@
 
 	<Object
 		Name="Uluk_Bar"
-		FullName="Бар 'Коленвал'" />
+		FullName="Бар &quot;Коленвал&quot;" />
 
 	<Object
 		Name="Uluk_Bar_Barman"
@@ -74,11 +74,11 @@
 
 	<Object
 		Name="Uluk_Workshop"
-		FullName="Мастерская 'Сделай Сам'" />
+		FullName="Мастерская &quot;Сделай Сам&quot;" />
 
 	<Object
 		Name="Uluk_Shop"
-		FullName="Магазин 'У Боба'" />
+		FullName="Магазин &quot;У Боба&quot;" />
 
 	<Object
 		Name="r3m1_NearFist_Guard1"

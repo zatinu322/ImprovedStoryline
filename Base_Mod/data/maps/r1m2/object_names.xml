@@ -22,7 +22,7 @@
 
 	<Object
 		Name="Esting_Bar"
-		FullName="Паб ''Счастливый''" />
+		FullName="Паб &quot;Счастливый&quot;" />
 
 	<Object
 		Name="Esting_Bar_Barman"
@@ -106,7 +106,7 @@
 
 	<Object
 		Name="Porto_Bar"
-		FullName="Бар ''Мертвый Якорь''" />
+		FullName="Бар &quot;Мертвый Якорь&quot;" />
 
 	<Object
 		Name="Porto_Bar_Barman"
@@ -174,7 +174,7 @@
 
 	<Object
 		Name="TheSign_Bar"
-		FullName="Бар ''Перепутье''" />
+		FullName="Бар &quot;Перепутье&quot;" />
 
 	<Object
 		Name="TheSign_Bar_Barman"
@@ -222,7 +222,7 @@
 
 	<Object
 		Name="TheRace_Bar"
-		FullName="Бар ''Ностальгия''" />
+		FullName="Бар &quot;Ностальгия&quot;" />
 
 	<Object
 		Name="TheRace_Bar_Barman"
@@ -242,7 +242,7 @@
 
 	<Object
 		Name="TheOlimp_Bar"
-		FullName="Бар ''Чемпион''" />
+		FullName="Бар &quot;Чемпион&quot;" />
 
 	<Object
 		Name="TheOlimp_Bar_Barman"

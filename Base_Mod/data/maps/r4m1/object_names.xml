@@ -6,7 +6,7 @@
 
 	<Object
 		Name="Gadad_Bar"
-		FullName="Кафе 'Жажда'" />
+		FullName="Кафе &quot;Жажда&quot;" />
 
 	<Object
 		Name="Gadad_Bar_Barman"
@@ -82,7 +82,7 @@
 
 	<Object
 		Name="Kazif_Bar"
-		FullName="Бар 'Черная жижа'" />
+		FullName="Бар &quot;Черная жижа&quot;" />
 
 	<Object
 		Name="Kazif_Bar_Barman"

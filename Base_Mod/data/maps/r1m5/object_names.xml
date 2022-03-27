@@ -24,7 +24,7 @@
 
 	<Object
 		Name="Esting_Bar"
-		FullName="Трактир 'Знание'" />
+		FullName="Трактир &quot;Знание&quot;" />
 
 
 
@@ -62,7 +62,7 @@
 
 	<Object
 		Name="TheOilVillage_Bar"
-		FullName="Таверна 'Могучая'" />
+		FullName="Таверна &quot;Могучая&quot;" />
 
 
 
@@ -88,7 +88,7 @@
 
 	<Object
 		Name="TheTown_Bar"
-		FullName="Бар 'Чёрные лёгкие'" />
+		FullName="Бар &quot;Чёрные лёгкие&quot;" />
 
 
 
@@ -114,7 +114,7 @@
 
 	<Object
 		Name="TheContraVillage_Bar"
-		FullName="Трактир 'Гостеприимный'" />
+		FullName="Трактир &quot;Гостеприимный&quot;" />
 
 	<Object
 		Name="PetrolStationTown1"
@@ -210,7 +210,7 @@
 
 	<Object
 		Name="PS_Bar"
-		FullName="Таверна 'Пескарик'" />
+		FullName="Таверна &quot;Пескарик&quot;" />
 
 	<Object
 		Name="PS1_Bar"

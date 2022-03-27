@@ -379,6 +379,9 @@
 
 			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
 			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then vehPlayer:SetGamePositionOnGround( CVector(3074.990, 329.470, 3203.431)) end
 			
 			AddCinematicMessage( 12, 1 )
 			
@@ -391,6 +394,9 @@
 		<script>
 			AddCinematicMessage( 13, 1 )
 
+			local vehTikh = GetEntityByName("TikhomirCar")
+			if vehTikh then vehTikh:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573)) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -401,7 +407,14 @@
 			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
 			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 
+			local vehPlayer = GetPlayerVehicle()
+			local vehTikh = GetEntityByName("TikhomirCar")
+
+			if vehPlayer then vehPlayer:SetGamePositionOnGround( CVector(3074.990, 329.470, 3203.431)) end
+			if vehTikh then vehTikh:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573)) end
+
 			AddCinematicMessage( 14, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -411,6 +424,9 @@
 		<script>
 
 			AddCinematicMessage( 15, 1 )
+
+			local vehTikh = GetEntityByName("TikhomirCar")
+			if vehTikh then vehTikh:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573)) end
 			
 			trigger:Deactivate()
 		</script>
@@ -487,6 +503,9 @@
 			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
 			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then vehPlayer:SetGamePositionOnGround( CVector(3074.990, 329.470, 3203.431)) end
+
 			TActivate("trVRRolikCam8")
 			TActivate("trVRRolikEnd2")
 
@@ -504,6 +523,9 @@
 				AddCinematicMessage(17, 1)
 			end
 
+			local vehTikh = GetEntityByName("TikhomirCar")
+			if vehTikh then vehTikh:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573)) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -517,8 +539,8 @@
 			
 			local bcar = GetEntityByName("TikhomirCar")
 			if bcar then
-				bcar:SetGamePositionOnGround( CVector(3098.850, 322.701, 3148.021))
-				bcar:SetRotation(Quaternion(0.044, 0.926, -0.057, 0.371))
+				bcar:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573))
+				bcar:SetRotation(Quaternion(-0.007, 0.340, -0.085, 0.937))
 				bcar:SetExternalPathByName("Brodyaga_path1")
 			end
 			
@@ -532,7 +554,7 @@
 		<event flypath="VRRolikCam11" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(3402.435, 395.165, 3303.069), Quaternion(0.0000, -0.8290, 0.0000, 0.5592), 0)
-			AddCinematicMessage( 25, 1 )
+--			AddCinematicMessage( 25, 1 )
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -658,6 +680,7 @@
 			if humA then humA:Remove() end
 
 			TDeactivate("trVRRolikFinalFade")
+			TDeactivate("trVRRolikCam10")
 			TDeactivate("trVRRolikCam11")
 
 			trigger:Deactivate()

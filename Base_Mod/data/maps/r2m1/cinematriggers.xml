@@ -1413,13 +1413,13 @@
 				Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
 				FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, humPlID, nil, nil, nil, nil )
 				Fly(		"UFODIOLOG_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam03", CTochID , 12, 0, 0, humPlID, nil, nil, nil, nil )
+				FlyLinked(	"UFODIOLOG_cam03", CTochID , 14, 0, 0, humPlID, nil, nil, nil, nil )
 				Fly(		"UFODIOLOG_cam04", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam05", CTochID , 37, 0, 0, humPlID, nil, nil, nil, nil )
+				FlyLinked(	"UFODIOLOG_cam05", CTochID , 41, 0, 0, humPlID, nil, nil, nil, nil )
 				Fly(		"UFODIOLOG_cam06", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-				Fly(		"UFODIOLOG_cam07", CINEMATIC_NO_AIM, 0, 27, 0, 0 )
+				Fly(		"UFODIOLOG_cam07", CINEMATIC_NO_AIM, 0, 47, 0, 0 )
 				Fly(		"UFODIOLOG_cam08", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam09", CTochID , 15, 0, 0, humPlID, nil, nil, nil, nil )
+				FlyLinked(	"UFODIOLOG_cam09", CTochID , 23, 0, 0, humPlID, nil, nil, nil, nil )
 				Fly(		"UFODIOLOG_cam10", CINEMATIC_NO_AIM, 0, 18, 0, 1 )
 				StartCinematic()
 
@@ -1515,10 +1515,12 @@
 			local controlledObj = GetEntityByName("Droid")
 			local controlledObj1 = GetEntityByName("Droid0")
 			if controlledObj then
-				mover:SetObjAndPath( controlledObj:GetId(), "DroidMove", 180 )
+				controlledObj:SetPosition(CVector(1282.018, 523.862, 1646.997))
+				mover:SetObjAndPath( controlledObj:GetId(), "DroidMove", 200 )
 			end
 			if controlledObj1 then
-				mover1:SetObjAndPath( controlledObj1:GetId(), "DroidMove", 180 )
+				controlledObj1:SetPosition(CVector(1282.018, 523.862, 1646.997))
+				mover1:SetObjAndPath( controlledObj1:GetId(), "DroidMove", 200 )
 			end
 
 			trigger:Deactivate()

@@ -2149,9 +2149,9 @@
 			<Object
 				Name="barricade4_wGw72_Child1"
 				Belong="1092"
-				Prototype="r2m1_scout01"
+				Prototype="CoolBelaz"
 				Pos="3439.005 442.645 440.130"
-				Rot="0.000 0.409 0.000 0.913"
+				Rot="0.000 -0.907 0.000 0.421"
 				Skin="1">
 				<Parts />
 
@@ -3216,14 +3216,6 @@
 				skin="5"
 				cfg="12"
 				helloReplyNames="Dlg_npc_003060"
-				SpokenCount="0" />
-
-			<Object
-				Name="PlayerAboutTikhomirsFate"
-				Belong="1090"
-				Prototype="NPC"
-				ModelName="mask_hero"
-				helloReplyNames="Dlg_npc_003253"
 				SpokenCount="0" />
 
 			<Object
@@ -9688,9 +9680,9 @@
 			<Object
 				Name="barricade4_wGw73_Child2"
 				Belong="1092"
-				Prototype="r2m1_scout01"
-				Pos="1889.408 255.000 397.565"
-				Rot="0.000 -0.319 0.000 0.948"
+				Prototype="AKF_Cruiser2"
+				Pos="3405.516 397.077 3544.011"
+				Rot="0.000 0.997 0.000 -0.075"
 				Skin="1">
 				<Parts />
 
@@ -11797,21 +11789,21 @@
 
 	<Object
 		Name="barricade4_wGw75"
-		Belong="1004"
+		Belong="1092"
 		Prototype="barricade4_wGw"
 		Pos="513.613 332.825 2618.689"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade4_wGw75_Team"
-			Belong="1004"
+			Belong="1092"
 			Prototype="settlementTeam">
 			<Object
 				Name="barricade4_wGw75_Child1"
-				Belong="1004"
-				Prototype="r1m2_bug04"
-				Pos="513.613 332.806 2618.689"
-				Rot="0.000 0.878 0.000 0.479"
+				Belong="1092"
+				Prototype="r2m1_Belaz01"
+				Pos="670.988 285.133 3144.331"
+				Rot="0.000 0.893 0.000 -0.450"
 				Skin="4">
 				<Parts />
 
@@ -11820,7 +11812,7 @@
 
 			<Formation
 				Name="barricade4_wGw75_Team_Formation"
-				Belong="1004"
+				Belong="1092"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -57090,34 +57082,10 @@
 			Belong="1092"
 			Prototype="settlementTeam">
 			<Object
-				Name="barricade4_wGw78_Child3"
-				Belong="1092"
-				Prototype="r1m1_bug02"
-				Pos="3406.536 370.558 1723.352"
-				Rot="0.000 -0.111 0.000 0.994"
-				Skin="1">
-				<Parts />
-
-				<Repository />
-			</Object>
-
-			<Object
-				Name="barricade4_wGw78_Child2"
-				Belong="1092"
-				Prototype="r1m1_bug02"
-				Pos="3379.121 370.558 1725.822"
-				Rot="-0.003 0.244 -0.024 0.969"
-				Skin="1">
-				<Parts />
-
-				<Repository />
-			</Object>
-
-			<Object
 				Name="barricade4_wGw78_Child1"
 				Belong="1092"
-				Prototype="r1m2_bug04"
-				Pos="3392.804 370.558 1723.598"
+				Prototype="OL_Ural"
+				Pos="3404.459 370.558 1719.131"
 				Rot="0.000 0.068 0.000 0.998"
 				Skin="1">
 				<Parts />
@@ -57392,7 +57360,7 @@
 		Name="Shahta_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1490.373 264.488 2788.938"
+		Pos="1490.373 264.489 2788.938"
 		Radius="50.000"
 		LookingTimeOut="100.000" />
 
@@ -57427,6 +57395,22 @@
 		Pos="2091.030 255.000 2296.661"
 		Radius="51.000"
 		LookingTimeOut="100.000" />
+	
+	<Object
+		Name="PlayerAboutTikhomirsFate_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="0 0 0"
+		Radius="1.000"
+		LookingTimeOut="100.000">
+		<Object
+			Name="PlayerAboutTikhomirsFate"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="mask_hero"
+			helloReplyNames="Dlg_npc_003253"
+			SpokenCount="0" />
+	</Object>
 
 	<Object
 		Name="Breakable_Dub311783"

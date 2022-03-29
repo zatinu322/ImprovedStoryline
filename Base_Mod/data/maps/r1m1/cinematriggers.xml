@@ -626,7 +626,8 @@
 			
 			local vehLisa = GetEntityByName("CARLISA_vehicle_0")
 			if vehLisa then
-				vehLisa:SetGamePositionOnGround( CVector(1602.645, 304.266, 2107.917))
+				vehLisa:SetGamePositionOnGround( CVector(1588.584, 306.884, 1968.100))
+				vehLisa:SetRotation(Quaternion(0.007, 0.992, 0.044, -0.117))
 			end
 			
 			TActivate("LISA2")

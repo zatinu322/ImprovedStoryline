@@ -199,7 +199,7 @@
 
 	<QuestInfo
 		questName="BenRim2_Quest"
-		briefDiz="Спросить в порте про караван"
+		briefDiz="Спросить в Порто про караван"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -256,7 +256,7 @@
 	<QuestInfo
 		questName="BenRim_Quest1"
 		briefDiz="Помочь Стрыге"
-		fullDiz="Теперь я должен помочь жуликоватому торговцу с дебильной кличкой &quot;Стрыга&quot;, проживающему в Римской."
+		fullDiz='Теперь я должен помочь жуликоватому торговцу с дурацкой кличкой "Стрыга", проживающему в Римской.'
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -4147,7 +4147,7 @@
 	<QuestInfo
 		questName="r1m3_OldTownOutsiderCar2_Quest"
 		briefDiz="Поймать беглеца в заброшенном городе"
-		fullDiz="Жители села &quot;Забытое&quot; заплатят мне, если я убью лидера бандитов, разрушивших местный Центр Развлечений."
+		fullDiz='Жители села "Забытое" заплатят мне, если я убью лидера бандитов, разрушивших местный Центр Развлечений.'
 		isMainQuest="0">
 		<Map
 			name="r1m3"
@@ -4323,7 +4323,7 @@
 
 	<QuestInfo
 		questName="r2m1_DeployBloks3"
-		briefDiz="Добраться до &quot;Повелителя&quot;"
+		briefDiz='Добраться до "Повелителя"'
 		isMainQuest="1" />
 
 	<QuestInfo
@@ -5006,7 +5006,7 @@
 
 	<QuestInfo
 		questName="r3m1_RescueUlukCivil_GotoVillage"
-		briefDiz="Дохать до временного убежища"
+		briefDiz="Доехать до временного убежища"
 		isMainQuest="0">
 		<Map
 			name="r3m1"

@@ -53,6 +53,7 @@
 			SetVar("globalCaravanToPorto",1)
 
 			GetEntityByName("KARAVANPORTO_vehicle_0"):setGodMode(1)
+			GetEntityByName("KARAVANPORTO_vehicle_0"):setImmortalMode(1)
 			TDeactivate( "trCaravanToPortoDIE" )
 			TDeactivate( "trCaravanToPortoLength" )
 
@@ -132,6 +133,7 @@
 			SetVar("globalCaravanToMidgard",1)
 
 			GetEntityByName("KARAVANMIDGARD_vehicle_0"):setGodMode(1)
+			GetEntityByName("KARAVANMIDGARD_vehicle_0"):setImmortalMode(1)
 			TDeactivate( "trCaravanToMidgardDIE" )
 			TDeactivate( "trCaravanToMidgardLength" )
 

@@ -1375,6 +1375,7 @@
 		</script>
 	</trigger>
 
+	<!-- Игрок утонул, так как начал пересекать болото неправильно. -->
 	<trigger Name="TE14Begin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1434,6 +1435,10 @@
 		<event	timeout="5"		eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("Death01")
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then vehPlayer:SetMaxSpeed(5) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

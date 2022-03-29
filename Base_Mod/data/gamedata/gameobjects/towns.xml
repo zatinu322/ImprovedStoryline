@@ -555,7 +555,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			MusicName		= "bar"
 			GateModelFile 	= "big_gate01"
 
-			NumCollisionLayersBelowVehicle = "1"
+			NumCollisionLayersBelowVehicle = "0"
 
 			IsIntersecting		= "true"
 			LookRadius		= "200"

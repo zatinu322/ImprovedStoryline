@@ -555,6 +555,9 @@
 					PassToMap("r3m2", "FromR3M1", -1 )
 					TDeactivate("UlukBattle2")
 					SetTolerance(1020,1002,RS_ENEMY)
+
+					local Fion = getObj("Set_Bar_Customer1")
+					if Fion then Fion:SetSpokenCount(1) end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 

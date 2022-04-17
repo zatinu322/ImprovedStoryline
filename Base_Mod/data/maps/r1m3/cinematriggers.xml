@@ -786,6 +786,8 @@
 				vehP:SetExternalPathByName("pioneer_path")
 				SetCameraDirectionToObj( vehP:GetId() )
 				vehP:SetCanBeDistractedFromMoving( true )
+				vehP:SetCruisingSpeed(30)
+				vehP:SetMaxSpeed(30)
 			end
 
 			TActivate( "RUNTOPIONEER" )

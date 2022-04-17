@@ -59,6 +59,8 @@
    <Item id="mirotvorecCab05"   	file="data\if\ico\InventoryDlg\mirotvorec\mirotvorecCab05.dds" file1=""/>
    <Item id="mirotvorecCargo05"	file="data\if\ico\InventoryDlg\mirotvorec\mirotvorecCargo05.dds" file1=""/>
 
+   <Item id="denscoutCab"	file="data\if\ico\InventoryDlg\scout\denscoutcab.dds" file1=""/>
+
 
    <Item id="GOLD"		file="data\if\ico\InventoryDlg\resource\gold.dds" file1=""/>
    <Item id="POTATO"		file="data\if\ico\InventoryDlg\resource\potato.dds" file1=""/>

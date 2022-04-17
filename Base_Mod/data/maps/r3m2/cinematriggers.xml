@@ -107,6 +107,7 @@
 			 	   if veh then 
 					  veh:SetExternalPathByName("OracleDef"..(i+1).."_1")
 					  veh:setGodMode(0)
+					  veh:setImmortalMode(0)
 			 	   end
 			end
 

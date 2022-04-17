@@ -1294,7 +1294,7 @@
 			PrecedingQuests="q_PlaceWithSign"
 			OnFail='TDeactivate("trSignPlace")'
 			OnTake='ShowCircleOnMinimapByName("SignPlace_loc")'
-			Levels="r3m1 r3m2 r1m4 r1m3 r1m2 r2m1 r2m2" />
+			Levels="r3m2" />
 
 		<quest
 			Name="q_PWS2"

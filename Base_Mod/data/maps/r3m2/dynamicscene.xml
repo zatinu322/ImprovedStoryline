@@ -1490,8 +1490,8 @@
 		Name="OracleRolik_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="779.535 264.000 3172.526"
-		Radius="99.000" />
+		Pos="758.708 264.000 3227.056"
+		Radius="129.000" />
 
 	<Object
 		Name="barricade5_GwG79"

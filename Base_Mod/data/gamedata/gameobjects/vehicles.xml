@@ -1397,7 +1397,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		<Parts>
 			<Part id = "CABIN"			Prototype = "bugCab03" />
 			<Part id = "BASKET"			Prototype = "bugCargo03" />
-			<Part id = "CABIN_SMALL_GUN"		Prototype = "vulcan01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "pkt01" />
 		</Parts>
 	</Prototype>
 
@@ -3269,7 +3269,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		<Parts>
 			<Part id = "CABIN"			Prototype = "bugCab02" />
 			<Part id = "BASKET"			Prototype = "bugCargo01" />
-			<Part id = "CABIN_SMALL_GUN"	Prototype = "vector01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "kord01" />
 		</Parts>
 	</Prototype>
 

@@ -5617,7 +5617,7 @@
 		name="Set_Bar_Druid3_1_N06a"
 		text="Не беспокойся. Передам и привет, и посылку."
 		role="PLAYER"
-		scriptResult="TakeQuest('q_VisitDruid'); AddQuestItem('quest_druid_package'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_druid_package'); GetCurNpc():SetSpokenCount(1); EndConversation();" />
+		scriptResult="TakeQuest('q_VisitDruid'); AddQuestItem('quest_druid_package'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_druid_package'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
 <!--Root/r3m1/Книга-->
 	<Reply
 		name="Uluk_Hram_Zrec_1_N01"
@@ -10293,7 +10293,7 @@
 		name="Dlg_npc_001085"
 		text="Всё верно, парень, это ограбление! Не рыпайся и давай сюда все свои бабки, если не хочешь закончить с пулей в голове!"
 		role="NPC"
-		nextReplies="Dlg_pl_001086 Dlg_pl_001872" />
+		nextReplies="Dlg_pl_001872 Dlg_pl_001086" />
 
 	<Reply
 		name="Dlg_pl_001872"
@@ -13264,7 +13264,7 @@
 		name="Dlg_pl_002112"
 		text="И я тоже. Ну, я поехал! "
 		role="PLAYER"
-		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); EndConversation()" />
+		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Финальный выбор-->
 	<Reply
 		name="Dlg_npc_002425"

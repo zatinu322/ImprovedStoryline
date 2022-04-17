@@ -48,10 +48,12 @@
 
 			local Plf = GetPlayerVehicle()
 
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
 
 			Fly("FatherCar_Cam", CINEMATIC_NO_AIM, 0, 18, 1, 1 )
 			StartCinematic()
@@ -78,6 +80,12 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:AddItemsToRepository("add_stability_and_speed2", 1)
+				Plf:AddItemsToRepository("additional_durability3", 1)
+			end
 			
 			trigger:Deactivate()
 		</script>

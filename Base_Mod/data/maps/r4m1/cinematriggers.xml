@@ -451,6 +451,7 @@
 		<script>
 			EnableGodMode()
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
 			TActivate("cinExit42Return_FadeIn")
 			TActivate("cinExit42Return_End")
 
@@ -538,6 +539,8 @@
 		<script>
 			EnableGodMode()
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
+
 			TActivate("cinExit11ReturnFirst")
 			TActivate("cinExit11Return_FadeIn")
 			TActivate("cinExit11Return_End")
@@ -697,7 +700,7 @@
 				vehPlayer:SetRotation(Quaternion(0.001, -0.941, -0.022, 0.337))
 			end
 			
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(6567.414, 259.924, 4447.929), Quaternion(0.009, -0.939, -0.033, 0.343), 0)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(6567.414, 260.033, 4447.929), Quaternion(0.009, -0.939, -0.033, 0.343), 0)
 
 			CreateHuman( "Human3", 1001, CVector(6420.099, 274.402, 4256.425), "HumanNaSkale", "Human31_Path" )
 			

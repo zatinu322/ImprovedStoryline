@@ -1586,6 +1586,50 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 
 		<Prototype
 			Class				= "Cabin"
+			Name				= "uralCab06"
+			ModelFile			= "uralCab05"
+			ResourceType			= "URAL_CABIN"
+			NodeScale			= "1 1 1"
+			Mass				= "180.0" 
+			Durability			= "220"
+			DurCoeffsForDamageTypes		= "15 15 12"
+			MaxPower			= "1000"
+			MaxTorque			= "390"
+                        EngineHighSound			= "ET_S_ENGINE_URAL_5_HIGH"
+			BlowEffect	= "ET_PS_VEH_PART_BLOW_BIG_CAB"
+
+			Price				= "159999"
+			RepairCoef			= "0.5"
+                        FuelConsumption                 = "0.5"
+			MaxSpeed			= "130.0"  
+			LoadPoints			= "LP_BIG01 LP_BIG02" >
+
+			<GadgetDescription>
+				<Slot
+					ResourceType	= "GADGET_COMMON"
+					MaxAmount	= "4" />
+
+				<Slot
+					ResourceType	= "GADGET_WEAPON"
+					MaxAmount	= "3" />
+			</GadgetDescription>
+			<GroupsHealth
+				Main   = "0"	
+				Breakable1   = "1"	
+			    	Breakable2   = "1"
+				Breakable3   = "1.5"
+				Breakable4   = "1.5"
+				Breakable5   = "1"
+				Breakable6   = "1.5"
+				Breakable7   = "2"
+				Breakable8   = "0.3"
+				Breakable9   = "1"
+				Breakable10   = "0.5"
+			/>
+		</Prototype>
+
+		<Prototype
+			Class				= "Cabin"
 			Name				= "uralCabMenu"
 			ModelFile			= "uralCab05"
 			ResourceType			= "URAL_CABIN"
@@ -2607,6 +2651,49 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 				Breakable8   = "1.5"
 				Breakable9   = "0.5"
 				Breakable10   = "0.4"
+			/>			
+		</Prototype>
+
+		<Prototype
+			Class				= "Basket"
+			Name				= "uralCargo06"
+			ModelFile			= "uralCargo03"
+			ResourceType		= "URAL_BASKET"
+			Durability			= "140"
+			DurCoeffsForDamageTypes		= "11 10 5"
+			BlowEffect	= "ET_PS_VEH_PART_BLOW_BIG_CARGO"
+			NodeScale			= "1 1 1"
+
+			RepairCoef			= "0.4"
+			Price				= "119999"
+
+			Mass				= "120.0" 
+			LoadPoints			= "LP_BIG01 LP_GIANT01 NO_LP" >
+
+			<RepositoryDescription
+				RepositorySize		= "10 10">
+
+				<Slot
+					Name		= "BASKET_BIG_GUN_0"
+					Pos		= "11 8"
+				/>
+				<Slot
+					Name		= "BASKET_GIANT_GUN"
+					Pos		= "4 0"
+				/>
+
+				<Slot
+					Name		= "BASKET_SPECIAL_WEAPON"
+					Pos		= "11 0"
+				/>
+			</RepositoryDescription>
+			<GroupsHealth
+				Main   = "0"	
+				Breakable1   = "0.7"	
+			    	Breakable2   = "0.2"
+				Breakable3   = "1.5"
+				Breakable4   = "1.5"
+				Breakable5   = "1"
 			/>			
 		</Prototype>
 

@@ -17,24 +17,6 @@
 		font="0"
 		clientEdges="0.000 0.000 0.000 0.000">
 
-        <Node
-        	name="wndWIP"
-        	class="Wnd"
-        	org="0.000 0.000 1024.000 1024.000"
-        	style="768"
-        	order="-1"
-        	id="0"
-        	caption=""
-        	tip=""
-        	backimage="data\if\ico\MainGameInterfaceWnd\WIP.dds"
-        	paneName="defaultWnd"
-        	paneFlags="0"
-        	wrap="2"
-        	format="1"
-        	font="0"
-        	clientEdges="0.000 0.000 0.000 0.000">
-        </Node>	
-		
 		<Node
         		name="wndLeftStripe"
         		class="Wnd"

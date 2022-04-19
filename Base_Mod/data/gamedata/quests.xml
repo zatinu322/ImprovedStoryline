@@ -4093,7 +4093,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(100)"
-		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD");'
+		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD"); TActivate("REVOLUTIONTIMEREMOVE")'
 		OnTake='ShowCircleOnMinimapByName("RevolutionTimeEndLoc")'
 		Levels="r1m1" />
 

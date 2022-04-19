@@ -1735,33 +1735,9 @@
 
 		<Parts />
 
-		<EntryPath>
-			<Point
-				Pos="6730.000 6502.000" />
+		<EntryPath />
 
-			<Point
-				Pos="6670.606 6502.543" />
-
-			<CameraPoint
-				Pos="206.194 12.138 10.756" />
-
-			<CameraPoint
-				Pos="154.753 87.029 -62.890" />
-		</EntryPath>
-
-		<ExitPath>
-			<Point
-				Pos="6709.794 6502.746" />
-
-			<Point
-				Pos="6745.250 6501.942" />
-
-			<CameraPoint
-				Pos="154.753 87.029 -62.890" />
-
-			<CameraPoint
-				Pos="206.194 12.138 10.756" />
-		</ExitPath>
+		<ExitPath />
 	</Object>
 
 	<Object

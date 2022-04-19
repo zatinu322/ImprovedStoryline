@@ -275,7 +275,7 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 			
-			CreateNewDummyObject( "dweller_player", "humPlayer1", -1, -1, CVector(3831.671, 548.901, 577.268), Quaternion(0.0000, 0.4127, 0.0000, 0.9109), 1)
+			CreateNewDummyObject( "dweller_player", "humPlayer1", -1, -1, CVector(3831.671, 548.804, 577.268), Quaternion(0.0000, 0.4127, 0.0000, 0.9109), 1)
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -544,7 +544,7 @@
 				bcar:SetExternalPathByName("Brodyaga_path1")
 			end
 			
-			AddCinematicMessage( 21, 1 )
+			AddCinematicMessage( 21, 6 )
 			
 			trigger:Deactivate()
 		</script>

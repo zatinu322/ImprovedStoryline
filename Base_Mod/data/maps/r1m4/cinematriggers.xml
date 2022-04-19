@@ -1595,10 +1595,15 @@
 			
 			local CToch = GetEntityByName("CamTochka")
 			if CToch then CToch:Remove() end
+
+			for i = 0,1 do
+				local bguard = getObj("BorderTSPGuards_vehicle_"..i)
+				if bguard then bguard:Remove() end
+			end
 			
 			AddBook("r1_book_rapid_evolution")
 			
-			StartConversation("AivenGo")
+			StartConversation("AivenGo1")
 			
 			TActivate("RTMRolikStart")
 			

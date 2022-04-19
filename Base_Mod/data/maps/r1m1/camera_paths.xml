@@ -499,8 +499,8 @@
 	</Path>
 
 	<Path Name = "ATGRolikCam3">
-		<Point  coord="3383.332 406.705 3366.709" rotation="-0.033 0.954 -0.275 0.114"/>
 		<Point  coord="3392.140 430.206 3402.975" rotation="-0.029 0.962 -0.249 0.111"/>
+		<Point  coord="3383.332 406.705 3366.709" rotation="-0.033 0.954 -0.275 0.114"/>
 	</Path>
 	
 </Paths>

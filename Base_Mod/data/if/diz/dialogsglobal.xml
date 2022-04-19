@@ -633,7 +633,7 @@
 
 	<Reply
 		name="Dlg_npc_002815"
-		text="Её поведёт староста местных жителей."
+		text="Её поведёт Велимир."
 		role="NPC"
 		nextReplies="Dlg_pl_002816" />
 
@@ -657,7 +657,7 @@
 
 	<Reply
 		name="Dlg_npc_002819"
-		text="Он сам принял это решение. И он не собирается это обсуждать."
+		text="Он сам принял это решение, и не собирается его обсуждать."
 		role="NPC"
 		nextReplies="Dlg_pl_002820" />
 
@@ -2113,7 +2113,7 @@
 
 	<Reply
 		name="Dlg_pl_003250"
-		text="Сожалею, но я не успел. И шёл по их следу вплоть до выезда в Лиденклауд, но дальше их следы теряются. Не уверен, что мне удастся их выследить в текущей послевоенной разрухи."
+		text="Сожалею, но я не успел. И шёл по их следу вплоть до выезда в Лиденклауд, но дальше их следы теряются. Не уверен, что мне удастся их выследить в текущей послевоенной разрухе."
 		role="PLAYER"
 		scriptCondition="QuestStatus('GoBackWithoutDobr_Quest')==Q_TAKEN"
 		scriptResult="CompleteQuest('GoBackWithoutDobr_Quest')"
@@ -2654,6 +2654,7 @@
 		name="r4_Racers_Men_1_N02a"
 		text="Я бы хотел стать участником соревнований."
 		role="PLAYER"
+		scriptCondition="QuestStatus('r4m1_Kef_NeedOil')~=Q_TAKEN and QuestStatus('r4m1_RescueBuharsCivilian')~=Q_TAKEN"
 		nextReplies="r4_Racers_Men_1_N03a" />
 
 	<Reply
@@ -9580,7 +9581,7 @@
 		name="Dlg_npc_002704"
 		text="А вот это уже не твоего ума дело. Значит, смотри, какой у нас расклад. Либо ты помогаешь нам в зачистке и мы пускаем тебя на склад, либо мы делаем это в одиночку, но к складу ты и близко не подойдёшь, ограничимся денежным вознаграждением. Ну, что скажешь?"
 		role="NPC"
-		nextReplies="Dlg_pl_002705 Dlg_pl_002706" />
+		nextReplies="Dlg_pl_002706 Dlg_pl_002705" />
 
 	<Reply
 		name="Dlg_pl_002706"
@@ -10210,7 +10211,7 @@
 
 	<Reply
 		name="Dlg_npc_003262"
-		text="А что если мог? Мог, но не хотел?|А теперь оставь меня. Не мешай мне топить горе в выпивке."
+		text="А что если мог? Мог, но не хотел?|Оставь меня. Не мешай мне топить горе в выпивке."
 		role="NPC"
 		nextReplies="Dlg_pl_003263" />
 
@@ -14616,7 +14617,7 @@
 
 	<Reply
 		name="Dlg_pl_002428"
-		text="Я купил необходимые лекартсва."
+		text="Я купил необходимые лекарства."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002437" />
 
@@ -18224,7 +18225,7 @@
 		name="Dlg_npc_003264"
 		text="О, а вот и ты! Помнишь меня?"
 		role="NPC"
-		scriptCondition="QuestStatus('FindBenMZ_Quest')==Q_COMPLETED and QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="QuestStatus('FindBenMZ_Quest')==Q_COMPLETED and QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED and QuestStatus('TalkToBarmenBeforeDesert')~=Q_TAKEN and QuestStatus('DefendSowth_Quest')~=Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_003265" />
 
 	<Reply

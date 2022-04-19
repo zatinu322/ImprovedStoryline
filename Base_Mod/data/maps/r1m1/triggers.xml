@@ -642,6 +642,18 @@
 		</script>
 	</trigger>
 
+	<trigger Name="REVOLUTIONTIMEREMOVE" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			for i = 0,1 do
+				local punish = getObj("Punishers_vehicle_"..i)
+				if punish then punish:Remove() end
+			end
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
 
 	<trigger Name="LISA1" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SvalkaQ" />

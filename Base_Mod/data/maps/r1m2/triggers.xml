@@ -15,7 +15,23 @@
 				shl:SetProperty("Active",0)
 			end
 
+			CreateNewDummyObject( "big_gate01", "ThePortoGates", -1, -1, CVector(6683.363, 48.874, 6502.228), Quaternion(0.000, -0.692, 0.000, 0.722), 0)
+			getObj("ThePortoGates"):SetNodeAction(AT_RESERVED3)
+			
+			TActivate("SpawnPortoGates")
+
 			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="SpawnPortoGates" active="0">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			local pgates = getObj("ThePortoGates")
+			if pgates then
+				pgates:SetNodeAction(AT_RESERVED3)
+			end
+
 		</script>
 	</trigger>
 

@@ -1464,17 +1464,18 @@
 
 	<QuestInfo
 		questName="Kontsovka5_Quest"
-		briefDiz="Встериться с Акселем в условленном месте"
+		briefDiz="Встретиться с Акселем в условленном месте"
 		isMainQuest="1">
 		<Map
-			name="r2m2" />
+			name="r2m2"
+			targetObjName="Ending5_loc" />
 	</QuestInfo>
 
 	<QuestInfo
 		questName="LaBelleHelp_Quest"
 		briefDiz="Помочь Ла Беллю"
 		fullDiz="Помимо Ринольска, есть ещё один городок, жители которого нуждаются в помощи."
-		isMainQuest="0" />
+		isMainQuest="1" />
 
 	<QuestInfo
 		questName="LaBelleHelp_Quest1"

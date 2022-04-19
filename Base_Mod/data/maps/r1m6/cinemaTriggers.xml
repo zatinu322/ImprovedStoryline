@@ -1160,6 +1160,7 @@
 				rab:SetRotation(Quaternion(0.062, 0.015, 0.010, 0.998))
 				rab:SetExternalPathByName("ScoutPath1")
 				rab:SetMaxSpeed(80)
+				rab:SetRandomSkin()
 			end
 			
 			AddCinematicMessage( 45, 1 )
@@ -1204,7 +1205,7 @@
 				rab:SetGamePositionOnGround( CVector(1348.070, 256.066, 2761.873))
 				rab:SetRotation(Quaternion(-0.001, -0.908, -0.003, 0.420))
 				rab:SetExternalPathByName("ScoutPath2")
-				rab:SetMaxSpeed(80)
+				rab:SetMaxSpeed(30)
 			end
 			
 			trigger:Deactivate()
@@ -1580,23 +1581,23 @@
 			
 			SetCameraBehindPlayerVehicle()
 			
-			TeamCreate("AdeptArmy1",1089,CVector(1852.092, 265.817, 640.742),{"AKF_Belaz1", "AKF_Belaz2", "AKF_Cruiser1", "MirotvorecShot"})
-			local aa1 = GetEntityByName("AdeptArmy1_vehicle_0")
+			TeamCreate("AdeptArmy1",1089,CVector(1852.092, 265.817, 640.742),{"MirotvorecShot", "AKF_Cruiser1", "AKF_Belaz2", "AKF_Belaz1"})
+			local aa1 = GetEntityByName("AdeptArmy1_vehicle_3")
 			if aa1 then
 				aa1:SetGamePositionOnGround( CVector(1675.051, 409.741, 2212.310))
 				aa1:SetRotation(Quaternion(0.034, -0.996, -0.004, 0.087))
 			end
-			local aa2 = GetEntityByName("AdeptArmy1_vehicle_1")
+			local aa2 = GetEntityByName("AdeptArmy1_vehicle_2")
 			if aa2 then
 				aa2:SetGamePositionOnGround( CVector(1557.791, 387.181, 2221.931))
 				aa2:SetRotation(Quaternion(0.091, -0.243, 0.016, 0.966))
 			end
-			local aa3 = GetEntityByName("AdeptArmy1_vehicle_2")
+			local aa3 = GetEntityByName("AdeptArmy1_vehicle_1")
 			if aa3 then
 				aa3:SetGamePositionOnGround( CVector(1601.067, 374.986, 2364.894))
 				aa3:SetRotation(Quaternion(0.080, 0.504, -0.035, 0.859))
 			end
-			local aa4 = GetEntityByName("AdeptArmy1_vehicle_3")
+			local aa4 = GetEntityByName("AdeptArmy1_vehicle_0")
 			if aa4 then
 				aa4:SetGamePositionOnGround( CVector(1808.119, 353.839, 2324.316))
 				aa4:SetRotation(Quaternion(0.005, 0.952, -0.065, 0.299))
@@ -2400,11 +2401,13 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("cinematic_spring_coeff 6.0")
 			
 			SetWeather(0)
 			
 			CreateNewDummyObject( "rr_locovagon", "loco1", -1, -1, CVector(2471.498, 255.000, 1895.675), Quaternion(0.0000, 0.1132, 0.0000, 0.9936), 0)
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2381.886, 282.310, 2955.780), Quaternion(0, 0, 0, 0), 1)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2231.230, 281.949, 2583.917), Quaternion(0, 0, 0, 0), 1)
 			
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
@@ -2416,7 +2419,7 @@
 			Fly("ETLLRolikCam3", CINEMATIC_NO_AIM, 0, 19, 0, 0 )
 			Fly("ETLLRolikCam4", CINEMATIC_NO_AIM, 0, 28, 0, 0 )
 			Fly("ETLLRolikCam5", CINEMATIC_NO_AIM, 0, 30, 0, 0 )
-			FlyLinked( "linkedcam", CTochID, 18, 0, 1, poezdID )
+			FlyLinked( "poezdcam1", poezdID, 18, 0, 1, CTochID)
 			StartCinematic()
 			
 			AddCinematicMessage( 104, 1 )
@@ -2520,7 +2523,7 @@
 	</trigger>
 
 	<trigger Name="trETLLRolikCam6" active="0">
-		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<event flypath="poezdcam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
 			local mover = GetEntityByID( moverId ) 
@@ -2537,6 +2540,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
+
+			RuleConsole("cinematic_spring_coeff 0.7")
 			
 			StopPlayingCustomMusic()
 			

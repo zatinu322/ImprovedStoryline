@@ -1031,5 +1031,8 @@
 	<file
 		name="ChME3_TEX.dds"
 		path="data\models\buildings\region1\ChME3_TEX.dds"/>
-
+	
+	<file
+		name="seedbad_tomato_snow.dds"
+		path="data\models\textures\nature\region1\seedbad_tomato_snow.dds"/>
 </Textures>

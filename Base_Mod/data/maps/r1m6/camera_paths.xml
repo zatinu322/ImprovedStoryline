@@ -390,4 +390,8 @@
 		<Point  coord="2239.181 270.803 2791.147" rotation="-0.053 -0.407 0.024 0.912"/>
 	</Path>
 
+	<Path Name = "poezdcam1">
+		<Point  coord="5.000 5.000 11.000" />
+	</Path>
+
 </Paths>

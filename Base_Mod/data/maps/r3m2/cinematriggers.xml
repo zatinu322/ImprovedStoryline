@@ -102,15 +102,6 @@
 			StopPlayingCustomMusic()
 			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()
-			for i=0,1 do
-			 	   local veh = getObj("OracleDefenders_vehicle_"..i)
-			 	   if veh then 
-					  veh:SetExternalPathByName("OracleDef"..(i+1).."_1")
-					  veh:setGodMode(0)
-					  veh:setImmortalMode(0)
-			 	   end
-			end
-
 			TActivate("trExcahgeVehFirst")
 			
 			trigger:Deactivate()
@@ -300,6 +291,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+			RestoreAllToleranceStatus()
+
 			GetPlayerVehicle():SetExternalPathByName("playerToOracledefPath")
 			GetPlayerVehicle():PlaceToEndOfPath("playerToOracledefPath")
 			GetPlayerVehicle():SetRotation(Quaternion(0.044, 0.591, 0.010, -0.805))
@@ -309,10 +302,21 @@
 				veh:SetExternalPathByName("OracleDef1_2")
 				veh:PlaceToEndOfPath("OracleDef1_2")
 				veh:SetRotation(Quaternion(-0.060, -0.799, 0.063, -0.595))
+				veh:AddModifier("hp", "+ 2500")
+				veh:setGodMode(0)
+				veh:setImmortalMode(0)
 			end
+
+			local veh2 = getObj("OracleDefenders_vehicle_1")
+			if veh2 then
+				veh2:AddModifier("hp", "+ 2500")
+				veh2:setGodMode(0)
+				veh2:setImmortalMode(0)
+			end
+
 			StartConversation("OracleGuardian_1")
 --			StopPlayingCustomMusic()
-			RestoreAllToleranceStatus()
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -348,7 +352,16 @@
 				veh:SetExternalPathByName("OracleDef1_1")
 				veh:PlaceToEndOfPath("OracleDef1_1")
 				veh:SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
+				veh:setGodMode(1)
+				veh:setImmortalMode(1)
 			end
+
+			local veh2 = getObj("OracleDefenders_vehicle_1")
+			if veh2 then
+				veh2:setGodMode(1)
+				veh2:setImmortalMode(1)
+			end
+
 			TActivate("trWentOracleDefenders")
 			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()

@@ -273,6 +273,7 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="Serafima" />
 		<script>
 
+			FailQuest("SerafimaHome_Quest")	
 			TActivate("STRolikBegin")
 
 			trigger:Deactivate()
@@ -323,6 +324,7 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="Serafima" />
 		<script>
 
+			FailQuest("SerafimaHome_Quest")	
 			TActivate("STRolikBegin")
 
 			trigger:Deactivate()
@@ -374,6 +376,7 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="SeraDoz1" />
 		<script>
 
+			FailQuest("SerafimaHome_Quest")
 			TActivate("STRolikBegin")
 
 			trigger:Deactivate()

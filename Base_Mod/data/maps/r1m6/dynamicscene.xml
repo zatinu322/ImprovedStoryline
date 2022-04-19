@@ -10894,6 +10894,18 @@
 					PosY="5"
 					Flags="16"
 					Prototype="belazCab05" />
+				
+				<Item
+					PosX="5"
+					PosY="40"
+					Flags="16"
+					Prototype="uralCargo06" />
+				
+				<Item
+					PosX="0"
+					PosY="45"
+					Flags="16"
+					Prototype="uralCab06" />
 			</CabinsAndBaskets>
 
 			<Vehicles>
@@ -12714,6 +12726,18 @@
 					PosY="30"
 					Flags="16"
 					Prototype="belazCab05" />
+
+				<Item
+					PosX="0"
+					PosY="35"
+					Flags="16"
+					Prototype="uralCargo06" />
+				
+				<Item
+					PosX="5"
+					PosY="35"
+					Flags="16"
+					Prototype="uralCab06" />
 			</CabinsAndBaskets>
 
 			<Vehicles>
@@ -17004,16 +17028,16 @@
 		Name="Village2_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="682.238 255.000 2538.770"
-		Radius="43.000"
+		Pos="627.973 255.000 2579.917"
+		Radius="65.000"
 		LookingTimeOut="100.000" />
 
 	<Object
 		Name="Village1_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2775.524 255.000 1314.767"
-		Radius="49.000"
+		Pos="2856.241 255.000 1171.879"
+		Radius="109.000"
 		LookingTimeOut="100.000" />
 
 	<Object

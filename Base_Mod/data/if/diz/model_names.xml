@@ -580,6 +580,11 @@
 		id="uralCab05"
 		locForm="0"
 		value="Âèòÿçü" />
+	
+	<Item
+		id="uralCab06"
+		locForm="0"
+		value="@ff27B41FÊíÿçü" />
 
 	<Item
 		id="uralCargo01"
@@ -605,6 +610,11 @@
 		id="uralCargo05"
 		locForm="0"
 		value="Òèãð" />
+	
+	<Item
+		id="uralCargo06"
+		locForm="0"
+		value="@ff27B41FÊðåéñåð 2.0" />
 
 	<Item
 		id="BelazForSale"

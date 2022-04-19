@@ -79,8 +79,8 @@
 		 	   local veh = getObj("OracleDefenders_vehicle_"..i)
 		 	   if veh then 
 --		 	   	  println("OracleDefenders_vehicle_"..i)
+				  veh:AddModifier("hp", "+ 2500")
 				  veh:setGodMode(0)
-				  veh:AddModifier("hp", "+ 1")
 				  veh:setImmortalMode(0)
 		 	   end
 		 	end

@@ -27,11 +27,13 @@
    <Item id="uralCab03"   	file="data\if\ico\InventoryDlg\ural\Ural_Cab04.dds" file1=""/>
    <Item id="uralCab04"   	file="data\if\ico\InventoryDlg\ural\Ural_Cab03.dds" file1=""/>
    <Item id="uralCab05"   	file="data\if\ico\InventoryDlg\ural\Ural_Cab05.dds" file1=""/>
+   <Item id="uralCab06"   	file="data\if\ico\InventoryDlg\ural\Ural_Cab05.dds" file1=""/>
    <Item id="uralCargo01" 	file="data\if\ico\InventoryDlg\ural\Ural_Cargo01.dds" file1=""/>
    <Item id="uralCargo02" 	file="data\if\ico\InventoryDlg\ural\Ural_Cargo02.dds" file1=""/>
    <Item id="uralCargo03" 	file="data\if\ico\InventoryDlg\ural\Ural_Cargo04.dds" file1=""/>
    <Item id="uralCargo04" 	file="data\if\ico\InventoryDlg\ural\Ural_Cargo03.dds" file1=""/>
    <Item id="uralCargo05" 	file="data\if\ico\InventoryDlg\ural\Ural_Cargo05.dds" file1=""/>
+   <Item id="uralCargo06" 	file="data\if\ico\InventoryDlg\ural\Ural_Cargo04.dds" file1=""/>
 
    <Item id="belazCab01"   	file="data\if\ico\InventoryDlg\belaz\Belaz_Cab01.dds" file1=""/>
    <Item id="belazCab02"   	file="data\if\ico\InventoryDlg\belaz\Belaz_Cab03.dds" file1=""/>

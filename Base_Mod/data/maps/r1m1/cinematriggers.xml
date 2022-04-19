@@ -2595,7 +2595,7 @@
 			FlyLinked( "linkedcam", CTochID, 9, 1, 0, vehPID )
 			Fly("ATGRolikCam1", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 			Fly("ATGRolikCam2", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
-			Fly("ATGRolikCam3", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
+			Fly("ATGRolikCam3", CINEMATIC_NO_AIM, 0, 15, 0, 1 )
 			StartCinematic()
 			
 			TActivate("ATGRolikFade")

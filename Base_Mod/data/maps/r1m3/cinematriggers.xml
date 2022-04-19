@@ -2101,8 +2101,8 @@
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
---				vehPlayer:SetGamePositionOnGround( CVector(1772.579, 280.668, 5487.087))
---				vehPlayer:SetRotation(Quaternion(0.009, 0.711, 0.001, 0.703))
+				vehPlayer:SetGamePositionOnGround( CVector(1493.472, 291.262, 5539.845))
+				vehPlayer:SetRotation(Quaternion(0.024, 0.701, -0.046, 0.712))
 				vehPlayer:SetExternalPathByName("player_path06")
 				vehPlayer:LimitMaxSpeed(20)
 			end

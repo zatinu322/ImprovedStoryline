@@ -329,7 +329,7 @@ function StartCinematic()
 	UpdateCinematic( 0 ) -- by Anton: don't touch this!
 
 	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP_MSG" )
+	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
 end
 
 -- Подготавливает игру к проигрыванию скриптового ролика

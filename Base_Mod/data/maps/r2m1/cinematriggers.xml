@@ -872,7 +872,7 @@
 
 			RuleConsole("cinematic_spring_coeff 1.7")
 
-			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(2143.560, 232.963, 5914.079), Quaternion(0, 0, 0, 0), 0)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2143.560, 232.963, 5914.079), Quaternion(0, 0, 0, 0), 1)
 
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
@@ -998,7 +998,7 @@
 				vehPlayer:SetCustomLinearVelocity(0)
 			end
 
-			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(2181.949, 250.742, 5855.640), Quaternion(0, 0, 0, 0), 0)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2181.949, 250.742, 5855.640), Quaternion(0, 0, 0, 0), 1)
 
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()

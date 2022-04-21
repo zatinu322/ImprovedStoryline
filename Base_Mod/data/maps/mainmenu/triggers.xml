@@ -17,13 +17,6 @@
 		<event timeout="0.001" eventid="GE_TIME_PERIOD" />
 		-->
 		<script>
-
-			if GetComputerName() == "PAVLIKRPG" then
-				LOG("Launch approved.")
-			else
-				g_Console:InputLine "\\quit"
-			end
-
 			PlayCustomMusic("mainmenu")
 
 			RuleConsole("cinematic_spring_coeff 1.7")

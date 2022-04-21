@@ -79,6 +79,16 @@
 				cfg="70"
 				helloReplyNames="Dlg_npc_002652"
 				SpokenCount="0" />
+			
+			<Object
+				Name="TikhomirInSorrow1"
+				Belong="1010"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="4"
+				cfg="84"
+				helloReplyNames="Dlg_npc_003256"
+				SpokenCount="0" />
 
 			<Object
 				Name="Kartograph1"

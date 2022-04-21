@@ -101,8 +101,8 @@
 		Name="locFightForPesht"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="4871.330 231.828 3506.016"
-		Radius="100.000" />
+		Pos="4592.997 233.236 3684.463"
+		Radius="401.000" />
 
 	<Object
 		Flags="21"

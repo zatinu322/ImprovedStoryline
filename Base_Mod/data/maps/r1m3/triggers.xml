@@ -1322,6 +1322,11 @@
 					if hs then hs:Remove() end
 					local hs = GetEntityByName ("FIRE06")
 					if hs then hs:Remove() end
+					local pavlo = getObj("CrazyRoadRiders")
+					if pavlo then pavlo:SetSpokenCount(1) end
+					local pogor = getObj("TheCircus")
+					if pogor then pogor:SetProperty("Active", 0) end
+					TDeactivate("TriggerFindCircus")
 				else
 					TActivate ("Ending35")
 				end

@@ -364,14 +364,15 @@
 		<script>
 			CreateVehicleEx("Cruiser02", "Fanatic_Cruiser", CVector(1370.991, 287.842, 1128.789), 1021)
 			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff3", -1, -1, CVector(1214.700, 322.100, 1255.800), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
-			local Plf = GetPlayerVehicle()
 
+			local Plf = GetPlayerVehicle()
 			if Plf then
 				Plf:SetCustomLinearVelocity(0)
 				Plf:SetThrottle(0)
 				Plf:SetGamePositionOnGround(CVector(1200.822, 303.276, 1197.434))
 				Plf:SetRotation(Quaternion(0.001, 0.153, 0.004, 0.988))
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -445,6 +446,14 @@
 				vehCrew2:SetGamePositionOnGround( CVector(1225.993, 302.560, 1160.077))
 				vehCrew2:SetRotation(Quaternion(0.022, -0.508, -0.012, 0.861))
 			end
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomLinearVelocity(0)
+				Plf:SetThrottle(0)
+				Plf:SetGamePositionOnGround(CVector(1200.822, 303.276, 1197.434))
+				Plf:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
+			end
 			
 			StartConversation( "OracleGuardian_2" )
 			
@@ -478,9 +487,12 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToGarage_loc" />
 		<script>
 --			println("trExcahgeVehFirst")
-			TActivate("cinExchangeVehFirst")
---			TActivate()
-			trigger:Deactivate()
+			if IsQuestTaken("r3m2_TwoMagicThing_Return") then
+				trigger:Deactivate()
+			else
+				TActivate("cinExchangeVehFirst")
+				trigger:Deactivate()
+			end
 		</script>
 	</trigger>
 
@@ -565,11 +577,12 @@
 		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="NearGarage_loc" />
 		<script>
 --			println("trExcahgeVehSwitchOn")
-			if not(QuestStatus("r3m2_TwoMagicThing_Return")==Q_TAKEN) then
+			if IsQuestTaken("r3m2_TwoMagicThing_Return") and GetPlayerVehicle():GetProperty("Prototype").AsString~="ArcadeScout01" then
+				trigger:Deactivate()
+			else
 				TActivate("trExcahgeVeh")
-			else 
---				println("DEACTIVATED")
 			end
+
 			local name = GetVar("GarVehName").AsString
 			local veh = getObj(name)
 			if veh then

@@ -339,5 +339,9 @@
 	<Object
 		Name="TikhomirInSorrow"
 		FullName="Тихомир" />
+	
+	<Object
+		Name="TikhomirInSorrow1"
+		FullName="Тихомир" />
 
 </ObjectNames>

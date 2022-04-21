@@ -311,7 +311,7 @@
 
 	<Reply
 		name="Dlg_npc_002765"
-		text="Да. Мы отправим к местным гонца с предложением встретиться вот в этом месте. Не думаю, что они приедут туда, вооружённые до зубов, так что захватить их нам не составит абсолютно никакого труда. Потом мы нанесём визит в их деревню и предложим сдаться. Если сдадутся, получаешь Лису и путь в горы."
+		text="Да. Мы отправим к местным гонца с предложением встретиться вот в этом месте. Не думаю, что они приедут туда вооружённые до зубов, так что захватить их нам не составит абсолютно никакого труда. Потом мы нанесём визит в их деревню и предложим сдаться. Если сдадутся, получаешь Лису и путь в горы."
 		role="NPC"
 		nextReplies="Dlg_pl_002766" />
 
@@ -10176,7 +10176,7 @@
 		name="Dlg_npc_003256"
 		text="А, это ты..."
 		role="NPC"
-		scriptCondition="QuestStatus('LastIspytanie_Quest')==Q_COMPLETED and not(IsQuestTaken('r4m2_DestroyPlate')) and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="QuestStatus('ToCordanToTikhomir_Quest')==Q_TAKEN and not(IsQuestTaken('r4m2_DestroyPlate')) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_003257" />
 
 	<Reply
@@ -10324,7 +10324,7 @@
 		name="CrazyMan_hellodlg0"
 		text="Эй, паренёк, азартные игры интересуют?"
 		role="NPC"
-		scriptCondition="GetCurNpc():GetSpokenCount() == 0    and    not(IsQuestComplete('r1m3_CrazyManQuest'))    and    not(IsQuestFailed('r1m3_CrazyManQuest')) and not(IsQuestFailed('r1m3_MoveToOraculAfterThief')) "
+		scriptCondition="GetCurNpc():GetSpokenCount() == 0    and    not(IsQuestComplete('r1m3_CrazyManQuest'))    and    not(IsQuestFailed('r1m3_CrazyManQuest'))"
 		nextReplies="Dlg_pl_001088 Dlg_pl_001091" />
 
 	<Reply
@@ -10539,7 +10539,7 @@
 		name="Circus_hellodlg1"
 		text="Извини, приятель... Ты, наверное, ехал сюда, чтобы поразвлечься и выиграть денег в нашем центре развлечений, но ничего не получится... Местные бандиты проиграли много денег и начали всё громить так, что камня на камне не осталось... Всех бандитов уже перебили, но, к сожалению, мой центр развлечений заново от этого не отстроился..."
 		role="NPC"
-		scriptCondition="not(IsQuestComplete('d_MoveCanistraToMinin_Quest')) and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_001242" />
 
 	<Reply
@@ -10943,7 +10943,7 @@
 		name="BanditPeshtGuardian_hellodlg0"
 		text="Ба, кого я вижу! Паренёк, твой значительный денежный вклад очень нам помог! Как видишь, нам удалось докупить необходимое оборудование, и мы перекрыли важнейшую путевую артерию для местных торгашей!"
 		role="NPC"
-		scriptCondition="IsQuestComplete('d_GiveMoneyToBase_Quest')     and     (GetCurNpc():GetSpokenCount() == 0) and not(IsQuestTaken('FightForPesht')) and not(IsQuestComplete('FightForPesht'))"
+		scriptCondition="IsQuestComplete('d_GiveMoneyToBase_Quest')     and     (GetCurNpc():GetSpokenCount() == 0) and not(QuestStatus('FightForPesht')==Q_TAKEN) and not(QuestStatus('FightForPesht')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_d3d184" />
 
 	<Reply
@@ -13035,7 +13035,7 @@
 		name="Dlg_npc_003205"
 		text="Мы тут формируем тяжело вооружённый отряд, чтобы разгромить бандитов, завахтивших Пешт, и вернуть город под наше управление. И ты бы там очень приходился."
 		role="NPC"
-		nextReplies="Dlg_pl_003206 Dlg_pl_003207" />
+		nextReplies="Dlg_pl_003207 Dlg_pl_003206" />
 
 	<Reply
 		name="Dlg_pl_003207"
@@ -13265,7 +13265,7 @@
 		name="Dlg_pl_002112"
 		text="И я тоже. Ну, я поехал! "
 		role="PLAYER"
-		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); EndConversation()" />
+		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Финальный выбор-->
 	<Reply
 		name="Dlg_npc_002425"
@@ -17402,7 +17402,7 @@
 		name="Botanik_hellodlg0"
 		text="Привет, незнакомец! Редко я вижу новые лица! Как ты вообще тут оказался?"
 		role="NPC"
-		scriptCondition="not(QuestStatus('BenEast_Quest')==Q_COMPLETED) and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="not(QuestStatus('BenEast_Quest')==Q_COMPLETED) and not(IsQuestFailed('r1m1_Botanik_Quest')) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_001506 Dlg_pl_001507" />
 
 	<Reply

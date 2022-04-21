@@ -188,6 +188,8 @@ function AddPlayerVehicle(modelname)
 		modelname="Ural01"
 	end
 	if GetPlayerVehicle() then
+		pl_coord = GetPlayerVehicle():GetPosition()
+		pl_rotate = GetPlayerVehicle():GetRotation()
 		local teamID = CreateNewObject{
 				prototypeName = "team",
 				objName = "TempTeam",
@@ -213,6 +215,12 @@ function AddPlayerVehicle(modelname)
 		vehicle:SetPosition(pos)
 		pl:AddChild(vehicle)
     end
+	if GetPlayerVehicle() and pl_coord and pl_rotate then
+		GetPlayerVehicle():SetGamePositionOnGround(pl_coord)
+		GetPlayerVehicle():SetRotation(pl_rotate)
+	end
+	pl_coord = nil
+	pl_rotate = nil
 end
 
 function AddPlayerNewVehicle(modelname)

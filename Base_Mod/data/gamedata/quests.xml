@@ -2981,7 +2981,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete="SetTolerance(1100,1012,RS_NEUTRAL)"
-		OnFail='TDeactivate("trFightForPesht"); TDeactivate("BrigadaIsDead"); SetTolerance(1100,1012,RS_NEUTRAL)'
+		OnFail='TDeactivate("trFightForPesht"); TDeactivate("BrigadaIsDead"); SetTolerance(1100,1012,RS_NEUTRAL); TActivate ("tr_OpenTownAndShowButtonInPesht")'
 		Levels="r1m3">
 		<quest
 			Name="FightForPesht1"

@@ -1080,6 +1080,7 @@
 			local vehLisa = GetEntityByName("vehLisa_0")
 			
 			if vehPlayer then
+				vehPlayer:LimitMaxSpeed(10)
 				vehPlayer:SetGamePositionOnGround( CVector(5869.003, 230.756, 5212.128))
 				vehPlayer:SetRotation(Quaternion(-0.008, 1.000, -0.005, -0.021))
 				vehPlayer:SetExternalPathByName("player_path05")
@@ -1901,6 +1902,8 @@
 	<trigger Name="cinFightForPeshtFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			PlayCustomMusic("Passage03")
+
 			TeamCreate("ArmiaTSP",1010,CVector(4493.482, 237.003, 3382.276),{"BelazTSP", "TSPFighter", "tspfighter2"})
 
 			local vehArmy1 = GetEntityByName("ArmiaTSP_vehicle_0")
@@ -2025,6 +2028,8 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
+
+			StopPlayingCustomMusic()
 
 			local vehArmy1 = GetEntityByName("ArmiaTSP_vehicle_0")
 			local vehArmy2 = GetEntityByName("ArmiaTSP_vehicle_1")

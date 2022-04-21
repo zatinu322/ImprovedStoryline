@@ -798,9 +798,12 @@
 		</script>
 	</trigger>
 
+	<!-- Убили всех рыбаков на складе -->
 	<trigger Name="ArmiaRybakovDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="ArmiaRybakov" />
 		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
@@ -814,6 +817,20 @@
 			StartCinematic()
 			
 			AddCinematicMessage( 8825, 1 )
+
+			TActivate("ArmiaRybakovDIEEND")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ArmiaRybakovDIEEND" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			SetCameraBehindPlayerVehicle()
 			
 			SetTolerance(1100, 1084, RS_ALLY)
 			SetTolerance(1100, 1085, RS_ENEMY)
@@ -824,7 +841,7 @@
 			AddFadingMsgId( "fm_history_got" )
 			
 			TActivate("RolikOdezhdaBegin")
-			
+
 			local tsp1 = GetEntityByName("ArmiaTTSP_vehicle_0")
 			if tsp1 then tsp1:Remove() end
 			local tsp2 = GetEntityByName("ArmiaTTSP_vehicle_1")

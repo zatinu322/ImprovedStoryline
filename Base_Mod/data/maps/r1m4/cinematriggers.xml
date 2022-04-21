@@ -1187,6 +1187,7 @@
 		</script>
 	</trigger>
 
+	<!-- Возвращаемся из Лидденклауда -->
 	<trigger Name="ChehlyRolikBegin" active="1">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1262,6 +1263,7 @@
 			if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
 				SetCoordinateForQuest( "d_chehol1" ,   CVector(getPos("ToR3M1")))
 				SetCoordinateForQuest( "RPGSigns_Quest2" ,   CVector(getPos("ToR3M1")))
+				SetCoordinateForQuest("ToCordanToTikhomir_Quest", CVector(getPos("FVCordan")))
 				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd01", 1010, CVector(2768.048, 225.238, 469.436), Quaternion(0.0000, -0.0502, 0.0000, 0.9987),0 )
 				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd02", 1010, CVector(2726.240, 226.044, 464.195), Quaternion(0.0000, -0.0545, 0.0000, 0.9985),0 )
 				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd03", 1010, CVector(2776.965, 226.000, 358.073), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),0 )
@@ -1271,6 +1273,9 @@
 				if QuestStatus("RybakToOlm_Quest")==Q_COMPLETED then
 					TActivate("RrybakRoadStart")
 				end
+
+				local tikh = getObj("TikhomirInSorrow1")
+				if tikh then tikh:SetSpokenCount(1) end
 				
 				TeamCreate("BorderTSPGuards",1010,CVector(2763.220, 226.405, 485.677),{"MirotvorecShot", "MirotvorecShot"})
 				local bg1 = GetEntityByName("BorderTSPGuards_vehicle_0")
@@ -1285,12 +1290,17 @@
 			else
 				SetCoordinateForQuest( "d_chehol1" ,   CVector(getPos("ExitFromMap")))
 				SetCoordinateForQuest( "RPGSigns_Quest2" ,   CVector(getPos("ExitFromMap")))
+				SetCoordinateForQuest("ToCordanToTikhomir_Quest", CVector(getPos("TheOlme")))
+
+				local tikh = getObj("TikhomirInSorrow")
+				if tikh then tikh:SetSpokenCount(1) end
 			end
 			
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Рыбак предупреждает нас о гневе ТСП -->
 	<trigger Name="RRRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>

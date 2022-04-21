@@ -2287,12 +2287,11 @@
 
 	<QuestInfo
 		questName="ToCordanToTikhomir_Quest"
-		briefDiz="Заехать в Кордан"
-		fullDiz="Надо бы заехать в Кордан. Кто знает, вдруг я там встречу кого-нибудь знакомого."
+		briefDiz="Проведать знакомого"
+		fullDiz="Надо бы заехать в одно поселение в Хеле. Кто знает, вдруг я там встречу кого-нибудь знакомого."
 		isMainQuest="0">
 		<Map
-			name="r1m4"
-			targetObjName="FVCordan" />
+			name="r1m4" />
 	</QuestInfo>
 
 	<QuestInfo

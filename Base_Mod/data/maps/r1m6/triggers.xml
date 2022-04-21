@@ -903,11 +903,6 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(600.689, 255.000, 2630.569), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(641.024, 255.041, 2541.731), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			
-			local FVeh = GetEntityByName("AdeptAttack_vehicle_0")
-			if FVeh then FVeh:Remove() end
-			local FVeh2 = GetEntityByName("AdeptAttack_vehicle_1")
-			if FVeh2 then FVeh2:Remove() end
-			
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
@@ -939,6 +934,15 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			local FVeh = GetEntityByName("AdeptAttack_vehicle_0")
+			if FVeh then FVeh:Remove() end
+			local FVeh2 = GetEntityByName("AdeptAttack_vehicle_1")
+			if FVeh2 then FVeh2:Remove() end
+			local FVeh3 = GetEntityByName("AdeptAttack1_vehicle_0")
+			if FVeh3 then FVeh3:Remove() end
+			local FVeh4 = GetEntityByName("AdeptAttack1_vehicle_1")
+			if FVeh4 then FVeh4:Remove() end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -953,12 +957,7 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(2899.995, 254.995, 1174.953), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(2902.930, 255.000, 1134.107), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(2942.700, 254.890, 1164.848), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
-			
-			local FVeh = GetEntityByName("AdeptAttack1_vehicle_0")
-			if FVeh then FVeh:Remove() end
-			local FVeh2 = GetEntityByName("AdeptAttack1_vehicle_1")
-			if FVeh2 then FVeh2:Remove() end
-			
+						
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()

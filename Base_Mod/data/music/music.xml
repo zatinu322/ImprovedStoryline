@@ -342,4 +342,7 @@
 	<model
 		id="SpecEndSong"
 		file="data\music\cinematics\SpecEndSong.ogg" />
+	<model
+		id="Silentium"
+		file="data\music\cinematics\Silentium.ogg" />
 </Music>

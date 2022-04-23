@@ -56,7 +56,7 @@
 		id="1021"
 		modelName="mask_lisa"
 		modelSlot="1"
-		value="ЛИСА|Знаю я здесь кое-кого, но они вряд ли тебе помогут."
+		value="ЛИСА|Я знаю здесь кое-кого, но они вряд ли тебе помогут."
 		sound="data\sounds\Speech\r3m1\r3m1_1021_alice.ogg"
 		time="4" />
 

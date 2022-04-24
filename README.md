@@ -4,6 +4,8 @@ Improved Storyline - сюжетная модификация к игре Ex Mach
 
 В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 
+Текущая версия - 1.0.5.3
+
 Особая благодарность [Suslo Red](https://github.com/SusloRed) и [Varisane](https://github.com/Varisane) за помощь в разработке.
 
 # Список изменений
@@ -65,6 +67,13 @@ Improved Storyline - сюжетная модификация к игре Ex Mach
 2. Босс-кран в Либриуме иногда уезжает с места сражения и тем самым софтлочит игру. Помогает сохранение перед битвой с ним и перезапуск игры.
 3. Источники питания у тарелки Ньери иногда не уничтожаются. Помогает перезапуск.
 
+# Предыдущие версии
+
+* [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052)
+* [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051)
+* [Improved Storyline v1.0.5](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline105)
+* [Improved Storyline v1.0.4.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1041)
+* [Improved Storyline v1.0.4](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline104)
 # Контакты автора
 
 [Страница ВК](https://vk.com/id316894646)

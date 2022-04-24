@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<ObjectNames>
+
+	<Object
+		Name="Esting"
+		FullName="ВОЛОЖ" />
+
+	<Object
+		Name="Esting_enter"
+		FullName="ВОЛОЖ" />
+
+	<Object
+		Name="Esting_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="Esting_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="Esting_Bar_Barman"
+		FullName="Трактирщик Гаврила" />
+
+	<Object
+		Name="Esting_Bar"
+		FullName="Трактир &quot;Знание&quot;" />
+
+
+
+	<Object
+		Name="TheSign"
+		FullName="РУДНАЯ ШАХТА" />
+
+	<Object
+		Name="TheSign_enter"
+		FullName="РУДНАЯ ШАХТА" />
+
+	<Object
+		Name="TheSign_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheOilVillage"
+		FullName="ЛА БЕЛЛЬ" />
+
+	<Object
+		Name="TheOilVillage_enter"
+		FullName="ЛА БЕЛЛЬ" />
+
+	<Object
+		Name="TheOilVillage_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="TheOilVillage_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheOilVillage_Bar_Barman"
+		FullName="Трактирщица Истома" />
+
+	<Object
+		Name="TheOilVillage_Bar"
+		FullName="Таверна &quot;Могучая&quot;" />
+
+
+
+	<Object
+		Name="TheTown"
+		FullName="РИНОЛЬСК" />
+
+	<Object
+		Name="TheTown_enter"
+		FullName="РИНОЛЬСК" />
+
+	<Object
+		Name="TheTown_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="TheTown_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheTown_Bar_Barman"
+		FullName="Трактирщица Аксинья" />
+
+	<Object
+		Name="TheTown_Bar"
+		FullName="Бар &quot;Чёрные лёгкие&quot;" />
+
+
+
+	<Object
+		Name="TheContraVillage"
+		FullName="ЕРМАКОВО" />
+
+	<Object
+		Name="TheContraVillage_enter"
+		FullName="ЕРМАКОВО" />
+
+	<Object
+		Name="TheContraVillage_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="TheContraVillage_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheContraVillage_Bar_Barman"
+		FullName="Офицантка Степанида" />
+
+	<Object
+		Name="TheContraVillage_Bar"
+		FullName="Трактир &quot;Гостеприимный&quot;" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="МИХАЙЛОВКА" />
+
+	<Object
+		Name="PetrolStationTown1_enter"
+		FullName="МИХАЙЛОВКА" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Мастерская" />
+
+		<Object
+		Name="PetrolStationTown1_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="ЗАПРАВКА" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="PetrolStationTown2_enter"
+		FullName="ЗАПРАВКА" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="ЗАПРАВКА" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="PetrolStationTown3_enter"
+		FullName="ЗАПРАВКА" />
+
+	<Object
+		Name="PetrolStationTown4"
+		FullName="ЗАПРАВКА" />
+
+	<Object
+		Name="PetrolStationTown4_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="PetrolStationTown4_enter"
+		FullName="ЗАПРАВКА" />
+
+	<Object
+		Name="ToR1M6"
+		FullName="Дорога в Лиденклауд" />
+
+	<Object
+		Name="ToR1M6JD"
+		FullName="Секретный тоннель" />
+
+	<Object
+		Name="VerhMudr"
+		FullName="Верховный Мудрец" />
+
+	<Object
+		Name="Lisa"
+		FullName="Лиса" />
+
+	<Object
+		Name="Muzhik"
+		FullName="Охранник Елисей" />
+
+	<Object
+		Name="Muzhik1"
+		FullName="Глашатай Кузьма" />
+
+	<Object
+		Name="Muzhik2"
+		FullName="Лесник Фаддей" />
+
+	<Object
+		Name="Muzhik3"
+		FullName="Разнорабочий Клим" />
+
+	<Object
+		Name="DobroslavaFather"
+		FullName="Гончар Всеволод" />
+
+	<Object
+		Name="Babca"
+		FullName="Вдова Элис" />
+
+	<Object
+		Name="PS_Bar"
+		FullName="Таверна &quot;Пескарик&quot;" />
+
+	<Object
+		Name="PS1_Bar"
+		FullName="Дом Всеволода" />
+
+	<Object
+		Name="PS_Bar_Barman"
+		FullName="Трактирщик Трофим" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Картограф" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Картограф" />
+
+	<Object
+		Name="IeronimFarm"
+		FullName="Фермер Иероним" />
+
+	<Object
+		Name="FelixBandit"
+		FullName="Феликс" />
+
+	<Object
+		Name="PlayerAboutTikhomirsFate"
+		FullName=" " />
+
+</ObjectNames>

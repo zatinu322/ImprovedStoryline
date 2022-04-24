@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Бр-р-р, а тут гораздо холоднее, чем я думал. Без этой одежды мы бы замёрзли ещё до выезда из тоннеля."
+		sound=""
+		time="9" />
+
+	<string
+		id="2"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Ну, хотя бы эти мытарства со складом стоили твоих усилий. Но теперь перед нами встаёт другая проблема."
+		sound=""
+		time="9" />
+
+	<string
+		id="3"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Видимо, местные совсем уж не рады гостям, раз соорудили эту стену. У тебя осталась взрывчатка?"
+		sound=""
+		time="8" />
+
+	<string
+		id="4"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Нет, мы всё израсходовали на те валуны."
+		sound=""
+		time="5" />
+	<string
+		id="5"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Смотри, тут есть небольшое отверстие, но моя машина здесь точно не проедет."
+		sound=""
+		time="6" />
+
+	<string
+		id="6"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Зато моя проедет с лёгкостью."
+		sound=""
+		time="5" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Подожди, ты хочешь отправиться одна? На неизведанную ранее территорию?"
+		sound=""
+		time="6" />
+
+	<string
+		id="8"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Ну да. Я же обходилась без тебя до нашей встречи в Либриуме. "
+		sound=""
+		time="6" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Всё равно, рискованно это как-то. "
+		sound=""
+		time="5" />
+
+	<string
+		id="10"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Других вариантов у нас всё равно нет. Сделаем следующим образом: я пролезаю в эту дыру, нахожу местных жителей, объясняю ситуацию, а дальше в самом лучшем случае они дают мне ключ, и я открываю тебе эти ворота."
+		sound=""
+		time="15" />
+
+	<string
+		id="11"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="А в самом худшем?"
+		sound=""
+		time="4" />
+
+	<string
+		id="12"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|И думать не хочу. К тому же выбора у нас всё равно нет. Включи обогрев машины на полную мощность и жди меня здесь. Постараюсь не задерживаться."
+		sound=""
+		time="9" />
+
+	<string
+		id="13"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Ох, как же мне всё это не нравится."
+		sound=""
+		time="5" />
+
+	<string
+		id="14"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|А вот и первая развилка. Что ж, испытаем судьбу. Допустим, направо."
+		sound=""
+		time="9" />
+
+	<string
+		id="15"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Да уж, деревенька действительно выглядит так, будто её покинули всего за пару минут. Такой беспорядок."
+		sound=""
+		time="10" />
+
+	<string
+		id="16"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Так, этого, пожалуй, будет достаточно. Ключик я тоже нашла."
+		sound=""
+		time="7" />
+
+	<string
+		id="17"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="ДОЗОРНЫЙ|Остановитесь! Выйдете из машины и поднимите руки! Или мы открываем огонь!"
+		time="8" />
+
+	<string
+		id="18"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Вот чёрт, угораздило меня! Это те самые Адепты. Я бы могла от них ускользнуть, если бы не ракетные установки – они уже наверняка навелись на мою машину."
+		sound=""
+		time="13" />
+
+	<string
+		id="19"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="ДОЗОРНЫЙ|Считаю до трёх и мы открываем огонь! Один! Два!"
+		time="8" />
+
+	<string
+		id="20"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Не стреляйте! Я сдаюсь..."
+		sound=""
+		time="5" />
+
+	<string
+		id="21"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Что ж она так долго-то?! И погода уже начинает портиться, скоро меня и обогрев не спасёт..."
+		sound=""
+		time="9" />
+
+	<string
+		id="22"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Эй, там есть кто-нибудь? Нас твоя подруга послала, Лиса, чтобы мы тебе ворота открыли."
+		time="8" />
+
+	<string
+		id="23"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Да, я здесь! Помощь мне бы не помешала, а то я скоро тут совсем замёрзну."
+		sound=""
+		time="8" />
+
+	<string
+		id="24"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Отойди от ворот, я сейчас взорву петли."
+		time="6" />
+
+	<string
+		id="25"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Спасибо за помощь! А где Лиса? Почему она не приехала вместе с вами?"
+		sound=""
+		time="9" />
+
+	<string
+		id="26"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Мы тебе всё объясним, только сперва давай доедем до деревни. Кажется, скоро начнётся буря."
+		time="8" />
+
+	<string
+		id="27"
+		modelName=""
+		value="@FF000000AAAAAAAAAAAAAAAAAAA@FFFFFFFFЧерез несколько часов"
+		sound=""
+		fontSize="18"
+		time="6" />
+
+	<string
+		id="28"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="354"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Вижу, ты всё-таки решил не брать грех на душу. Думаешь, что, помогая им, ты приведёшь их к победе? Даже если ты убьёшь всех нас, то местные всё равно не будут в безопасности. И да, можешь попрощаться со своей подружкой, её ты больше точно не увидишь."
+		time="17" />
+
+	<string
+		id="29"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="По пути сюда я раздумывал, убить вас всех или половину всё-таки пощадить, но после твоих слов я принял окончательное решение. Ты просто не успеешь ничего доложить на базу! Умрите!"
+		sound=""
+		time="14" />
+
+	<string
+		id="30"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Спасибо! Спасибо! Огромное спасибо! Если бы не ты, то нашла бы я там свою смерть!"
+		time="7" />
+
+	<string
+		id="31"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Серафима, верно?"
+		sound=""
+		time="3" />
+
+	<string
+		id="32"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Да, Серафима это я. А ты кто такой? Я никогда тебя здесь не видела."
+		time="6" />
+
+	<string
+		id="33"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Меня послал твой отец. Это долгая история, расскажу по пути. А теперь давай скорее убираться отсюда, пока никто не понял, что произошло."
+		sound=""
+		time="9" />
+
+	<string
+		id="34"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Подожди! Сначала давай заедем ко мне домой. У меня там есть кое-что, что может нам очень пригодиться."
+		time="9" />
+
+	<string
+		id="35"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Ладно, показывай дорогу."
+		sound=""
+		time="3" />
+
+	<string
+		id="36"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Что это за место?"
+		sound=""
+		time="4" />
+
+	<string
+		id="37"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Старая заброшенная станция. Там внутри есть пульт управления, но вход защищён каким-то странным механизмом, открыть который никто не смог до сих пор…"
+		time="11" />
+
+	<string
+		id="38"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Звучит как сюжет второсортной легенды."
+		sound=""
+		time="6" />
+
+	<string
+		id="39"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Скорее всего, так и есть. Почти уверена, там внутри только рухлядь и ничего более. Ну всё, хватит время терять, поехали дальше."
+		time="9" />
+
+	<string
+		id="40"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Вот и мой дом. Вернее то, что от него осталось. Теперь нужно в этой разрухе найти мой тайник. Вряд ли адепты смогли его обнаружить."
+		time="12" />
+
+	<string
+		id="41"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Помощь нужна?"
+		sound=""
+		time="3" />
+
+	<string
+		id="42"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Нет, сама справлюсь. А ты пока контролируй, чтобы к нам никто не подобрался. Тут Моска прямо под боком."
+		time="7" />
+
+	<string
+		id="43"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Что?! Раньше не могла сказать?!"
+		sound=""
+		time="4" />
+
+	<string
+		id="44"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Нет, иначе ты бы не согласился сюда съездить."
+		time="4" />
+
+	<string
+		id="45"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Там кто-то маячит на горизонте. Легковая машина, вооружена. Едет сюда."
+		sound=""
+		time="6" />
+
+	<string
+		id="46"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Не стреляй! Это друг. Он живёт в Моске и сливает нам информацию о том, что там творится. Если он здесь появился, значит у него что-то новое."
+		time="10" />
+
+	<string
+		id="47"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="241"
+		modelSlot="1"
+		sound=""
+		value="ДИМИТРИЙ|Серафима, ты не одна…"
+		time="4" />
+
+	<string
+		id="48"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Он не враг, он спас мне жизнь, так что можешь говорить при нём."
+		time="6" />
+
+	<string
+		id="49"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="241"
+		modelSlot="1"
+		sound=""
+		value="ДИМИТРИЙ|Ладно. Недавно в Моске появилась пленница, причём не одна из ваших. Зовут её, кажется, Лиса. Она смогла каким-то образом обдурить охранников и незаметно украсть у них ключи. Я хочу помочь ей совершить побег."
+		time="14" />
+
+	<string
+		id="50"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Вот так Лиса, вот так чертовка! Даже из этой ситуации смогла найти выход! Пожалуйста, помоги ей! Я в долгу не останусь."
+		sound=""
+		time="9" />
+
+	<string
+		id="51"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Поняла тебя. Спасибо, Димитрий, держи меня в курсе. Но лучше вам пока повременить с побегом. Я потом свяжусь с тобой и объясню подробнее."
+		time="9" />
+
+	<string
+		id="52"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="241"
+		modelSlot="1"
+		sound=""
+		value="ДИМИТРИЙ|Хорошо. Удачи тебе."
+		time="4" />
+
+	<string
+		id="53"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Что ты задумала? Почему ей не стоит бежать прямо сейчас?"
+		sound=""
+		time="6" />
+
+	<string
+		id="54"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Объясню по дороге. Я нашла то, что искала, теперь настало время сменить машину."
+		time="7" />
+
+	<string
+		id="55"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Что это?!"
+		sound=""
+		time="3" />
+
+	<string
+		id="56"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Грейдер. Правда, без оружия, но это дело поправимое. Тебе придётся ещё разок побыть моим телохранителем."
+		time="9" />
+
+	<string
+		id="57"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Вряд ли мои услуги тебе понадобятся, с такой-то бронёй."
+		sound=""
+		time="6" />
+
+	<string
+		id="58"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Никогда не знаешь, что может пойти не так. Ну ладно, хватит время терять. Поехали!"
+		time="7" />
+
+	<string
+		id="59"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|А вот и ты! Мы тут немного разведали обстановку. К Кейтбергу можно подобраться двумя способами: либо атаковать в лоб, либо попробовать напасть со стороны завода. В обоих случаях мы сильно рискуем, но отступать уже некуда."
+		time="17" />
+
+	<string
+		id="60"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Какой план действий?"
+		sound=""
+		time="3" />
+
+	<string
+		id="61"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Главная наша задача - уничтожить доты и внешнюю охрану города, остальным займётся другая группа. Тактику выбираешь ты, мы последуем за тобой. Всем удачи, и да сохранят нас высшие силы!"
+		time="13" />
+
+	<string
+		id="62"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Не могу поверить! У нас получилось!! Кейтберг теперь наш!"
+		sound=""
+		time="5" />
+
+	<string
+		id="63"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Велимир хочет тебе сказать что-то важное, он уже здесь, в Кейтберге. Лучше поторопись!"
+		time="9" />
+
+	<string
+		id="64"
+		modelName="r1_man"
+		modelSkin="5"
+		modelCfg="14"
+		modelSlot="1"
+		sound=""
+		value="ГАВРИЛА|Спасибо, что прогнал их! Они думали, что твоя подруга у нас, перевернули тут всё вверх дном!"
+		time="9" />
+
+	<string
+		id="65"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Чёрт! Значит, Лисы здесь нет! Нужно срочно проверить вторую деревню!"
+		sound=""
+		time="7" />
+
+	<string
+		id="66"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|У нас получилось!! Да! Моска пала!"
+		time="6" />
+
+	<string
+		id="67"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="А что там с запчастями?"
+		sound=""
+		time="5" />
+
+	<string
+		id="68"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Склад остался невредим, все комплектующие двигателей на месте. Адепты покинули наши земли, но скоро они вернутся с подмогой, так что действовать нужно быстро. Отвези запчасти в Северку - это последнее, о чём мы тебя просим."
+		time="16" />
+
+	<string
+		id="69"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Конечно, постараюсь привезти как можно скорее."
+		sound=""
+		time="7" />
+	
+	<string
+		id="691"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|А мы пока нанесём упреждающие удары по ледяной пустоши. Если выпустить туда все ракеты, что здесь есть, то адепты доберутся сюда вновь очень и очень нескоро."
+		time="11" />
+
+	<string
+		id="70"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|А вот и ты. Давай расскажу тебе план действий. Староста уже на месте, но лучше его не тревожь, в данный момент он хочет побыть наедине с собой. Операция начнётся, как только он тронется с места."
+		time="14" />
+
+	<string
+		id="71"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Понял. Даже представить не могу, каково сейчас Серафиме..."
+		sound=""
+		time="8" />
+
+	<string
+		id="72"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Она осталась в Кейтберге. Говорит, что не сможет наблюдать это воочию, но она уважает решение отца и очень гордится им. Как только детонатор будет приведён в действие, выдвигаемся добивать остатки адептов. Все готовы?"
+		time="16" />
+
+	<string
+		id="73"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Готовы!"
+		sound=""
+		time="5" />
+
+	<string
+		id="74"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|Спасибо тебе за всё, чужестранец. Благодаря тебе мы выжили и можем покинуть эти неспокойные земли. Велимир бы тобой гордился."
+		time="10" />
+
+	<string
+		id="75"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|Он совершил поистине героический поступок. Пожертвовав своей жизнью, он спас всех остальных. Без него у нас бы ничего не получилось."
+		time="11" />
+
+	<string
+		id="76"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Куда собираетесь плыть?"
+		sound=""
+		time="5" />
+
+	<string
+		id="77"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="СЕРАФИМА|До большого корабля, бросившего якорь в Моска-реке. А на нём уже в Ле Канаду. Может быть, там будет спокойнее."
+		time="11" />
+
+	<string
+		id="78"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Ле Канада? Никогда не слышал о ней. Надеюсь, у вас получится её отыскать!"
+		sound=""
+		time="7" />
+
+	<string
+		id="79"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="МИКОЛКА|И да, мы деактивировали все турели на мосту, и теперь ты можешь беспрепятственно проехать в земли мудрецов. Надеюсь, там ты найдёшь то, ради чего сюда приехал. Прощай! И спасибо за помощь!"
+		time="14" />
+
+	<string
+		id="80"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Надеюсь, они без проблем доберутся до суши..."
+		sound=""
+		time="6" />
+
+	<string
+		id="81"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Пока ты воевал в Кейтберге, я помогала им переправить одежду и еду на корабль, так что можешь не переживать - у них есть всё, что нужно для этого путешествия. Они не пропадут!"
+		sound=""
+		time="13" />
+
+	<string
+		id="82"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Радостно слышать. Ну, а мы теперь к мудрецам."
+		sound=""
+		time="7" />
+
+	<string
+		id="83"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Приём. Я на месте. Никого из местных не вижу."
+		sound=""
+		time="6" />
+
+	<string
+		id="84"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Что ж, похоже, они поняли, что это ловушка. Но ничего, мы знаем, что они находятся в Северке, им негде больше прятаться."
+		time="11" />
+
+	<string
+		id="85"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Вы предлагаете мне в одиночку отправиться в Северку и сразиться с ними?"
+		sound=""
+		time="7" />
+
+	<string
+		id="86"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Не переживай раньше времени – у них там два слабеньких дота и абсолютно никакого оружия. Ты без проблем справишься."
+		time="10" />
+
+	<string
+		id="87"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Хорошо, если так. Конец связи."
+		sound=""
+		time="6" />
+
+	<string
+		id="88"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Приём. Я в Северке. Сбил два их дота, но больше никого здесь не вижу. Ни единого местного жителя."
+		sound=""
+		time="9" />
+
+	<string
+		id="89"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Очень странно. Ты точно проверил все дома?"
+		time="6" />
+
+	<string
+		id="90"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Абсолютно точно. Деревня пуста."
+		sound=""
+		time="5" />
+
+	<string
+		id="91"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Ладно, это в корне меняет дело. Возвращайся в Кейтберг, обсудим дальнейшие планы. Конец связи."
+		time="8" />
+
+	<string
+		id="92"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Стоять! Кто таков?!"
+		time="5" />
+
+	<string
+		id="93"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Меня прислало руководство, чтобы провести допрос."
+		sound=""
+		time="6" />
+
+	<string
+		id="94"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|С допросом придётся обождать. Взгляни вон туда – кажется, нашу пленницу собираются у нас отнять."
+		time="8" />
+
+	<string
+		id="95"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Сейчас разберёмся!"
+		sound=""
+		time="4" />
+
+	<string
+		id="96"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Этих мы убили, но они не оставят попытки отбить её у нас. Отправляйся в Моску: туда местные не сунутся, да и допросят её там по всем правилам!"
+		time="12" />
+
+	<string
+		id="97"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Звучит как хорошая идея."
+		sound=""
+		time="5" />
+
+	<string
+		id="98"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="А вот и первая деревня! Неплохо спрятались!"
+		sound=""
+		time="7" />
+
+	<string
+		id="99"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="А вот и их последнее пристанище! Ещё немного, и я смогу проехать к мудрецам!"
+		sound=""
+		time="9" />
+
+	<string
+		id="100"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="354"
+		modelSlot="1"
+		sound=""
+		value="АДЕПТ|Всем приготовиться ко взрыву! 3! 2! 1!"
+		time="8" />
+
+	<string
+		id="101"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Все, кто оказывал сопротивление, убиты, а оставшиеся пленены. Самое время возвращаться в Моску."
+		sound=""
+		time="11" />
+
+	<string
+		id="102"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Первая деревня уничтожена! Теперь очередь за второй!"
+		sound=""
+		time="7" />
+
+	<string
+		id="103"
+		modelName=""
+		value="Вы не смогли защитить Серафиму, и из-за этого местные жители больше не хотят иметь с вами никаких дел. Теперь вы не сможете спасти Лису и расчистить путь к мудрецам."
+		sound="data\sounds\speech\rolik\ending8.ogg"
+		fontSize="18"
+		time="12" />
+
+	<string
+		id="104"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Ого! А изнутри эта станция выглядит гораздо технологичнее, чем снаружи. И что мне нужно делать с этим ключом?"
+		sound=""
+		time="9" />
+
+	<string
+		id="105"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Смотри, тут есть какая-то панель управления. Раскуроченная, правда, но несколько кнопок вроде работает. Может, ключ нужен для неё?"
+		sound=""
+		time="11" />
+
+	<string
+		id="106"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Похоже на то. Давай проверим."
+		sound=""
+		time="4" />
+
+	<string
+		id="107"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Странно, ничего не произошло. Хотя, подожди, я что-то слышу. Кажется, звук идёт снаружи."
+		sound=""
+		time="8" />
+
+	<string
+		id="108"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Сейчас проверю."
+		sound=""
+		time="3" />
+
+	<string
+		id="109"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Это ещё что такое?! Подойди сюда, ты точно должен это увидеть!"
+		sound=""
+		time="11" />
+
+	<string
+		id="110"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="ЛИСА|Не могу поверить… Это же работающий поезд, сконструированный ещё в Старом мире! Но как такое возможно?!"
+		sound=""
+		time="9" />
+
+	<string
+		id="111"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Это очень странные места, Лиса. Здесь довольно часто случается невозможное."
+		sound=""
+		time="8" />
+
+	<string
+		id="112"
+		modelName="mask_snowlisa"
+		modelSkin="1"
+		value="О чём ты?"
+		sound=""
+		time="3" />
+
+	<string
+		id="113"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Я тебе позже расскажу. А пока надо разобраться, что нам с этой махиной делать."
+		sound=""
+		time="6" />
+
+	<string
+		id="114"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Дверь в кабину открыта… Ага, тут какая-то книжка! &quot;Руководство машиниста&quot;, что бы это ни значило… Тут должно быть рассказано, как управлять этой штуковиной."
+		sound=""
+		time="13" />
+
+	<string
+		id="115"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Реверсивная рукоятка, тяга и локомотивный тормоз. Вроде бы всё просто. Машину придётся оставить здесь, но, думаю, доты смогут её защитить. Что ж, вперёд в неизвестность!"
+		sound=""
+		time="15" />
+
+	<string
+		id="116"
+		modelName="mask_snowlisa"
+		modelSkin="1"
+		value="Я не знаю, куда ведет эта дорога, поэтому останусь здесь."
+		sound=""
+		time="6" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8803"
+		value="Пароль для бонусной концовки: *********8****|Более подробная информация содержится в мануале к моду." />
+
+</resource>

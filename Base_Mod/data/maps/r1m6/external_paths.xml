@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<Paths>
+	<Path
+		Name="Bandit_path1">
+		<Point
+			coord="1178.874 923.758" />
+	</Path>
+
+	<Path
+		Name="Lisa_path1">
+		<Point
+			coord="1020.521 936.845" />
+	</Path>
+
+	<Path
+		Name="Lisa_path2">
+		<Point
+			coord="1112.921 526.314" />
+
+		<Point
+			coord="1139.066 497.247" />
+	</Path>
+
+	<Path
+		Name="Lisa_path3">
+		<Point
+			coord="1177.698 913.915" />
+
+		<Point
+			coord="1178.519 949.066" />
+	</Path>
+
+	<Path
+		Name="Player_path1">
+		<Point
+			coord="461.494 1763.478" />
+
+		<Point
+			coord="488.666 1758.415" />
+	</Path>
+
+	<Path
+		Name="ScoutPath1">
+		<Point
+			coord="1152.494 2499.880" />
+
+		<Point
+			coord="1199.270 2598.347" />
+
+		<Point
+			coord="1240.886 2642.948" />
+
+		<Point
+			coord="1329.164 2741.386" />
+	</Path>
+
+	<Path
+		Name="ScoutPath2">
+		<Point
+			coord="1329.164 2741.386" />
+
+		<Point
+			coord="1240.886 2642.948" />
+
+		<Point
+			coord="1199.270 2598.347" />
+
+		<Point
+			coord="1152.494 2499.880" />
+	</Path>
+
+	<Path
+		Name="SeraPath">
+		<Point
+			coord="1555.835 1042.687" />
+
+		<Point
+			coord="1647.488 1061.492" />
+
+		<Point
+			coord="1799.605 1089.789" />
+
+		<Point
+			coord="2001.081 1161.531" />
+
+		<Point
+			coord="2164.486 1313.257" />
+
+		<Point
+			coord="2258.752 1499.532" />
+
+		<Point
+			coord="2339.111 1799.605" />
+
+		<Point
+			coord="2426.315 2175.588" />
+
+		<Point
+			coord="2540.986 2620.042" />
+
+		<Point
+			coord="2452.752 2655.426" />
+
+		<Point
+			coord="2244.444 2709.032" />
+	</Path>
+
+	<Path
+		Name="SeraPath2">
+		<Point
+			coord="2151.533 2727.218" />
+
+		<Point
+			coord="2021.153 2756.796" />
+
+		<Point
+			coord="1953.559 2713.669" />
+
+		<Point
+			coord="1815.072 2780.540" />
+
+		<Point
+			coord="1684.389 2846.270" />
+
+		<Point
+			coord="1538.194 2862.233" />
+
+		<Point
+			coord="1444.235 2820.596" />
+	</Path>
+
+	<Path
+		Name="SeraPath3">
+		<Point
+			coord="1527.469 2861.531" />
+
+		<Point
+			coord="1691.499 2843.233" />
+
+		<Point
+			coord="1945.961 2717.452" />
+
+		<Point
+			coord="2020.605 2756.656" />
+
+		<Point
+			coord="2120.444 2730.928" />
+
+		<Point
+			coord="2202.969 2715.411" />
+
+		<Point
+			coord="2273.307 2621.091" />
+
+		<Point
+			coord="2245.803 2415.830" />
+
+		<Point
+			coord="2199.386 2179.887" />
+
+		<Point
+			coord="2155.160 2020.997" />
+
+		<Point
+			coord="2124.728 1890.517" />
+
+		<Point
+			coord="2083.212 1759.974" />
+
+		<Point
+			coord="1978.504 1630.942" />
+
+		<Point
+			coord="1938.868 1443.120" />
+
+		<Point
+			coord="1908.532 1326.932" />
+
+		<Point
+			coord="1785.710 1086.968" />
+
+		<Point
+			coord="1544.208 1042.069" />
+
+		<Point
+			coord="1286.275 1006.366" />
+
+		<Point
+			coord="1063.285 958.262" />
+
+		<Point
+			coord="836.368 828.283" />
+
+		<Point
+			coord="568.856 661.872" />
+
+		<Point
+			coord="545.436 683.074" />
+
+		<Point
+			coord="514.381 831.214" />
+
+		<Point
+			coord="517.258 864.259" />
+	</Path>
+
+	<Path
+		Name="StarostaFinalPath">
+		<Point
+			coord="1742.521 2094.062" />
+
+		<Point
+			coord="1835.665 2124.383" />
+
+		<Point
+			coord="1849.183 2173.822" />
+
+		<Point
+			coord="1827.148 2300.885" />
+
+		<Point
+			coord="1805.880 2335.374" />
+
+		<Point
+			coord="1757.829 2364.356" />
+
+		<Point
+			coord="1710.035 2374.238" />
+
+		<Point
+			coord="1615.256 2367.522" />
+
+		<Point
+			coord="1548.608 2316.288" />
+
+		<Point
+			coord="1540.389 2250.651" />
+
+		<Point
+			coord="1575.862 2207.107" />
+
+		<Point
+			coord="1621.283 2181.580" />
+
+		<Point
+			coord="1668.347 2184.549" />
+
+		<Point
+			coord="1675.594 2197.480" />
+
+		<Point
+			coord="1661.324 2254.624" />
+	</Path>
+
+	<Path
+		Name="palach_path1">
+		<Point
+			coord="2338.382 710.566" />
+	</Path>
+
+	<Path
+		Name="palach_path2">
+		<Point
+			coord="2332.737 709.612" />
+	</Path>
+
+	<Path
+		Name="palach_path3">
+		<Point
+			coord="2328.015 709.278" />
+	</Path>
+
+	<Path
+		Name="start_path1">
+		<Point
+			coord="257.109 1729.059" />
+
+		<Point
+			coord="298.854 1759.378" />
+
+		<Point
+			coord="360.490 1789.236" />
+	</Path>
+
+	<Path
+		Name="start_path2">
+		<Point
+			coord="1507.250 2855.459" />
+
+		<Point
+			coord="1452.108 2824.806" />
+
+		<Point
+			coord="1338.046 2752.957" />
+	</Path>
+
+	<Path
+		Name="start_path3">
+		<Point
+			coord="270.703 1722.144" />
+
+		<Point
+			coord="319.413 1753.068" />
+
+		<Point
+			coord="368.665 1767.740" />
+	</Path>
+</Paths>

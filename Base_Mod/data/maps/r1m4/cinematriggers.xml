@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+
+<!-- 					Болото закрыто.			 -->
+
+	<trigger Name="RolikBegin_BolotoOF" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+		    SaveAllToleranceStatus(RS_NEUTRAL)
+		    EnableGodMode()
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			PlayCustomMusic("Bio01")
+			TActivate("RolikEnd_BolotoOF")
+			TActivate("trBolotoOF_cam01")
+			TActivate("BolotoOF_PathOut")
+			Fly("BolotoOF_cam01", CINEMATIC_NO_AIM, 0, 19, 1, 1 )
+			StartCinematic()
+			AddCinematicMessage( 1, 0.25 )
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger Name="trBolotoOF_cam01" active="0">
+ 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<!--event timeout="0" eventid="GE_TIME_PERIOD" /-->
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(1475.011, 217.387, 1581.962))
+				vehPlayer:SetRotation(Quaternion(0.033, 0.685, -0.047, -0.726))
+				vehPlayer:SetExternalPathByName("player_path01")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="BolotoOF_PathOut" active="0">
+		<event timeout="5" eventid="GE_TIME_PERIOD" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("player_path02")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_BolotoOF" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+-- 		println("Boloto END")
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("player_path02")
+				vehPlayer:PlaceToEndOfPath("player_path02")
+			end
+
+
+			StopPlayingCustomMusic()
+			TDeactivate("RolikBegin_BolotoOF")
+			TDeactivate("trBolotoOF_cam01")
+			TDeactivate("BolotoOF_PathOut")
+			TActivate("BolotoChoice")
+			SetCameraBehindPlayerVehicle()
+		    RestoreAllToleranceStatus()
+		    DisableGodMode()
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- 					Болото открыто.			 -->
+
+	<trigger Name="RolikBegin_Boloto" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+	    SaveAllToleranceStatus(RS_NEUTRAL)
+		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+--		SetWeather(0)
+		PlayCustomMusic("Bio05")
+		TActivate("RolikEnd_Boloto")
+		TActivate("trBoloto_cam01")
+		TActivate("trBoloto_cam02")
+		TActivate("trBoloto_cam03")
+		TActivate("trBoloto_Aiven")
+		CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(1279.438, 208.338, 1544.678), Quaternion(0, 0, 0, 0), 0)
+		local CToch = GetEntityByName("CamTochka")
+		local CTochID = CToch:GetId()
+		local vehPID = GetPlayerVehicleId()
+--		local st = trigger:GetVar("Count")
+		local stat = GetVar("Boloto").AsInt
+		RuleConsole("cinematic_spring_coeff 5.7")
+		FlyLinked( "Boloto_cam01", vehPID , 5, 1, 0, nil, nil, nil, nil, nil )
+		FlyLinked("Boloto_cam02", CTochID, 5, 0, 0, vehPID, nil, nil, nil, nil )
+        if stat==0 then
+			Fly("Boloto_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("stranger_cam", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			Fly("stranger_cam2", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
+		else
+			Fly("Boloto_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("Boloto_cam03Port", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+		end
+		StartCinematic()
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger Name="trBoloto_cam01" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+--		println("1")
+			vehPlayer:SetGamePositionOnGround( CVector(1475.011, 217.387, 1581.962))
+			vehPlayer:SetRotation(Quaternion(0.015, 0.560, -0.021, -0.828))
+			vehPlayer:SetExternalPathByName("player_path03")
+		end
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoloto_cam02" active="0">
+		<event flypath="Boloto_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local stat = GetVar("Boloto").AsInt
+            if stat==0 then
+				AddCinematicMessage( 2, 0.1 )
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoloto_cam03" active="0">
+		<event flypath="Boloto_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(1029.222, 209.832, 1715.359))
+			vehPlayer:SetRotation(Quaternion(-0.049, -0.832, -0.060, 0.549))
+			vehPlayer:SetThrottle(1)
+			vehPlayer:SetCustomLinearVelocity(15)
+			vehPlayer:SetExternalPathByName("BolotoViezdPort")
+		end
+
+		local stat = GetVar("Boloto").AsInt
+		if stat==0 then
+			AddCinematicMessage( 3, 0.1 )
+		end
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoloto_Aiven" active="0">
+		<event flypath="stranger_cam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(929.049, 229.712, 1670.207))
+			vehPlayer:SetRotation(Quaternion(-0.038, 0.596, 0.087, -0.797))
+			vehPlayer:SetThrottle(1)
+			vehPlayer:SetCustomLinearVelocity(15)
+			vehPlayer:SetExternalPathByName("Aiven_path1")
+		end
+		
+		CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(935.824, 274.921, 1538.192), Quaternion(-0.004, -0.365, 0.002, 0.931), 0)
+		
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_Boloto" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+	    SetVar("Boloto",1)
+		local CToch = GetEntityByName("CamTochka")
+		local vehPlayer = GetPlayerVehicle()
+		local AivenGo = getObj("humAiven")
+		if vehPlayer then
+				vehPlayer:SetExternalPathByName("BolotoViezdPort")
+				vehPlayer:PlaceToEndOfPath("BolotoViezdPort")
+				vehPlayer:SetGamePositionOnGround( CVector(580.966, 242.250, 1763.645))
+				vehPlayer:SetRotation(Quaternion(0.074, -0.638, -0.023, 0.766))
+			end
+		if CToch then
+			CToch:Remove()
+		end
+		
+		if AivenGo then
+			AivenGo:Remove()
+		end
+		
+		RuleConsole("cinematic_spring_coeff 0.7")
+		StopPlayingCustomMusic()
+
+		TDeactivate("RolikBegin_Boloto")
+		TDeactivate("trBoloto_cam01")
+		TDeactivate("trBoloto_cam03")
+		TDeactivate("trBoloto_Aiven")
+		TActivate("trMorassTeleportBefore")
+		TActivate("trMorassTeleportAfter")
+		SetCameraBehindPlayerVehicle()
+	    RestoreAllToleranceStatus()
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+<!--		переезд болота от самолета в деревню.		 -->
+
+
+	<trigger Name="RolikBegin_PlaneOut" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+		TActivate("RolikEnd_PlaneOut")
+		TActivate("trPlaneOut_cam01")
+		TActivate("trPlaneOut_cam02")
+
+		Fly("PlaneOut_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+		Fly("PlaneOut_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+		StartCinematic()
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trPlaneOut_cam01" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(1118.154, 224.715, 1366.481))
+			vehPlayer:SetRotation(Quaternion(0.005, 0.024, -0.006, 1.000))
+			vehPlayer:SetExternalPathByName("player_path05")
+		end
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger Name="trPlaneOut_cam02" active="0">
+		<event flypath="PlaneOut_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(1387.950, 211.036, 1593.858))
+			vehPlayer:SetRotation(Quaternion(-0.065, 0.731, 0.003, 0.679))
+			vehPlayer:SetExternalPathByName("player_path02")
+			vehPlayer:SetThrottle(1)
+			vehPlayer:SetCustomLinearVelocity(15)
+		end
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_PlaneOut" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetExternalPathByName("player_path02")
+			vehPlayer:PlaceToEndOfPath("player_path02")
+		end
+
+
+		TDeactivate("RolikBegin_PlaneOut")
+		TDeactivate("trPlaneOut_cam01")
+		TDeactivate("trPlaneOut_cam02")
+		TActivate("trMorassTeleportBefore")
+		TActivate("trMorassTeleportAfter")
+		SetCameraBehindPlayerVehicle()
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+<!--		переезд болота от порта в деревню.		-->
+
+
+	<trigger Name="RolikBegin_PortOut" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+		EnableGodMode()
+		TActivate("RolikEnd_PortOut")
+		TActivate("trPortOut_cam01")
+		TActivate("trPortOut_cam02")
+
+		SaveAllToleranceStatus(RS_NEUTRAL)
+
+		Fly("PortOut_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+		Fly("PlaneOut_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+		StartCinematic()
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trPortOut_cam01" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(806.148, 237.691, 1701.490))
+			vehPlayer:SetRotation(Quaternion(0.083, 0.734, -0.016, 0.674))
+			vehPlayer:SetExternalPathByName("player_path04")
+		end
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trPortOut_cam02" active="0">
+		<event flypath="PlaneOut_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(1387.950, 211.036, 1593.858))
+			vehPlayer:SetExternalPathByName("player_path02")
+		end
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_PortOut" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetExternalPathByName("player_path02")
+			vehPlayer:PlaceToEndOfPath("player_path02")
+		end
+
+
+		TDeactivate("RolikBegin_PortOut")
+		TDeactivate("trPortOut_cam01")
+		TDeactivate("trPortOut_cam02")
+		TActivate("trMorassTeleportBefore")
+		TActivate("trMorassTeleportAfter")
+		RestoreAllToleranceStatus()
+		SetCameraBehindPlayerVehicle()
+		DisableGodMode()
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+<!--		ролик с босом "война бобра с ослом"	:-)		-->
+
+
+	<trigger Name="RolikBegin_Boss02" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+
+		EnableGodMode()
+
+		PlayCustomMusic("Techno01")
+		TActivate("RolikEnd_Boss02")
+		TActivate("trBoss02_cam01")
+		TActivate("trBoss02_cam02")
+		TActivate("trBoss02_cam03")
+
+		local BossID = GetEntityByName("bigboss1"):GetId()
+		local vehPID = GetPlayerVehicleId()
+
+		Fly("Boss02_cam01", CINEMATIC_NO_AIM, 0, 7, 1, 0 )
+		Fly("Boss02_cam02", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+		FlyLinked("Boss02_cam03", vehPID, 15, 0, 1, BossID, nil, nil, nil, nil )
+		StartCinematic()
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoss02_cam01" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetGamePositionOnGround( CVector(741.410, 271.384, 1461.900))
+			vehPlayer:SetRotation(Quaternion(0.022, 0.881, -0.034, 0.472))
+			vehPlayer:SetExternalPathByName("player_path06")
+		end
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoss02_cam02" active="0">
+		<event flypath="Boss02_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:PlaceToEndOfPath("player_path06")
+		end
+--	диолог
+--	незабудь закрыть ворота
+
+		AddCinematicMessage( 15, 0.5)
+		AddCinematicMessage( 16, 0.5)
+
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoss02_cam03" active="0">
+		<event flypath="Boss02_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		AddCinematicMessage( 17, 0.5)
+--	диолог
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_Boss02" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+		local vehPlayer = GetPlayerVehicle()
+		if vehPlayer then
+			vehPlayer:SetExternalPathByName("player_path06")
+			vehPlayer:PlaceToEndOfPath("player_path06")
+		end
+
+		TActivate("trGateClose")
+
+		TDeactivate("RolikBegin_Boss02")
+		TDeactivate("trBoss02_cam01")
+		TDeactivate("trBoss02_cam02")
+		TDeactivate("trBoss02_cam03")
+
+		PlayCustomMusic("Battle01")
+		SetCameraBehindPlayerVehicle()
+		local boss = getObj("bigboss1")
+		if boss then
+			ShowBossIndicator( boss:GetId() )
+		end
+
+		DisableGodMode()
+
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!--			Ролик подьезда к конвою лидера экстримистов		-->
+
+	<trigger Name="RolikBegin_NearCaravanLeader" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+		    SaveAllToleranceStatus(RS_NEUTRAL)
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle(0)
+
+			TActivate("RolikEnd_NearCaravanLeader")
+			TActivate("trCaravan_cam02")
+			TActivate("trCaravan_cam03")
+			PlayCustomMusic("Passage01unloop")
+			RuleConsole("cinematic_spring_coeff 3.0")
+
+			local Band = GetEntityByName("LeaderGuardTeam_vehicle_0")
+			local BandID = Band:GetId()
+			local vehPID = GetPlayerVehicleId()
+			local Lider = GetEntityByName("LeaderCar_vehicle_0")
+			local LiderID = Lider:GetId()
+
+			FlyLinked( "Caravan_cam01", BandID , 10, 1, 0, vehPID, nil, true, nil, nil )
+			FlyLinked("Caravan_cam02", vehPID, 15, 0, 0, BandID, nil, true, nil, true )
+			FlyLinked("Caravan_cam03", LiderID, 17, 0, 1, LiderID, nil, true, nil, true )
+			StartCinematic()
+
+			AddCinematicMessage( 4, 1 )
+			AddCinematicMessage( 5, 1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trCaravan_cam02" active="0">
+		<event flypath="Caravan_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			PlayCustomMusic("IntenseDialogue01")
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetThrottle(0)
+				vehPlayer:SetCustomLinearVelocity(0)
+			end
+
+			AddCinematicMessage( 6, 1 )
+			AddCinematicMessage( 7, 1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trCaravan_cam03" active="0">
+		<event flypath="Caravan_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 8, 1 )
+			AddCinematicMessage( 9, 1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_NearCaravanLeader" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+		RuleConsole("cinematic_spring_coeff 0.7")
+	    RestoreAllToleranceStatus()
+		SetTolerance(1100, 1010, RS_ENEMY)
+
+		StopPlayingCustomMusic()
+		TDeactivate("RolikEnd_NearCaravanLeader")
+		TDeactivate("trCaravan_cam02")           
+		TDeactivate("trCaravan_cam03")           
+		SetCameraBehindPlayerVehicle()
+		CompleteQuest("FreeExtremistLeader_Quest3")
+		TakeQuest("FreeExtremistLeader_Quest3_1")
+		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBenDialogActivate" active="0">
+		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
+		<script>
+			CheckPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--		подводная лодка			-->
+
+	<trigger Name="cinMovePlToR3M1_begin" active="0">
+	<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			
+			EnableGodMode()
+			
+			Fly("lodka1", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
+			Fly("lodka2", CINEMATIC_NO_AIM, 0, 21, 0, 0 )
+			Fly("lodka3", CINEMATIC_NO_AIM, 0, 18, 0, 1 )
+			StartCinematic()
+			
+			local stat = GetVar("SubMarPh").AsInt
+            if stat==0 then
+				AddCinematicMessage( 18, 1 )
+			end 
+			
+			PlayCustomMusic("Bio02")
+			
+			TActivate("cinMovePlToR3M1_Fade")
+			TActivate("cinMovePlToR3M1_cam02")
+			TActivate("cinMovePlToR3M1_cam03")
+			TActivate("cinMovePlToR3M1_End")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinMovePlToR3M1_Fade" active="0">
+	<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetGamePositionOnGround( CVector(715.286, 217.935, 762.374))
+		   		vehPlayer:SetRotation(Quaternion(-0.000, -1.000, -0.000, 0.020))
+		   	end
+		   	
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinMovePlToR3M1_cam02" active="0">
+	<event flypath="lodka2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			CreateNewDummyObject( "submarina",	"Subm", -1, -1, CVector(712.726, 160.000, 67.000), Quaternion(0.000, -0.008, -0.000, -1.000),0 )
+			
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
+			local mover = GetEntityByID( moverId ) 
+			local controlledObj = GetEntityByName("Subm")
+			local stat = GetVar("SubMarPh").AsInt
+			if controlledObj then
+				mover:SetObjAndPath( controlledObj:GetId(), "lodka4", 20 )
+			end
+			
+            if stat==0 then
+				AddCinematicMessage( 19, 8 )
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinMovePlToR3M1_cam03" active="0">
+	<event flypath="lodka3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local stat = GetVar("SubMarPh").AsInt
+			local podlodka = getObj("Subm")
+			if podlodka then
+				podlodka:SetNodeAction(AT_STAND2)
+			end
+			
+			if stat==0 then
+				AddCinematicMessage( 20, 2 )
+			end
+			
+			TActivate("subzaezd1")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="subzaezd1" active="0">
+	<event	timeout="7"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("subzaezd1")
+				vehPlayer:LimitMaxSpeed( 20 )
+		   	end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinMovePlToR3M1_End" active="0">
+	<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+	<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			
+			SetVar("SubMarPh",1)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("subzaezd1")
+				vehPlayer:PlaceToEndOfPath()
+				vehPlayer:UnlimitMaxSpeed()
+		   	end
+			
+			StopPlayingCustomMusic()
+			
+			DisableGodMode()
+			
+			TActivate("trStartMap")
+			
+			TDeactivate("subzaezd1")
+			TDeactivate("cinMovePlToR3M1_cam02")
+			TDeactivate("cinMovePlToR3M1_cam03")
+			TDeactivate("RrybakRoadStart")
+
+			PassToMap("r3m1", "FromR1M4", 0 , 1)
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PeregovorRolikStart" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			Fly("peregovor_cam", CINEMATIC_NO_AIM, 0, 44.5, 0, 1 )
+			StartCinematic()
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(2563.173, 249.160, 1089.481))
+				vehPlayer:SetRotation(Quaternion(-0.000, 0.900, 0.000, -0.436))
+			end
+			
+			TActivate("PeregovorRolikEnd")
+
+			AddCinematicMessage( 8805, 1 )
+			AddCinematicMessage( 8806, 0.1 )
+			AddCinematicMessage( 8807, 0.1 )
+			AddCinematicMessage( 8808, 0.1 )
+			AddCinematicMessage( 8809, 0.1 )
+			AddCinematicMessage( 8810, 0.1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PeregovorRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdaStart" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Bio06")
+			
+			Fly("Sklad_cam1", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
+			Fly("Sklad_cam2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Sklad_cam3", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+			Fly("Sklad_cam4", CINEMATIC_NO_AIM, 0, 24, 0, 0 )
+			Fly("Sklad_cam5", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
+			Fly("Sklad_cam22", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Sklad_cam6", CINEMATIC_NO_AIM, 0, 17, 0, 1 )
+			StartCinematic()
+			
+			TActivate("RolikOdezhdaFade")
+			TActivate("RolikOdezhdatr2")
+			TActivate("RolikOdezhdatr3")
+			TActivate("RolikOdezhdatr4")
+			TActivate("RolikOdezhdatr5")
+			TActivate("RolikOdezhdatr22")
+			TActivate("RolikOdezhdatr6")
+			TActivate("RolikOdezhdaEnd")
+			TActivate("RolikOdezhdatr_anim01")
+			TActivate("RolikOdezhdatr_anim02")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdaFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1288.439, 307.072, 2434.594))
+				vehPlayer:SetRotation(Quaternion(0.003, 0.341, 0.008, 0.940))
+			end
+			
+			AddCinematicMessage( 8811, 1.5 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr2" active="0">
+		<event flypath="Sklad_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(1321.277, 307.019, 2439.172), Quaternion(0.0000, -0.3007, 0.0000, 0.9537), 1)
+			
+			getObj("humPlayer"):SetNodeAction(AT_STAND1)
+			getObj("humPlayer"):SetNextForAnimation( AT_STAND1, AT_STAND1 )
+			
+			AddCinematicMessage( 8812, 1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr3" active="0">
+		<event flypath="Sklad_cam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			TeamCreate("CARLISA",1042,CVector(1246.494, 306.831, 2600.509),{"LisaCar"})
+			
+			local vehLisa = GetEntityByName("CARLISA_vehicle_0")
+			if vehLisa then
+				vehLisa:setImmortalMode(1)
+				vehLisa:SetRotation(Quaternion(0.000, 0.987, -0.000, 0.161))
+				vehLisa:SetSkin(2)
+				vehLisa:SetExternalPathByName("LisaSklad_path")
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr4" active="0">
+		<event flypath="Sklad_cam4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local vehLisa = GetEntityByName("CARLISA_vehicle_0")
+			if vehLisa then
+				vehLisa:SetExternalPathByName("LisaSklad_path")
+				vehLisa:PlaceToEndOfPath("LisaSklad_path")
+				vehLisa:SetGamePositionOnGround( CVector(1305.011, 307.312, 2438.419))
+				vehLisa:SetRotation(Quaternion(-0.002, 0.707, 0.014, 0.707))
+			end
+			
+			CreateNewDummyObject( "dweller_lisa", "humLisa", -1, -1, CVector(1320.395, 306.932, 2440.048), Quaternion(0.0000, 0.9426, 0.0000, 0.3338), 0)
+			
+			getObj("humPlayer"):SetNodeAction(AT_STAND1)
+			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
+			
+			getObj("humLisa"):SetNodeAction(AT_STAND2)
+			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+			
+			AddCinematicMessage( 8813, 0.5 )
+			AddCinematicMessage( 8814, 0.1 )
+			AddCinematicMessage( 8815, 0.1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr_anim01" active="0">
+		<event msgid="8814" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
+			getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+			
+			getObj("humLisa"):SetNodeAction(AT_STAND1)
+			getObj("humLisa"):SetNextForAnimation(AT_STAND1, AT_STAND1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr_anim02" active="0">
+		<event msgid="8815" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			getObj("humPlayer"):SetNodeAction(AT_STAND1)
+			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
+			
+			getObj("humLisa"):SetNodeAction(AT_STAND2)
+			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr5" active="0">
+		<event flypath="Sklad_cam5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+			local humL = GetEntityByName("humLisa")
+			if humL then humL:Remove() end
+			
+			AddCinematicMessage( 8816, 1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr22" active="0">
+		<event flypath="Sklad_cam22" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			CreateNewDummyObject( "dweller_snowlisa", "humLisa", -1, -1, CVector(1321.277, 307.019, 2439.172), Quaternion(0.0000, -0.3007, 0.0000, 0.9537), 0)
+			
+			AddCinematicMessage( 8817, 1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdatr6" active="0">
+		<event flypath="Sklad_cam6" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local humL = GetEntityByName("humLisa")
+			if humL then humL:Remove() end
+			
+			AddCinematicMessage( 8818, 1 )
+			AddCinematicMessage( 8819, 0.1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikOdezhdaEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			StopPlayingCustomMusic()
+			
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+			local humL = GetEntityByName("humLisa")
+			if humL then humL:Remove() end
+			local vehLisa = GetEntityByName("CARLISA_vehicle_0")
+			if vehLisa then
+				vehLisa:Remove()
+			end
+			
+			TeamCreate("CARLISA1",1042,CVector(1305.011, 307.312, 2438.419),{"LisaCar"})
+			local vehLisa = GetEntityByName("CARLISA1_vehicle_0")
+			if vehLisa then
+				vehLisa:setImmortalMode(1)
+				vehLisa:SetRotation(Quaternion(-0.002, 0.707, 0.014, 0.707))
+				vehLisa:SetSkin(2)
+			end
+			
+			TActivate("LisaPrivz")
+			TActivate("ExplosRolikBegin")
+			TDeactivate("RolikOdezhdatr6")
+			TDeactivate("RolikOdezhdatr22")
+			TDeactivate("RolikOdezhdatr5")
+			TDeactivate("RolikOdezhdatr4")
+			TDeactivate("RolikOdezhdatr3")
+			TDeactivate("RolikOdezhdatr2")
+			TDeactivate("RolikOdezhdaFade")
+			TDeactivate("RolikOdezhdatr_anim01")
+			TDeactivate("RolikOdezhdatr_anim02")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ExplosRolikStart" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Passage03")
+			
+			local vehLisa = getObj("CARLISA1_vehicle_0")
+			if vehLisa then vehLisa:Remove() end
+			
+			Fly("Explos_cam1", CINEMATIC_NO_AIM, 0, 17, 1, 0 )
+			Fly("Explos_cam2", CINEMATIC_NO_AIM, 0, 29, 0, 1 )
+			StartCinematic()
+			
+			TActivate("ExplosRolikFade")
+			TActivate("ExplosRoliktr2")
+			TActivate("ExplosRolikEnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ExplosRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(2077.121, 257.819, 3543.385))
+				vehPlayer:SetRotation(Quaternion(-0.000, -0.798, -0.000, 0.603))
+			end
+			
+			AddCinematicMessage( 8820, 3 )
+			
+			TActivate("ExplosRolikPPath")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ExplosRoliktr2" active="0">
+		<event flypath="Explos_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("ExpGetaway_path")
+				vehPlayer:PlaceToEndOfPath("ExpGetaway_path")
+				vehPlayer:SetGamePositionOnGround( CVector(2104.918, 256.547, 3468.073))
+				vehPlayer:SetRotation(Quaternion(0.006, 0.255, 0.019, -0.967))
+			end
+			
+			TeamCreate("CARLISA2",1042,CVector(2121.931, 255.685, 3481.066),{"LisaCar"})
+			local vehLisa = GetEntityByName("CARLISA2_vehicle_0")
+			if vehLisa then
+				vehLisa:setImmortalMode(1)
+				vehLisa:SetRotation(Quaternion(-0.020, 0.267, 0.038, -0.963))
+				vehLisa:SetSkin(2)
+			end
+			
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(2112.765, 255.350, 3475.597), Quaternion(0.0000, -0.2440, 0.0000, 0.9698), 1)
+			CreateNewDummyObject( "dweller_snowlisa", "humLisa", -1, -1, CVector(2113.547, 255.350, 3476.084), Quaternion(0.0000, -0.2714, 0.0000, 0.9625), 0)
+			
+			getObj("humPlayer"):SetNodeAction(AT_STAND1)
+			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
+			
+			AddCinematicMessage( 8821, 5 )
+			AddCinematicMessage( 8822, 1 )
+			AddCinematicMessage( 8823, 1 )
+			
+			TActivate("ExplosRolikBoom")
+			TActivate("ExplosRolikDel")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ExplosRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			StopPlayingCustomMusic()
+			
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+			local humL = GetEntityByName("humLisa")
+			if humL then humL:Remove() end
+			local vehLisa = getObj("CARLISA2_vehicle_0")
+			if vehLisa then vehLisa:Remove() end
+			
+			TeamCreate("CARLISA1",1042,CVector(2121.931, 255.685, 3481.066),{"LisaCar"})
+			local vehLisa = GetEntityByName("CARLISA1_vehicle_0")
+			if vehLisa then
+				vehLisa:setImmortalMode(1)
+				vehLisa:SetSkin(2)
+			end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("ExpGetaway_path")
+				vehPlayer:PlaceToEndOfPath("ExpGetaway_path")
+			end
+			
+			local kam1 = GetEntityByName("kamexp1")
+			if kam1 then kam1:Remove() end
+			local kam2 = GetEntityByName("kamexp2")
+			if kam2 then kam2:Remove() end
+			local kam3 = GetEntityByName("kamexp3")
+			if kam3 then kam3:Remove() end
+			local kam4 = GetEntityByName("kamexp4")
+			if kam4 then kam4:Remove() end
+			
+			TActivate("LisaPrivz")
+			TActivate("triggerExitToMap16")
+			TDeactivate("ExplosRoliktr2")
+			TDeactivate("ExplosRolikPPath")
+			TDeactivate("ExplosRolikBoom")
+			TDeactivate("ExplosRolikDel")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="KSGRolikBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Passage03")
+			
+			Fly("KSGCamPath", CINEMATIC_NO_AIM, 0, 12, 1, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 8824, 1 )
+			
+			TActivate("KSGRolikFade")
+			TActivate("KSGRolikEnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="KSGRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1086.401, 307.650, 2259.887))
+				vehPlayer:SetRotation(Quaternion(-0.012, -0.148, -0.007, 0.989))
+			end
+			
+			TeamCreate("ArmiaTTSP",1010,CVector(1083.182, 308.385, 2288.191),{"BelazTSP", "TSPFighter", "tspfighter2"})
+			local tsp1 = GetEntityByName("ArmiaTTSP_vehicle_0")
+			if tsp1 then
+				tsp1:SetRotation(Quaternion(0.025, -0.997, 0.003, -0.068))
+			end
+			local tsp2 = GetEntityByName("ArmiaTTSP_vehicle_1")
+			if tsp2 then
+				tsp2:SetGamePositionOnGround( CVector(1069.780, 308.822, 2290.176))
+				tsp2:SetRotation(Quaternion(-0.052, -0.986, -0.000, -0.157))
+			end
+			local tsp3 = GetEntityByName("ArmiaTTSP_vehicle_2")
+			if tsp3 then
+				tsp3:SetGamePositionOnGround( CVector(1054.854, 311.288, 2287.232))
+				tsp3:SetRotation(Quaternion(-0.102, -0.975, 0.027, -0.195))
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="KSGRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			SetCameraBehindPlayerVehicle()
+			
+			SetTolerance(1100, 1084, RS_ENEMY)
+			SetTolerance(1100, 1010, RS_ALLY)
+			
+			TeamCreate("ArmiaRybakov",1084,CVector(1097.065, 307.341, 2576.101),{"OL_Belaz", "BrigadaCruiser", "AKF_Belaz2", "Cruiser01", "CoolBelaz_2"})
+			local tsp1 = GetEntityByName("ArmiaRybakov_vehicle_0")
+			if tsp1 then
+				tsp1:SetRotation(Quaternion(0.000, -1.000, 0.000, -0.030))
+			end
+			local tsp2 = GetEntityByName("ArmiaRybakov_vehicle_1")
+			if tsp2 then
+				tsp2:SetGamePositionOnGround( CVector(940.801, 306.818, 2479.519))
+				tsp2:SetRotation(Quaternion(-0.000, 0.023, -0.000, 1.000))
+			end
+			local tsp3 = GetEntityByName("ArmiaRybakov_vehicle_2")
+			if tsp3 then
+				tsp3:SetGamePositionOnGround( CVector(876.740, 306.820, 2510.758))
+				tsp3:SetRotation(Quaternion(-0.000, 0.766, 0.000, 0.643))
+			end
+			local tsp4 = GetEntityByName("ArmiaRybakov_vehicle_3")
+			if tsp4 then
+				tsp4:SetGamePositionOnGround( CVector(846.015, 306.817, 2600.914))
+				tsp4:SetRotation(Quaternion(-0.000, 0.794, -0.000, 0.607))
+			end
+			local tsp5 = GetEntityByName("ArmiaRybakov_vehicle_4")
+			if tsp5 then
+				tsp5:SetGamePositionOnGround( CVector(1170.192, 307.382, 2625.289))
+				tsp5:SetRotation(Quaternion(-0.001, -0.995, 0.007, -0.097))
+			end
+
+			TakeQuest("WaitTillEnd2")
+			
+			TActivate("ArmiaRybakovDIE")
+			
+			local newControllerId1 = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "TSPCont1"
+			}
+
+			local newControllerId2 = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "TSPCont2"
+			}
+
+			local newControllerId3 = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "TSPCont3"
+			}
+
+			local newController1 = GetEntityByID(newControllerId1)
+			local newController2 = GetEntityByID(newControllerId2)
+			local newController3 = GetEntityByID(newControllerId3)
+
+			local FVehicle1 = GetEntityByName("ArmiaTTSP_vehicle_0")
+			local FVehicle2 = GetEntityByName("ArmiaTTSP_vehicle_1")
+			local FVehicle3 = GetEntityByName("ArmiaTTSP_vehicle_2")
+
+			if newController1 and FVehicle1 then
+				newController1:setVehicleUnderControl(FVehicle1)
+			end
+			
+			if newController2 and FVehicle2 then
+				newController2:setVehicleUnderControl(FVehicle2)
+			end
+			
+			if newController3 and FVehicle3 then
+				newController3:setVehicleUnderControl(FVehicle3)
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Возвращаемся из Лидденклауда -->
+	<trigger Name="ChehlyRolikBegin" active="1">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if QuestStatus("GoBackToHel_Quest")==Q_TAKEN then
+			
+				SaveAllToleranceStatus(RS_NEUTRAL)
+				if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
+					Fly("ChehlyCamPath", CINEMATIC_NO_AIM, 0, 37, 1, 1 )
+					StartCinematic()
+			
+					AddCinematicMessage( 8826, 5 )
+					AddCinematicMessage( 8827, 0.1 )
+					AddCinematicMessage( 8832, 0.1 )
+				else
+					Fly("ChehlyCamPath", CINEMATIC_NO_AIM, 0, 30, 1, 1 )
+					StartCinematic()
+			
+					AddCinematicMessage( 8826, 5 )
+					AddCinematicMessage( 8827, 0.1 )
+				end
+				
+				TActivate("ChehlyRolikFade")
+				TActivate("ChehlyRolikEnd")
+				
+				trigger:Deactivate()
+			end
+
+		</script>
+	</trigger>
+
+	<trigger Name="ChehlyRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(2078.772, 257.824, 3520.836))
+				vehPlayer:SetRotation(Quaternion(0.000, -0.973, -0.000, -0.231))
+				vehPlayer:SetExternalPathByName("Chehly_path")
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ChehlyRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			SetCameraBehindPlayerVehicle()
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetExternalPathByName("Chehly_path")
+				vehPlayer:PlaceToEndOfPath("Chehly_path")
+				vehPlayer:SetGamePositionOnGround( CVector(2130.926, 254.631, 3392.508))
+				vehPlayer:SetRotation(Quaternion(0.035, 0.965, -0.049, 0.256))
+			end
+			
+			CompleteQuest("GoBackToHel_Quest")
+			TakeQuest("Chehly_Quest")
+
+			if QuestStatus("GoBackWithoutDobr_Quest")==Q_COMPLETED then
+				TakeQuest("ToCordanToTikhomir_Quest")
+			end
+
+			if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
+				SetCoordinateForQuest( "d_chehol1" ,   CVector(getPos("ToR3M1")))
+				SetCoordinateForQuest( "RPGSigns_Quest2" ,   CVector(getPos("ToR3M1")))
+				SetCoordinateForQuest("ToCordanToTikhomir_Quest", CVector(getPos("FVCordan")))
+				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd01", 1010, CVector(2768.048, 225.238, 469.436), Quaternion(0.0000, -0.0502, 0.0000, 0.9987),0 )
+				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd02", 1010, CVector(2726.240, 226.044, 464.195), Quaternion(0.0000, -0.0545, 0.0000, 0.9985),0 )
+				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd03", 1010, CVector(2776.965, 226.000, 358.073), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),0 )
+				CreateNewBreakableObject( "heavy_dot3_vulcan","bbd04", 1010, CVector(2744.304, 226.000, 357.439), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),0 )
+				TDeactivate("trConv")
+				
+				if QuestStatus("RybakToOlm_Quest")==Q_COMPLETED then
+					TActivate("RrybakRoadStart")
+				end
+
+				local tikh = getObj("TikhomirInSorrow1")
+				if tikh then tikh:SetSpokenCount(1) end
+				
+				TeamCreate("BorderTSPGuards",1010,CVector(2763.220, 226.405, 485.677),{"MirotvorecShot", "MirotvorecShot"})
+				local bg1 = GetEntityByName("BorderTSPGuards_vehicle_0")
+				local bg2 = GetEntityByName("BorderTSPGuards_vehicle_1")
+				if bg1 then
+					bg1:SetRotation(Quaternion(0.016, 0.369, 0.049, -0.928))
+				end
+				if bg2 then
+					bg2:SetGamePositionOnGround( CVector(2719.322, 226.824, 475.123))
+					bg2:SetRotation(Quaternion(0.000, -0.152, -0.000, -0.988))
+				end
+			else
+				SetCoordinateForQuest( "d_chehol1" ,   CVector(getPos("ExitFromMap")))
+				SetCoordinateForQuest( "RPGSigns_Quest2" ,   CVector(getPos("ExitFromMap")))
+				SetCoordinateForQuest("ToCordanToTikhomir_Quest", CVector(getPos("TheOlme")))
+
+				local tikh = getObj("TikhomirInSorrow")
+				if tikh then tikh:SetSpokenCount(1) end
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Рыбак предупреждает нас о гневе ТСП -->
+	<trigger Name="RRRolikBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("IntenseDialogue02")
+			
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2496.719, 289.242, 2862.070), Quaternion(0, 0, 0, 0), 1)
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			local vehPlayer = GetPlayerVehicle()
+			local vehPID = vehPlayer:GetId()
+			
+			FlyLinked( "Boloto_cam02", CTochID, 8, 1, 1, vehPID )
+			StartCinematic()
+			
+			TActivate("RRRolikFade")
+			TActivate("RRRolikEnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RRRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(2437.636, 250.268, 2858.103))
+				vehPlayer:SetRotation(Quaternion(0.041, 0.985, 0.001, 0.170))
+				vehPlayer:SetExternalPathByName("Rrybak_path")
+			end
+			
+			CreateVehicleEx("Cruiser01","RybakTSP",CVector(2500.347, 249.714, 2675.743), 1010)
+			
+			local vehRyb = GetEntityByName("RybakTSP")
+			if vehRyb then
+				vehRyb:SetRotation(Quaternion(0.001, -0.168, -0.023, 0.985))
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RRRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			StopPlayingCustomMusic()
+			
+			SetCameraBehindPlayerVehicle()
+			
+			local vehRyb = GetEntityByName("RybakTSP")
+			if vehRyb then
+				vehRyb:Remove()
+			end
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetExternalPathByName("Rrybak_path")
+				vehPlayer:PlaceToEndOfPath("Rrybak_path")
+				vehPlayer:SetGamePositionOnGround( CVector(2497.386, 251.368, 2684.717))
+				vehPlayer:SetRotation(Quaternion(0.012, 0.993, -0.007, 0.118))
+			end
+			
+			local CToch = GetEntityByName("CamTochka")
+			if CToch then CToch:Remove() end
+			
+			StartConversation( "FVBerko_Bar_Customer2_1" )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Игрок утонул, так как начал пересекать болото неправильно. -->
+	<trigger Name="TE14Begin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Bio01")
+			
+			Fly("BolotoOF_cam01", CINEMATIC_NO_AIM, 0, 15, 1, 0 )
+			Fly("PlayerSinkCamPath", CINEMATIC_NO_AIM, 0, 15, 0, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 8829, 1 )
+			
+			TActivate("TE14Fade")
+			TActivate("TE14Cam2")
+			TActivate("TE14End")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TE14Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1382.870, 213.461, 1603.199))
+				vehPlayer:SetRotation(Quaternion(0.001, -0.642, 0.059, 0.764))
+				vehPlayer:setGodMode(1)
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TE14Cam2" active="0">
+		<event flypath="PlayerSinkCamPath" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("BolotoPlayerSink_path")
+			end
+			
+			AddCinematicMessage( 8830, 6 )
+			AddCinematicMessage( 8831, 3 )
+			
+			TActivate("MusicChangeTE14")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="MusicChangeTE14" active="0">
+		<event	timeout="5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			PlayCustomMusic("Death01")
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then vehPlayer:SetMaxSpeed(5) end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TE14End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			StopPlayingCustomMusic()
+			
+			SpawnMessageBox("5964")
+			
+			ShowDeathMenu()
+
+			TActivate("trBenDialogActivate")
+			
+			<!--Зачем тут это?	-->		
+			AllowSave( false )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PlaneRBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Bio01")
+			
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1812.758, 274.661, 921.081), Quaternion(0, 0, 0, 0), 1)
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			local vehP = GetPlayerVehicle()
+			local vehPID = vehP:GetId()
+			
+			FlyLinked( "linkedcam", CTochID, 15, 1, 0, vehPID )
+			Fly("PlaneRCam1", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			Fly("PlaneRCam2", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
+			StartCinematic()
+			
+			TActivate("PlaneRFade")
+			TActivate("trPlaneRCam1")
+			TActivate("trPlaneRCam2")
+			TActivate("PlaneRFakeEnd")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PlaneRFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1454.611, 226.078, 887.440))
+				vehPlayer:SetRotation(Quaternion(0.051, 0.717, 0.017, 0.695))
+				vehPlayer:SetExternalPathByName("PlaneRPath")
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trPlaneRCam1" active="0">
+		<event flypath="PlaneRCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("PlaneRPath")
+				vehPlayer:PlaceToEndOfPath("PlaneRPath")
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1919.897, 226.287, 842.535))
+				vehPlayer:SetRotation(Quaternion(0.004, 0.972, -0.005, -0.236))
+			end
+			
+			AddCinematicMessage( 8833, 1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trPlaneRCam2" active="0">
+		<event flypath="PlaneRCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			PlayCustomMusic("Bio04")
+
+			AddCinematicMessage( 8834, 1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PlaneRFakeEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			SpawnMessageBox( "8837" )
+			SpawnMessageBox( "8838" )
+			SpawnMessageBox( "8839" )
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("PlaneRPath")
+				vehPlayer:PlaceToEndOfPath("PlaneRPath")
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1919.897, 226.287, 842.535))
+				vehPlayer:SetRotation(Quaternion(0.004, 0.972, -0.005, -0.236))
+			end
+			
+			TDeactivate("PlaneRFade")
+			TDeactivate("trPlaneRCam1")
+			TDeactivate("trPlaneRCam2")
+			
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(1931.120, 223.148, 807.612), Quaternion(0.0000, -0.6191, 0.0000, -0.7853), 0)
+			CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(1926.493, 223.245, 806.458), Quaternion(0.0000, 0.5446, 0.0000, 0.8387), 0)
+			
+			Fly("PlaneRCam3", CINEMATIC_NO_AIM, 0, 12, 0, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 8835, 1 )
+			AddCinematicMessage( 8836, 1 )
+			
+			TActivate("PlaneREnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PlaneREnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			SetCameraBehindPlayerVehicle()
+			
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+			
+			local humA = GetEntityByName("humAiven")
+			if humA then humA:Remove() end
+			
+			local CToch = GetEntityByName("CamTochka")
+			if CToch then CToch:Remove() end
+
+			for i = 0,1 do
+				local bguard = getObj("BorderTSPGuards_vehicle_"..i)
+				if bguard then bguard:Remove() end
+			end
+			
+			AddBook("r1_book_rapid_evolution")
+			
+			StartConversation("AivenGo1")
+			
+			TActivate("RTMRolikStart")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RTMRolikBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			SetWeather(0)
+			
+			SetGameTime(21,0)
+			
+			PlayCustomMusic("QuietDialogue05")
+			
+			Fly("RTMRolikCam1", CINEMATIC_NO_AIM, 0, 20, 1, 0 )
+			Fly("RTMRolikCam2", CINEMATIC_NO_AIM, 0, 89, 0, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 8840, 1 )
+			AddCinematicMessage( 8841, 3 )
+			AddCinematicMessage( 8842, 0.1 )
+			
+			TActivate("RTMRolikFade")
+			TActivate("trRTMRolikCam2")
+			TActivate("RTMRolikPreTitry")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RTMRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(2746.371, 216.829, 3676.088))
+				vehPlayer:SetRotation(Quaternion(0.000, 0.059, 0.000, -0.998))
+			end
+			
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(3499.438, 208.849, 3717.341), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(3498.197, 208.839, 3717.372), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trRTMRolikCam2" active="0">
+		<event flypath="RTMRolikCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 8843, 0.1 )
+			AddCinematicMessage( 8844, 0.1 )
+			AddCinematicMessage( 8845, 0.1 )
+			AddCinematicMessage( 8846, 0.1 )
+			AddCinematicMessage( 8847, 0.1 )
+			AddCinematicMessage( 8848, 0.1 )
+			AddCinematicMessage( 8849, 0.1 )
+			AddCinematicMessage( 8850, 0.1 )
+			AddCinematicMessage( 8851, 0.1 )
+			AddCinematicMessage( 8852, 1 )
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RTMRolikPreTitry" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>			
+			PlayCustomMusic("SpecEndSong")
+
+			Fly("start_game", CINEMATIC_NO_AIM, 0, 386, 0, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 5971, 0)
+			AddCinematicMessage( 5968, 0.1)
+			AddCinematicMessage( 5969, 0.1)
+			AddCinematicMessage( 5970, 0.1)
+
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+			
+			local humA = GetEntityByName("humAiven")
+			if humA then humA:Remove() end
+
+			CreateNewDummyObject( "clothes_player", "odezhPlayer", -1, -1, CVector(3498.535, 208.600, 3692.388), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(3498.612, 208.500, 3690.932), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+
+			TActivate("RTMRolikEnd")
+			TActivate("RTMRolikSkip")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RTMRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+
+			PlayCustomMusic("QuietDialogue01")
+
+			Fly("AivenSonClothes", CINEMATIC_NO_AIM, 0, 35, 0, 1 )
+			StartCinematic()
+
+			TActivate("RTMRolikRealEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+	<trigger Name="RTMRolikSkip" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+			local oPl = GetEntityByName("odezhPlayer")
+			if oPl then oPl:Remove() end
+			local oAiv = GetEntityByName("humAiven")
+			if oAiv then oAiv:Remove() end
+
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			SpawnMessageBox("5972")
+
+			ShowDeathMenu()
+
+			TActivate("trBenDialogActivate")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RTMRolikRealEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+			local oPl = GetEntityByName("odezhPlayer")
+			if oPl then oPl:Remove() end
+			local oAiv = GetEntityByName("humAiven")
+			if oAiv then oAiv:Remove() end
+
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			SpawnMessageBox("5963")
+
+			ShowDeathMenu()
+
+			TActivate("trBenDialogActivate")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+</triggers>

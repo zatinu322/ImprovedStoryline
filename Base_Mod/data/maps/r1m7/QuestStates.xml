@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<!--
+‘®бв®п­ЁҐ ЄўҐбв®ў: ­Ґ®Ўе®¤Ё¬® ў ®б­®ў­®¬ ¤«п вҐбвЁа®ў ­Ёп.
+‡ ¤ ­­лҐ б®бв®п­Ёп гбв ­ ў«Ёў овмбп ЄўҐбвг ба §г Ї®б«Ґ § Јаг§ЄЁ Є авл.
+ЏаЁ¬Ґа:
+
+	<quest Name="r4m1_FindNative" CanBeGiven="1" IsTaken="1" CompleteStatus="not_complete" />
+-->
+<quests>
+
+</quests>

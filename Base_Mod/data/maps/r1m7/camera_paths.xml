@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+
+<Paths>
+
+	<Path Name = "poezdPrPath">
+		<Point  coord="3343.139 255.000 2023.689" rotation="0.0000 -0.7475 0.0000 0.6643"/>   
+	</Path>
+
+	<Path Name = "poezdUePath">
+		<Point  coord="3492.906 255.000 2039.886" rotation="0.0000 -0.7475 0.0000 0.6643"/>   
+	</Path>
+
+	<Path Name = "NachRolikCam1">
+		<Point  coord="3396.428 258.656 2014.710" rotation="-0.011 -0.782 0.014 0.623"/>
+		<Point  coord="3396.699 258.751 2010.257" rotation="-0.070 -0.288 0.021 0.955"/>
+	</Path>
+
+	<Path Name = "NachRolikCam2">
+		<Point  coord="3401.499 258.652 2012.468" rotation="-0.027 0.656 -0.024 0.754"/>
+		<Point  coord="3400.191 258.831 2016.625" rotation="-0.016 0.981 -0.089 0.172"/>
+	</Path>
+
+	<Path Name = "NachRolikCam3">
+		<Point  coord="3161.382 287.838 2116.725" rotation="-0.085 -0.690 0.082 0.714"/>
+		<Point  coord="3161.830 287.751 2114.381" rotation="-0.083 -0.687 0.080 0.717"/>
+	</Path>
+
+	<Path Name = "NachRolikCam4">
+		<Point  coord="3525.198 411.213 1691.238" rotation="-0.117 0.457 -0.061 0.880"/>
+		<Point  coord="3527.972 411.213 1695.180" rotation="-0.117 0.457 -0.061 0.880"/>
+	</Path>
+
+	<Path Name = "NachRolikCam5">
+		<Point  coord="3250.038 260.177 2127.297" rotation="0.025 0.893 -0.050 -0.447"/>
+		<Point  coord="3246.198 260.177 2114.641" rotation="-0.045 -0.684 0.042 0.727"/>
+		<Point  coord="3256.061 260.177 2100.835" rotation="-0.054 -0.260 0.014 0.964"/>
+	</Path>
+
+	<Path Name = "NachRolikCam6">
+		<Point  coord="3165.643 287.385 2114.739" rotation="-0.010 0.484 -0.006 0.875"/>
+		<Point  coord="3165.802 287.385 2116.682" rotation="-0.000 0.853 -0.000 0.522"/>
+	</Path>
+
+	<Path Name = "KonRolikCam1">
+		<Point  coord="1444.892 256.818 2043.365" rotation="0.022 0.004 0.000 1.000"/>
+		<Point  coord="1447.591 256.818 2043.780" rotation="0.000 0.234 0.000 0.972"/>
+	</Path>
+
+	<Path Name = "KonRolikCam2">
+		<Point  coord="3539.147 260.081 2015.245" rotation="-0.000 0.668 -0.000 0.744"/>
+		<Point  coord="3539.972 260.081 2033.528" rotation="-0.003 0.685 -0.003 0.729"/>
+	</Path>
+
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
+	<Path Name = "linkedcam1">
+		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
+</Paths>

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<DynamicScene
+	LastId="89">
+	<TargetNamesForDestroy
+		Names="" />
+
+	<Object
+		Name="Player1"
+		Belong="1100"
+		Prototype="player">
+		<Object
+			Name="MyCar"
+			Belong="1100"
+			Prototype="LabirintUral"
+			Pos="3416.932 257.481 2068.385"
+			Rot="0.000 -0.800 0.000 0.600"
+			Skin="2">
+			<Parts />
+
+			<Repository />
+		</Object>
+	</Object>
+
+	<Object
+		Name="Priezd_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3416.932 255.000 2068.385"
+		Radius="30.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="Explos_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3068.088 255.000 2114.715"
+		Radius="41.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="LabExit_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1485.498 255.000 2191.299"
+		Radius="30.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="PetrolStationTown1"
+		Belong="1080"
+		Prototype="PetrolStationTown"
+		Pos="3399.963 255.000 2054.784"
+		Rot="0.000 -0.039 0.000 0.999"
+		MaxDefenders="0"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravansDest="">
+		<Object
+			Flags="21"
+			Name="PetrolStationTown86_enter"
+			Belong="1080"
+			Prototype="genericLocation"
+			Pos="3419.432 255.000 2052.278"
+			Rot="0.000 0.653 0.000 -0.758"
+			Radius="30.000" />
+
+		<Object
+			Name="PetrolStationTown1_Workshop"
+			Belong="1080"
+			Prototype="workshop" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="elka1snow0"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3304.554 255.000 1956.466" />
+
+	<Object
+		Name="elka1snow1"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3271.750 255.000 2054.138" />
+
+	<Object
+		Name="elka1snow2"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3283.514 255.000 1975.824" />
+
+	<Object
+		Name="elka1snow3"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3296.722 255.000 1883.824" />
+
+	<Object
+		Name="elka1snow4"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3271.181 255.000 1936.204" />
+
+	<Object
+		Name="elka1snow5"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3229.195 255.000 1915.708" />
+
+	<Object
+		Name="elka1snow6"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3229.008 255.000 1962.414" />
+
+	<Object
+		Name="elka1snow7"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3269.359 255.000 1973.195" />
+
+	<Object
+		Name="elka1snow8"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3291.409 255.000 1996.796" />
+
+	<Object
+		Name="elka1snow9"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3241.595 255.000 1991.237" />
+
+	<Object
+		Name="elka1snow10"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3227.497 255.000 2016.146" />
+
+	<Object
+		Name="elka1snow11"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3276.235 255.015 1828.861" />
+
+	<Object
+		Name="elka1snow12"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3258.936 255.000 1778.463" />
+
+	<Object
+		Name="elka1snow13"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3269.712 255.000 1897.742" />
+
+	<Object
+		Name="elka1snow14"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3220.648 255.000 1858.133" />
+
+	<Object
+		Name="elka1snow15"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3235.835 255.000 1758.140" />
+
+	<Object
+		Name="elka1snow16"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3252.396 255.000 1842.505" />
+
+	<Object
+		Name="elka1snow17"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3223.747 255.000 1891.663" />
+
+	<Object
+		Name="elka1snow18"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3213.657 255.000 1950.672" />
+
+	<Object
+		Name="elka1snow19"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3218.066 255.000 1800.411" />
+
+	<Object
+		Name="elka1snow20"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3238.900 255.000 1899.741" />
+
+	<Object
+		Name="elka1snow21"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3392.905 255.000 1919.767" />
+
+	<Object
+		Name="elka1snow22"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3338.405 255.000 1909.157" />
+
+	<Object
+		Name="elka1snow23"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3362.001 255.000 1912.076" />
+
+	<Object
+		Name="elka1snow24"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3402.749 255.000 1952.785" />
+
+	<Object
+		Name="elka1snow25"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3372.218 255.000 1948.180" />
+
+	<Object
+		Name="elka1snow26"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3397.454 255.000 1969.145" />
+
+	<Object
+		Name="elka1snow27"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3340.646 255.000 1937.576" />
+
+	<Object
+		Name="elka1snow28"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3353.206 255.000 1961.283" />
+
+	<Object
+		Name="elka1snow29"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3322.460 255.000 1972.152" />
+
+	<Object
+		Name="elka1snow30"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3316.534 255.000 1910.497" />
+
+	<Object
+		Name="elka1snow31"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3253.701 255.000 1963.515" />
+
+	<Object
+		Name="elka1snow32"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3234.290 255.000 2142.657" />
+
+	<Object
+		Name="elka1snow33"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3255.961 255.000 2082.675" />
+
+	<Object
+		Name="elka1snow34"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3315.200 255.000 2052.800" />
+
+	<Object
+		Name="elka1snow35"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3368.194 255.000 2048.235" />
+
+	<Object
+		Name="elka1snow36"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3384.958 255.000 2067.010" />
+
+	<Object
+		Name="elka1snow37"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3380.996 256.630 2091.902" />
+
+	<Object
+		Name="elka1snow38"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3346.157 255.178 2070.663" />
+
+	<Object
+		Name="elka1snow39"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3274.982 255.000 2077.306" />
+
+	<Object
+		Name="elka1snow40"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3213.852 255.000 2039.898" />
+
+	<Object
+		Name="elka1snow41"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3292.060 255.000 1929.898" />
+
+	<Object
+		Name="elka1snow42"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3656.646 255.000 2102.968" />
+
+	<Object
+		Name="elka1snow43"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3774.036 255.000 2063.027" />
+
+	<Object
+		Name="elka1snow44"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3655.616 255.000 2083.839" />
+
+	<Object
+		Name="elka1snow45"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3574.829 255.000 2072.465" />
+
+	<Object
+		Name="elka1snow46"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3579.762 255.431 2096.676" />
+
+	<Object
+		Name="elka1snow47"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3616.198 258.540 2127.725" />
+
+	<Object
+		Name="elka1snow48"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3633.038 255.000 2072.685" />
+
+	<Object
+		Name="elka1snow49"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3754.470 255.000 2077.614" />
+
+	<Object
+		Name="elka1snow50"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3827.783 253.161 1934.261" />
+
+	<Object
+		Name="elka1snow51"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3664.450 255.012 1986.895" />
+
+	<Object
+		Name="elka1snow52"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3742.505 255.003 2000.245" />
+
+	<Object
+		Name="elka1snow53"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3861.423 251.849 1940.399" />
+
+	<Object
+		Name="elka1snow54"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3867.181 254.025 1975.736" />
+
+	<Object
+		Name="elka1snow55"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3890.990 255.302 2021.955" />
+
+	<Object
+		Name="elka1snow56"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3702.454 255.000 2010.499" />
+
+	<Object
+		Name="elka1snow57"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3633.062 255.155 1967.415" />
+
+	<Object
+		Name="elka1snow58"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3669.376 255.003 2008.420" />
+
+	<Object
+		Name="elka1snow59"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3589.340 255.020 2003.432" />
+
+	<Object
+		Name="elka1snow60"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3538.156 255.001 2004.991" />
+
+	<Object
+		Name="elka1snow61"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3591.116 255.887 1962.274" />
+
+	<Object
+		Name="elka1snow62"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3629.514 255.017 2010.960" />
+
+	<Object
+		Name="elka1snow63"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3544.046 255.000 2060.199" />
+
+	<Object
+		Name="elka1snow64"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3558.768 255.000 2087.977" />
+
+	<Object
+		Name="elka1snow65"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3630.174 255.000 2103.642" />
+
+	<Object
+		Name="elka1snow66"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3729.439 255.000 2067.362" />
+
+	<Object
+		Name="elka1snow67"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3720.609 256.428 2115.207" />
+
+	<Object
+		Name="elka1snow68"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3799.025 255.763 2092.913" />
+
+	<Object
+		Name="elka1snow69"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3821.415 255.302 2081.287" />
+
+	<Object
+		Name="elka1snow70"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3787.752 254.976 1980.011" />
+
+	<Object
+		Name="elka1snow71"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3839.369 254.985 2037.931" />
+
+	<Object
+		Name="elka1snow72"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3875.598 255.253 2046.318" />
+
+	<Object
+		Name="elka1snow73"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3683.047 255.000 2060.846" />
+
+	<Object
+		Name="elka1snow74"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3571.686 255.004 2009.207" />
+
+	<Object
+		Name="elka1snow75"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3492.857 257.324 2003.860" />
+
+	<Object
+		Name="elka1snow76"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3954.196 259.224 1987.286" />
+
+	<Object
+		Name="elka1snow77"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3922.486 251.870 1943.066" />
+
+	<Object
+		Name="elka1snow78"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3958.346 255.087 1925.208" />
+
+	<Object
+		Name="elka1snow79"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3919.509 255.448 2005.085" />
+
+	<Object
+		Name="elka1snow80"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3912.261 261.890 2043.411" />
+
+	<Object
+		Name="elka1snow81"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3860.376 255.000 2063.721" />
+
+	<Object
+		Name="elka1snow82"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3802.251 254.997 2045.286" />
+
+	<Object
+		Name="elka1snow83"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3826.723 254.472 1974.222" />
+
+	<Object
+		Name="elka1snow84"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3903.285 255.148 1880.456" />
+
+	<Object
+		Name="elka1snow85"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3965.181 256.866 1843.543" />
+
+	<Object
+		Name="elka1snow86"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3891.562 250.410 1932.836" />
+
+	<Object
+		Name="elka1snow87"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3510.289 255.000 2062.594" />
+
+	<Object
+		Name="elka1snow88"
+		Belong="-1"
+		Prototype="Breakable_Elka1snow"
+		Pos="3465.570 255.000 2015.057" />
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
+</DynamicScene>

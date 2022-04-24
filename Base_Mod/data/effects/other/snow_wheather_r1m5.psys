@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<PSEditor>
+	<PS
+		Name="fire_2_3"
+		Class="Quad">
+		<Emitter
+			ParticleAgeMin="5.000"
+			ParticleAgeMax="5.000"
+			MaxParticles="50"
+			EmitAtPeriod="50.000"
+			Phase="0.000"
+			EmitLength="1.000"
+			RepeatPeriod="1.000"
+			ResetTime="100000000.000"
+			LocalStop="0"
+			StopTime="0.000"
+			PhaseMax="0.000" />
+
+		<Force
+			Min="500.000 20.000 500.000"
+			Max="-500.000 30.000 -500.000"
+			Type="box"
+			PosMin="0.000 0.000 0.000"
+			PosMax="0.000 0.000 0.000" />
+
+		<Mesh
+			Enable="0"
+			Points="0"
+			Radius="5.000"
+			Point1="0.000 0.000 0.000"
+			Point2="0.000 0.000 0.000"
+			Forv="1"
+			Back="0" />
+
+		<Keys>
+			<Color
+				k:0="15462908"
+				k:1="-1"
+				k:2="-1292700161"
+				k:3="-1"
+				k:4="-1"
+				k:5="-1"
+				k:6="-1"
+				k:7="-1"
+				k:8="-1"
+				k:9="-1"
+				k:10="-1"
+				k:11="-1"
+				k:12="-1"
+				k:13="-1"
+				k:14="-1"
+				k:15="-1"
+				k:16="-1"
+				k:17="-1"
+				k:18="-1"
+				k:19="8620696" />
+
+			<Size
+				k:0="0.000"
+				k:1="0.099"
+				k:2="0.198"
+				k:3="0.149"
+				k:4="0.198"
+				k:5="0.149"
+				k:6="0.149"
+				k:7="0.149"
+				k:8="0.149"
+				k:9="0.149"
+				k:10="0.149"
+				k:11="0.149"
+				k:12="0.149"
+				k:13="0.000"
+				k:14="0.050"
+				k:15="0.050"
+				k:16="0.149"
+				k:17="0.149"
+				k:18="0.050"
+				k:19="0.000" />
+		</Keys>
+
+		<Render
+			TrailLen="10"
+			ScaleParts="0.300"
+			BlendMode="1"
+			UpdateXForm="0"
+			SpriteAngle="0.000"
+			Orient="1"
+			Texture="data\fx\snow1.tga"
+			Weather="1"
+			TexTiling="0"
+			ParentDependency="0.000"
+			ShaderType="0" />
+
+		<Attr
+			Name="SA_2"
+			Class="Space">
+			<Emitter
+				SystemMode="cart"
+				FuncMode="rnd"
+				WorkMode="vel"
+				PeriodX="2.000"
+				PeriodY="2.000"
+				PeriodZ="2.000"
+				Phase="0.000"
+				EmitLength="1.000"
+				RepeatPeriod="1.000"
+				TimeMode="global"
+				EmitterOn="0" />
+
+			<Force
+				Min="-2.000 -20.000 -2.000"
+				Max="2.000 -15.000 2.000" />
+		</Attr>
+	</PS>
+</PSEditor>

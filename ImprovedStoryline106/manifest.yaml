@@ -1,0 +1,37 @@
+# unique service name
+name: ImprovedStoryline106
+
+# required human readable info
+display_name: Improved Storyline
+version: "1.0.6"
+build: "220422"
+description: |
+  TBD
+authors: pavlikrpg
+
+# optional human readable info
+release_date: TBD
+language: ru
+link: TBD
+
+# installation confguration
+prerequisites: 
+  - name: community_patch
+    versions:
+      - "1.11"
+    optional_content: []
+patcher_version_requirement: "1.11"
+no_base_content: false
+optional_content:
+  - name: Icons
+    display_name: Иконки
+    description: |
+      TBD
+  - name: KrayCity
+    display_name: Крайсити рот его ебать
+    description: |
+      TBD
+  - name: Snowfall
+    display_name: Снегопад хули
+    description: |
+      TBD

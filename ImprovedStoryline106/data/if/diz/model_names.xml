@@ -4,7 +4,7 @@
 	<Item
 		id="cooling_system_guns"
 		locForm="0"
-		value="Водяная система охлаждения  для огнестрельного оружия" />
+		value="Водяная система охлаждения для огнестрельного оружия" />
 
 	<Item
 		id="cooling_system_energy"
@@ -234,7 +234,7 @@
 	<Item
 		id="fuel"
 		locForm="0"
-		value="Топливо" />
+		value="Горючее" />
 
 	<Item
 		id="machinery"
@@ -424,7 +424,7 @@
 	<Item
 		id="minePusher"
 		locForm="0"
-		value="Еж-1" />
+		value="Ёж-1" />
 
 	<Item
 		id="cyclops01"
@@ -639,7 +639,7 @@
 	<Item
 		id="MolokovozCargo04"
 		locForm="0"
-		value="Болт с прицепом" />
+		value="Бокс с прицепом" />
 
 	<Item
 		id="mirotvorecCab01"
@@ -864,7 +864,7 @@
 	<Item
 		id="minePusher_1"
 		locForm="0"
-		value="Еж-2" />
+		value="Ёж-2" />
 
 	<Item
 		id="minePusher_2"
@@ -947,6 +947,11 @@
 		value="Охотник" />
 
 	<Item
+		id="ScoutEnemySpawn"
+		locForm="0"
+		value="Скаут" />
+
+	<Item
 		id="Scout01"
 		locForm="0"
 		value="Скаут" />
@@ -967,6 +972,11 @@
 		value="Скаут GT" />
 
 	<Item
+		id="FighterEnemySpawn"
+		locForm="0"
+		value="Боец" />
+
+	<Item
 		id="SeraFighter01"
 		locForm="0"
 		value="Серафима" />
@@ -982,6 +992,11 @@
 		value="Боец" />
 
 	<Item
+		id="HunterEnemySpawn"
+		locForm="0"
+		value="Охотник" />
+
+	<Item
 		id="Hunter01"
 		locForm="0"
 		value="Охотник" />
@@ -990,6 +1005,11 @@
 		id="Hunter02"
 		locForm="0"
 		value="Охотник" />
+
+	<Item
+		id="CruiserEnemySpawn"
+		locForm="0"
+		value="Крейсер" />
 
 	<Item
 		id="Cruiser01"
@@ -1010,6 +1030,11 @@
 		id="CruiserTest02"
 		locForm="0"
 		value="Крейсер" />
+
+	<Item
+		id="DozerEnemySpawn"
+		locForm="0"
+		value="Бульдозер" />
 
 	<Item
 		id="Dozer01"
@@ -1233,6 +1258,26 @@
 
 	<Item
 		id="Sml401"
+		locForm="0"
+		value="Кузнечик" />
+
+	<Item
+		id="Sml1EnemySpawn"
+		locForm="0"
+		value="Клоп" />
+
+	<Item
+		id="Sml2EnemySpawn"
+		locForm="0"
+		value="Таракан" />
+		
+	<Item
+		id="Sml3EnemySpawn"
+		locForm="0"
+		value="Муравей" />
+
+	<Item
+		id="Sml4EnemySpawn"
 		locForm="0"
 		value="Кузнечик" />
 
@@ -1590,7 +1635,7 @@
 	<Item
 		id="r1m1_CaravanBug02"
 		locForm="0"
-		value="Вэн" />
+		value="Транспорт" />
 
 	<Item
 		id="r1m1_CaravanBug01"
@@ -1844,27 +1889,27 @@
 
 	<Item
 		id="hunterCab01"
-		locForm="0"
+		locForm="1"
 		value="Кабина Охотника" />
 
 	<Item
 		id="hunterCab02"
-		locForm="0"
+		locForm="1"
 		value="Кабина Охотника" />
 
 	<Item
 		id="fighterCab01"
-		locForm="0"
+		locForm="1"
 		value="Кабина Бойца" />
 
 	<Item
 		id="fighterCab02"
-		locForm="0"
+		locForm="1"
 		value="Кабина Бойца" />
 
 	<Item
 		id="arcadescoutCab"
-		locForm="0"
+		locForm="1"
 		value="Кабина Вездеходного скаута" />
 
 	<Item
@@ -1874,14 +1919,24 @@
 
 	<Item
 		id="cruiserCab01"
-		locForm="0"
+		locForm="1"
 		value="Кабина Крейсера" />
 
 	<Item
 		id="cruiserCab02"
-		locForm="0"
+		locForm="1"
 		value="Кабина Крейсера" />
 
+	<Item
+		id="cruiserCargo01"
+		locForm="0"
+		value="Кузов Крейсера" />
+
+	<Item
+		id="cruiserCargo02"
+		locForm="0"
+		value="Кузов Крейсера" />
+		
 	<Item
 		id="Smoke"
 		locForm="0"

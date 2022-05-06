@@ -92,6 +92,12 @@ function GiveVehicle(num)
 	AddPlayerVehicle(model)
 end
 
+function ShowMap()
+	local mapsize = GET_GLOBAL_OBJECT( "CurrentLevel" ):GetLandSize() * 128
+	local mapname = GET_GLOBAL_OBJECT( "CurrentLevel" ):GetLevelName()
+	ShowRectOnMinimap(mapname, 1, 1, mapsize, mapsize)
+end
+
 --Для Бунакова :)
 
 function god (md)
@@ -133,6 +139,19 @@ function teleport ()
 	MovePlayerToCamera()
 end
 
+function tp ()
+	teleport()
+end
+
+function yaohuel ()
+	if testcheat()~=1 then return end
+	GetPlayerVehicle():AddItemsToRepository("add_damage_guns_and_grouping_angle_guns", 2)
+	GetPlayerVehicle():AddItemsToRepository("firing_rate_guns_and_add_damage_guns", 2)
+	GetPlayerVehicle():AddItemsToRepository("add_stability_and_speed2", 4)
+	GetPlayerVehicle():AddItemsToRepository("additional_durability3", 4)
+	GetPlayerVehicle():AddItemsToRepository("someTurboAccelerationPusher", 1)
+end
+
 function cab (num)
 	if testcheat()~=1 then return end
    local number=1
@@ -161,8 +180,8 @@ function giveguns ()
 				local slots={"SMALL_","BIG_","GIANT_","SIDE_"}
 				local guns={"GUN","GUN_0","GUN_1","GUN_2"}
 				local smallgun={"hornet01","specter01","pkt01","kord01","maxim01","storm01","fagot01"}
-				local biggun={"rapier01","vector01","vulcan01","flag01","kpvt01","rainmetal01","elephant01","odin01","bumblebee01","omega01"}
-				local giantgun={"cyclops01","octopus01","hurricane01","rocketLauncher","big_swingfire01"}
+				local biggun={"rapier01","vector01","vulcan01","flag01","kpvt01","rainmetal01","elephant01","odin01","bumblebee01","omega01","hurricane01"}
+				local giantgun={"cyclops01","octopus01","rocketLauncher","big_swingfire01"}
 				local sidegun={"hailSideGun","marsSideGun","zeusSideGun","hunterSideGun"}
 				local i,j,k=1,1,1
 				while parts[i] do
@@ -174,9 +193,9 @@ function giveguns ()
 							if j==1 then
 								gun=smallgun[random(7)]
 							elseif j==2 then
-								gun=biggun[random(10)]
+								gun=biggun[random(11)]
 							elseif j==3 then
-								gun=giantgun[random(5)]
+								gun=giantgun[random(4)]
 							elseif j==4 then
 								gun=sidegun[random(4)]
 							end
@@ -216,10 +235,16 @@ function OpenEncyclopaedia()
 	Journal:ShowAllInEncyclopaedia()
 end
 
-function ShowMap()
-	local mapsize = GET_GLOBAL_OBJECT( "CurrentLevel" ):GetLandSize() * 128
-	local mapname = GET_GLOBAL_OBJECT( "CurrentLevel" ):GetLevelName()
-	ShowRectOnMinimap(mapname, 1, 1, mapsize, mapsize)
+function mir(md)
+	if md == nil then
+		md = 0
+	end
+
+	if md == 1 then
+		SaveAllToleranceStatus(RS_ALLY)
+	elseif md ~= 1 then
+		RestoreAllToleranceStatus()
+	end
 end
 
 function testcheat()

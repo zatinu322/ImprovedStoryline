@@ -148,6 +148,7 @@ function SetVar(Name, Value)
 	end
 end
 
+
 function GetVar(Name)
 	local trig1 = GetEntityByName("GlobalVar")
 	if trig1 then 
@@ -182,7 +183,7 @@ function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPan
 	WaitWhenStop, InterpolateFromPrevious )
 	
 	local cinematic = GetCinematic()
-	-- RuleConsole("FogOfWar 0")	
+--	RuleConsole("FogOfWar 0")	
 
 	SetCinematicFadeParams( StartFade, EndFade )
 
@@ -221,7 +222,7 @@ function FlyAround( Phi, Theta, Radius, PlayTime, curPos, Id, StartFade, EndFade
 	WaitWhenStop, InterpolateFromPrevious )
 	
 	local cinematic = GetCinematic()
-	-- RuleConsole("FogOfWar 0")
+--	RuleConsole("FogOfWar 0")
 
 	SetCinematicFadeParams( StartFade, EndFade )
 	
@@ -256,7 +257,7 @@ function Fly( PathName, AimType, Target, Time, StartFade, EndFade, VisPanel,
 	WaitWhenStop, InterpolateFromPrevious )
 	
 	local cinematic = GetCinematic()
-	-- RuleConsole("FogOfWar 0")
+--	RuleConsole("FogOfWar 0")
 
 	if not cinematic then
 		println( "Error: couldn't get cinematic" )
@@ -329,7 +330,7 @@ function StartCinematic()
 	UpdateCinematic( 0 ) -- by Anton: don't touch this!
 
 	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
+	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP_MSG" )
 end
 
 -- Подготавливает игру к проигрыванию скриптового ролика
@@ -1080,6 +1081,35 @@ function GenerateRandomAffixList(CountAffixes, ClassAffixes)
 	return listaff
 end
 
+function CreateRandomAffixesForGun(CountAffixes)
+	local affixList = { }
+	if CountAffixes ~= nil and CountAffixes > 0 then
+		if CountAffixes > 2 then
+			CountAffixes = 2
+		end
+		local affixes = {{{ "useless_gun", "rusty_gun" },
+						{ "excellent_gun", "advanced_gun" }},
+						{{ "slow_gun", "weak_gun" },
+						{ "assault_gun", "rapid_firing_gun", "deadly_gun", "destructive_gun" }},
+						{{ "with_truncated_barrel_gun", "without_sight_gun", "without_cooling_gun" },
+						{ "with_enlarged_barrel_gun", "with_long_barrel_gun", "with_laser_sight_gun","with_electric_sight_gun", "with_water_cooling_gun", "with_nitro_cooling_gun" }}}
+		affixTypes = { random(1, 3), random(1, 3) }
+		if affixTypes[1] == affixTypes[2] then
+			otherTypes = {}
+			for i = 1, 3 do
+				if i ~= affixTypes[1] then
+					table.insert(otherTypes, i)
+					affixTypes[2] = otherTypes[random(getn(otherTypes))]
+				end
+			end
+		end
+		quality = random(1, 2)
+		for i = 1, CountAffixes do
+			affixList[i] = affixes[affixTypes[i]][quality][random(getn(affixes[affixTypes[i]][quality]))]
+		end
+	end
+	return affixList
+end
 
 function CreateBoxWithAffixGun(pos, GunPrototype, CountAffixes, ClassAffixes, BoxName)
 -- Создает бокс с именем name в позиции pos
@@ -1093,7 +1123,7 @@ function CreateBoxWithAffixGun(pos, GunPrototype, CountAffixes, ClassAffixes, Bo
 		LOG("TRIGGER ERROR: Can't create box or gun. Not positiun ot gun prototype")			
 		return nil
 	end
-	local afflist = GenerateRandomAffixList ( CountAffixes, ClassAffixes )
+
 	local chestID = CreateNewObject{	prototypeName = "someChest",
 										objName = name
 							  	   }	
@@ -1113,11 +1143,27 @@ function CreateBoxWithAffixGun(pos, GunPrototype, CountAffixes, ClassAffixes, Bo
        return nil
     end
 
-    for i=1,getn(afflist) do
-		gun:ApplyAffixByName(afflist[i])
-    end
+	local afflist = {}
+
+	--if gun:IsKindOf("PlasmaBunchLauncher") then
+	if GunPrototype == "maxim01" or GunPrototype == "fagot01" or GunPrototype == "odin01" or GunPrototype == "elephant01" or GunPrototype == "hammer01" or GunPrototype == "bumblebee01" or GunPrototype == "omega01" or GunPrototype == "big_swingfire01" or GunPrototype == "hurricane01" or GunPrototype == "mrakSideGun" or GunPrototype == "hailSideGun" or GunPrototype == "marsSideGun" or GunPrototype == "zeusSideGun" or GunPrototype == "hunterSideGun" then
+		local damageAffixes = { "weak_gun", "deadly_gun", "destructive_gun" }
+		local i = random(1,4)
+		if i ~= 4 then
+			table.insert(afflist, damageAffixes[i])
+		end
+	else
+		--local afflist = GenerateRandomAffixList ( CountAffixes, ClassAffixes )
+		afflist = CreateRandomAffixesForGun ( CountAffixes )
+	end
+	if afflist ~= nil then
+    	for i=1,getn(afflist) do
+			gun:ApplyAffixByName(afflist[i])
+    	end
+	end
 	MyChest:AddChild(gun)
 end
+
 
 function AddVehicleGunsWithAffix( ObjName, GunPrototype, ListOfAffixes, GunName)
 -- функция генерирует оружие с указаныыми аффиксами и кладет его в инвентарь машины игрока

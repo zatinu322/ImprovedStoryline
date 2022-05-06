@@ -75,11 +75,6 @@ $Id: VehiclePartTypes.xml,v 1.12 2005/11/11 08:56:45 anton Exp $
 		PartName	="BASKET_GIANT_GUN_0"
 		ResourceName	="GIANT_GUN"
 	/>                  
-      
-	<VehiclePart
-		PartName	="BASKET_GIANT_GUN_2"
-		ResourceName	="GIANT_GUN"
-	/>  
 
 	<VehiclePart
 		PartName	="BASKET_SIDE_GUN_0"

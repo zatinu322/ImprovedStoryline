@@ -265,20 +265,8 @@
 		path="data\models\textures\nature\region1\deadtree.dds" />
 
 	<file
-		name="dub.dds"
-		path="data\models\textures\nature\region1\dub.dds" />
-
-	<file
-		name="elka.dds"
-		path="data\models\textures\nature\region1\elka.dds" />
-
-	<file
 		name="gribockhi.dds"
 		path="data\models\textures\nature\region1\gribockhi.dds" />
-
-	<file
-		name="listvenoe.dds"
-		path="data\models\textures\nature\region1\listvenoe.dds" />
 
 	<file
 		name="rock_clif1.dds"

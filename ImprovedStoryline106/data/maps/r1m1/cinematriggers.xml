@@ -223,7 +223,7 @@
 				FVehicle:SetSkin ( 1 )
 				FVehicle:SetRotation(Quaternion(0.021, 0.472, 0.040, 0.880))
 				FVehicle:SetThrottle( 1 )
-				FVehicle:SetCustomLinearVelocity( 10 )
+				FVehicle:SetCustomLinearVelocity( 25 )
 				FVehicle:SetExternalPathByName("fun1_5road")
 			end
 
@@ -727,8 +727,6 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			RuleConsole("cinematic_spring_coeff 1.3")
-
 			local PlVehicle = GetPlayerVehicle()
 			if PlVehicle then
 				PlVehicle:SetThrottle( 0 )
@@ -819,8 +817,6 @@
 
 			local Plf = GetPlayerVehicle()
 			Plf:PlaceToEndOfPath()
-
-			RuleConsole("cinematic_spring_coeff 0.7")
 
 			SetCameraBehindPlayerVehicle()
 

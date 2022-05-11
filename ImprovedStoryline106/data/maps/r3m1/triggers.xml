@@ -9,8 +9,6 @@
 			SetVar("BezhenAlive",0)
 			SetVar("OracleQuickWay",0)
 
-			CreateNewDummyObject("druid_gate", "TheSetGate", -1, -1, CVector(1496.905, 289.235, 2635.424), Quaternion(0.000, -0.294, 0.000, 0.956), 0)
-
 			if QuestStatus("d_FindOracul_Quest")==Q_TAKEN then
 				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 				GetPlayerVehicle():SetThrottle( 0 )
@@ -139,38 +137,6 @@
 			TActivate("RolikBegin_AmbushDruid")
 			CompleteQuest("r3m1_LureMainDriud_Ambush")
 			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trCreateLoggersMech"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-			end
-
-			local rbteam = TeamCreate("TeamLoggers",1022,CVector(2828.247, 326.091, 2871.083),{"RobotBobot02", "RobotBobot01", "RobotBobot02"})
-			if rbteam then
-				rbteam:GetVehicle(0):AddItemsToRepository("fuel", 3)
-				rbteam:GetVehicle(0):AddItemsToRepository("scrap_metal", 3)
-				rbteam:GetVehicle(2):AddItemsToRepository("fuel", 3)
-				rbteam:GetVehicle(2):AddItemsToRepository("scrap_metal", 3)
-				for i=1,3 do
-					setPos(rbteam:GetVehicle(i-1), CVector(getPos("StoneRobot"..i.."_loc")))
-				end
-
-				AddVehicleGunsWithRandomAffix( rbteam:GetVehicle(1), "omega01", 3, 8+random(2))
-			end
-
-			TakeQuest("r3m1_ClearSanctuary_KillMonster")
-
-			TActivate("trLoggersDie")
-
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -557,7 +523,7 @@
 					SetTolerance(1020,1002,RS_ENEMY)
 
 					local Fion = getObj("Set_Bar_Customer1")
-					if Fion then Fion:SetSpokenCount(1) end
+					if Fion then Fion:SetSpokenCount( 1 ) end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -749,7 +715,7 @@
 
 			while getObj("SecretPlace"..i.."_loc")~=nil do
 --				println(i)
-				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(3))
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
 				i = i + 1
 			end
 
@@ -760,40 +726,8 @@
 	<trigger	Name="RobotsCinem1"	active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="NearStoneHendj_loc" />
 		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			PlayCustomMusic("Techno01")
-						
-			Fly("SkripRob_cam", CINEMATIC_NO_AIM, 0, 11, 1, 1 )
-			StartCinematic()
+			TActivate("RolikBegin_LoggersMech")
 
-			if QuestStatus("r3m1_ClearSanctuary_Arrive")==Q_TAKEN then
-				CompleteQuest("r3m1_ClearSanctuary_Arrive")
-				AddCinematicMessage( 27, 1 )
-				TActivate("trCreateLoggersMech")
-			elseif QuestStatus("r3m1_ClearSanctuary_DestroyOut")==Q_TAKEN then
-				AddCinematicMessage( 28, 1 )
-				TActivate("trCreateLoggersMech2")
-				TActivate("trDestroyExitFromDung")
-			else
-				println("ERROR! UNEXPECTED CONDITION!")
-			end
-
-			TActivate("RobotsCinem1_End")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="RobotsCinem1_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-		
-			RestoreAllToleranceStatus()
-			
-			StopPlayingCustomMusic()
-			
 			trigger:Deactivate()
 		</script>
 	</trigger>

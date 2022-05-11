@@ -17615,7 +17615,7 @@
 		name="Dlg_pl_001383"
 		text="Ах да, совсем из головы вылетело. Обязательно передам. Всего хорошего."
 		role="PLAYER"
-		scriptResult="SetRadarUpgrade(1); AddPlayerMoney(200); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_potato');  RemoveQuestItem('quest_potato');  CompleteQuest( 'Buyer_Quest1' );  AddBook('r1_book_the_mask'); GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
+		scriptResult="SetRadarUpgrade(1); AddPlayerMoney(200); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_potato');  RemoveQuestItem('quest_potato');  CompleteQuest( 'Buyer_Quest1' );  AddBook('r1_book_the_mask'); GetCurNpc():SetSpokenCount( 1 ); TDeactivate('ZASADA_1');  EndConversation()" />
 
 	<Reply
 		name="Buyer_hellodlg1"

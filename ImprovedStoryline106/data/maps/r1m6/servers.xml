@@ -1656,6 +1656,16 @@
 			params = "skins: 0 1 2 4 7 8;" />
 
 		<Item 
+			id="cruiserCargo01" 
+			file="data\models\AnimModels.xml"   
+			params = "skins: 0 1 2 4 7 8;" />
+
+		<Item 
+			id="cruiserCargo02" 
+			file="data\models\AnimModels.xml"   
+			params = "skins: 0 1 2 4 7 8;" />
+
+		<Item 
 			id="cruiserSusp01" 
 			file="data\models\AnimModels.xml"/>
 

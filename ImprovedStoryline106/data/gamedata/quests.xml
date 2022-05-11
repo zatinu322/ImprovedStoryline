@@ -1581,7 +1581,7 @@
 		OnComplete="AddPlayerMoney(5000)">
 		<quest
 			Name="r3m1_ClearSanctuary_KillMonster"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"

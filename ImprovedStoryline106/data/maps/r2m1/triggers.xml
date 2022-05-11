@@ -10,26 +10,24 @@
 			SetVar("Go",0)
 			SetVar("KnownMap",0)
 
-			CreateNewDummyObject("factorytunnelgate", "HelveticaGates", -1, -1, CVector(6556.667, 282.379, 6985.063), Quaternion(0.000, 0.750, 0.000, 0.661), 0)
-			getObj("HelveticaGates"):SetNodeAction(AT_RESERVED3)
-
-			TActivate("SpawnHelveticaGates")
-
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="SpawnHelveticaGates" active="0">
-		<event eventid="GE_GAME_START" ObjName="Player1" />
-		<script>
-			local hgates = getObj("HelveticaGates")
-			if hgates then
-				hgates:SetNodeAction(AT_RESERVED3)
-			end
 
+	<trigger	Name="trLeFrancePlaceSecret"	active="1">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
+			local len = getn(gunlist)
+
+			for i=1,19 do
+				--println("step"..i.."succesful")
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[random(len)], random(0, 2))
+			end
+			trigger:Deactivate()
 		</script>
 	</trigger>
-
 	<trigger Name="trCaravanToVill1" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>

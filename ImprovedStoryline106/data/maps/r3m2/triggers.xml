@@ -157,7 +157,7 @@
 	<trigger	Name="trRotateArt"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
-			for i=1,4 do
+			for i=3,4 do
 			    local art = getObj("or_artefact"..i)
 			    local zq = 	Quaternion(0, 0, 0, 1)
 			    zq:RotY(RAD(7))
@@ -283,54 +283,93 @@
 	<trigger	Name="trVK1"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK1_loc" />
 		<script>
-			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff1", -1, -1, CVector(1913.9, 302.51, 3152), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
 			CompleteQuest("r3m2_OracleMemory_1")
 			RemoveQuestItem( "quest_repair_robot1" );
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot1")
 
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			Fly("VK1_path", CINEMATIC_NO_AIM, nil, 6, 1,1)
 			StartCinematic()
 			AddCinematicMessage( 1, 0.25 )
-			
-			TActivate("trVK2")
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+
+			TActivate("trVK1_Fade")
+			TActivate("trVK_End")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-		<trigger	Name="trVK2"	active="0">
+	<trigger	Name="trVK1_Fade"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff1", -1, -1, CVector(1913.9, 302.51, 3152), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(1833.376, 288.552, 3148.688))
+				vehPlayer:SetRotation(Quaternion(0.007, 0.699, 0.004, 0.715))
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trVK_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trVK2"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK2_loc" />
 		<script>
-			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff2", -1, -1, CVector(681.7, 289, 1944), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
 			CompleteQuest("r3m2_OracleMemory_2")
 			RemoveQuestItem( "quest_repair_robot2" )
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot2")
 
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			Fly("VK2_path", CINEMATIC_NO_AIM, nil, 6, 1,1)
 			StartCinematic()
 			AddCinematicMessage( 2, 0.25 )
-			
-			TActivate("trVK3")
 
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
 
+			TActivate("trVK2_Fade")
+			TActivate("trVK_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trVK2_Fade"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff2", -1, -1, CVector(681.7, 289, 1944), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(690.340, 269.296, 1851.323))
+				vehPlayer:SetRotation(Quaternion(0.058, -0.007, -0.009, -0.998))
+			end
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -533,6 +572,7 @@
 --function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPanel, RelativeRotations, 
 --				println("AAAAAAAAAAAAAA")
 				TActivate("cinExcahgeVehAction_End")
+				SaveAllToleranceStatus(RS_NEUTRAL)
 				FlyLinked( "Garage_Path", veh:GetId(), 6, 0, 1, veh:GetId(), nil, nil)
 				StartCinematic()
 				if excarname=="PlayerScout" and GetVar("FirstVehChange").AsInt == 0 then
@@ -774,7 +814,7 @@
 
 			while getObj("SecretPlace"..i.."_loc")~=nil do
 --				println(i)
-				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(3))
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
 				i = i + 1
 			end
 

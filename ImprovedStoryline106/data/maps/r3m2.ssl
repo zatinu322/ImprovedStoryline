@@ -213,19 +213,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">954.516</Key>
+			name="X">3088.080</Key>
 
 		<Key
-			name="Y">525.549</Key>
+			name="Y">263.006</Key>
 
 		<Key
-			name="Z">3192.514</Key>
+			name="Z">3595.147</Key>
 
 		<Key
-			name="A">108.392</Key>
+			name="A">91.801</Key>
 
 		<Key
-			name="B">-1.011</Key>
+			name="B">-0.163</Key>
 
 		<Key
 			name="G">0.000</Key>

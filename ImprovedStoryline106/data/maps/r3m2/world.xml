@@ -2,7 +2,7 @@
 <World
 	name="Object16"
 	class="SgNode"
-	LastId="76475947">
+	LastId="76476039">
 	<Node
 		name="ET_PS_AUTOCANNON_STAND"
 		class="SgNode"
@@ -18934,16 +18934,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object205784001"
-		class="SgAnimatedModelNode"
-		org="2979.565 6.859 3348.401"
-		orgRel="1"
-		rot="-0.2449 0.6134 0.2082 0.7214"
-		scale="0.593 0.593 0.593"
-		id="concrete_plate"
-		ndmAction="0" />
-
-	<Node
 		name="Object205784002"
 		class="SgAnimatedModelNode"
 		org="3043.920 9.688 3369.080"
@@ -20654,9 +20644,9 @@
 	<Node
 		name="Object205784489"
 		class="SgAnimatedModelNode"
-		org="2770.078 4.219 3259.766"
+		org="2764.535 2.580 3266.809"
 		orgRel="1"
-		rot="-0.0294 0.1646 -0.1733 0.9706"
+		rot="0.4032 0.5140 0.4544 0.6056"
 		id="rr_vagon3"
 		ndmAction="0" />
 
@@ -23042,24 +23032,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object76475639"
-		class="SgAnimatedModelNode"
-		org="3265.696 3.259 3361.808"
-		orgRel="1"
-		rot="-0.2790 0.8695 0.0511 0.4044"
-		id="concrete_plate"
-		ndmAction="0" />
-
-	<Node
-		name="Object76475642"
-		class="SgAnimatedModelNode"
-		org="3277.110 0.685 3381.831"
-		orgRel="1"
-		scale="1.200 1.200 1.200"
-		id="bochka1"
-		ndmAction="0" />
-
-	<Node
 		name="Object76475943"
 		class="SgAnimatedModelNode"
 		org="2424.418 2.352 2880.850"
@@ -23093,5 +23065,97 @@
 		orgRel="1"
 		rot="0.0000 0.2015 0.0000 0.9795"
 		id="rr_vagon2"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476022"
+		class="SgAnimatedModelNode"
+		org="3262.396 18.363 3348.825"
+		orgRel="1"
+		rot="0.6006 -0.1571 -0.7499 0.2286"
+		id="concrete_tube_angle"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476023"
+		class="SgAnimatedModelNode"
+		org="3269.227 -0.097 3386.668"
+		orgRel="1"
+		rot="0.0000 -0.8013 0.0000 0.5983"
+		scale="1.940 1.940 1.940"
+		id="prom_small"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476025"
+		class="SgAnimatedModelNode"
+		org="2637.638 10.505 3213.327"
+		orgRel="1"
+		rot="0.0251 0.6987 0.2901 0.6535"
+		id="concrete_tube_middle"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476027"
+		class="SgAnimatedModelNode"
+		org="2833.320 6.162 3151.676"
+		orgRel="1"
+		rot="-0.3101 0.9197 0.0006 0.2408"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476028"
+		class="SgAnimatedModelNode"
+		org="2936.881 4.348 2932.167"
+		orgRel="1"
+		rot="-0.3891 0.9053 0.0439 0.1649"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476029"
+		class="SgAnimatedModelNode"
+		org="2806.214 17.554 2777.855"
+		orgRel="1"
+		rot="0.0244 -0.0630 0.3596 0.9307"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476030"
+		class="SgAnimatedModelNode"
+		org="2779.585 4.700 2837.574"
+		orgRel="1"
+		rot="0.1972 -0.7415 -0.3075 0.5627"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476031"
+		class="SgAnimatedModelNode"
+		org="2479.589 2.116 2864.683"
+		orgRel="1"
+		rot="0.1788 -0.5344 -0.3185 0.7622"
+		scale="0.769 0.769 0.769"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476032"
+		class="SgAnimatedModelNode"
+		org="2921.974 3.512 3299.189"
+		orgRel="1"
+		rot="-0.2353 0.6034 -0.1293 0.7509"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476037"
+		class="SgAnimatedModelNode"
+		org="3106.480 -0.254 3583.467"
+		orgRel="1"
+		rot="-0.1035 0.8909 0.0509 -0.4393"
+		id="metal_plate1"
 		ndmAction="0" />
 </World>

@@ -1075,6 +1075,14 @@
 			id="cruiserCab02"
 			file="data\models\AnimModels.xml" />
 
+		<Item 
+			id="cruiserCargo01" 
+			file="data\models\AnimModels.xml" />
+
+		<Item 
+			id="cruiserCargo02" 
+			file="data\models\AnimModels.xml" />
+
 		<Item
 			id="cruiserSusp01"
 			file="data\models\AnimModels.xml" />

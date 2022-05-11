@@ -19,6 +19,21 @@
 		</script>
 	</trigger>
 
+	
+	<trigger	Name="trKraiPlaceSecret"	active="0">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local gunlist = {"specter01","hornet01","storm01","vector01"}
+			local len = getn(gunlist)
+
+			for i=1,4 do
+				--println("step"..i.."succesful")
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0,2))
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<trigger Name="trFirstRolik" active="1">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>

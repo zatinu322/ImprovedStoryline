@@ -14606,7 +14606,7 @@
 		name="Dlg_pl_002212"
 		text="[”йти отдыхать]."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('ZashitaGotova'); TActivate('Aslad1'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('ZashitaGotova'); TActivate('trToMidgardForComposite'); EndConversation()" />
 
 	<Reply
 		name="BadEndingDlg"

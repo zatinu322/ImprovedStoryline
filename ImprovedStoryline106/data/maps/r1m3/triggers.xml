@@ -1078,20 +1078,6 @@
 		</script>
 	</trigger>
 
-	<trigger Name="ORACLEHACK" active="0">
-		<event timeout="1" eventid="GE_TIME_PERIOD" />
-		<script>
-			local FV = GetEntityByName("OracleFlyBoss")
-			if FV then
-				FV:SetPosition( CVector(2517, 0, 6042) )
-			end
-		</script>
-	</trigger>
-
-
-
-
-
 	<trigger Name="TriggerBonnyTrap" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>

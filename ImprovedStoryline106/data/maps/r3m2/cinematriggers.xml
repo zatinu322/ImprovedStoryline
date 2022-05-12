@@ -60,6 +60,7 @@
 		<script>
 			GetPlayerVehicle():SetExternalPathByName("ExitToGaragePath")
 			GetPlayerVehicle():PlaceToEndOfPath("ExitToGaragePath")
+			GetPlayerVehicle():UnlimitMaxSpeed()
 			setRot(GetPlayerVehicle(), Quaternion(0.008, 0.399, 0.003, -0.917))
 			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()
@@ -115,6 +116,33 @@
 		</script>
 	</trigger>
 
+	<trigger	Name="trPlTurnRoundFactory"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToFactory_loc" />
+		<script>
+			local vehtype=GetPlayerVehicle():GetProperty("Prototype").AsString
+
+			if QuestStatus("r3m2_TwoMagicThing")==Q_TAKEN and vehtype=="ArcadeScout01" then
+				return
+			else
+				TActivate("cinPlTurnRoundFactory_FadeIn")
+				TActivate("cinPlTurnRoundFactory_PathStart")
+				TActivate("cinPlTurnRoundFactory_End")
+				SaveAllToleranceStatus(RS_NEUTRAL)
+	  			Fly("WentFactory_TurnAround", CINEMATIC_NO_AIM, nil, 6, 1,0)
+	  			Fly("WentFactory_TurnAround2", CINEMATIC_NO_AIM, nil, 5, 0,1)
+	  			StartCinematic()
+				if QuestStatus("r3m2_TwoMagicThing")~=Q_TAKEN then
+					AddCinematicMessage(11, 0.25)
+				else
+					TActivate("trExcahgeVehFirst")
+					TActivate("trPlLeaveFactyOnScout")
+					TActivate("cinWentFactory_Path2")
+					AddCinematicMessage(6, 0.25)
+ 				end
+			end
+		</script>
+	</trigger>
+
 	<trigger Name="cinPlTurnRoundFactory_PathStart" active="0">
 		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -155,6 +183,7 @@
 			setRot(GetPlayerVehicle(), Quaternion(0.009, 0.999, 0.004, -0.051))
 --			setPos(GetPlayerVehicle(), CVector(2389.690, 258.985, 2754.862))
 			SetCameraBehindPlayerVehicle()
+			RestoreAllToleranceStatus()
 			GetPlayerVehicle():UnlimitMaxSpeed()
 			trigger:Deactivate()
 		</script>
@@ -167,7 +196,6 @@
 			GetPlayerVehicle():SetThrottle(0)
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			TActivate("cinStopMusik_End")
 			TActivate("cinNearMonster_FadeIn")
 			TActivate("cinNearMonster_End")
 
@@ -234,7 +262,7 @@
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			PlayCustomMusic("IntenseDialogue03")
-			TActivate("cinStopMusik_End")
+			TActivate("cinMonsterDie_End")
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
@@ -245,6 +273,8 @@
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 --			Plf:SetCustomControlEnabled(false)
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			FlyAround(6, 0.3, 25, 23, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
@@ -422,6 +452,8 @@
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			EnableGodMode()
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			TActivate("cinExit31ReturnFirst")
 			TActivate("cinExit31Return_FadeIn")
 			TActivate("cinExit31Return_End")
@@ -449,6 +481,7 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			DisableGodMode()
+			RestoreAllToleranceStatus()
 			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
 			GetPlayerVehicle():PlaceToEndOfPath("ReturnPathR3M1")
 			SetCameraBehindPlayerVehicle()
@@ -460,6 +493,8 @@
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			EnableGodMode()
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			TDeactivate("trExitToR3M1")
 			TActivate("cinExit31OkFirst")
 			TActivate("cinExit31Ok_FadeIn")
@@ -487,6 +522,7 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			DisableGodMode()
+			RestoreAllToleranceStatus()
 			TActivate("trExitToR3M1")
 			PassToMap("r3m1", "FromR3M2", 0 , true)
 			trigger:Deactivate()
@@ -495,12 +531,14 @@
 
 
 
-	<trigger	Name="cinStopMusik_End"	active="0">
+	<trigger	Name="cinMonsterDie_End"	active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 --			PlayCustomMusic("IntenseDialogue01")
 			StopPlayingCustomMusic()
+			RestoreAllToleranceStatus()
+			SetCameraBehindPlayerVehicle()
 			trigger:Deactivate()
 		</script>
 	</trigger>

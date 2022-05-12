@@ -9,6 +9,8 @@
 			TActivate("cinExit41Return_FadeIn")
 			TActivate("cinExit41Return_End")
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			Fly("ExitTo41Return", CINEMATIC_NO_AIM, nil, 4, 1,1)
 			StartCinematic()
 
@@ -35,6 +37,7 @@
 			GetPlayerVehicle():SetExternalPathByName("ReturnPathR4M1")
 			GetPlayerVehicle():PlaceToEndOfPath("ReturnPathR4M1")
 			SetCameraBehindPlayerVehicle()
+			RestoreAllToleranceStatus()
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -343,7 +346,6 @@
 				tr:AddEvent("GE_END_CINEMATIC","Player1")
 				TActivate("cinPlate_FullEnd")
 			end
-			RestoreAllToleranceStatus()
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -380,6 +382,7 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			StopPlayingCustomMusic()
+			RestoreAllToleranceStatus()
 			SpawnMessageBox( "8901" )
 			SpawnMessageBox( "8902" )
 			ShowDeathMenu()

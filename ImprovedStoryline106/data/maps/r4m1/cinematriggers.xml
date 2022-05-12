@@ -10,8 +10,9 @@
 			local veh=getObj("PlayerMolokovoz")
 			if veh then
 				veh:SetExternalPathByName("molokovozStartPath")
+				veh:SetCruisingSpeed(20)
 			end
-			Fly("molokovozExit", CINEMATIC_NO_AIM, nil, 10, 1,1)
+			Fly("molokovozChange", CINEMATIC_AIM_TO_ID, getObj("PlayerMolokovoz"):GetId(), 10, 1,1)
 			StartCinematic()
 			
 			trigger:Deactivate()
@@ -89,7 +90,7 @@
 				veh:SetCruisingSpeed(15)
 			end
 --            LOG("A4")
-			Fly("molokovozExit", CINEMATIC_NO_AIM, nil, 11, 1,1)
+			Fly("molokovozExit", CINEMATIC_AIM_TO_ID, getObj("PlayerCarVahat"):GetId(), 18, 1,1)
 			StartCinematic()
 --            LOG("A5")
 			trigger:Deactivate()
@@ -164,8 +165,8 @@
 			SetVar("PlCrSpeed",GetPlayerVehicle():GetCruisingSpeed())
 
 
-            Fly("EngineerCamPath1", CINEMATIC_NO_AIM, nil, 7.3, 1,0)
-			Fly("EngineerCamPath2", CINEMATIC_NO_AIM, nil, 7, 0,1)
+            Fly("EngineerCamPath1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.3, 1,0)
+			Fly("EngineerCamPath2", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 0,1)
 			StartCinematic()
 			trigger:Deactivate()
 		</script>
@@ -538,6 +539,7 @@
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			EnableGodMode()
+			SaveAllToleranceStatus(RS_NEUTRAL)
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			GetPlayerVehicle():SetThrottle( 0 )
 
@@ -568,6 +570,7 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			DisableGodMode()
+			RestoreAllToleranceStatus()
 			GetPlayerVehicle():SetExternalPathByName("ReturnPathR1M1")
 			GetPlayerVehicle():PlaceToEndOfPath("ReturnPathR1M1")
 			SetCameraBehindPlayerVehicle()

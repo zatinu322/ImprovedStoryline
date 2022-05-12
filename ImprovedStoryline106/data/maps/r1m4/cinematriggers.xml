@@ -216,16 +216,18 @@
 	<trigger Name="RolikBegin_PlaneOut" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-		TActivate("RolikEnd_PlaneOut")
-		TActivate("trPlaneOut_cam01")
-		TActivate("trPlaneOut_cam02")
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			TActivate("RolikEnd_PlaneOut")
+			TActivate("trPlaneOut_cam01")
+			TActivate("trPlaneOut_cam02")
 
-		Fly("PlaneOut_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
-		Fly("PlaneOut_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
-		StartCinematic()
+			EnableGodMode()
 
-		trigger:Deactivate()
+			Fly("PlaneOut_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+			Fly("PlaneOut_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+			StartCinematic()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -233,14 +235,14 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetGamePositionOnGround( CVector(1118.154, 224.715, 1366.481))
-			vehPlayer:SetRotation(Quaternion(0.005, 0.024, -0.006, 1.000))
-			vehPlayer:SetExternalPathByName("player_path05")
-		end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(1118.154, 224.715, 1366.481))
+				vehPlayer:SetRotation(Quaternion(0.005, 0.024, -0.006, 1.000))
+				vehPlayer:SetExternalPathByName("player_path05")
+			end
 
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -249,16 +251,16 @@
 		<event flypath="PlaneOut_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetGamePositionOnGround( CVector(1387.950, 211.036, 1593.858))
-			vehPlayer:SetRotation(Quaternion(-0.065, 0.731, 0.003, 0.679))
-			vehPlayer:SetExternalPathByName("player_path02")
-			vehPlayer:SetThrottle(1)
-			vehPlayer:SetCustomLinearVelocity(15)
-		end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(1387.950, 211.036, 1593.858))
+				vehPlayer:SetRotation(Quaternion(-0.065, 0.731, 0.003, 0.679))
+				vehPlayer:SetExternalPathByName("player_path02")
+				vehPlayer:SetThrottle(1)
+				vehPlayer:SetCustomLinearVelocity(15)
+			end
 
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -267,20 +269,22 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetExternalPathByName("player_path02")
-			vehPlayer:PlaceToEndOfPath("player_path02")
-		end
+			DisableGodMode()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("player_path02")
+				vehPlayer:PlaceToEndOfPath("player_path02")
+			end
 
 
-		TDeactivate("RolikBegin_PlaneOut")
-		TDeactivate("trPlaneOut_cam01")
-		TDeactivate("trPlaneOut_cam02")
-		TActivate("trMorassTeleportBefore")
-		TActivate("trMorassTeleportAfter")
-		SetCameraBehindPlayerVehicle()
-		trigger:Deactivate()
+			TDeactivate("RolikBegin_PlaneOut")
+			TDeactivate("trPlaneOut_cam01")
+			TDeactivate("trPlaneOut_cam02")
+			TActivate("trMorassTeleportBefore")
+			TActivate("trMorassTeleportAfter")
+			SetCameraBehindPlayerVehicle()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1586,7 +1590,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			RestoreAllToleranceStatus()
 			
 			SpawnMessageBox( "8837" )
 			SpawnMessageBox( "8838" )
@@ -1628,6 +1631,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			SetCameraBehindPlayerVehicle()
+
+			RestoreAllToleranceStatus()
 			
 			local humP = GetEntityByName("humPlayer")
 			if humP then humP:Remove() end

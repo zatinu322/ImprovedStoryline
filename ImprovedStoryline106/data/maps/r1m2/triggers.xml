@@ -799,6 +799,7 @@
 	<trigger	Name="RolikBegin_OutOfMidgard"	active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
 			PlayCustomMusic("Bio07unloop")
 			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
 			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
@@ -847,6 +848,7 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+			RestoreAllToleranceStatus()
 		
 			GetEntityByName("humPlayer"):Remove()
 			
@@ -953,18 +955,46 @@
 		</script>
 	</trigger>
 
-	<trigger	Name="Aslad1"	active="0">
+	<trigger	Name="trToMidgardForComposite"	active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
---		SetGameTime( 9, 0 )
-		SetWeather(1)
-		Fly("BefDesert", CINEMATIC_NO_AIM, 0, 7, 1, 1 )
-		StartCinematic()
-		AddCinematicMessage( 88060, 1 )
-		GetPlayerVehicle():SetGamePositionOnGround( CVector(4163.968, 117.857, 916.957))
-		GetPlayerVehicle():SetRotation(Quaternion(-0.006, 0.745, 0.027, 0.666))
-		GetPlayerVehicle():SetExternalPathByName("BeforeDesert")
-		GetPlayerVehicle():SetCustomLinearVelocity( 10 )
+
+			SetWeather(1)
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("BefDesert", CINEMATIC_NO_AIM, 0, 7, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 88060, 1 )
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetGamePositionOnGround( CVector(4163.968, 117.857, 916.957))
+				Plf:SetRotation(Quaternion(-0.006, 0.745, 0.027, 0.666))
+				Plf:SetExternalPathByName("BeforeDesert")
+				Plf:SetCustomLinearVelocity( 10 )
+			end
+
+			TActivate("trToMidgardForComposite_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trToMidgardForComposite_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetExternalPathByName("BeforeDesert")
+				Plf:PlaceToEndOfPath("BeforeDesert")
+			end
 
 			trigger:Deactivate()
 		</script>

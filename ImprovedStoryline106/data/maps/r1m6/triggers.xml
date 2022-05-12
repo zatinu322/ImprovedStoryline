@@ -639,16 +639,6 @@
 	<trigger Name="KateAdeptDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AdeptArmy1" />
 		<script>
-			CompleteQuest("CaptureKatebergFight")
-			
-			SetTolerance(1100,1089,RS_ALLY)
-			SetTolerance(1088,1089,RS_ALLY)
-			local ol1 = GetEntityByName("OLArmy1_vehicle_0")
-			if ol1 then ol1:Remove() end
-			local ol2 = GetEntityByName("OLArmy1_vehicle_1")
-			if ol2 then ol2:Remove() end
-			local ol3 = GetEntityByName("OLArmy1_vehicle_2")
-			if ol3 then ol3:Remove() end
 			
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
@@ -659,6 +649,8 @@
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			FlyAround(6, 0, 25, 46.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
@@ -668,8 +660,35 @@
 			AddCinematicMessage( 69, 0.1 )
 			AddCinematicMessage( 691, 0.1 )
 			
-			TActivate("FGRolikStart")
+			TActivate("KateAdeptDIE_End")
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="KateAdeptDIE_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			CompleteQuest("CaptureKatebergFight")
+			
+			SetTolerance(1100,1089,RS_ALLY)
+			SetTolerance(1088,1089,RS_ALLY)
+			SetTolerance(1100,1088,RS_ALLY)
+
+			local ol1 = GetEntityByName("OLArmy1_vehicle_0")
+			if ol1 then ol1:Remove() end
+			local ol2 = GetEntityByName("OLArmy1_vehicle_1")
+			if ol2 then ol2:Remove() end
+			local ol3 = GetEntityByName("OLArmy1_vehicle_2")
+			if ol3 then ol3:Remove() end
+
+			TActivate("FGRolikStart")
+
 			local town = GetEntityByName ("TheTown")
 			if town then
 				town:SetRuined(true)
@@ -677,8 +696,6 @@
 			
 			AddQuestItem("quest_boat_digital")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_boat_digital")
-			
-			SetTolerance(1100,1088,RS_ALLY)
 			
 			trigger:Deactivate()
 		</script>

@@ -41,6 +41,8 @@
 
 			SetRadarUpgrade(1)
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			Fly("start_game", CINEMATIC_NO_AIM, 0, 68, 1, 1 )
 			StartCinematic()
 			UpdateCinematic( 1 )
@@ -168,8 +170,6 @@
 	<trigger Name="StartGame" active="0">
 		<event flypath="start_rolik1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-		
-			RestoreAllToleranceStatus()
 
 			PlayCustomMusic("QuietDialogue01")
 
@@ -183,9 +183,6 @@
 			AddCinematicMessage( 2, 0.25 )
 			AddCinematicMessage( 3, 0.25  )
 
-			TActivate("StartRolikGame")
-
-
 			trigger:Deactivate()    
 		</script>
 	</trigger>
@@ -198,8 +195,6 @@
 			SetWeather(0)
 
 			PlayCustomMusic("GreenLeaves")
-			
-			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
 			Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )

@@ -89,7 +89,7 @@
 
 
 
-<!-- диалог с Лизой апосля освобождения -->
+<!-- диалог с караванщиком апосля освобождения -->
 	<trigger Name="RolikBegin_LisaPlenDie" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
 		<script>
@@ -335,16 +335,16 @@
 
 			TDeactivate("RolikBegin_BenHause_Fade")
 
-				CompleteQuestIfTaken("d_FindHouseOfBen_Quest")
+			CompleteQuestIfTaken("d_FindHouseOfBen_Quest")
+		
+			CompleteQuestIfTaken("BenBadEnd")
+		
+			CompleteQuestIfTaken("LisaUBena")
+		
+			CompleteQuestIfTaken("r4m2_LisaDieBen")
 			
-				CompleteQuestIfTaken("BenBadEnd")
-			
-				CompleteQuestIfTaken("LisaUBena")
-			
-				CompleteQuestIfTaken("r4m2_LisaDieBen")
-				
-				CompleteQuestIfTaken("TalkBeforeDesert")
-			
+			CompleteQuestIfTaken("TalkBeforeDesert")
+		
 			if GetVar("FindBen").AsInt==1 then
 				FailQuestIfTaken("BenEast_Quest")
 				FailQuestIfTaken("BenStaruha_Quest")
@@ -686,9 +686,9 @@
 
 			TDeactivate("RolikBegin_BenHause2_Fade")
 			
-				CompleteQuestIfTaken("BenGoodEnd")
-			
-				CompleteQuestIfTaken("BenNormalEnd")
+			CompleteQuestIfTaken("BenGoodEnd")
+		
+			CompleteQuestIfTaken("BenNormalEnd")
 
 			if IsQuestComplete("BenNormalEnd") or IsQuestComplete("BenGoodEnd") then
 				StartConversation( "Lisa" )
@@ -1012,6 +1012,8 @@
 	<trigger Name="BadEndEnd" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
+		
+			RestoreAllToleranceStatus()	
 		
 			StopPlayingCustomMusic()
 			

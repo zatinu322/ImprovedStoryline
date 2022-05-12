@@ -2,15 +2,6 @@
 <triggers>
 
 <!-- Начальный ролик. -->
-	<trigger Name="StartRolikGame" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			trigger:Deactivate()    
-		</script>
-	</trigger>
-
 	<trigger Name="ROLIK15" active="0">
 		<event flypath="start_rolik5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
@@ -1513,135 +1504,6 @@
 		</script>
 	</trigger>
 
-<!-- ролик "мертвый отец" -->
-	<trigger Name="RolikBegin_FatherDeath" active="0">
-		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
-		<script>
-			PlayCustomMusic("Death01")
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			Fly("FatherDe_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
-			Fly("FatherDe_cam03", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("FatherDe_cam04", CINEMATIC_NO_AIM, 0, 13.5, 0, 0 )
-			Fly("FatherDe_cam05", CINEMATIC_NO_AIM, 0, 12.5, 0, 1 )
-			StartCinematic()
-
-			TActivate( "trFatherDe_Fade" )
-			TActivate( "trFatherDe_cam03" )
-			TActivate( "trFatherDe_cam04" )
-			TActivate( "trFatherDe_cam05" )
-			TActivate( "RolikEnd_FatherDeath" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trFatherDe_Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(3376.996, 365.777, 3254.298))
-				vehPlayer:SetRotation(Quaternion(-0.042, -0.069, 0.029, 0.996))
-				vehPlayer:SetCustomControlEnabled( true )       
-				vehPlayer:SetExternalPathByName("player_path06")
-				vehPlayer:SetThrottle( 0 )                      
-				vehPlayer:SetCustomLinearVelocity( 0 )         
-				vehPlayer:SetCustomControlEnabled( false )      
-				vehPlayer:SetThrottle( 1 )                      
-				vehPlayer:SetCustomLinearVelocity( 10 )         
-			end
-
-			trigger:Deactivate()    
-		</script>
-	</trigger>
-
-	<trigger Name="trFatherDe_cam03" active="0">
-		<event flypath="FatherDe_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			CreateNewDummyObject( "dweller_player", "Son", -1, -1, CVector(3354.277, 367.580, 3297.761), Quaternion(0.036, 0.083, 0.003, 0.996), 0)
-
-			getObj("Son"):SetNodeAction(AT_RESERVED1)
-			getObj("Son"):SetNextForAnimation(AT_RESERVED1, AT_STAND1) 
-
-			AddCinematicMessage( 1141, 1 )
-			AddCinematicMessage( 1142, 1 )  
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trFatherDe_cam04" active="0">
-		<event flypath="FatherDe_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			getObj("Son"):SetNodeAction(AT_STAND2)
-			getObj("Son"):SetNextForAnimation(AT_STAND2, AT_STAND1) 
-
-			AddCinematicMessage( 1143,0.1)
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trFatherDe_cam05" active="0">
-		<event flypath="FatherDe_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			getObj("Son"):SetNodeAction(AT_RESERVED1)
-			getObj("Son"):SetNextForAnimation(AT_RESERVED1, AT_STAND1) 
-
-			AddCinematicMessage( 1144, 1 )
-
-			PlayCustomMusic("Battle02")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="RolikEnd_FatherDeath" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:PlaceToEndOfPath()
-			end
-
-			local humSon = GetEntityByName("Son")
-			if humSon then
-				humSon:Remove()
-			end
-
-			TDeactivate( "trFatherDe_Fade" )
-			TDeactivate( "trFatherDe_cam03" )
-			TDeactivate( "trFatherDe_cam04" )
-			TDeactivate( "trFatherDe_cam05" )
-			TDeactivate( "RolikBegin_FatherDeath" )
-
-			TActivate("trStopMusic")
-
-			SetCameraBehindPlayerVehicle()
-
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trStopMusic" active="0">
-		<event timeout=" 20 " eventid="GE_TIME_PERIOD" />
-		<script>
-			StopPlayingCustomMusic()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
-
-
 <!-- ролик "умерающий отец" -->
 	<trigger Name="RolikBegin_Father" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
@@ -2417,6 +2279,8 @@
 	<trigger Name="GoodEndEnd" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			RestoreAllToleranceStatus()
 		
 			SpawnMessageBox( "5976" )
 			
@@ -2433,6 +2297,8 @@
 	<trigger Name="GoodEndSkip" active="0">
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			RestoreAllToleranceStatus()
 		
 			SpawnMessageBox( "5982" )
 			

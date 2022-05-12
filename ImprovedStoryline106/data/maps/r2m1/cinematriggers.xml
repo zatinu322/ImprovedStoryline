@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<trigger Name="Start0" active="1">
+	<event timeout="0" eventid="GE_TIME_PERIOD" />
+	<script>
+
+		if IsQuestTaken("r1m3_LisaWithOberegAndDisk_Quest") and not(IsQuestTaken("d_GetSupportOneOfTheBands1_Quest")) and not( IsQuestComplete("d_GetSupportOneOfTheBands1_Quest"))  then
+			local b = GetEntityByName("ToR1M3")
+			if b then b:SetProperty("Active",0) end
+
+			PlayCustomMusic("QuietDialogue02")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			CompleteQuestIfTaken( "d_OpenTunel_Quest" )
+
+			local Plf = GetPlayerVehicle()
+			local PlfCoor = Plf:GetPosition()
+
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetGamePositionOnGround( CVector(7780.687, 293.455, 4965.787))
+			Plf:SetRotation(Quaternion(0.000, -0.830, -0.001, 0.558))
+			Plf:SetExternalPathByName("player_path01")
+			Plf:SetCustomControlEnabled( false )
+
+			CreateVehicleEx("r2m1_Bug1","vehNezn",CVector(7620.150, 279.045, 4857.137), 1015)
+
+			local vehNezn = GetEntityByName("vehNezn")
+			local vehNeznID = vehNezn:GetId()
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+
+			Fly("Start01_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+			FlyLinked( "Start01_cam02", PlfID, 10, 0, 0, vehNeznID, nil, nil, nil, nil )
+			FlyLinked( "Start01_cam03", PlfID, 48, 0, 0, vehNeznID, nil, nil, nil, nil )
+			FlyLinked( "Start01_cam04", PlfID, 7, 0, 1, vehNeznID, nil, nil, nil, nil )
+			StartCinematic()
+			UpdateCinematic( 1 )
+
+			TActivate("trStart01_cam02")
+			TActivate("trStart01_cam03")
+			TActivate("trStart01_cam04")
+			TActivate("trMsg01")
+			TActivate("RolikEnd_Start01")
+
+			AddHistory( "r2_After_Tonnel_00" )
+			AddHistory( "r2_Find_Lisa_00" )
+			AddFadingMsgId( "fm_history_got" )
+
+			trigger:Deactivate()
+		end
+	</script>
+	</trigger>
+
 <!-- Игрок выезжает из тоннеля. Игрок ищет Лису, укравшую диск 2.(1). -->
 	<trigger Name="trStart01_cam02" active="0">
 		<event flypath="Start01_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
@@ -100,113 +154,6 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-
-
-
-
-<!-- Игрок выезжает из тоннеля. Игрок ищет Акселя - убийцу отца. (2)	 -->
-	<trigger Name="trStart02_cam02" active="0">
-		<event flypath="Start01_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			local vehNezn = GetEntityByName("vehNezn")
-			if vehNezn then
-				vehNezn:SetSkin(3)
-				vehNezn:SetGamePositionOnGround( CVector(7620.150, 279.045, 4857.137))
-				vehNezn:SetRotation(Quaternion(-0.009, 0.052, -0.026, 0.998))
-				vehNezn:SetExternalPathByName("vehNezn_path01")
-			end
-
-			AddCinematicMessage( 0, 1 )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trStart02_cam03" active="0">
-		<event flypath="Start01_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			AddCinematicMessage( 1, 0.25 )
-			AddCinematicMessage( 2, 0.25  )
-			AddCinematicMessage( 3, 0.25 )
-			AddCinematicMessage( 4, 0.25 )
-			AddCinematicMessage( 5, 0.25 )
-			AddCinematicMessage( 6, 0.25 )
-			AddCinematicMessage( 7, 0.25 )
-			AddCinematicMessage( 8, 0.25 )
-			AddCinematicMessage( 9, 0.25 )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trMsg02" active="0">
-	<event msgid="8" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
-		<script>
-
-			PlayCustomMusic("Passage03")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trStart02_cam04" active="0">
-		<event flypath="Start01_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			local vehNezn = GetEntityByName("vehNezn")
-			if vehNezn then
-				vehNezn:SetExternalPathByName("vehNezn_path02")
-			end
-
-			AddCinematicMessage( 10, 0.25 )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="RolikEnd_Start02" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1048, RS_ENEMY )
-
-			local vehPlayer = GetPlayerVehicle()
-			local PlfCoor = vehPlayer:GetPosition()
-			local vehNezn = GetEntityByName("vehNezn")
-
-			if vehNezn then vehNezn:Remove() end
-
-			if vehPlayer then
-				vehPlayer:SetExternalPathByName("player_path01")
-				vehPlayer:PlaceToEndOfPath("player_path01")
-				vehPlayer:SetRotation(Quaternion(0.000, -0.830, -0.001, 0.558))
-			end
-
-			TeamCreate("AfterTunnel",1048,CVector(7624.016, 273, 4857.879),{"r2m1_Bug1"}, PlfCoor)
-			local vehAfterTunnel = GetEntityByName("AfterTunnel_vehicle_0")
-			if vehAfterTunnel then
-				vehAfterTunnel:SetSkin(3)
-				vehAfterTunnel:setImmortalMode(1)
-				SetCameraDirectionToObj(vehAfterTunnel:GetId())
-			end
-
-			TActivate( "FIRSTATTACK" )
-
-			TDeactivate("trStart02_cam02")
-			TDeactivate("trStart02_cam03")
-			TDeactivate("trStart02_cam04")
-			TDeactivate("trMsg02")
-
-			local b = GetEntityByName("ToR1M3")
-			if b then b:SetProperty("Active",1) end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
-
 
 <!-- 3. Игрок убивает машинку перед тоннелем -->
 	<trigger Name="RolikBegin_FIRSTATTACK" active="0">
@@ -1397,43 +1344,43 @@
 			TDeactivate("trGeneric")
 			TActivate("trLightRemove")
 
-				PlayCustomMusic("Techno01")
+			PlayCustomMusic("Techno01")
 
-				CreateNewDummyObject( "boss04dronegun", "Droid", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(0.049, 0.950, -0.189, -0.244), 0)
-				CreateNewDummyObject( "boss04drone", "Droid0", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(0.049, 0.950, -0.189, -0.244), 0)
-				CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(1228.499, 0.600, 1502.986), Quaternion(-0.065, 0.205, -0.028, 0.976), 0)
+			CreateNewDummyObject( "boss04dronegun", "Droid", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(0.049, 0.950, -0.189, -0.244), 0)
+			CreateNewDummyObject( "boss04drone", "Droid0", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(0.049, 0.950, -0.189, -0.244), 0)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(1228.499, 0.600, 1502.986), Quaternion(-0.065, 0.205, -0.028, 0.976), 0)
 
-				local CToch = GetEntityByName("Droid")
-				local CTochID = CToch:GetId()
-				local vehPID = GetPlayerVehicleId()
-				local humPlID = GetEntityByName("humPlayer"):GetId()
+			local CToch = GetEntityByName("Droid")
+			local CTochID = CToch:GetId()
+			local vehPID = GetPlayerVehicleId()
+			local humPlID = GetEntityByName("humPlayer"):GetId()
 
-				RuleConsole("cinematic_spring_coeff 1.7")
+			RuleConsole("cinematic_spring_coeff 1.7")
 
-				Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-				FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, humPlID, nil, nil, nil, nil )
-				Fly(		"UFODIOLOG_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam03", CTochID , 14, 0, 0, humPlID, nil, nil, nil, nil )
-				Fly(		"UFODIOLOG_cam04", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam05", CTochID , 41, 0, 0, humPlID, nil, nil, nil, nil )
-				Fly(		"UFODIOLOG_cam06", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-				Fly(		"UFODIOLOG_cam07", CINEMATIC_NO_AIM, 0, 47, 0, 0 )
-				Fly(		"UFODIOLOG_cam08", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam09", CTochID , 23, 0, 0, humPlID, nil, nil, nil, nil )
-				Fly(		"UFODIOLOG_cam10", CINEMATIC_NO_AIM, 0, 18, 0, 1 )
-				StartCinematic()
+			Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, humPlID, nil, nil, nil, nil )
+			Fly(		"UFODIOLOG_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			FlyLinked(	"UFODIOLOG_cam03", CTochID , 14, 0, 0, humPlID, nil, nil, nil, nil )
+			Fly(		"UFODIOLOG_cam04", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			FlyLinked(	"UFODIOLOG_cam05", CTochID , 41, 0, 0, humPlID, nil, nil, nil, nil )
+			Fly(		"UFODIOLOG_cam06", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+			Fly(		"UFODIOLOG_cam07", CINEMATIC_NO_AIM, 0, 47, 0, 0 )
+			Fly(		"UFODIOLOG_cam08", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			FlyLinked(	"UFODIOLOG_cam09", CTochID , 23, 0, 0, humPlID, nil, nil, nil, nil )
+			Fly(		"UFODIOLOG_cam10", CINEMATIC_NO_AIM, 0, 18, 0, 1 )
+			StartCinematic()
 
-				TActivate("trUFODIOLOG_cam01")
-				TActivate("trUFODIOLOG_cam02")
-				TActivate("trUFODIOLOG_cam03")
-				TActivate("trUFODIOLOG_cam04")
-				TActivate("trUFODIOLOG_cam05")
-				TActivate("trUFODIOLOG_cam06")
-				TActivate("trUFODIOLOG_cam07")
-				TActivate("trUFODIOLOG_cam08")
-				TActivate("trUFODIOLOG_cam09")
-				TActivate("trUFODIOLOG_cam10")
-				TActivate("RolikEnd_UFODIOLOG")
+			TActivate("trUFODIOLOG_cam01")
+			TActivate("trUFODIOLOG_cam02")
+			TActivate("trUFODIOLOG_cam03")
+			TActivate("trUFODIOLOG_cam04")
+			TActivate("trUFODIOLOG_cam05")
+			TActivate("trUFODIOLOG_cam06")
+			TActivate("trUFODIOLOG_cam07")
+			TActivate("trUFODIOLOG_cam08")
+			TActivate("trUFODIOLOG_cam09")
+			TActivate("trUFODIOLOG_cam10")
+			TActivate("RolikEnd_UFODIOLOG")
 
 			trigger:Deactivate()
 		</script>
@@ -1453,42 +1400,42 @@
 			TDeactivate("trGeneric")
 			TActivate("trLightRemove")
 
-				PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue01")
 
-				CreateNewDummyObject( "boss04dronegun", "Droid", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(-0.043, -0.927, -0.115, 0.356), 0)
-				CreateNewDummyObject( "boss04drone", "Droid0", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(-0.043, -0.927, -0.115, 0.356), 0)
+			CreateNewDummyObject( "boss04dronegun", "Droid", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(-0.043, -0.927, -0.115, 0.356), 0)
+			CreateNewDummyObject( "boss04drone", "Droid0", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(-0.043, -0.927, -0.115, 0.356), 0)
 
-				local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
-				local moverId1 = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
-				local mover = GetEntityByID( moverId ) 
-				local mover1 = GetEntityByID( moverId1 )
-				local controlledObj = GetEntityByName("Droid")
-				local controlledObj0 = GetEntityByName("Droid0")
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
+			local moverId1 = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
+			local mover = GetEntityByID( moverId ) 
+			local mover1 = GetEntityByID( moverId1 )
+			local controlledObj = GetEntityByName("Droid")
+			local controlledObj0 = GetEntityByName("Droid0")
 
-				if controlledObj then
-					mover:SetObjAndPath( controlledObj:GetId(), "DroidMove", 60 )
-				end
+			if controlledObj then
+				mover:SetObjAndPath( controlledObj:GetId(), "DroidMove", 60 )
+			end
 
-				if controlledObj0 then
-					mover1:SetObjAndPath( controlledObj0:GetId(), "DroidMove", 60 )
-				end
+			if controlledObj0 then
+				mover1:SetObjAndPath( controlledObj0:GetId(), "DroidMove", 60 )
+			end
 
-				local CToch = GetEntityByName("Droid")
-				local CTochID = CToch:GetId()
-				local vehPID = GetPlayerVehicleId()
+			local CToch = GetEntityByName("Droid")
+			local CTochID = CToch:GetId()
+			local vehPID = GetPlayerVehicleId()
 
-				Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-				FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, vehPID, nil, nil, nil, nil )
-				Fly(		"BattleUFO_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-				Fly(		"BattleUFO_cam03", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-				Fly(		"BattleUFO_cam04", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
-				StartCinematic()
+			Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, vehPID, nil, nil, nil, nil )
+			Fly(		"BattleUFO_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly(		"BattleUFO_cam03", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly(		"BattleUFO_cam04", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+			StartCinematic()
 
-				TActivate("trBattleUFO_cam01")
-				TActivate("trBattleUFO_cam02")
-				TActivate("trBattleUFO_cam03")
-				TActivate("trBattleUFO_cam04")
-				TActivate("RolikEnd_BattleUFO")
+			TActivate("trBattleUFO_cam01")
+			TActivate("trBattleUFO_cam02")
+			TActivate("trBattleUFO_cam03")
+			TActivate("trBattleUFO_cam04")
+			TActivate("RolikEnd_BattleUFO")
 
 			trigger:Deactivate()
 		</script>
@@ -2043,14 +1990,6 @@
 			
 			PlayCustomMusic("Passage05")
 			
---			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(4010.742, 303.024, 2913.484), Quaternion(0, 0, 0, 0), 1)
-			
---			local CToch = GetEntityByName("CamTochka")
---			local CTochID = CToch:GetId()
---			local vehPod = GetEntityByName("FirstB_1")
---			local vehPodID = vehPod:GetId()
-			
---			FlyLinked( "linkedcam", CTochID, 9.5, 1, 0, vehPodID )
 			Fly("preOIDCam", CINEMATIC_NO_AIM, 0, 9.5, 1, 0 )
 			Fly("OIDCam1", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
 			Fly("OIDCam2", CINEMATIC_NO_AIM, 0, 20, 0, 1 )

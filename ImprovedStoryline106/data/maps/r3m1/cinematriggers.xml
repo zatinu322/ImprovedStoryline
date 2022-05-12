@@ -904,6 +904,8 @@
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			Fly("ToComeSubmarine_cam01", CINEMATIC_NO_AIM, 0, 16, 1, 0 )
 			Fly("ToComeSubmarine_cam02", CINEMATIC_NO_AIM, 0, 3, 0, 0 )
 			Fly("ToComeSubmarine_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
@@ -976,6 +978,7 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			StopPlayingCustomMusic()
+			RestoreAllToleranceStatus()
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("player_path08")
@@ -1020,7 +1023,10 @@
 			end
 
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
 			TDeactivate("trMovePlToR1M4")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			CreateNewDummyObject( "submarina",	"Subm1", -1, -1, CVector(4010.692, 245.977, 1890.384), Quaternion(-0.006, -0.592, -0.001, 0.806),0 )
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(3918.764, 265.498, 1859.115), Quaternion(0, 0, 0, 0), 1)
@@ -1109,6 +1115,7 @@
 		TActivate("trMovePlToR1M4")
 --		LOG(5)
 		SetCameraBehindPlayerVehicle()
+		RestoreAllToleranceStatus()
 		trigger:Deactivate()
 		</script>
 	</trigger>

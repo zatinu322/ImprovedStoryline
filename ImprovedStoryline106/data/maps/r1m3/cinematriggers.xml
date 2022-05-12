@@ -1324,7 +1324,7 @@
 
 
 
-<!-- Игрок встречает Оракула. Бой -->
+<!-- Игрок вновь встречает Оракула. Выбор концовки. -->
 	<trigger Name="RolikBegin_ORACLEAGRESSOR" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1573,8 +1573,6 @@
 			CreateNewDummyObject( "big_crag_7", "qa5", -1, -1, CVector(2333, 270, 5775), Quaternion(0, 0, 0, 1), 0)
 
 			TDeactivate( "trORACLEAGRESSOR_cam03")
-
-			TDeactivate("ORACLEHACK")
 
 			TActivate("TRIGGER_ORACLEAGRESSORDIE")
 			
@@ -1849,6 +1847,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
 
+			RestoreAllToleranceStatus()	
+		
 			StopPlayingCustomMusic()
 			
 			SpawnMessageBox( "5965" )
@@ -1867,6 +1867,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
+			RestoreAllToleranceStatus()	
+		
 			StopPlayingCustomMusic()
 			
 			SpawnMessageBox( "5972" )
@@ -2183,6 +2185,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			StopPlayingCustomMusic()
+
+			RestoreAllToleranceStatus()
 			
 			local stat = GetVar("DeadMer").AsInt
 			if stat==2 then

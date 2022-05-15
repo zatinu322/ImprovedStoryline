@@ -41,6 +41,8 @@
 
 			SetRadarUpgrade(1)
 
+			TActivate("trKraiPlaceSecret")
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			Fly("start_game", CINEMATIC_NO_AIM, 0, 68, 1, 1 )
@@ -198,12 +200,12 @@
 
 			Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
 			Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
-			Fly("Opening1", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
-			Fly("Opening11", CINEMATIC_NO_AIM, 0, 7.5, 0, 0 )
+			Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
+			Fly("Opening11", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 0 )
 			Fly("Opening2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
-			Fly("Opening22", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
-			Fly("Opening3", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
-			Fly("Opening4", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening22", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
+			Fly("Opening3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
+			Fly("Opening4", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
 			Fly("Opening5", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
 			Fly("Opening_End", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
 			Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 35, 0, 0 )

@@ -262,7 +262,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			DestroyedModel	= "sack_dot_brocken2"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			IntersectionRadius	= "4">
 
 			<MainPartDescription id = "DOT" partResourceType = "STATIC_AUTO_GUN_DOT">
@@ -282,7 +282,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "staticAutoGun02"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel	= "brick_dots_brocken1"
 			IntersectionRadius	= "4">
 
@@ -324,7 +324,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "staticAutoGun03"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel	= "heavy_dot_brocken1"
 			IntersectionRadius	= "4">
 
@@ -366,7 +366,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "staticAutoGun04"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel	= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -430,7 +430,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "staticAutoGun06"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -532,7 +532,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot1_vulcan"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken1"
 			IntersectionRadius	= "3.5">
 
@@ -554,7 +554,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot2_vulcan"
 
 			LookRadius		= "180"
-			MaxHealth		= "20000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken2"
 			IntersectionRadius	= "3.5">
 
@@ -576,7 +576,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot2_vector"
 
 			LookRadius		= "180"
-			MaxHealth		= "20000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken2"
 			IntersectionRadius	= "3.5">
 
@@ -618,7 +618,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot3_vulcan"
 
 			LookRadius		= "180"
-			MaxHealth		= "18000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken3"
 			IntersectionRadius	= "3.5">
 
@@ -640,7 +640,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot3_rainmetal"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken3"
 			IntersectionRadius	= "3.5">
 
@@ -683,7 +683,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot4_vulcan"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -704,7 +704,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot4_octopus"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -746,7 +746,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot4_rapier"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -789,7 +789,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot4_big_hunterLauncher"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -810,7 +810,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot4_big_hurricane"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 
@@ -854,7 +854,7 @@ $Id: GameObjects.xml,v 1.60 2005/10/14 06:13:36 anton Exp $
 			Name			= "heavy_dot4_big_rainmetal"
 
 			LookRadius		= "180"
-			MaxHealth		= "15000"
+			MaxHealth		= "9000"
 			DestroyedModel		= "heavy_dot_brocken4"
 			IntersectionRadius	= "3.5">
 

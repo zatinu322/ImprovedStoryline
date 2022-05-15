@@ -431,12 +431,9 @@
 	<trigger Name="trAdeptArmyDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AdeptArmy" />
 		<script>
-			CompleteQuest("CaptureMoskaDuring")
-
-			SetTolerance(1100,1091,RS_ALLY)
-			SetTolerance(1091,1088,RS_ALLY)
-			SetTolerance(1100,1088,RS_ALLY)
+			
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
@@ -474,6 +471,14 @@
 			StopPlayingCustomMusic()
 			
 			SetCameraBehindPlayerVehicle()
+
+			CompleteQuest("CaptureMoskaDuring")
+
+			SetTolerance(1100,1091,RS_ALLY)
+			SetTolerance(1091,1088,RS_ALLY)
+			SetTolerance(1100,1088,RS_ALLY)
+
+			if getObj("Esting") then getObj("Esting"):SetBelong(1088) end
 			
 			trigger:Deactivate()
 		</script>
@@ -607,22 +612,6 @@
 		<script>
 			local FVehicle = GetEntityByName("CARLISAE_vehicle_0")
 			if FVehicle then FVehicle:Remove() end
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trTEST" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			
-			CreateVehicleEx("StarostaCar","StarostaDEAD",CVector(1681.292, 347.926, 2090.948), 1042)
-			local vehStar = GetEntityByName("StarostaDEAD")
-			if vehStar then
-				vehStar:SetRotation(Quaternion(-0.040, 0.716, 0.009, 0.697))
-				vehStar:SetSkin(2)
-				vehStar:SetExternalPathByName("StarostaFinalPath")
-			end
 			
 			trigger:Deactivate()
 		</script>

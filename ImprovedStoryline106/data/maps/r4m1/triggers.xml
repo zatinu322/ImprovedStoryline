@@ -209,49 +209,22 @@
 	</trigger>
 
 
-
-<!--
-**************************************************************************************************
-**  Эвакуация в порт
-**************************************************************************************************
--->
 	<trigger Name="trCreateBuharers" active="0">
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
---			local newControllerId1 = CreateNewObject {
---				prototypeName	= "someNPCMotionController",
---				objName	= "BuharsCont1"
---			}
---			local newControllerId2 = CreateNewObject {
---				prototypeName	= "someNPCMotionController",
---				objName	= "BuharsCont2"
---			}
 
 			local bhteam = CreateTeam("Buharers",1026, CVector(getPos("BuhSpawn_loc")),{"DemoUral1","DemoMolokovoz1"})
---			local newController1 = GetEntityByID(newControllerId1)
---			local newController2 = GetEntityByID(newControllerId2)
---			local FVehicle1 = GetEntityByName("Buharers_vehicle_0")
---			local FVehicle2 = GetEntityByName("Buharers_vehicle_1")
+
             if bhteam then
             	for i=0,1 do
 					local FVehicle = bhteam:GetVehicle(i)
 					if FVehicle then
 						FVehicle:SetExternalPathByName("BuharsEvac_Path"..(i+1).."_1")
 						FVehicle:SetCruisingSpeed(100)
-					else
---						println("err")
 					end
 				end
-			else
---			   LOG("! - ! - ! - ! ERROR: No Buhars ! - ! - ! - !")
 			end
---			if newController1 and FVehicle1 then
---				newController1:setVehicleUnderControl(FVehicle1)
---			end
 
---			if newController2 and FVehicle2 then
---				newController2:setVehicleUnderControl(FVehicle2)
---			end
 			SetVar("BuhCurPoint",1)
 			SetVar("BuhPoint1",0)
 			SetVar("BuhPoint2",0)
@@ -276,12 +249,9 @@
 		<event eventid="GE_TARGET_REACHED" ObjName="Buharers_vehicle_0"/>
 		<event eventid="GE_TARGET_REACHED" ObjName="Buharers_vehicle_1"/>
 		<script>
---			println("trBuhReachPoint")
 
 			local point = GetVar("BuhCurPoint").AsInt
 			local stat = GetVar("BuhPoint"..point).AsInt+1
-
---			println("stat = "..stat.." point = "..point)
 
 			SetVar("BuhPoint"..point,stat)
 			if stat>=2 then
@@ -291,8 +261,6 @@
 					local FVehicle = getObj("Buharers_vehicle_"..i)
 					if FVehicle then
 						FVehicle:SetExternalPathByName("BuharsEvac_Path"..(i+1).."_"..point)
-					else
---						println("Error - Point = "..point)
 					end
 				end
                 if point>=5 then
@@ -1226,6 +1194,7 @@
 			SetTolerance(1031,1025,RS_NEUTRAL)
 			SetTolerance(1031,1060,RS_NEUTRAL)
 			SetTolerance(1031,1002,RS_NEUTRAL)
+			SetTolerance(1031,1033,RS_NEUTRAL)
 			
 			TakeQuest("r4m1_Tankisty")
 

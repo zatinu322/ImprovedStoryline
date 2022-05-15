@@ -10,7 +10,29 @@
 			SetVar("Go",0)
 			SetVar("KnownMap",0)
 
+			TActivate("ChangeTownsBelongR2M1")
+
 			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ChangeTownsBelongR2M1" active="0">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if QuestStatus("r2m2_MoveToZeonToAlex")==Q_COMPLETED then
+				local towns = {"TheDoubtful", "TheVill2", "TheVill1", "TheUnderAttaks", "TheTuzz", "TheGelvetcia"}
+				local len = getn(towns)
+				for i = 1,len do
+					println("Setting belong 1015 to "..towns[i])
+					if getObj(towns[i]) then getObj(towns[i]):SetBelong(1015) end
+				end
+
+				trigger:Deactivate()
+
+			elseif QuestStatus("d_GetAkselBandit_Quest")==Q_COMPLETED or QuestStatus("Eretik_Quest")==Q_COMPLETED then
+				println("Deactivating...")
+				trigger:Deactivate()
+			end
 		</script>
 	</trigger>
 

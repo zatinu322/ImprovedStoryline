@@ -834,6 +834,8 @@
 			
 			SetTolerance(1100, 1084, RS_ALLY)
 			SetTolerance(1100, 1085, RS_ENEMY)
+
+			getObj("StorageVil"):SetBelong(1010)
 			
 			CompleteQuest("WaitTillEnd2")
 			

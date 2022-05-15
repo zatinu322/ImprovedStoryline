@@ -2100,7 +2100,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnFail='TDeactivate("Shlyapa3cin"); TDeactivate("Shlyapa3cin2")'
+		OnFail='TDeactivate("Shlyapa3cin"); TDeactivate("Shlyapa3cin2"); TDeactivate("StoneUralZapret")'
 		OnTake='ShowCircleOnMinimapByName("Shlyapa3_loc")'
 		Levels="r2m2">
 		<quest

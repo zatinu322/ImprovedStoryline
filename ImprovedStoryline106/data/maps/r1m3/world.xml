@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76484296">
+	LastId="76484526">
 	<Node
 		name="Object27"
 		class="SgAnimatedModelNode"
@@ -32645,4 +32645,46 @@
 		orgRel="1"
 		id="grib4"
 		ndmAction="0" />
+
+	<Node
+		name="Object76484371"
+		class="SgAnimatedModelNode"
+		org="2752.858 0.000 1823.768"
+		orgRel="1"
+		rot="0.0000 -0.6978 0.0000 0.7163"
+		scale="1.238 1.238 1.238"
+		id="cerkov"
+		ndmAction="0" />
+
+	<Node
+		name="Object76484447"
+		class="SgParticlesNode"
+		org="2745.000 0.000 1793.604"
+		orgRel="1"
+		id="PS_VBIG_SMOKE1"
+		psNumEmitterMesh="-1" />
+
+	<Node
+		name="Object76484448"
+		class="SgParticlesNode"
+		org="2733.255 0.000 1795.216"
+		orgRel="1"
+		id="PS_BIG_SMOKE1"
+		psNumEmitterMesh="-1" />
+
+	<Node
+		name="Object76484449"
+		class="SgParticlesNode"
+		org="2759.544 0.000 1788.402"
+		orgRel="1"
+		id="PS_BIG_SMOKE1"
+		psNumEmitterMesh="-1" />
+
+	<Node
+		name="Object76484525"
+		class="SgParticlesNode"
+		org="2739.776 0.000 1832.907"
+		orgRel="1"
+		id="PS_BIG_SMOKE1"
+		psNumEmitterMesh="-1" />
 </World>

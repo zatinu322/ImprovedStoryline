@@ -185,7 +185,7 @@
 				GetPlayerVehicle():SetExternalPathByName("NearEngineerPlayerPath")
 			end
 
-			local enveh=CreateVehicleEx("Sml101","EngCar",CVector(4273.473, 300, 5923.936), 1060)
+			local enveh=CreateVehicleEx("Sml101","EngCar",CVector(4273.473, 300, 5923.936), 1033)
 			if enveh then
 				enveh:SetMaxTorque(100)
 				enveh:SetMaxSpeed(50)
@@ -278,6 +278,10 @@
 			StopPlayingCustomMusic()
 			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()
+			local enveh=getObj("EngCar")
+			if enveh then
+				enveh:PlaceToEndOfPath("engineerWantDiePath")
+			end
 			trigger:Deactivate()
 		</script>
 	</trigger>

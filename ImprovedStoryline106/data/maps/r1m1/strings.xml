@@ -605,7 +605,7 @@
 
 	<string
 		id="13"
-		value="|@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ||@FF000000ÀÀÀÀÀIÀÀÀÀÀIÀÀÀÀ@FFFF0000Improved Storyline v1.0.5.3"
+		value="|@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ||@FF000000ÀÀÀÀÀIÀÀÀÀÀAIÀÀÀÀ@FFFF0000Improved Storyline v1.0.6"
 		sound=""
 		fontSize="12"
 		time="6" />
@@ -624,7 +624,7 @@
 
 	<string
 		id="90001"
-		value="Improved Storyline v1.0.5.3||Ïåðåä íà÷àëîì èãðû íàñòîÿòåëüíî ðåêîìåíäóåòñÿ îçíàêîìèòüñÿ ñ ìàíóàëîì ê ìîäó.|@00FFFFFFA"
+		value="Improved Storyline v1.0.6||Ïåðåä íà÷àëîì èãðû íàñòîÿòåëüíî ðåêîìåíäóåòñÿ îçíàêîìèòüñÿ ñ ìàíóàëîì ê ìîäó.|@00FFFFFFA"
 		numButtons="1" />
 
 	<string

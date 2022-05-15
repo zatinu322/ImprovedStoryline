@@ -3,7 +3,7 @@
 	<trigger	Name="GlobalVar"	active="1">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
---		   println("Region 3 map 2: Initialised")
+
 		   SetVar("ThingStatus",0)
 		   CreateVehicleEx("ArcadeScout01","PlayerScout",CVector(getPos("ScoutPos_loc")))
 		   local veh=GetEntityByName("PlayerScout")
@@ -36,35 +36,29 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterTor3m2_loc" />
 		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="EnterTor3m2_loc" />
 		<script>
---			println("Enter to r3m2")
+
 			if QuestStatus("r3m1_GoToOracle")==Q_TAKEN then
 
 			 	local ortm = TeamCreate("OracleDefenders",1021,CVector(getPos("OracleDefendSpawn_loc")),{"Cruiser01","Hunter01"})
 
---			 	println("trOracleDefendersDie - Ativate")
 				TActivate("trOracleDefendersDie")
---			 	println("trOracleDefendersDie - Activate OK")
 
---			 	println(1)
 			    if ortm then
---				 	println(2)
 			    	AddVehicleGunsWithRandomAffix(ortm:GetVehicle(0), "elephant01", 3, 8+random(2))
 					ortm:GetVehicle(0):AddItemsToRepository("cooling_system_energy_and_firing_rate_energy", 1)
 					ortm:GetVehicle(1):AddItemsToRepository("Oil", 2)
-					
 			    end
---			 	println(3)
+
 			 	for i=0,1 do
 			 	   local veh = getObj("OracleDefenders_vehicle_"..i)
 			 	   if veh then 
---				 	println(4)
 					  veh:SetExternalPathByName("OracleDef"..(i+1).."_1")
 					  veh:setGodMode(1)
 					  veh:setImmortalMode(1)
 			 	   end
 			 	end
 			end
---		 	println(5)
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -75,10 +69,8 @@
 			PlayCustomMusic("Passage04")
 			SetTolerance(1100, 1021, RS_ENEMY);
 		 	for i=0,1 do
---		 	   println(" i = "..i)
 		 	   local veh = getObj("OracleDefenders_vehicle_"..i)
 		 	   if veh then 
---		 	   	  println("OracleDefenders_vehicle_"..i)
 				  veh:AddModifier("hp", "+ 2500")
 				  veh:setGodMode(0)
 				  veh:setImmortalMode(0)
@@ -91,7 +83,6 @@
 	<trigger	Name="trOracleDefendersDie"		active="0">
 		<event	eventid="GE_OBJECT_DIE"	ObjName="OracleDefenders" />
 		<script>
---			println("AAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	        CompleteQuest("r3m2_OvercomeOracleGuard")
 	        TDeactivate("trBigMonsterDie")
 	        FailQuestIfTaken("r3m2_MonterHead")
@@ -112,7 +103,6 @@
 	<trigger	Name="trNearMonster"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearMonster_loc" />
 		<script>
-			-- TActivate("trCreateMonster")
 			TActivate("cinNearMonster")
 			trigger:Deactivate()
 		</script>
@@ -397,10 +387,6 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			CompleteQuest("r3m2_OracleMemory_3")
-			RemoveQuestItem( "quest_repair_robot3" )
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot3")
-
 			Fly("3rdHelper", CINEMATIC_NO_AIM, nil, 6, 1,0)
 			Fly("FanatikPriehal2", CINEMATIC_NO_AIM, nil, 16, 0,1)
 			StartCinematic()
@@ -439,9 +425,13 @@
 		<script>
 			PlayCustomMusic("IntenseDialogue01")
 
-			local zashitt = GetEntityByName("OracleDefenders_vehicle_0")
+			local zashitt = GetEntityByName("OracleDefenders")
+			
 			if zashitt then
-				zashitt:Remove()
+				local zashitt1 = zashitt:GetVehicle(0)
+				if zashitt1 then
+					zashitt1:Remove()
+				end
 			end
 
 			local vehPlayer = GetPlayerVehicle()
@@ -519,6 +509,11 @@
 			RestoreAllToleranceStatus()
 			
 			SetTolerance(1100,1021,RS_ALLY)
+
+			CompleteQuest("r3m2_OracleMemory_3")
+			
+			RemoveQuestItem( "quest_repair_robot3" )
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot3")
 			
 			trigger:Deactivate()
 		</script>
@@ -533,7 +528,26 @@
 			local FanTeam = GetEntityByName("FanatikCrew")
 			for i = 0,2 do
 				if FanTeam:GetVehicle(i) then FanTeam:GetVehicle(i):SetExternalPathByName("FanatikiLeaveWithPeace") end
---				println("Path set to Fanatik "..i)
+			end
+
+			TActivate("FanatikiPeaceReach")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="FanatikiPeaceReach"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="Fanatik_vehicle_0"/>
+		<event eventid="GE_TARGET_REACHED" ObjName="FanatikCrew_vehicle_0"/>
+		<event eventid="GE_TARGET_REACHED" ObjName="FanatikCrew_vehicle_1"/>
+		<event eventid="GE_TARGET_REACHED" ObjName="FanatikCrew_vehicle_2"/>
+		<script>		
+			local vehCrew = GetEntityByName("Fanatik_vehicle_0")
+			if vehCrew then vehCrew:Remove() end
+
+			local FanTeam = GetEntityByName("FanatikCrew")
+			for i = 0,2 do
+				if FanTeam:GetVehicle(i) then FanTeam:GetVehicle(i):Remove() end
 			end
 			
 			trigger:Deactivate()

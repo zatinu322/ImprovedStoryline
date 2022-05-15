@@ -90,6 +90,13 @@
 	<trigger Name="preRasstrel" active="0">
 		<event flypath="start6" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(2198.467, 255.766, 695.111))
+				vehPlayer:SetRotation(Quaternion(-0.004, 0.768, 0.006, 0.641))
+				vehPlayer:setGodMode(1)
+			end
+
 			CreateVehicleEx("r1m1_sml01","Palach01", CVector(2336.414, 255.958, 736.646), 1089)
 			CreateVehicleEx("r1m1_sml01","Palach02", CVector(2327.691, 255.960, 739.377), 1089)
 			CreateVehicleEx("r1m1_sml01","Palach03", CVector(2322.422, 255.960, 738.434), 1089)
@@ -122,6 +129,7 @@
 		CreateNewDummyObject( "dweller_white", "palachh", -1, -1, CVector(2297.828, 268.500, 719.450), Quaternion(0.0000, 0.8572, 0.0000, 0.5150), 0)
 		TActivate("Rasstrel1")
 		TActivate("mirikkillthem")
+
 		trigger:Deactivate()
 		</script>
 	</trigger>
@@ -155,8 +163,9 @@
 			local camToch01ID = camToch01:GetId()
 			local camToch02ID = camToch02:GetId()
 			local camToch03ID = camToch03:GetId()
+
 			if camToch01 then
-				if vehPal1 and camToch01 then
+				if vehPal1 and camToch01 and hum3 then
 					vehPal1:SetCustomControlEnabled(1)
 					vehPal1:SetCustomControlWeapons(2)
 					vehPal1:SetCustomControlWeaponsTargetObj(camToch01:GetId())
@@ -165,7 +174,7 @@
 			end
 
 			if camToch02 then
-				if vehPal2 and camToch02 then
+				if vehPal2 and camToch02 and hum2 then
 					vehPal2:SetCustomControlEnabled(1)
 					vehPal2:SetCustomControlWeapons(2)
 					vehPal2:SetCustomControlWeaponsTargetObj(camToch02:GetId())
@@ -174,7 +183,7 @@
 			end
 
 			if camToch03 then
-				if vehPal3 and camToch03 then
+				if vehPal3 and camToch03 and hum1 then
 					vehPal3:SetCustomControlEnabled(1)
 					vehPal3:SetCustomControlWeapons(2)
 					vehPal3:SetCustomControlWeaponsTargetObj(camToch03:GetId())
@@ -208,7 +217,7 @@
 	<trigger Name="StartRolik9" active="0">
 		<event flypath="start9" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-		CreateVehicleEx("SeraFighter01","veh1", CVector(1633.172, 256.060, 2852.080) )
+		CreateVehicleEx("SeraFighter01","veh1", CVector(1633.172, 256.060, 2852.080), 1088)
 		local veh11 = GetEntityByName("veh1")
 		if veh11 then
 			veh11:SetRotation(Quaternion(-0.001, -0.669, 0.002, 0.744))
@@ -837,6 +846,8 @@
 				sera:setGodMode(1)
 				sera:setImmortalMode(1)
 				sera:SetSkin(7)
+				sera:AddModifier("maxhp", "= 1700")
+				sera:AddModifier("hp", "= 1700")
 			end
 			
 			local vehPlayer = GetPlayerVehicle()
@@ -952,7 +963,7 @@
 				carS:SetGamePositionOnGround( CVector(1544.352, 265.338, 1049.008))
 				carS:SetRotation(Quaternion(-0.026, -0.657, 0.011, -0.754))
 				carS:setGodMode(0)
-				carS:AddModifier("hp", "+ 1500")
+				carS:AddModifier("hp", "+ 1700")
 				carS:setImmortalMode(0)
 			end
 			
@@ -1462,6 +1473,7 @@
 		</script>
 	</trigger>
 
+	<!-- Перед битвой за Моску -->
 	<trigger Name="PKERolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1469,7 +1481,7 @@
 			
 			PlayCustomMusic("Bio05")
 			
-			CreateVehicleEx("StarostaCar","StarostaDEAD",CVector(1681.292, 347.926, 2090.948), 1042)
+			CreateVehicleEx("LisaCar","StarostaDEAD",CVector(1681.292, 347.926, 2090.948), 1042)
 			local vehStar = GetEntityByName("StarostaDEAD")
 			if vehStar then
 				vehStar:SetRotation(Quaternion(-0.040, 0.716, 0.009, 0.697))
@@ -1553,6 +1565,7 @@
 			local vehStar = GetEntityByName("StarostaDEAD")
 			if vehStar then
 				vehStar:SetExternalPathByName("StarostaFinalPath")
+				vehStar:SetCruisingSpeed(25)
 			end
 			trigger:Deactivate()
 		</script>

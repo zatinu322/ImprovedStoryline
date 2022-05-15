@@ -4046,6 +4046,10 @@
 		<Item
 			id="repair_robot"
 			file="data\models\AnimModels.xml" />
+		
+		<Item
+			id="cerkov"
+			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 
 	<StaticModelsServer />

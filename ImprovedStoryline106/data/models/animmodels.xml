@@ -18957,4 +18957,11 @@
 		windwavy="0"
 		trans="0" />
 
+	<model
+		id="cerkov"
+		file="data\models\buildings\region1\cemetery\cerkov.gam"
+		shadow="0"
+		windwavy="0"
+		trans="0" />
+
 </AnimatedModels>

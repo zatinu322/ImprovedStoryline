@@ -709,55 +709,6 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 	<Prototype
 		Class			= "Vehicle"
-		Name			= "SeraFighter"
-		ResourceType			= "VEHICLE"
-
-		DiffRatio		= "3.0"
-		MaxEngineRpm		= "7000"
-		LowGearShiftLimit	= "1000"
-		HighGearShiftLimit	= "2000"
-
-		SteeringSpeed		= "0.5"
-
-		HornSound		= "ET_S_HORN01"
-
-		DecisionMatrix		= "vehiclemain.lua"
-		DriftCoeff		= "0.5"
-		LookRadius		= "200.0"
-		IntersectionRadius	= "5.0"
-		TakingRadius		= "30.0"
-
-		MassSize		= "6 1 3"
-		MassTranslation		= "0 -2.0 -0.2" 
-		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
-		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
-		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
-		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
-
-		Abstract 		= "true"	>
-
-		<MainPartDescription id = "CHASSIS" partResourceType = "FIGHTER_CHASSIS">
-			<PartDescription id = "CABIN" partResourceType = "FIGHTER_CABIN" lpName = "LP_CAB01" >
-				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
-				<PartDescription id="CABIN_BIG_GUN" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
-			</PartDescription>
-			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
-		</MainPartDescription>
-
-		<Parts>
-			<Part id = "CHASSIS"			Prototype = "SerafimaChassis" />
-		</Parts>
-
-		<Wheels>
-			<Wheel Prototype = "fighterWheel01l" steering = "correct" />
-			<Wheel Prototype = "fighterWheel01r" steering = "correct" />
-			<Wheel Prototype = "fighterWheel02l" />
-			<Wheel Prototype = "fighterWheel02r" />
-		</Wheels>
-	</Prototype>
-
-	<Prototype
-		Class			= "Vehicle"
 		Name			= "Hunter"
 		ResourceType			= "VEHICLE"
 
@@ -1666,11 +1617,11 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 	<Prototype
 		Class			= "Vehicle"
 		Name			= "SeraFighter01"
-		ParentPrototype 	= "SeraFighter">
+		ParentPrototype 	= "Fighter">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "fighterCab02" />
 			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />  
-			<Part id = "CABIN_BIG_GUN"		Prototype = "rapier01" /> 
+			<Part id = "CABIN_BIG_GUN"		Prototype = "vulcan01" /> 
 			<Part id = "BASKET"		Prototype = "fakeCargo" />
 		</Parts>
 	</Prototype>
@@ -1744,7 +1695,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 			<Part id = "BASKET"					Prototype = "cruiserCargo02" />
 			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rapier01" /> 
 			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
-<!--		<Part id = "BASKET_SIDE_GUN_0"		Prototype = "hunterSideGun" /> -->
+			<Part id = "BASKET_SIDE_GUN_0"		Prototype = "hunterSideGun" />
 		</Parts>
 	</Prototype>
 
@@ -2214,19 +2165,6 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 	<Prototype
 		Class			= "Vehicle"
-		Name			= "StarostaCar"
-		ParentPrototype 	= "DenScout"
-		HealthRegeneration = "1.0"
-		DurabilityRegeneration	= "0.03"
-		>
-		<Parts>
-			<Part id = "CABIN"			Prototype = "denscoutCab02" />
-			<Part id = "BASKET"		Prototype = "fakeCargo" />
-		</Parts>
-	</Prototype>
-
-	<Prototype
-		Class			= "Vehicle"
 		Name			= "FelixVehicle"
 		ParentPrototype 	= "Scout">
 		<Parts>
@@ -2453,7 +2391,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		ParentPrototype 	= "Ural">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "uralCab05" />
-			<Part id = "BASKET"			Prototype = "uralCargo05" />
+			<Part id = "BASKET"			Prototype = "uralCargo03" />
 			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "kpvt01" /> 
 			<Part id = "BASKET_GIANT_GUN"	Prototype = "hammer01" /> 
 			<Part id = "CABIN_BIG_GUN_1"		Prototype = "flag01" /> 

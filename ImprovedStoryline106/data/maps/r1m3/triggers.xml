@@ -954,6 +954,7 @@
 
 			if IsQuestComplete( "Zachisti2_Quest" ) then
 				SetTolerance( 1100, 1012, RS_ALLY )
+				getObj("TheBase"):SetBelong(1010)
 			end
 
 			SetCameraBehindPlayerVehicle()

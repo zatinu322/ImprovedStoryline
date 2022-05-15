@@ -7452,7 +7452,7 @@
 		name="Dlg_pl_002560"
 		text="Вот и молодец. А теперь иди отсюда."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO2');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
 
 	<Reply
 		name="Dlg_pl_002555"
@@ -7471,7 +7471,7 @@
 		name="Dlg_pl_002558"
 		text="Ты оказал миру неоценимую услугу!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO2');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
 
 	<Reply
 		name="Dlg_pl_000645"
@@ -7490,7 +7490,7 @@
 		name="Dlg_pl_000651"
 		text="Ты оказал миру неоценимую услугу!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO2');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
 
 	<Reply
 		name="SelCitizen_hellodlg2"
@@ -10931,7 +10931,7 @@
 		text="Вот деньги."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() >= 10000"
-		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  CompleteQuest( 'd_MoveToPesht_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  AddPlayerMoney( -10000 );  GetCurNpc():SetSpokenCount( 1 );  TActivate('BASEATTACK'); TDeactivate('trQuickWay');  EndConversation()" />
+		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  CompleteQuest( 'd_MoveToPesht_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  AddPlayerMoney( -10000 );  GetCurNpc():SetSpokenCount( 1 );  TActivate('BASEATTACK'); TDeactivate('trQuickWay'); getObj('Pesht'):SetBelong(1012);  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001774"
@@ -12538,7 +12538,7 @@
 		name="Dlg_pl_dd2203"
 		text="Фу-у-у... Обошлось."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  TActivate('BASEATTACK');  AddPlayerMoney( -10000 ); TDeactivate('trQuickWay');  EndConversation()" />
+		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  TActivate('BASEATTACK');  AddPlayerMoney( -10000 ); TDeactivate('trQuickWay'); getObj('Pesht'):SetBelong(1012);  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_den1198"
@@ -13033,19 +13033,19 @@
 
 	<Reply
 		name="Dlg_npc_003205"
-		text="Мы тут формируем тяжело вооружённый отряд, чтобы разгромить бандитов, завахтивших Пешт, и вернуть город под наше управление. И ты бы там очень приходился."
+		text="Мы тут формируем тяжело вооружённый отряд, чтобы помочь другой торговой коалиции разгромить бандитов, завахтивших Пешт, и вернуть город под их управление. И ты бы там очень приходился."
 		role="NPC"
 		nextReplies="Dlg_pl_003207 Dlg_pl_003206" />
 
 	<Reply
 		name="Dlg_pl_003207"
-		text="Звучит здорово, я в деле. Но задарма я воевать не буду!"
+		text="Звучит здорово, я в деле. Но только вот..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003208" />
 
 	<Reply
 		name="Dlg_npc_003208"
-		text="Тебе заплатят. 25000 монет за успех операции. Встреться с командиром армии вот здесь, он тебе всё расскажет."
+		text="Не переживай, тебе заплатят. 25000 монет за успех операции. Встреться с командиром армии вот здесь, он тебе всё расскажет."
 		role="NPC"
 		nextReplies="Dlg_pl_003209" />
 

@@ -4810,7 +4810,7 @@
 		Name="Breakable_Elka31389"
 		Belong="1001"
 		Prototype="Breakable_Elka3snow"
-		Pos="55.875 323.294 1601.892"
+		Pos="55.875 323.115 1601.892"
 		Rot="0.000 0.566 0.000 0.824"
 		Mass="927.536"
 		NodeScale="1.457" />
@@ -10894,13 +10894,13 @@
 					PosY="5"
 					Flags="16"
 					Prototype="belazCab05" />
-				
+
 				<Item
 					PosX="5"
 					PosY="40"
 					Flags="16"
 					Prototype="uralCargo06" />
-				
+
 				<Item
 					PosX="0"
 					PosY="45"
@@ -11488,7 +11488,7 @@
 		Name="Breakable_Sosna12652"
 		Belong="1001"
 		Prototype="Breakable_Elka1snow"
-		Pos="1742.420 415.270 2191.721"
+		Pos="1742.420 415.254 2191.721"
 		Rot="0.000 0.469 0.000 0.883"
 		Mass="84.016"
 		NodeScale="0.654" />
@@ -12334,7 +12334,7 @@
 		Name="poddon2838"
 		Belong="1001"
 		Prototype="poddon"
-		Pos="1556.619 378.563 2313.316"
+		Pos="1556.619 378.510 2313.316"
 		Rot="0.000 0.707 0.000 0.707" />
 
 	<Object
@@ -12551,7 +12551,7 @@
 		Name="Breakable_Sosna22868"
 		Belong="1001"
 		Prototype="Breakable_Elka2snow"
-		Pos="1899.635 362.069 2165.314"
+		Pos="1899.635 348.322 2165.314"
 		Rot="0.000 -0.656 0.000 0.755" />
 
 	<Object
@@ -12614,7 +12614,7 @@
 		Name="Esting"
 		Belong="1091"
 		Prototype="TownMoska"
-		Pos="2270.693 255.632 685.888"
+		Pos="2270.693 255.348 685.888"
 		Rot="0.000 -0.998 0.000 -0.055"
 		PointOfViewInInterface="-76.431 41.168 62.278"
 		CaravansDest="TheSign_enter">
@@ -12732,7 +12732,7 @@
 					PosY="35"
 					Flags="16"
 					Prototype="uralCargo06" />
-				
+
 				<Item
 					PosX="5"
 					PosY="35"
@@ -12889,9 +12889,9 @@
 			Name="Esting_defend"
 			Belong="1091"
 			Prototype="genericLocation"
-			Pos="2267.248 255.000 736.708"
+			Pos="2289.390 255.000 694.261"
 			Rot="0.000 -0.998 0.000 -0.055"
-			Radius="240.000"
+			Radius="169.000"
 			LookingTimeOut="70.000" />
 
 		<Object
@@ -12903,6 +12903,164 @@
 			Rot="0.000 -0.998 0.000 -0.055"
 			Radius="24.022"
 			LookingTimeOut="30.000" />
+
+		<Object
+			Name="staticAutoGun04_spec6830"
+			Belong="1091"
+			Prototype="staticAutoGun04_spec"
+			Pos="2317.536 255.000 671.136"
+			Rot="0.000 0.680 0.000 0.733">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun04_spec6830_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun04_spec6831"
+			Belong="1091"
+			Prototype="staticAutoGun04_spec"
+			Pos="2305.319 255.000 722.819"
+			Rot="0.000 -0.037 0.000 0.999">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun04_spec6831_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun04_spec6832"
+			Belong="1091"
+			Prototype="staticAutoGun04_spec"
+			Pos="2242.143 255.000 717.104"
+			Rot="0.000 -0.059 0.000 0.998">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun04_spec6832_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun04_spec6833"
+			Belong="1091"
+			Prototype="staticAutoGun04_spec"
+			Pos="2234.592 255.000 670.172"
+			Rot="0.000 -0.731 0.000 0.682">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun04_spec6833_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6834"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2403.710 255.000 708.979">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6834_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6835"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2343.795 255.000 744.812">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6835_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6836"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2296.299 255.000 759.045">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6836_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6837"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2245.995 255.000 760.072">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6837_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6838"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2198.008 255.000 753.024">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6838_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6839"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2151.838 255.000 714.323">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6839_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun03_spec6840"
+			Belong="1091"
+			Prototype="staticAutoGun03_spec"
+			Pos="2143.404 255.000 655.984">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun03_spec6840_CANNON"
+					Belong="1091"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
 
 		<Parts />
 
@@ -12981,28 +13139,28 @@
 		Name="lamppost12887"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2264.151 255.632 672.361"
+		Pos="2264.151 255.348 672.361"
 		Rot="0.000 0.688 0.000 0.725" />
 
 	<Object
 		Name="lamppost12888"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2291.479 255.826 675.515"
+		Pos="2291.479 255.509 675.515"
 		Rot="0.000 -0.628 0.000 0.779" />
 
 	<Object
 		Name="lamppost12889"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2285.967 255.826 700.505"
+		Pos="2285.967 255.509 700.505"
 		Rot="0.000 -0.740 0.000 0.672" />
 
 	<Object
 		Name="lamppost12890"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2261.852 255.632 698.313"
+		Pos="2261.852 255.348 698.313"
 		Rot="0.000 0.920 0.000 0.393" />
 
 	<Object
@@ -24337,7 +24495,7 @@
 		Name="Breakable_Dub25291"
 		Belong="1001"
 		Prototype="Breakable_Dub2snow"
-		Pos="2361.232 255.000 1669.125"
+		Pos="2361.232 260.174 1669.125"
 		Rot="0.000 0.976 0.000 0.216"
 		Mass="2702.337"
 		NodeScale="2.081" />
@@ -25442,7 +25600,7 @@
 		Name="PetrolStationTown2"
 		Belong="1088"
 		Prototype="r1m6_DreenorVillage"
-		Pos="2924.694 255.178 1145.851"
+		Pos="2924.694 255.126 1145.851"
 		Rot="0.000 0.653 0.000 -0.758"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
@@ -25511,7 +25669,7 @@
 		Name="PetrolStationTown3"
 		Belong="1088"
 		Prototype="r1m6_DreenorVillage"
-		Pos="623.239 255.244 2584.016"
+		Pos="623.239 255.190 2584.016"
 		Rot="0.000 0.653 0.000 -0.758"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
@@ -32532,14 +32690,14 @@
 		Name="Breakable_WoodFence16650"
 		Belong="1001"
 		Prototype="Breakable_WoodFence1"
-		Pos="2567.633 255.067 2320.045"
+		Pos="2567.633 255.014 2320.045"
 		Rot="0.000 -0.607 0.000 0.795" />
 
 	<Object
 		Name="Breakable_WoodFence16651"
 		Belong="1001"
 		Prototype="Breakable_WoodFence1"
-		Pos="2570.514 255.069 2329.422"
+		Pos="2570.514 255.016 2329.422"
 		Rot="0.000 -0.581 0.000 0.814" />
 
 	<Object
@@ -32854,7 +33012,7 @@
 		Name="Breakable_Barrel16824"
 		Belong="1005"
 		Prototype="Breakable_Barrel1"
-		Pos="2920.494 255.073 1166.086"
+		Pos="2920.494 255.019 1166.086"
 		Rot="0.000 0.994 0.000 0.113" />
 
 	<Object
@@ -32868,100 +33026,8 @@
 		Name="Breakable_Barrel26826"
 		Belong="1005"
 		Prototype="Breakable_Barrel2"
-		Pos="2918.713 255.119 1159.601"
+		Pos="2918.713 255.065 1159.601"
 		Rot="0.000 -0.688 0.000 0.725" />
-
-	<Object
-		Name="staticAutoGun04_spec6830"
-		Belong="1091"
-		Prototype="staticAutoGun04_spec"
-		Pos="2317.536 255.000 671.136"
-		Rot="0.000 0.680 0.000 0.733">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun04_spec6831"
-		Belong="1091"
-		Prototype="staticAutoGun04_spec"
-		Pos="2305.319 255.000 722.819"
-		Rot="0.000 -0.037 0.000 0.999">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun04_spec6832"
-		Belong="1091"
-		Prototype="staticAutoGun04_spec"
-		Pos="2242.143 255.000 717.104"
-		Rot="0.000 -0.059 0.000 0.998">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun04_spec6833"
-		Belong="1091"
-		Prototype="staticAutoGun04_spec"
-		Pos="2234.592 255.000 670.172"
-		Rot="0.000 -0.731 0.000 0.682">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6834"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2403.710 255.000 708.979">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6835"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2343.795 255.000 744.812">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6836"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2296.299 255.000 759.045">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6837"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2245.995 255.000 760.072">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6838"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2198.008 255.000 753.024">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6839"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2151.838 255.000 714.323">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun03_spec6840"
-		Belong="1091"
-		Prototype="staticAutoGun03_spec"
-		Pos="2143.404 255.000 655.984">
-		<Parts />
-	</Object>
 
 	<Object
 		Name="heavy_dot4_big_rainmetal6845"
@@ -33143,7 +33209,7 @@
 		Name="arena_barricade136880"
 		Belong="-1"
 		Prototype="arena_barricade13"
-		Pos="1274.363 313.099 2386.193"
+		Pos="1274.363 312.970 2386.193"
 		Rot="0.018 0.293 0.074 0.953" />
 
 	<Object
@@ -33234,7 +33300,7 @@
 		Name="tankeg6893"
 		Belong="-1"
 		Prototype="Breakable_TankEg"
-		Pos="1347.718 255.071 2774.055"
+		Pos="1347.718 255.017 2774.055"
 		Rot="0.000 0.964 0.000 -0.267" />
 
 	<Object

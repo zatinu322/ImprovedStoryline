@@ -92,8 +92,8 @@
 	</Path>
 
 	<Path Name = "3rdHelper">
-		<Point  coord="1210.145 311.800 1164.742" rotation="-0.096 0.136 -0.013 0.986"/>
-		<Point  coord="1214.679 307.607 1187.221" rotation="-0.072 0.445 -0.036 0.892"/>
+		<Point  coord="1222.667 336.873 1091.980" rotation="-0.018 0.016 -0.000 1.000"/>
+		<Point  coord="1222.097 336.223 1110.271" rotation="-0.018 0.016 -0.000 1.000"/>
 	</Path>
 
 	<Path Name = "FanatikPriehal">

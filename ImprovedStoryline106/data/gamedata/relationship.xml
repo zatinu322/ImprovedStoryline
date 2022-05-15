@@ -185,6 +185,11 @@ $Id: Relationship.xml,v 1.19 2005/11/24 09:45:17 anton Exp $
 			tolerance="ally" />
 
 		<set
+			forwhom="1033"
+			who="1100"
+			tolerance="neutral" />
+
+		<set
 			forwhom="1060"
 			who="1100"
 			tolerance="neutral" />
@@ -276,7 +281,7 @@ $Id: Relationship.xml,v 1.19 2005/11/24 09:45:17 anton Exp $
 
 		<set
 			forwhom="1031"
-			who="1002 1023 1025 1060"
+			who="1002 1023 1025 1033 1060"
 			tolerance="neutral" />
 
 		<set

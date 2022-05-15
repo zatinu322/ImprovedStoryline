@@ -480,6 +480,7 @@
 			TDeactivate("trExplosion")
 
 			TActivate("ZeonOpen")
+			TActivate("ChangeTownsBelongR2M2")
 
 			StopPlayingCustomMusic()
 

@@ -202,7 +202,7 @@ function giveguns ()
 	
 	--						LOG(gun)
 							if veh:CanPartBeAttached(slot) then
-								LOG(slot.." -- "..gun)
+--								LOG(slot.." -- "..gun)
 								veh:SetNewPart(slot,gun)
 							end
 							k=k+1

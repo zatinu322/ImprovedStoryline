@@ -2513,11 +2513,7 @@
 			file="data\models\AnimModels.xml"/>
 
 		<Item
-			id="box_test_bump"
-			file="data\models\AnimModels.xml" />
-
-		<Item
-			id="box_test_diffuse"
+			id="cerkov"
 			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 

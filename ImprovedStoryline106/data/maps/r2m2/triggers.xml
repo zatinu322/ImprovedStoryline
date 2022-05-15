@@ -11,6 +11,10 @@
 				zeon:SetProperty("Active", 0)
 			end
 
+			if QuestStatus("MrShlyapa2_Quest")==Q_COMPLETED then
+				TActivate("StoneUralZapret")
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -30,15 +34,15 @@
 		</script>
 	</trigger>
 
-	<trigger Name="ShlyapaTrigger" active="1">
+	<trigger Name="ChangeGranicaVillageBelong" active="0">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 		
-			if QuestStatus("MrShlyapa2_Quest")==Q_COMPLETED then
-				TActivate("StoneUralZapret")
+			if QuestStatus("FinalBattle_Quest")==Q_COMPLETED then
+				if getObj("GranicaVillage") then getObj("GranicaVillage"):SetBelong(1083) end
+				trigger:Deactivate()
 			end
-			
-			trigger:Deactivate()
+					
 		</script>
 	</trigger>
 
@@ -1408,6 +1412,36 @@
 					shlyap:SetSpokenCount(1)
 				end
 			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ChangeTownsBelongR2M2" active="0">
+		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
+		<script>
+			if QuestStatus("d_GetAkselBandit_Quest")==Q_COMPLETED then
+				belong = 1016
+				towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
+
+			elseif QuestStatus("r2m2_MoveToZeonToAlex")==Q_COMPLETED then
+				belong = 1015
+				towns = {"GranicaVillage"}
+
+			elseif QuestStatus("Eretik_Quest")==Q_COMPLETED then
+				belong = 1083
+				towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
+				TActivate("ChangeGranicaVillageBelong")
+			end
+
+			local len = getn(towns)
+			for i = 1, len do
+				println("Setting belong "..belong.." to "..towns[i])
+				if getObj(towns[i]) then getObj(towns[i]):SetBelong(belong) end
+			end
+
+			belong = nil
+			towns = nil
 			
 			trigger:Deactivate()
 		</script>

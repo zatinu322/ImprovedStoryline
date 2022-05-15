@@ -1584,6 +1584,109 @@
 			Radius="20.000"
 			LookingTimeOut="20.000" />
 
+		<Object
+			Name="heavy_dot4_octopus3600"
+			Belong="1084"
+			Prototype="heavy_dot4_octopus_spec"
+			Pos="952.890 306.001 2489.514"
+			Rot="0.000 0.707 0.000 0.707">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="heavy_dot4_octopus3600_CANNON"
+					Belong="1084"
+					Prototype="octopus01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="heavy_dot4_octopus3596"
+			Belong="1084"
+			Prototype="heavy_dot4_octopus_spec"
+			Pos="953.748 306.001 2510.661"
+			Rot="0.000 0.706 0.000 0.709">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="heavy_dot4_octopus3596_CANNON"
+					Belong="1084"
+					Prototype="octopus01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="heavy_dot4_octopus3601"
+			Belong="1084"
+			Prototype="heavy_dot4_octopus_spec"
+			Pos="885.818 306.001 2555.277">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="heavy_dot4_octopus3601_CANNON"
+					Belong="1084"
+					Prototype="octopus01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="heavy_dot4_octopus3602"
+			Belong="1084"
+			Prototype="heavy_dot4_octopus_spec"
+			Pos="868.584 306.001 2555.270">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="heavy_dot4_octopus3602_CANNON"
+					Belong="1084"
+					Prototype="octopus01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun023597"
+			Belong="1084"
+			Prototype="staticAutoGun02_spec"
+			Pos="1309.845 306.038 2508.224"
+			Rot="0.000 0.904 0.000 0.427">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun023597_CANNON"
+					Belong="1084"
+					Prototype="rainmetal01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun023598"
+			Belong="1084"
+			Prototype="staticAutoGun02_spec"
+			Pos="1197.637 306.168 2586.535"
+			Rot="0.000 0.976 0.000 0.216">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun023598_CANNON"
+					Belong="1084"
+					Prototype="rainmetal01" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun023599"
+			Belong="1084"
+			Prototype="staticAutoGun02_spec"
+			Pos="1155.153 306.000 2411.679"
+			Rot="0.000 -0.707 0.000 0.707">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="staticAutoGun023599_CANNON"
+					Belong="1084"
+					Prototype="rainmetal01" />
+			</Parts>
+		</Object>
+
 		<Parts>
 			<AttackTeam
 				present="no" />
@@ -33231,67 +33334,6 @@
 		Prototype="brokvehicle2_breakable"
 		Pos="819.655 269.159 1327.499"
 		Rot="0.000 0.870 0.000 -0.492" />
-
-	<Object
-		Name="heavy_dot4_octopus3596"
-		Belong="1084"
-		Prototype="heavy_dot4_octopus_spec"
-		Pos="953.748 306.001 2510.661"
-		Rot="0.000 0.706 0.000 0.709">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun023597"
-		Belong="1084"
-		Prototype="staticAutoGun02_spec"
-		Pos="1309.845 306.038 2508.224"
-		Rot="0.000 0.904 0.000 0.427">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun023598"
-		Belong="1084"
-		Prototype="staticAutoGun02_spec"
-		Pos="1197.637 306.168 2586.535"
-		Rot="0.000 0.976 0.000 0.216">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="staticAutoGun023599"
-		Belong="1084"
-		Prototype="staticAutoGun02_spec"
-		Pos="1155.153 306.000 2411.679"
-		Rot="0.000 -0.707 0.000 0.707">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="heavy_dot4_octopus3600"
-		Belong="1084"
-		Prototype="heavy_dot4_octopus_spec"
-		Pos="952.890 306.001 2489.514"
-		Rot="0.000 0.707 0.000 0.707">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="heavy_dot4_octopus3601"
-		Belong="1084"
-		Prototype="heavy_dot4_octopus_spec"
-		Pos="885.818 306.001 2555.277">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="heavy_dot4_octopus3602"
-		Belong="1084"
-		Prototype="heavy_dot4_octopus_spec"
-		Pos="868.584 306.001 2555.270">
-		<Parts />
-	</Object>
 
 	<Object
 		Name="Breakable_BrickWall23603"

@@ -79,9 +79,7 @@
 
 			CreateNewDummyObject( "bridge_military_stat", "Bridge_Stat", -1, -1, CVector(5576.837, 202.8, 1423.237), Quaternion(0.0000, 0.7086, 0.0000, 0.7056), 0)
 
-			CreateNewObject	{	prototypeName = "Breakable_bridge_military_move",
-							objName = "Bridge_Move" 
-						}
+			CreateNewObject	{	prototypeName = "Breakable_bridge_military_move", objName = "Bridge_Move"}
 
 			local bmm = GetEntityByName("Bridge_Move")
 			if bmm then
@@ -156,6 +154,33 @@
 			
 			local br3 = GetEntityByName("Brrig3")
 			if br3 then br3:Remove() end
+
+			local bridge = GetEntityByName("BridgeForDestroy")
+			if bridge then
+				TDeactivate("trBOOOM_cam011")
+				bridge:Remove()
+				CreateNewDummyObject( "bridge_military_stat", "Bridge_Stat", -1, -1, CVector(5576.837, 202.8, 1423.237), Quaternion(0.0000, 0.7086, 0.0000, 0.7056), 0)
+
+				CreateNewObject	{	prototypeName = "Breakable_bridge_military_move", objName = "Bridge_Move"}
+
+				local bmm = GetEntityByName("Bridge_Move")
+				if bmm then
+					bmm:SetPosition( CVector(5576.837, 205, 1423.237))
+					bmm:SetRotation(Quaternion(0.0000, 0.7086, 0.0000, 0.7056))
+					bmm:SetDestroyed()
+				end
+
+				CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(5535.000, 206, 1423.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+				CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(5545.000, 213, 1425.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+				CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(5555.000, 209, 1422.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+				CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(5555.000, 209, 1422.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+				
+				CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5535.000, 202, 1423.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+				CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5545.000, 202, 1425.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+				CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5555.000, 202, 1422.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+
+				TActivate("trBOOOM_cam02")
+			end
 			
 			TDeactivate("RolikBegin_BOOOM")
 			TDeactivate("trBOOOM_cam01")
@@ -168,10 +193,6 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-
-
-
 
 <!-- Игрок приезжает в дом отца -->
 	<trigger Name="RolikBegin_FATHERHOUSE" active="0">
@@ -733,7 +754,7 @@
 
 			local vehP = GetEntityByName("vehPioneer")
 			if vehP then
-				vehP:SetSkin(4)
+				vehP:SetRandomSkin()
 				vehP:SetGamePositionOnGround( CVector(1519.417, 288.746, 5535.580))
 			end
 
@@ -772,7 +793,10 @@
 			local vehP = GetEntityByName("vehPioneer")
 			local Toch = GetEntityByName("CamTochka")
 
-			if vehP then vehP:Remove() end
+			if vehP then
+				Pskin = vehP:GetSkin()
+				vehP:Remove()
+			end
 			if Toch then Toch:Remove() end
 
 			TDeactivate( "trZasada_cam02" )
@@ -782,7 +806,7 @@
 
 			local vehP = GetEntityByName("Pioneer_vehicle_0")
 			if vehP then
-				vehP:SetSkin(4)
+				vehP:SetSkin(Pskin)
 				vehP:SetExternalPathByName("pioneer_path")
 				SetCameraDirectionToObj( vehP:GetId() )
 				vehP:SetCanBeDistractedFromMoving( true )
@@ -797,6 +821,8 @@
 			TakeQuest("d_SerchCarTunel_Quest")
 
 			StopPlayingCustomMusic()
+			
+			Pskin = nil
 
 			trigger:Deactivate()
 		</script>
@@ -920,7 +946,7 @@
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			CreateVehicleEx("StarostaCar","vehLisa_0",CVector(0, 10000, 0), 1042)
+			CreateVehicleEx("LisaCar","vehLisa_0",CVector(0, 10000, 0), 1042)
 			CreateNewDummyObject( "brick_debris1", "CamTochka1", -1, -1, CVector(5969.704, 288.686, 5893.204), Quaternion(0, 0, 0, 0), 1)
 			CreateNewDummyObject( "brick_debris1", "CamTochka2", -1, -1, CVector(5726.654, 275.332, 5133.856), Quaternion(0, 0, 0, 0), 1)
 			CreateNewDummyObject( "brick_debris1", "CamTochka3", -1, -1, CVector(4537.015, 281.739, 3769.220), Quaternion(0, 0, 0, 0), 1)
@@ -964,12 +990,12 @@
 		<script>
 			local vehLisa = GetEntityByName("vehLisa_0")
 			if vehLisa then
-				vehLisa:SetNewPart("CABIN_BIG_GUN_1", "vulcan01")
 				vehLisa:SetGamePositionOnGround( CVector(6155.302, 258.301, 7752.490))
 				vehLisa:SetRotation(Quaternion(0.006, -0.997, -0.030, 0.068))
-				vehLisa:SetThrottle(1)                                    
-				vehLisa:SetCustomLinearVelocity(5)                       
-				vehLisa:SetExternalPathByName("lisa_path01")         
+				vehLisa:SetThrottle(1)
+				vehLisa:SetCustomLinearVelocity(5)
+				vehLisa:SetExternalPathByName("lisa_path01")
+				vehLisa:SetCruisingSpeed(25)
 				vehLisa:SetSkin(2)
 			end
 
@@ -978,7 +1004,8 @@
 				vehPlayer:SetGamePositionOnGround( CVector(6140.754, 259.915, 7647.122))
 				vehPlayer:SetRotation(Quaternion(-0.014, 0.087, -0.007, 0.996))
 				vehPlayer:SetExternalPathByName("player_path02")
-				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomLinearVelocity(5)
+				vehPlayer:SetThrottle( 1 )
 			end
 
 			AddCinematicMessage( 32, 3 )
@@ -1034,7 +1061,7 @@
 			local vehLisa = GetEntityByName("vehLisa_0")
 			if vehLisa then
 				getObj("humLisa"):Remove()
-				vehLisa:SetThrottle( 1 )                                    
+				vehLisa:SetThrottle( 1 )
 				vehLisa:SetCustomLinearVelocity( 20 ) 
 				vehLisa:SetExternalPathByName("lisa_path02")  
 			end
@@ -2052,6 +2079,8 @@
 			SetTolerance(1010,1012,RS_ENEMY)
 			SetTolerance(1100,1012,RS_NEUTRAL)
 			SetTolerance(1100,1010,RS_NEUTRAL)
+
+			getObj("Pesht"):SetBelong(1011)
 
 			trigger:Deactivate()
 		</script>

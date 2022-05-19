@@ -1393,8 +1393,11 @@
 	<trigger Name="RolikExitToSouth" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToSouth")), CVector(getPos("FromSouth")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromSouth")))
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3241.910, 348.713, 2978.992))
+				vehPlayer:SetRotation(Quaternion(-0.078, 0.086, 0.016, 0.993))
+			end
 
 			trigger:Deactivate()    
 		</script>
@@ -1405,11 +1408,15 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromSouth")))
+			SetCameraBehindPlayerVehicle()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3241.910, 348.713, 2978.992))
+				vehPlayer:SetRotation(Quaternion(-0.078, 0.086, 0.016, 0.993))
+			end
 
 			TDeactivate( "RolikExitToSouth" )
-
-			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>

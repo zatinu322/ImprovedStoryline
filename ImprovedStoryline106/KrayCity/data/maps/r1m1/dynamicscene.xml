@@ -420,6 +420,15 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="LisaSouth"
+				Belong="1008"
+				Prototype="NPC"
+				ModelName="mask_lisa"
+				cfg="92"
+				helloReplyNames="lisaBar1"
+				SpokenCount="0" />
+
+			<Object
 				Name="WorkGiver"
 				Belong="1008"
 				Prototype="NPC"
@@ -456,15 +465,6 @@
 				skin="4"
 				cfg="94"
 				helloReplyNames="Dlg_npc_003264"
-				SpokenCount="0" />
-
-			<Object
-				Name="LisaSouth"
-				Belong="1008"
-				Prototype="NPC"
-				ModelName="mask_lisa"
-				cfg="92"
-				helloReplyNames="lisaBar1"
 				SpokenCount="0" />
 
 			<Object

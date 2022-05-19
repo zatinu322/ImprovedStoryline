@@ -453,6 +453,8 @@
 				TActivate("trLoggersDie")
 				CompleteQuest("r3m1_ClearSanctuary_Arrive")
 --				TDeactivate("trLoggersMech_cam01")
+			elseif QuestStatus("r3m1_ClearSanctuary_DestroyOut")==Q_TAKEN then
+				TActivate("trDestroyExitFromDung")
 			end
 
 			SetCameraBehindPlayerVehicle()

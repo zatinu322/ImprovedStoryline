@@ -1244,6 +1244,65 @@ $Id: Infection.xml,v 1.47 2005/11/17 06:42:59 anton Exp $
 
 	</Prototype>
 
+	<Prototype
+		Class			= "InfectionTeam"
+		Name			= "r5_BanditsGang"
+		DecisionMatrix	= "teammain.lua"
+		VehiclesGenerator = "r5_BanditsGangGenerator">
+		<Vehicles/>
+	</Prototype>
+	<Prototype
+		Class 		= "VehiclesGenerator"
+		Name			= "r5_BanditsGangGenerator"
+		DesiredCount 				= "1-3"
+		partOfSchwartzForCabin 			= "0.20"  
+		partOfSchwartzForBasket 		= "0.20"
+		partOfSchwartzForGuns 			= "0.30"
+		partOfSchwartzForWares 			= "0.25" >
+		<Description 
+			VehiclesPrototypes	="ScoutEnemySpawn ScoutEnemySpawn"		
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="townaffixGenerator"
+			PartOfSchwartz="0.35" />
+		<Description 
+			VehiclesPrototypes	="ScoutEnemySpawn Sml2EnemySpawn Sml3EnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+		<Description 
+			VehiclesPrototypes	="Sml1EnemySpawn Sml2EnemySpawn Sml3EnemySpawn Sml4EnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+		<Description 
+			VehiclesPrototypes	="BugForSale ScoutEnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+
+		<Description 
+			VehiclesPrototypes	="UralForSale HunterEnemySpawn ScoutEnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+		<Description 
+			VehiclesPrototypes	="UralForSale FighterEnemySpawn ScoutEnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+
+		<Description 
+			VehiclesPrototypes	="MolokovozForSale FighterEnemySpawn ScoutEnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+		<Description 
+			VehiclesPrototypes	="MolokovozForSale HunterEnemySpawn ScoutEnemySpawn" 	
+			WaresPrototypes="bottle tobacco"
+			GunAffixGeneratorPrototype="villageaffixGenerator"
+			PartOfSchwartz="0.3" />
+
+	</Prototype>
 
 
 </Prototypes>

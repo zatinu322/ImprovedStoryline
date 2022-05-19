@@ -332,11 +332,6 @@
 		value="Наркотики" />
 
 	<Item
-		id="quest_first_canistra"
-		locForm="0"
-		value="Канистра нефти" />
-
-	<Item
 		id="quest_disk_1"
 		locForm="0"
 		value="Диск" />

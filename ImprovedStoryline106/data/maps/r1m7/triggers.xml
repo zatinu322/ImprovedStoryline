@@ -25,6 +25,7 @@
 				local vehL = GetEntityByName("LABCAR")
 				if vehL then
 					vehL:SetRotation(Quaternion(0.001, -0.082, 0.000, 0.997))
+					vehL:SetRandomSkin()
 				end
 				
 				TActivate("LabirintChange11")

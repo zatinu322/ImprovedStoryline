@@ -429,7 +429,7 @@
 			Name="Asgard_enter"
 			Belong="1011"
 			Prototype="genericLocation"
-			Pos="3600.624 289.100 6164.520"
+			Pos="3590.571 288.975 6157.674"
 			Rot="-0.011 -0.888 -0.014 0.460"
 			Radius="30.000"
 			LookingTimeOut="10.000" />
@@ -2526,7 +2526,7 @@
 		Name="PetrolStationTown1"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="5713.668 233.864 4150.965"
+		Pos="5713.668 233.810 4150.965"
 		Rot="0.000 0.791 0.000 0.612"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -2556,7 +2556,7 @@
 		Name="PetrolStationTown2"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="3386.281 232.139 1340.588"
+		Pos="3386.281 232.085 1340.588"
 		Rot="0.000 -0.999 0.000 0.039"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -2586,7 +2586,7 @@
 		Name="PetrolStationTown3"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="1287.802 259.059 3330.931"
+		Pos="1287.802 259.006 3330.931"
 		Rot="0.000 0.326 0.000 0.945"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -2763,7 +2763,7 @@
 			Name="barricade7_GwG57_Child2"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="6440.066 233.463 4691.003">
+			Pos="6440.066 233.409 4691.003">
 			<Parts />
 		</Object>
 
@@ -2771,7 +2771,7 @@
 			Name="barricade7_GwG57_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="6452.066 233.346 4691.003">
+			Pos="6452.066 233.292 4691.003">
 			<Parts />
 		</Object>
 	</Object>
@@ -2803,7 +2803,7 @@
 			Name="barricade4_wGw62_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="6701.766 211.510 3455.853">
+			Pos="6701.766 211.471 3455.853">
 			<Parts />
 		</Object>
 	</Object>
@@ -3152,7 +3152,7 @@
 			Name="barricade6_wGw16_Child3"
 			Belong="1005"
 			Prototype="staticAutoGun07"
-			Pos="3262.820 243.599 3869.548"
+			Pos="3262.820 243.559 3869.548"
 			Rot="0.000 0.616 0.000 0.788">
 			<Parts />
 		</Object>
@@ -3362,7 +3362,7 @@
 			Flags="16"
 			Belong="1001"
 			Prototype="rainmetal01"
-			Durability="0.000"/>
+			Durability="0.000" />
 
 		<Object
 			Flags="16"
@@ -56083,14 +56083,14 @@
 		Name="lamppost19674"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2092.708 286.726 7237.601"
+		Pos="2092.708 286.673 7237.601"
 		Rot="0.000 1.000 0.000 -0.006" />
 
 	<Object
 		Name="lamppost19675"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2067.287 286.906 7237.901"
+		Pos="2067.287 286.852 7237.901"
 		Rot="0.000 1.000 0.000 -0.006">
 		<Object
 			Belong="1001"
@@ -56103,14 +56103,14 @@
 		Name="lamppost19676"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2041.865 287.126 7238.201"
+		Pos="2041.865 287.073 7238.201"
 		Rot="0.000 1.000 0.000 -0.006" />
 
 	<Object
 		Name="lamppost19677"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2016.444 287.046 7238.500"
+		Pos="2016.444 286.992 7238.500"
 		Rot="0.000 1.000 0.000 -0.006">
 		<Object
 			Belong="1001"
@@ -56123,7 +56123,7 @@
 		Name="lamppost19678"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="1991.022 286.927 7238.800"
+		Pos="1991.022 286.873 7238.800"
 		Rot="0.000 1.000 0.000 -0.006" />
 
 	<Object
@@ -56141,7 +56141,7 @@
 		Name="lamppost19680"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="4246.483 238.229 3687.396">
+		Pos="4246.483 238.378 3687.396">
 		<Object
 			Belong="1001"
 			Prototype="LightObject2"

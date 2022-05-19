@@ -1430,7 +1430,7 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="r3m2_OracleMemory_1"
-			OnTake='ShowCircleOnMinimapByName("VK2_loc")' />
+			OnTake='ShowCircleOnMinimapByName("VK2_loc"); TActivate("trVK2")' />
 
 		<quest
 			Name="r3m2_OracleMemory_3"
@@ -1439,7 +1439,7 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="r3m2_OracleMemory_2"
-			OnTake='ShowCircleOnMinimapByName("VK3_loc")' />
+			OnTake='ShowCircleOnMinimapByName("VK3_loc"); TActivate("trVK3")' />
 
 		<quest
 			Name="r3m2_OracleMemory_Return"
@@ -2971,7 +2971,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnFail='TDeactivate("TriggerLabirintCarDie2")'
-		OnTake='ShowCircleOnMinimapByName("OldTownOutsiderCar2")'
 		Levels="r1m3" />
 <!--Root/r1m3/Опциональные/Отбить Пешт-->
 	<quest

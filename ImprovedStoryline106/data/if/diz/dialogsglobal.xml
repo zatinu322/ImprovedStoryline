@@ -3211,7 +3211,7 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N12"
-		text="[Меня начинает пугать этот разговор, нужно поскорее его закончить, пока он не решил и меня с Лисой прикончить]"
+		text="[Меня начинает пугать этот разговор, нужно поскорее его закончить, пока он не решил и меня с Лисой прикончить.]"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N13" />
 
@@ -3223,7 +3223,7 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N13a"
-		text="[Чует моё сердце, не стоит мне ему отказывать]|Я сделаю всё, что в моих силах. А что случилось?"
+		text="[Чует моё сердце, не стоит мне ему отказывать.]|Я сделаю всё, что в моих силах. А что случилось?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002361" />
 
@@ -3443,7 +3443,7 @@
 
 	<Reply
 		name="Dlg_pl_002376"
-		text="Лиса! Мысли здраво! Они дадут мне грузовик, на который установят максимум дробовик. А я тебя оставляю здесь со своей тяжеловооружённой машиной. Водить и стрелять ты умеешь. Просто подумай: если вдруг что случится, где будет безопаснее? В моей машине или в их?"
+		text="Лиса! Мысли здраво! Они дадут мне грузовик максимум с лёгким вооружением. А я тебя оставляю здесь со своей тяжеловооружённой машиной. Водить и стрелять ты умеешь. Просто подумай: если вдруг что случится, где будет безопаснее? В моей машине или в их?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002377" />
 
@@ -4459,7 +4459,7 @@
 
 	<Reply
 		name="Dlg_npc_001995"
-		text="Давно я не видел ничего подобного. И уж точно никто никогда не приходил ко мне с такой просьбой. Хотя довольно давно, кажется, было что-то подобное."
+		text="Давно я не видел ничего подобного. И уж точно никто никогда не приходил ко мне с такой просьбой. Только если очень давно..."
 		role="NPC"
 		nextReplies="Dlg_pl_002015" />
 
@@ -4471,7 +4471,7 @@
 
 	<Reply
 		name="Dlg_npc_002016"
-		text="Те агрегаты, что ты привёз, помогут... Пожалуй, всё получится. Но ты должен помочь мне вспомнить."
+		text="Те агрегаты, что ты привёз, помогут. Всё должно получиться. Но ты должен провести настройку моих удалённых модулей."
 		role="NPC"
 		nextReplies="Dlg_pl_002017" />
 
@@ -4534,19 +4534,19 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N071"
-		text="Ошибка инициализации. Получить вышеуказанную информацию не представляется возможным, так она защищена сложным ключом, расшифровка которого заняла бы несколько лет. Это, как я понимаю, неприемлемо в данной ситуации."
+		text="Ошибка инициализации. Получить вышеуказанную информацию не представляется возможным, так как её не существует на текущем носителе."
 		role="NPC"
 		nextReplies="r3m2_Oracle_Oracle_4_N081" />
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N081"
-		text="Не понял, что еще за ключ?"
+		text='Что за бред? Что значит это твоё "не существует на текущем носителе"?'
 		role="PLAYER"
 		nextReplies="r3m2_Oracle_Oracle_4_N091" />
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N091"
-		text="Судя по его характеру, с 96,7% вероятностью это еще один диск."
+		text="С вероятностью 96,7% существует ещё один диск, который содержит недостающую информацию."
 		role="NPC"
 		nextReplies="r3m2_Oracle_Oracle_4_N101" />
 
@@ -5261,7 +5261,7 @@
 
 	<Reply
 		name="Set_Bar_Customer2_1_N03"
-		text="От жителей Улука давно не поступало никаких вестей. Раньше они регулярно заглядывали в наш город, а сейчас уже почти как пару месяцев ни слуху ни духу. Не мог бы ты съездить проверить, что там произошло? Мы заплатим за работу."
+		text="От жителей Улука давно не поступало никаких вестей. Раньше они регулярно заглядывали в наш город, а сейчас уже почти как пару месяцев ни слуху, ни духу. Не мог бы ты съездить проверить, что там произошло? Мы заплатим за работу."
 		role="NPC"
 		nextReplies="Set_Bar_Customer2_1_P041 Set_Bar_Customer2_1_P042" />
 
@@ -5961,7 +5961,7 @@
 
 	<Reply
 		name="Dlg_npc_002184"
-		text="Вопросы, вопросы, слишком много вопросов! Но ты не в состоянии понять, что ответить на них можешь ты сам. Покажи свою карту. Вот, поезжай в это место. Потом аккуратно проедь по берегу полкилометра и сверни направо в ущелье."
+		text="Вопросы, вопросы, слишком много вопросов! Но ты не в состоянии понять, что ответить на них можешь только ты сам. Покажи свою карту. Вот, поезжай в это место. Потом аккуратно проедь по берегу полкилометра и сверни направо в ущелье."
 		role="NPC"
 		nextReplies="Dlg_pl_002185" />
 
@@ -7103,7 +7103,7 @@
 		name="Dlg_pl_002340"
 		text="Ладно, спасибо за информацию. Не груби этим синьорам, и никто тебя не убьёт. А мне надо бы обсудить дальнейшие планы со штабом."
 		role="PLAYER"
-		scriptResult="TakeQuest('ReturnQuest'); CompleteQuest('r2m2_ToLisaToMonastir'); SetTolerance(1100,1017,RS_ALLY); SetTolerance(1100,1015,RS_ALLY); SetTolerance(1100,1016,RS_ENEMY); TActivate('MarezziaOpen'); EndConversation()" />
+		scriptResult="TakeQuest('ReturnQuest'); CompleteQuest('r2m2_ToLisaToMonastir'); SetTolerance(1100,1017,RS_ALLY); SetTolerance(1100,1015,RS_ALLY); SetTolerance(1100, 1043, RS_ALLY); SetTolerance(1100,1016,RS_ENEMY); TActivate('MarezziaOpen'); EndConversation()" />
 <!--Root/r2m1/Сюжетные--><!--Root/r2m1/Опциональные--><!--Root/r2m1/Опциональные/Эстет-->
 	<Reply
 		name="Estet_hellodlg0"
@@ -7132,7 +7132,7 @@
 
 	<Reply
 		name="Dlg_pl_001120"
-		text="Идёт. Как выглядит этот твой 'шедевр'? И где живёт тот тип, которого ты подозреваешь?"
+		text='Идёт. Как выглядит этот твой "шедевр"? И где живёт тот тип, которого ты подозреваешь?'
 		role="PLAYER"
 		nextReplies="Dlg_npc_002553" />
 
@@ -7257,7 +7257,7 @@
 
 	<Reply
 		name="Dlg_npc_001130"
-		text='О боже, ты даже не представляешь, насколько сильно мы с тобой влипли... Видишь эту печать? Это печать "Кувалды". Те, кто украл у "Кувалды", долго не живут!'
+		text="О боже, ты даже не представляешь, насколько сильно мы с тобой влипли... Видишь эту печать? Это печать Кувалды. Те, кто украл у Кувалды, долго не живут!"
 		role="NPC"
 		nextReplies="Dlg_pl_001131" />
 
@@ -7660,7 +7660,7 @@
 
 	<Reply
 		name="Dlg_pl_002278"
-		text="Ладно, ладно, не кричи, уже ушёл.|Мда, это оказалось гораздо сложнее, чем я думал. Может, в Марецции будут люди поадекватней?"
+		text="Ладно, ладно, не кричи, уже ушёл.|Мда, это оказалось гораздо сложнее, чем я думал. Может, в Марецции ко мне прислушаются?"
 		role="PLAYER"
 		scriptResult="CompleteQuest('Podderzhka1_Quest'); EndConversation() " />
 
@@ -8071,7 +8071,7 @@
 
 	<Reply
 		name="Dlg_pl_002241"
-		text="Местная большая шишка?"
+		text="Просвети."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002242" />
 
@@ -8363,7 +8363,7 @@
 
 	<Reply
 		name="Dlg_pl_002342"
-		text="Рад стараться. А особенно рад стараться за деньги. |Ну что, Алый Рассвет повержен, война закончилась. Теперь остаётся только наладить диалог между двумя странами, и в этот регион придёт мир. А сейчас прошу меня извинить, но мне пора в Гельвецию."
+		text="Рад стараться. Ну что, Алый Рассвет повержен, война закончилась. Теперь остаётся только наладить диалог между двумя странами, и в этот регион придёт мир. А сейчас прошу меня извинить, но мне пора в Гельвецию."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002343" />
 
@@ -9340,7 +9340,7 @@
 
 	<Reply
 		name="Dlg_npc_002879"
-		text="Ты поступил правильно. Хоть я сейчас и работаю на ТСП, я очень благодарен тебе за то, что ты не стал штурмовать склад вместе с ними и освободил нашего лидера. Денег у меня нет, ценных вещей тоже, поэтому просто прими мою благодарность и предупреждение. Даже и не пытайся сунуться в Ольм или Минин, тебя там сразу же арестуют, а потом казнят. Ну всё, мне пора, а то слишком длительное отсутствие на рабочем месте может вызвать ненужные подозрения! Всего тебе хорошего!"
+		text="Ты поступил правильно. Хоть я сейчас и работаю на ТСП, я очень благодарен тебе за то, что ты не стал штурмовать склад вместе с ними и освободил нашего лидера. Денег у меня нет, ценных вещей тоже, поэтому просто прими мою благодарность и предупреждение. Даже и не пытайся сунуться в Ольм или Минин, тебя там сразу же арестуют, или даже чего хуже... Ну всё, мне пора, а то слишком длительное отсутствие на рабочем месте может вызвать ненужные подозрения! Всего тебе хорошего!"
 		role="NPC"
 		nextReplies="Dlg_pl_002880" />
 
@@ -9567,7 +9567,7 @@
 
 	<Reply
 		name="Dlg_npc_002702"
-		text="Мы не соотрудничаем с захватчиками. Их лидера сейчас как раз везут сюда из Салиниома. Мы показательно его казним и параллельно с этим соберём все силы и ударим по складу. Уничтожим этих местных выскочек! А если кто посмеет рот открыть - вздёрнем и его."
+		text="Мы не соотрудничаем с захватчиками. Всё, что нам нужно было узнать - есть ли у них захваченные торговцы. Ты выяснил, что их нет. Молодец.|Их лидера сейчас как раз везут сюда из Салиниома. Мы показательно его казним и параллельно с этим соберём все силы и ударим по складу. Уничтожим этих местных выскочек! А если кто посмеет рот открыть - вздёрнем и его."
 		role="NPC"
 		nextReplies="Dlg_pl_002703" />
 
@@ -9604,7 +9604,7 @@
 
 	<Reply
 		name="Dlg_pl_002705"
-		text="Хорошо, я помогу вам."
+		text="Раз уж ты так ставишь вопрос... Хорошо, я помогу вам."
 		role="PLAYER"
 		scriptResult="FailQuest('FreeExtremistLeader_Quest1'); TakeQuest('WaitTillEnd'); TActivate('WaitTillSklad'); EndConversation()" />
 
@@ -9876,12 +9876,32 @@
 		name="Dlg_npc_002666"
 		text="В корень зришь. Склад захватили местные и отказываются его освобождать, пока торговцы не выполнят их требования. Вроде бы последние как раз искали переговорщика. Раз уж тебе сильнее всех надо, можешь попытать счастья. Поговори вон с тем мужиком, он тебе расскажет, что да как."
 		role="NPC"
-		nextReplies="Dlg_pl_002667" />
+		nextReplies="Dlg_pl_002667 Dlg_pl_003270" />
+
+	<Reply
+		name="Dlg_pl_003270"
+		text="Спасибо огромное, второй раз выручаешь."
+		role="PLAYER"
+		scriptCondition="2500 > GetPlayerVehicle()"
+		nextReplies="Dlg_npc_003271" />
+
+	<Reply
+		name="Dlg_npc_003271"
+		text="Да чего уж там, пожалуйста. Но мог бы и на ананагу мне подкинуть мелочишки, раз уж так благодарен."
+		role="NPC"
+		nextReplies="Dlg_pl_003272" />
+
+	<Reply
+		name="Dlg_pl_003272"
+		text="Прости, сам на мели. Ну, я пошёл."
+		role="PLAYER"
+		scriptResult="CompleteQuest('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002667"
 		text="Спасибо огромное. Вот, держи на ананагу. Постарайся не пропить всё разом."
 		role="PLAYER"
+		scriptCondition="GetPlayerVehicle() >= 2500"
 		nextReplies="Dlg_npc_002668" />
 
 	<Reply
@@ -9894,7 +9914,7 @@
 		name="Dlg_pl_002669"
 		text="Ладно, всего хорошего."
 		role="PLAYER"
-		scriptResult="CompleteQuest('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="CompleteQuest('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' ); AddPlayerMoney(-2500); EndConversation()" />
 <!--Root/r1m4/Опциональные/Поиски муженька-->
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_1_N01"
@@ -11050,7 +11070,7 @@
 		name="Dlg_pl_001798"
 		text="Ещё раз спасибо. А насчёт шерифа можешь не переживать. Никто не будет оплакивать этих людей."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_BombShahtsReturn_Quest' ); CompleteQuestIfTaken( 'd_GetBomb_Quest' ); FailQuestIfTaken('d_RideAcrossBase_Quest'); FailQuestIfTaken('d_GiveMoneyToBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1); TakeQuest('d_DestroyBridge_Quest');  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
+		scriptResult="CompleteQuest( 'd_BombShahtsReturn_Quest' ); CompleteQuestIfTaken( 'd_GetBomb_Quest' ); FailQuestIfTaken('d_RideAcrossBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1); TakeQuest('d_DestroyBridge_Quest');  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Мер Минина-->
 	<Reply
 		name="MininMer_hellodlg0"
@@ -11390,7 +11410,7 @@
 
 	<Reply
 		name="Dlg_npc_001842"
-		text="Серго? Что-то не припоминаю. Ты уверен, что он из Северного пути?"
+		text='Серго? Что-то не припоминаю. Ты уверен, что он из "Северного пути"?'
 		role="NPC"
 		nextReplies="Dlg_pl_001852" />
 
@@ -11458,7 +11478,7 @@
 		name="Dlg_pl_001862"
 		text="До скорого!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('d_MoveCanistraToMinin_Quest');  if IsQuestComplete('d_TalkAboutVrataInMinin_Quest') then TakeQuest('MorskieVrata2_Quest');  TakeQuest('d_FindVrata_Quest') end;  if IsQuestComplete('r1m3_FindHmirinSever') then TakeQuest('r1m4_TalkWithOldTraderAboutSecondDisk') end;  RemoveQuestItem('quest_first_canistra'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_first_canistra');  AddBook('r1_book_travel_kupchina2');  TActivate ('CARAVANTOR1M4');  EndConversation()" />
+		scriptResult="CompleteQuest('d_MoveCanistraToMinin_Quest');  if IsQuestComplete('d_TalkAboutVrataInMinin_Quest') then TakeQuest('MorskieVrata2_Quest');  TakeQuest('d_FindVrata_Quest') end;  if IsQuestComplete('r1m3_FindHmirinSever') then TakeQuest('r1m4_TalkWithOldTraderAboutSecondDisk') end;  AddBook('r1_book_travel_kupchina2');  TActivate ('CARAVANTOR1M4');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Наемный рабочий-->
 	<Reply
 		name="WorkerForMoney_hellodlg0"
@@ -11510,9 +11530,21 @@
 
 	<Reply
 		name="Dlg_pl_001834"
-		text="Прекрасная новость. Грузите всё мне в кузов, я отвезу эти бочки в Минин."
+		text="Прекрасная новость. От меня ещё что-то требуется?"
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken('d_MoveWorkersToOilMine_Quest');  CompleteQuestIfTaken('d_MoveFreelancersToOilMine_Quest');  TakeQuest('d_MoveCanistraToMinin_Quest'); RemoveQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Brigada_P');  AddQuestItem('quest_first_canistra'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_first_canistra');  EndConversation()" />
+		nextReplies="Dlg_npc_003268" />
+
+	<Reply
+		name="Dlg_npc_003268"
+		text="Нет, дальше мы сами."
+		role="NPC"
+		nextReplies="Dlg_pl_003269" />
+
+	<Reply
+		name="Dlg_pl_003269"
+		text="Ну, добро, тогда я поехал."
+		role="PLAYER"
+		scriptResult="CompleteQuestIfTaken('d_MoveWorkersToOilMine_Quest');  CompleteQuestIfTaken('d_MoveFreelancersToOilMine_Quest');  TakeQuest('d_MoveCanistraToMinin_Quest'); RemoveQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Brigada_P');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Бармен Асгарда-->
 	<Reply
 		name="AsgardBarman_hellodlg0"
@@ -11753,7 +11785,7 @@
 
 	<Reply
 		name="Dlg_pl_001805"
-		text="И всё? Ни денег тебе не надо, ни помощи?"
+		text='И всё? И водка у тебя бесплатная, и информацией делишься за "так"...'
 		role="PLAYER"
 		nextReplies="Dlg_npc_002113" />
 
@@ -11895,7 +11927,7 @@
 
 	<Reply
 		name="Dlg_npc_002125"
-		text="А ты не похож на забулдыгу, но я ведь не задаю тебе лишних вопросов! Давай-ка ещё выпьем!"
+		text="А ты не похож на пьяницу, но я ведь не задаю тебе лишних вопросов! Давай-ка ещё выпьем!"
 		role="NPC"
 		nextReplies="Dlg_pl_002126" />
 
@@ -12689,7 +12721,7 @@
 
 	<Reply
 		name="Dlg_npc_002059"
-		text="Предлагаю тебе принять участие в нашей наступательной операции. Северный путь выделил мощную боевую технику, с помощью которой у нас получится захватить их базу! Это нужно сделать срочно, пока они сами не выдвинули войска на наш славный город! А с тобой наши шансы на успех значительно возрастают!"
+		text='Предлагаю тебе принять участие в нашей наступательной операции. "Северный путь" выделил мощную боевую технику, с помощью которой у нас получится захватить их базу! Это нужно сделать срочно, пока они сами не выдвинули войска на наш славный город! А с тобой наши шансы на успех значительно возрастают!'
 		role="NPC"
 		nextReplies="Dlg_pl_002060" />
 
@@ -13009,7 +13041,7 @@
 
 	<Reply
 		name="Dlg_npc_003201"
-		text="Дальше интересней. Этот работяга поделился этой информацией с Айвеном, и тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
+		text="Дальше интересней. Когда этот работяга рассказал обо всём Айвену, тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
 		role="NPC"
 		nextReplies="Dlg_pl_003202" />
 
@@ -13167,7 +13199,7 @@
 
 	<Reply
 		name="Dlg_pl_002096"
-		text="Я нашёл второй диск Айвена и ехал с ним к Оракулу, но на полпути к нему она у меня его украла."
+		text="Я нашёл второй диск Айвена и ехал с ним к Оракулу, но на полпути она украла его у меня!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002097" />
 
@@ -13773,7 +13805,7 @@
 
 	<Reply
 		name="Dlg_npc_001720"
-		text="Посети три ближайших крупных города: Порто, Мидгард и Восточный - и расскажи местным букмекерам об открытии Колизея. Как справишься, возвращайся сюда."
+		text="Посети три ближайших крупных города: Порто, Мидгард и Восточный - и расскажи местным об открытии Колизея. Как справишься, возвращайся сюда."
 		role="NPC"
 		nextReplies="Dlg_pl_001721 Dlg_pl_001722" />
 
@@ -14020,7 +14052,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz277"
-		text="А, знаешь, забудь…. Ты выглядишь нормальным. Присаживайся, коль уж подошёл."
+		text="А, знаешь, забудь… Ты выглядишь нормальным. Присаживайся, коль уж подошёл."
 		role="NPC"
 		nextReplies="Dlg_pl_xyz278" />
 
@@ -17155,7 +17187,7 @@
 
 	<Reply
 		name="Dlg_npc_001452"
-		text="Вот и всё, никаких но! Давай, Афоня, иди гуляй! Мне ещё документы подготовить нужно."
+		text='Вот и всё, никаких "но"! Давай, иди гуляй! Мне ещё документы подготовить нужно.'
 		role="NPC"
 		nextReplies="Dlg_pl_001453" />
 
@@ -17889,7 +17921,7 @@
 
 	<Reply
 		name="Dlg_npc_001395"
-		text="Купец Серго, ты его знаешь, состоит в Северном пути. Я частенько вёл с ним беседы, и он рассказывал мне о многих интересных людях. Так вот об этом твоём Бене я не слышал ни слова."
+		text='Купец Серго, ты его знаешь, состоит в "Северном пути". Я частенько вёл с ним беседы, и он рассказывал мне о многих интересных людях. Так вот об этом твоём Бене я не слышал ни слова.'
 		role="NPC"
 		nextReplies="Dlg_pl_001396" />
 
@@ -18536,5 +18568,5 @@
 		name="Vasily5_P5"
 		text="Запрыгивай в машину. Сейчас проверим, что там за шум."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'TalkToVasily' ); AddPlayerMoney(-100); TakeQuest('CheckTheEast'); TActivate('End3'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Vasily_P'); AddQuestItem('Vasily_P'); TActivate('SpawnAnalDestroyers'); EndConversation()" />
+		scriptResult="CompleteQuest( 'TalkToVasily' ); TakeQuest('CheckTheEast'); TActivate('End3'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Vasily_P'); AddQuestItem('Vasily_P'); TActivate('SpawnAnalDestroyers'); EndConversation()" />
 </DialogsResource>

@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
-<!--
-‡¤Ґбм б®¤Ґа¦ вбп бЄаЁЇвл бЄаЁЇв®ўле а®«ЁЄ®ў =)
--->
 
 <triggers>
 
@@ -384,6 +381,7 @@
 				end
 				GetPlayerVehicle():setGodMode(0)
 				GetPlayerVehicle():SetMaxSpeed(30)
+				GetPlayerVehicle():SetBelong(1042)
 			end
 			
 			local vehLisa = GetEntityByName("CARLISA")
@@ -412,6 +410,7 @@
 		</script>
 	</trigger>
 
+	<!-- Лиса решает в какую сторону ехать -->
 	<trigger Name="DirRolikBegin" active="0">
 		<event	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -485,6 +484,7 @@
 		</script>
 	</trigger>
 
+	<!-- Лиса попадает в ловушку Адептов. -->
 	<trigger Name="TrapRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -773,6 +773,7 @@
 					g_Player:AddChild(getObj("LiddenPlayerVeh1"))
 					RestoreWeaponGroups()
 					GetPlayerVehicle():SetCustomControlEnabled( 0 )
+					GetPlayerVehicle():SetBelong(1100)
 				end
 			end
 
@@ -790,6 +791,8 @@
 			TDeactivate("TrapRolikCam12")
 			TDeactivate("trLisaZapret1")
 			TActivate("triggerExitToMap14")
+
+			AllowSave(true)
 			
 			StartConversation( "Starosta" )
 

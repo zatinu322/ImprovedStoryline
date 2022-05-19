@@ -1704,15 +1704,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Aborigen"
-				Belong="1043"
-				Prototype="NPC"
-				ModelName="r2_woman"
-				cfg="47"
-				helloReplyNames="Aborigen_hellodlg0"
-				SpokenCount="0" />
-
-			<Object
 				Name="Ateist1"
 				Belong="1043"
 				Prototype="NPC"
@@ -1720,6 +1711,15 @@
 				skin="2"
 				cfg="20"
 				helloReplyNames="Dlg_npc_002315"
+				SpokenCount="0" />
+
+			<Object
+				Name="Aborigen"
+				Belong="1043"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				cfg="47"
+				helloReplyNames="Aborigen_hellodlg0"
 				SpokenCount="0" />
 		</Object>
 

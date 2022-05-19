@@ -1188,7 +1188,7 @@
 
 			SetTolerance(1100,1017,RS_ENEMY)
 			
-			TeamCreate("EretikCar",1100,CVector(2764.118, 261.967, 509.506),{"r1m3_hunter03"})
+			TeamCreate("EretikCar",1083,CVector(2764.118, 261.967, 509.506),{"r1m3_hunter03"})
 			
 			local vehEret = GetEntityByName("EretikCar_vehicle_0")
 			if vehEret then
@@ -1339,10 +1339,10 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 		
-			CreateVehicleEx( "r1m3_hunter03", "EretCrewVeh1", CVector(2713.906, 260.585, 950.311), 1100 )
-			CreateVehicleEx( "Hunter01", "EretCrewVeh2", CVector(2709.803, 260.460, 923.294), 1100 )
-			CreateVehicleEx( "Cruiser01", "EretCrewVeh3", CVector(2750.392, 260.074, 955.896), 1100 )
-			CreateVehicleEx( "Hunter01", "EretCrewVeh4", CVector(2678.722, 260.542, 940.045), 1100 )
+			CreateVehicleEx( "r1m3_hunter03", "EretCrewVeh1", CVector(2713.906, 260.585, 950.311), 1083 )
+			CreateVehicleEx( "Hunter01", "EretCrewVeh2", CVector(2709.803, 260.460, 923.294), 1083 )
+			CreateVehicleEx( "Cruiser01", "EretCrewVeh3", CVector(2750.392, 260.074, 955.896), 1083 )
+			CreateVehicleEx( "Hunter01", "EretCrewVeh4", CVector(2678.722, 260.542, 940.045), 1083 )
 			
 			local vehEret1 = GetEntityByName("EretCrewVeh1")
 			local vehEret2 = GetEntityByName("EretCrewVeh2")
@@ -1421,6 +1421,7 @@
 		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
 		<script>
 			if QuestStatus("d_GetAkselBandit_Quest")==Q_COMPLETED then
+				SetTolerance(1100, 1043, RS_ALLY);
 				belong = 1016
 				towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
 

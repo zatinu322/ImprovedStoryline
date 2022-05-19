@@ -1176,13 +1176,14 @@
 		<event	timeout="0.01"			eventid="GE_TIME_PERIOD" />
 		<script>
 
-			TeamCreate("Tankisty",1031,CVector(6244.019, 251.303, 5029.185),{"Tank01"})
+--			TeamCreate("Tankisty",1031,CVector(6244.019, 251.303, 5029.185),{"Tank01"})
+			CreateVehicleEx("Tank01","Tankisty",CVector(6244.019, 251.303, 5029.185), 1031)
 			
-			local tank1 = GetEntityByName("Tankisty_vehicle_0")
+			local tank1 = GetEntityByName("Tankisty")
 			if tank1 then
 				tank1:SetRotation(Quaternion(0.002, 0.926, -0.002, -0.378))
-				tank1:SetMaxSpeed(20)
-				tank1:SetCruisingSpeed(20)
+--				tank1:SetMaxSpeed(20)
+--				tank1:SetCruisingSpeed(20)
 				tank1:SetExternalPathByName("TankistyPath")
 			end
 
@@ -1206,7 +1207,7 @@
 	<trigger Name="SPYTANKI" active="0">
 		<event timeout="1" eventid="GE_TIME_PERIOD" />
 		<script>
-			local run = GetEntityByName("Tankisty_vehicle_0")
+			local run = GetEntityByName("Tankisty")
 			local pl = GetPlayerVehicle()
 			local len
 
@@ -1272,7 +1273,7 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			local r1 = GetEntityByName ("Tankisty_vehicle_0")
+			local r1 = GetEntityByName ("Tankisty")
 			if r1 then r1:Remove() end
 
 			FailQuestIfTaken("r4m1_Tankisty")
@@ -1286,7 +1287,7 @@
 	</trigger>
 
 	<trigger Name="SPYTANKIEND" active="0">
-		<event eventid="GE_TARGET_REACHED" ObjName="Tankisty_vehicle_0"/>
+		<event eventid="GE_TARGET_REACHED" ObjName="Tankisty"/>
 		<script>
 			TDeactivate("SPYTANKI")
 			
@@ -1305,7 +1306,7 @@
 
 			SetTolerance(1100, 1031, RS_ENEMY)
 
-			local r1 = GetEntityByName ("Tankisty_vehicle_0")
+			local r1 = GetEntityByName ("Tankisty")
 			if r1 then r1:Remove() end
 			
 			TActivate("TANKIBATTLECIN")

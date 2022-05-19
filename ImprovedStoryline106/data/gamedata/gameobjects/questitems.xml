@@ -85,12 +85,6 @@ $Id: QuestItems.xml,v 1.11 2005/10/18 06:12:48 anton Exp $
 
 	<Prototype
 		Class			= "QuestItem"
-		Name			= "quest_first_canistra"
-		ModelFile		= "kanistr"
-		ResourceType	= "QUEST_FIRST_CANISTRA" />
-
-	<Prototype
-		Class			= "QuestItem"
 		Name			= "quest_disk_1"
 		ModelFile		= "quest_cd1"
 		ResourceType	= "QUEST_DISK_1" />

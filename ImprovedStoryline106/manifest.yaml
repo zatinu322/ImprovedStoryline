@@ -4,9 +4,9 @@ name: ImprovedStoryline106
 # required human readable info
 display_name: Improved Storyline
 version: "1.0.6"
-build: "220422"
+build: "220513"
 description: |
-  TBD
+  Сюжетная модификация, главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 authors: pavlikrpg
 
 # optional human readable info
@@ -26,12 +26,12 @@ optional_content:
   - name: Icons
     display_name: Иконки
     description: |
-      TBD
+      Улучшенные иконки для радара из модификации Steel Dawn.
   - name: KrayCity
-    display_name: Крайсити рот его ебать
+    display_name: KrayCity
     description: |
-      TBD
+      Модификация от OverLine (Rock), добавляющая 5 новых деревень на территорию локации Край.
   - name: Snowfall
-    display_name: Снегопад хули
+    display_name: Улучшенный снегопад
     description: |
-      TBD
+      Более интенсивный и красивый снегопад в зимних локациях. Значительно влияет на производительность и не рекомендуется к установке людям со слабыми ПК.

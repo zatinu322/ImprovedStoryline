@@ -3877,9 +3877,9 @@
 		Name="InfectionZone13"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -9190,9 +9190,9 @@
 		Name="InfectionZone14"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -55744,9 +55744,9 @@
 		Name="InfectionZone15"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -55829,9 +55829,9 @@
 		Name="InfectionZone16"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -55938,9 +55938,9 @@
 		Name="InfectionZone17"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56067,9 +56067,9 @@
 		Name="InfectionZone18"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56176,9 +56176,9 @@
 		Name="InfectionZone19"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56293,9 +56293,9 @@
 		Name="InfectionZone20"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56382,9 +56382,9 @@
 		Name="InfectionZone21"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56467,9 +56467,9 @@
 		Name="InfectionZone22"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56564,9 +56564,9 @@
 		Name="InfectionZone23"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56689,9 +56689,9 @@
 		Name="InfectionZone24"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56798,9 +56798,9 @@
 		Name="InfectionZone25"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -56891,9 +56891,9 @@
 		Name="InfectionZone26"
 		Belong="1092"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point

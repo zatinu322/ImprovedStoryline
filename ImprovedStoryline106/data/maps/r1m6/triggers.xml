@@ -212,6 +212,7 @@
 
 	<trigger Name="DirRolikStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Dir_loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Dir1_loc" />
 		<script>
 			TActivate("DirRolikBegin")
 			CompleteQuest("DecideWay")
@@ -221,6 +222,7 @@
 
 	<trigger Name="TrapRolikStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Trap_loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Trap1_loc" />
 		<script>
 			TActivate("TrapRolikBegin")
 			CompleteQuest("GrabItems")
@@ -1069,6 +1071,7 @@
 			if QuestStatus("GoToLiden_Quest3")==Q_TAKEN then
 				CompleteQuest("GoToLiden_Quest3")
 				TActivate("StartRolik_begin")
+				AllowSave(false)
 				trigger:Deactivate()
 			end
 		</script>

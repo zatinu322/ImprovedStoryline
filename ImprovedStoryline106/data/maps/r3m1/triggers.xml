@@ -183,27 +183,6 @@
 		</script>
 	</trigger>
 
-	<trigger	Name="trCreateLoggersMech2"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-			end
-
-			local rbtm = CreateTeam("TeamLoggers2",1022,CVector(3032.153, 306.794, 2828.352),{"RobotMetatron", "RobotMetatron"}, nil, 0, Quaternion(0.011, 0.938, -0.029, -0.344))
-			if rbtm then
-				rbtm:GetVehicle(0):AddItemsToRepository("add_torque_and_stability", 1)
-				AddVehicleGunsWithRandomAffix( rbtm:GetVehicle(1), "octopus01",  3, 8+random(2))
-				AddVehicleGunsWithRandomAffix( rbtm:GetVehicle(0), "elephant01", 3, 8+random(2))
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
 <!-- Взорвали выход для роботов-->
 	<trigger	Name="trDestroyExitFromDung"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="ExitFromDung_loc" />

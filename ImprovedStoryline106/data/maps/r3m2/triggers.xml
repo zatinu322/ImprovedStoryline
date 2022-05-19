@@ -46,7 +46,7 @@
 			    if ortm then
 			    	AddVehicleGunsWithRandomAffix(ortm:GetVehicle(0), "elephant01", 3, 8+random(2))
 					ortm:GetVehicle(0):AddItemsToRepository("cooling_system_energy_and_firing_rate_energy", 1)
-					ortm:GetVehicle(1):AddItemsToRepository("Oil", 2)
+					ortm:GetVehicle(1):AddItemsToRepository("oil", 2)
 			    end
 
 			 	for i=0,1 do
@@ -726,6 +726,7 @@
 --				GetPlayerVehicle():SetExternalPathByName("ExitMapPath")
 --				TActivate("cinExit31OkFirst")			
 				PassToMap("r3m1", "FromR3M2", -1 )
+				TDeactivate("FanatikiPeaceReach")
 --				PassToMap("r3m1", "FromR3M2", 110 , true)
 			else
 --				println ("No")

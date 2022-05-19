@@ -306,7 +306,7 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 			if GetPlayerVehicle() then
-				GetPlayerVehicle():SetThrottle( 3 )
+				GetPlayerVehicle():SetThrottle( 1 )
 				GetPlayerVehicle():SetCustomLinearVelocity( 10 )
 				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer1_loc")))
 				GetPlayerVehicle():SetRotation(Quaternion(0.044, 0.591, 0.010, -0.805))

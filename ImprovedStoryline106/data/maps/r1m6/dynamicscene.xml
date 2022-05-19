@@ -12617,7 +12617,7 @@
 		Pos="2270.693 255.348 685.888"
 		Rot="0.000 -0.998 0.000 -0.055"
 		PointOfViewInInterface="-76.431 41.168 62.278"
-		CaravansDest="TheSign_enter">
+		CaravansDest="">
 		<Object
 			Name="Esting_Bar"
 			Belong="1091"
@@ -13189,7 +13189,7 @@
 		Pos="2398.750 255.000 2957.817"
 		Rot="0.000 -0.126 0.000 0.992"
 		PointOfViewInInterface="50.000 50.000 50.000"
-		CaravansDest="TheFreedom_enter">
+		CaravansDest="">
 		<Object
 			Name="TheOilVillage_Workshop"
 			Belong="1090"
@@ -17120,7 +17120,7 @@
 
 	<Object
 		Name="Dir_loc"
-		Belong="1100"
+		Belong="1042"
 		Prototype="genericLocation"
 		Pos="1055.682 255.000 974.236"
 		Radius="99.000"
@@ -17128,6 +17128,22 @@
 
 	<Object
 		Name="Trap_loc"
+		Belong="1042"
+		Prototype="genericLocation"
+		Pos="1130.776 284.545 552.521"
+		Radius="77.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="Dir1_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1055.682 255.000 974.236"
+		Radius="99.000"
+		LookingTimeOut="100.000" />
+
+	<Object
+		Name="Trap1_loc"
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="1130.776 284.545 552.521"
@@ -29276,9 +29292,9 @@
 		Name="InfectionZone001"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29330,6 +29346,58 @@
 			<Point
 				x="646.704"
 				y="515.452" />
+
+			<Point
+				x="816.866"
+				y="404.299" />
+
+			<Point
+				x="740.053"
+				y="302.486" />
+
+			<Point
+				x="653.354"
+				y="414.939" />
+
+			<Point
+				x="840.607"
+				y="293.148" />
+
+			<Point
+				x="911.110"
+				y="411.016" />
+
+			<Point
+				x="940.335"
+				y="343.642" />
+
+			<Point
+				x="992.734"
+				y="413.423" />
+
+			<Point
+				x="1022.709"
+				y="343.855" />
+
+			<Point
+				x="945.955"
+				y="249.210" />
+
+			<Point
+				x="846.305"
+				y="354.824" />
+
+			<Point
+				x="865.763"
+				y="483.642" />
+
+			<Point
+				x="827.527"
+				y="626.356" />
+
+			<Point
+				x="706.822"
+				y="472.686" />
 		</DropOut>
 	</Object>
 
@@ -29337,9 +29405,9 @@
 		Name="InfectionZone002"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29395,6 +29463,26 @@
 			<Point
 				x="791.943"
 				y="1002.321" />
+
+			<Point
+				x="927.957"
+				y="1001.029" />
+
+			<Point
+				x="801.284"
+				y="935.750" />
+
+			<Point
+				x="878.696"
+				y="1100.528" />
+
+			<Point
+				x="798.619"
+				y="1087.526" />
+
+			<Point
+				x="706.228"
+				y="1107.384" />
 		</DropOut>
 	</Object>
 
@@ -29402,9 +29490,9 @@
 		Name="InfectionZone003"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29512,6 +29600,74 @@
 			<Point
 				x="463.316"
 				y="1525.112" />
+
+			<Point
+				x="549.773"
+				y="1551.059" />
+
+			<Point
+				x="603.509"
+				y="1801.890" />
+
+			<Point
+				x="675.884"
+				y="1797.070" />
+
+			<Point
+				x="749.695"
+				y="1820.099" />
+
+			<Point
+				x="760.549"
+				y="1927.105" />
+
+			<Point
+				x="731.753"
+				y="2016.816" />
+
+			<Point
+				x="686.659"
+				y="1894.788" />
+
+			<Point
+				x="566.052"
+				y="1899.067" />
+
+			<Point
+				x="558.255"
+				y="2004.420" />
+
+			<Point
+				x="670.414"
+				y="2003.535" />
+
+			<Point
+				x="629.263"
+				y="2097.673" />
+
+			<Point
+				x="482.507"
+				y="2112.168" />
+
+			<Point
+				x="418.952"
+				y="2010.122" />
+
+			<Point
+				x="360.747"
+				y="1935.005" />
+
+			<Point
+				x="366.977"
+				y="1899.326" />
+
+			<Point
+				x="337.031"
+				y="1516.383" />
+
+			<Point
+				x="445.821"
+				y="1594.649" />
 		</DropOut>
 	</Object>
 
@@ -29519,9 +29675,9 @@
 		Name="InfectionZone004"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29609,6 +29765,58 @@
 			<Point
 				x="615.374"
 				y="1308.788" />
+
+			<Point
+				x="568.535"
+				y="1201.068" />
+
+			<Point
+				x="762.943"
+				y="1296.471" />
+
+			<Point
+				x="930.977"
+				y="1397.126" />
+
+			<Point
+				x="898.536"
+				y="1551.890" />
+
+			<Point
+				x="1057.213"
+				y="1462.300" />
+
+			<Point
+				x="1069.181"
+				y="1562.659" />
+
+			<Point
+				x="982.167"
+				y="1584.378" />
+
+			<Point
+				x="1047.903"
+				y="1653.092" />
+
+			<Point
+				x="1005.151"
+				y="1747.635" />
+
+			<Point
+				x="888.558"
+				y="1715.511" />
+
+			<Point
+				x="923.231"
+				y="1626.192" />
+
+			<Point
+				x="905.514"
+				y="1476.422" />
+
+			<Point
+				x="987.848"
+				y="1401.269" />
 		</DropOut>
 	</Object>
 
@@ -29616,9 +29824,9 @@
 		Name="InfectionZone005"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29674,6 +29882,30 @@
 			<Point
 				x="1580.142"
 				y="1320.203" />
+
+			<Point
+				x="1615.136"
+				y="1250.741" />
+
+			<Point
+				x="1564.530"
+				y="1679.476" />
+
+			<Point
+				x="1507.880"
+				y="1649.572" />
+
+			<Point
+				x="1588.359"
+				y="1483.431" />
+
+			<Point
+				x="1532.813"
+				y="1499.225" />
+
+			<Point
+				x="1570.697"
+				y="1363.256" />
 		</DropOut>
 	</Object>
 
@@ -29681,9 +29913,9 @@
 		Name="InfectionZone006"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29751,6 +29983,34 @@
 			<Point
 				x="1700.104"
 				y="844.050" />
+
+			<Point
+				x="1891.917"
+				y="705.769" />
+
+			<Point
+				x="1820.172"
+				y="648.683" />
+
+			<Point
+				x="1772.069"
+				y="488.906" />
+
+			<Point
+				x="1882.640"
+				y="638.111" />
+
+			<Point
+				x="1999.021"
+				y="575.686" />
+
+			<Point
+				x="2025.118"
+				y="676.121" />
+
+			<Point
+				x="1799.866"
+				y="571.565" />
 		</DropOut>
 	</Object>
 
@@ -29758,9 +30018,9 @@
 		Name="InfectionZone007"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29840,6 +30100,18 @@
 			<Point
 				x="1871.094"
 				y="1218.117" />
+
+			<Point
+				x="1828.445"
+				y="1477.361" />
+
+			<Point
+				x="1763.741"
+				y="1529.946" />
+
+			<Point
+				x="1827.898"
+				y="1337.560" />
 		</DropOut>
 	</Object>
 
@@ -29847,9 +30119,9 @@
 		Name="InfectionZone008"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -29925,6 +30197,18 @@
 			<Point
 				x="2479.069"
 				y="1109.685" />
+
+			<Point
+				x="2402.921"
+				y="945.920" />
+
+			<Point
+				x="2362.364"
+				y="893.316" />
+
+			<Point
+				x="2405.640"
+				y="853.048" />
 		</DropOut>
 	</Object>
 
@@ -29932,9 +30216,9 @@
 		Name="InfectionZone009"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -30022,6 +30306,26 @@
 			<Point
 				x="2104.472"
 				y="1134.100" />
+
+			<Point
+				x="2209.992"
+				y="1207.516" />
+
+			<Point
+				x="2199.792"
+				y="1262.607" />
+
+			<Point
+				x="2251.731"
+				y="1309.355" />
+
+			<Point
+				x="2283.545"
+				y="1362.407" />
+
+			<Point
+				x="2287.493"
+				y="1406.850" />
 		</DropOut>
 	</Object>
 
@@ -30029,9 +30333,9 @@
 		Name="InfectionZone010"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -30119,6 +30423,22 @@
 			<Point
 				x="2588.955"
 				y="2334.658" />
+
+			<Point
+				x="2469.750"
+				y="1772.600" />
+
+			<Point
+				x="2485.307"
+				y="1978.108" />
+
+			<Point
+				x="2521.119"
+				y="2162.686" />
+
+			<Point
+				x="2610.773"
+				y="2033.968" />
 		</DropOut>
 	</Object>
 
@@ -30126,9 +30446,9 @@
 		Name="InfectionZone011"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -30208,6 +30528,22 @@
 			<Point
 				x="2598.649"
 				y="2399.303" />
+
+			<Point
+				x="2702.254"
+				y="2719.010" />
+
+			<Point
+				x="2648.911"
+				y="2522.229" />
+
+			<Point
+				x="2750.720"
+				y="2592.179" />
+
+			<Point
+				x="2861.677"
+				y="2673.797" />
 		</DropOut>
 	</Object>
 
@@ -30215,9 +30551,9 @@
 		Name="InfectionZone012"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -30313,6 +30649,30 @@
 			<Point
 				x="2215.106"
 				y="2605.257" />
+
+			<Point
+				x="2134.057"
+				y="2108.433" />
+
+			<Point
+				x="2114.893"
+				y="2484.885" />
+
+			<Point
+				x="2203.002"
+				y="2484.900" />
+
+			<Point
+				x="2130.874"
+				y="2315.125" />
+
+			<Point
+				x="2051.054"
+				y="2486.432" />
+
+			<Point
+				x="2040.942"
+				y="2165.901" />
 		</DropOut>
 	</Object>
 
@@ -31937,9 +32297,9 @@
 		Name="InfectionZone013"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -32023,6 +32383,46 @@
 			<Point
 				x="2330.164"
 				y="3243.529" />
+
+			<Point
+				x="2395.930"
+				y="3304.688" />
+
+			<Point
+				x="2421.574"
+				y="3155.435" />
+
+			<Point
+				x="2276.358"
+				y="3175.703" />
+
+			<Point
+				x="2245.294"
+				y="3274.927" />
+
+			<Point
+				x="2090.780"
+				y="3158.883" />
+
+			<Point
+				x="2030.729"
+				y="3198.504" />
+
+			<Point
+				x="1962.041"
+				y="3166.358" />
+
+			<Point
+				x="2023.888"
+				y="3083.444" />
+
+			<Point
+				x="2102.007"
+				y="3128.889" />
+
+			<Point
+				x="2149.906"
+				y="3155.679" />
 		</DropOut>
 	</Object>
 
@@ -32030,9 +32430,9 @@
 		Name="InfectionZone014"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -32104,6 +32504,26 @@
 			<Point
 				x="1975.425"
 				y="2907.456" />
+
+			<Point
+				x="1769.927"
+				y="3116.737" />
+
+			<Point
+				x="1864.907"
+				y="2940.317" />
+
+			<Point
+				x="1655.954"
+				y="2981.843" />
+
+			<Point
+				x="1738.946"
+				y="2980.566" />
+
+			<Point
+				x="1705.421"
+				y="2919.127" />
 		</DropOut>
 	</Object>
 
@@ -32111,9 +32531,9 @@
 		Name="InfectionZone015"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -32185,6 +32605,22 @@
 			<Point
 				x="1041.401"
 				y="2813.212" />
+
+			<Point
+				x="1004.736"
+				y="2704.656" />
+
+			<Point
+				x="1030.310"
+				y="2632.556" />
+
+			<Point
+				x="887.595"
+				y="2735.894" />
+
+			<Point
+				x="948.772"
+				y="2544.215" />
 		</DropOut>
 	</Object>
 
@@ -32192,9 +32628,9 @@
 		Name="InfectionZone016"
 		Belong="1005"
 		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r3_BanditesTeam"
+		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
-		InfectionLair="r3_BanditesTeam"
+		InfectionLair="r5_BanditsGang"
 		HadPlayerInside="0">
 		<Polygon>
 			<Point
@@ -32298,6 +32734,46 @@
 			<Point
 				x="1860.003"
 				y="2596.322" />
+
+			<Point
+				x="1716.034"
+				y="2575.478" />
+
+			<Point
+				x="1593.443"
+				y="2513.267" />
+
+			<Point
+				x="1468.790"
+				y="2480.756" />
+
+			<Point
+				x="1500.846"
+				y="2563.392" />
+
+			<Point
+				x="1642.276"
+				y="2596.173" />
+
+			<Point
+				x="1439.923"
+				y="2512.178" />
+
+			<Point
+				x="1566.254"
+				y="2577.688" />
+
+			<Point
+				x="1532.004"
+				y="2506.756" />
+
+			<Point
+				x="1621.641"
+				y="2738.068" />
+
+			<Point
+				x="1433.761"
+				y="2665.052" />
 		</DropOut>
 	</Object>
 

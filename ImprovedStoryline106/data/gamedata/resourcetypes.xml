@@ -154,7 +154,6 @@ $Id: ResourceTypes.xml,v 1.54 2005/11/09 07:26:52 anton Exp $
 		<Type Name="QUEST_OLD_DIGITAL" />
 		<Type Name="QUEST_ART_MASTERPICE" />
 		<Type Name="QUEST_MAFIA_NARCOTIK" />
-		<Type Name="QUEST_FIRST_CANISTRA" />
 		<Type Name="QUEST_DISK_1" />
 		<Type Name="QUEST_DISK_2" />
 		<Type Name="QUEST_KEY_FOR_SUBMARINE" />

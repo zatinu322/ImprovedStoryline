@@ -1107,7 +1107,9 @@
 
 			TActivate("TriggerLabirintCarDie2")
 
-			TakeQuest("r1m3_OldTownOutsiderCar2_Quest");
+			TakeQuest("r1m3_OldTownOutsiderCar2_Quest")
+			
+			ShowCircleOnMinimapByName("OldTownOutsiderCar2_vehicle_0")
 
 			trigger:Deactivate()
 		</script>

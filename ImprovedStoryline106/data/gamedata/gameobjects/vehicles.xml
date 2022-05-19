@@ -867,9 +867,8 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 			<PartDescription id = "CABIN" partResourceType = "DOZER_CABIN" lpName = "LP_CAB01" >
 				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
 			</PartDescription>
-			<PartDescription id = "BASKET" partResourceType="DOZER_BASKET" lpName = "LP_BIG01" >
-				<PartDescription id="BASKET_BIG_GUN_0" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
-			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="DOZER_BASKET" lpName = "LP_BIG01" />
+			<PartDescription id="BASKET_BIG_GUN_0" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
 		</MainPartDescription>
 
 		<Parts>
@@ -932,7 +931,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 			<PartDescription id = "CABIN" partResourceType = "TANK_CABIN" lpName = "LP_GIANT01" />	
 			<PartDescription id = "TANK_GUN" partResourceType = "TANK_GUN" lpName = "LP_GIANT01" />
 			<PartDescription id = "CHASSIS_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
-			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_SML01" />
 		</MainPartDescription>
 
 		<Parts>
@@ -1621,7 +1620,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		<Parts>
 			<Part id = "CABIN"			Prototype = "fighterCab02" />
 			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />  
-			<Part id = "CABIN_BIG_GUN"		Prototype = "vulcan01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
 			<Part id = "BASKET"		Prototype = "fakeCargo" />
 		</Parts>
 	</Prototype>
@@ -2205,7 +2204,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 			<Part id = "CABIN"			Prototype = "belazCab05" />
 			<Part id = "BASKET"			Prototype = "belazCargo02" />
 			<Part id = "CABIN_BIG_GUN_1" 		Prototype = "flag01" />
-			<Part id = "BASKET_GIANT_GUN" 	Prototype = "octopus01" />
+			<Part id = "CABIN_GIANT_GUN" 	Prototype = "octopus01" />
 			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "rainmetal01" />
 		</Parts>
 	</Prototype>
@@ -2218,7 +2217,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 			<Part id = "CABIN"			Prototype = "belazCab05" />
 			<Part id = "BASKET"			Prototype = "belazCargo02" />
 			<Part id = "CABIN_BIG_GUN_1" 		Prototype = "flag01" />
-			<Part id = "BASKET_GIANT_GUN" 	Prototype = "octopus01" />
+			<Part id = "CABIN_GIANT_GUN" 	Prototype = "octopus01" />
 			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "rainmetal01" />
 		</Parts>
 	</Prototype>

@@ -387,7 +387,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m1"
-			targetObjName="Ending3" />
+			targetObjName="BezummecCars" />
 	</QuestInfo>
 
 	<QuestInfo

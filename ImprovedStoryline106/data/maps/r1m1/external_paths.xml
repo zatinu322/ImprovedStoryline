@@ -13,6 +13,63 @@
 	</Path>
 
 	<Path
+		Name="Bezumcy_path01">
+		<Point
+			coord="3926.581 2612.823" />
+
+		<Point
+			coord="3887.507 2627.293" />
+
+		<Point
+			coord="3842.817 2643.325" />
+
+		<Point
+			coord="3800.673 2676.273" />
+
+		<Point
+			coord="3764.460 2722.852" />
+
+		<Point
+			coord="3745.469 2754.802" />
+
+		<Point
+			coord="3726.545 2809.058" />
+
+		<Point
+			coord="3716.896 2867.280" />
+
+		<Point
+			coord="3710.826 2941.773" />
+
+		<Point
+			coord="3713.282 3013.266" />
+
+		<Point
+			coord="3706.560 3080.586" />
+
+		<Point
+			coord="3687.798 3145.658" />
+
+		<Point
+			coord="3674.852 3211.458" />
+
+		<Point
+			coord="3644.819 3267.272" />
+
+		<Point
+			coord="3596.393 3291.360" />
+
+		<Point
+			coord="3522.217 3288.027" />
+
+		<Point
+			coord="3471.298 3270.096" />
+
+		<Point
+			coord="3405.242 3242.344" />
+	</Path>
+
+	<Path
 		Name="BolnoyPath1">
 		<Point
 			coord="2531.731 1650.542" />

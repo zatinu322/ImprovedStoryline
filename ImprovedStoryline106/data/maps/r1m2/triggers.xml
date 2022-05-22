@@ -963,7 +963,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("BefDesert", CINEMATIC_NO_AIM, 0, 7, 1, 1 )
+			Fly("BefDesert", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 88060, 1 )
@@ -974,6 +974,7 @@
 				Plf:SetRotation(Quaternion(-0.006, 0.745, 0.027, 0.666))
 				Plf:SetExternalPathByName("BeforeDesert")
 				Plf:SetCustomLinearVelocity( 10 )
+				Plf:LimitMaxSpeed(17)
 			end
 
 			TActivate("trToMidgardForComposite_End")
@@ -994,6 +995,7 @@
 			if Plf then
 				Plf:SetExternalPathByName("BeforeDesert")
 				Plf:PlaceToEndOfPath("BeforeDesert")
+				Plf:UnlimitMaxSpeed()
 			end
 
 			trigger:Deactivate()

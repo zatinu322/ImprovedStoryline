@@ -381,10 +381,6 @@
 		FullName=" " />
 
 	<Object
-		Name="Kartograph1"
-		FullName="Картограф" />
-
-	<Object
 		Name="AivenGo"
 		FullName="Айвен Го" />
 

@@ -61,7 +61,7 @@ $Id: Relationship.xml,v 1.19 2005/11/24 09:45:17 anton Exp $
 			tolerance="neutral" />
 		<set
 			forwhom="1015"
-			who="1013 1017 1041 1042 1043 1053 1100"
+			who="1011 1013 1017 1041 1042 1043 1053 1100"
 			tolerance="neutral" />
 
 		<set

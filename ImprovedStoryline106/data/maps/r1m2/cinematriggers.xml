@@ -398,6 +398,7 @@
 			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(7158.604, 167.977, 3378.776), Quaternion(0.003, 0.828, -0.001, -0.561), 0)
 
 			local RGlad2 = CreateVehicleEx("MolokovozKolizey","RolikGlad1",CVector(7108.745, 188.093, 3170.135), 1002)
+			if RGlad2 then RGlad2:SetRandomSkin() end
 
 			local RGlad2ID = RGlad2:GetId()
 			local PlVehicle = GetPlayerVehicle()
@@ -412,12 +413,13 @@
 				PlVehicle:SetExternalPathByName("Player_path02")
 				PlVehicle:SetThrottle( 1 )
 				PlVehicle:SetCustomLinearVelocity( 30 )
+				PlVehicle:LimitMaxSpeed(20)
 				PlVehicle:SetCustomControlEnabled( false )
 			end
 
-			FlyLinked( "Kol2_cam01", PlID, 8, 1, 0, PlID )
-			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-			FlyLinked( "Kol2_cam03", CTochID, 12, 0, 1, RGlad2ID )
+			FlyLinked( "Kol2_cam01", PlID, 7, 1, 0, PlID )
+			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			FlyLinked( "Kol2_cam03", CTochID, 10, 0, 1, RGlad2ID )
 			StartCinematic()
 
 			TActivate("RolikEnd_Kolizey1")
@@ -430,7 +432,7 @@
 	<trigger Name="trKol1_cam02" active="0">
 		<event flypath="Kol2_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			AddCinematicMessage( 221, 5 )
+			AddCinematicMessage( 221, 2 )
 
 			local RGlad2 = GetEntityByName("RolikGlad1")
 			if RGlad2 then
@@ -458,6 +460,7 @@
 				PlVehicle:SetCustomControlEnabled( true )
 				PlVehicle:PlaceToEndOfPath("Player_path02")
 				PlVehicle:SetCustomControlEnabled( false )
+				PlVehicle:UnlimitMaxSpeed()
 			end
 
 			local obj01 = GetEntityByName("Orator")
@@ -466,6 +469,7 @@
 			end
 			local obj02 = GetEntityByName("RolikGlad1")
 			if obj02 then
+				skin = obj02:GetSkin()
 				obj02:Remove()
 			end
 			local obj03 = GetEntityByName("CamTochka")
@@ -476,6 +480,10 @@
 			CreateNewDummyObject( "rotund", "ZABOR", -1, -1, CVector(7084, 155, 3942), Quaternion(0.0037,0.9063,0.0079,0.4226), 0)
 
 			TeamCreate("Gladiator1",1002,CVector(7244.941, 156, 3477.613),{"MolokovozKolizey"},CVector(7117, 156, 3758))
+			local RGlad2 = GetEntityByName("Gladiator1")
+			if RGlad2 then RGlad2:GetVehicle(0):SetSkin(skin) end
+
+			skin = nil
 
 			CompleteQuest("CombatInKollizey_Quest1")
 
@@ -514,11 +522,12 @@
 
 			if PlVehicle then
 				PlVehicle:SetExternalPathByName("Player_path02")
+				PlVehicle:LimitMaxSpeed(20)
 				PlVehicle:SetThrottle( 1 )
 				PlVehicle:SetCustomLinearVelocity( 30 )
 			end
 
-			FlyLinked( "Kol2_cam01", PlID, 8, 1, 0, PlID )
+			FlyLinked( "Kol2_cam01", PlID, 6, 1, 0, PlID )
 			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			FlyLinked( "Kol2_cam21", RGlad2ID, 3, 0, 0, nil, nil, true )
 			FlyLinked( "Kol2_cam03", CTochID, 6, 0, 1, RGlad2ID )
@@ -574,6 +583,7 @@
 				PlVehicle:SetCustomControlEnabled( true )
 				PlVehicle:PlaceToEndOfPath("Player_path02")
 				PlVehicle:SetCustomControlEnabled( false )
+				PlVehicle:UnlimitMaxSpeed()
 			end
 
 			local obj01 = GetEntityByName("Orator")

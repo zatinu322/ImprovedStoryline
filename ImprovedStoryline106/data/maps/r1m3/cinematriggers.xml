@@ -50,8 +50,8 @@
 			if br2 then
 				br2:SetRotation(Quaternion(0.055, -0.668, 0.035, 0.741))
 				br2:SetExternalPathByName("BrigadaBridgePath")
-				br2:SetMaxSpeed(10)
-				br2:SetCruisingSpeed(10)
+				br2:SetMaxSpeed(11)
+				br2:SetCruisingSpeed(11)
 				br2:setGodMode( 1 )
 			end
 			
@@ -59,8 +59,8 @@
 			if br3 then
 				br3:SetRotation(Quaternion(0.071, -0.664, 0.042, 0.743))
 				br3:SetExternalPathByName("BrigadaBridgePath")
-				br3:SetMaxSpeed(10)
-				br3:SetCruisingSpeed(10)
+				br3:SetMaxSpeed(9)
+				br3:SetCruisingSpeed(9)
 				br3:setGodMode( 1 )
 			end
 			
@@ -200,15 +200,15 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("FATHERHOUSE_cam01", CINEMATIC_NO_AIM, 0, 20, 1, 0 )
-			Fly("FATHERHOUSE_cam02", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
-			Fly("FATHERHOUSE_cam03", CINEMATIC_NO_AIM, 0, 19, 0, 0 )
+			Fly("FATHERHOUSE_cam01", CINEMATIC_NO_AIM, 0, 22.5, 1, 0 )
+			Fly("FATHERHOUSE_cam02", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+			Fly("FATHERHOUSE_cam03", CINEMATIC_NO_AIM, 0, 20, 0, 0 )
 			Fly("FATHERHOUSE_cam04", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("FATHERHOUSE_cam05", CINEMATIC_NO_AIM, 0, 28, 0, 0 )
-			Fly("FATHERHOUSE_cam06", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
-			Fly("FATHERHOUSE_cam07", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("FATHERHOUSE_cam08", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("FATHERHOUSE_cam09", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+			Fly("FATHERHOUSE_cam05", CINEMATIC_NO_AIM, 0, 29, 0, 0 )
+			Fly("FATHERHOUSE_cam06", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+			Fly("FATHERHOUSE_cam07", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
+			Fly("FATHERHOUSE_cam08", CINEMATIC_NO_AIM, 0, 21, 0, 0 )
+			Fly("FATHERHOUSE_cam09", CINEMATIC_NO_AIM, 0, 9, 0, 1 )
 			StartCinematic()
 
 			TActivate("trFATHERHOUSE_cam01")
@@ -381,7 +381,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("FATHERHOUSERETURN_cam01", CINEMATIC_NO_AIM, 0, 15, 1, 1 )
+			Fly("FATHERHOUSERETURN_cam01", CINEMATIC_NO_AIM, 0, 19.5, 1, 1 )
 			StartCinematic()
 
 			TActivate("RolikEnd_FATHERHOUSERETURN")
@@ -529,7 +529,7 @@
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 
-			FlyLinked( "THESPY_cam01", CTochID, 15, 1, 0, vehMID )
+			FlyLinked( "THESPY_cam01", CTochID, 10, 1, 0, vehMID )
 			Fly("THESPY_cam02", CINEMATIC_NO_AIM, 0, 19, 0, 1 )
 			StartCinematic()
 
@@ -714,8 +714,116 @@
 		</script>
 	</trigger>
 
+	<!-- Готовимся с ТСП к нападению на базу 51 -->
+	<trigger Name="ArmiaTSPPreparationBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+		
+			SaveAllToleranceStatus(RS_NEUTRAL)
+		
+   			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+   			
+			Fly("Armia_cam01", CINEMATIC_NO_AIM, 0, 22, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 8806, 0.5 )
+			AddCinematicMessage( 8807, 0.5 )
+			
+   			TActivate("ArmiaTSPPreparationEnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ArmiaTSPPreparationEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			
+			RestoreAllToleranceStatus()
+
+			local veh1 = GetEntityByName("ArmyVeh1")
+			if veh1 then veh1:Remove() end
+			local veh2 = GetEntityByName("ArmyVeh2")
+			if veh2 then veh2:Remove() end
+			local veh3 = GetEntityByName("ArmyVeh3")
+			if veh3 then veh3:Remove() end
 
 
+			
+			local newControllerId1 = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "ArmyCont1"
+			}
+
+			local newControllerId2 = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "ArmyCont2"
+			}
+
+			local newControllerId3 = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "ArmyCont3"
+			}
+
+			local newController1 = GetEntityByID(newControllerId1)
+			local newController2 = GetEntityByID(newControllerId2)
+			local newController3 = GetEntityByID(newControllerId3)
+
+			TeamCreate("ArmiaTSP",1010,CVector(6018.614, 237.349, 1893.204),{"BelazTSP", "TSPFighter", "tspfighter2"}, CVector(7069.637, 307.696, 1045.202), 1)
+
+			local ArmyVeh1 = GetEntityByName("ArmiaTSP_vehicle_0")
+			local ArmyVeh2 = GetEntityByName("ArmiaTSP_vehicle_1")
+			local ArmyVeh3 = GetEntityByName("ArmiaTSP_vehicle_2")
+			
+			if ArmyVeh1 then
+				ArmyVeh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
+				ArmyVeh1:SetGamePositionOnGround( CVector(6057.330, 238.386, 1933.433))
+			end
+			
+			if ArmyVeh2 then
+				ArmyVeh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
+				ArmyVeh2:SetGamePositionOnGround( CVector(6027.587, 237.066, 1926.612))
+			end
+			
+			if ArmyVeh3 then
+				ArmyVeh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
+				ArmyVeh3:SetGamePositionOnGround( CVector(6012.056, 237.713, 1931.321))
+			end
+
+			local FVehicle1 = GetEntityByName("ArmiaTSP_vehicle_0")
+			local FVehicle2 = GetEntityByName("ArmiaTSP_vehicle_1")
+			local FVehicle3 = GetEntityByName("ArmiaTSP_vehicle_2")
+
+			if newController1 and FVehicle1 then
+				newController1:setVehicleUnderControl(FVehicle1)
+			end
+
+			if newController2 and FVehicle2 then
+				newController2:setVehicleUnderControl(FVehicle2)
+			end
+
+			if newController3 and FVehicle3 then
+				newController3:setVehicleUnderControl(FVehicle3)
+			end
+			
+			TeamCreate("Brigada1",1012,CVector(6853.181, 285.306, 1177.337),{"BrigadaCruiser"})
+			TeamCreate("Brigada2",1012,CVector(7056.044, 305.453, 1044.753),{"BrigadaVoz"})
+			TeamCreate("ThiefCar",1012,CVector(7080.981, 307.714, 1041.897),{"UralShot"}, nil, 0, Quaternion(-0.042, 0.508, -0.019, -0.860))
+
+			TActivate("TRIGGER_THIEFDIE")
+			
+			CompleteQuest( "Zachisti1_Quest" )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
 
 
 <!-- Игрок в засаде видит, как из тоннеля выезжает незнакомец. -->
@@ -732,8 +840,8 @@
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 
-			Fly("Zasada_cam01", CINEMATIC_NO_AIM, 0, 15, 1, 0 )
-			FlyLinked( "Zasada_cam02", CTochID, 20, 0, 1, vehPID )
+			Fly("Zasada_cam01", CINEMATIC_NO_AIM, 0, 17, 1, 0 )
+			FlyLinked( "Zasada_cam02", CTochID, 15, 0, 1, vehPID )
 			StartCinematic()
 
 			TActivate("RolikEnd_Zasada")
@@ -776,6 +884,8 @@
 			if vehP then
 				vehP:SetRotation(Quaternion(0.039, 0.778, -0.046, 0.626))
 				vehP:SetExternalPathByName("vehPioneer_path")
+				vehP:SetMaxSpeed(30)
+				vehP:SetCruisingSpeed(20)
 			end
 
 			AddCinematicMessage( 8, 0.5 )
@@ -802,7 +912,7 @@
 			TDeactivate( "trZasada_cam02" )
 			TDeactivate( "RolikBegin_Zasada" )
 
-			TeamCreate("Pioneer",1046,CVector(1915.345, 0, 5501.671),{"Cruiser02"})
+			TeamCreate("Pioneer",1046,CVector(1915.345, 0, 5501.671),{"Cruiser02"}, nil, nil, Quaternion(-0.057, 0.416, 0.017, 0.907))
 
 			local vehP = GetEntityByName("Pioneer_vehicle_0")
 			if vehP then
@@ -828,10 +938,6 @@
 		</script>
 	</trigger>
 
-
-
-
-
 <!-- Незнакомец доехал до Асгарда. -->
 	<trigger Name="RolikBegin_PIONEERASGARD" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
@@ -847,7 +953,7 @@
 			local CTochID = CToch:GetId()
 
 			FlyLinked( "PIONEERASGARD_cam01", CTochID, 10, 1, 0, vehPID )
-			Fly("PIONEERASGARD_cam02", CINEMATIC_NO_AIM, 0, 14, 0, 1 )
+			Fly("PIONEERASGARD_cam02", CINEMATIC_NO_AIM, 0, 11.5, 0, 1 )
 			StartCinematic()
 
 			TActivate("trPIONEERASGARD_cam01")
@@ -865,17 +971,19 @@
 
 			local veh= GetEntityByName("Pioneer_vehicle_0")
 			if veh then
+				Pskin = veh:GetSkin()
 				veh:Remove ()
 			end
 
 			local vehP = GetEntityByName("vehPioneer")
 			if vehP then
-				vehP:SetGamePositionOnGround( CVector(3649.857, 290.299, 6200.682))
-				vehP:SetSkin(4)
-				vehP:SetRotation(Quaternion(-0.041, 0.442, 0.017, 0.896))
+				vehP:SetGamePositionOnGround( CVector(3615.582, 293.355, 6178.280))
+				vehP:SetSkin(Pskin)
+				vehP:SetRotation(Quaternion(-0.057, 0.416, 0.017, 0.907))
 				vehP:SetThrottle( 1 )
-				vehP:SetCustomLinearVelocity( 30 )
+				vehP:SetCustomLinearVelocity( 10 )
 				vehP:SetExternalPathByName("PIONEERASGARD_path")
+				vehP:SetCruisingSpeed(10)
 			end
 
 			local vehPlayer = GetPlayerVehicle()
@@ -887,6 +995,8 @@
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
 			end
+
+			Pskin = nil
 
 			trigger:Deactivate()
 		</script>
@@ -910,8 +1020,15 @@
 			local vehP = GetEntityByName("vehPioneer")
 			local Toch = GetEntityByName("CamTochka")
 
-			if vehP then vehP:Remove() end
 			if Toch then Toch:Remove() end
+			if vehP then
+				vehP:PlaceToEndOfPath("PIONEERASGARD_path")
+				vehP:SetGamePositionOnGround(CVector(3689.608, 301.659, 6244.455))
+				vehP:SetRotation(Quaternion(0.006, 0.584, -0.009, 0.812))
+				vehP:setGodMode(1)
+				vehP:setImmortalMode(1)
+			end
+			
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -938,6 +1055,8 @@
 	<trigger Name="RolikBegin_LISAAFTERTHIEF" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
+			RuleConsole("cinematic_spring_coeff 6.0")
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			local Plf = GetPlayerVehicle()
@@ -947,28 +1066,17 @@
 			Plf:SetCustomControlEnabled( false )
 
 			CreateVehicleEx("LisaCar","vehLisa_0",CVector(0, 10000, 0), 1042)
-			CreateNewDummyObject( "brick_debris1", "CamTochka1", -1, -1, CVector(5969.704, 288.686, 5893.204), Quaternion(0, 0, 0, 0), 1)
-			CreateNewDummyObject( "brick_debris1", "CamTochka2", -1, -1, CVector(5726.654, 275.332, 5133.856), Quaternion(0, 0, 0, 0), 1)
-			CreateNewDummyObject( "brick_debris1", "CamTochka3", -1, -1, CVector(4537.015, 281.739, 3769.220), Quaternion(0, 0, 0, 0), 1)
-			
 
 			local vehLisa = GetEntityByName("vehLisa_0")
 			local vehLisaID = vehLisa:GetId()
 			local idn01 = GetPlayerVehicleId()
-			local CToch1 = GetEntityByName("CamTochka1")
-			local CToch1ID = CToch1:GetId()
-			local CToch2 = GetEntityByName("CamTochka2")
-			local CToch2ID = CToch2:GetId()
-			local CToch3 = GetEntityByName("CamTochka3")
-			local CToch3ID = CToch3:GetId()
 
-			Fly("LISAAFTERTHIEF_cam01", CINEMATIC_NO_AIM, 0, 13, 1, 0 )
-			Fly("LISAAFTERTHIEF_cam02", CINEMATIC_NO_AIM, 0, 20, 0, 0 )
-			FlyLinked( "LISAAFTERTHIEF_cam031", idn01, 15, 0, 0, vehLisaID )
-			FlyLinked( "LISAAFTERTHIEF_cam04", CToch1ID, 8, 0, 0, vehLisaID )
-			FlyLinked( "LISAAFTERTHIEF_cam05", CToch2ID, 10, 0, 0, vehLisaID )
-			FlyLinked( "LISAAFTERTHIEF_cam07", CToch3ID, 10, 0, 0, vehLisaID )
-			Fly("LISAAFTERTHIEF_cam06", CINEMATIC_NO_AIM, 0, 9, 0, 1 )
+			Fly("LISAAFTERTHIEF_cam01", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
+			Fly("LISAAFTERTHIEF_cam02", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+			FlyLinked( "LISAAFTERTHIEF_cam031", idn01, 14, 0, 0, vehLisaID )
+			FlyLinked( "LISAAFTERTHIEF_cam04", vehLisaID, 8, 0, 0, idn01 )
+			FlyLinked( "LISAAFTERTHIEF_cam05", idn01, 12, 0, 0, vehLisaID )
+			Fly("LISAAFTERTHIEF_cam06",CINEMATIC_AIM_TO_ID, idn01, 13, 0, 1 )
 			StartCinematic()
 
 			TActivate("RolikEnd_LISAAFTERTHIEF")
@@ -977,7 +1085,6 @@
 			TActivate("trLISAAFTERTHIEF_cam031")
 			TActivate("trLISAAFTERTHIEF_cam04")
 			TActivate("trLISAAFTERTHIEF_cam05")
-			TActivate("trLISAAFTERTHIEF_cam07")
 			TActivate("trLISAAFTERTHIEF_cam06")
 			TActivate( "trMsg01" )
 
@@ -993,9 +1100,9 @@
 				vehLisa:SetGamePositionOnGround( CVector(6155.302, 258.301, 7752.490))
 				vehLisa:SetRotation(Quaternion(0.006, -0.997, -0.030, 0.068))
 				vehLisa:SetThrottle(1)
-				vehLisa:SetCustomLinearVelocity(5)
+				vehLisa:SetCustomLinearVelocity(25)
 				vehLisa:SetExternalPathByName("lisa_path01")
-				vehLisa:SetCruisingSpeed(25)
+				vehLisa:SetCruisingSpeed(35)
 				vehLisa:SetSkin(2)
 			end
 
@@ -1062,7 +1169,7 @@
 			if vehLisa then
 				getObj("humLisa"):Remove()
 				vehLisa:SetThrottle( 1 )
-				vehLisa:SetCustomLinearVelocity( 20 ) 
+				vehLisa:SetCustomLinearVelocity( 10 ) 
 				vehLisa:SetExternalPathByName("lisa_path02")  
 			end
 	
@@ -1089,8 +1196,8 @@
 			end
 			
 			if vehLisa then
-				vehLisa:SetThrottle( 1 )
 				vehLisa:SetCustomLinearVelocity( 15 )
+				vehLisa:SetThrottle( 1 )
 				vehLisa:SetGamePositionOnGround( CVector(5774.488, 253.369, 6023.187))
 				vehLisa:SetRotation(Quaternion(-0.006, -0.998, 0.010, -0.054))
 				vehLisa:SetExternalPathByName("lisa_path03")
@@ -1107,7 +1214,7 @@
 			local vehLisa = GetEntityByName("vehLisa_0")
 			
 			if vehPlayer then
-				vehPlayer:LimitMaxSpeed(10)
+				vehPlayer:LimitMaxSpeed(25)
 				vehPlayer:SetGamePositionOnGround( CVector(5869.003, 230.756, 5212.128))
 				vehPlayer:SetRotation(Quaternion(-0.008, 1.000, -0.005, -0.021))
 				vehPlayer:SetExternalPathByName("player_path05")
@@ -1125,38 +1232,21 @@
 		</script>
 	</trigger>
 
-	<trigger Name="trLISAAFTERTHIEF_cam07" active="0">
-		<event flypath="LISAAFTERTHIEF_cam07" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-
-			local vehLisa = GetEntityByName("vehLisa_0")	
-			if vehLisa then
-				vehLisa:SetCustomLinearVelocity(15)
-				vehLisa:SetGamePositionOnGround( CVector(4638.517, 233.490, 3633.208))
-				vehLisa:SetRotation(Quaternion(-0.004, 0.480, -0.003, -0.877))
-				vehLisa:SetExternalPathByName("lisa_path05")
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<trigger Name="trLISAAFTERTHIEF_cam06" active="0">
 		<event flypath="LISAAFTERTHIEF_cam06" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetExternalPathByName("lisa_path05")
 				vehPlayer:PlaceToEndOfPath("lisa_path05")
-				vehPlayer:SetGamePositionOnGround( CVector(5112.695, 234.843, 3686.003))
-				vehPlayer:SetRotation(Quaternion(0.007, 0.958, 0.012, -0.286))
+				vehPlayer:SetGamePositionOnGround( CVector(5129.860, 233.829, 3712.072))
+				vehPlayer:SetRotation(Quaternion(0.011, 0.958, 0.009, -0.286))
+				vehPlayer:UnlimitMaxSpeed()
+				vehPlayer:SetExternalPathByName("player_path07")
+				vehPlayer:SetCustomLinearVelocity( 20 )
+				vehPlayer:SetThrottle( 1 )
 			end
 			
-			AddCinematicMessage( 8813, 0.5 )
+			AddCinematicMessage( 8813, 3 )
 			
 			trigger:Deactivate()
 		</script>
@@ -1166,6 +1256,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+			RuleConsole("cinematic_spring_coeff 0.7")
+
 			RestoreAllToleranceStatus()
 
 			local vehLisa = GetEntityByName("vehLisa_0")
@@ -1183,17 +1275,10 @@
 				humPlayer:Remove()
 			end
 
-			local CToch1 = GetEntityByName("CamTochka1")
-			if CToch1 then CToch1:Remove() end
-			local CToch2 = GetEntityByName("CamTochka2")
-			if CToch2 then CToch2:Remove() end
-			local CToch3 = GetEntityByName("CamTochka3")
-			if CToch3 then CToch3:Remove() end
-
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetExternalPathByName("lisa_path05")
-				vehPlayer:PlaceToEndOfPath("lisa_path05")
+				vehPlayer:SetExternalPathByName("player_path07")
+				vehPlayer:PlaceToEndOfPath("player_path07")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
@@ -1203,7 +1288,6 @@
 				vehPlayer:UnlimitMaxSpeed()
 			end
 			
-
 			TDeactivate( "trMsg01" )
 			TDeactivate( "trLISAAFTERTHIEF_cam01")
 			TDeactivate( "trLISAAFTERTHIEF_cam02" )

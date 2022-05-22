@@ -31,22 +31,6 @@
 
 	<Object
 		Flags="21"
-		Name="ToSouth"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3300.493 340.232 2827.664"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Name="FromSouth"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3241.257 348.221 2980.922"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
 		Name="ConstructionPlace01"
 		Belong="1100"
 		Prototype="genericLocation"
@@ -76,8 +60,8 @@
 		Name="Ending3"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3711.685 342.259 2888.548"
-		Radius="60.000">
+		Pos="0 0 0"
+		Radius="1.000">
 		<Object
 			Name="Vasily"
 			Belong="1100"
@@ -121,9 +105,8 @@
 		Name="ZapterGluhoe_Loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3232.881 339.898 2656.330"
-		Radius="30.000"
-		LookingTimeOut="30.000" />
+		Pos="3264.310 241.064 2731.955"
+		Radius="139.000" />
 
 	<Object
 		Flags="21"
@@ -474,16 +457,6 @@
 				ModelName="mask_father"
 				skin="1"
 				helloReplyNames="Dlg_npc_003106"
-				SpokenCount="0" />
-
-			<Object
-				Name="Kartograph1"
-				Belong="1008"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
-				cfg="60"
-				helloReplyNames="Dlg_npc_003005"
 				SpokenCount="0" />
 		</Object>
 

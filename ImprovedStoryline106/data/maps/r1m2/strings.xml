@@ -300,7 +300,7 @@
 		sound=""
 		fontSize="12"
 		scrollSpeed="0.5"
-		time="7" />
+		time="5" />
 
 	<string
 		id="88061"
@@ -315,7 +315,7 @@
 		sound=""
 		fontSize="12"
 		scrollSpeed="0.5"
-		time="7" />
+		time="5" />
 
 	<string
 		id="224"

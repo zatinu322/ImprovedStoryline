@@ -171,7 +171,7 @@
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r1m3\r1m3_30_hero.ogg"
 		value="Что здесь произошло? Стенные панели сняты. За ними был тайник, но он открыт. Там пусто. Кто-то здесь хорошо поработал."
-		time="8" />
+		time="13" />
 
 	<string
 		id="31"

@@ -12778,7 +12778,7 @@
 		name="Dlg_pl_002068"
 		text="Значит, мне придётся проследовать за ним. Нехорошо получается…"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_FindThiefFromFatherHouse'); TakeQuest('r1m3_TalkWithThiefFromFatherHouse'); SetTolerance(1100,1012,RS_NEUTRAL); TActivate('ArmiaCreate'); SetVar('QuickWayAlt',1); EndConversation()" />
+		scriptResult="CompleteQuest('r1m3_FindThiefFromFatherHouse'); TakeQuest('r1m3_TalkWithThiefFromFatherHouse'); SetTolerance(1100,1012,RS_NEUTRAL); SetVar('QuickWayAlt',1); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Диалог с Вором-->
 	<Reply
 		name="Thief_hellodlg0"
@@ -16847,7 +16847,7 @@
 
 	<Reply
 		name="Dlg_npc_001468"
-		text="Ээх, ну что за люди пошли! Где ваши манеры?! Неприлично отказываться от угощения, тем более ананагой."
+		text="Ээх, ну что за люди пошли! Где твои манеры?! Неприлично отказываться от угощения, тем более ананагой."
 		role="NPC"
 		nextReplies="Dlg_pl_001469" />
 
@@ -16955,7 +16955,7 @@
 
 	<Reply
 		name="Dlg_pl_001483"
-		text="Эка невидаль! А если человек ещё не готов? Как Лёха из моего села! Ему уже сороковая осень идёт, а до сих пор ни ума, ни ответственности!"
+		text="Эка невидаль! А если человек ещё не готов? Как один мой знакомый в Глухом! Ему уже сороковая осень идёт, а до сих пор ни ума, ни ответственности!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001484" />
 
@@ -16997,13 +16997,13 @@
 
 	<Reply
 		name="Dlg_npc_001490"
-		text="Есть тут один парень - Назар. Так вот повадился он в нашу деревню заезжать да девок наших... ну ты понял! А денег не платит!"
+		text="Есть тут один парень, который повадился в нашу деревню заезжать. И если бы только заезжал, никто бы слова ему не сказал, но он... скажем так... ведёт себя не очень красиво по отношению к нашим девицам."
 		role="NPC"
 		nextReplies="Dlg_pl_001491" />
 
 	<Reply
 		name="Dlg_pl_001491"
-		text="Как так не платит?! И вы до сих пор это терпите?!"
+		text="Как так?! И вы до сих пор это терпите?!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001492" />
 
@@ -17021,7 +17021,7 @@
 
 	<Reply
 		name="Dlg_npc_001494"
-		text="Я тоже так считаю, дружище! Сейчас как раз время подходящее, на его базе почти нет охраны. Предлагаю ворваться туда и проучить этих остолопов! Ты с нами?"
+		text="Я тоже так считаю, дружище! Сейчас как раз время подходящее, в его схроне почти нет охраны. Предлагаю ворваться туда и проучить этих остолопов! Ты с нами?"
 		role="NPC"
 		nextReplies="Dlg_pl_001495" />
 
@@ -17033,7 +17033,7 @@
 
 	<Reply
 		name="Dlg_npc_001496"
-		text="Эй, Дмитро! Приготовь свой грузовик! Поедем поговорим с Назаром! Парень, ты готов?"
+		text="Эй, Дмитро! Приготовь свой грузовик! Поедем поговорим с тем выскочкой! Парень, ты готов?"
 		role="NPC"
 		nextReplies="Dlg_pl_001497" />
 
@@ -17076,7 +17076,7 @@
 
 	<Reply
 		name="Dlg_pl_001503"
-		text="Клянусь своей печенью, только для личного пользования! Ну может ещё и Дарину угощу ночью на сеновале."
+		text="Клянусь - только для личного пользования! Ну, может, ещё и пару приятелей угощу, но не более."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001504" />
 
@@ -17555,26 +17555,6 @@
 		text="Пока ничего."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-<!--Root/r1m1/Опциональные/Торговец картой-->
-	<Reply
-		name="Dlg_npc_003005"
-		text="Здравствуй, путешественник. Не желаешь приобрести у меня подробную карту окрестных земель? Всего 1500 монет."
-		role="NPC"
-		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and GetVar('KnownMap').AsInt == 0"
-		nextReplies="Dlg_pl_003006 Dlg_pl_003008" />
-
-	<Reply
-		name="Dlg_pl_003008"
-		text="Не сейчас."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003006"
-		text="Желаю. Вот деньги."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 1500"
-		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-1500); EndConversation()" />
 <!--Root/r1m1/Сюжетные/Серго в Южном-->
 	<Reply
 		name="Buyer_hellodlg0"
@@ -17709,7 +17689,7 @@
 		name="Dlg_pl_001344"
 		text="Да, прямо сейчас и пойду."
 		role="PLAYER"
-		scriptResult="RemoveQuestItem('quest_potato'); CompleteQuest( 'Buyer_Quest1' ); TActivate('triggerExitToSouth'); AddPlayerMoney(60); TakeQuest('TalkToVasily'); AddBook('r1_book_the_mask'); EndConversation()" />
+		scriptResult="CompleteQuest( 'Buyer_Quest1' ); TActivate('trZapretGluhoeStart'); AddPlayerMoney(60); TakeQuest('TalkToVasily'); AddBook('r1_book_the_mask'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001341"
@@ -18500,7 +18480,7 @@
 		name="Vasily1"
 		text="О, привет! Дай угадаю - рейс до Южного и обратно на рухляди твоего отца. Слушай, она ведь с каждым днём во всё более плачевном состоянии. Так что на этот раз 100 монет."
 		role="NPC"
-		scriptCondition="IsQuestTaken('TalkToVasily') and (not(IsQuestTaken('CheckTheEast')))"
+		scriptCondition="QuestStatus('TalkToVasily')==Q_TAKEN"
 		nextReplies="Vasily1_P1" />
 
 	<Reply
@@ -18511,7 +18491,7 @@
 
 	<Reply
 		name="Vasily6"
-		text="О, господи... Это что ещё за..."
+		text="О, господи... Откуда здесь эти машины?!"
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and (IsQuestTaken('CheckTheEast'))"
 		nextReplies="Vasily6_P6" />
@@ -18520,7 +18500,7 @@
 		name="Vasily6_P6"
 		text="Кажется это конец..."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate('DestroyGloohoe'); SetTolerance(1100,1062,RS_ENEMY); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate('DestroyGloohoe'); TActivate('GloohoeDestructionBegin'); EndConversation()" />
 
 	<Reply
 		name="Vasily2"
@@ -18568,5 +18548,5 @@
 		name="Vasily5_P5"
 		text="Запрыгивай в машину. Сейчас проверим, что там за шум."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'TalkToVasily' ); TakeQuest('CheckTheEast'); TActivate('End3'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Vasily_P'); AddQuestItem('Vasily_P'); TActivate('SpawnAnalDestroyers'); EndConversation()" />
+		scriptResult="CompleteQuest( 'TalkToVasily' ); TDeactivate( 'triggerExitToMap41' ); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Vasily_P'); AddQuestItem('Vasily_P'); TActivate('SpawnAnalDestroyers'); EndConversation()" />
 </DialogsResource>

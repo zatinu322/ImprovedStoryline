@@ -436,7 +436,7 @@
 				vehR:SetRotation(Quaternion(0.008, 0.931, 0.020, -0.364))
 				vehR:SetSkin(4)
 				vehR:SetExternalPathByName("banditoilmine_path")
-				vehR:SetCruisingSpeed(7)
+				vehR:SetCruisingSpeed(10)
 			end
 			trigger:Deactivate()
 		</script>
@@ -459,7 +459,8 @@
 			if vehP then
 				vehP:SetExternalPathByName("banditoilmine_path")
 				vehP:SetSkin(4)
-				vehP:SetCruisingSpeed(30)
+				vehP:SetCruisingSpeed(25)
+				vehP:SetMaxSpeed(25)
 			end
 
 			TakeQuest("d_FindBanditBaseOfOilMine_Quest")
@@ -1312,6 +1313,8 @@
 				if IsQuestTaken("d_FindVrata_Quest") or IsQuestTaken("r1m4_TalkWithOldTraderAboutSecondDisk") then
 
 					PassToMap("r1m4", "FromR1M3", -1 )
+					local kar = GetEntityByName("KARAVAN14_vehicle_0")
+					if kar then kar:Remove() end
 					local hs = GetEntityByName ("FIRE01")
 					if hs then hs:Remove() end
 					local hs = GetEntityByName ("FIRE02")
@@ -1388,6 +1391,9 @@
 				if b == 1 then
 
 					PassToMap("r2m1", "FromR1M3", -1 )
+
+					local vehP = GetEntityByName("vehPioneer")
+					if vehP then vehP:Remove() end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -1436,111 +1442,12 @@
 	</trigger>
 
 
-	<trigger Name="ArmiaCreate2" active="0">
+	<trigger Name="ArmiaCreateStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locArmiaTSP" />
 		<script>
 		
-			SaveAllToleranceStatus(RS_NEUTRAL)
-		
-   			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-			end
-   			
-			Fly("Armia_cam01", CINEMATIC_NO_AIM, 0, 20, 1, 1 )
-			StartCinematic()
-			AddCinematicMessage( 8806, 0.5 )
-			AddCinematicMessage( 8807, 0.5 )
+			TActivate("ArmiaTSPPreparationBegin")
 			
-   			TActivate("ArmiaCreate3")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="ArmiaCreate3" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-   			
-   			RestoreAllToleranceStatus()
-
-			local veh1 = GetEntityByName("ArmyVeh1")
-			if veh1 then veh1:Remove() end
-			local veh2 = GetEntityByName("ArmyVeh2")
-			if veh2 then veh2:Remove() end
-			local veh3 = GetEntityByName("ArmyVeh3")
-			if veh3 then veh3:Remove() end
-
-
-   			
-   			local newControllerId1 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "ArmyCont1"
-			}
-
-			local newControllerId2 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "ArmyCont2"
-			}
-
-			local newControllerId3 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "ArmyCont3"
-			}
-
-			local newController1 = GetEntityByID(newControllerId1)
-			local newController2 = GetEntityByID(newControllerId2)
-			local newController3 = GetEntityByID(newControllerId3)
-
-			TeamCreate("ArmiaTSP",1010,CVector(6018.614, 237.349, 1893.204),{"BelazTSP", "TSPFighter", "tspfighter2"}, CVector(7069.637, 307.696, 1045.202), 1)
-
-			local ArmyVeh1 = GetEntityByName("ArmiaTSP_vehicle_0")
-			local ArmyVeh2 = GetEntityByName("ArmiaTSP_vehicle_1")
-			local ArmyVeh3 = GetEntityByName("ArmiaTSP_vehicle_2")
-			
-			if ArmyVeh1 then
-				ArmyVeh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
-				ArmyVeh1:SetGamePositionOnGround( CVector(6057.330, 238.386, 1933.433))
-			end
-			
-			if ArmyVeh2 then
-				ArmyVeh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
-				ArmyVeh2:SetGamePositionOnGround( CVector(6027.587, 237.066, 1926.612))
-			end
-			
-			if ArmyVeh3 then
-				ArmyVeh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
-				ArmyVeh3:SetGamePositionOnGround( CVector(6012.056, 237.713, 1931.321))
-			end
-
-			local FVehicle1 = GetEntityByName("ArmiaTSP_vehicle_0")
-			local FVehicle2 = GetEntityByName("ArmiaTSP_vehicle_1")
-			local FVehicle3 = GetEntityByName("ArmiaTSP_vehicle_2")
-
-			if newController1 and FVehicle1 then
-				newController1:setVehicleUnderControl(FVehicle1)
-			end
-
-			if newController2 and FVehicle2 then
-				newController2:setVehicleUnderControl(FVehicle2)
-			end
-
-			if newController3 and FVehicle3 then
-				newController3:setVehicleUnderControl(FVehicle3)
-			end
-   			
-   			TeamCreate("Brigada1",1012,CVector(6853.181, 285.306, 1177.337),{"BrigadaCruiser"})
-   			TeamCreate("Brigada2",1012,CVector(7056.044, 305.453, 1044.753),{"BrigadaVoz"})
-			TeamCreate("ThiefCar",1012,CVector(7080.981, 307.714, 1041.897),{"UralShot"}, nil, 0, Quaternion(-0.042, 0.508, -0.019, -0.860))
-
-			TActivate("TRIGGER_THIEFDIE")
-   			
-   			CompleteQuest( "Zachisti1_Quest" )
-   			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1549,11 +1456,6 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 		
-			local kar = GetEntityByName("KARAVAN14_vehicle_0")
-			if kar then
-				kar:Remove()
-			end
-			
 			if IsQuestComplete("d_DestroyBridge_Quest") then
 --				TeamCreate("ArmiaTSP",1010,CVector(6018.614, 237.349, 1893.204),{"BelazTSP", "TSPFighter", "tspfighter2"})
 
@@ -1565,19 +1467,22 @@
 				if veh1 then
 					veh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
 					veh1:setGodMode(1)
+					veh1:setImmortalMode(1)
 				end
 				local veh2 = GetEntityByName("ArmyVeh2")
 				if veh2 then
 					veh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
 					veh2:setGodMode(1)
+					veh2:setImmortalMode(1)
 				end
 				local veh3 = GetEntityByName("ArmyVeh3")
 				if veh3 then
 					veh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
 					veh3:setGodMode(1)
+					veh3:setImmortalMode(1)
 				end
 
-				TActivate( "ArmiaCreate2" )
+				TActivate( "ArmiaCreateStart" )
 			end
 			
 			trigger:Deactivate()
@@ -1600,14 +1505,13 @@
 
 			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
+			
 			AddCinematicMessage( 8809, 0.25 )
 			
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_chehly_box")
 			
 			CompleteQuest("d_chehol2")
 
-			
-	
 			AddQuestItem("quest_chehly_box")
 
 			TActivate("Chehol_Find_End")
@@ -1642,7 +1546,7 @@
 			
 			CompleteQuest("d_chehol1")
 			
-			Fly("Chehly_cam1", CINEMATIC_NO_AIM, 0, 11, 1, 1 )
+			Fly("Chehly_cam1", CINEMATIC_NO_AIM, 0, 13, 1, 1 )
 			StartCinematic()
 			
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )

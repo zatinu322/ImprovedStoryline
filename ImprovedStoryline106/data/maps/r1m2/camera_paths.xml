@@ -94,8 +94,8 @@
 	</Path>
 
 	<Path Name = "Kol2_cam21">
-		<Point  coord="-0.344 0.200 -7.696" rotation="0 0 0 1"/>
 		<Point  coord="-0.344 3.200 -7.696" rotation="0 0 0 1"/>
+		<Point  coord="-0.344 0.200 -7.696" rotation="0 0 0 1"/>
 	</Path>
 
 	<Path Name = "BefDesert">

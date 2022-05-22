@@ -35,13 +35,12 @@
 	</Path>
 
 	<Path Name = "THESPY_cam01">
-		<Point  coord="0.000 1.000 0.000"/>  
+		<Point  coord="0.000 9.000 0.000"/>  
 	</Path>
 
 	<Path Name = "THESPY_cam02">
 		<Point  coord="5029.698 215.392 3969.689" rotation="-0.046 0.129 -0.006 0.991"  speed="1"/>
 		<Point  coord="5075.964 215.392 3981.942" rotation="-0.056 0.279 -0.016 0.959"  speed="1"/>
-<!--		<Point  coord="5121.311 300.872 4090.013" rotation="-0.145 0.184 -0.027 0.972"  speed="0.3"/  -->
 	</Path>
 
 	<Path Name = "Tunel_cam01">
@@ -118,7 +117,7 @@
 	</Path>
 
 	<Path Name = "PIONEERASGARD_cam01">
-		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="0.000 25.000 0.000"/>
 	</Path>
 
 	<Path Name = "PIONEERASGARD_cam02">
@@ -158,16 +157,18 @@
 	</Path>
 
 	<Path Name = "LISAAFTERTHIEF_cam04">
-		<Point  coord="0.000 1.000 0.000"/>  
+		<Point  coord="0.000 2.000 -1.500"/>  
 	</Path>
 
 	<Path Name = "LISAAFTERTHIEF_cam05">
-		<Point  coord="0.000 1.000 0.000"/>  
+		<Point  coord="-5.000 7.000 -20.000"/>
+		<Point  coord="-5.000 10.000 -30.000"/>
 	</Path>
 
 	<Path Name = "LISAAFTERTHIEF_cam06">
 		<Point  coord="5096.237 239.429 3675.607" rotation="-0.070 -0.499 0.041 0.863"/>
-		<Point  coord="5096.237 239.429 3675.607" rotation="-0.076 -0.432 0.036 0.898"/>
+		<Point  coord="5095.661 240.142 3682.960" rotation="-0.078 -0.640 0.065 0.762"/>
+		<!--Point  coord="5096.237 239.429 3675.607" rotation="-0.076 -0.432 0.036 0.898"/-->
 	</Path>
 
 	<Path Name = "LISAAFTERTHIEF_cam07">

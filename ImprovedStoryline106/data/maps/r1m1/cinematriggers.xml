@@ -1,7 +1,309 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
-<!-- Начальный ролик. -->
+<!-- Начальный ролик. Текст на чёрном фоне. -->
+	<trigger Name="trFirstRolik" active="1">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			g_ObjCont:SetGameTime( 10, 0, 10, 9, 2234 )
+
+			SetRadarUpgrade(1)
+
+			TActivate("trKraiPlaceSecret")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("start_game", CINEMATIC_NO_AIM, 0, 68, 1, 1 )
+			StartCinematic()
+			UpdateCinematic( 1 )
+
+			AddCinematicMessage( 77771, 0.1)
+
+			TActivate("trFirstRolikMusic")
+			TActivate("StartOpening")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trFirstRolikMusic" active="0">
+		<event timeout="0.25" eventid="GE_TIME_PERIOD" />
+		<script>
+			PlayCustomMusic("Bio07unloop")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Опенинг. Лиса ездит по Краю, потом разговор с отцом в Глухом. -->
+	<trigger Name="StartOpening" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			SetWeather(0)
+
+			PlayCustomMusic("GreenLeaves")
+
+			Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
+			Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+			Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
+			Fly("Opening11", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 0 )
+			Fly("Opening2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("Opening22", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
+			Fly("Opening3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
+			Fly("Opening4", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
+			Fly("Opening5", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
+			Fly("Opening_End", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
+			Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 37, 0, 0 )
+			Fly("start_rolik11", CINEMATIC_NO_AIM, 0, 1.5, 0, 0 )
+			Fly("start_rolik5", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+			Fly("start_rolik6", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
+			Fly("start_rolik2", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("start_rolik3", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("start_rolik8", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+			Fly("start_rolik4", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+			StartCinematic()
+			UpdateCinematic(1)
+
+			TActivate( "trOpeningOpen1" )
+			TActivate( "trOpening1" )
+			TActivate( "trOpening11" )
+			TActivate( "trOpening2" )
+			TActivate( "trOpening22" )
+			TActivate( "trOpening3" )
+			TActivate( "trOpening4" )
+			TActivate( "trOpening5" )
+			TActivate( "trOpeningEnd" )
+			TActivate( "StartGame" )
+			TActivate( "ROLIK15" )
+			TActivate( "ROLIK16" )
+			TActivate( "ROLIK12" )
+			TActivate( "ROLIK13" )
+			TActivate( "ROLIK18" )
+			TActivate( "ROLIK14" )
+			TActivate( "Finish00" )
+
+			AddCinematicMessage( 10, 1)
+			AddCinematicMessage( 11, 0.25 )
+			
+			
+			TakeQuest( "Buyer_Quest1" )
+
+			AddQuestItem("quest_potato")
+
+			AddHistory( "r1_Firsy_History_00" )
+			AddFadingMsgId( "fm_history_got" )
+			
+			CreateNewDummyObject( "quest_medicine_box", "medicine_box", -1, -1, CVector(2607.000, 322.000, 1614.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpeningOpen1" active="0">
+		<event flypath="OpeningOpen2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 12, 0.25  )
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening1" active="0">
+		<event flypath="Opening1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(517.976, 289.554, 336.855))
+				vehPlayer:SetRotation(Quaternion(0.050, 0.091, -0.004, 0.995))
+				vehPlayer:SetSkin(2)
+				vehPlayer:LimitMaxSpeed(15)
+				vehPlayer:SetExternalPathByName("LisaPath1")
+				vehPlayer:SetCustomLinearVelocity( 10 )
+				vehPlayer:SetBelong(1042)
+			end
+			
+			AddCinematicMessage( 13, 0.1  )
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening11" active="0">
+		<event flypath="Opening11" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(708.568, 276.223, 670.710))
+				vehPlayer:SetRotation(Quaternion(-0.030, 0.454, -0.010, 0.891))
+				vehPlayer:SetExternalPathByName("LisaPath11")
+				vehPlayer:SetCustomLinearVelocity( 10 )
+			end
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening2" active="0">
+		<event flypath="Opening2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+						
+			CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(458.527, 305.991, 1830.930), Quaternion(0.0000, 0.9837, 0.0000, 0.1801), 0)
+			CreateNewDummyObject("dweller_felix", "humFelix", -1, -1, CVector(458.701, 306.203, 1829.930), Quaternion(0.0000, -0.0763, 0.0000, 0.9971), 0)
+
+			getObj("humLisa"):SetNodeAction(AT_STAND2)
+			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+			getObj("humFelix"):SetNodeAction(AT_RESERVED1)
+			getObj("humFelix"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("LisaPath11")
+				vehPlayer:PlaceToEndOfPath("LisaPath11")
+				vehPlayer:SetCustomLinearVelocity(0)
+				vehPlayer:SetThrottle(0)
+				vehPlayer:SetGamePositionOnGround(CVector(467.548, 306.966, 1823.528))
+				vehPlayer:SetRotation(Quaternion(-0.013, -0.992, -0.001, -0.124))
+			end
+
+			local vehFelix = CreateVehicleEx("FelixVehicle", "FelixCarPrologue", CVector(459.665, 307.187, 1816.056), 1013)
+			if vehFelix then
+				vehFelix:SetRotation(Quaternion(-0.001, -0.788, -0.001, -0.615))
+				vehFelix:SetSkin(4)
+			end
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening22" active="0">
+		<event flypath="Opening22" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		
+			TeamCreate("Bolnoy",1002,CVector(2464.338, 322.302, 1643.903),{"Sml101"})
+
+			local vehBol = GetEntityByName("Bolnoy_vehicle_0")
+			if vehBol then
+				vehBol:SetRotation(Quaternion(0.012, 0.604, 0.014, 0.796))
+				vehBol:SetExternalPathByName("BolnoyPath1")
+				vehBol:SetCustomLinearVelocity( 10 )
+			end
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("LisaPath11")
+				vehPlayer:PlaceToEndOfPath("LisaPath11")
+				vehPlayer:SetGamePositionOnGround(CVector(2599.210, 320.931, 1867.919))
+				vehPlayer:SetCustomLinearVelocity( 0 )
+			end
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening3" active="0">
+		<event flypath="Opening3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround(CVector(1200.022, 293.044, 1651.715))
+				vehPlayer:SetRotation(Quaternion(0.014, 0.166, -0.017, 0.986))
+				vehPlayer:SetExternalPathByName("LisaPath21")
+				vehPlayer:SetCustomLinearVelocity( 10 )
+			end
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening4" active="0">
+		<event flypath="Opening4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
+			TeamCreate("Venchik",1008,CVector(2057.125, 356.855, 2778.083),{"Bug02"})
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("LisaPath21")
+				vehPlayer:PlaceToEndOfPath("LisaPath21")
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+--				vehPlayer:SetGamePositionOnGround(CVector(1916.349, 306.917, 2648.321))
+				vehPlayer:SetPosition( CVector(1962.087, 308.468, 2695.188))
+				vehPlayer:SetCustomLinearVelocity( 0 )
+			end
+
+			local vehVen = GetEntityByName("Venchik_vehicle_0")
+			if vehVen then
+				vehVen:SetRotation(Quaternion(0.068, 0.918, 0.092, 0.379))
+				vehVen:SetExternalPathByName("VenchikPath1")
+				vehVen:SetCustomLinearVelocity( 10 )
+				vehVen:SetSkin(1)
+			end
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpening5" active="0">
+		<event flypath="Opening5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround(CVector(1276.246, 289.375, 2724.471))
+				vehPlayer:SetRotation(Quaternion(-0.003, 0.092, -0.058, -0.994))
+				vehPlayer:SetExternalPathByName("LisaPath3")
+				vehPlayer:SetCustomLinearVelocity( 10 )
+			end
+			
+			
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trOpeningEnd" active="0">
+		<event flypath="Opening_End" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+		
+			AddPlayerNewVehicle("Bug01")
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3355.000, 368.500, 3308.000))
+				vehPlayer:SetRotation(Quaternion(-0.007, 1.000, -0.010, 0.021))
+				vehPlayer:SetSkin(0)
+				vehPlayer:UnlimitMaxSpeed()
+				vehPlayer:SetBelong(1100)
+			end
+
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="StartGame" active="0">
+		<event flypath="start_rolik1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			PlayCustomMusic("QuietDialogue01")
+
+			CreateNewDummyObject( "dweller_player", "hero1Dw", -1, -1, CVector(3343.495, 368.166, 3304.762), Quaternion(0.0000, -0.9610, 0.0000, -0.2760), 0)
+			CreateNewDummyObject( "dweller_father", "fatherDw", -1, -1, CVector(3342.860, 368.167, 3303.460), Quaternion(0.0000, 0.4320, 0.000, 0.9020), 2)
+
+			getObj("fatherDw"):SetNodeAction(AT_RESERVED1) 
+			getObj("fatherDw"):SetNextForAnimation(AT_RESERVED1, AT_STAND1) 
+
+			AddCinematicMessage( 1, 2.5)
+			AddCinematicMessage( 2, 0.25 )
+			AddCinematicMessage( 3, 0.25  )
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
 	<trigger Name="ROLIK15" active="0">
 		<event flypath="start_rolik5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
@@ -154,6 +456,8 @@
 			else
 				AddImportantFadingMsg("Мистер Шляпа включен.")
 			end
+
+			ShowMap()
 
 			TDeactivate( "ROLIK11" )
 			TDeactivate( "ROLIK15" )
@@ -1016,7 +1320,7 @@
 
 
 
-<!-- Lisa 8 деревня -->
+<!-- Lisa Троицкое -->
 	<trigger Name="RolikBegin_Lisa8" active="0">
 		<event timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1025,8 +1329,8 @@
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			Fly("lisa8_cam01", CINEMATIC_NO_AIM, 0, 7, 1, 0 )
-			Fly("lisa8_cam02", CINEMATIC_NO_AIM, 0, 31, 0, 0 )
-			Fly("lisa8_cam021", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
+			Fly("lisa8_cam02", CINEMATIC_NO_AIM, 0, 28, 0, 0 )
+			Fly("lisa8_cam021", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
 			Fly("lisa8_cam03", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
 			Fly("lisa8_cam04", CINEMATIC_NO_AIM, 0, 9, 0, 1 )
 			StartCinematic()
@@ -1232,7 +1536,7 @@
 
 
 
-<!-- Felix1  -->
+<!-- Гопстоп Феликса на пути в Глухое  -->
 	<trigger Name="RolikBegin_Felix1" active="0">
 		<event timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1252,22 +1556,6 @@
 		</script>
 	</trigger>
 
-	<trigger Name="FelixPreEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			if GetPlayerMoney() >= 1000 then
-				SetVar("FelixChoise",2)
-				StartConversation("FelixDecide")
-			else
-				TActivate("trFelix1_cam02")
-				SetVar("FelixChoise",0)
-			end
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<trigger Name="trFelix1" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
@@ -1280,13 +1568,13 @@
 			local vehFelix1 = CreateVehicleEx("Fighter01","FelixGv01",CVector(2022.755, 321.985, 2426.375), 1013)
 			if vehFelix1 then
 				vehFelix1:SetRotation(Quaternion(0.029, -0.597, -0.009, 0.801))
-				vehFelix1:SetSkin(1)
+				vehFelix1:SetRandomSkin()
 			end
 
-			local vehFelix2 = CreateVehicleEx("Fighter01","FelixGv02",CVector(2018.729, 322.269, 2419.867), 1013)
+			local vehFelix2 = CreateVehicleEx("Fighter01","FelixGv02",CVector(2017.614, 322.764, 2417.119), 1013)
 			if vehFelix2 then
 				vehFelix2:SetRotation(Quaternion(0.036, -0.499, -0.011, 0.866))
-				vehFelix2:SetSkin(2)
+				vehFelix2:SetRandomSkin()
 			end
 
 			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(2006.351, 321.215, 2434.379), Quaternion(0.000, -0.715, 0.000, 0.699), 1)
@@ -1312,20 +1600,42 @@
 		</script>
 	</trigger>
 
+	<trigger Name="FelixPreEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			if GetPlayerMoney() >= 1000 then
+				SetVar("FelixChoise",2)
+				StartConversation("FelixDecide")
+			else
+				TActivate("trFelix1_cam02")
+				SetVar("FelixChoise",0)
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
 
-
+	<!-- Денег нет или жалко. Драка с Феликсом -->
 	<trigger Name="trFelix1_cam02" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
+			local FelFighter = GetEntityByName("FelixGv01")
+			local FelFighterID = FelFighter:GetId()
 			
 			Fly("felix1_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-			Fly("felix1_cam03", CINEMATIC_NO_AIM, 0, 10, 0, 1 )
+			Fly("felix1_cam03", CINEMATIC_AIM_TO_POINT, CVector(2022.755, 321.985, 2426.375), 8.5, 0, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 1132, 0.5 )
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath("player_path05")
+				vehPlayer:SetRotation(Quaternion(0.024, -0.782, -0.005, -0.623))
+			end
 			
 			TActivate( "trFelix1_cam03" )
-			TActivate( "trFelix1_Msg3" )
 			TActivate( "RolikEnd_Felix1" )
 			trigger:Deactivate()
 		</script>
@@ -1340,13 +1650,6 @@
 
 			AddCinematicMessage( 1133, 0.5 )
 
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trFelix1_Msg3" active="0">
-	<event msgid="1133" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
-		<script>
 			TActivate( "trFelix1_Out" )
 
 			trigger:Deactivate()
@@ -1360,14 +1663,12 @@
 			if vehFelix1 then
 				vehFelix1:SetExternalPathByName("felix_path01")
 				vehFelix1:SetThrottle( 1 )
-				vehFelix1:SetCustomLinearVelocity( 10 )
+				vehFelix1:SetCustomLinearVelocity( 15 )
 			end
 
 			local vehFelix2 = GetEntityByName("FelixGv02")
 			if vehFelix2 then
 				vehFelix2:SetExternalPathByName("felix_path01")
-				vehFelix2:SetThrottle( 1 )
-				vehFelix2:SetCustomLinearVelocity( 15 )
 			end
 
 			trigger:Deactivate()
@@ -1389,10 +1690,16 @@
 			if humFelix then humFelix:Remove() end
 
 			local vehFelix1 = GetEntityByName("FelixGv01")
-			if vehFelix1 then	vehFelix1:Remove() end
+			if vehFelix1 then
+				skin1 = vehFelix1:GetSkin()
+				vehFelix1:Remove()
+			end
 
 			local vehFelix2 = GetEntityByName("FelixGv02")
-			if vehFelix2 then vehFelix2:Remove() end
+			if vehFelix2 then
+				skin2 = vehFelix2:GetSkin()
+				vehFelix2:Remove()
+			end
 
 			local vehFelix0 = GetEntityByName("FelixVehicle01")
 			if vehFelix0 then vehFelix0:Remove() end
@@ -1418,14 +1725,17 @@
 
 			local FVehicle1 = GetEntityByName("FelixBanditCarsBand_vehicle_0")
 			if FVehicle1 then
-				FVehicle1:SetSkin ( 1 )
+				FVehicle1:SetSkin ( skin1 )
 				FVehicle1:SetRotation(Quaternion(0.029, -0.597, -0.009, 0.801))
 			end
 			local FVehicle2 = GetEntityByName("FelixBanditCarsBand_vehicle_1")
 			if FVehicle2 then
-				FVehicle2:SetSkin ( 2 )
+				FVehicle2:SetSkin ( skin2 )
 				FVehicle2:SetRotation(Quaternion(0.036, -0.499, -0.011, 0.866))
 			end
+
+			skin1 = nil
+			skin2 = nil
 
 			TActivate( "METALFELIXDIE1" )
 
@@ -1433,15 +1743,22 @@
 		</script>
 	</trigger>
 
+	<!-- Откупились от Феликса -->
 	<trigger Name="FelixPayRolik1" active="0">
 		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			Fly("felix1_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			Fly("felix1_cam03", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
-			Fly("felix1_cam04", CINEMATIC_NO_AIM, 0, 13, 0, 1 )
+			Fly("felix1_cam04", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 11, 0, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 5963, 0.5 )
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath("player_path05")
+				vehPlayer:SetRotation(Quaternion(0.024, -0.782, -0.005, -0.623))
+			end
 			
 			TActivate("trFelix1_cam031")
 			TActivate("trFelix1_cam04")
@@ -1509,7 +1826,7 @@
 		</script>
 	</trigger>
 
-<!-- ролик "умерающий отец" -->
+<!-- ролик "умирающий отец" -->
 	<trigger Name="RolikBegin_Father" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1517,14 +1834,14 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("FatherDe_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
-			Fly("Father_cam01", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+			Fly("FatherDe_cam01", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 4, 1, 0 )
+			Fly("Father_cam01", CINEMATIC_NO_AIM, 0, 10.5, 0, 0 )
 			Fly("Father_cam02", CINEMATIC_NO_AIM, 0, 32, 0, 0 )
-			Fly("Father_cam03", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
-			Fly("Father_cam04", CINEMATIC_NO_AIM, 0, 18, 0, 0 )
-			Fly("Father_cam05", CINEMATIC_NO_AIM, 0, 12.5, 0, 0 )
-			Fly("Father_cam06", CINEMATIC_NO_AIM, 0, 17, 0, 0 )
-			Fly("Father_cam07", CINEMATIC_NO_AIM, 0, 17, 0, 1 )
+			Fly("Father_cam03", CINEMATIC_NO_AIM, 0, 14.5, 1, 0 )
+			Fly("Father_cam04", CINEMATIC_NO_AIM, 0, 22, 0, 0 )
+			Fly("Father_cam05", CINEMATIC_NO_AIM, 0, 15.5, 0, 0 )
+			Fly("Father_cam06", CINEMATIC_NO_AIM, 0, 21, 0, 0 )
+			Fly("Father_cam07", CINEMATIC_NO_AIM, 0, 24, 0, 1 )
 			StartCinematic()
 
 			TActivate( "trFather_Fade" )
@@ -2324,32 +2641,20 @@
 			
 			PlayCustomMusic("Bio05")
 			
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2975.290, 363.629, 1668.837), Quaternion(0, 0, 0, 0), 1)
-			
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
-			local vehPlayer = GetPlayerVehicle()
-			local vehPID = vehPlayer:GetId()
-			
-			FlyLinked( "linkedcam", CTochID, 59, 1, 1, vehPID )
+			Fly("AivenRolik_cam01", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 13, 1, 0)
+			Fly("AivenRolik_cam02", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 34, 0, 0)
+			Fly("AivenRolik_cam03", CINEMATIC_NO_AIM, nil, 22, 0, 1)
 			StartCinematic()
 			
-			AddCinematicMessage( 5965, 4 )
-			AddCinematicMessage( 5966, 0.1 )
-			AddCinematicMessage( 5967, 0.1 )
-			AddCinematicMessage( 5968, 0.1 )
-			AddCinematicMessage( 5969, 0.1 )
-			AddCinematicMessage( 5970, 0.1 )
-			AddCinematicMessage( 5971, 0.1 )
-			
-			
-			TActivate("AivenRolikFade")
-			TActivate("AivenRolikEnd")
+			TActivate("trAivenRolikFade")
+			TActivate("trAivenRolikCam02")
+			TActivate("trAivenRolikCam03")
+			TActivate("trAivenRolikEnd")
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="AivenRolikFade" active="0">
+	<trigger Name="trAivenRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 			SetWeather(0)
@@ -2366,12 +2671,42 @@
 			end
 			
 			CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(2976.020, 362.955, 1671.093), Quaternion(0.0000, -0.1693, 0.0000, 0.9856), 0)
+			local SergoVeh = CreateVehicleEx("Hunter02","SergoVehicle",CVector(2989.586, 362.985, 1659.736), 1062)
+			if SergoVeh then
+				SergoVeh:SetPosition( CVector(2989.586, 362.985, 1659.736))
+				SergoVeh:SetRotation(Quaternion(0.000, -0.896, 0.000, 0.445))
+			end
 			
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="AivenRolikEnd" active="0">
+	<trigger Name="trAivenRolikCam02" active="0">
+		<event flypath="AivenRolik_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			AddCinematicMessage( 5965, 0.1 )
+			AddCinematicMessage( 5966, 0.1 )
+			AddCinematicMessage( 5967, 0.1 )
+			AddCinematicMessage( 5968, 0.1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trAivenRolikCam03" active="0">
+		<event flypath="AivenRolik_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			AddCinematicMessage( 5969, 0.1 )
+			AddCinematicMessage( 5970, 0.1 )
+			AddCinematicMessage( 5971, 0.1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trAivenRolikEnd" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
@@ -2383,10 +2718,7 @@
 			
 			local aiv = GetEntityByName("humAiven")
 			if aiv then aiv:Remove() end
-			
-			local CToch = GetEntityByName("CamTochka")
-			if CToch then CToch:Remove() end
-			
+						
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -2397,8 +2729,11 @@
 				vehPlayer:PlaceToEndOfPath("PlayerPathAiven")
 				vehPlayer:SetGamePositionOnGround( CVector(3119.951, 335.779, 2483.294))
 				vehPlayer:SetRotation(Quaternion(0.003, -0.451, -0.003, -0.893))
-				
 			end
+
+			TDeactivate("trAivenRolikFade")
+			TDeactivate("trAivenRolikCam02")
+			TDeactivate("trAivenRolikCam03")
 			
 			trigger:Deactivate()
 		</script>

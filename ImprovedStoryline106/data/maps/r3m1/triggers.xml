@@ -159,7 +159,7 @@
 
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(2, 0, 15, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(2, 0, 15, 8, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 			    AddCinematicMessage( 31, 0.5 )

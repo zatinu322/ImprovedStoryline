@@ -10,13 +10,15 @@
 		id="2"
 		modelName="mask_hero"
 		value="Похоже, именно об этом месте и говорил Гомер. Попробую пересечь болото здесь."
-		sound="data\sounds\Speech\r1m4\r1m4_2_hero.ogg" />
+		sound="data\sounds\Speech\r1m4\r1m4_2_hero.ogg"
+		time="1" />
 
 	<string
 		id="3"
 		modelName="mask_hero"
 		value="Старик не обманул, под слоем жижи было твердое дно. Интересно, что ждет меня по эту сторону?"
-		sound="data\sounds\Speech\r1m4\r1m4_3_hero.ogg" />
+		sound="data\sounds\Speech\r1m4\r1m4_3_hero.ogg"
+		time="1" />
 
 	<string
 		id="4"
@@ -213,7 +215,7 @@
 	<string
 		id="8807"
 		modelName="mask_hero"
-		value="Похоже, что путь в заснеженные края действительно начинается здесь. Я сейчас пытаюсь раздобыть нам тёплую одежду, а ещё нам понадобится взрывчатка."
+		value="Похоже, что путь в заснеженные края действительно начинается здесь. Я сейчас пытаюсь раздобыть тёплую одежду, а ещё нам понадобится взрывчатка."
 		time="13" />
 
 	<string

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<icons>
+
+	<Item id="TheTickets_ZAO"		file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"	file1=""/>
+	<Item id="TheTickets_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheRace_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheOlimp_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheArtefact_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheArtefact_BarWB"	file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"		file1=""/>
+	<Item id="TheSign_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheBen_House"			file="data\if\ico\TalkWithNpcDlg\housebendialog1.dds"		file1=""/>
+	<Item id="Porto_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="Midragd_Museum"		file="data\if\ico\TalkWithNpcDlg\museumdialog1.dds"		file1=""/>
+	<Item id="Midragd_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="Esting_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+
+</icons>

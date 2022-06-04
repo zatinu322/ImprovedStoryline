@@ -1196,10 +1196,10 @@
 			end
 			
 			if vehLisa then
-				vehLisa:SetCustomLinearVelocity( 15 )
-				vehLisa:SetThrottle( 1 )
 				vehLisa:SetGamePositionOnGround( CVector(5774.488, 253.369, 6023.187))
 				vehLisa:SetRotation(Quaternion(-0.006, -0.998, 0.010, -0.054))
+				vehLisa:SetCustomLinearVelocity( 15 )
+				vehLisa:SetThrottle( 1 )
 				vehLisa:SetExternalPathByName("lisa_path03")
 			end
 			
@@ -1221,10 +1221,10 @@
 			end
 			
 			if vehLisa then
-				vehLisa:SetThrottle( 1 )
-				vehLisa:SetCustomLinearVelocity( 15 )
 				vehLisa:SetGamePositionOnGround( CVector(5870.419, 231.462, 5101.949))
 				vehLisa:SetRotation(Quaternion(0.009, 1.000, 0.005, 0.001))
+				vehLisa:SetThrottle( 1 )
+				vehLisa:SetCustomLinearVelocity( 15 )
 				vehLisa:SetExternalPathByName("lisa_path04")
 			end
 			
@@ -1241,9 +1241,9 @@
 				vehPlayer:SetGamePositionOnGround( CVector(5129.860, 233.829, 3712.072))
 				vehPlayer:SetRotation(Quaternion(0.011, 0.958, 0.009, -0.286))
 				vehPlayer:UnlimitMaxSpeed()
-				vehPlayer:SetExternalPathByName("player_path07")
 				vehPlayer:SetCustomLinearVelocity( 20 )
 				vehPlayer:SetThrottle( 1 )
+				vehPlayer:SetExternalPathByName("player_path07")
 			end
 			
 			AddCinematicMessage( 8813, 3 )

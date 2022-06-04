@@ -231,7 +231,7 @@
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround(2, 0, 35, 25, PlfCoor, PlfID, 1, 1 )
+			FlyAround(2, 0, 35, 28, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 10, 1 )
@@ -293,7 +293,7 @@
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround(2, 0, 35, 9, PlfCoor, PlfID, 1, 1 )
+			FlyAround(2, 0, 35, 11, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 13, 1 )
@@ -819,6 +819,8 @@
 			AddCinematicMessage( 8825, 1 )
 
 			TActivate("ArmiaRybakovDIEEND")
+
+			CompleteQuest("WaitTillEnd2")
 			
 			trigger:Deactivate()
 		</script>
@@ -836,8 +838,6 @@
 			SetTolerance(1100, 1085, RS_ENEMY)
 
 			getObj("StorageVil"):SetBelong(1010)
-			
-			CompleteQuest("WaitTillEnd2")
 			
 			AddHistory( "r5_SkladTSP" )
 			AddFadingMsgId( "fm_history_got" )

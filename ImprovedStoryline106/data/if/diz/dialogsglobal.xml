@@ -4119,7 +4119,7 @@
 		name="r3m1_NearOracle_ODefenders_1_N16221"
 		text="Я привезу голову чудовища!"
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m2_MonterHead'); TActivate('trPlTurnRoundOracleDef'); StopPlayingCustomMusic(); EndConversation() " />
+		scriptResult="TakeQuest('r3m2_MonterHead'); TActivate('cinTurnOracleDef'); StopPlayingCustomMusic(); EndConversation() " />
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N1021"
@@ -4182,7 +4182,7 @@
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_2_N042"
-		text="Для этого  и проделал весь долгий путь."
+		text="Для этого и проделал весь долгий путь."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r3m2_OvercomeOracleGuard'); RemoveQuestItem( 'quest_monster_head' ); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_monster_head'); StopPlayingCustomMusic(); TDeactivate('trOracleDefendersDie'); TActivate('OracleCinStart'); EndConversation()" />
 
@@ -4191,7 +4191,7 @@
 		text="Пока я не смог с ним справиться."
 		role="PLAYER"
 		scriptCondition="not(IsQuestItemPresent( 'quest_monster_head' ))"
-		scriptResult="TActivate('trPlTurnRoundOracleDef'); StopPlayingCustomMusic(); EndConversation()" />
+		scriptResult="TActivate('cinTurnOracleDef'); StopPlayingCustomMusic(); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002038"
@@ -4505,7 +4505,6 @@
 		name="r3m2_Oracle_Oracle_4_N02"
 		text="Но хоть что-то ты уже можешь сказать определенно?!"
 		role="PLAYER"
-		scriptResult="TActivate('RemoveDefenders3')"
 		nextReplies="r3m2_Oracle_Oracle_4_N031" />
 
 	<Reply
@@ -8621,7 +8620,7 @@
 
 	<Reply
 		name="Dlg_pl_001924"
-		text="А почему бы и нет. Полезай в кузов! "
+		text="А почему бы и нет. Полезай в кабину! "
 		role="PLAYER"
 		scriptResult="CompleteQuest('FindGomerNearBereg_Quest1'); TActivate('DeleteHomerRybak'); GetPlayerVehicle():SetCustomLinearVelocity( 0 ); GetPlayerVehicle():SetThrottle( 0 ); AddQuestItem('Homer_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Homer_P') EndConversation()" />
 
@@ -9882,7 +9881,7 @@
 		name="Dlg_pl_003270"
 		text="Спасибо огромное, второй раз выручаешь."
 		role="PLAYER"
-		scriptCondition="2500 > GetPlayerVehicle()"
+		scriptCondition="2500 > GetPlayerMoney()"
 		nextReplies="Dlg_npc_003271" />
 
 	<Reply
@@ -9901,7 +9900,7 @@
 		name="Dlg_pl_002667"
 		text="Спасибо огромное. Вот, держи на ананагу. Постарайся не пропить всё разом."
 		role="PLAYER"
-		scriptCondition="GetPlayerVehicle() >= 2500"
+		scriptCondition="GetPlayerMoney() >= 2500"
 		nextReplies="Dlg_npc_002668" />
 
 	<Reply
@@ -15089,7 +15088,7 @@
 
 	<Reply
 		name="Dlg_npc_001551"
-		text="Когда-то давно, пятьдесят зим назад, жила я в столице региона - Мидгарде. Мир ещё был не таким как сейчас. Каждый в этом городе старался сделать его лучше от простого работяги до лучшего исследователя. И был там один человек, которого все уважали. Бен Дроссель. Конечно же, у него была фамилия, но почти все звали его Дросселем. В честь механизма, что он изобрёл."
+		text="Когда-то давно, пятьдесят зим назад, жила я в столице региона - Мидгарде. Мир ещё был не таким как сейчас. Каждый в этом городе старался сделать его лучше от простого работяги до лучшего исследователя. И был там один человек, которого все уважали. Бен Дроссель. Конечно же, у него была фамилия, но почти все звали его Дросселем. В честь устройства, которое он восстановил по старым чертежам."
 		role="NPC"
 		nextReplies="Dlg_pl_001552" />
 
@@ -15805,7 +15804,7 @@
 
 	<Reply
 		name="Dlg_npc_001655"
-		text="К западу от Мидгарда есть тропа в горы, в конце её - тайный схрон. До поры до времени никто туда не лез, но уже как две недели его захватила шайка местных бандитов."
+		text="К западу от Мидгарда есть тропа в горы, в конце её - тайный схрон. До поры до времени никто туда не лез, но уже как две недели его захватила шайка бандитов - явно не местных."
 		role="NPC"
 		nextReplies="Dlg_pl_001656" />
 
@@ -15817,7 +15816,7 @@
 
 	<Reply
 		name="Dlg_npc_001657"
-		text="Я не бандит. Я вор. Если нужно куда-нибудь скрытно проникнуть - обращайся ко мне. Людей я не убиваю. У меня даже оружия на машине нет."
+		text="Я не бандит. Я вор. Если нужно куда-нибудь скрытно проникнуть - обращайся ко мне. Людей я не убиваю. У меня даже оружия на машине нет, потому что незачем - вся местная шпана меня знает и считается со мной. А эти ребята, видимо, совсем не понимают, как тут всё устроено. Что же, тем хуже для них. Ну так что, берёшься?"
 		role="NPC"
 		nextReplies="Dlg_pl_001658" />
 
@@ -15884,7 +15883,7 @@
 
 	<Reply
 		name="Dlg_pl_001668"
-		text="Стрыга? Сколько он выпил, прежде чем придумать это?"
+		text="Стрыга? В каком бреду он это придумал?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001669" />
 

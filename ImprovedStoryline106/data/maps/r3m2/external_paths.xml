@@ -849,7 +849,7 @@
 	<Path
 		Name="OracleDef1_2">
 		<Point
-			coord="1323.725 2812.982" />
+			coord="1339.782 2810.751" />
 	</Path>
 
 	<Path
@@ -892,6 +892,12 @@
 		Name="playerOracleDefPath">
 		<Point
 			coord="1430.020 2773.388" />
+
+		<Point
+			coord="1456.759 2766.659" />
+
+		<Point
+			coord="1480.342 2746.420" />
 	</Path>
 
 	<Path

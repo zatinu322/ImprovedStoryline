@@ -120,6 +120,7 @@
 		SaveAllToleranceStatus(RS_NEUTRAL)
 
 		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+		GetPlayerVehicle():SetThrottle( 0 )
 
 		TActivate("RolikEnd_AmbushDruid")
 		TActivate("trAmbushDruid_cam01")
@@ -130,16 +131,17 @@
 		TActivate("trAmbushDruid_cam06")
 
 		Fly("AmbushDruid_cam01", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
-		Fly("AmbushDruid_cam02", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
-		Fly("AmbushDruid_cam03", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
-		Fly("AmbushDruid_cam04", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
+		Fly("AmbushDruid_cam02", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+		Fly("AmbushDruid_cam03", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
+		Fly("AmbushDruid_cam04", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
 		Fly("AmbushDruid_cam05", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
 		Fly("AmbushDruid_cam06", CINEMATIC_NO_AIM, 0, 10, 0, 1 )
 		StartCinematic()
 
 		local druid = getObj("MainDruidTeam")
 		if druid then
-		   druid:Remove()
+			skin = druid:GetVehicle(0):GetSkin()
+		   	druid:Remove()
 		end
 
 		trigger:Deactivate()
@@ -158,9 +160,12 @@
 		local vehTraitor05 = CreateVehicleEx("Molokovoz01","UlukAmbGuard05",CVector(1803.959, 288.069, 1423.401), 1020)
 		local vehDruid = CreateVehicleEx("Hunter02","vehDruid",CVector(1993.072, 295.392, 1463.305), 1019)
 
+		for i = 1,5 do
+			if GetEntityByName("UlukAmbGuard0"..i) then GetEntityByName("UlukAmbGuard0"..i):SetRandomSkin() end
+		end
+
 		if vehTraitor01 then 
 			vehTraitor01:SetRotation(Quaternion(0.000, 0.980, 0.000, 0.197))
-			vehTraitor01:SetSkin(0)
 		end
 
 		if vehTraitor03 then vehTraitor03:SetRotation(Quaternion(0.000, 0.721, 0.000, 0.693)) end
@@ -180,7 +185,7 @@
 		if vehDruid then
 			vehDruid:SetGamePositionOnGround( CVector(1993.072, 295.392, 1463.305))
 			vehDruid:SetRotation(Quaternion(0.001, -0.536, -0.005, 0.844))
-			vehDruid:SetSkin(0)
+			vehDruid:SetSkin(skin)
 			vehDruid:SetThrottle( 1 )             
 			vehDruid:SetCustomLinearVelocity( 10 )
 			vehDruid:SetExternalPathByName("vehDruid_path01")
@@ -194,14 +199,16 @@
 		<event flypath="AmbushDruid_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			TActivate("trZasada")
-			PlayCustomMusic("Battle02")
+--			PlayCustomMusic("Battle02")
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
 	<trigger Name="trZasada" active="0">
-		<event timeout="2" eventid="GE_TIME_PERIOD" />
+		<event timeout="4" eventid="GE_TIME_PERIOD" />
 		<script>
+
+		PlayCustomMusic("Battle02")
 
 		local vehTraitor01 = GetEntityByName("UlukAmbGuard01")
 		local vehTraitor02 = GetEntityByName("UlukAmbGuard02")
@@ -233,7 +240,9 @@
 				vehTraitor05:SetExternalPathByName("UlukAmbGuard_path05")
 				vehTraitor05:setImmortalMode(1)
 			end
-			AddCinematicMessage( 1001, 3 )
+
+			AddCinematicMessage( 1001, 5 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -371,6 +380,9 @@
 		SetCameraBehindPlayerVehicle()
 
 		RestoreAllToleranceStatus()
+
+		skin = nil
+
 		trigger:Deactivate()
 		</script>
 	</trigger>
@@ -387,7 +399,7 @@
 			if QuestStatus("r3m1_ClearSanctuary_Arrive")==Q_TAKEN then
 				Fly("LoggersMech_cam01", CINEMATIC_NO_AIM, 0, 15, 1, 1 )
 			elseif QuestStatus("r3m1_ClearSanctuary_DestroyOut")==Q_TAKEN then
-				Fly("LoggersMech_cam02", CINEMATIC_NO_AIM, 0, 9, 1, 1 )
+				Fly("LoggersMech_cam02", CINEMATIC_NO_AIM, 0, 10.5, 1, 1 )
 			end
 			StartCinematic()
 
@@ -511,7 +523,7 @@
 		local vehPID = GetPlayerVehicleId()
 
 		FlyLinked( "DestroyCave_cam01", vehPID , 8, 1, 0, nil, nil, true, nil, nil )
-		Fly("DestroyCave_cam02", CINEMATIC_NO_AIM, 0, 23, 0, 1 )
+		Fly("DestroyCave_cam02", CINEMATIC_NO_AIM, 0, 27, 0, 1 )
 		StartCinematic()
 
 		TActivate("RolikEnd_DestroyCave")
@@ -608,16 +620,16 @@
 
 			CreateVehicleEx("Bug01","vehUlukArmy01",CVector(1338.213, 271.588, 868.520), 1020)
 			CreateVehicleEx("Ural01","vehUlukArmy02",CVector(1329.951, 270.648, 871.197), 1020)
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1497.361, 265.454, 888.848), Quaternion(0, 0, 0, 0), 1)
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(1523.213, 266.821, 867.022), Quaternion(0, 0, 0, 0), 1)
 
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 			local camCar = GetEntityByName("vehUlukArmy01")
 			local camCarID = camCar:GetId()
 
-			Fly("RescuePeople_cam01", CINEMATIC_NO_AIM, 0, 25, 1, 0 )
-			Fly("RescuePeople_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-			FlyLinked( "linkedcam", CTochID, 13, 0, 1, camCarID )
+			Fly("RescuePeople_cam01", CINEMATIC_NO_AIM, 0, 26, 1, 0 )
+			Fly("RescuePeople_cam02", CINEMATIC_NO_AIM, nil, 5, 0, 0 )
+			FlyLinked( "linkedcam", CTochID, 12, 0, 1, camCarID )
 			StartCinematic()
 
 			CreateHuman( "Human", 1100, CVector( 1422.838, 261.208, 876.479 ), "Human_dead", "HumanRolik_Path04" )
@@ -699,7 +711,7 @@
 	<trigger Name="trRescuePeople_cam03" active="0">
 		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-
+		
 		local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
 		local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
 
@@ -757,6 +769,11 @@
 		<script>
 
 			TeamCreate("UlukArmy",1020,CVector(1625.560, 259.948, 879.053),{"Bug01","Ural01"}, CVector(1913.881, 260.062, 989.066), 1, Quaternion(0.014, 0.504, -0.016, 0.864))
+
+			for i = 0,1 do
+				if getObj("UlukArmy_vehicle_"..i) then getObj("UlukArmy_vehicle_"..i):SetSkin(2) end
+			end
+
 			TActivate("trUlukArmyDie")
 
 			local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
@@ -796,7 +813,7 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("ToGoInSet_cam01", CINEMATIC_NO_AIM, 0, 10, 1,1 )
+			Fly("ToGoInSet_cam01", CINEMATIC_NO_AIM, 0, 17, 1,1 )
 			StartCinematic()
 
 			AddCinematicMessage( 25, 0.25 )
@@ -837,6 +854,7 @@
 			vehPlayer:SetGamePositionOnGround( CVector(1831.321, 251.600, 1178.611))
 			vehPlayer:SetRotation(Quaternion(0.039, -0.868, 0.019, -0.495))
 			vehPlayer:SetExternalPathByName("player_path07")
+			vehPlayer:LimitMaxSpeed(15)
 		end
 
 
@@ -857,15 +875,23 @@
 		if vehPlayer then
 			vehPlayer:SetExternalPathByName("player_path07")
 			vehPlayer:PlaceToEndOfPath("player_path07")
+			vehPlayer:UnlimitMaxSpeed()
 		end
 
 		local FVehicle1 = GetEntityByName("RescueCars_vehicle_0")
-		if FVehicle1 then FVehicle1:Remove() end
+		if FVehicle1 then
+			skin1 = FVehicle1:GetSkin()
+			FVehicle1:Remove()
+		end
 		local FVehicle2 = GetEntityByName("RescueCars_vehicle_1")
-		if FVehicle2 then FVehicle2:Remove() end
+		if FVehicle2 then
+			skin2 = FVehicle2:GetSkin()
+			FVehicle2:Remove()
+		end
 
 		local FVehicle1 = CreateVehicleEx("DemoMolokovoz1", "BezhenVeh1", CVector(1908.233, 250.992, 1085.887), 1064)
 		if FVehicle1 then
+			FVehicle1:SetSkin(skin1)
 			FVehicle1:SetRotation(Quaternion(-0.061, 0.822, -0.023, 0.566))
 			FVehicle1:SetExternalPathByName("Bezhen_Path1")
 			FVehicle1:SetCruisingSpeed(20)
@@ -873,10 +899,14 @@
 
 		local FVehicle2 = CreateVehicleEx("r1m1_bug02", "BezhenVeh2", CVector(1881.191, 250.156, 1095.800), 1064)
 		if FVehicle2 then
+			FVehicle2:SetSkin(skin2)
 			FVehicle2:SetRotation(Quaternion(-0.029, 0.821, -0.006, 0.571))
 			FVehicle2:SetExternalPathByName("Bezhen_Path1")
 			FVehicle2:SetCruisingSpeed(20)
 		end
+
+		skin1 = nil
+		skin2 = nil
 
 		TakeQuest("r3m1_RescueUlukCivil_TakeToSet")
 
@@ -1142,14 +1172,15 @@
 		TActivate("trMoveFromR2M1_cam06")
 		TActivate("trMoveFromR2M1_anim01")
 
-		Fly("MoveFromR2M1_cam01", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
-		Fly("MoveFromR2M1_cam02", CINEMATIC_NO_AIM, 0, 4, 0, 0 )
+		Fly("MoveFromR2M1_cam01", CINEMATIC_NO_AIM, 0, 7, 1, 0 )
+		Fly("MoveFromR2M1_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
 		Fly("MoveFromR2M1_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
 		Fly("MoveFromR2M1_cam04", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
 		Fly("MoveFromR2M1_cam05", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
 		Fly("MoveFromR2M1_cam06", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
 		StartCinematic()
 		UpdateCinematic( 1 )
+
 		trigger:Deactivate()
 		</script>
 	</trigger>

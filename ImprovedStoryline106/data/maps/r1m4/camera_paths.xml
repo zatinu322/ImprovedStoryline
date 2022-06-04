@@ -20,17 +20,23 @@
 		<Point coord="0 10 -50" rotation="0.0 0.0 0.0 0.0" zoom="1.0" />
 	</Path>
 
-	<Path Name = "BolotoOF_cam01">                         
+	<Path Name = "BolotoOF_cam01">
 		<Point  coord="1266.468 213.171 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
 		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
+	</Path>
+
+	<Path Name = "BolotoOF_cam02">                         
+		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
+		<Point  coord="1266.468 232.295 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
 	</Path>
 
 	<Path Name = "Boloto_cam01">                         
 		<Point coord="-4.510 1.500 20.571" rotation="0.090 -0.603 -0.068 0.790"/>
 	</Path>
 
-	<Path Name = "Boloto_cam02">                         
-		<Point  coord="0.000 2.000 0.000"/>
+	<Path Name = "Boloto_cam02">
+		<Point  coord="1270.026 217.033 1544.650" rotation="-0.020 -0.453 0.010 0.891"/>
+		<Point  coord="1258.753 219.294 1547.568" rotation="-0.551 -0.116 0.077 0.823"/>
 	</Path>
 
 	<Path Name = "Boloto_cam03">                         
@@ -92,6 +98,7 @@
 	<Path Name = "lodka1">                         
 		<Point  coord="779.983 271.674 1037.732" rotation="-0.000 1.000 -0.007 0.017"/>
 		<Point  coord="775.084 249.252 877.352" rotation="-0.000 1.000 -0.000 0.015"/>
+		<Point  coord="785.818 228.727 787.916" rotation="-0.002 0.962 -0.007 0.273"/>
 	</Path>
 
 	<Path Name = "lodka2">                         
@@ -175,8 +182,11 @@
 	</Path>
 
 	<Path Name = "KSGCamPath">
-        <Point  coord="1118.512 336.663 2316.101" rotation="-0.117 0.842 -0.203 0.486"/>
-		<Point  coord="1118.512 336.663 2316.101" rotation="-0.037 0.184 -0.007 0.982"/>
+        <!-- <Point  coord="1118.512 336.663 2316.101" rotation="-0.117 0.842 -0.203 0.486"/>
+		<Point  coord="1118.512 336.663 2316.101" rotation="-0.037 0.184 -0.007 0.982"/> -->
+		<!-- <Point  coord="1124.245 317.056 2237.557" rotation="-0.105 0.517 -0.064 0.847"/> -->
+		<Point  coord="1098.624 313.037 2236.916" rotation="-0.048 0.250 -0.012 0.967"/>
+		<Point  coord="1132.940 370.338 2230.023" rotation="-0.082 0.107 -0.009 0.991"/>
 	</Path>
 
 	<Path Name = "ChehlyCamPath">

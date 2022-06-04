@@ -1,194 +1,185 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
-	<trigger	Name="cinExchangeVehFirst"	active="0">
+<!-- Подъезжаем к СО возле Оракула -->
+	<trigger	Name="cinWentOracleDef"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
---			println("--- ABVBVB")
 			SaveAllToleranceStatus(RS_NEUTRAL)
-			TActivate("cinExchangeVehFirst_End")
-			TActivate("cinExchangeVehFirst_FadeIn")
-			Fly("Garage_Path_First", CINEMATIC_NO_AIM, nil, 15, 1,1)
-			StartCinematic()
-			AddCinematicMessage( 8, 0.25 )
-			AddCinematicMessage( 9, 0.25 )
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinExchangeVehFirst_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(2777.719, 264.000, 2090.509 ), Quaternion(0.0000, 0.9100, -0.0000, 0.4147), 0)
-
-			getObj("humPlayer"):SetNodeAction(AT_STAND2)
-			getObj("humPlayer"):SetNextForAnimation(AT_STAND2, AT_STAND1)
-
-			if GetPlayerVehicle() then
-				GetPlayerVehicle():SetThrottle( 0 )
-				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PlCarPos_loc")))
-			end
-
-			if GetEntityByName("PlayerScout") then
-				GetEntityByName("PlayerScout"):SetGamePositionOnGround(CVector(2780.496, 264.953, 2087.660))
-				GetEntityByName("PlayerScout"):SetRotation(Quaternion(0.001, -0.000, 0.000, 1.000))
-				GetEntityByName("PlayerScout"):SetCustomLinearVelocity(0)
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinExchangeVehFirst_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			TActivate("trExcahgeVehAction")
---			println("EEEEEEEEEEEEENNNNNNNNNNNDDDDDDDDDDDD")
-			RestoreAllToleranceStatus()
-			SetCameraBehindPlayerVehicle()
-			if getObj("humPlayer") then getObj("humPlayer"):Remove() end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinExcahgeVehAction_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			GetPlayerVehicle():SetExternalPathByName("ExitToGaragePath")
-			GetPlayerVehicle():PlaceToEndOfPath("ExitToGaragePath")
-			GetPlayerVehicle():UnlimitMaxSpeed()
-			setRot(GetPlayerVehicle(), Quaternion(0.008, 0.399, 0.003, -0.917))
-			SetCameraBehindPlayerVehicle()
-			RestoreAllToleranceStatus()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinWentToFactory"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
---			Fly("WentFactory_Path1", CINEMATIC_NO_AIM, nil, 2, 1,0)
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			TActivate("cinWentFactory_PathStart")
-			TActivate("cinWentFactory_End")
-			Fly("WentFactory_Path2", CINEMATIC_NO_AIM, nil, 15, 1,0)
-			Fly("WentFactory_Path3", CINEMATIC_NO_AIM, nil, 7, 0,1)
-			StartCinematic()
-			PlayCustomMusic("Techno04")
-			AddCinematicMessage( 14, 5 )
 
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetThrottle( 0 )
+			
+			PlayCustomMusic("IntenseDialogue01")
+
+			TActivate("cinWentOracleDef_FadeIn")
+			TActivate("cinWentOracleDef_End")
+
+		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 5, 1, 1, GetPlayerVehicle():GetId(), nil, 1)
+			StartCinematic()
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-
-	<trigger Name="cinWentFactory_PathStart" active="0">
-		<event flypath="WentFactory_Path3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+	<trigger	Name="cinWentOracleDef_FadeIn"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(2459.292, 260.596, 2563.911))
-			GetPlayerVehicle():SetExternalPathByName("FactoryRailRoadPath")
-			AddCinematicMessage( 15, 1 )
+			if GetPlayerVehicle() then
+				GetPlayerVehicle():SetThrottle( 1 )
+				GetPlayerVehicle():SetCustomLinearVelocity( 10 )
+				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer1_loc")))
+				GetPlayerVehicle():SetRotation(Quaternion(0.044, 0.591, 0.010, -0.805))
+				GetPlayerVehicle():SetExternalPathByName("playerToOracledefPath")
+				GetPlayerVehicle():LimitMaxSpeed(15)
+			end
+			local veh = getObj("OracleDefenders_vehicle_0")
+			if veh then
+				veh:SetExternalPathByName("OracleDef1_1")
+				veh:PlaceToEndOfPath("OracleDef1_1")
+				veh:SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
+				veh:SetExternalPathByName("OracleDef1_2")
+				veh:SetCruisingSpeed(15)
+			end
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger	Name="cinWentFactory_End"	active="0">
+
+	<trigger	Name="cinWentOracleDef_End"	active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GetPlayerVehicle():SetExternalPathByName("FactoryRailRoadPath")
-			GetPlayerVehicle():PlaceToEndOfPath("FactoryRailRoadPath")
---			setRot(GetPlayerVehicle(), Quaternion(0.008, 0.399, 0.003, -0.917))
-			StopPlayingCustomMusic()
-			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()
-			TActivate("trExcahgeVehFirst")
+
+			GetPlayerVehicle():SetExternalPathByName("playerToOracledefPath")
+			GetPlayerVehicle():PlaceToEndOfPath("playerToOracledefPath")
+			GetPlayerVehicle():SetRotation(Quaternion(0.044, 0.591, 0.010, -0.805))
+			GetPlayerVehicle():UnlimitMaxSpeed()
+
+			local veh = getObj("OracleDefenders_vehicle_0")
+			if veh then
+				veh:SetExternalPathByName("OracleDef1_2")
+				veh:PlaceToEndOfPath("OracleDef1_2")
+				veh:SetRotation(Quaternion(-0.060, -0.799, 0.063, -0.595))
+				veh:AddModifier("hp", "+ 2500")
+				veh:setGodMode(0)
+				veh:setImmortalMode(0)
+			end
+
+			local veh2 = getObj("OracleDefenders_vehicle_1")
+			if veh2 then
+				veh2:AddModifier("hp", "+ 2500")
+				veh2:setGodMode(0)
+				veh2:setImmortalMode(0)
+			end
+
+			StartConversation("OracleGuardian_1")
 			
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger	Name="trPlTurnRoundFactory"	active="1">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToFactory_loc" />
+	<!-- После разговора с СО уезжаем от них -->
+	<trigger	Name="cinTurnOracleDef"	active="0">
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
-			local vehtype=GetPlayerVehicle():GetProperty("Prototype").AsString
+			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			if QuestStatus("r3m2_TwoMagicThing")==Q_TAKEN and vehtype=="ArcadeScout01" then
-				return
-			else
-				TActivate("cinPlTurnRoundFactory_FadeIn")
-				TActivate("cinPlTurnRoundFactory_PathStart")
-				TActivate("cinPlTurnRoundFactory_End")
-				SaveAllToleranceStatus(RS_NEUTRAL)
-	  			Fly("WentFactory_TurnAround", CINEMATIC_NO_AIM, nil, 6, 1,0)
-	  			Fly("WentFactory_TurnAround2", CINEMATIC_NO_AIM, nil, 5, 0,1)
-	  			StartCinematic()
-				if QuestStatus("r3m2_TwoMagicThing")~=Q_TAKEN then
-					AddCinematicMessage(11, 0.25)
-				else
-					TActivate("trExcahgeVehFirst")
-					TActivate("trPlLeaveFactyOnScout")
-					TActivate("cinWentFactory_Path2")
-					AddCinematicMessage(6, 0.25)
- 				end
+			TActivate("cinTurnOracleDef_End")
+
+		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 5, 0, 1, GetPlayerVehicle():GetId(), nil, 1)
+			StartCinematic()
+
+			if GetPlayerVehicle() then
+				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer2_loc")))
+				GetPlayerVehicle():SetRotation(Quaternion(0.017, 0.788, -0.072, 0.611))
+				GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
 			end
-		</script>
-	</trigger>
 
-	<trigger Name="cinPlTurnRoundFactory_PathStart" active="0">
-		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
-		<script>
-			GetPlayerVehicle():SetThrottle( 0 )
-			GetPlayerVehicle():LimitMaxSpeed( 6 )
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			trigger:Deactivate()
-
-					
-		</script>
-	</trigger>
-
-	<trigger Name="cinWentFactory_Path2" active="0">
-		<event flypath="WentFactory_TurnAround2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			AddCinematicMessage(7, 0.25)
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger	Name="cinPlTurnRoundFactory_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			setRot(GetPlayerVehicle(), Quaternion(0.000, 0.999, 0.005, -0.050))
-			setPos(GetPlayerVehicle(), CVector(getPos("FactoryPlTurn_loc")))
-			GetPlayerVehicle():SetExternalPathByName("EnterToFactoryPath")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinPlTurnRoundFactory_End"	active="0">
+	<trigger	Name="cinTurnOracleDef_End"	active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GetPlayerVehicle():SetExternalPathByName("EnterToFactoryPath")
-			GetPlayerVehicle():PlaceToEndOfPath("EnterToFactoryPath")
-			setRot(GetPlayerVehicle(), Quaternion(0.009, 0.999, 0.004, -0.051))
---			setPos(GetPlayerVehicle(), CVector(2389.690, 258.985, 2754.862))
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
+			GetPlayerVehicle():PlaceToEndOfPath("playerOracleDefPath")
+			GetPlayerVehicle():SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
+
+			local veh = getObj("OracleDefenders_vehicle_0")
+			if veh then
+				veh:SetExternalPathByName("OracleDef1_1")
+				veh:PlaceToEndOfPath("OracleDef1_1")
+				veh:SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
+				veh:setGodMode(1)
+				veh:setImmortalMode(1)
+			end
+
+			local veh2 = getObj("OracleDefenders_vehicle_1")
+			if veh2 then
+				veh2:setGodMode(1)
+				veh2:setImmortalMode(1)
+			end
+
+			TActivate("trWentOracleDefenders")
 			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()
-			GetPlayerVehicle():UnlimitMaxSpeed()
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Запрет проезда к Оракулу -->
+	<trigger	Name="cinPlCantGoOracle"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("cinTurnOracleDef_FadeIn")
+			TActivate("cinTurnOracleDef_End")
+
+		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 8, 1, 0, GetPlayerVehicle():GetId(), nil, 1)
+			StartCinematic()
+
+			AddCinematicMessage( 11, 1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinPlCantGoOracle_FadeIn"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			if GetPlayerVehicle() then
+				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer2_loc")))
+				GetPlayerVehicle():SetRotation(Quaternion(0.017, 0.788, -0.072, 0.611))
+				GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinPlCantGoOracle_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
+			GetPlayerVehicle():PlaceToEndOfPath("playerOracleDefPath")
+			GetPlayerVehicle():SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
+
+			TActivate("trWentOracleDefenders")
+
+			SetCameraBehindPlayerVehicle()
+			
+			RestoreAllToleranceStatus()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Игрок подъехал к логову Монстра -->
 	<trigger	Name="cinNearMonster"	active="0">
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -211,7 +202,6 @@
 	<trigger	Name="cinNearMonster_FadeIn"	active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
---			println("!!!!!!!!!!!")
 
 			local mnstr = TeamCreate("TeamBigMonster",1022,CVector(getPos("Monster_loc")),{"RobotTron"})
 			if mnstr then
@@ -249,356 +239,72 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			StopPlayingCustomMusic()
+
 			SetCameraDirectionToObj(getObj("TeamBigMonster_vehicle_0"):GetId())
+
 			RestoreAllToleranceStatus()
+
 			CompleteQuest("r3m2_MonterHead1")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-
+	<!-- Убили Монстра -->
 	<trigger	Name="cinMonsterDie"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			PlayCustomMusic("IntenseDialogue03")
+
 			TActivate("cinMonsterDie_End")
+
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
 			PlfCoor.y = PlfCoor.y + 20
 			PlfCoor.z = PlfCoor.z + 20
 
---   		Plf:SetCustomControlEnabled(true)
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
---			Plf:SetCustomControlEnabled(false)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			FlyAround(6, 0.3, 25, 23, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
+
 			AddCinematicMessage( 1001, 0.25 )
 			AddCinematicMessage( 1002, 0.25 )
 			AddCinematicMessage( 1003, 0.25 )
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinWentOracleDef"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			
-			PlayCustomMusic("IntenseDialogue01")
-			TActivate("cinWentOracleDef_FadeIn")
-			TActivate("cinWentOracleDef_End")
-		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 8, 1, 1, GetPlayerVehicle():GetId(), nil, 1)
---FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPanel, RelativeRotations, WaitWhenStop, InterpolateFromPrevious )
-			StartCinematic()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinWentOracleDef_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			if GetPlayerVehicle() then
-				GetPlayerVehicle():SetThrottle( 1 )
-				GetPlayerVehicle():SetCustomLinearVelocity( 10 )
-				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer1_loc")))
-				GetPlayerVehicle():SetRotation(Quaternion(0.044, 0.591, 0.010, -0.805))
-				GetPlayerVehicle():SetExternalPathByName("playerToOracledefPath")
-			end
-			local veh = getObj("OracleDefenders_vehicle_0")
-			if veh then
-				veh:SetExternalPathByName("OracleDef1_1")
-				veh:PlaceToEndOfPath("OracleDef1_1")
-				veh:SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
-			  	veh:SetExternalPathByName("OracleDef1_2")
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinWentOracleDef_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			GetPlayerVehicle():SetExternalPathByName("playerToOracledefPath")
-			GetPlayerVehicle():PlaceToEndOfPath("playerToOracledefPath")
-			GetPlayerVehicle():SetRotation(Quaternion(0.044, 0.591, 0.010, -0.805))
-
-			local veh = getObj("OracleDefenders_vehicle_0")
-			if veh then
-				veh:SetExternalPathByName("OracleDef1_2")
-				veh:PlaceToEndOfPath("OracleDef1_2")
-				veh:SetRotation(Quaternion(-0.060, -0.799, 0.063, -0.595))
-				veh:AddModifier("hp", "+ 2500")
-				veh:setGodMode(0)
-				veh:setImmortalMode(0)
-			end
-
-			local veh2 = getObj("OracleDefenders_vehicle_1")
-			if veh2 then
-				veh2:AddModifier("hp", "+ 2500")
-				veh2:setGodMode(0)
-				veh2:setImmortalMode(0)
-			end
-
-			StartConversation("OracleGuardian_1")
---			StopPlayingCustomMusic()
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinTurnOracleDef"	active="0">
-		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			TActivate("cinTurnOracleDef_End")
-		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 8, 0, 1, GetPlayerVehicle():GetId(), nil, 1)
-			StartCinematic()
-
-			if GetPlayerVehicle() then
-				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer2_loc")))
-				GetPlayerVehicle():SetRotation(Quaternion(0.017, 0.788, -0.072, 0.611))
-				GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinTurnOracleDef_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
-			GetPlayerVehicle():PlaceToEndOfPath("playerOracleDefPath")
-			GetPlayerVehicle():SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
-
-			local veh = getObj("OracleDefenders_vehicle_0")
-			if veh then
-				veh:SetExternalPathByName("OracleDef1_1")
-				veh:PlaceToEndOfPath("OracleDef1_1")
-				veh:SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
-				veh:setGodMode(1)
-				veh:setImmortalMode(1)
-			end
-
-			local veh2 = getObj("OracleDefenders_vehicle_1")
-			if veh2 then
-				veh2:setGodMode(1)
-				veh2:setImmortalMode(1)
-			end
-
-			TActivate("trWentOracleDefenders")
-			SetCameraBehindPlayerVehicle()
-			RestoreAllToleranceStatus()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinPlCantGoOracle"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			TActivate("cinTurnOracleDef_FadeIn")
-			TActivate("cinTurnOracleDef_End")
-		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 8, 1, 0, GetPlayerVehicle():GetId(), nil, 1)
-			StartCinematic()
-			AddCinematicMessage( 11, 1 )
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinPlCantGoOracle_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			if GetPlayerVehicle() then
-				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PointPlayer2_loc")))
-				GetPlayerVehicle():SetRotation(Quaternion(0.017, 0.788, -0.072, 0.611))
-				GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinPlCantGoOracle_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
-			GetPlayerVehicle():PlaceToEndOfPath("playerOracleDefPath")
-			GetPlayerVehicle():SetRotation(Quaternion(-0.025, -0.863, 0.060, -0.501))
-			TActivate("trWentOracleDefenders")
-			SetCameraBehindPlayerVehicle()
-			RestoreAllToleranceStatus()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinExit31ReturnFirst"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			EnableGodMode()
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate("cinExit31ReturnFirst")
-			TActivate("cinExit31Return_FadeIn")
-			TActivate("cinExit31Return_End")
-
-			Fly("ExitTo31Return", CINEMATIC_NO_AIM, nil, 4, 1,1)
-			StartCinematic()
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-	<trigger	Name="cinExit31Return_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(2893.049, 269.876, 186.546))
-			GetPlayerVehicle():SetRotation(Quaternion(-0.077, -0.800, -0.013, 0.595))
-			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinExit31Return_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			DisableGodMode()
-			RestoreAllToleranceStatus()
-			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
-			GetPlayerVehicle():PlaceToEndOfPath("ReturnPathR3M1")
-			SetCameraBehindPlayerVehicle()
-			trigger:Deactivate()
-		</script>
-	</trigger>
- 
-	<trigger	Name="cinExit31OkFirst"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			EnableGodMode()
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TDeactivate("trExitToR3M1")
-			TActivate("cinExit31OkFirst")
-			TActivate("cinExit31Ok_FadeIn")
-			TActivate("cinExit31Ok_End")
-
-			Fly("ExitTo31Ok", CINEMATIC_NO_AIM, nil, 4, 1,1)
-			StartCinematic()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinExit31Ok_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(2942.513, 260.839, 204.028))
-			GetPlayerVehicle():SetRotation(Quaternion(0.078, 0.555, -0.040, 0.827))
-			GetPlayerVehicle():SetExternalPathByName("ExitTo31Ok")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinExit31Ok_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			DisableGodMode()
-			RestoreAllToleranceStatus()
-			TActivate("trExitToR3M1")
-			PassToMap("r3m1", "FromR3M2", 0 , true)
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
 
 	<trigger	Name="cinMonsterDie_End"	active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
---			PlayCustomMusic("IntenseDialogue01")
 			StopPlayingCustomMusic()
+
 			RestoreAllToleranceStatus()
+
 			SetCameraBehindPlayerVehicle()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinPoleFirst"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			EnableGodMode()
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			PlayCustomMusic("Bio01")
---			TDeactivate("trExitToR3M1")
-			TActivate("cinPoleFly")
---			TActivate("cinExit31Ok_FadeIn")
-			TActivate("cinPole31Ok_End")
-			GetPlayerVehicle():SetThrottle( 0 )
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-
-			Fly("Pole1", CINEMATIC_NO_AIM, nil, 5, 1,0)
-			Fly("Pole2", CINEMATIC_NO_AIM, nil, 18, 0,1)
-			StartCinematic()
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-
-	<trigger Name="cinPoleFly" active="0">
-		<event flypath="Pole2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			AddCinematicMessage( 4, 2 )
-			AddCinematicMessage( 5, 0.25 )
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinPole31Ok_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			DisableGodMode()
-			StopPlayingCustomMusic()
-			TDeactivate("cinPoleFly")
-			RestoreAllToleranceStatus()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Ролик при каждом подъезде к Оракулу -->
 	<trigger Name="OracleRolik" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("Techno03")
-			
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(750.608, 280.495, 3124.189), Quaternion(0, 0, 0, 0), 1)
-			local vehPl = GetPlayerVehicle()
-			local vehPlID = vehPl:GetId()
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
-			FlyLinked( "OraclePriezdCam1", CTochID, 7, 1, 0, vehPlID )
+
+			local vehPlID = GetPlayerVehicleId()
+
+			Fly("OraclePriezdCam1", CINEMATIC_AIM_TO_ID, vehPlID, 6, 1, 0 )
 			Fly("OraclePriezdCam2", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
 			Fly("OraclePriezdCam3", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
 			StartCinematic()
@@ -616,12 +322,10 @@
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
 				vehPlayer:SetGamePositionOnGround( CVector(824.730, 266.587, 3163.805))
 				vehPlayer:SetRotation(Quaternion(-0.001, -0.681, 0.002, 0.732))
+				vehPlayer:SetCustomLinearVelocity( 15 )
+				vehPlayer:SetThrottle( 1 )
 				vehPlayer:SetExternalPathByName("OraclePriezdPath")
 			end
 			trigger:Deactivate()
@@ -644,6 +348,17 @@
 			
 			TActivate("OracleVrataOpen")
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OracleVrataOpen" active="0">
+		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local oracv = getObj("oraclegate")
+			if oracv then
+				oracv:SetNodeAction(AT_RESERVED4)
+			end
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -684,4 +399,687 @@
 		</script>
 	</trigger>
 
+	<!-- Игрок приехал на завод -->
+	<trigger	Name="cinWentToFactory"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("cinWentFactory_PathStart")
+			TActivate("cinWentFactory_End")
+
+			Fly("WentFactory_Path2", CINEMATIC_NO_AIM, nil, 15, 1,0)
+			Fly("WentFactory_Path3", CINEMATIC_NO_AIM, nil, 8, 0,1)
+			StartCinematic()
+
+			PlayCustomMusic("Techno04")
+
+			AddCinematicMessage( 14, 5 )
+
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinWentFactory_PathStart" active="0">
+		<event flypath="WentFactory_Path3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(2459.292, 260.596, 2563.911))
+			GetPlayerVehicle():SetExternalPathByName("FactoryRailRoadPath")
+
+			AddCinematicMessage( 15, 1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinWentFactory_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GetPlayerVehicle():SetExternalPathByName("FactoryRailRoadPath")
+			GetPlayerVehicle():PlaceToEndOfPath("FactoryRailRoadPath")
+
+			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
+
+			RestoreAllToleranceStatus()
+
+			TActivate("trExcahgeVehFirst")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Запрет проезда на завод, если игрок не на Скауте ИЛИ артефакты уже собраны -->
+	<trigger	Name="trPlTurnRoundFactory"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToFactory_loc" />
+		<script>
+			local vehtype=GetPlayerVehicle():GetProperty("Prototype").AsString
+
+			if QuestStatus("r3m2_TwoMagicThing")==Q_TAKEN and vehtype=="ArcadeScout01" then
+				return
+			else
+				TActivate("cinPlTurnRoundFactory_FadeIn")
+				TActivate("cinPlTurnRoundFactory_PathStart")
+				TActivate("cinPlTurnRoundFactory_End")
+
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+	  			Fly("WentFactory_TurnAround", CINEMATIC_NO_AIM, nil, 9, 1,0)
+	  			Fly("WentFactory_TurnAround2", CINEMATIC_NO_AIM, nil, 8, 0,1)
+	  			StartCinematic()
+
+				if QuestStatus("r3m2_TwoMagicThing")~=Q_TAKEN then
+					AddCinematicMessage(11, 0.25)
+				else
+					TActivate("trExcahgeVehFirst")
+					TActivate("trPlLeaveFactyOnScout")
+					TActivate("cinWentFactory_Path2")
+					AddCinematicMessage(6, 0.25)
+ 				end
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="cinPlTurnRoundFactory_PathStart" active="0">
+		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			GetPlayerVehicle():SetThrottle( 0 )
+			GetPlayerVehicle():LimitMaxSpeed( 6 )
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+
+			trigger:Deactivate()
+
+		</script>
+	</trigger>
+
+	<trigger Name="cinWentFactory_Path2" active="0">
+		<event flypath="WentFactory_TurnAround2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage(7, 0.25)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinPlTurnRoundFactory_FadeIn"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			setRot(GetPlayerVehicle(), Quaternion(0.000, 0.999, 0.005, -0.050))
+			setPos(GetPlayerVehicle(), CVector(getPos("FactoryPlTurn_loc")))
+
+			GetPlayerVehicle():SetExternalPathByName("EnterToFactoryPath")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger	Name="cinPlTurnRoundFactory_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GetPlayerVehicle():SetExternalPathByName("EnterToFactoryPath")
+			GetPlayerVehicle():PlaceToEndOfPath("EnterToFactoryPath")
+
+			setRot(GetPlayerVehicle(), Quaternion(0.009, 0.999, 0.004, -0.051))
+
+			SetCameraBehindPlayerVehicle()
+
+			RestoreAllToleranceStatus()
+
+			GetPlayerVehicle():UnlimitMaxSpeed()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Самая первая катсцена смены авто -->
+	<trigger	Name="cinExchangeVehFirst"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("cinExchangeVehFirst_End")
+			TActivate("cinExchangeVehFirst_FadeIn")
+
+			CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(0, 1, 0 ), Quaternion(0.0000, 0.9100, -0.0000, 0.4147), 0)
+			local plHum = getObj("humPlayer")
+			local plHumID = plHum:GetId()
+
+
+			Fly("Garage_Path_First", CINEMATIC_AIM_TO_ID, plHumID, 17, 1,1)
+			StartCinematic()
+
+			AddCinematicMessage( 8, 0.25 )
+			AddCinematicMessage( 9, 0.25 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinExchangeVehFirst_FadeIn"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+
+			local plHum = getObj("humPlayer")
+			if plHum then
+				plHum:SetPosition(CVector(2777.719, 264.000, 2090.509))
+				plHum:SetNodeAction(AT_STAND2)
+				plHum:SetNextForAnimation(AT_STAND2, AT_STAND1)
+			end
+
+			if GetPlayerVehicle() then
+				GetPlayerVehicle():SetThrottle( 0 )
+				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PlCarPos_loc")))
+			end
+
+			if GetEntityByName("PlayerScout") then
+				GetEntityByName("PlayerScout"):SetGamePositionOnGround(CVector(2780.496, 264.953, 2087.660))
+				GetEntityByName("PlayerScout"):SetRotation(Quaternion(0.001, -0.000, 0.000, 1.000))
+				GetEntityByName("PlayerScout"):SetCustomLinearVelocity(0)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinExchangeVehFirst_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			TActivate("trExcahgeVehAction")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			if getObj("humPlayer") then getObj("humPlayer"):Remove() end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Последующие смены машины -->
+	<trigger	Name="trExcahgeVehAction"	active="0">
+		<event	timeout="0.001"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local excarname=GetVar("GarVehName").AsString
+			local oldcarname=GetPlayerVehicle():GetName()
+
+			if oldcarname==nil then
+				oldcarname="OldCarPlayer"..random(1000)
+				GetPlayerVehicle():SetNameFromScript( oldcarname )
+			end
+
+			if excarname=="PlayerScout" then
+				SaveWeaponGroups()
+				SetVar("PlayerSkin", GetPlayerVehicle():GetSkin())
+				println("Getting player skin")
+				println(GetVar("PlayerSkin").AsInt)
+			end
+
+			local veh=getObj(excarname)
+			local oldveh=GetPlayerVehicle()
+
+			if veh then
+				TActivate("cinExcahgeVehAction_End")
+
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyLinked( "Garage_Path", veh:GetId(), 6, 0, 1, veh:GetId(), nil, nil)
+				StartCinematic()
+
+				if excarname=="PlayerScout" and GetVar("FirstVehChange").AsInt == 0 then
+					AddCinematicMessage( 10, 2 )
+					SetVar("FirstVehChange", 1)
+				end
+
+				GetPlayerVehicle():setGodMode(1)
+				GetPlayerVehicle():setImmortalMode(1)
+				GetPlayerVehicle():SetCustomControlEnabled(1)
+
+				CapturePlayerVehicle(0, "garage")
+
+   				g_Player:AddChild(veh)
+				GetPlayerVehicle():setGodMode(0)
+				GetPlayerVehicle():setImmortalMode(0)
+				GetPlayerVehicle():AddModifier("hp", "+ 1")
+				GetPlayerVehicle():SetCustomControlEnabled(0)
+				veh:SetExternalPathByName("ExitToGaragePath")
+				veh:LimitMaxSpeed(10)
+			end
+
+			if oldveh then
+			   oldveh:setGodMode(1)
+			   oldveh:setImmortalMode(1)
+			end
+
+			if oldcarname=="PlayerScout" then
+			   RestoreWeaponGroups()
+			   GetPlayerVehicle():SetSkin(GetVar("PlayerSkin").AsInt)
+			   println("Setting skin to player")
+			end
+
+			SetVar("GarVehName",oldcarname)
+
+			TActivate("trExcahgeVehSwitchOn")
+			TActivate("trPlCheckFuel")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinExcahgeVehAction_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			GetPlayerVehicle():SetExternalPathByName("ExitToGaragePath")
+			GetPlayerVehicle():PlaceToEndOfPath("ExitToGaragePath")
+			GetPlayerVehicle():UnlimitMaxSpeed()
+
+			setRot(GetPlayerVehicle(), Quaternion(0.008, 0.399, 0.003, -0.917))
+
+			SetCameraBehindPlayerVehicle()
+
+			RestoreAllToleranceStatus()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Общая катсцена для подбора артефактов -->
+	<trigger	Name="trFindThing"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			PlayCustomMusic("IntenseDialogue03")
+
+			local Plf = GetPlayerVehicle()
+
+			Plf:SetCustomLinearVelocity(0)
+			Plf:SetThrottle(0)
+
+			if IsQuestTaken("r3m2_TwoMagicThing_Return") then
+				time = 14
+			else
+				time = 11
+			end
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local stat = GetVar("ThingStatus").AsInt
+			if stat==1 then
+				Fly("ArtefactVTvoemANUSE", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), time, 1, 1 )
+			elseif stat==2 then
+				Fly("ArtefactVTvoemANUSE3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), time, 1, 1 )
+			elseif stat==3 then
+				Fly("ArtefactVTvoemANUSE4", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), time, 1, 1 )
+			elseif stat==4 then
+				Fly("ArtefactVTvoemANUSE2", CINEMATIC_NO_AIM, nil, time, 1, 1 )
+			end
+			StartCinematic()
+
+			AddCinematicMessage( 1004, 0.25 )
+
+			if IsQuestTaken("r3m2_TwoMagicThing_Return") then
+				AddCinematicMessage( 1006, 0.25 )
+				TActivate("OracleCinStart")
+			else
+				AddCinematicMessage( 1005, 0.25 )					
+			end
+
+			TActivate("trFindThingEnd")
+
+			time = nil
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trFindThingEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Первая менгира -->
+	<trigger	Name="trVK1"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK1_loc" />
+		<script>
+			CompleteQuest("r3m2_OracleMemory_1")
+			RemoveQuestItem( "quest_repair_robot1" );
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("VK1_path", CINEMATIC_NO_AIM, nil, 6, 1,1)
+			StartCinematic()
+			AddCinematicMessage( 1, 0.25 )
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+
+			TActivate("trVK1_Fade")
+			TActivate("trVK_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trVK1_Fade"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff1", -1, -1, CVector(1913.9, 302.51, 3152), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(1833.376, 288.552, 3148.688))
+				vehPlayer:SetRotation(Quaternion(0.007, 0.699, 0.004, 0.715))
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Вторая менгира -->
+	<trigger	Name="trVK2"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK2_loc" />
+		<script>
+			CompleteQuest("r3m2_OracleMemory_2")
+			RemoveQuestItem( "quest_repair_robot2" )
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("VK2_path", CINEMATIC_NO_AIM, nil, 7, 1,1)
+			StartCinematic()
+			AddCinematicMessage( 2, 0.25 )
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+
+			TActivate("trVK2_Fade")
+			TActivate("trVK_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trVK2_Fade"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff2", -1, -1, CVector(681.7, 289, 1944), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(690.340, 269.296, 1851.323))
+				vehPlayer:SetRotation(Quaternion(0.058, -0.007, -0.009, -0.998))
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trVK_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Третья менгира и наезд СО -->
+	<trigger	Name="trVK3"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK3_loc" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			Fly("3rdHelper", CINEMATIC_NO_AIM, nil, 7, 1,0)
+			Fly("FanatikPriehal2", CINEMATIC_NO_AIM, nil, 12, 0,1)
+			StartCinematic()
+			
+			AddCinematicMessage( 3, 1 )
+			
+			TActivate("cin_FanatikRage")
+			TActivate("cin_FanatikFade")
+			TActivate("cin_FanatikRage2")
+			TActivate("OracleCinStart")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cin_FanatikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CreateVehicleEx("Cruiser02", "Fanatic_Cruiser", CVector(1370.991, 287.842, 1128.789), 1021)
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff3", -1, -1, CVector(1214.700, 322.100, 1255.800), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomLinearVelocity(0)
+				Plf:SetThrottle(0)
+				Plf:SetGamePositionOnGround(CVector(1200.822, 303.276, 1197.434))
+				Plf:SetRotation(Quaternion(0.001, 0.153, 0.004, 0.988))
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cin_FanatikRage" active="0">
+		<event flypath="FanatikPriehal2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			PlayCustomMusic("IntenseDialogue01")
+
+			local zashitt = GetEntityByName("OracleDefenders")
+			
+			if zashitt then
+				local zashitt1 = zashitt:GetVehicle(0)
+				if zashitt1 then
+					zashitt1:Remove()
+				end
+			end
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
+			end
+			
+			local vehFanatik = GetEntityByName("Fanatic_Cruiser")
+			if vehFanatik then
+				vehFanatik:SetRotation(Quaternion(-0.043, -0.905, -0.031, 0.422))
+				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
+				vehFanatik:SetCustomLinearVelocity( 30 )
+				vehFanatik:SetThrottle( 1 )
+				vehFanatik:SetRandomSkin()
+				fan_skin = vehFanatik:GetSkin()
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cin_FanatikRage2"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+			TeamCreate("Fanatik",1021,CVector(1370.991, 287.842, 1128.789),{"Cruiser02"})
+			TeamCreate("FanatikCrew",1021,CVector(1159.899, 296.939, 1134.574),{"r1m2_hunter02", "Fighter02", "Scout03"})
+		
+			local vehFanCut = GetEntityByName("Fanatic_Cruiser")
+			if vehFanCut then vehFanCut:Remove() end
+
+			local vehFanatik = GetEntityByName("Fanatik_vehicle_0")
+			if vehFanatik then
+				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
+				vehFanatik:PlaceToEndOfPath("FanatikVmeshalsa")
+				if fan_skin then
+					vehFanatik:SetSkin(fan_skin)
+					fan_skin = nil
+				else
+					vehFanatik:SetRandomSkin()
+				end	
+			end
+
+			local vehCrew0 = GetEntityByName("FanatikCrew_vehicle_0")
+			if vehCrew0 then
+				vehCrew0:SetGamePositionOnGround( CVector(1238.950, 302.213, 1168.080))
+				vehCrew0:SetRotation(Quaternion(-0.002, -0.477, 0.017, 0.879))
+			end
+
+			local vehCrew1 = GetEntityByName("FanatikCrew_vehicle_1")
+			if vehCrew1 then
+				vehCrew1:SetGamePositionOnGround( CVector(1244.295, 302.624, 1179.895))
+				vehCrew1:SetRotation(Quaternion(0.000, 0.501, 0.002, -0.865))
+			end
+
+			local vehCrew2 = GetEntityByName("FanatikCrew_vehicle_2")
+			if vehCrew2 then
+				vehCrew2:SetGamePositionOnGround( CVector(1225.993, 302.560, 1160.077))
+				vehCrew2:SetRotation(Quaternion(0.022, -0.508, -0.012, 0.861))
+			end
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomLinearVelocity(0)
+				Plf:SetThrottle(0)
+				Plf:SetGamePositionOnGround(CVector(1200.822, 303.276, 1197.434))
+				Plf:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
+			end
+			
+			StartConversation( "OracleGuardian_2" )
+			
+			StopPlayingCustomMusic()
+			
+			RestoreAllToleranceStatus()
+			
+			SetTolerance(1100,1021,RS_ALLY)
+
+			CompleteQuest("r3m2_OracleMemory_3")
+			
+			RemoveQuestItem( "quest_repair_robot3" )
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot3")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Осмотр поля Друида -->
+	<trigger	Name="cinPoleFirst"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			EnableGodMode()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("Bio01")
+
+			TActivate("cinPoleFly")
+			TActivate("cinPole31Ok_End")
+
+			GetPlayerVehicle():SetThrottle( 0 )
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+
+			Fly("Pole1", CINEMATIC_NO_AIM, nil, 5, 1,0)
+			Fly("Pole2", CINEMATIC_NO_AIM, nil, 18, 0,1)
+			StartCinematic()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger Name="cinPoleFly" active="0">
+		<event flypath="Pole2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 4, 2 )
+			AddCinematicMessage( 5, 0.25 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinPole31Ok_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			DisableGodMode()
+
+			StopPlayingCustomMusic()
+
+			TDeactivate("cinPoleFly")
+
+			RestoreAllToleranceStatus()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Ролик при отказе от переезда в Рощу Друидов -->
+	<trigger	Name="cinExit31ReturnFirst"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			EnableGodMode()
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("cinExit31Return_FadeIn")
+			TActivate("cinExit31Return_End")
+
+			Fly("ExitTo31Return", CINEMATIC_NO_AIM, nil, 4, 1,1)
+			StartCinematic()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinExit31Return_FadeIn"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(2893.049, 269.876, 186.546))
+			GetPlayerVehicle():SetRotation(Quaternion(-0.077, -0.800, -0.013, 0.595))
+			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+	<trigger	Name="cinExit31Return_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			DisableGodMode()
+			RestoreAllToleranceStatus()
+			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
+			GetPlayerVehicle():PlaceToEndOfPath("ReturnPathR3M1")
+			SetCameraBehindPlayerVehicle()
+			trigger:Deactivate()
+		</script>
+	</trigger>
+ 
 </triggers>

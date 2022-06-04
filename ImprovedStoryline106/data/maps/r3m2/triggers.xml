@@ -5,6 +5,13 @@
 		<script>
 
 		   SetVar("ThingStatus",0)
+		   SetVar("GarVehName","PlayerScout")
+		   SetVar("MaxWalkHuman",5)
+		   SetVar("KnownMap",0)
+		   SetVar("FirstVehChange", 0)
+		   SetVar("SOAgressor", 0)
+		   SetVar("PlayerSkin", 0)
+
 		   CreateVehicleEx("ArcadeScout01","PlayerScout",CVector(getPos("ScoutPos_loc")))
 		   local veh=GetEntityByName("PlayerScout")
 		   if veh then
@@ -12,12 +19,9 @@
               veh:setGodMode(1)
 			  veh:setImmortalMode(1)
 		   end
-		   SetVar("GarVehName","PlayerScout")
-		   SetVar("MaxWalkHuman",5)
-		   SetVar("KnownMap",0)
-		   SetVar("FirstVehChange", 0)
-		   SetVar("SOAgressor", 0)
+		   
 		   CreateNewDummyObject( "oracle_gate", "oraclegate", -1, -1, CVector(693.708, 282.100, 3233.653), Quaternion(0.0000, 0.9455, 0.0000, 0.3256), 0)
+
 		   trigger:Deactivate()
 		</script>
 	</trigger>
@@ -32,6 +36,70 @@
 		</script>
 	</trigger>
 
+	<!-- Создаём и восполняем количество человечков на карте -->
+	<trigger	Name="trStartHumans"	active="1">
+		<event	timeout="1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local maxhum = GetVar("MaxWalkHuman").AsInt
+			if maxhum then
+				for i=1,maxhum do
+					local tr = getObj("trHumanDie")
+					if tr then
+					   tr:AddEvent("GE_OBJECT_DIE", "WalkerHuman"..i )
+					end
+				end
+			end
+			TActivate("trCreateHumans")
+        	trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trCreateHumans"	active="0">
+		<event	timeout="10"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local maxhum = GetVar("MaxWalkHuman").AsInt
+			if maxhum then
+				for i=1,maxhum do
+					local hum = getObj("WalkerHuman"..i)
+					if not hum then
+						local hummodlist = {"Human","Human2","Human3"}
+		    		  	local newhum = CreateHuman( hummodlist[random(3)], 1001, CVector(getPos("SpawnHuman"..i.."_loc")), "WalkerHuman"..i, "Human"..i.."_Path")
+		    		  	if newhum then
+		    		  	   newhum:SetSkin(random(2))
+		    		  	end
+			        end
+				end
+				TActivate("trHumanDie")
+			end
+        	trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trHumanDie"	active="0">
+		<script>
+			TActivate("trCreateHumans")
+        	trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Раскладываем ящики с рандом оружием по карте -->
+	<trigger	Name="trPlaceSecret"	active="1">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local i=1
+			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
+			local len = getn(gunlist)
+
+			while getObj("SecretPlace"..i.."_loc")~=nil do
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
+				i = i + 1
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Первый приезд на карту, создаём СО у Оракула -->
 	<trigger	Name="trEnterTo_r3m2"	active="1">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterTor3m2_loc" />
 		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="EnterTor3m2_loc" />
@@ -63,11 +131,30 @@
 		</script>
 	</trigger>
 
+	<!-- Подъезжаем к аванпосту Оракула -->
+	<trigger Name="trWentOracleDefenders" active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="OracleDefenders_loc" />
+		<script>
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			if (CanQuestBeGiven("r3m2_OvercomeOracleGuard") and QuestStatus("r3m1_GoToOracle")==Q_TAKEN) or (QuestStatus("r3m2_OvercomeOracleGuard")==Q_TAKEN) then
+				TActivate("cinWentOracleDef")
+			elseif QuestStatus("r3m2_OvercomeOracleGuard")==Q_COMPLETED then
+				trigger:Deactivate()
+			else
+				TActivate("cinPlCantGoOracle")
+			end
+			trigger:Deactivate()
+ 		</script>
+	</trigger>
+
+	<!-- Эскалация конфликта с СО -->
 	<trigger	Name="trOrDefBeginEnemy"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("Passage04")
-			SetTolerance(1100, 1021, RS_ENEMY);
+
+			SetTolerance(1100, 1021, RS_ENEMY)
+
 		 	for i=0,1 do
 		 	   local veh = getObj("OracleDefenders_vehicle_"..i)
 		 	   if veh then 
@@ -76,22 +163,28 @@
 				  veh:setImmortalMode(0)
 		 	   end
 		 	end
+
 		    trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Гибель СО. Основные условия -->
 	<trigger	Name="trOracleDefendersDie"		active="0">
 		<event	eventid="GE_OBJECT_DIE"	ObjName="OracleDefenders" />
 		<script>
 	        CompleteQuest("r3m2_OvercomeOracleGuard")
-	        TDeactivate("trBigMonsterDie")
-	        FailQuestIfTaken("r3m2_MonterHead")
+			FailQuestIfTaken("r3m2_MonterHead")
+	        
 			TActivate("OracleCinStart")
+			TDeactivate("trBigMonsterDie")
+
 	        StopPlayingCustomMusic()
+
 	        trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Дополнение к гибели СО, если мы их убили по квесту. -->
 	<trigger	Name="trOracleDefendersDie2"		active="0">
 		<event	eventid="GE_OBJECT_DIE"	ObjName="OracleDefenders" />
 		<script>
@@ -100,6 +193,7 @@
 		</script>
 	</trigger>
 
+	<!-- Подъехали к Монстру -->
 	<trigger	Name="trNearMonster"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearMonster_loc" />
 		<script>
@@ -108,31 +202,57 @@
 		</script>
 	</trigger>
 
-
+	<!-- Убили Монстра -->
 	<trigger	Name="trBigMonsterDie"	active="0">
 		<event	eventid="GE_OBJECT_DIE"	ObjName="TeamBigMonster" />
 		<script>
---			println("run trBigMonsterDie")
 			if QuestStatus("r3m2_MonterHead")==Q_TAKEN then
 				setPos("Monster_loc", CVector(1263.064, 295.702, 2822.606))
---				println("AAAAAAAAAAAAAAAAA")
---				CompleteQuestIfTaken("r3m2_MonterHead")
+
 				TActivate("cinMonsterDie")
+
 				CompleteQuest("r3m2_MonterHead2")
+
 				AddQuestItem("quest_monster_head")
 				AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_monster_head")
 			else
 				FailQuest("r3m2_MonterHead")
 			end
+
 	        trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- При каждом подъезде к Оракулу -->
+	<trigger Name="OracleCinStart" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="OracleRolik_loc" />
+		<script>
+			TActivate("OracleRolik")
+
+			EnableGodMode()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="OracleVrataClose" active="0">
+		<event	timeout="2"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local oracv = getObj("oraclegate")
+			if oracv then
+				oracv:SetNodeAction(AT_RESERVED3)
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Приехали на завод -->
 	<trigger	Name="trWentToFactory"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Factory_loc" />
 		<script>
---			println("run trWentToFactory")
+
 			CompleteQuest("r3m2_TwoMagicThing_Factory")
+
 			TActivate("cinWentToFactory")
 			TActivate("trGetThing1")
 			TActivate("trGetThing2")
@@ -144,6 +264,7 @@
 		</script>
 	</trigger>
 
+	<!-- Вращение для 3 и 4 артефактов -->
 	<trigger	Name="trRotateArt"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -159,366 +280,126 @@
 		</script>
 	</trigger>
 
+	<!-- Старт катсцены первой смены машины -->
+	<trigger	Name="trExcahgeVehFirst"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToGarage_loc" />
+		<script>
 
+			if IsQuestTaken("r3m2_TwoMagicThing_Return") then
+				trigger:Deactivate()
+			else
+				TActivate("cinExchangeVehFirst")
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<!-- Старт катсценв последующих смен машины -->
+	<trigger	Name="trExcahgeVeh"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToGarage_loc" />
+		<script>
+
+			if GetPlayerVehicle() then
+				GetPlayerVehicle():SetThrottle( 0 )
+				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PlCarPos_loc")))
+			end
+
+			TActivate("trExcahgeVehAction")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Подбор первого артефакта -->
 	<trigger	Name="trGetThing1"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Thing1_loc" />
 		<script>
 			SetVar("ThingStatus", 1)
+
 			AddQuestItem("quest_magic_thing1")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_magic_thing1")
+
 			local art = getObj("or_artefact1")
 			if art then
 			  art:Remove()
 			end
+
 			CompleteQuest("r3m2_TwoMagicThing_FindThing")
+
 			TActivate("trFindThing")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Подбор второго артефакта -->
 	<trigger	Name="trGetThing2"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Thing2_loc" />
 		<script>
 			SetVar("ThingStatus", 2)
+
 			AddQuestItem("quest_magic_thing2")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_magic_thing2")
+
 			local art = getObj("or_artefact2")
 			if art then
 			  art:Remove()
 			end
+
 			CompleteQuest("r3m2_TwoMagicThing_FindThing_2")
+
 			TActivate("trFindThing")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Подбор третьего артефакта -->
 	<trigger	Name="trGetThing3"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Thing3_loc" />
 		<script>
 			SetVar("ThingStatus", 3)
+
 			AddQuestItem("quest_magic_thing3")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_magic_thing3")
+
 			local art = getObj("or_artefact3")
 			if art then
 			  art:Remove()
 			end
+
 			CompleteQuest("r3m2_TwoMagicThing_FindThing_3")
+
 			TActivate("trFindThing")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Подбор четвёртого артефакта -->
 	<trigger	Name="trGetThing4"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Thing4_loc" />
 		<script>
 			SetVar("ThingStatus", 4)
+
 			AddQuestItem("quest_magic_thing4")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_magic_thing4")
+
 			local art = getObj("or_artefact4")
 			if art then
 			  art:Remove()
 			end
+
 			CompleteQuest("r3m2_TwoMagicThing_FindThing_4")
+
 			TActivate("trFindThing")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trFindThing"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-
-				PlayCustomMusic("IntenseDialogue03")
-
-				local Plf = GetPlayerVehicle()
-
-				Plf:SetCustomLinearVelocity(0)
-				Plf:SetThrottle(0)
-
-				if IsQuestTaken("r3m2_TwoMagicThing_Return") then
-					time = 11
-				else
-					time = 9
-				end
-
---				println(time)
-
-				SaveAllToleranceStatus(RS_NEUTRAL)
-
-				local stat = GetVar("ThingStatus").AsInt
-				if stat==1 then
-					Fly("ArtefactVTvoemANUSE", CINEMATIC_NO_AIM, 0, time, 1, 1 )
-				elseif stat==2 then
-					Fly("ArtefactVTvoemANUSE3", CINEMATIC_NO_AIM, 0, time, 1, 1 )
-				elseif stat==3 then
-					Fly("ArtefactVTvoemANUSE4", CINEMATIC_NO_AIM, 0, time, 1, 1 )
-				elseif stat==4 then
-					Fly("ArtefactVTvoemANUSE2", CINEMATIC_NO_AIM, 0, time, 1, 1 )
-				end
-				StartCinematic()
-
-				AddCinematicMessage( 1004, 0.25 )
-
-				if IsQuestTaken("r3m2_TwoMagicThing_Return") then
-					AddCinematicMessage( 1006, 0.25 )
-					TActivate("OracleCinStart")
-				else
-					AddCinematicMessage( 1005, 0.25 )					
-				end
-
-				TActivate("trFindThingEnd")
-
-				time = nil
-		   trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trFindThingEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			
-			RestoreAllToleranceStatus()
-
-			StopPlayingCustomMusic()
-
-			SetCameraBehindPlayerVehicle()
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trVK1"	active="0">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK1_loc" />
-		<script>
-			CompleteQuest("r3m2_OracleMemory_1")
-			RemoveQuestItem( "quest_repair_robot1" );
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			Fly("VK1_path", CINEMATIC_NO_AIM, nil, 6, 1,1)
-			StartCinematic()
-			AddCinematicMessage( 1, 0.25 )
-
-			local Plf = GetPlayerVehicle()
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-
-			TActivate("trVK1_Fade")
-			TActivate("trVK_End")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger	Name="trVK1_Fade"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff1", -1, -1, CVector(1913.9, 302.51, 3152), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround(CVector(1833.376, 288.552, 3148.688))
-				vehPlayer:SetRotation(Quaternion(0.007, 0.699, 0.004, 0.715))
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trVK_End" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trVK2"	active="0">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK2_loc" />
-		<script>
-			CompleteQuest("r3m2_OracleMemory_2")
-			RemoveQuestItem( "quest_repair_robot2" )
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			Fly("VK2_path", CINEMATIC_NO_AIM, nil, 6, 1,1)
-			StartCinematic()
-			AddCinematicMessage( 2, 0.25 )
-
-			local Plf = GetPlayerVehicle()
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-
-			TActivate("trVK2_Fade")
-			TActivate("trVK_End")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trVK2_Fade"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff2", -1, -1, CVector(681.7, 289, 1944), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround(CVector(690.340, 269.296, 1851.323))
-				vehPlayer:SetRotation(Quaternion(0.058, -0.007, -0.009, -0.998))
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trVK3"	active="0">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="VK3_loc" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			Fly("3rdHelper", CINEMATIC_NO_AIM, nil, 6, 1,0)
-			Fly("FanatikPriehal2", CINEMATIC_NO_AIM, nil, 16, 0,1)
-			StartCinematic()
-			
-			AddCinematicMessage( 3, 1 )
-			
-			TActivate("cin_FanatikRage")
-			TActivate("cin_FanatikFade")
-			TActivate("cin_FanatikRage2")
-			TActivate("OracleCinStart")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cin_FanatikFade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			CreateVehicleEx("Cruiser02", "Fanatic_Cruiser", CVector(1370.991, 287.842, 1128.789), 1021)
-			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN4", "eff3", -1, -1, CVector(1214.700, 322.100, 1255.800), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0.64)
-
-			local Plf = GetPlayerVehicle()
-			if Plf then
-				Plf:SetCustomLinearVelocity(0)
-				Plf:SetThrottle(0)
-				Plf:SetGamePositionOnGround(CVector(1200.822, 303.276, 1197.434))
-				Plf:SetRotation(Quaternion(0.001, 0.153, 0.004, 0.988))
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cin_FanatikRage" active="0">
-		<event flypath="FanatikPriehal2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			PlayCustomMusic("IntenseDialogue01")
-
-			local zashitt = GetEntityByName("OracleDefenders")
-			
-			if zashitt then
-				local zashitt1 = zashitt:GetVehicle(0)
-				if zashitt1 then
-					zashitt1:Remove()
-				end
-			end
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
-			end
-			
-			local vehFanatik = GetEntityByName("Fanatic_Cruiser")
-			if vehFanatik then
-				vehFanatik:SetRotation(Quaternion(-0.043, -0.905, -0.031, 0.422))
-				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
-				vehFanatik:SetCustomLinearVelocity( 30 )
-				vehFanatik:SetThrottle( 1 )
-				vehFanatik:SetRandomSkin()
-				fan_skin = vehFanatik:GetSkin()
-			end
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cin_FanatikRage2"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-
-			TeamCreate("Fanatik",1021,CVector(1370.991, 287.842, 1128.789),{"Cruiser02"})
-			TeamCreate("FanatikCrew",1021,CVector(1159.899, 296.939, 1134.574),{"r1m2_hunter02", "Fighter02", "Scout03"})
-		
-			local vehFanCut = GetEntityByName("Fanatic_Cruiser")
-			if vehFanCut then vehFanCut:Remove() end
-
-			local vehFanatik = GetEntityByName("Fanatik_vehicle_0")
-			if vehFanatik then
-				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
-				vehFanatik:PlaceToEndOfPath("FanatikVmeshalsa")
-				if fan_skin then
-					vehFanatik:SetSkin(fan_skin)
-					fan_skin = nil
-				else
-					vehFanatik:SetRandomSkin()
-				end	
-			end
-
-			local vehCrew0 = GetEntityByName("FanatikCrew_vehicle_0")
-			if vehCrew0 then
-				vehCrew0:SetGamePositionOnGround( CVector(1238.950, 302.213, 1168.080))
-				vehCrew0:SetRotation(Quaternion(-0.002, -0.477, 0.017, 0.879))
-			end
-
-			local vehCrew1 = GetEntityByName("FanatikCrew_vehicle_1")
-			if vehCrew1 then
-				vehCrew1:SetGamePositionOnGround( CVector(1244.295, 302.624, 1179.895))
-				vehCrew1:SetRotation(Quaternion(0.000, 0.501, 0.002, -0.865))
-			end
-
-			local vehCrew2 = GetEntityByName("FanatikCrew_vehicle_2")
-			if vehCrew2 then
-				vehCrew2:SetGamePositionOnGround( CVector(1225.993, 302.560, 1160.077))
-				vehCrew2:SetRotation(Quaternion(0.022, -0.508, -0.012, 0.861))
-			end
-
-			local Plf = GetPlayerVehicle()
-			if Plf then
-				Plf:SetCustomLinearVelocity(0)
-				Plf:SetThrottle(0)
-				Plf:SetGamePositionOnGround(CVector(1200.822, 303.276, 1197.434))
-				Plf:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
-			end
-			
-			StartConversation( "OracleGuardian_2" )
-			
-			StopPlayingCustomMusic()
-			
-			RestoreAllToleranceStatus()
-			
-			SetTolerance(1100,1021,RS_ALLY)
-
-			CompleteQuest("r3m2_OracleMemory_3")
-			
-			RemoveQuestItem( "quest_repair_robot3" )
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot3")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- После 3 менгиры СО уезжают с миром и удаляются, когда кто-нибудь из них доедет -->
 	<trigger	Name="FanatikiPeace"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>		
@@ -554,102 +435,11 @@
 		</script>
 	</trigger>
 
-	<trigger	Name="trExcahgeVehFirst"	active="0">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToGarage_loc" />
-		<script>
---			println("trExcahgeVehFirst")
-			if IsQuestTaken("r3m2_TwoMagicThing_Return") then
-				trigger:Deactivate()
-			else
-				TActivate("cinExchangeVehFirst")
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-	<trigger	Name="trExcahgeVeh"	active="0">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToGarage_loc" />
-		<script>
---			println("trExcahgeVeh")
-			if GetPlayerVehicle() then
-				GetPlayerVehicle():SetThrottle( 0 )
-				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-				GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("PlCarPos_loc")))
-			end
-			TActivate("trExcahgeVehAction")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trExcahgeVehAction"	active="0">
-		<event	timeout="0.001"		eventid="GE_TIME_PERIOD" />
-		<script>
---			println("trExcahgeVehAction")
-			local excarname=GetVar("GarVehName").AsString
---			println(excarname)
-			local oldcarname=GetPlayerVehicle():GetName()
-			if oldcarname==nil then
-				oldcarname="OldCarPlayer"..random(1000)
-				GetPlayerVehicle():SetNameFromScript( oldcarname )
-			end
-			if excarname=="PlayerScout" then
-			   SaveWeaponGroups()
-			end
---			println(oldcarname)
-			local veh=getObj(excarname)
---			local oldveh=getObj(oldcarname)
-			local oldveh=GetPlayerVehicle()
---			LOG(1)
-			if veh then
---function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPanel, RelativeRotations, 
---				println("AAAAAAAAAAAAAA")
-				TActivate("cinExcahgeVehAction_End")
-				SaveAllToleranceStatus(RS_NEUTRAL)
-				FlyLinked( "Garage_Path", veh:GetId(), 6, 0, 1, veh:GetId(), nil, nil)
-				StartCinematic()
-				if excarname=="PlayerScout" and GetVar("FirstVehChange").AsInt == 0 then
-					AddCinematicMessage( 10, 2 )
-					SetVar("FirstVehChange", 1)
-				end
---				LOG(2)
-				GetPlayerVehicle():setGodMode(1)
-				GetPlayerVehicle():setImmortalMode(1)
-				GetPlayerVehicle():SetCustomControlEnabled(1)
---				LOG(3)
-				CapturePlayerVehicle(0, "garage")
---				LOG(4)
-   				g_Player:AddChild(veh)
-				GetPlayerVehicle():setGodMode(0)
-				GetPlayerVehicle():setImmortalMode(0)
-				GetPlayerVehicle():AddModifier("hp", "+ 1")
-				GetPlayerVehicle():SetCustomControlEnabled(0)
-				veh:SetExternalPathByName("ExitToGaragePath")
-				veh:LimitMaxSpeed(10)
-			end
-			if oldveh then
---			   LOG(4)
---			   oldveh:SetExternalPathByName("EnterToGaragePath")
---			   oldveh:SetGamePositionOnGround(CVector(getPos("PlCarPos_loc")))
-			   oldveh:setGodMode(1)
-			   oldveh:setImmortalMode(1)
-			end
-			if oldcarname=="PlayerScout" then
-			   RestoreWeaponGroups()
-			end
-
---			LOG(5)
-			SetVar("GarVehName",oldcarname)
-			TActivate("trExcahgeVehSwitchOn")
---			LOG(6)
-			TActivate("trPlCheckFuel")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Заехали в зону смены машины -->
 	<trigger	Name="trExcahgeVehSwitchOn"	active="0">
 		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="NearGarage_loc" />
 		<script>
---			println("trExcahgeVehSwitchOn")
+
 			if IsQuestTaken("r3m2_TwoMagicThing_Return") and GetPlayerVehicle():GetProperty("Prototype").AsString~="ArcadeScout01" then
 				trigger:Deactivate()
 			else
@@ -662,28 +452,11 @@
 			   veh:SetGamePositionOnGround(CVector(getPos("ScoutPos_loc")))
 			   veh:SetRotation(Quaternion(0.007, -0.458, 0.004, 0.889))
 			end
---			trigger:Deactivate()
+
 		</script>
 	</trigger>
 
-	<trigger	Name="trPlLeaveFactyOnScout"	active="0">
-		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="FactoryTerritory_loc" />
-		<script>
---			println("MAMAAA")
---			LOG("MAMAAA")
-			local vehtype=GetPlayerVehicle():GetProperty("Prototype").AsString
---			println(vehtype)
-			if vehtype=="ArcadeScout01" then
-				SpawnMessageBox( "17" )
-				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-				GetPlayerVehicle():SetThrottle( 0 )
-				setPos(GetPlayerVehicle(), CVector(getPos("EnterToGarage_loc")))
---				GetPlayerVehicle():SetPositionOnGround(getPos("EnterToGarage_loc"))
- 			end
---			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Восстановление бензина при смене авто на Скаут -->
 	<trigger	Name="trPlCheckFuel"	active="0">
 		<event	timeout="0.3"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -698,10 +471,29 @@
 		</script>
 	</trigger>
 
+	<!-- Если игрок уезжает с завода на Скауте -->
+	<trigger	Name="trPlLeaveFactyOnScout"	active="0">
+		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="FactoryTerritory_loc" />
+		<script>
+
+			local vehtype=GetPlayerVehicle():GetProperty("Prototype").AsString
+			if vehtype=="ArcadeScout01" then
+				SpawnMessageBox( "17" )
+
+				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+				GetPlayerVehicle():SetThrottle( 0 )
+
+				setPos(GetPlayerVehicle(), CVector(getPos("EnterToGarage_loc")))
+ 			end
+
+		</script>
+	</trigger>
+
+	<!-- Подъезжаем к полю Друида -->
 	<trigger	Name="trSignPlace"	active="0">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="SignPlace_loc" />
 		<script>
---=================================================
+
 			if GetPlayerVehicle() then
 				GetPlayerVehicle():SetThrottle( 0 )
 				GetPlayerVehicle():SetCustomLinearVelocity( 0 )
@@ -710,181 +502,25 @@
 			TActivate("cinPoleFirst")
 			CompleteQuest("q_PWS1")
 
---=================================================
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Выезд в Рощу Друидов -->
 	<trigger Name="trExitToR3M1" active="1">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="ExitFromMap_loc" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+
 			local b = SpawnMessageBox( "8801" )
 
-			if b == 1 then
---				println ("Yes")
---				GetPlayerVehicle():SetExternalPathByName("ExitMapPath")
---				TActivate("cinExit31OkFirst")			
+			if b == 1 then			
 				PassToMap("r3m1", "FromR3M2", -1 )
 				TDeactivate("FanatikiPeaceReach")
---				PassToMap("r3m1", "FromR3M2", 110 , true)
 			else
---				println ("No")
 				TActivate("cinExit31ReturnFirst")
---				GetPlayerVehicle():SetExternalPathByName("ReturnPath")
 			end
  		</script>
-	</trigger>
-
-
-	<trigger	Name="trStartHumans"	active="1">
-		<event	timeout="1"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local maxhum = GetVar("MaxWalkHuman").AsInt
-			if maxhum then
-				for i=1,maxhum do
-					local tr = getObj("trHumanDie")
-					if tr then
-					   tr:AddEvent("GE_OBJECT_DIE", "WalkerHuman"..i )
-					end
-				end
-			end
-			TActivate("trCreateHumans")
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="trCreateHumans"	active="0">
-		<event	timeout="10"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local maxhum = GetVar("MaxWalkHuman").AsInt
-			if maxhum then
-				for i=1,maxhum do
-					local hum = getObj("WalkerHuman"..i)
-					if not hum then
-						local hummodlist = {"Human","Human2","Human3"}
-		    		  	local newhum = CreateHuman( hummodlist[random(3)], 1001, CVector(getPos("SpawnHuman"..i.."_loc")), "WalkerHuman"..i, "Human"..i.."_Path")
-		    		  	if newhum then
-		    		  	   newhum:SetSkin(random(2))
-		    		  	end
-			        end
-				end
-				TActivate("trHumanDie")
-			end
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trHumanDie"	active="0">
-		<script>
-			TActivate("trCreateHumans")
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger Name="trWentOracleDefenders" active="1">
-		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="OracleDefenders_loc" />
-		<script>
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			if (CanQuestBeGiven("r3m2_OvercomeOracleGuard") and QuestStatus("r3m1_GoToOracle")==Q_TAKEN) or (QuestStatus("r3m2_OvercomeOracleGuard")==Q_TAKEN) then
-				TActivate("cinWentOracleDef")
-			elseif QuestStatus("r3m2_OvercomeOracleGuard")==Q_COMPLETED then
-				trigger:Deactivate()
-			else
-				TActivate("cinPlCantGoOracle")
-			end
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
-
-	<trigger	Name="trPlTurnRoundOracleDef"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
---			GetPlayerVehicle():SetExternalPathByName("playerOracleDefPath")
---			FlyStandard("engineerCamera",5)
-			TActivate("cinTurnOracleDef")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="trPlaceSecret"	active="1">
-		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local i=1
-			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
-			local len = getn(gunlist)
-
-			while getObj("SecretPlace"..i.."_loc")~=nil do
---				println(i)
-				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
-				i = i + 1
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="RemoveDefenders3"	active="1">
-		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local so1 = GetEntityByName("Fanatik_vehicle_0")
-			local so2 = GetEntityByName("FanatikCrew_vehicle_0")
-			local so3 = GetEntityByName("FanatikCrew_vehicle_1")
-			local so4 = GetEntityByName("FanatikCrew_vehicle_2")
-			
-			if so1 then
-				so1:Remove()
-			end
-			
-			if so2 then
-				so2:Remove()
-			end
-			
-			if so3 then
-				so3:Remove()
-			end
-			
-			if so4 then
-				so4:Remove()
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="OracleCinStart" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="OracleRolik_loc" />
-		<script>
-			TActivate("OracleRolik")
-			EnableGodMode()
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="OracleVrataOpen" active="0">
-		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local oracv = getObj("oraclegate")
-			if oracv then
-				oracv:SetNodeAction(AT_RESERVED4)
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="OracleVrataClose" active="0">
-		<event	timeout="2"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local oracv = getObj("oraclegate")
-			if oracv then
-				oracv:SetNodeAction(AT_RESERVED3)
-			end
-			trigger:Deactivate()
-		</script>
 	</trigger>
 
 	<trigger Name="tr_GMDis" active="1">

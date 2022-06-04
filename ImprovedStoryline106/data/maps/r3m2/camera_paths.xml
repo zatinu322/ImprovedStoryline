@@ -33,7 +33,6 @@
 	</Path>
 
 	<Path	Name="WentFactory_Path3">
-		<!--Point  coord="2378.581 264.754 2854.901" rotation="0.010 0.983 -0.055 -0.173"/-->
 		<Point  coord="2388.535 263 2862.810" rotation="-0.011 -0.805 0.015 0.593"/>
 		<Point  coord="2377.732 263 2843.083" rotation="0.002 0.969 -0.009 -0.248"/>
 		<Point  coord="2386.905 263 2757.163" rotation="0.003 0.988 -0.020 -0.151"/>
@@ -41,13 +40,12 @@
 
 	<Path	Name="WentFactory_TurnAround">
 		<Point  coord="2390.022 267.209 2762.925" rotation="-0.004 -0.077 0.000 0.997"/>
-		<!--Point  coord="2390.022 267.209 2762.925" rotation="-0.291 -0.051 0.016 0.955"/-->
 		<Point  coord="2386.720 265.756 2723.875" rotation="-0.052 -0.047 0.002 0.998"/>
 	</Path>
 
 	<Path	Name="WentFactory_TurnAround2">
 		<Point  coord="2411.161 271.096 2854.087" rotation="-0.017 0.983 -0.133 0.128"/>
-		<Point  coord="2411.161 271.096 2854.087" rotation="-0.017 0.983 -0.133 0.128"/>
+		<Point  coord="2404.292 268.604 2825.461" rotation="-0.005 0.993 -0.045 0.107"/>
 	</Path>
 
 	<Path	Name="NearMonster_Path1">
@@ -107,7 +105,8 @@
 	</Path>
 
 	<Path Name = "OraclePriezdCam1">
-		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="750.608 280.495 3124.189" rotation="-0.056 -0.455 0.029 0.888"/>
+		<Point  coord="750.608 285.110 3124.189" rotation="-0.056 -0.455 0.029 0.888"/>
 	</Path>
 
 	<Path Name = "OraclePriezdCam2">
@@ -126,7 +125,7 @@
 	</Path>
 	
 	<Path Name = "ArtefactVTvoemANUSE2">
-		<Point  coord="3115.756 261.870 3280.022" rotation="-0.078 -0.302 0.025 0.950"/>
+		<Point  coord="3116.397 261.686 3280.927" rotation="-0.078 -0.302 0.025 0.950"/>
 		<Point  coord="3119.445 260.810 3285.227" rotation="-0.078 -0.302 0.025 0.950"/>
 	</Path>
 

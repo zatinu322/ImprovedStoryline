@@ -381,6 +381,8 @@
 
 		RestoreAllToleranceStatus()
 
+		SetTolerance(1100, 1019, RS_ENEMY)
+
 		skin = nil
 
 		trigger:Deactivate()

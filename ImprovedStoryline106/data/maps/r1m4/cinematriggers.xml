@@ -204,6 +204,7 @@
 			vehPlayer:SetGamePositionOnGround( CVector(1475.011, 217.387, 1581.962))
 			vehPlayer:SetRotation(Quaternion(0.015, 0.560, -0.021, -0.828))
 			vehPlayer:SetExternalPathByName("player_path03")
+			vehPlayer:setGodMode(1)
 		end
 		trigger:Deactivate()
 		</script>
@@ -271,6 +272,7 @@
 				vehPlayer:PlaceToEndOfPath("BolotoViezdPort")
 				vehPlayer:SetGamePositionOnGround( CVector(580.966, 242.250, 1763.645))
 				vehPlayer:SetRotation(Quaternion(0.074, -0.638, -0.023, 0.766))
+				vehPlayer:setGodMode(0)
 			end
 
 			if AivenGo then
@@ -304,6 +306,7 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
 			TActivate("RolikEnd_PlaneOut")
 			TActivate("trPlaneOut_cam01")
 			TActivate("trPlaneOut_cam02")
@@ -412,6 +415,7 @@
 			vehPlayer:SetGamePositionOnGround( CVector(806.148, 237.691, 1701.490))
 			vehPlayer:SetRotation(Quaternion(0.083, 0.734, -0.016, 0.674))
 			vehPlayer:SetExternalPathByName("player_path04")
+			vehPlayer:setGodMode(1)
 		end
 
 		trigger:Deactivate()
@@ -441,6 +445,7 @@
 		if vehPlayer then
 			vehPlayer:SetExternalPathByName("player_path02")
 			vehPlayer:PlaceToEndOfPath("player_path02")
+			vehPlayer:setGodMode(0)
 		end
 
 

@@ -6,10 +6,10 @@
 			name="WEATHERDETAIL">WeatherDetail.xml</Key>
 
 		<Key
-			name="WEATHERTYPE">r3m1_rain</Key>
+			name="WEATHERTYPE">r3m1</Key>
 
 		<Key
-			name="CURRENTDAYTIME">0</Key>
+			name="CURRENTDAYTIME">1</Key>
 
 		<Key
 			name="PATH">data\maps\r3m1</Key>
@@ -213,19 +213,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">2179.792</Key>
+			name="X">3242.784</Key>
 
 		<Key
-			name="Y">450.960</Key>
+			name="Y">627.023</Key>
 
 		<Key
-			name="Z">1164.554</Key>
+			name="Z">3030.295</Key>
 
 		<Key
-			name="A">2138.460</Key>
+			name="A">2130.107</Key>
 
 		<Key
-			name="B">-0.783</Key>
+			name="B">-0.700</Key>
 
 		<Key
 			name="G">0.000</Key>

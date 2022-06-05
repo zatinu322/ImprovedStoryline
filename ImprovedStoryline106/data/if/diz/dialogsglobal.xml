@@ -5028,7 +5028,7 @@
 		name="r3m1_NearFist_Guard1_1_P022"
 		text="Стойте, не стреляйте! Я не желаю вам зла!"
 		role="PLAYER"
-		scriptResult="SetTolerance(1100, 1019, RS_ALLY); AddHistory( 'r3_Fist_Friendly' ); AddFadingMsgId( 'fm_history_got' ); StartConversation('r3m1_NearFist_Guard2');" />
+		scriptResult="SetTolerance(1100, 1019, RS_NEUTRAL); AddHistory( 'r3_Fist_Friendly' ); AddFadingMsgId( 'fm_history_got' ); StartConversation('r3m1_NearFist_Guard2');" />
 
 	<Reply
 		name="r3m1_NearFist_Guard1_1_P021"
@@ -5074,7 +5074,7 @@
 		name="Uluc_Bar_Customer1_1_N03"
 		text="Ещё как отличаемся! Эти своенравные друиды постоянно учат нас, как надо жить, навязывают свою мерзкую религию и не признают наших богов! Но ничего, когда-нибудь настанет наш черёд угнетать! Кстати, а ты здесь какими судьбами оказался?"
 		role="NPC"
-		scriptResult="CompleteQuestIfTaken('r3m1_FindNative'); CompleteQuestIfTaken('r3m1_FindMoreNative'); SetTolerance(1100, 1019, RS_NEUTRAL); if QuestStatus('r3m1_FindMoreNative')==Q_TAKEN then     AddHistory( 'r3_Fist_Fight_1' );     AddFadingMsgId( 'fm_history_got' ); else      AddHistory( 'r3_v2_Uluk_FirstTime_1' );     AddFadingMsgId( 'fm_history_got' ); end"
+		scriptResult="CompleteQuestIfTaken('r3m1_FindNative'); CompleteQuestIfTaken('r3m1_FindMoreNative'); if QuestStatus('r3m1_FindMoreNative')==Q_TAKEN then     AddHistory( 'r3_Fist_Fight_1' );     AddFadingMsgId( 'fm_history_got' ); else      AddHistory( 'r3_v2_Uluk_FirstTime_1' );     AddFadingMsgId( 'fm_history_got' ); end"
 		nextReplies="Uluc_Bar_Customer1_1_P04" />
 
 	<Reply
@@ -5186,7 +5186,7 @@
 		name="Uluc_Bar_Customer1_2_P04"
 		text="Не смею более задерживать. Прощай. "
 		role="PLAYER"
-		scriptResult="SetTolerance(1100, 1019, RS_ENEMY); SetTolerance(1100, 1020, RS_ALLY); EndConversation()" />
+		scriptResult="SetTolerance(1100, 1020, RS_ALLY); EndConversation()" />
 
 	<Reply
 		name="Set_Bar_MainDruid_5_N01"
@@ -9949,7 +9949,7 @@
 
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_1_N05a"
-		text="Спасибо тебе, молодой человек, ты меня сможешь найти в деревне Перчь."
+		text="Спасибо тебе, молодой человек. Если найдёшь - привези его ко мне. На награду не поскуплюсь."
 		role="NPC"
 		nextReplies="r1m4_SomeWhere_OldWomen1_1_N06a" />
 
@@ -16906,7 +16906,7 @@
 
 	<Reply
 		name="Dlg_pl_001475"
-		text="Да вот, местность исследую. У меня же сегодня совершеннолетие, вроде как."
+		text="Да так, дела насущные... Отец впервые отпустил один в рейс - у меня же сегодня совершеннолетие, вроде как."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001476" />
 
@@ -17464,14 +17464,14 @@
 
 	<Reply
 		name="Dlg_pl_001506"
-		text="Да вот просто местность исследовал, вижу - дом на горе стоит. Вот и решил заглянуть."
+		text="Да я вот понял вдруг, что мы с отцом постоянно проезжали мимо твоего дома, а заглянуть всё никак не получалось. Вот сейчас поехал в одиночку - и дай, думаю, зайду."
 		role="PLAYER"
 		scriptCondition="not(IsQuestTaken( 'r1m1_Botanik_Quest' ))"
 		nextReplies="Dlg_npc_001508" />
 
 	<Reply
 		name="Dlg_npc_001508"
-		text="Тогда поздравляю тебя, ты наткнулся на очередного скупщика. Только скупаю я не картошку, а различные редкости. Если найдёшь в окрестностях какую-нибудь штуковину, которая выглядит ценной, покажи её мне. Если она действительно ценная, то я щедро тебе заплачу."
+		text="Ну что же, милости прошу. И спешу сообщить, что ты наткнулся на очередного скупщика. Только скупаю я не картошку, а различные редкости. Если найдёшь в окрестностях какую-нибудь штуковину, которая выглядит ценной, покажи её мне. Если она действительно ценная, то я щедро тебе заплачу."
 		role="NPC"
 		nextReplies="Dlg_pl_001511 Dlg_pl_001519" />
 

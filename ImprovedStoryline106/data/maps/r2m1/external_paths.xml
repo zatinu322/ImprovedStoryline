@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
+		Name="AfterBattle_path01">
+		<Point
+			coord="2752.420 1760.803" />
+
+		<Point
+			coord="2779.061 1806.862" />
+	</Path>
+
+	<Path
+		Name="MolokovozCaravanAM_path1">
+		<Point
+			coord="2438.011 2927.993" />
+
+		<Point
+			coord="2463.625 2999.593" />
+
+		<Point
+			coord="2479.646 3094.180" />
+
+		<Point
+			coord="2486.464 3135.042" />
+
+		<Point
+			coord="2506.603 3164.331" />
+
+		<Point
+			coord="2550.402 3187.094" />
+
+		<Point
+			coord="2608.682 3235.201" />
+	</Path>
+
+	<Path
+		Name="OdettIsDead_path">
+		<Point
+			coord="3969.431 2817.284" />
+
+		<Point
+			coord="3907.163 2785.892" />
+	</Path>
+
+	<Path
 		Name="TtoV1_path">
 		<Point
 			coord="2576.495 1745.837" />
@@ -1559,21 +1601,4 @@
 		<Point
 			coord="7624.016 4857.879" />
 	</Path>
-
-	<Path
-		Name="AfterBattle_path01">
-		<Point
-			coord="2752.420 1760.803" />
-		<Point
-			coord="2779.061 1806.862" />
-	</Path>
-
-	<Path
-		Name="OdettIsDead_path">
-		<Point
-			coord="3969.431 2817.284" />
-		<Point
-			coord="3907.163 2785.892" />
-	</Path>
-
 </Paths>

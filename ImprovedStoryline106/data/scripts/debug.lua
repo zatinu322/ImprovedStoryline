@@ -295,40 +295,11 @@ function tgr()
 	local Repository = Workshop:GetRepositoryByTypename("CabinsAndBaskets")
 	Repository:AddItems("belazCab01", 2)
 end
-
-function trailer( enable )
-	if enable ~= 0 then
-		GetPlayerVehicle():AttachTrailer("Zil130Polupricep_01")
-	else
-		GetPlayerVehicle():DetachTrailer()
-	end
-end
-
-function z( num1, num2 )
-	truck(num1)cargo(num2)ktoAttachTrailer(1)
-end
-function ktoAttachTrailer( enable )
-	local curcargo=GetPlayerVehicle():GetBasket():GetProperty("Prototype").AsString
-	local len=strlen(curcargo)
-	local namecargo=strsub(curcargo, 1, len)
-	
-	if enable ~= 0 then
-		if namecargo == "zil130Cargo03" then
-		GetPlayerVehicle():AttachTrailer("Zil130Polupricep_01")
-		trailerColor()
-		elseif namecargo == "zil164Cargo03" then
-		GetPlayerVehicle():AttachTrailer("Zil164Polupricep_01")
-		trailerColor()
-		end
-	else
-		GetPlayerVehicle():DetachTrailer()
-	end
-end
 		
-function trailerColor()
-	local nametr = GetPlayerVehicle():GetName().."_Trailer"  
+function PaintTrailer( vehicleName )
+	local nametr = getObj( vehicleName ):GetTrailer()
 	local trailer = getObj(nametr) 
-	local skinnum=GetPlayerVehicle():GetSkin()
+	local skinnum = getObj( vehicleName ):GetSkin()
 	trailer:SetSkin(skinnum)
 end
 

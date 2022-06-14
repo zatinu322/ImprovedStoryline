@@ -175,8 +175,8 @@
 		Name="Sign_location"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="956.000 67.000 4009.000"
-		Radius="70.000"
+		Pos="964.207 67.000 4015.611"
+		Radius="99.000"
 		LookingTimeOut="70.000" />
 
 	<Object
@@ -5450,7 +5450,7 @@
 		Name="Human8qqq6"
 		Belong="1001"
 		Prototype="Human"
-		Pos="6655.881 102.106 4031.421"
+		Pos="6655.881 102.057 4031.421"
 		PathsNames="h24_m1" />
 
 	<Object
@@ -5693,7 +5693,7 @@
 			Name="barricade6_wGw19_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun07"
-			Pos="1663.104 114.880 5826.378"
+			Pos="1663.104 114.789 5826.378"
 			Rot="0.000 -0.684 0.000 0.730">
 			<Parts />
 		</Object>
@@ -5831,7 +5831,7 @@
 			Name="barricade7_GwG87_Child2"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="820.797 93.310 1340.832">
+			Pos="820.797 93.256 1340.832">
 			<Parts />
 		</Object>
 
@@ -5839,7 +5839,7 @@
 			Name="barricade7_GwG87_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="832.797 93.253 1340.832">
+			Pos="832.797 93.199 1340.832">
 			<Parts />
 		</Object>
 	</Object>
@@ -6102,7 +6102,7 @@
 			Name="barricade5_GwG54_Child3"
 			Belong="1005"
 			Prototype="staticAutoGun07"
-			Pos="7365.688 102.699 7026.521"
+			Pos="7365.688 102.696 7026.521"
 			Rot="0.000 0.171 0.000 0.985">
 			<Parts />
 		</Object>
@@ -6150,7 +6150,7 @@
 			Name="barricade6_wGw75_Child3"
 			Belong="1005"
 			Prototype="staticAutoGun07"
-			Pos="6954.608 62.149 6968.268">
+			Pos="6954.608 62.095 6968.268">
 			<Parts />
 		</Object>
 	</Object>
@@ -6191,7 +6191,7 @@
 			Name="barricade7_GwG44_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="5651.715 98.977 798.580"
+			Pos="5651.715 98.972 798.580"
 			Rot="0.000 -0.631 0.000 0.776">
 			<Parts />
 		</Object>
@@ -6293,7 +6293,7 @@
 			Name="barricade4_wGw67_Child3"
 			Belong="1005"
 			Prototype="staticAutoGun08"
-			Pos="2290.501 78.051 3838.265">
+			Pos="2290.501 77.998 3838.265">
 			<Parts />
 		</Object>
 	</Object>
@@ -6365,7 +6365,7 @@
 			Name="barricade6_wGw6980_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun07"
-			Pos="1785.104 143.019 2176.330">
+			Pos="1785.104 142.965 2176.330">
 			<Parts />
 		</Object>
 	</Object>
@@ -6397,7 +6397,7 @@
 			Name="barricade7_GwG95_Child2"
 			Belong="1005"
 			Prototype="staticAutoGun08"
-			Pos="2406.938 76.984 6208.964">
+			Pos="2406.938 76.930 6208.964">
 			<Parts />
 		</Object>
 
@@ -6405,7 +6405,7 @@
 			Name="barricade7_GwG95_Child3"
 			Belong="1005"
 			Prototype="staticAutoGun08"
-			Pos="2418.938 76.690 6208.964">
+			Pos="2418.938 76.636 6208.964">
 			<Parts />
 		</Object>
 	</Object>
@@ -6444,7 +6444,7 @@
 		Name="PetrolStationTown2"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="2800.962 108.014 2429.622"
+		Pos="2800.962 107.961 2429.622"
 		Rot="0.000 0.884 0.000 0.468"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -6504,7 +6504,7 @@
 		Name="PetrolStationTown4"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="1821.647 76.271 4012.528"
+		Pos="1821.647 76.217 4012.528"
 		Rot="0.000 -0.197 0.000 0.980"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -21677,7 +21677,7 @@
 		Name="elka12167"
 		Belong="-1"
 		Prototype="Breakable_Elka1"
-		Pos="1234.577 109.155 919.371"
+		Pos="1234.577 98.876 919.371"
 		Rot="0.000 -0.334 0.000 0.943" />
 
 	<Object
@@ -30520,7 +30520,7 @@
 		Name="deadtree13431"
 		Belong="-1"
 		Prototype="Breakable_DeadTree1"
-		Pos="3940.528 93.895 5276.435"
+		Pos="3940.528 92.554 5276.435"
 		Rot="0.000 -0.906 0.000 0.423" />
 
 	<Object
@@ -36516,14 +36516,14 @@
 		Name="listvenoe34289"
 		Belong="-1"
 		Prototype="Breakable_Listvenoe3"
-		Pos="3623.805 67.510 3639.235"
+		Pos="3623.805 67.457 3639.235"
 		Rot="0.000 -0.208 0.000 0.978" />
 
 	<Object
 		Name="listvenoe34290"
 		Belong="-1"
 		Prototype="Breakable_Listvenoe3"
-		Pos="3657.407 68.771 3619.923"
+		Pos="3657.407 68.717 3619.923"
 		Rot="0.000 -0.988 0.000 0.156" />
 
 	<Object
@@ -36621,7 +36621,7 @@
 		Name="dub34304"
 		Belong="-1"
 		Prototype="Breakable_Dub3"
-		Pos="3679.085 66.970 3637.377"
+		Pos="3679.085 66.855 3637.377"
 		Rot="0.000 0.522 0.000 0.853" />
 
 	<Object
@@ -38384,7 +38384,7 @@
 		Name="deadtree44556"
 		Belong="-1"
 		Prototype="Breakable_DeadTree4"
-		Pos="3691.748 77.223 4088.291"
+		Pos="3691.748 74.871 4088.291"
 		Rot="0.000 0.438 0.000 0.899" />
 
 	<Object
@@ -39168,7 +39168,7 @@
 		Name="deadtree24668"
 		Belong="-1"
 		Prototype="Breakable_DeadTree2"
-		Pos="6765.588 136.241 840.336"
+		Pos="6765.588 130.615 840.336"
 		Rot="0.000 0.656 0.000 0.755" />
 
 	<Object
@@ -55552,10 +55552,6 @@
 	</Object>
 
 	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
-
-	<Object
 		Name="E_InfectionZone31"
 		Belong="1002"
 		Prototype="InfectionZone"
@@ -55736,4 +55732,8 @@
 				y="5003.038" />
 		</DropOut>
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

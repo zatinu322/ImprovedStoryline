@@ -2809,16 +2809,6 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="WaitTillEnd2" />
 	</quest>
-<!--Root/r1m4/Убить эктремистов-->
-	<quest
-		Name="KillExtremist_Quest1"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(2000)"
-		OnTake='TActivate("trExtrTeamMustDie_Take")'
-		Levels="r1m4" />
 <!--Root/r1m4/Преодолеть болото-->
 	<quest
 		Name="r1m4_OvercomeMirras"
@@ -2980,7 +2970,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete="SetTolerance(1100,1012,RS_NEUTRAL)"
-		OnFail='TDeactivate("trFightForPesht"); TDeactivate("BrigadaIsDead"); SetTolerance(1100,1012,RS_NEUTRAL); TActivate ("tr_OpenTownAndShowButtonInPesht")'
+		OnFail='TDeactivate("cinFightForPesht"); TDeactivate("BrigadaIsDead"); SetTolerance(1100,1012,RS_NEUTRAL); TActivate ("tr_OpenTownAndShowButtonInPesht")'
 		Levels="r1m3">
 		<quest
 			Name="FightForPesht1"
@@ -3493,7 +3483,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(175)"
-		OnFail='TDeactivate("KOLIZEYFIGHTDIE1");'
+		OnFail='TDeactivate("KOLIZEYFIGHTDIE"); TDeactivate("KOLIZEYFIGHT")'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
 		Levels="r1m2">
 		<quest
@@ -3586,7 +3576,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r1m2_RedkiyMineral_Quest"
 		OnComplete="AddPlayerMoney(15000)"
-		OnFail='TDeactivate("KOLIZEYFIGHTDIE2")'
+		OnFail='TDeactivate("KOLIZEYFIGHTDIE"); TDeactivate("KOLIZEYFIGHT")'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
 		Levels="r1m2">
 		<quest

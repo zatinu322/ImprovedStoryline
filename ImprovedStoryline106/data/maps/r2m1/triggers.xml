@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<!-- Инициализация карты -->
 	<trigger	Name="GlobalVar"	active="1">
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -16,6 +17,22 @@
 		</script>
 	</trigger>
 
+	<!-- Раскладываем случайный лут по ящикам -->
+	<trigger	Name="trLeFrancePlaceSecret"	active="1">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
+			local len = getn(gunlist)
+
+			for i=1,19 do
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[random(len)], random(0, 2))
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Смена белонгов городов после окончания войны -->
 	<trigger Name="ChangeTownsBelongR2M1" active="0">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
@@ -36,24 +53,158 @@
 		</script>
 	</trigger>
 
-
-	<trigger	Name="trLeFrancePlaceSecret"	active="1">
-		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+	<!-- Машинка игрока останавливается -->
+	<trigger Name="trVehSTOP" active="0">
+ 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
-			local len = getn(gunlist)
-
-			for i=1,19 do
-				--println("step"..i.."succesful")
-				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[random(len)], random(0, 2))
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
+
+	<!-- Расстреляли Вэн АР у тоннеля -->
+	<trigger Name="FIRSTATTACK" active="0">
+		<event timeout="60" eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="AfterTunnel_vehicle_0" />
+		<script>
+			TActivate( "RolikBegin_FIRSTATTACK" )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Новая Сибилла -->
+	<trigger Name="TheNewSibillaClose" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local tp = GetEntityByName("TheNewSibilla")
+			tp:SetOpenGateToPlayer( false )
+
+			SetConditionalClosingForTown( "TheNewSibilla", "r2m1", true )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TheNewSibillaOpen" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local tp = GetEntityByName("TheNewSibilla")
+			tp:SetOpenGateToPlayer( true )
+
+			SetConditionalClosingForTown( "TheNewSibilla", "r2m1", false )
+
+			for i = 1,8 do
+				local kol = GetEntityByName("koluch"..i)
+				if kol then kol:Remove() end
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- АНТИМИЛЛИТАРИСТЫ -->
+	<!-- Защита каравана СНГ -->
+	<trigger Name="ZashitaCaravan" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SetTolerance(1100,1015,RS_ENEMY)
+
+			SetTolerance(1100, 1016, RS_ALLY)
+			
+			TeamCreate("CaravanTuzz",1016,CVector(2425.274, 233.000, 2887.595),{"r2m1_CaravanMolokovoz03"})
+			local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
+			if vehCar then
+				vehCar:AttachTrailer("MolokovozTrailer")
+				PaintTrailer(vehCar)
+			end
+
+			CompleteQuest("Zashita_Quest1")
+			TakeQuest("Zashita_Quest2")
+			
+			TeamCreate("ARKillers",1015,CVector(2472.880, 225.221, 2843.691),{"r2m1_Fighter01", "TSPFighter", "Molokovoz02"})
+			
+			TActivate("ARKillersDIE")
+			TActivate("CaravanAMDEAD")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="CaravanAMDEAD" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CaravanTuzz_vehicle_0" />
+		<event eventid="GE_OBJECT_DIE" ObjName="CaravanTuzz_vehicle_0_Trailer" />
+		<script>
+			local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
+			local vehCarTrailer = GetEntityByName("CaravanTuzz_vehicle_0_Trailer")
+			if vehCar and vehCar:IsAlive() then
+				vehCar:Remove()
+			end
+			if vehCarTrailer and vehCarTrailer:IsAlive() then
+				vehCarTrailer:Remove()
+			end
+			FailQuest("Zashita_Quest2")
+			FailQuest("r1m3_LisaWithOberegAndDisk_Quest")
+			TActivate("CaravDeadEnd1")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ARKillersDIE" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ARKillers" />
+		<script>
+			CompleteQuest("Zashita_Quest2")
+			TakeQuest("preEretik_Quest")
+			
+		    TActivate("Zashitacin")
+			TDeactivate("CaravanAMDEAD")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Подъезжаем к Роторску перед битвой -->
+	<trigger Name="prebattletr" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Prebattle_Loc" />
+		<script>
+			TActivate("prebattlecin_begin")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+	
+	<!-- Разбили СНГ в Роторске -->
+	<trigger Name="FinalBattleEnd" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="SNGLeaders" />
+		<script>
+			CompleteQuest("FinalBattle_Quest2")
+			SetTolerance(1100,1016,RS_ALLY)
+			SetTolerance(1083,1016,RS_ALLY)
+	
+			TActivate("OIDRolikBegin")
+	
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- СНГ -->
+	<!-- Сопровождение каравана через 2 деревни -->
 	<trigger Name="trCaravanToVill1" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateVehicleEx("r2m1_CaravanMolokovoz02","KARAVANvvt_vehicle_0", CVector(2594.703, 260, 1755.095), 1016)
+			local vehCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANvvt_vehicle_0", CVector(2594.703, 260, 1755.095), 1016)
+			if vehCar then
+				vehCar:AttachTrailer("MolokovozTrailer")
+				PaintTrailer(vehCar)
+			end
 
 			TakeQuest("d_SecondVillage_Quest")
 
@@ -69,7 +220,18 @@
 
 	<trigger Name="trCaravanDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="KARAVANvvt_vehicle_0" />
+		<event eventid="GE_OBJECT_DIE" ObjName="KARAVANvvt_vehicle_0_Trailer" />
 		<script>
+
+			local vehCar = GetEntityByName("KARAVANvvt_vehicle_0")
+			local vehCarTrailer = GetEntityByName("CKARAVANvvt_vehicle_0_Trailer")
+			if vehCar and vehCar:IsAlive() then
+				vehCar:Remove()
+			end
+			if vehCarTrailer and vehCarTrailer:IsAlive() then
+				vehCarTrailer:Remove()
+			end
+
 			FailQuestIfTaken( "d_CaravanFromTuzzToVillage_Quest" )
 
 			TActivate("triggerExitToMap13")
@@ -88,93 +250,12 @@
 		</script>
 	</trigger>
 
-	<trigger Name="trCaravanToVill1INPLACE" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill1_Loc" />
-		<script>
-			CompleteQuest( "d_SecondVillage_Quest" )
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 25
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z + 5
-
-			FlyAround( 1, 0, 15, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 17, 1)
-
-			TActivate( "trCaravanToVill1INPLACE_ec" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="trCaravanToVill1INPLACE_ec" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			TActivate( "trCaravanToVill25sec" )
-			TActivate( "trCaravanToVill2INPLACE" )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
 	<trigger Name="trCaravanToVill25sec" active="0">
 		<event timeout="3" eventid="GE_TIME_PERIOD" />
 		<script>
 			GetEntityByName("KARAVANvvt_vehicle_0"):SetExternalPathByName("V1toV2_path")
 
 			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trCaravanToVill2INPLACE" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill2_Loc" />
-		<script>
-			CompleteQuest( "d_FirstVillage_Quest" )
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z + 5
-
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			AddCinematicMessage( 18, 1)
-
-			TActivate( "trCaravanToVill2INPLACE_ec" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="trCaravanToVill2INPLACE_ec" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			TActivate( "trCaravanToT5sec" )
-			TActivate( "trCaravanToTuzzINPLACE" )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
 		</script>
 	</trigger>
 
@@ -226,332 +307,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="FIRSTATTACK" active="0">
-		<event timeout="60" eventid="GE_TIME_PERIOD" />
-		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="AfterTunnel_vehicle_0" />
-		<script>
-			TActivate( "RolikBegin_FIRSTATTACK" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
-
-
-	<trigger Name="Start000" active="1">
-		<event eventid="GE_GAME_START" ObjName="Player1" />
-		<script>
-			if IsQuestTaken("r2m2_GoToR2M1") and not( IsQuestComplete("r2m2_GoToR2M1")) then
-				SetTolerance( 1100, 1016, RS_ENEMY )
-				SetTolerance( 1100, 1083, RS_ENEMY )
-
-				local r1 = random(2)
-				local r2 = random(1)
-
-				local RandCoord1 = {	CVector(2830, 222, 3589),
-								CVector(3644, 286, 2557)
-				}
-				local RandCoord2 = {	CVector(2706, 270, 1576)
-				}
-				
-				TeamCreate("KaravanSNGTill", 1016, RandCoord1[r1], {"r2m1_scout01","r2m1_Molokovoz01","r2m1_scout02"}, RandCoord2[r2], 1)
-
-				CompleteQuest("r2m2_GoToR2M1")
-
-				TActivate ("KARAVANSNGDIE")
-
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-	<trigger Name="KARAVANSNGDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="KaravanSNGTill" />
-		<script>
-			CompleteQuest( "r2m2_FindSNGKaravan" )
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround( 6, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 60, 1 )
-
-			TActivate ("KARAVANSNGDIE_ce")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="KARAVANSNGDIE_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1016, RS_ENEMY )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-<!-- Проверить границу -->
-	<trigger Name="SERCHSIDELINE" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SideLine" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 5
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z - 25
-
-			FlyAround( 1, 0, 25, 12, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 13, 1)
-
-			TActivate( "SERCHSIDELINE_ce" )
-
-			CompleteQuest( "d_PatrulSideSNG_Quest" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="SERCHSIDELINE_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			TActivate ("HELPHELPHELP")
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-<!-- Защитить деревню -->
-	<trigger Name="HELPHELPHELP" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VillageAttackLocation" />
-		<script>
-			TeamCreate("Razboy",1015,CVector(4072, 306, 1765),{"OL_Ural", "Molokovoz02", "Hunter02"}, CVector(4011, 306, 1405), 1)
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 5
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z - 35
-
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 14, 1)
-
-			TActivate( "HELPHELPHELP_ce" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="HELPHELPHELP_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
-
-			TActivate("RAZBOYINVILLAGEDEAD")
-
-			CompleteQuest( "d_HelpSideVillageSNG_Quest1" )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
-		</script>
-	</trigger>
-
-	<trigger Name="RAZBOYINVILLAGEDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Razboy_vehicle_0" />
-		<event eventid="GE_OBJECT_DIE" ObjName="Razboy_vehicle_1" />
-		<event eventid="GE_OBJECT_DIE" ObjName="Razboy_vehicle_2" />
-		<script>
-			TeamCreate("SNGArmy1",1016,CVector(4072, 306, 1765),{"Revolutioner1", "Revolutioner2"}, CVector(4011, 306, 1405), 1)
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 20
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z - 20
-
-			FlyAround( 1, 0, 25, 12, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 15, 1)
-			AddCinematicMessage( 16, 1)
-
-			TActivate( "RAZBOYINVILLAGEDEAD_ce" )
-
-			CompleteQuest( "d_HelpSideVillageSNG_Quest2" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="RAZBOYINVILLAGEDEAD_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-<!-- Бой в Туннеле -->
-	<trigger Name="TUNELFIGHT" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelAttackLocation" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z - 5
-
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 19, 1)
-
-			TActivate ("trTunelTeamFighters")
-			TActivate ("TUNELFIGHT_ce")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="trTunelTeamFighters" active="0">
- 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			TeamCreate("TunelTeamFighters",1015,CVector(7603, 276, 4813),{"r2m1_Fighter01","r2m1_Ural01","r2m1_Fighter01"})
-
-			TActivate ("TUNELFIGHTERDEAD")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TUNELFIGHT_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
-
-			SetCameraBehindPlayerVehicle()
-
-			CompleteQuest( "d_FreeTunel_Quest1" )
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="TUNELFIGHTERDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="TunelTeamFighters" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z + 5
-
-			FlyAround( 1, 0, 25, 18, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 20, 1)
-			AddCinematicMessage( 2012, 0.25)
-
-			TActivate ("TUNELFIGHTERDEAD_ce")
-
-			CompleteQuest( "d_FreeTunel_Quest2" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TUNELFIGHTERDEAD_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-<!-- Поймать Босса АР -->
+	<!-- Поймать генерала АР -->
 	<trigger Name="TAKEBOSSAR" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -575,53 +331,41 @@
 		</script>
 	</trigger>
 
-	<trigger Name="TAKEBOSSARDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="BossARCar" />
+<!-- АР -->
+	<!-- Создание каравана СНГ -->
+	<trigger Name="Start000" active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
+			if IsQuestTaken("r2m2_GoToR2M1") and not( IsQuestComplete("r2m2_GoToR2M1")) then
+				SetTolerance( 1100, 1016, RS_ENEMY )
+				SetTolerance( 1100, 1083, RS_ENEMY )
 
-			TActivate( "trVehSTOP" )
+				local r1 = random(2)
+				local r2 = random(1)
 
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z + 5
+				local RandCoord1 = {	CVector(2830, 222, 3589),
+								CVector(3644, 286, 2557)
+				}
+				local RandCoord2 = {	CVector(2706, 270, 1576)
+				}
+				
+				TeamCreate("KaravanSNGTill", 1016, RandCoord1[r1], {"r2m1_scout01","r2m1_CaravanMolokovoz03","r2m1_scout02"}, RandCoord2[r2], 1)
+				local vehCar = GetEntityByName("KaravanSNGTill_vehicle_1")
+				if vehCar then
+					vehCar:AttachTrailer("MolokovozTrailer")
+					PaintTrailer(vehCar)
+				end
 
-			FlyAround( 1, 0, 65, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
+				CompleteQuest("r2m2_GoToR2M1")
 
-			AddCinematicMessage( 22, 1)
+				TActivate ("KARAVANSNGDIE")
 
-			TActivate( "TAKEBOSSARDEAD_ce" )
-
-			CompleteQuest( "d_TakeGeneralOfBandits_Quest2" )
-			CompleteQuest( "d_FindAksel_Quest" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TAKEBOSSARDEAD_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
-
-			SetCameraBehindPlayerVehicle()
-
-			AddQuestItem("ARGeneral_P")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ARGeneral_P")
-
-			trigger:Deactivate() 
+				trigger:Deactivate()
+			end
 		</script>
 	</trigger>
 
-
-
-
+<!-- Натыкаемся на Лису у Гельвеции -->
 	<trigger Name="LISAMOVETOGELVFROMR2M2" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="LisaFindLocation" />
 		<script>
@@ -631,7 +375,7 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
+<!-- Победили Лису -->
 	<trigger Name="LISADIED" active="0">
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="LisaInCar_vehicle_0" />
 		<script>
@@ -645,10 +389,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+<!-- Босс-Кран -->
 	<trigger Name="PARISTUBECREATE" active="1">
 		<event timeout="1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -697,10 +438,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+<!-- Уничтожили тарелку Ньери -->
 	<trigger Name="TRIGGER_ALIENSDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AliensShip" />
 		<script>
@@ -713,9 +451,312 @@
 		</script>
 	</trigger>
 
+<!-- мерцающее нло -->
+	<trigger Name="trGeneric" active="0">
+		<event timeout="0.03" eventid="GE_TIME_PERIOD" />
+		<script>
+			local camPos = GetCameraPos()
+			camPos.x = camPos.x + 50
 
+			local r = GetVar("R").AsInt + 1
+			if r >= 100 then trigger:Deactivate() end
 
+			local g = r
+			local ON = 490.804
+			local OFF = 0
+			local y = 0
+			if g >= 3 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 5 then
+				y = OFF
+				RuleConsole("g_postEffect cinematicEnd")
+			end
+			if g >= 10 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 12 then
+				y = OFF
+				RuleConsole("g_postEffect cinematicEnd")
+			end
+			if g >= 20 then
+				y = ON
+				RuleConsole("g_postEffect cinematic01")
+			end
+			if g >= 23 then
+				y = OFF
+--				RuleConsole("g_postEffect cinematicEnd")
+			end
+			if g >= 26 then y = ON end
+			if g >= 28 then y = OFF  end
+			if g >= 30 then y = ON  end
+			if g >= 33 then y = OFF  end
+			if g >= 35 then y = ON  end
+			if g >= 38 then y = OFF  end
+			if g >= 40 then y = ON end
+			if g >= 45 then
+				y = OFF
+				RuleConsole("g_postEffect cinematic03")
+			end
+			if g >= 50 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 52 then
+				y = OFF
+				RuleConsole("g_postEffect cinematic04")
+			end
+			if g >= 60 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 62 then
+				y = OFF
+				RuleConsole("g_postEffect cinematic02")
+			end
+			if g >= 66 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 69 then
+				y = OFF
+				RuleConsole("g_postEffect cinematic03")
+			end
+			if g >= 71 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 80 then
+				y = OFF
+				RuleConsole("g_postEffect cinematic04")
+			end
+			if g >= 83 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
+			if g >= 90 then
+				y = OFF
+				RuleConsole("g_postEffect cinematic02")
+			end
+			if g >= 93 then
+				y = ON
+				RuleConsole("g_postEffect cinematic05")
+			end
 
+			if y ~= ON then 
+				CreateEffectTTLed("ET_PS_UFO01", CVector(camPos), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1000)
+			end
+			if g >= 98 then  RuleConsole("g_postEffect cinematicEnd") end
+
+			if 20 >= g then
+				getObj("AliensShip"):SetPosition( CVector(1366.725, 0, 1801.638))
+			end
+			if g >= 21 then
+			getObj("AliensShip"):SetPosition( CVector(1366.725, y, 1801.638)) 
+			end
+			if g >= 40 then
+				getObj("AliensShip"):SetPosition( CVector(1366.725, 490.804, 1801.638))
+			end
+
+			SetVar("R", r)
+		</script>
+	</trigger>
+
+<!-- Тарелку под землю -->
+	<trigger Name="trAliensShipAnderEarth" active="1">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			local y = 0
+
+			getObj("AliensShip"):SetPosition( CVector(1366.725, y, 1801.638)) 
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- эфекты на електростанции -->
+	<trigger Name="trLightOn" active="1">
+		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			local y = 276.525
+
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p003", -1, -1, CVector(6242.927, 5.403 + y, 4402.030), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p004", -1, -1, CVector(6021.822, 23.762 + y, 4376.930), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p005", -1, -1, CVector(6019.808, 23.762 + y, 4372.996), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p006", -1, -1, CVector(6204.051, 5.403 + y, 4428.498), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p007", -1, -1, CVector(6211.564, 5.403 + y, 4356.677), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p008", -1, -1, CVector(6173.076, 5.403 + y, 4383.687), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_BOSS2_MAIN", "p009", -1, -1, CVector(5985.193, 0.000 + y, 4396.228), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p010", -1, -1, CVector(6267.566, 15.772 + y, 4388.441), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p011", -1, -1, CVector(6225.648, 15.772 + y, 4410.056), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN", "p012", -1, -1, CVector(6248.037, 19.651 + y, 4398.562), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN1", "p013", -1, -1, CVector(6258.379, 10.854 + y, 4391.873), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN1", "p014", -1, -1, CVector(6242.969, 5.759 + y, 4402.217), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p015", -1, -1, CVector(6226.852, 10.621 + y, 4346.274), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p016", -1, -1, CVector(6216.646, 10.578 + y, 4418.399), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN1", "p017", -1, -1, CVector(6217.976, 3.830 + y, 4428.468), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN1", "p018", -1, -1, CVector(6255.394, 3.830 + y, 4402.350), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN1", "p019", -1, -1, CVector(6256.351, 10.630 + y, 4393.144), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN", "p020", -1, -1, CVector(6258.739, 11.093 + y, 4392.267), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN3", "p021", -1, -1, CVector(6243.535, -15.534 + y, 4399.495), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN3", "p022", -1, -1, CVector(6213.134, -15.534 + y, 4356.146), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_ORACUL_MAIN3", "p023", -1, -1, CVector(5957.748, 25.884 + y, 4322.351), Quaternion(0.7290, -0.5787, -0.1097, 0.3487))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p0024", -1, -1, CVector(5987.222, 65.488 + y, 4390.725), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p025", -1, -1, CVector(5993.972, 45.907 + y, 4408.061), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p026", -1, -1, CVector(5947.930, 17.626 + y, 4332.236), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_SPARKLE_BIG_MAIN2", "p027", -1, -1, CVector(5932.408, 32.007 + y, 4343.449), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D1", "p028", -1, -1, CVector(5961.414, 49.632 + y, 4369.348), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D5", "p029", -1, -1, CVector(5986.168, 46.619 + y, 4396.456), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D4", "p030", -1, -1, CVector(6018.188, 35.593 + y, 4395.552), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D4", "p031", -1, -1, CVector(6020.208, 35.593 + y, 4398.536), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D4", "p032", -1, -1, CVector(6022.368, 35.593 + y, 4402.399), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D4", "p033", -1, -1, CVector(6024.400, 35.593 + y, 4405.390), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_S9", "p034", -1, -1, CVector(6000.544, 36.210 + y, 4386.690), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D1", "p035", -1, -1, CVector(6017.873, 77.968 + y, 4402.290), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D1", "p036", -1, -1, CVector(6017.177, 77.968 + y, 4405.025), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D1", "p037", -1, -1, CVector(6015.383, 77.968 + y, 4402.774), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D1", "p038", -1, -1, CVector(6013.823, 77.968 + y, 4404.696), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_LENS_D4", "p039", -1, -1, CVector(5957.439, 65.895 + y, 4392.166), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trLightRemove" active="0">
+		<event timeout="2.5" eventid="GE_TIME_PERIOD" />
+		<script>
+			local p = getObj("p003")	 if p then p:Remove() end
+			local p = getObj("p004")	 if p then p:Remove() end
+			local p = getObj("p005")	 if p then p:Remove() end
+			local p = getObj("p006")	 if p then p:Remove() end
+			local p = getObj("p007")	 if p then p:Remove() end
+			local p = getObj("p008")	 if p then p:Remove() end
+			local p = getObj("p009")	 if p then p:Remove() end
+			local p = getObj("p010")	 if p then p:Remove() end
+			local p = getObj("p011")	 if p then p:Remove() end
+			local p = getObj("p012")	 if p then p:Remove() end
+			local p = getObj("p013")	 if p then p:Remove() end
+			local p = getObj("p014")	 if p then p:Remove() end
+			local p = getObj("p015")	 if p then p:Remove() end
+			local p = getObj("p016")	 if p then p:Remove() end
+			local p = getObj("p017")	 if p then p:Remove() end
+			local p = getObj("p018")	 if p then p:Remove() end
+			local p = getObj("p019")	 if p then p:Remove() end
+			local p = getObj("p020")	 if p then p:Remove() end
+			local p = getObj("p021")	 if p then p:Remove() end
+			local p = getObj("p022")	 if p then p:Remove() end
+			local p = getObj("p023")	 if p then p:Remove() end
+			local p = getObj("p024")	 if p then p:Remove() end
+			local p = getObj("p025")	 if p then p:Remove() end
+			local p = getObj("p026")	 if p then p:Remove() end
+			local p = getObj("p027")	 if p then p:Remove() end
+			local p = getObj("p028")	 if p then p:Remove() end
+			local p = getObj("p029")	 if p then p:Remove() end
+			local p = getObj("p030")	 if p then p:Remove() end
+			local p = getObj("p031")	 if p then p:Remove() end
+			local p = getObj("p032")	 if p then p:Remove() end
+			local p = getObj("p033")	 if p then p:Remove() end
+			local p = getObj("p034")	 if p then p:Remove() end
+			local p = getObj("p035")	 if p then p:Remove() end
+			local p = getObj("p036")	 if p then p:Remove() end
+			local p = getObj("p037")	 if p then p:Remove() end
+			local p = getObj("p038")	 if p then p:Remove() end
+			local p = getObj("p039")	 if p then p:Remove() end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- 	поочередно выключающиися эфекты		 -->
+	<trigger Name="trLightOff" active="0">
+		<event timeout="2.6" eventid="GE_TIME_PERIOD" />
+		<script>
+			local y = 276.525
+
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(6242.927, 5.403 + y, 4402.030), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4900)
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(6021.822, 23.762 + y, 4376.930), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4700)
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(6019.808, 23.762 + y, 4372.996), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4600)
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(6204.051, 5.403 + y, 4428.498), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4500)
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(6211.564, 5.403 + y, 4356.677), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4400)
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(6173.076, 5.403 + y, 4383.687), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4300)
+			CreateEffectTTLed("ET_PS_BOSS2_MAIN", CVector(5985.193, 0.000 + y, 4396.228), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4200)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(6267.566, 15.772 + y, 4388.441), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4200)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(6225.648, 15.772 + y, 4410.056), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4000)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN", CVector(6248.037, 19.651 + y, 4398.562), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 4000)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN1", CVector(6258.379, 10.854 + y, 4391.873), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 3700)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN1", CVector(6242.969, 5.759 + y, 4402.217), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 3500)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(6226.852, 10.621 + y, 4346.274), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 3300)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(6216.646, 10.578 + y, 4418.399), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 3100)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN1", CVector(6217.976, 3.830 + y, 4428.468), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 3000)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN1", CVector(6255.394, 3.830 + y, 4402.350), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2800)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN1", CVector(6256.351, 10.630 + y, 4393.144), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2600)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN", CVector(6258.739, 11.093 + y, 4392.267), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2400)
+			CreateEffectTTLed("ET_PS_ORACUL_MAIN3", CVector(6243.535, -15.534 + y, 4399.495), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2200)
+			CreateEffectTTLed("ET_PS_ORACUL_MAIN3", CVector(6213.134, -15.534 + y, 4356.146), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2000)
+			CreateEffectTTLed("ET_PS_ORACUL_MAIN3", CVector(5957.748, 25.884 + y, 4322.351), Quaternion(0.7290, -0.5787, -0.1097, 0.3487), 1800)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(5987.222, 65.488 + y, 4390.725), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1700)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(5993.972, 45.907 + y, 4408.061), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1700)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(5947.930, 17.626 + y, 4332.236), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1700)
+			CreateEffectTTLed("ET_PS_SPARKLE_BIG_MAIN2", CVector(5932.408, 32.007 + y, 4343.449), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1700)
+			CreateEffectTTLed("ET_PS_LENS_D1", CVector(5961.414, 49.632 + y, 4369.348), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1600)
+			CreateEffectTTLed("ET_PS_LENS_D5", CVector(5986.168, 46.619 + y, 4396.456), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1400)
+			CreateEffectTTLed("ET_PS_LENS_D4", CVector(6018.188, 35.593 + y, 4395.552), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1200)
+			CreateEffectTTLed("ET_PS_LENS_D4", CVector(6020.208, 35.593 + y, 4398.536), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 1000)
+			CreateEffectTTLed("ET_PS_LENS_D4", CVector(6022.368, 35.593 + y, 4402.399), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 800)
+			CreateEffectTTLed("ET_PS_LENS_D4", CVector(6024.400, 35.593 + y, 4405.390), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600)
+			CreateEffectTTLed("ET_PS_LENS_S9", CVector(6000.544, 36.210 + y, 4386.690), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 500)
+			CreateEffectTTLed("ET_PS_LENS_D1", CVector(6017.873, 77.968 + y, 4402.290), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 400)
+			CreateEffectTTLed("ET_PS_LENS_D1", CVector(6017.177, 77.968 + y, 4405.025), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 300)
+			CreateEffectTTLed("ET_PS_LENS_D1", CVector(6015.383, 77.968 + y, 4402.774), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 200)
+			CreateEffectTTLed("ET_PS_LENS_D1", CVector(6013.823, 77.968 + y, 4404.696), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 100)
+			CreateEffectTTLed("ET_PS_LENS_D4", CVector(5957.439, 65.895 + y, 4392.166), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 50)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Выбор финала в зависимости от действий игрока -->
+	<trigger Name="VyborFinala" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local ending = DefineTheEnding()
+			
+			if ending==1 then
+				TakeQuest("BenGoodEnd")
+			elseif ending==0 then
+				TakeQuest("BenNormalEnd")
+			else
+				println("CRITICAL! CAN NOT DEFINE THE ENDING!")
+				LOG("CRITICAL! CAN NOT DEFINE THE ENDING!")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Телепорт в Риджин после катсцены с боссом. -->
+	<trigger Name="ToR2M1AfterBoss" active="0">
+		<event        timeout="0.01"        eventid="GE_TIME_PERIOD" />
+		<script>
+			local b = SpawnMessageBox("8808")
+			if b == 1 then
+				PassToMap("r1m2", "FromR1M3", -1, true)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBenDialogActivate" active="0">
+		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
+		<script>
+			CheckPlayerVehicle()
+		</script>
+	</trigger>
+
+	<!-- Квест Эстета Кауфмана. Создание Жулика. -->
 	<trigger Name="Trigger_Antipod" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -739,51 +780,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="Trigger_Antipod_Die" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="GulikCar" />
-		<script>
-
-			CompleteQuest( "r2m1_ArtGulik_Quest" )
-		
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			FlyAround(6, 0, 25, 5, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 70, 1 )
-		
-			TActivate("Trigger_Antipod_Die_End")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="Trigger_Antipod_Die_End" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-		
-			RestoreAllToleranceStatus()
-
-			AddQuestItem("quest_art_masterpice")
-			
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_art_masterpice")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
+	<!-- Квесты Жулика Инкса -->
 	<trigger Name="Trigger_NarcotikCaravan" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -821,10 +818,6 @@
 		</script>
 	</trigger>
 
-
-
-
-
 	<trigger Name="Trigger_NarcotikBoss" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -847,10 +840,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Переход в Аржан -->
 	<trigger Name="triggerExitToMap22" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR2M2" />
 		<script>
@@ -913,10 +903,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Секретный переход в Аржан -->
 	<trigger Name="triggerExitToMap22small" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR2M2small" />
 		<script>
@@ -979,10 +966,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Переход в Фатерлянд -->
 	<trigger Name="triggerExitToMap13" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M3" />
 		<script>
@@ -1034,10 +1018,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Переход в Рощу Друидов -->
 	<trigger Name="triggerExitToMap31" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR3M1" />
 		<script>
@@ -1088,278 +1069,4 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-	<trigger Name="trBeforeCaravanAM" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="BeforeCaravan_loc" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage(8807, 1)
-	
-			TActivate("trBeforeCaravanAMEnd")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trBeforeCaravanAMEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(2455.522, 235.932, 2959.787) )
-				vehPlayer:SetRotation(Quaternion(0.005, 0.982, 0.002, -0.191))
-			end
-
-			TActivate("ZashitaCaravan")
-			TActivate("CaravanAMDEAD")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="ZashitaCaravan" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SetTolerance(1100,1015,RS_ENEMY)
-
-			SetTolerance(1100, 1016, RS_ALLY)
-			
-			TeamCreate("CaravanTuzz",1016,CVector(2425.274, 233.000, 2887.595),{"r2m1_CaravanMolokovoz02"})
-			CompleteQuest("Zashita_Quest1")
-			TakeQuest("Zashita_Quest2")
-			
-			TeamCreate("ARKillers",1015,CVector(2472.880, 225.221, 2843.691),{"r2m1_Fighter01", "TSPFighter", "Molokovoz02"})
-			
-			TActivate("ARKillersDIE")
-			TActivate("CaravanAMDEAD")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="CaravanAMDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="CaravanTuzz_vehicle_0" />
-		<script>
-			FailQuest("Zashita_Quest2")
-			FailQuest("r1m3_LisaWithOberegAndDisk_Quest")
-			TActivate("CaravDeadEnd1")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="ARKillersDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="ARKillers" />
-		<script>
-			CompleteQuest("Zashita_Quest2")
-			TakeQuest("preEretik_Quest")
-			
-		    TActivate("Zashitacin")
-			TDeactivate("CaravanAMDEAD")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="TUNELFIGHT1" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelAttackLocation" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z - 5
-
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 19, 1)
-
-			TActivate ("trTunelTeamFighters1")
-			TActivate ("TUNELFIGHT_ce1")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="trTunelTeamFighters1" active="0">
- 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			TeamCreate("TunelTeamFighters",1016,CVector(7603, 276, 4813),{"r2m1_Fighter01","r2m1_Ural01","r2m1_Fighter01"})
-
-			TActivate ("TUNELFIGHTERDEAD1")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TUNELFIGHT_ce1" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			CompleteQuest("Tunnel_Quest1")
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="TUNELFIGHTERDEAD1" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="TunelTeamFighters" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z + 5
-
-			FlyAround( 1, 0, 25, 18, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 143, 1)
-			AddCinematicMessage( 144, 1)
-
-			TActivate ("TUNELFIGHTERDEAD_ce1")
-
-			CompleteQuest( "Tunnel_Quest2" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TUNELFIGHTERDEAD_ce1" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-			
-			TActivate("prebattletr")
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="prebattletr" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Prebattle_Loc" />
-		<script>
-			TActivate("prebattlecin_begin")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="FinalBattleEnd" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="SNGLeaders" />
-		<script>
-			CompleteQuest("FinalBattle_Quest2")
-			SetTolerance(1100,1016,RS_ALLY)
-			SetTolerance(1083,1016,RS_ALLY)
-
-			TActivate("OIDRolikBegin")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="TheNewSibillaClose" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-
-			local tp = GetEntityByName("TheNewSibilla")
-			tp:SetOpenGateToPlayer( false )
-
-			SetConditionalClosingForTown( "TheNewSibilla", "r2m1", true )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="TheNewSibillaOpen" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-
-			local tp = GetEntityByName("TheNewSibilla")
-			tp:SetOpenGateToPlayer( true )
-
-			SetConditionalClosingForTown( "TheNewSibilla", "r2m1", false )
-
-			for i = 1,8 do
-				local kol = GetEntityByName("koluch"..i)
-				if kol then kol:Remove() end
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="CaravDeadEnd1" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			PlayCustomMusic("IntenseDialogue03")
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-			end
-			
-			Fly("CaravDeadCam1", CINEMATIC_NO_AIM, 0, 13, 1, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 8804, 1 )
-
-			TActivate("CaravDeadEnd2")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="CaravDeadEnd2" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			
-			StopPlayingCustomMusic()
-			
-			SpawnMessageBox( "8805" )
-			
-			ShowDeathMenu()
-
-			TActivate("trBenDialogActivate")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 </triggers>

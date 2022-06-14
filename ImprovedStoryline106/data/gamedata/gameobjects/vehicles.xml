@@ -3396,6 +3396,17 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 	<Prototype
 		Class			= "Vehicle"
+		Name			= "r2m1_CaravanMolokovoz03"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo04" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
 		Name			= "r2m1_CaravanUral01"
 		VisibleInEncyclopedia   = "false"
 		ParentPrototype 	= "Ural">

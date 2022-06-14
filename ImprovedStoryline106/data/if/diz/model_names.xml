@@ -1698,6 +1698,11 @@
 		value="Молоковоз" />
 
 	<Item
+		id="r2m1_CaravanMolokovoz03"
+		locForm="0"
+		value="Караван" />
+
+	<Item
 		id="r2m1_Belaz01"
 		locForm="0"
 		value="Белаз" />

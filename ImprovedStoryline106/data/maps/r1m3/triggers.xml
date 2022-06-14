@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
-
+	<!-- Инициализация карты -->
 	<trigger	Name="GlobalVar"	active="1">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -11,12 +11,12 @@
 			SetVar("QuickWayAlt",0)
 			SetVar("KnownMap",0)
 			SetVar("BeglecPrice",0)
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-
-
+	<!-- Раскладка случайного оружия по ящикам -->
 	<trigger	Name="trVaterlandPlaceSecret"	active="1">
 		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
 		<script>
@@ -24,28 +24,31 @@
 			local len = getn(gunlist)
 
 			for i=1,12 do
-				--println("step"..i.."succesful")
 				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
 			end
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-
-	<trigger	Name="trAutoSave"	active="0">
-		<event eventid="GE_GAME_START" ObjName="Player1" />
-		<script>
-		</script>
-	</trigger>
-
-
-
-
-
+	<!-- Первый заезд на карту -->
 	<trigger	Name="trStartMap"	active="1">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			
+			if IsQuestTaken("d_FindRealFatherRoom_Quest") then
+				local tp = GetEntityByName("Pesht")
+				if tp then
+					tp:SetOpenGateToPlayer( false )
+				end
+			end
+
+			SetConditionalClosingForTown( "Pesht", "r1m3", true )
+
+			CreateNewDummyObject( "arena_barricade8", "zagr1", -1, -1, CVector(5523.000, 217, 1423.368), Quaternion(0.000, -0.706, 0.000, 0.709), 0)
+			CreateNewDummyObject( "arena_barricade8", "zagr2", -1, -1, CVector(5631.000, 217, 1422.771), Quaternion(0.000, -0.706, 0.000, 0.709), 0)
+
+			CreateNewDummyObject( "bridge_military", "BridgeForDestroy", -1, -1, CVector(5576.837, 202.7, 1423.237), Quaternion(0.0000, 0.7086, 0.0000, 0.7056), 0)
+
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(4214.315, 231.049, 1020.738), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(4136.448, 252.076, 834.866), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(4183.487, 235.000, 1217.818), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
@@ -53,13 +56,41 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(4045.008, 234.819, 1037.936), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(4221.199, 231.304, 1010.331), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 
-			TActivate("tr_Start0")
+			TActivate("trStartMap221")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger	Name="trStartMap221"	active="1">
+	<!-- Сюжетный срез -->
+	<trigger Name="trQuickWay" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="QuickWay_loc" />
+		<script>
+			SetVar("QuickWay",1)
+			
+			if QuestStatus("d_GiveMoneyToBase_Quest")==Q_CANBEGIVEN then
+				TakeQuest("d_GiveMoneyToBase_Quest")
+				FailQuest("d_GiveMoneyToBase_Quest")
+			end
+			
+			TActivate ("tr_OpenTownAndShowButtonInPesht")
+			
+			FailQuestIfTaken("d_RideAcrossBase_Quest")
+			FailQuestIfTaken("d_GiveMoneyToBase_Quest")
+			FailQuestIfTaken("d_GetBomb_Quest")
+			FailQuestIfTaken("d_DestroyBridge_Quest")
+
+			TDeactivate("preBOOOM")
+			TDeactivate("BOOOM")
+			TDeactivate("SHAHTSBANDITBOSSDIE")
+
+			CompleteQuestIfTaken("d_MoveToPesht_Quest")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Активация катсцены с чехлами -->
+	<trigger	Name="trStartMap221"	active="0">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			if IsQuestTaken("d_chehol1") then
@@ -75,28 +106,7 @@
 		</script>
 	</trigger>
 
-
-	<trigger Name="tr_Start0" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			if IsQuestTaken("d_FindRealFatherRoom_Quest") then
-				local tp = GetEntityByName("Pesht")
-				if tp then
-					tp:SetOpenGateToPlayer( false )
-				end
-			end
-
-			SetConditionalClosingForTown( "Pesht", "r1m3", true )
-
-			CreateNewDummyObject( "arena_barricade8", "zagr1", -1, -1, CVector(5523.000, 217, 1423.368), Quaternion(0.000, -0.706, 0.000, 0.709), 0)
-			CreateNewDummyObject( "arena_barricade8", "zagr2", -1, -1, CVector(5631.000, 217, 1422.771), Quaternion(0.000, -0.706, 0.000, 0.709), 0)
-
-			CreateNewDummyObject( "bridge_military", "BridgeForDestroy", -1, -1, CVector(5576.837, 202.7, 1423.237), Quaternion(0.0000, 0.7086, 0.0000, 0.7056), 0)
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Открытие Пешта -->
 	<trigger Name="tr_OpenTownAndShowButtonInPesht" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -109,6 +119,7 @@
 		</script>
 	</trigger>
 
+	<!-- Игрок выезжает из Пешта -->
 	<trigger Name="tr_PeshtTrue" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locPeshtTrue" />
 		<event eventid="GE_OBJECT_IN_LOCATION" ObjName="locPeshtTrue" />
@@ -238,64 +249,7 @@
 		</script>
 	</trigger>
 
-
-
-
-	<trigger Name="SHAHTSBANDIT" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			TeamCreate("ShahtsBoss",1002,CVector(2202, 285, 6936),{"r1m1_molokovoz02","r1m3_Fighter01","r1m1_CaravanBug02"}, CVector(2041, 287, 7182), 1)
-
-			TakeQuest("d_BombShahtsAtakBandits_Quest")
-
-			TActivate("SHAHTSBANDITBOSSDIE")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="SHAHTSBANDITBOSSDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="ShahtsBoss" />
-		<script>
-   			CompleteQuest( "d_BombShahtsAtakBandits_Quest" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger Name="preBOOOM" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="OhranaBridge" />
-		<script>
-   			TActivate( "BOOOM" )
-
-			CompleteQuest("d_DestroyBridge_Quest1")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger Name="BOOOM" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheDestroyBridgeLoc" />
-		<script>
-  			if IsQuestTaken("d_DestroyBridge_Quest2") then
-				RemoveQuestItem("quest_explosive")
-
-   				CompleteQuest( "d_DestroyBridge_Quest2" )
-   
-				AddFadingMsg("Вы воспользовались предметом: Взрывчатка")
-
-				local a = GetEntityByName("BaseGuardian_enter")
-				if a then a:SetProperty("Active",0) end
-
-				TActivate( "RolikBegin_BOOOM" )
-
-				trigger:Deactivate()
-  			end
-		</script>
-	</trigger>
-
+	<!-- Игрок платит и проезжает по мосту -->
 	<trigger Name="BASEATTACK" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD"/>
 		<script>
@@ -326,10 +280,62 @@
 		</script>
 	</trigger>
 
+	<!-- Нападение бандитов на Горные шахты -->
+	<trigger Name="SHAHTSBANDIT" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreate("ShahtsBoss",1002,CVector(2202, 285, 6936),{"r1m1_molokovoz02","r1m3_Fighter01","r1m1_CaravanBug02"}, CVector(2041, 287, 7182), 1)
 
+			TakeQuest("d_BombShahtsAtakBandits_Quest")
 
+			TActivate("SHAHTSBANDITBOSSDIE")
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
 
+	<trigger Name="SHAHTSBANDITBOSSDIE" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ShahtsBoss" />
+		<script>
+   			CompleteQuest( "d_BombShahtsAtakBandits_Quest" )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Подрыв моста Бригады -->
+	<trigger Name="preBOOOM" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="OhranaBridge" />
+		<script>
+   			TActivate( "BOOOM" )
+
+			CompleteQuest("d_DestroyBridge_Quest1")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="BOOOM" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheDestroyBridgeLoc" />
+		<script>
+  			if IsQuestTaken("d_DestroyBridge_Quest2") then
+				RemoveQuestItem("quest_explosive")
+
+   				CompleteQuest( "d_DestroyBridge_Quest2" )
+   
+				AddFadingMsg("Вы воспользовались предметом: Взрывчатка")
+
+				local a = GetEntityByName("BaseGuardian_enter")
+				if a then a:SetProperty("Active",0) end
+
+				TActivate( "RolikBegin_BOOOM" )
+
+				trigger:Deactivate()
+  			end
+		</script>
+	</trigger>
+
+	<!-- Приезды в дом Айвена -->
 	<trigger Name="FATHERHOUSE" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="HouseLoc" />
 		<script>
@@ -360,10 +366,6 @@
 		</script>
 	</trigger>
 
-
-
-
-
 <!-- Освободить скважину -->
 	<trigger Name="ATTACKOILMINE" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
@@ -377,105 +379,6 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-	<trigger Name="BOSSOILMINEDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="OilMineBoss" />
-		<script>
-
-			CompleteQuest( "d_DriveBanditFromOilMine_Quest" )
-
-			SetTolerance( 1100, 1047, RS_NEUTRAL )
-
-			CreateVehicleEx("DemoBandit", "vehicleRunner", CVector(7006.653, 258.253, 7163.328), 1044)
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(6931.543, 280.175, 7110.825), Quaternion(0, 0, 0, 0), 1)
-
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
-			local camCar = GetEntityByName("vehicleRunner")
-			local camCarID = camCar:GetId()
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
---			Fly( "NeftVyshCam", CINEMATIC_NO_AIM, 0, 13, 1, 1)
-			FlyLinked( "SPYMER_cam01", CTochID, 13, 1, 1, camCarID )
-			StartCinematic() 
-
-			AddCinematicMessage( 20, 1 )
-
-			TActivate( "BOSSOILMINENDCINIMATIC" )
-			TActivate("BOSSOILMINEDIEFADE")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="BOSSOILMINEDIEFADE" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			local vehP = GetPlayerVehicle()
-			if vehP then
-				vehP:SetCustomControlEnabled( true )
-				vehP:SetCustomLinearVelocity( 0 )
-				vehP:SetThrottle( 0 )
-				vehP:SetCustomControlEnabled( false )
-				vehP:SetGamePositionOnGround(CVector(7010.846, 257.805, 7117.275))
-				vehP:SetRotation(Quaternion(0.001, 0.922, 0.000, -0.388))
-			end
-			
-			for i = 0,2 do
-				if GetEntityByName("OilMineBoss_vehicle_"..i) then
-					GetEntityByName("OilMineBoss_vehicle_"..i):Remove()
-					-- println("Removed vehicle "..i)
-				end
-			end
-
-			
-			local vehR = GetEntityByName("vehicleRunner")
-			if vehR then
-				vehR:SetGamePositionOnGround(CVector(6954.294, 259.027, 7065.042))
-				vehR:SetRotation(Quaternion(0.008, 0.931, 0.020, -0.364))
-				vehR:SetSkin(4)
-				vehR:SetExternalPathByName("banditoilmine_path")
-				vehR:SetCruisingSpeed(10)
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="BOSSOILMINENDCINIMATIC" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			local vehR = GetEntityByName("vehicleRunner")
-			if vehR then vehR:Remove() end
-
-			local CToch = GetEntityByName("camTochka")
-			if CToch then CToch:Remove() end
-
-			TeamCreate("OilMineRuner",1044,CVector(6897.545, 261.550, 7004.525),{"DemoBandit"}, nil, 1, Quaternion(-0.002, 0.930, 0.007, -0.367))
-			local vehP = GetEntityByName("OilMineRuner_vehicle_0")
-			if vehP then
-				vehP:SetExternalPathByName("banditoilmine_path")
-				vehP:SetSkin(4)
-				vehP:SetCruisingSpeed(25)
-				vehP:SetMaxSpeed(25)
-			end
-
-			TakeQuest("d_FindBanditBaseOfOilMine_Quest")
-
-			TActivate("RUNTORUNER")
-			TActivate("RUNTORUNERENDRACE")
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
 
 <!-- Догнать бандита -->
 	<trigger Name="RUNTORUNER" active="0">
@@ -557,6 +460,7 @@
 		</script>
 	</trigger>
 
+	<!-- Бандит приехал на базу. Зачистка. -->
 	<trigger Name="RUNTORUNERENDRACE" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="EndRaceLoc" />
 		<script>
@@ -609,8 +513,6 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-
 
 <!-- Догнать мера -->
 	<trigger Name="SPYMER" active="0">
@@ -701,7 +603,58 @@
 		</script>
 	</trigger>
 
-<!-- Узнать где туннель -->
+	<!-- Караван из Минина в Хель -->
+	<trigger Name="CARAVANTOR1M4" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreate("KARAVAN14",1010,CVector(6081, 260, 5915),{"r2m2_CaravanUral02"}, nil, 1)
+			local vehP = GetEntityByName("KARAVAN14_vehicle_0")
+			if vehP then
+				vehP:SetExternalPathByName("karavan_path")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Создание армии ТСП подле Базы 51 -->
+	<trigger Name="ArmiaCreate" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+		
+			if IsQuestComplete("d_DestroyBridge_Quest") then
+
+				CreateVehicleEx( "BelazTSP", "ArmyVeh1", CVector(6057.330, 238.386, 1933.433), 1010 )
+				CreateVehicleEx( "TSPFighter", "ArmyVeh2", CVector(6027.587, 237.066, 1926.612), 1010 )
+				CreateVehicleEx( "tspfighter2", "ArmyVeh3", CVector(6012.056, 237.713, 1931.321), 1010 )
+
+				local veh1 = GetEntityByName("ArmyVeh1")
+				if veh1 then
+					veh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
+					veh1:setGodMode(1)
+					veh1:setImmortalMode(1)
+				end
+				local veh2 = GetEntityByName("ArmyVeh2")
+				if veh2 then
+					veh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
+					veh2:setGodMode(1)
+					veh2:setImmortalMode(1)
+				end
+				local veh3 = GetEntityByName("ArmyVeh3")
+				if veh3 then
+					veh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
+					veh3:setGodMode(1)
+					veh3:setImmortalMode(1)
+				end
+
+				TActivate( "ArmiaTSPPreparationBegin" )
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- Подъезжаем к тоннелю -->
 	<trigger Name="TUNNELLOCATION" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelLoc" />
 		<script>
@@ -716,9 +669,6 @@
 		</script>
 	</trigger>
 
-
-
-
 <!-- Устроить засаду -->
 	<trigger Name="ZASADATUNEL" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZasadaLocQ" />
@@ -731,6 +681,7 @@
 		</script>
 	</trigger>
 
+	<!-- Слежка за незнакомцем из тоннеля -->
 	<trigger Name="RUNTOPIONEER" active="0">
 		<event timeout="1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -798,62 +749,6 @@
 		</script>
 	</trigger>
 
-	<trigger Name="PIONEERDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Pioneer" />
-		<script>
-			TDeactivate( "PIONEERASGARD" )
-			TDeactivate( "RUNTOPIONEER" )
-			TActivate( "TRIGGER_TUNNELOPEN" )
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 3, 1)
-			StartCinematic()
-
-			AddCinematicMessage(9, 2)
-
-			TActivate( "PIONEERDEAD_cp" )
-
-			FailQuestIfTaken( "d_SerchCarTunel_Quest" )
-			FailQuestIfTaken("d_FindKeyInTunel_Quest")
-			CompleteQuestIfTaken("d_KillCarTunel_Quest")
-			TakeQuest( "d_OpenTunel_Quest" )
-   			
-
-			AddQuestItem("quest_key_for_tunnel")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_key_for_tunnel")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="PIONEERDEAD_cp" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			local run = GetEntityByName("Pioneer_vehicle_0")
-			if run then
-				run:Remove()
-			end
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
 	<trigger Name="PIONEERASGARD" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="PioneerLoc" />
 		<script>
@@ -869,6 +764,7 @@
 		</script>
 	</trigger>
 
+	<!-- Открываем тоннель -->
 	<trigger Name="TRIGGER_TUNNELOPEN" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelLoc" />
 		<script>
@@ -879,8 +775,7 @@
 		</script>
 	</trigger>
 
-
-
+	<!-- Создание машины вора -->
 	<trigger Name="TRIGGER_THIEFWAR" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -892,82 +787,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="TRIGGER_THIEFDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="ThiefCar" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1)
-			StartCinematic()
-
-			AddCinematicMessage(31, 1 )
-
-			TActivate("TRIGGER_THIEFDIE_cp")
-
-   			CompleteQuestIfTaken( "r1m3_FightWithThief" )
-   			CompleteQuestIfTaken( "Zachisti2_Quest" )
-
-   			if not(IsQuestComplete( "Zachisti2_Quest" )) then
-   				TakeQuest( "r1m3_MoveToOraculAfterThief" )
-   				TActivate("TRIGGER_LISAAFTERTHIEF")
-   			end
-   			
-			AddQuestItem("quest_disk_2")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_disk_2")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TRIGGER_THIEFDIE_cp" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			
-			local ArmyVeh1 = GetEntityByName("ArmiaTSP_vehicle_0")
-			local ArmyVeh2 = GetEntityByName("ArmiaTSP_vehicle_1")
-			local ArmyVeh3 = GetEntityByName("ArmiaTSP_vehicle_2")
-			if ArmyVeh1 then
-				ArmyVeh1:Remove()
-			end
-			if ArmyVeh2 then
-				ArmyVeh2:Remove()
-			end
-			if ArmyVeh3 then
-				ArmyVeh3:Remove()
-			end
-
-			local vehBrig = GetEntityByName("Brigada1_vehicle_0")
-			if vehBrig then vehBrig:Remove() end
-
-			local vehBrig1 = GetEntityByName("Brigada2_vehicle_0")
-			if vehBrig1 then vehBrig1:Remove() end
-
-			if IsQuestComplete( "Zachisti2_Quest" ) then
-				SetTolerance( 1100, 1012, RS_ALLY )
-				getObj("TheBase"):SetBelong(1010)
-			end
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-
+	<!-- Лиса ворует диск 2 у выезда на Хель -->
 	<trigger Name="TRIGGER_LISAAFTERTHIEF" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SnatchLoc" />
 		<script>
@@ -990,10 +810,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Встреча с Оракулом, который посылает нас в Сель -->
 	<trigger Name="TRIGGER_ORACLEABOTPLATE" active="1">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
@@ -1011,10 +828,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Встреча с Оракулом, где мы выбираем концовку -->
 	<trigger Name="TRIGGER_ORACLEAGRESSOR" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="OraculEndLoc" />
 		<script>
@@ -1028,58 +842,25 @@
 		</script>
 	</trigger>
 
-	<trigger Name="TRIGGER_ORACLEAGRESSORDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="OracleFlyBoss" /> 
+	<!-- Нормальная концовка -->
+	<trigger Name="StartNormalEnd" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locNormalEnd" />
 		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-   			CompleteQuest( "r2m1_DeployBloks1" )
-   			CompleteQuest( "r1m3_DestroyOracle" )
-   			CompleteQuest( "r4m2_NeutralizePlate" )
---   		TakeQuest("r4m2_BlokiratorToUFO")
-
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			FlyAround(6, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 8810, 1)
-
-			TActivate("TRIGGER_ORACLEAGRESSORDIECINEMATIC")
-
+		if IsQuestComplete("BenNormalEnd") then
+			TActivate("NormalEndCin")
 			trigger:Deactivate()
+		end
 		</script>
 	</trigger>
 
-	<trigger Name="TRIGGER_ORACLEAGRESSORDIECINEMATIC" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+	<trigger Name="trBenDialogActivate" active="0">
+		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
 		<script>
-		
-			RestoreAllToleranceStatus()
-			
-			StopPlayingCustomMusic()
-		
-			GetEntityByName("qa1"):Remove()
-			GetEntityByName("qa2"):Remove()
-			GetEntityByName("qa3"):Remove()
-			GetEntityByName("qa4"):Remove()
-			GetEntityByName("qa5"):Remove()
-			
-			CompleteQuest("r4m2_DestroyPlate")
-
-			trigger:Deactivate()
+			CheckPlayerVehicle()
 		</script>
 	</trigger>
 
+	<!-- Конни и Блайд -->
 	<trigger Name="TriggerBonnyTrap" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1089,7 +870,8 @@
 		</script>
 	</trigger>
 
-		<trigger Name="TriggerLabirintCarCreate2" active="0">
+	<!-- Беглец в заброшенном городе -->
+	<trigger Name="TriggerLabirintCarCreate2" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			TeamCreate("OldTownOutsiderCar2",1002,CVector(1387,259,3947), {"r1m3_molokovozInOldCity"},nil, 1)
@@ -1116,10 +898,6 @@
 		</script>
 	</trigger>
 
-
-
-
-
 	<trigger Name="TriggerLabirintCarDie2" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="OldTownOutsiderCar2" />
 		<script>
@@ -1135,10 +913,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Приехали в Центр Развлечений -->
 	<trigger Name="TriggerFindCircus" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheCircus" />
 		<script>
@@ -1148,27 +923,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
-	<trigger Name="CARAVANTOR1M4" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			TeamCreate("KARAVAN14",1010,CVector(6081, 260, 5915),{"r2m2_CaravanUral02"}, nil, 1)
-			local vehP = GetEntityByName("KARAVAN14_vehicle_0")
-			if vehP then
-				vehP:SetExternalPathByName("karavan_path")
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
-
-
+	<!-- Переход в Край -->
 	<trigger Name="triggerExitToMap11" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M1" />
 		<script>
@@ -1221,11 +976,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
-
+	<!-- Переход в Риджин -->
 	<trigger Name="triggerExitToMap12" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M2" />
 		<script>
@@ -1290,11 +1041,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
-
+	<!-- Переход в Хель -->
 	<trigger Name="triggerExitToMap14" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M4" />
 		<script>
@@ -1345,6 +1092,7 @@
 			end
  		</script>
 	</trigger>
+
 	<trigger Name="RolikExitToMap14" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
@@ -1370,10 +1118,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Переход в Либриум -->
 	<trigger Name="triggerExitToMap21" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR2M1" />
 		<script>
@@ -1441,173 +1186,7 @@
 		</script>
 	</trigger>
 
-
-	<trigger Name="ArmiaCreateStart" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locArmiaTSP" />
-		<script>
-		
-			TActivate("ArmiaTSPPreparationBegin")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="ArmiaCreate" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-		
-			if IsQuestComplete("d_DestroyBridge_Quest") then
---				TeamCreate("ArmiaTSP",1010,CVector(6018.614, 237.349, 1893.204),{"BelazTSP", "TSPFighter", "tspfighter2"})
-
-				CreateVehicleEx( "BelazTSP", "ArmyVeh1", CVector(6057.330, 238.386, 1933.433), 1010 )
-				CreateVehicleEx( "TSPFighter", "ArmyVeh2", CVector(6027.587, 237.066, 1926.612), 1010 )
-				CreateVehicleEx( "tspfighter2", "ArmyVeh3", CVector(6012.056, 237.713, 1931.321), 1010 )
-
-				local veh1 = GetEntityByName("ArmyVeh1")
-				if veh1 then
-					veh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
-					veh1:setGodMode(1)
-					veh1:setImmortalMode(1)
-				end
-				local veh2 = GetEntityByName("ArmyVeh2")
-				if veh2 then
-					veh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
-					veh2:setGodMode(1)
-					veh2:setImmortalMode(1)
-				end
-				local veh3 = GetEntityByName("ArmyVeh3")
-				if veh3 then
-					veh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
-					veh3:setGodMode(1)
-					veh3:setImmortalMode(1)
-				end
-
-				TActivate( "ArmiaCreateStart" )
-			end
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="Chehol_Find" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Chehly_loc" />
-		<script>
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 8809, 0.25 )
-			
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_chehly_box")
-			
-			CompleteQuest("d_chehol2")
-
-			AddQuestItem("quest_chehly_box")
-
-			TActivate("Chehol_Find_End")
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="Chehol_Find_End" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-		local rrr = GetEntityByName ("chehly_box")
-		if rrr then rrr:Remove() end
-
-		RestoreAllToleranceStatus()
-
-		trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="Chehol_1" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Chehly1_loc" />
-		<script>
-			SetTolerance(1100,1012,RS_ENEMY)
-			
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			CreateNewDummyObject( "parsel", "chehly_box", -1, -1, CVector(1560.871, 260.885, 3984.221), Quaternion(0.0000, -0.9490, 0.0000, 0.3152), 0)
-			
-			PlayCustomMusic("Bio02")
-			
-			CompleteQuest("d_chehol1")
-			
-			Fly("Chehly_cam1", CINEMATIC_NO_AIM, 0, 13, 1, 1 )
-			StartCinematic()
-			
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetThrottle( 0 )
-			
-			AddCinematicMessage( 8808, 1 )
-			
-			TActivate("Chehol_Find")
-			TActivate("Chehol_End")
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="Chehol_End" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			
-			StopPlayingCustomMusic()
-			
-			TeamCreate("CheholFighters",1012,CVector(1947.328, 270.788, 3980.524),{"MolokovozChehol", "Cruiser02", "BelazTSPP"})
-			local vehBrig1 = GetEntityByName("CheholFighters_vehicle_0")
-			local vehBrig2 = GetEntityByName("CheholFighters_vehicle_1")
-			local vehBrig3 = GetEntityByName("CheholFighters_vehicle_2")
-			if vehBrig1 then
-				vehBrig1:SetRotation(Quaternion(-0.005, 0.953, 0.003, 0.302))
-				vehBrig1:SetGamePositionOnGround( CVector(1947.328, 270.788, 3980.524))
-			end
-			if vehBrig2 then
-				vehBrig2:SetRotation(Quaternion(0.002, -0.607, 0.014, -0.794))
-				vehBrig2:SetGamePositionOnGround( CVector(1553.049, 264.343, 4023.615))
-			end
-			if vehBrig3 then
-				vehBrig3:SetRotation(Quaternion(0.003, 0.960, 0.000, 0.279))
-				vehBrig3:SetGamePositionOnGround( CVector(1635.032, 259.942, 3990.873))
-			end
-			
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="StartNormalEnd" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locNormalEnd" />
-		<script>
-		if IsQuestComplete("BenNormalEnd") then
-			TActivate("NormalEndCin")
-			trigger:Deactivate()
-		end
-		</script>
-	</trigger>
-
-	<trigger Name="trFightForPesht" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFightForPesht" />
-		<script>
-			TActivate("cinFightForPesht")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Засада незнакомца из тоннеля, если мы украли у него диск -->
 	<trigger Name="trZasadaAR" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZasadaAR_loc" />
 		<script>
@@ -1672,31 +1251,4 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-	<trigger Name="trQuickWay" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="QuickWay_loc" />
-		<script>
-			SetVar("QuickWay",1)
-			
-			if QuestStatus("d_GiveMoneyToBase_Quest")==Q_CANBEGIVEN then
-				TakeQuest("d_GiveMoneyToBase_Quest")
-				FailQuest("d_GiveMoneyToBase_Quest")
-			end
-			
-			TActivate ("tr_OpenTownAndShowButtonInPesht")
-			
-			FailQuestIfTaken("d_RideAcrossBase_Quest")
-			FailQuestIfTaken("d_GiveMoneyToBase_Quest")
-			FailQuestIfTaken("d_GetBomb_Quest")
-			FailQuestIfTaken("d_DestroyBridge_Quest")
-
-			TDeactivate("preBOOOM")
-			TDeactivate("BOOOM")
-			TDeactivate("SHAHTSBANDITBOSSDIE")
-
-			CompleteQuestIfTaken("d_MoveToPesht_Quest")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 </triggers>

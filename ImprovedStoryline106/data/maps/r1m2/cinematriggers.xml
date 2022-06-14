@@ -1,7 +1,213 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
-<!-- показываем Лизу в плену -->
+	<!-- После Бабы Поли, первый раз -->
+	<trigger	Name="cinAfterChifir"	active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			PlayCustomMusic("Bio04")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			Plf:SetCustomLinearVelocity(0)
+			Plf:SetThrottle(0)
+			Plf:SetGamePositionOnGround(CVector(getPos("MisterShlyapaFM")))
+
+			FlyAround(6, 0, 25, 19, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 88056, 1 )
+
+			if IsQuestComplete("FirstTimePlay") then
+				AddCinematicMessage( 88061, 0.25 )
+			else
+				AddCinematicMessage( 88057, 0.25 )
+			end
+
+			TActivate("cinAfterChifir_End")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="cinAfterChifir_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			CompleteQuest("Chifir_Quest")
+			TakeQuest("FindBen2_Quest")
+
+			local shl1 = GetEntityByName("MisterShlyapaFM")
+			if shl1 then shl1:SetProperty("Active",1) end
+			
+			if not(IsQuestComplete("FirstTimePlay")) then
+				StartConversation( "MrShlyapa" )
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- Если караван из Мидгарда уничтожен -->
+	<trigger Name="cinCaravanDead" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			Plf:SetCustomLinearVelocity(0)
+			Plf:SetThrottle(0)
+
+			FlyAround(6, 0, 25, 11, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 5963, 1 )
+			
+			TActivate("cinCaravanDead2")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinCaravanDead2" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			SetCameraBehindPlayerVehicle()
+			
+			TakeQuest("CaravDead_Quest")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Игрока выгоняют из Мидгарда -->
+	<trigger	Name="RolikBegin_OutOfMidgard"	active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("Bio07unloop")
+
+			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
+			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 88055, 1 )
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+			
+			TActivate("OutOfMidgard_FadeIn")
+			TActivate("OutOfMidgard_FadeIn2")
+			TActivate("OutOfMidgard_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="OutOfMidgard_FadeIn"	active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+		
+			GetPlayerVehicle():SetGamePositionOnGround( CVector(4353.645, 129.190, 856.392))
+			GetPlayerVehicle():SetRotation(Quaternion(0.007, 0.960, 0.005, -0.279))
+			
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(4337.363, 127.261, 853.542), Quaternion(-0.004, 0.982, 0.018, 0.189), 0)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+	
+	<trigger	Name="OutOfMidgard_FadeIn2"	active="0">
+		<event flypath="MidragdOut3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
+			AddCinematicMessage( 880555, 0.25 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="OutOfMidgard_End"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		
+			GetEntityByName("humPlayer"):Remove()
+			
+			StopPlayingCustomMusic()
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Убили всех рейдеров у схрона Сальваторе -->
+	<trigger	Name="cinAfterKillRaider"	active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			Plf:SetCustomLinearVelocity(0)
+			Plf:SetThrottle(0)
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(6, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+			AddCinematicMessage( 88058, 0.25 )
+
+			AddQuestItem("quest_thief_package")
+			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_thief_package")
+
+			TActivate("cinAfterKillRaiderEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterKillRaiderEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- Показываем Караванщика в плену -->
 	<trigger Name="RolikPlenlisa" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
 		<script>
@@ -85,11 +291,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
-<!-- диалог с караванщиком апосля освобождения -->
+<!-- Диалог с караванщиком после освобождения -->
 	<trigger Name="RolikBegin_LisaPlenDie" active="0">
 		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
 		<script>
@@ -170,7 +372,6 @@
 	<trigger Name="trLisaPlenDie_cam02" active="0">
 		<event flypath="LisaPlenDie_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
---			PlayCustomMusic("IntenseDialogue01")
 
 			AddCinematicMessage( 25, 0.25  )
 			AddCinematicMessage( 26, 0.25  )
@@ -207,7 +408,7 @@
 	<trigger Name="trLisaPlenDie_cam05" active="0">
 		<event flypath="LisaPlenDie_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
---			PlayCustomMusic("QuietDialogue03")
+
 			GetPlayerVehicle():LimitMaxSpeed(12)
 
 			AddCinematicMessage( 2150, 0.25  )
@@ -267,11 +468,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
-<!-- ben_house -->
+<!-- Перед домом у Бена -->
 	<trigger Name="RolikBegin_BenHause" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -307,6 +504,9 @@
 			end
 
 			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3787.429, 121.943, 1824.044), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
+			if QuestStatus("BenZima_Quest")==Q_TAKEN or QuestStatus("BenGoodEnd")==Q_TAKEN or QuestStatus("BenNormalEnd")==Q_TAKEN then
+				CreateNewDummyObject( "dweller_lisa", "HumanLisa", -1, -1, CVector(3786.886, 121.943, 1823.141), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
+			end
 
 			local PlVehicle = GetPlayerVehicle()
 			if PlVehicle then
@@ -330,20 +530,20 @@
 
 			local obj01 = GetEntityByName("HumanBen")
 			if obj01 then obj01:Remove() 	end
+			local obj02 = GetEntityByName("HumanLisa")
+			if obj02 then obj02:Remove() 	end
 			local point = GetEntityByName("point")
 			if point then point:Remove() end
 
 			TDeactivate("RolikBegin_BenHause_Fade")
 
 			CompleteQuestIfTaken("d_FindHouseOfBen_Quest")
-		
 			CompleteQuestIfTaken("BenBadEnd")
-		
 			CompleteQuestIfTaken("LisaUBena")
-		
 			CompleteQuestIfTaken("r4m2_LisaDieBen")
-			
 			CompleteQuestIfTaken("TalkBeforeDesert")
+			CompleteQuestIfTaken("BenGoodEnd")
+			CompleteQuestIfTaken("BenNormalEnd")
 		
 			if GetVar("FindBen").AsInt==1 then
 				FailQuestIfTaken("BenEast_Quest")
@@ -372,7 +572,14 @@
 				if carav2 then carav2:Remove() end
 			end
 
-			StartConversation( "Ben" )
+			if IsQuestComplete("BenNormalEnd") or IsQuestComplete("BenGoodEnd") then
+				StartConversation( "Lisa" )
+			elseif QuestStatus("BenZima_Quest")==Q_TAKEN then
+				CompleteQuestIfTaken("BenZima_Quest")
+				StartConversation( "Lisa2" )
+			else
+				StartConversation( "Ben" )
+			end
 
 			SetCameraBehindPlayerVehicle()
 			
@@ -382,413 +589,123 @@
 		</script>
 	</trigger>
 
-
-
-
-
-<!-- kolisey1 -->
-	<trigger Name="RolikBegin_Kolizey1" active="0">
-		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
+	<!-- Перебивка "На следующий день" у Бена -->
+	<trigger Name="NextDayTr" active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
+			
 			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			RuleConsole("cinematic_spring_coeff 1.7")
-			PlayCustomMusic("Passage01unloop")
-
-			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(7158.604, 167.977, 3378.776), Quaternion(0.003, 0.828, -0.001, -0.561), 0)
-
-			local RGlad2 = CreateVehicleEx("MolokovozKolizey","RolikGlad1",CVector(7108.745, 188.093, 3170.135), 1002)
-			if RGlad2 then RGlad2:SetRandomSkin() end
-
-			local RGlad2ID = RGlad2:GetId()
-			local PlVehicle = GetPlayerVehicle()
-			local PlID = GetPlayerVehicleId()
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
-
-			local Ort = CreateNewDummyObject( "dweller_white", "Orator", -1, -1, CVector(7282.624, 227.500, 3264.708), Quaternion( 0.002, 0.468, -0.002, -0.884 ), 3)
-
-			if PlVehicle then
-				PlVehicle:SetCustomControlEnabled( true )
-				PlVehicle:SetExternalPathByName("Player_path02")
-				PlVehicle:SetThrottle( 1 )
-				PlVehicle:SetCustomLinearVelocity( 30 )
-				PlVehicle:LimitMaxSpeed(20)
-				PlVehicle:SetCustomControlEnabled( false )
-			end
-
-			FlyLinked( "Kol2_cam01", PlID, 7, 1, 0, PlID )
-			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-			FlyLinked( "Kol2_cam03", CTochID, 10, 0, 1, RGlad2ID )
+			
+			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
 			StartCinematic()
-
-			TActivate("RolikEnd_Kolizey1")
-			TActivate("trKol1_cam02")
-
-			trigger:Deactivate()    
-		</script>
-	</trigger>
-
-	<trigger Name="trKol1_cam02" active="0">
-		<event flypath="Kol2_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			AddCinematicMessage( 221, 2 )
-
-			local RGlad2 = GetEntityByName("RolikGlad1")
-			if RGlad2 then
-				RGlad2:SetRotation(Quaternion(-0.142, 0.336, -0.061, -0.929))
-				RGlad2:SetExternalPathByName("GladiatorPath01")
-				RGlad2:SetThrottle( 1 )
-				RGlad2:SetCustomLinearVelocity( 40 )
-			end
+			
+			AddCinematicMessage( 88060, 1 )
+			
+			TActivate("NextTrEnd2")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="RolikEnd_Kolizey1" active="0">
+	<trigger Name="NextTrEnd2" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
-
-			StopPlayingCustomMusic()
-			RuleConsole("cinematic_spring_coeff 0.7")
-
-			local PlVehicle = GetPlayerVehicle()
-			if PlVehicle then
-				PlVehicle:SetCustomControlEnabled( true )
-				PlVehicle:PlaceToEndOfPath("Player_path02")
-				PlVehicle:SetCustomControlEnabled( false )
-				PlVehicle:UnlimitMaxSpeed()
-			end
-
-			local obj01 = GetEntityByName("Orator")
-			if obj01 then
-				obj01:Remove()
-			end
-			local obj02 = GetEntityByName("RolikGlad1")
-			if obj02 then
-				skin = obj02:GetSkin()
-				obj02:Remove()
-			end
-			local obj03 = GetEntityByName("CamTochka")
-			if obj03 then
-				obj03:Remove()
-			end
-
-			CreateNewDummyObject( "rotund", "ZABOR", -1, -1, CVector(7084, 155, 3942), Quaternion(0.0037,0.9063,0.0079,0.4226), 0)
-
-			TeamCreate("Gladiator1",1002,CVector(7244.941, 156, 3477.613),{"MolokovozKolizey"},CVector(7117, 156, 3758))
-			local RGlad2 = GetEntityByName("Gladiator1")
-			if RGlad2 then RGlad2:GetVehicle(0):SetSkin(skin) end
-
-			skin = nil
-
-			CompleteQuest("CombatInKollizey_Quest1")
-
-			TDeactivate("trKol1_cam02")
-
-			TActivate("KOLIZEYFIGHTDIE1")
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-
-
-
-<!-- Kolisey2 -->
-	<trigger Name="RolikBegin_Kolizey2" active="0">
-		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			RuleConsole("cinematic_spring_coeff 1.7")
-			PlayCustomMusic("IntenseDialogue03")
-
-			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(7158.604, 167.977, 3378.776), Quaternion(0.003, 0.828, -0.001, -0.561), 0)
-
-			local RGlad2 = CreateVehicleEx("Gladiator02","RolikGlad2",CVector(7108.745, 188.093, 3170.135), 1002)
-			local PlVehicle = GetPlayerVehicle()
-			local CToch = GetEntityByName("CamTochka")
-			local PlID = GetPlayerVehicleId()
-			local CTochID = CToch:GetId()
-			local RGlad2ID = RGlad2:GetId()
-			local Ort = CreateNewDummyObject( "dweller_white", "Orator", -1, -1, CVector(7282.624, 227.500, 3264.708), Quaternion( 0.002, 0.468, -0.002, -0.884 ), 3)
-
-			if PlVehicle then
-				PlVehicle:SetExternalPathByName("Player_path02")
-				PlVehicle:LimitMaxSpeed(20)
-				PlVehicle:SetThrottle( 1 )
-				PlVehicle:SetCustomLinearVelocity( 30 )
-			end
-
-			FlyLinked( "Kol2_cam01", PlID, 6, 1, 0, PlID )
-			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-			FlyLinked( "Kol2_cam21", RGlad2ID, 3, 0, 0, nil, nil, true )
-			FlyLinked( "Kol2_cam03", CTochID, 6, 0, 1, RGlad2ID )
-			StartCinematic()
-
-			TActivate("RolikEnd_Kolizey2")
-			TActivate("trKol2_cam02")
-			TActivate("trKol2_cam03")
-
-			trigger:Deactivate()    
-		</script>
-	</trigger>
-
-	<trigger Name="trKol2_cam02" active="0">
-		<event flypath="Kol2_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			AddCinematicMessage( 222, 1 )
-
-			local RGlad2 = GetEntityByName("RolikGlad2")
-			if RGlad2 then
-				RGlad2:SetRotation(Quaternion(-0.142, 0.336, -0.061, -0.929))
-				RGlad2:SetExternalPathByName("GladiatorPath01")
-				RGlad2:SetThrottle( 1 )
-				RGlad2:SetCustomLinearVelocity( 10 )
-				RGlad2:SetRandomSkin()
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trKol2_cam03" active="0">
-		<event flypath="Kol2_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			local RGlad2 = GetEntityByName("RolikGlad2")
-			if RGlad2 then
-				RGlad2:SetThrottle( 1 )
-				RGlad2:SetCustomLinearVelocity( 30 )
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="RolikEnd_Kolizey2" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			local PlVehicle = GetPlayerVehicle()
-			if PlVehicle then
-				PlVehicle:SetCustomControlEnabled( true )
-				PlVehicle:PlaceToEndOfPath("Player_path02")
-				PlVehicle:SetCustomControlEnabled( false )
-				PlVehicle:UnlimitMaxSpeed()
-			end
-
-			local obj01 = GetEntityByName("Orator")
-			if obj01 then
-				obj01:Remove()
-			end
-			local obj02 = GetEntityByName("RolikGlad2")
-			if obj02 then
-				gskin = obj02:GetSkin()
-				obj02:Remove()
-			end
-			local obj03 = GetEntityByName("CamTochka")
-			if obj03 then
-				obj03:Remove()
-			end
-
-			TeamCreate("Gladiator2",1002,CVector(7237.718, 164.624, 3475.819),{"Gladiator02"},CVector(7097.258, 157.158, 3653.507), 0, Quaternion(0.002, 0.248, 0.023, -0.969))
-			local gcar = GetEntityByName("Gladiator2")
-			if gcar then gcar:GetVehicle(0):SetSkin(gskin) end
-
-			gskin = nil
-
-			CreateNewDummyObject( "rotund", "ZABOR", -1, -1, CVector(7084, 155, 3942), Quaternion(0.0037,0.9063,0.0079,0.4226), 0)
-
-			TDeactivate("trKol2_cam02")
-			TDeactivate("trKol2_cam03")
-			StopPlayingCustomMusic()
-			RuleConsole("cinematic_spring_coeff 0.7")
-
-			CompleteQuest("r1m2_Glagiators_Quest1")
-
-			TActivate("KOLIZEYFIGHTDIE2")
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			if GetVar("Player4eeter").AsInt == 1 then
-				g_Console:InputLine "\\quit"
+			
+			if QuestStatus("FindGomer2_Quest")==Q_TAKEN then
+				trigger:Deactivate()
 			else
-				CheckPlayerVehicle()
+				StartConversation("Ben")
+				trigger:Deactivate()
 			end
+			
 		</script>
 	</trigger>
 
-	<trigger Name="RolikBegin_BenHause2" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+	<!-- Перебивка "Спустя пару часов" у Бена -->
+	<trigger Name="NextHoursTr" active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			CreateNewDummyObject( "point", "point", -1, -1, CVector(3787.429, 123.643, 1824.044), Quaternion( 0.0000, 0.000, 0.0000, 1.0000 ), 0)
-
-			local point= GetEntityByName("point")
-			local pointID = point:GetId()
-
-			local PlVehicle = GetPlayerVehicle()
-			local PlfCoor = CVector(3736, 125, 1886)
-			PlfCoor.y = PlfCoor.y + 2
-			PlfCoor.z = PlfCoor.z + 20
-
-			FlyAround( 0.5, 0.1, 2, 10, PlfCoor, pointID, 1, 1 )
+			
+			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
 			StartCinematic()
-
-			TActivate("RolikBegin_BenHause2_Fade")
-			TActivate("RolikEnd_BenHause2")
-
-			trigger:Deactivate()    
-		</script>
-	</trigger>
-
-	<trigger Name="RolikBegin_BenHause2_Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			PlayCustomMusic("QuietDialogue01")
-
-			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3787.429, 121.943, 1824.044), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
-			CreateNewDummyObject( "dweller_lisa", "HumanLisa", -1, -1, CVector(3786.886, 121.943, 1823.141), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
-
-			local PlVehicle = GetPlayerVehicle()
-			if PlVehicle then
-				PlVehicle:SetCustomControlEnabled( true )
-				PlVehicle:SetCustomLinearVelocity( 0 )
-				PlVehicle:SetThrottle( 0 )
-				PlVehicle:SetGamePositionOnGround( CVector(3748, 120, 1858))
-				PlVehicle:SetRotation(Quaternion(0.066, 0.965, -0.018, 0.252))
-				PlVehicle:SetCustomControlEnabled( false )
-			end
+			
+			AddCinematicMessage( 88062, 1 )
+			
+			TActivate("NextTrEnd")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="RolikEnd_BenHause2" active="0">
+	<trigger Name="NextTrEnd" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			RestoreAllToleranceStatus()
-
-			local obj01 = GetEntityByName("HumanBen")
-			if obj01 then obj01:Remove() 	end
-			local obj02 = GetEntityByName("HumanLisa")
-			if obj02 then obj02:Remove() 	end
-			local point = GetEntityByName("point")
-			if point then point:Remove() end
-
-			TDeactivate("RolikBegin_BenHause2_Fade")
 			
-			CompleteQuestIfTaken("BenGoodEnd")
-		
-			CompleteQuestIfTaken("BenNormalEnd")
-
-			if IsQuestComplete("BenNormalEnd") or IsQuestComplete("BenGoodEnd") then
-				StartConversation( "Lisa" )
+			RestoreAllToleranceStatus()
+			
+			if IsQuestComplete("BenNormalEnd") then
+				StartConversation("Ben")
 			else
-				StartConversation( "Ben" )
+				StartConversation("Lisa")
 			end
-
-			SetCameraBehindPlayerVehicle()
-			
-			TActivate("tr_THEBEN22")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="RolikBegin_BenHause3" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+	<!-- Едем в Мидгард за сплавом после Бена -->
+	<trigger	Name="trToMidgardForComposite"	active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
+
+			SetWeather(1)
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			CreateNewDummyObject( "point", "point", -1, -1, CVector(3787.429, 123.643, 1824.044), Quaternion( 0.0000, 0.000, 0.0000, 1.0000 ), 0)
-
-			local point= GetEntityByName("point")
-			local pointID = point:GetId()
-
-			local PlVehicle = GetPlayerVehicle()
-			local PlfCoor = CVector(3736, 125, 1886)
-			PlfCoor.y = PlfCoor.y + 2
-			PlfCoor.z = PlfCoor.z + 20
-
-			FlyAround( 0.5, 0.1, 2, 10, PlfCoor, pointID, 1, 1 )
+			Fly("BefDesert", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 1, 1 )
 			StartCinematic()
 
-			TActivate("RolikBegin_BenHause3_Fade")
-			TActivate("RolikEnd_BenHause3")
+			AddCinematicMessage( 88060, 1 )
 
-			trigger:Deactivate()    
-		</script>
-	</trigger>
-
-	<trigger Name="RolikBegin_BenHause3_Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			PlayCustomMusic("QuietDialogue01")
-
-			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3787.429, 121.943, 1824.044), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
-			CreateNewDummyObject( "dweller_lisa", "HumanLisa", -1, -1, CVector(3786.886, 121.943, 1823.141), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
-
-			local PlVehicle = GetPlayerVehicle()
-			if PlVehicle then
-				PlVehicle:SetCustomControlEnabled( true )
-				PlVehicle:SetCustomLinearVelocity( 0 )
-				PlVehicle:SetThrottle( 0 )
-				PlVehicle:SetGamePositionOnGround( CVector(3748, 120, 1858))
-				PlVehicle:SetRotation(Quaternion(0.066, 0.965, -0.018, 0.252))
-				PlVehicle:SetCustomControlEnabled( false )
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetGamePositionOnGround( CVector(4163.968, 117.857, 916.957))
+				Plf:SetRotation(Quaternion(-0.006, 0.745, 0.027, 0.666))
+				Plf:SetExternalPathByName("BeforeDesert")
+				Plf:SetCustomLinearVelocity( 10 )
+				Plf:LimitMaxSpeed(17)
 			end
+
+			TActivate("trToMidgardForComposite_End")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="RolikEnd_BenHause3" active="0">
+	<trigger Name="trToMidgardForComposite_End" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
 
-			local obj01 = GetEntityByName("HumanBen")
-			if obj01 then obj01:Remove() 	end
-			local obj02 = GetEntityByName("HumanLisa")
-			if obj02 then obj02:Remove() 	end
-			local point = GetEntityByName("point")
-			if point then point:Remove() end
-
-			TDeactivate("RolikBegin_BenHause3_Fade")
-
-
-			CompleteQuestIfTaken("BenZima_Quest")
-
-			StartConversation( "Lisa2" )
-
 			SetCameraBehindPlayerVehicle()
-			
-			TActivate("tr_THEBEN22")
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetExternalPathByName("BeforeDesert")
+				Plf:PlaceToEndOfPath("BeforeDesert")
+				Plf:UnlimitMaxSpeed()
+			end
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Плохая концовка -->
 	<trigger Name="BadEndingBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>			
@@ -841,6 +758,20 @@
 				vehPlayer:SetExternalPathByName("BenSuic")
 			end
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="BenExplode" active="0">
+		<event	timeout="9"		eventid="GE_TIME_PERIOD" />
+		<script>
+		
+			CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(3777.386, 116, 1814.312), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+			CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(3790.160, 116, 1797.764), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+			
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(3777.386, 116, 1814.312), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(3794.967, 130, 1805.147), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1070,4 +1001,432 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
+
+	<!-- После Бабы Поли, активация бонусной концовки -->
+	<trigger	Name="cinAfterChifir2"	active="0">
+		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("Bio04")
+
+			Fly("ShlyapaCam1", CINEMATIC_NO_AIM, 0, 9, 1, 1 )
+			StartCinematic()
+
+			TActivate("cinAfterChifir2Fade")
+			TActivate("cinAfterChifir2End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterChifir2Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(3518.390, 90.903, 5192.647))
+				vehPlayer:SetRotation(Quaternion(-0.010, 0.745, 0.010, -0.667))
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterChifir2End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			StopPlayingCustomMusic()
+
+			StartConversation( "MrShlyapa" )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Осмотр полей со знаками возле Яра -->
+	<trigger Name="THESIGNONFIELD" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sign_location" />
+		<script>
+			if IsQuestTaken("SeeSigns_Quest")  then
+				SaveAllToleranceStatus(RS_NEUTRAL)
+				
+				PlayCustomMusic("Bio02")
+
+				local Plf = GetPlayerVehicle()
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+
+				Fly("signfly", CINEMATIC_AIM_TO_POINT, CVector(960,70,4004), 15, 1, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 1, 1 )
+
+				TActivate("THESIGNONFIELD_ec")
+
+				CompleteQuestIfTaken( "SeeSigns_Quest" )
+
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="THESIGNONFIELD_ec" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+			
+			StopPlayingCustomMusic()
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<!-- Похитили прораба археологов -->
+	<trigger	Name="cinAfterKidnapping"	active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			Plf:SetCustomLinearVelocity(0)
+			Plf:SetThrottle(0)
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+			AddCinematicMessage( 88059, 1 )
+
+			TActivate("cinAfterKidnappingEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterKidnappingEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			AddQuestItem("ArchProrab_P")
+			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ArchProrab_P")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Первая битва в Колизее -->
+	<trigger Name="RolikBegin_Kolizey1" active="0">
+		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("cinematic_spring_coeff 1.7")
+			PlayCustomMusic("Passage01unloop")
+
+			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(7158.604, 167.977, 3378.776), Quaternion(0.003, 0.828, -0.001, -0.561), 0)
+
+			local RGlad2 = CreateVehicleEx("MolokovozKolizey","RolikGlad1",CVector(7108.745, 188.093, 3170.135), 1002)
+			if RGlad2 then RGlad2:SetRandomSkin() end
+
+			local RGlad2ID = RGlad2:GetId()
+			local PlVehicle = GetPlayerVehicle()
+			local PlID = GetPlayerVehicleId()
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+
+			local Ort = CreateNewDummyObject( "dweller_white", "Orator", -1, -1, CVector(7282.624, 227.500, 3264.708), Quaternion( 0.002, 0.468, -0.002, -0.884 ), 3)
+
+			if PlVehicle then
+				PlVehicle:SetCustomControlEnabled( true )
+				PlVehicle:SetExternalPathByName("Player_path02")
+				PlVehicle:SetThrottle( 1 )
+				PlVehicle:SetCustomLinearVelocity( 30 )
+				PlVehicle:LimitMaxSpeed(20)
+				PlVehicle:SetCustomControlEnabled( false )
+			end
+
+			FlyLinked( "Kol2_cam01", PlID, 7, 1, 0, PlID )
+			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			FlyLinked( "Kol2_cam03", CTochID, 10, 0, 1, RGlad2ID )
+			StartCinematic()
+
+			TActivate("RolikEnd_Kolizey1")
+			TActivate("trKol1_cam02")
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trKol1_cam02" active="0">
+		<event flypath="Kol2_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 221, 2 )
+
+			local RGlad2 = GetEntityByName("RolikGlad1")
+			if RGlad2 then
+				RGlad2:SetRotation(Quaternion(-0.142, 0.336, -0.061, -0.929))
+				RGlad2:SetExternalPathByName("GladiatorPath01")
+				RGlad2:SetThrottle( 1 )
+				RGlad2:SetCustomLinearVelocity( 40 )
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_Kolizey1" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			local PlVehicle = GetPlayerVehicle()
+			if PlVehicle then
+				PlVehicle:SetCustomControlEnabled( true )
+				PlVehicle:PlaceToEndOfPath("Player_path02")
+				PlVehicle:SetCustomControlEnabled( false )
+				PlVehicle:UnlimitMaxSpeed()
+			end
+
+			local obj01 = GetEntityByName("Orator")
+			if obj01 then
+				obj01:Remove()
+			end
+			local obj02 = GetEntityByName("RolikGlad1")
+			if obj02 then
+				skin = obj02:GetSkin()
+				obj02:Remove()
+			end
+			local obj03 = GetEntityByName("CamTochka")
+			if obj03 then
+				obj03:Remove()
+			end
+
+			CreateNewDummyObject( "rotund", "ZABOR", -1, -1, CVector(7084, 155, 3942), Quaternion(0.0037,0.9063,0.0079,0.4226), 0)
+
+			TeamCreate("Gladiator1",1002,CVector(7244.941, 156, 3477.613),{"MolokovozKolizey"},CVector(7117, 156, 3758))
+			local RGlad2 = GetEntityByName("Gladiator1")
+			if RGlad2 then RGlad2:GetVehicle(0):SetSkin(skin) end
+
+			skin = nil
+
+			CompleteQuest("CombatInKollizey_Quest1")
+
+			TDeactivate("trKol1_cam02")
+
+			TActivate("KOLIZEYFIGHTDIE")
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!-- Вторая битва в Колизее -->
+	<trigger Name="RolikBegin_Kolizey2" active="0">
+		<event timeout=" 0 " eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("cinematic_spring_coeff 1.7")
+			PlayCustomMusic("IntenseDialogue03")
+
+			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(7158.604, 167.977, 3378.776), Quaternion(0.003, 0.828, -0.001, -0.561), 0)
+
+			local RGlad2 = CreateVehicleEx("Gladiator02","RolikGlad2",CVector(7108.745, 188.093, 3170.135), 1002)
+			local PlVehicle = GetPlayerVehicle()
+			local CToch = GetEntityByName("CamTochka")
+			local PlID = GetPlayerVehicleId()
+			local CTochID = CToch:GetId()
+			local RGlad2ID = RGlad2:GetId()
+			local Ort = CreateNewDummyObject( "dweller_white", "Orator", -1, -1, CVector(7282.624, 227.500, 3264.708), Quaternion( 0.002, 0.468, -0.002, -0.884 ), 3)
+
+			if PlVehicle then
+				PlVehicle:SetExternalPathByName("Player_path02")
+				PlVehicle:LimitMaxSpeed(20)
+				PlVehicle:SetThrottle( 1 )
+				PlVehicle:SetCustomLinearVelocity( 30 )
+			end
+
+			FlyLinked( "Kol2_cam01", PlID, 6, 1, 0, PlID )
+			Fly("Kol2_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			FlyLinked( "Kol2_cam21", RGlad2ID, 3, 0, 0, nil, nil, true )
+			FlyLinked( "Kol2_cam03", CTochID, 6, 0, 1, RGlad2ID )
+			StartCinematic()
+
+			TActivate("RolikEnd_Kolizey2")
+			TActivate("trKol2_cam02")
+			TActivate("trKol2_cam03")
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="trKol2_cam02" active="0">
+		<event flypath="Kol2_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 222, 1 )
+
+			local RGlad2 = GetEntityByName("RolikGlad2")
+			if RGlad2 then
+				RGlad2:SetRotation(Quaternion(-0.142, 0.336, -0.061, -0.929))
+				RGlad2:SetExternalPathByName("GladiatorPath01")
+				RGlad2:SetThrottle( 1 )
+				RGlad2:SetCustomLinearVelocity( 10 )
+				RGlad2:SetRandomSkin()
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trKol2_cam03" active="0">
+		<event flypath="Kol2_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local RGlad2 = GetEntityByName("RolikGlad2")
+			if RGlad2 then
+				RGlad2:SetThrottle( 1 )
+				RGlad2:SetCustomLinearVelocity( 30 )
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikEnd_Kolizey2" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local PlVehicle = GetPlayerVehicle()
+			if PlVehicle then
+				PlVehicle:SetCustomControlEnabled( true )
+				PlVehicle:PlaceToEndOfPath("Player_path02")
+				PlVehicle:SetCustomControlEnabled( false )
+				PlVehicle:UnlimitMaxSpeed()
+			end
+
+			local obj01 = GetEntityByName("Orator")
+			if obj01 then
+				obj01:Remove()
+			end
+			local obj02 = GetEntityByName("RolikGlad2")
+			if obj02 then
+				gskin = obj02:GetSkin()
+				obj02:Remove()
+			end
+			local obj03 = GetEntityByName("CamTochka")
+			if obj03 then
+				obj03:Remove()
+			end
+
+			TeamCreate("Gladiator2",1002,CVector(7237.718, 164.624, 3475.819),{"Gladiator02"},CVector(7097.258, 157.158, 3653.507), 0, Quaternion(0.002, 0.248, 0.023, -0.969))
+			local gcar = GetEntityByName("Gladiator2")
+			if gcar then gcar:GetVehicle(0):SetSkin(gskin) end
+
+			gskin = nil
+
+			CreateNewDummyObject( "rotund", "ZABOR", -1, -1, CVector(7084, 155, 3942), Quaternion(0.0037,0.9063,0.0079,0.4226), 0)
+
+			TDeactivate("trKol2_cam02")
+			TDeactivate("trKol2_cam03")
+			StopPlayingCustomMusic()
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			CompleteQuest("r1m2_Glagiators_Quest1")
+
+			TActivate("KOLIZEYFIGHTDIE")
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Одержали победу на арене Колизея -->
+	<trigger Name="KOLIZEYFIGHTDIE" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator1" />
+		<script>
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+
+			if QuestStatus("CombatInKollizey_Quest2")==Q_TAKEN then
+
+				CompleteQuestIfTaken( "CombatInKollizey_Quest2" )
+
+				PlfCoor.y = PlfCoor.y + 5
+				PlfCoor.z = PlfCoor.z + 50
+				rad = 35
+			elseif QuestStatus("r1m2_Glagiators_Quest2")==Q_TAKEN then
+
+				CompleteQuestIfTaken( "r1m2_Glagiators_Quest2" )
+				TakeQuest("r1m2_MovemineralToMidgard_Quest")
+
+				PlfCoor.y = PlfCoor.y + 25*0.74
+				PlfCoor.z = PlfCoor.z + 25*0.74
+				rad = 25
+			end
+
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			FlyAround(2, 0.01, rad, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 22224, 1 )
+
+			TActivate( "KOLIZEYFIGHTDIE_ec" )
+
+			local r = GetEntityByName ("ZABOR")
+			if r then r:Remove() end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="KOLIZEYFIGHTDIE_ec" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			rad = nil
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
 </triggers>

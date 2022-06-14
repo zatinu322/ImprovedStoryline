@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
+	<!-- Инициализация карты -->
 	<trigger	Name="GlobalVar"	active="1">
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -24,6 +25,7 @@
 		</script>
 	</trigger>
 
+	<!-- Создание фейк-ворот для Порто -->
 	<trigger Name="SpawnPortoGates" active="0">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
@@ -35,20 +37,22 @@
 		</script>
 	</trigger>
 
+	<!-- Раскладка случайного оружия в ящики -->
 	<trigger	Name="trRidzinPlaceSecret"	active="1">
-	<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
-	<script>
-		local gunlist = {"specter01","pkt01","kord01","hornet01","storm01","hurricane01","vulcan01"}
-		local len = getn(gunlist)
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local gunlist = {"specter01","pkt01","kord01","hornet01","storm01","hurricane01","vulcan01"}
+			local len = getn(gunlist)
 
-		for i=1,10 do
-			--println("step"..i.."succesful")
-			CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
-		end
-		trigger:Deactivate()
-	</script>
-</trigger>
+			for i=1,10 do
+				--println("step"..i.."succesful")
+				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
 
+	<!-- Караван Мидгард - Порто -->
 	<trigger Name="trCaravanToPorto" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -124,7 +128,7 @@
 		</script>
 	</trigger>
 
-
+	<!-- Караван Порто - Мидгард -->
 	<trigger Name="trCaravanToMidgard" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -213,263 +217,63 @@
 		</script>
 	</trigger>
 
-	<trigger Name="cinCaravanDead" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			FlyAround(6, 0, 25, 11, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 5963, 1 )
-			
-			TActivate("cinCaravanDead2")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cinCaravanDead2" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			
-			SetCameraBehindPlayerVehicle()
-			
-			TakeQuest("CaravDead_Quest")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="tr_THEBEN" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheBen_House" />
-		<script>
-			if (IsQuestTaken("TalkBeforeDesert")  and  not(IsQuestComplete("TalkBeforeDesert"))) or (GetVar("FindBen").AsInt==1) or (IsQuestTaken("BenBadEnd")   and   not(IsQuestComplete("BenBadEnd"))) or(IsQuestTaken("LisaUBena") and not(IsQuestComplete("LisaUBena")))  or(IsQuestTaken("r4m2_LisaDieBen") and not(IsQuestComplete("r4m2_LisaDieBen"))) or QuestStatus("d_FindHouseOfBen_Quest")==Q_TAKEN  then
-				TActivate("RolikBegin_BenHause")
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-
-
-
- 
-	<trigger Name="THESIGNONFIELD" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sign_location" />
-		<script>
-			if IsQuestTaken("SeeSigns_Quest")  then
-				SaveAllToleranceStatus(RS_NEUTRAL)
-				
-				PlayCustomMusic("Bio02")
-
-				local Plf = GetPlayerVehicle()
-				Plf:SetCustomControlEnabled( true )
-				Plf:SetCustomLinearVelocity( 0 )
-				Plf:SetThrottle( 0 )
-				Plf:SetCustomControlEnabled( false )
-
-				Fly("signfly", CINEMATIC_AIM_TO_POINT, CVector(960,70,4004), 15, 1, 1 )
-				StartCinematic()
-
-				AddCinematicMessage( 1, 1 )
-
-				TActivate("THESIGNONFIELD_ec")
-
-				CompleteQuestIfTaken( "SeeSigns_Quest" )
-
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-	<trigger Name="THESIGNONFIELD_ec" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-			
-			StopPlayingCustomMusic()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-	<trigger Name="KOLIZEYFIGHT" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Kolizey_location" />
-		<script>
-			if IsQuestTaken("CombatInKollizey_Quest1") and not(IsQuestComplete("CombatInKollizey_Quest1") or IsQuestFailed("CombatInKollizey_Quest1"))   then
-				TActivate( "RolikBegin_Kolizey1" )
-
-				trigger:Deactivate()
-			end
-
-			if IsQuestTaken("r1m2_Glagiators_Quest1") and not(IsQuestComplete("r1m2_Glagiators_Quest1") or IsQuestFailed("r1m2_Glagiators_Quest1")) then
-				TActivate( "RolikBegin_Kolizey2" )
-
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-	<trigger Name="KOLIZEYFIGHTDIE1" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator1" />
-		<script>
-			CompleteQuestIfTaken( "CombatInKollizey_Quest2" )
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z + 50
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround(2, 0.01, 35, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 22224, 1 )
-
-			TActivate( "KOLIZEYFIGHTDIE1_ec" )
-
-			local r = GetEntityByName ("ZABOR")
-			if r then r:Remove() end
-
-			TActivate( "KOLIZEYFIGHT" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="KOLIZEYFIGHTDIE1_ec" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="KOLIZEYFIGHTDIE2" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator2" />
-		<script>
-			CompleteQuestIfTaken( "r1m2_Glagiators_Quest2" )
-			TakeQuest("r1m2_MovemineralToMidgard_Quest")
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
-			FlyAround(2, 0.01, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 22224, 1 )
-
-			TActivate( "KOLIZEYFIGHTDIE2_ec" )
-
-			local r = GetEntityByName ("ZABOR")
-			if r then r:Remove() end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="KOLIZEYFIGHTDIE2_ec" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-
-
-
-	<trigger Name="ANTICWAR" active="0">
+	<!-- Закрытие/открытие Мидгарда -->
+	<trigger	Name="trMidgardCloses"	active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("CarOfAntiSiencer",1002,CVector(7468.556, 184.763, 5213.779),{"DemoBandit"}, nil, 1)
+			local tp = GetEntityByName("Midragd")
+			tp:SetOpenGateToPlayer( false )
 
-			TakeQuest("HelpRuins_Quest")
+			SetConditionalClosingForTown( "Midragd", "r1m2", true )
 
-			TActivate("RUINSWAR1")
+			CreateNewDummyObject("midgard_gate", "MidgragdGates", -1, -1, CVector(4344.384, 128.562, 833.465), Quaternion(0.000, 1.000, 0.000, 0.009), 0)
 
 			trigger:Deactivate()
-		</script>
+ 		</script>
 	</trigger>
 
-	<trigger Name="ANTISIENCER" active="0">
+	<trigger	Name="trMidgardOpens"	active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("CarOfSiencer",1032,CVector(7468.556, 184.763, 5213.779),{"r1m1_bug02"}, nil, 1)
+			local tp = GetEntityByName("Midragd")
+			tp:SetOpenGateToPlayer( true )
 
-			TakeQuest("DestroyRuins_Quest")
+			SetConditionalClosingForTown( "Midragd", "r1m2", false )
 
-			TActivate("RUINSWAR2")
+			local midG = GetEntityByName("MidgragdGates")
+			if midG then midG:Remove() end
 
 			trigger:Deactivate()
-		</script>
+ 		</script>
 	</trigger>
 
-	<trigger Name="RUINSWAR1" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="CarOfAntiSiencer" />
+	<!-- Очистка склада Сальваторе от рейдеров -->
+	<trigger Name="RaidersToKill" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CompleteQuest( "HelpRuins_Quest" )
 
+			TeamCreate("CarOfRaider",1002,CVector(6471.031, 73.844, 546.496),{"DemoMolokovoz1","Scout03"})
+
+			TakeQuest("BenMZ2_Quest")
+
+			TActivate ("RaidersDie")
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="RUINSWAR2" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="CarOfSiencer" />
+	<trigger Name="RaidersDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CarOfRaider" />
 		<script>
-			CompleteQuest( "DestroyRuins_Quest" )
-			TakeQuest( "DestroyRuins2_Quest" )
-			TActivate("cinAfterKidnapping")
+			CompleteQuest( "BenMZ2_Quest" )
+
+			TActivate ("cinAfterKillRaider")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-
-
-
-
+	<!-- Подъезжаем к лагерю бандитов, у которых караванщик Стрыги -->
 	<trigger Name="PLENLISA" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="LisaInBanditPlen" />
 		<script>
@@ -481,6 +285,7 @@
 		</script>
 	</trigger>
 
+	<!-- Убили бандитов, спасли караванщика -->
 	<trigger Name="PLENLISADIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="LisaInBanditDen" />
 		<script>
@@ -496,10 +301,158 @@
 		</script>
 	</trigger>
 
+<!-- Подъезд к дому Бена -->
+	<trigger Name="tr_THEBEN" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheBen_House" />
+		<script>
+			if (GetVar("FindBen").AsInt==1) or QuestStatus("d_FindHouseOfBen_Quest")==Q_TAKEN or QuestStatus("TalkBeforeDesert")==Q_TAKEN or QuestStatus("BenBadEnd")==Q_TAKEN or QuestStatus("LisaUBena")==Q_TAKEN  or QuestStatus("r4m2_LisaDieBen")==Q_TAKEN then
+				TActivate("RolikBegin_BenHause")
 
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
 
+	<!-- Ждём, пока Сальваторе откроет Мидгард -->
+	<trigger Name="WaitForThief" active="0">
+		<event	timeout="30"		eventid="GE_TIME_PERIOD" />
+		<script>
+			CompleteQuest("OpenMid11_Quest")
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
 
+	<!-- Машина Лисы возле дома Бена. -->
+	<trigger	Name="LisaBen"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateVehicleEx("LisaCar","CARLISAS",CVector(3769.095, 117.979, 1777.622), 1042)
+			
+			local vehLisa = GetEntityByName("CARLISAS")
+			if vehLisa then
+				vehLisa:SetRotation(Quaternion(-0.017, -0.738, 0.014, -0.674))
+				vehLisa:SetSkin(2)
+				vehLisa:setImmortalMode(1)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Плохая концовка -->
+	<trigger Name="StartBadEnd" active="0">
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SetGameTime( 10, 0 )
+			TActivate("BadEndingBegin")
+			TActivate("BenExplode")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Нормальная концовка -->
+	<trigger Name="ToFaterEnd" active="0">
+		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			AutoSave( "" )
+			
+			PassToMap("r1m3", "locNormalEnd", -1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Бонусная концовка -->
+	<trigger Name="ToSpecEnd" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			AutoSave( "" )
+			
+			PassToMap("r1m8", "FromR1M2", -1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBenDialogActivate" active="0">
+		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("Player4eeter").AsInt == 1 then
+				g_Console:InputLine "\\quit"
+			else
+				CheckPlayerVehicle()
+			end
+		</script>
+	</trigger>
+
+	<!-- Начало всех битв в Колизее -->
+	<trigger Name="KOLIZEYFIGHT" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Kolizey_location" />
+		<script>
+			if QuestStatus("CombatInKollizey_Quest1")==Q_TAKEN then
+				TActivate( "RolikBegin_Kolizey1" )
+
+				trigger:Deactivate()
+			end
+
+			if QuestStatus("r1m2_Glagiators_Quest1")==Q_TAKEN then
+				TActivate( "RolikBegin_Kolizey2" )
+
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<!-- Квесты с археологами. Помощь/похищение. -->
+	<trigger Name="ANTICWAR" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreate("CarOfAntiSiencer",1002,CVector(7468.556, 184.763, 5213.779),{"DemoBandit"}, nil, 1)
+
+			TakeQuest("HelpRuins_Quest")
+
+			TActivate("RUINSWAR")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ANTISIENCER" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreate("CarOfSiencer",1032,CVector(7468.556, 184.763, 5213.779),{"r1m1_bug02"}, nil, 1)
+
+			TakeQuest("DestroyRuins_Quest")
+
+			TActivate("RUINSWAR")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RUINSWAR" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CarOfAntiSiencer" />
+		<event eventid="GE_OBJECT_DIE" ObjName="CarOfSiencer" />
+		<script>
+			if QuestStatus("HelpRuins_Quest")==Q_TAKEN then
+				CompleteQuest( "HelpRuins_Quest" )
+
+			elseif QuestStatus("DestroyRuins_Quest")==Q_TAKEN then
+				CompleteQuest( "DestroyRuins_Quest" )
+				TakeQuest( "DestroyRuins2_Quest" )
+
+				TActivate("cinAfterKidnapping")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Переход в Край -->
 	<trigger Name="triggerExitToMap11" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M1" />
 		<script>
@@ -562,11 +515,7 @@
 		</script>
 	</trigger>
 
-
-
-
-
-
+	<!-- Переход в Фатерлянд -->
 	<trigger Name="triggerExitToMap13" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M3" />
 		<script>
@@ -637,523 +586,4 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
-	<trigger	Name="trExitFromLokus"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			TActivate("cinAfterChifir")
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
-	<trigger	Name="trExitFromLokus2"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			TActivate("cinAfterChifir2")
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
-	<trigger	Name="trExitFromMidragd"	active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			TActivate("RolikBegin_OutOfMidgard")
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
-	<trigger	Name="trMidgardCloses"	active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			local tp = GetEntityByName("Midragd")
-			tp:SetOpenGateToPlayer( false )
-
-			SetConditionalClosingForTown( "Midragd", "r1m2", true )
-
-			CreateNewDummyObject("midgard_gate", "MidgragdGates", -1, -1, CVector(4344.384, 128.562, 833.465), Quaternion(0.000, 1.000, 0.000, 0.009), 0)
-
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
-
-	<trigger	Name="trMidgardOpens"	active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			local tp = GetEntityByName("Midragd")
-			tp:SetOpenGateToPlayer( true )
-
-			SetConditionalClosingForTown( "Midragd", "r1m2", false )
-
-			local midG = GetEntityByName("MidgragdGates")
-			if midG then midG:Remove() end
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
-	<trigger Name="RaidersToKill" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-
-			TeamCreate("CarOfRaider",1002,CVector(6471.031, 73.844, 546.496),{"DemoMolokovoz1","Scout03"})
-
-			TakeQuest("BenMZ2_Quest")
-
-			TActivate ("RaidersDie")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="RaidersDie" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="CarOfRaider" />
-		<script>
-			CompleteQuest( "BenMZ2_Quest" )
-
-			TActivate ("cinAfterKillRaider")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinAfterChifir"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			PlayCustomMusic("Bio04")
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("MisterShlyapaFM")))
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			FlyAround(6, 0, 25, 19, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			AddCinematicMessage( 88056, 1 )
-			if IsQuestComplete("FirstTimePlay") then
-				AddCinematicMessage( 88061, 0.25 )
-			else
-				AddCinematicMessage( 88057, 0.25 )
-			end
-			TActivate("cinAfterChifir_End")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinAfterChifir2"	active="0">
-		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			PlayCustomMusic("Bio04")
-
-			Fly("ShlyapaCam1", CINEMATIC_NO_AIM, 0, 9, 1, 1 )
-			StartCinematic()
-
-			TActivate("cinAfterChifir2Fade")
-			TActivate("cinAfterChifir2End")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cinAfterChifir2Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround(CVector(3518.390, 90.903, 5192.647))
-				vehPlayer:SetRotation(Quaternion(-0.010, 0.745, 0.010, -0.667))
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cinAfterChifir2End" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			StopPlayingCustomMusic()
-
-			StartConversation( "MrShlyapa" )
-
-			trigger:Deactivate()
-		</script>
-		</trigger>
-
-	<trigger	Name="RolikBegin_OutOfMidgard"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			PlayCustomMusic("Bio07unloop")
-			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
-			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
-			StartCinematic()
-			AddCinematicMessage( 88055, 1 )
-			
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-			end
-			
-			TActivate("OutOfMidgard_FadeIn")
-			TActivate("OutOfMidgard_FadeIn2")
-			TActivate("OutOfMidgard_End")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="OutOfMidgard_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-		
-			GetPlayerVehicle():SetGamePositionOnGround( CVector(4353.645, 129.190, 856.392))
-			GetPlayerVehicle():SetRotation(Quaternion(0.007, 0.960, 0.005, -0.279))
-			
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(4337.363, 127.261, 853.542), Quaternion(-0.004, 0.982, 0.018, 0.189), 0)
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	
-	<trigger	Name="OutOfMidgard_FadeIn2"	active="0">
-		<event flypath="MidragdOut3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-			
-			AddCinematicMessage( 880555, 0.25 )
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="OutOfMidgard_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-		
-			GetEntityByName("humPlayer"):Remove()
-			
-			StopPlayingCustomMusic()
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinAfterKillRaider"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			FlyAround(6, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			AddCinematicMessage( 88058, 0.25 )
-
-			AddQuestItem("quest_thief_package")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_thief_package")
-
-			TActivate("cinAfterKillRaiderEnd")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cinAfterKillRaiderEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinAfterKidnapping"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-			AddCinematicMessage( 88059, 1 )
-
-			TActivate("cinAfterKidnappingEnd")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cinAfterKidnappingEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			AddQuestItem("ArchProrab_P")
-			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ArchProrab_P")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinAfterChifir_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			CompleteQuest("Chifir_Quest")
-			TakeQuest("FindBen2_Quest")
-
-			local shl1 = GetEntityByName("MisterShlyapaFM")
-			if shl1 then shl1:SetProperty("Active",1) end
-			
-			if not(IsQuestComplete("FirstTimePlay")) then
-				StartConversation( "MrShlyapa" )
-			end
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trToMidgardForComposite"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-
-			SetWeather(1)
-
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			Fly("BefDesert", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 88060, 1 )
-
-			local Plf = GetPlayerVehicle()
-			if Plf then
-				Plf:SetGamePositionOnGround( CVector(4163.968, 117.857, 916.957))
-				Plf:SetRotation(Quaternion(-0.006, 0.745, 0.027, 0.666))
-				Plf:SetExternalPathByName("BeforeDesert")
-				Plf:SetCustomLinearVelocity( 10 )
-				Plf:LimitMaxSpeed(17)
-			end
-
-			TActivate("trToMidgardForComposite_End")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trToMidgardForComposite_End" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			SetCameraBehindPlayerVehicle()
-
-			local Plf = GetPlayerVehicle()
-			if Plf then
-				Plf:SetExternalPathByName("BeforeDesert")
-				Plf:PlaceToEndOfPath("BeforeDesert")
-				Plf:UnlimitMaxSpeed()
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="tr_THEBEN22" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheBen_House" />
-		<script>
-			if (IsQuestTaken("BenNormalEnd")  and  not(IsQuestComplete("BenNormalEnd"))) or (IsQuestTaken("BenGoodEnd")  and  not(IsQuestComplete("BenGoodEnd"))) then
-				TActivate("RolikBegin_BenHause2")
-				trigger:Deactivate()
-			end
-			
-			if IsQuestTaken("BenZima_Quest") and not(IsQuestComplete("BenZima_Quest")) then
-				TActivate("RolikBegin_BenHause3")
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-	<trigger Name="WaitForThief" active="0">
-		<event	timeout="30"		eventid="GE_TIME_PERIOD" />
-		<script>
-			CompleteQuest("OpenMid11_Quest")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="StartBadEnd" active="0">
-		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SetGameTime( 10, 0 )
-			TActivate("BadEndingBegin")
-			TActivate("BenExplode")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="BenExplode" active="0">
-		<event	timeout="9"		eventid="GE_TIME_PERIOD" />
-		<script>
-		
-			CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(3777.386, 116, 1814.312), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
-			CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(3790.160, 116, 1797.764), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
-			
-			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(3777.386, 116, 1814.312), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
-			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(3794.967, 130, 1805.147), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="ToFaterEnd" active="0">
-		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
-		<script>
-			
-			AutoSave( "" )
-			
-			PassToMap("r1m3", "locNormalEnd", -1 )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="ToSpecEnd" active="0">
-		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			
-			AutoSave( "" )
-			
-			PassToMap("r1m8", "FromR1M2", -1 )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="NextHoursTr" active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 88062, 1 )
-			
-			TActivate("NextTrEnd")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="NextTrEnd" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			
-			RestoreAllToleranceStatus()
-			
-			if IsQuestComplete("BenNormalEnd") then
-				StartConversation("Ben")
-			else
-				StartConversation("Lisa")
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="NextDayTr" active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 88060, 1 )
-			
-			TActivate("NextTrEnd2")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="NextTrEnd2" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			
-			if QuestStatus("FindGomer2_Quest")==Q_TAKEN then
-				trigger:Deactivate()
-			else
-				StartConversation("Ben")
-				trigger:Deactivate()
-			end
-			
-		</script>
-	</trigger>
-
-	<trigger	Name="LisaBen"	active="0">
-		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			CreateVehicleEx("LisaCar","CARLISAS",CVector(3769.095, 117.979, 1777.622), 1042)
-			
-			local vehLisa = GetEntityByName("CARLISAS")
-			if vehLisa then
-				vehLisa:SetRotation(Quaternion(-0.017, -0.738, 0.014, -0.674))
-				vehLisa:SetSkin(2)
-				vehLisa:setImmortalMode(1)
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 </triggers>

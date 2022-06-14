@@ -545,4 +545,15 @@
 		<Point  coord="0.000 1.000 0.000"/>
 	</Path>
 
+	<Path Name = "DefendSngMolok_Path1">
+		<Point  coord="-20 7 -30"/>
+		<Point  coord="-30 7 0"/>
+		<Point  coord="-30 7 30"/>
+	</Path>
+
+	<Path Name = "DefendSngMolok_Path2">
+		<Point  coord="20 7 30"/>
+		<Point  coord="9 2 10"/>
+	</Path>
+
 </Paths>

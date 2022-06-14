@@ -5640,7 +5640,7 @@
 
 	<Reply
 		name="Dlg_pl_003242"
-		text="Дядь, ты либо глухой, либо глупый. Я уже сказал, что меня не интересуют твои писюльки. Исчезни с глаз моих!"
+		text="Дядь, ты либо глухой, либо глупый. Я уже сказал, что меня не интересуют твои писульки. Исчезни с глаз моих!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003243" />
 
@@ -6348,7 +6348,7 @@
 		name="Dlg_pl_002152"
 		text="Вот и здорово."
 		role="PLAYER"
-		scriptResult="CompleteQuest('Ozhidanie2_Quest'); TActivate('preEnding5'); TActivate('Ending5_begin'); EndConversation()" />
+		scriptResult="CompleteQuest('Ozhidanie2_Quest'); TActivate('Ending5_begin'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002279"
@@ -6385,7 +6385,7 @@
 		name="Dlg_pl_002284"
 		text="И почему я ожидал подобный исход?"
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('Podderzhka_cin'); LeaveTown()" />
+		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('Podderzhka_cin'); LeaveTown(true)" />
 <!--Root/r2m2/Сюжетные/Монах-->
 	<Reply
 		name="Monah_hellodlg0out"
@@ -6669,7 +6669,7 @@
 		name="Dlg_pl_002135"
 		text="Тогда тем более нет времени тут болтать! Скорее запрыгивай в мой грузовик!"
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_MeetLeaderGelvetcia_Quest' );  TActivate('LAGERLEADER'); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P');  EndConversation()" />
+		scriptResult="CompleteQuest( 'd_MeetLeaderGelvetcia_Quest' );  TActivate('trShpionGuards'); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000511"
@@ -6707,19 +6707,6 @@
 		text="Умрите же, во имя Алого Рассвета!"
 		role="PLAYER"
 		scriptResult="TActivate('LAGERWARBEGIN');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
-	<Reply
-		name="LagerGuardian_hellodlg1out"
-		text="Я - лидер повстанцев! Вы приехали забрать меня?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_MeetLeaderGelvetcia_Quest')  and  not(IsQuestComplete('d_MeetLeaderGelvetcia_Quest'))"
-		nextReplies="Lag_hlg08871" />
-
-	<Reply
-		name="Lag_hlg08871"
-		text="Я должен отвезти тебя в Гельвецию. И лучше бы тебе знать что-нибудь действительно важное."
-		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_MeetLeaderGelvetcia_Quest' );  TActivate('LAGERLEADER');  EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002291"
@@ -9051,7 +9038,7 @@
 
 	<Reply
 		name="Dlg_npc_001957"
-		text="Погоди, ты хочешь знать, что пробовал ананагу лучше моей?"
+		text="Погоди, ты хочешь сказать, что пробовал ананагу лучше моей?"
 		role="NPC"
 		nextReplies="Dlg_pl_001958" />
 
@@ -10362,7 +10349,14 @@
 		name="Dlg_npc_001241"
 		text="Тут в округе есть Центр развлечений, которым владеет одна очень предприимчивая женщина. Там есть всё, что нужно: ставки, азартные игры, выпивка, даже девки! Причём по очень демократичным ценам. Могу рассказать, как туда проехать, всего за 150 монет."
 		role="NPC"
-		nextReplies="Dlg_pl_001244 Dlg_pl_001875" />
+		nextReplies="Dlg_pl_001244 Dlg_pl_003008 Dlg_pl_001875" />
+
+	<Reply
+		name="Dlg_pl_003008"
+		text="У меня пока нет столько денег..."
+		role="PLAYER"
+		scriptCondition="150 > GetPlayerMoney()"
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001875"
@@ -10374,7 +10368,8 @@
 		name="Dlg_pl_001244"
 		text="Интересно, вот деньги."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('r1m3_CrazyManQuest');  EndConversation()" />
+		scriptCondition="GetPlayerMoney() >= 150"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TakeQuest('r1m3_CrazyManQuest'); AddPlayerMoney(-150);  EndConversation()" />
 <!--Root/r1m3/Опциональные/Архитектор в Минине-->
 	<Reply
 		name="ArchitectorMinin_hellodlg0"
@@ -10447,19 +10442,39 @@
 
 	<Reply
 		name="Dlg_npc_001104"
-		text="Да тут внизу по дороге был Центр Развлечений, куда мы всей деревней ходили весело проводить время. Не так давно его подожгли. Мы выяснили, кто это сделал, и вырезали всех причастных, но мы никак не можем найти заказчика, потому что он ударился в бега."
+		text="Да тут внизу по дороге был Центр Развлечений, куда мы всей деревней ходили весело проводить время. Не так давно его подожгли. Мы сразу же поняли, кто это сделал, и вырезали всех причастных, но главарь этой шайки ударился в бега и мы никак не можем его выследить."
 		role="NPC"
-		nextReplies="Dlg_pl_001105" />
+		nextReplies="Dlg_pl_001105 Dlg_pl_003005" />
+
+	<Reply
+		name="Dlg_pl_003005"
+		text="Тот самый Центр Развлечений?! Но мне в Пеште сказали, что он работает! Я ещё и деньги приплатил за то, чтобы мне путь туда на карте нарисовали."
+		role="PLAYER"
+		scriptCondition="QuestStatus('r1m3_CrazyManQuest')==Q_TAKEN"
+		nextReplies="Dlg_npc_003006" />
+
+	<Reply
+		name="Dlg_npc_003006"
+		text="Ничего удивительного. Что для одного человека горе, для другого - возможность заработка. Всё-таки дикий это край...|Но чёрт с ними с нравами, они везде примерно те же. А вот с беглецом этим нужно что-то делать."
+		role="NPC"
+		nextReplies="Dlg_pl_003273" />
+
+	<Reply
+		name="Dlg_pl_003273"
+		text="Вы хотите, чтобы я его нашёл?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001877" />
 
 	<Reply
 		name="Dlg_pl_001105"
 		text="И вы хотите, чтобы я его нашёл?"
 		role="PLAYER"
+		scriptCondition="QuestStatus('r1m3_CrazyManQuest')~=Q_TAKEN"
 		nextReplies="Dlg_npc_001877" />
 
 	<Reply
 		name="Dlg_npc_001877"
-		text='Чтобы нашёл и убил, а то у нас нет времени поиски проводить, нам на полях работать нужно!  |У нас есть неподтверждённая информация, что он скрывается в "городе мёртвых".'
+		text='Чтобы нашёл и убил, а то у нас нет времени поиски проводить, нам на полях работать нужно! |У нас есть неподтверждённая информация, что он скрывается в "городе мёртвых".'
 		role="NPC"
 		nextReplies="Dlg_pl_001878" />
 
@@ -13084,7 +13099,7 @@
 		name="Dlg_pl_003209"
 		text="Выдвигаюсь."
 		role="PLAYER"
-		scriptResult="TakeQuest('FightForPesht'); TActivate('trFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
+		scriptResult="TakeQuest('FightForPesht'); TActivate('cinFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_003206"
@@ -13849,7 +13864,7 @@
 		name="Dlg_pl_001724"
 		text="Поехали!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('ReturnToDirector_Quest'); TakeQuest('CombatInKollizey_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('ReturnToDirector_Quest'); TakeQuest('CombatInKollizey_Quest'); TActivate('KOLIZEYFIGHT'); EndConversation()" />
 
 	<Reply
 		name="Director_hellodlg2"
@@ -14329,7 +14344,7 @@
 		name="Dlg_pl_001635"
 		text="Кажется, зря я это сделал…"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('trExitFromMidragd'); TActivate ('trMidgardCloses'); FailQuest('d_FindBenInMidgard_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown(true)" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); FailQuest('d_FindBenInMidgard_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown(true)" />
 
 	<Reply
 		name="Dlg_pl_xyz302"
@@ -14968,7 +14983,7 @@
 		name="Dlg_pl_003038"
 		text="Подожди, а про жилище Бена рассказать?!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('trExitFromMidragd'); TActivate ('trMidgardCloses'); TActivate('tr_THEBEN'); CompleteQuest('CaravDead_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown(true)" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); TActivate('tr_THEBEN'); CompleteQuest('CaravDead_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown(true)" />
 <!--Root/r1m2/Сюжетные/Старуха-->
 	<Reply
 		name="Staruha_hellodlg0"
@@ -15126,7 +15141,7 @@
 		name="Dlg_pl_001556"
 		text="Не вижу ничего плохого в том, чтобы выпить чифиря."
 		role="PLAYER"
-		scriptResult="TActivate('trExitFromLokus'); SetVar('NoChifir', 0);"
+		scriptResult="TActivate('cinAfterChifir'); SetVar('NoChifir', 0);"
 		nextReplies="Dlg_npc_001557" />
 
 	<Reply
@@ -16499,7 +16514,7 @@
 		text="Опять это странное ощущение..."
 		role="PLAYER"
 		scriptCondition="IsQuestComplete('MrShlyapa4_Quest') and IsQuestComplete('MrShlyapaSecret')"
-		scriptResult="TActivate('trExitFromLokus2'); FailQuestIfTaken('TalkToLisaArtefact'); LeaveTown()" />
+		scriptResult="TActivate('cinAfterChifir2'); FailQuestIfTaken('TalkToLisaArtefact'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_002517"

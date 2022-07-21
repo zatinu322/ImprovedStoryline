@@ -149,13 +149,6 @@
 		</script>
 	</trigger>
 
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
-		</script>
-	</trigger>
-
 	<trigger	Name="trHelpers1"	active="0">
 		<event	timeout="2"		eventid="GE_TIME_PERIOD" />
 		<script>

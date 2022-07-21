@@ -50,7 +50,7 @@
 		modelName="mask_hero"
 		value="Наконец то мы добрались до острова."
 		sound="data\sounds\Speech\r3m1\r3m1_1020_hero.ogg"
-		time="4" />
+		time="2" />
 
 	<string
 		id="1021"
@@ -58,14 +58,14 @@
 		modelSlot="1"
 		value="ЛИСА|Я знаю здесь кое-кого, но они вряд ли тебе помогут."
 		sound="data\sounds\Speech\r3m1\r3m1_1021_alice.ogg"
-		time="4" />
+		time="3" />
 
 	<string
 		id="1022"
 		modelName="mask_hero"
 		value="А кто это такие?"
 		sound="data\sounds\Speech\r3m1\r3m1_1022_hero.ogg"
-		time="4" />
+		time="1" />
 
 	<string
 		id="1023"
@@ -81,7 +81,7 @@
 		modelSlot="1"
 		value="ЛИСА|Отправляйся пока без меня. Когда понадоблюсь, ищи меня у них. "
 		sound="data\sounds\Speech\r3m1\r3m1_1024_alice.ogg"
-		time="4" />
+		time="3" />
 <!--
 ***************************************************************************
 

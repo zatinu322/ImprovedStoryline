@@ -8,9 +8,6 @@
 		<Point  coord="3351.999 388.020 3301.754" rotation="-0.010 0.582 -0.007 0.813"/>   
 		<Point  coord="3348.970 369.043 3302.484" rotation="0.052 0.593 0.038 0.803"/>   
 	</Path>
-	<Path Name = "start_rolik11">
-		<Point  coord="3348.970 369.043 3302.484" rotation="0.052 0.593 0.038 0.803"/>   
-	</Path>
 	<Path Name = "start_rolik2">
 		<Point  coord="3344.750 369.521 3303.303" rotation="0.080 0.657 0.070 0.746"/>   
 		<Point  coord="3344.850 369.521 3303.403" rotation="0.080 0.657 0.070 0.746"/>   
@@ -250,7 +247,12 @@
 
 	<Path Name = "felix1_cam03">
 		<Point  coord="1993.671 322.180 2429.792" rotation="-0.019 -0.646 0.016 0.763"/>
-		<Point  coord="1997.885 321.990 2418.036" rotation="0.011 -0.620 -0.008 0.784"/>
+		<Point  coord="1997.885 323.288 2418.036" rotation="0.011 -0.620 -0.008 0.784"/>
+	</Path>
+
+	<Path Name = "felix1_cam031">
+		<Point  coord="1993.671 322.180 2429.792" rotation="-0.019 -0.646 0.016 0.763"/>
+		<Point  coord="2000.527 322.519 2432.207" rotation="-0.017 -0.574 0.012 0.819"/>
 	</Path>
 
 	<Path Name = "felix1_cam04">
@@ -281,9 +283,6 @@
 	<Path Name = "Father_cam03">
 		 <Point  coord="3353.614 368.487 3303.540" rotation="-0.017 0.879 0.032 -0.476"/>
 		 <Point  coord="3354.031 368.523 3303.271" rotation="-0.023 0.877 0.042 -0.478"/>
-		
-<!--		 <Point  coord="3360.531 368.668 3303.607" rotation="0.241 0.724 0.308 0.568"/>
-		 <Point  coord="3360.531 368.668 3303.607" rotation="0.041 0.771 0.050 0.634"/>  -->
 	</Path>
 
 	<Path Name = "Father_cam04">
@@ -306,14 +305,14 @@
 		 <Point  coord="3353.362 368.914 3303.118" rotation="0.041 -0.813 -0.058 0.578"/>
 	</Path>
 
-	<Path Name = "felix2_cam01">
-		 <Point  coord="1.961 8.822 -9.352"/>
-		 <Point  coord="8.079 27.074 -18.463"/>
+	<Path Name = "felix2_cam01">	
+		<Point  coord="-9.000 3.000 9.000"/>
+		<Point  coord="-11.000 5.500 11.000"/>
 	</Path>
 
 	<Path Name = "felix2_cam02">
-		 <Point  coord="484.431 307.398 1790.589" rotation="0.024 0.337 0.009 0.941"/>
-		 <Point  coord="486.568 307.398 1792.399" rotation="0.032 0.375 0.013 0.926"/>
+		<Point  coord="444.726 314.529 1835.118" rotation="0.011 0.946 -0.033 -0.321"/>
+		<Point  coord="445.197 314.497 1834.817" rotation="0.014 0.881 -0.026 -0.472"/>
 	</Path>
 
 	<Path Name = "felix3_cam01">

@@ -49,7 +49,7 @@
 
 	<Path Name = "AXELARENADIE_cam05">
 		<Point  coord="3285.278 276.805 1411.646" rotation="0.016 0.740 0.017 0.673"/>
-		<Point  coord="3285.421 276.799 1411.659" rotation="0.016 0.740 0.017 0.673"/>
+		<Point  coord="3286.834 276.733 1411.783" rotation="0.016 0.740 0.017 0.673"/>
 	</Path>
 
 	<Path Name = "AXELARENADIE_cam06">
@@ -59,7 +59,7 @@
 
 	<Path Name = "AXELARENADIE_cam07">
 		<Point  coord="3285.441 276.429 1412.854" rotation="0.028 0.897 0.057 0.438"/>
-		<Point  coord="3285.009 276.499 1412.517" rotation="0.028 0.897 0.057 0.438"/>
+		<Point  coord="3284.978 276.544 1411.795" rotation="0.052 0.753 0.060 0.654"/>
 	</Path>
 
 	<Path Name = "AXELARENADIE_cam08">
@@ -157,14 +157,23 @@
 	</Path>
 
 	<Path Name = "Kontsovka51">
-		<Point  coord="853.401 294.697 3350.692" rotation="-0.031 0.966 -0.134 0.221"/>
-		<Point  coord="839.840 283.869 3325.005" rotation="-0.043 0.955 -0.172 0.237"/>
+		<Point  coord="756.048 271.315 3300.113" rotation="0.031 0.905 -0.068 -0.418"/>
+		<Point  coord="766.091 269.322 3291.582" rotation="0.027 0.906 -0.059 -0.419"/>
+	</Path>
+
+	<Path Name = "Kontsovka52">
+		<Point  coord="-10 4 20"/>
+		<Point  coord="-5 3 15"/>
 	</Path>
 
 	<Path Name = "Ending5">
-		<Point  coord="3033.762 357.602 1268.102" rotation="-0.122 -0.647 0.106 0.746"/>
-		<Point  coord="3043.499 357.602 1204.447" rotation="-0.122 -0.584 0.089 0.798"/>
+		<Point  coord="1746.499 335.053 3258.894" rotation="-0.054 -0.520 0.033 0.852"/>
+		<Point  coord="1768.258 331.953 3270.054" rotation="-0.054 -0.520 0.033 0.852"/>
+	</Path>
 
+	<Path Name = "Ending5_Eretik">
+		<Point  coord="2760.682 275.316 546.667" rotation="0.009 0.989 -0.074 -0.125"/>
+		<Point  coord="2768.657 270.459 515.538" rotation="0.009 0.989 -0.074 -0.125"/>
 	</Path>
 
 	<Path Name = "Shlyapa3">

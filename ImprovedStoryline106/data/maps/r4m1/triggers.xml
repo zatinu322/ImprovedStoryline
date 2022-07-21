@@ -160,7 +160,7 @@
 			SpawnMessageBox( "8902" )
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>
@@ -617,13 +617,6 @@
 			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
 		</script>
 	</trigger>
 

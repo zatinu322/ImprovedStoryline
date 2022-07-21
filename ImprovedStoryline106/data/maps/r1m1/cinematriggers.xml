@@ -54,10 +54,9 @@
 			Fly("Opening4", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
 			Fly("Opening5", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
 			Fly("Opening_End", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
-			Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 37, 0, 0 )
-			Fly("start_rolik11", CINEMATIC_NO_AIM, 0, 1.5, 0, 0 )
+			Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 35, 0, 0 )
 			Fly("start_rolik5", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
-			Fly("start_rolik6", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
+			Fly("start_rolik6", CINEMATIC_NO_AIM, 0, 14.5, 0, 0 )
 			Fly("start_rolik2", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			Fly("start_rolik3", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			Fly("start_rolik8", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
@@ -544,6 +543,7 @@
 	<trigger Name="GloohoeDestructionBegin" active="0">
 		<event timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
+
 			SetWeather(0)
 			
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -565,19 +565,15 @@
 	<trigger Name="GloohoeDestructionFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CreateVehicleEx("CoolBelaz_2","Belik1",CVector(3357.498, 368.414, 3297.456), 1062)
-			local bel1 = GetEntityByName("Belik1")
+			local bel1 = CreateVehicleEx("CoolBelaz_2","Belik0",CVector(3357.498, 368.414, 3297.456), 1062)
 			if bel1 then
-				bel1:SetRandomSkin()
 				bel1:SetRotation(Quaternion(-0.007, 0.738, -0.014, 0.675))
 				bel1:SetExternalPathByName("Tupik_path1")
 				bel1:SetCruisingSpeed(20)
 			end
 			
-			CreateVehicleEx("CoolBelaz","Belik2",CVector(3375.370, 364.188, 3219.041), 1002)
-			local bel2 = GetEntityByName("Belik2")
+			local bel2 = CreateVehicleEx("CoolBelaz","Belik1",CVector(3375.370, 364.188, 3219.041), 1062)
 			if bel2 then
-				bel2:SetRandomSkin()
 				bel2:SetRotation(Quaternion(0.018, -0.019, -0.001, -1.000))
 				bel2:SetExternalPathByName("Tupik_path2")
 				bel2:SetCruisingSpeed(15)
@@ -592,7 +588,13 @@
 			end
 
 			local bezum = GetEntityByName("BezummecCars")
-			for i=0,1 do bezum:GetVehicle(i):Remove() end
+			for i=0,1 do
+				skin = bezum:GetVehicle(i):GetSkin()
+				if getObj("Belik"..i) then getObj("Belik"..i):SetSkin(skin) end
+				bezum:GetVehicle(i):Remove()
+			end
+
+			skin = nil
 
 			trigger:Deactivate()
 		</script>
@@ -608,9 +610,13 @@
 
 			SpawnMessageBox("5977")
 
+			for i = 0,1 do
+				if getObj("Belik"..i) then getObj("Belik"..i):Remove() end
+			end
+
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>
@@ -647,6 +653,7 @@
 				FVehicle:SetThrottle( 1 )
 				FVehicle:SetCustomLinearVelocity( 25 )
 				FVehicle:SetExternalPathByName("fun1_5road")
+				FVehicle:setGodMode(1)
 			end
 
 			trigger:Deactivate()    
@@ -1838,12 +1845,12 @@
 
 			local FVehicle1 = GetEntityByName("FelixBanditCarsBand_vehicle_0")
 			if FVehicle1 then
-				FVehicle1:SetSkin ( skin1 )
+				FVehicle1:SetSkin ( skin2 )
 				FVehicle1:SetRotation(Quaternion(0.029, -0.597, -0.009, 0.801))
 			end
 			local FVehicle2 = GetEntityByName("FelixBanditCarsBand_vehicle_1")
 			if FVehicle2 then
-				FVehicle2:SetSkin ( skin2 )
+				FVehicle2:SetSkin ( skin1 )
 				FVehicle2:SetRotation(Quaternion(0.036, -0.499, -0.011, 0.866))
 			end
 
@@ -1860,8 +1867,11 @@
 	<trigger Name="FelixPayRolik1" active="0">
 		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
+			local humF = GetEntityByName("felix01")
+			local humFID = humF:GetId()
+
 			Fly("felix1_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-			Fly("felix1_cam03", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
+			Fly("felix1_cam031", CINEMATIC_AIM_TO_ID, humFID, 12, 0, 0 )
 			Fly("felix1_cam04", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 11, 0, 1 )
 			StartCinematic()
 			
@@ -1881,7 +1891,7 @@
 	</trigger>
 
 	<trigger Name="trFelix1_cam031" active="0">
-		<event flypath="felix1_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<event flypath="felix1_cam031" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			getObj("felix01"):SetNodeAction(AT_RESERVED1)
 			getObj("felix01"):SetNextForAnimation(AT_RESERVED1, AT_STAND2) 
@@ -1905,8 +1915,26 @@
 			
 			local humFelix = GetEntityByName("felix01")
 			if humFelix then humFelix:Remove() end
+
+			TActivate("trFelix1_Move")
 			
 		trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trFelix1_Move" active="0">
+		<event	timeout="6"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local vehFelix1 = GetEntityByName("FelixGv01")
+			if vehFelix1 then vehFelix1:SetExternalPathByName("FelixAway_path1") end
+
+			local vehFelix2 = GetEntityByName("FelixGv02")
+			if vehFelix2 then vehFelix2:SetExternalPathByName("FelixAway_path1") end
+
+			local vehFelix0 = GetEntityByName("FelixVehicle01")
+			if vehFelix0 then vehFelix0:SetExternalPathByName("FelixAway_path1") end
+			
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -2177,11 +2205,13 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
+			RuleConsole("cinematic_spring_coeff 6.0")
+
 			PlayCustomMusic("IntenseDialogue01")
 
 			local idn01 = GetPlayerVehicleId()
 			FlyLinked( "felix2_cam01", idn01, 5, 1, 0, idn01 )
-			Fly("felix2_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
+			Fly("felix2_cam02", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 1 )
 			StartCinematic()
 
 			TActivate( "trFelix2_Fade" )
@@ -2199,11 +2229,12 @@
 			local Plf = GetPlayerVehicle()
 			if Plf then
 				Plf:SetCustomControlEnabled( true )
-				Plf:SetGamePositionOnGround( CVector(528.506, 303.338, 1774.004) )
-				Plf:SetRotation(Quaternion(-0.012, -0.139, 0.005, 0.990))
+				Plf:SetGamePositionOnGround( CVector(620.024, 304.882, 1560.817) )
+				Plf:SetRotation(Quaternion(0.025, -0.308, -0.029, 0.951))
 				Plf:SetCustomControlEnabled( false )
 				Plf:SetThrottle( 1 )
 				Plf:SetCustomLinearVelocity( 10 )
+				Plf:SetExternalPathByName("player_path08")
 			end
 
 			AddCinematicMessage( 1151, 1 )
@@ -2215,13 +2246,7 @@
 	<trigger Name="trFelix2" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(479.414, 305.863, 1801.109), Quaternion(0.031, 0.925, 0.003, 0.379), 1)
-
-			local vehFelix0 = CreateVehicleEx("FelixVehicle","FelixVehicle01",CVector(477.554, 306.603, 1799.010), 1013)
-			if vehFelix0 then
-				vehFelix0:SetRotation(Quaternion(0.031, 0.925, 0.003, 0.379))
-				vehFelix0:SetSkin(4)
-			end
+			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(446.683, 312.997, 1834.165), Quaternion(0.0000, 0.8949, 0.0000, 0.4462), 0)
 
 			trigger:Deactivate()    
 		</script>
@@ -2253,15 +2278,13 @@
 
 			StopPlayingCustomMusic()
 
+			RuleConsole("cinematic_spring_coeff 0.7")
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath()
 				vehPlayer:SetGamePositionOnGround( CVector(514.183, 305.157, 1778.850))
 				vehPlayer:SetRotation(Quaternion(-0.004, -0.062, -0.003, 0.998))
-			end
-
-			local vehFelix0 = GetEntityByName("FelixVehicle01")
-			if vehFelix0 then
-				vehFelix0:Remove()
 			end
 
 			local humFelix = GetEntityByName("felix01")
@@ -2307,8 +2330,8 @@
 			PlfCoor.y = PlfCoor.y + 10
 			PlfCoor.z = PlfCoor.z + 20
 
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 0 )
-			FlyLinked( "felix3_cam01", FLID, 12, 0, 1, PlfID )
+			FlyAround( 1, 0, 25, 6.5, PlfCoor, PlfID, 1, 0 )
+			FlyLinked( "felix3_cam01", FLID, 12.5, 0, 1, PlfID )
 			StartCinematic()
 
 			if Plf then
@@ -2399,7 +2422,7 @@
 			Fly("Felix4_cam07", CINEMATIC_NO_AIM, 0, 3, 0, 0 )
 			Fly("Felix4_cam08", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
 			Fly("Felix4_cam09", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("Felix4_cam10", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("Felix4_cam10", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
 			Fly("Felix4_cam11", CINEMATIC_NO_AIM, 0, 4, 0, 1 )
 			StartCinematic()
 
@@ -2431,8 +2454,8 @@
 			if vehPlayer then
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetGamePositionOnGround( CVector(465.379, 306.774, 1819.744))
-				vehPlayer:SetRotation(Quaternion(0.030, 0.949, 0.000, 0.315))
+				vehPlayer:SetGamePositionOnGround( CVector(466.623, 306.558, 1821.114))
+				vehPlayer:SetRotation(Quaternion(0.007, 0.969, 0.011, 0.248))
 			end
 
 			local humFelix = CreateNewDummyObject( "dweller_felix", "RolikFelix", -1, -1, CVector(459.350, 306.222, 1817.796), Quaternion( 0.000, 0.468, 0.000, 0.884 ), 1)
@@ -2915,12 +2938,6 @@
 			
 			SetWeather(0)
 
-			local vehLisa = getObj("CARLISAS")
-			
-			if vehLisa then
-				vehLisa:Remove()
-			end
-
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -3017,7 +3034,7 @@
 
 			TDeactivate("GoodEndSkip")
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>
@@ -3035,7 +3052,7 @@
 
 			TDeactivate("GoodEndEnd")
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>

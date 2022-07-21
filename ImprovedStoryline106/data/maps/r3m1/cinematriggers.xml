@@ -5,29 +5,25 @@
 	<trigger Name="RolikBegin_PostFist" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-		SaveAllToleranceStatus(RS_NEUTRAL)
-		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 
-		PlayCustomMusic("Battle02")
-		TActivate("RolikEnd_PostFist")
-		TActivate("trPostFist_cam01")
-		RuleConsole("cinematic_spring_coeff 1.7")
+			PlayCustomMusic("Battle02")
+			TActivate("RolikEnd_PostFist")
+			TActivate("trPostFist_cam01")
+			RuleConsole("cinematic_spring_coeff 1.7")
 
-		CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(3500.806, 248.391, 1500.019), Quaternion(0, 0, 0, 0), 0)
+			CreateVehicleEx("Revolutioner1","Protection01",CVector(3494.294, 250.661, 1438.581), 1019)
 
-		CreateVehicleEx("Revolutioner1","Protection01",CVector(3494.294, 250.661, 1438.581), 1019)
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local vehProtect01 = GetEntityByName("Protection01")
+			local vehProtect01ID = vehProtect01:GetId()
 
-		local CToch = GetEntityByName("CamTochka")
-		local CTochID = CToch:GetId()
-		local Plf = GetPlayerVehicle()
-		local PlfID = GetPlayerVehicleId()
-		local vehProtect01 = GetEntityByName("Protection01")
-		local vehProtect01ID = vehProtect01:GetId()
+			Fly("PostFist_cam01", CINEMATIC_AIM_TO_ID, vehProtect01ID, 7, 1, 1)
+			StartCinematic()
 
-		FlyLinked("PostFist_cam01", CTochID, 7, 1, 1, vehProtect01ID, nil, nil, nil, nil )
-		StartCinematic()
-
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -35,33 +31,33 @@
 	<trigger Name="trPostFist_cam01" active="0">
  		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-		CreateVehicleEx("Revolutioner1","Protection02",CVector(3444.530, 255.166, 1488.398), 1019)
-		local vehProtect01 = GetEntityByName("Protection01")
-		local vehProtect02 = GetEntityByName("Protection02")
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetCustomControlEnabled( true )
-			vehPlayer:SetThrottle( 0 )
-			vehPlayer:SetCustomLinearVelocity( 0 )
-			vehPlayer:SetCustomControlEnabled( false )
-			vehPlayer:SetGamePositionOnGround( CVector(3503.594, 251.162, 1508.589))
-			vehPlayer:SetRotation(Quaternion(0.003, 0.971, 0.000, -0.238))
-		end
-		if vehProtect01 then
-			vehProtect01:SetThrottle( 1 )
-			vehProtect01:SetCustomLinearVelocity( 20 )
-			vehProtect01:SetGamePositionOnGround( CVector(3494.294, 250.661, 1438.581))
-			vehProtect01:SetRotation(Quaternion(0.000, -0.154, 0.000, 0.988))
-			vehProtect01:SetExternalPathByName("vehProtect_path01")
-			vehProtect01:SetSkin(6)
-		end
-		if vehProtect02 then
-			vehProtect02:SetGamePositionOnGround( CVector(3450.712, 254.828, 1460.543))
-			vehProtect02:SetRotation(Quaternion(-0.005, -0.519, 0.014, -0.855))
-			vehProtect02:SetExternalPathByName("vehProtect_path02")
-			vehProtect02:SetSkin(6)
-		end
-		trigger:Deactivate()
+			CreateVehicleEx("Revolutioner1","Protection02",CVector(3444.530, 255.166, 1488.398), 1019)
+			local vehProtect01 = GetEntityByName("Protection01")
+			local vehProtect02 = GetEntityByName("Protection02")
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(3503.594, 251.162, 1508.589))
+				vehPlayer:SetRotation(Quaternion(0.003, 0.971, 0.000, -0.238))
+			end
+			if vehProtect01 then
+				vehProtect01:SetThrottle( 1 )
+				vehProtect01:SetCustomLinearVelocity( 20 )
+				vehProtect01:SetGamePositionOnGround( CVector(3494.294, 250.661, 1438.581))
+				vehProtect01:SetRotation(Quaternion(0.000, -0.154, 0.000, 0.988))
+				vehProtect01:SetExternalPathByName("vehProtect_path01")
+				vehProtect01:SetSkin(6)
+			end
+			if vehProtect02 then
+				vehProtect02:SetGamePositionOnGround( CVector(3450.712, 254.828, 1460.543))
+				vehProtect02:SetRotation(Quaternion(-0.005, -0.519, 0.014, -0.855))
+				vehProtect02:SetExternalPathByName("vehProtect_path02")
+				vehProtect02:SetSkin(6)
+			end
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -69,39 +65,40 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-		RestoreAllToleranceStatus()
-		local vehProtect01 = GetEntityByName("Protection01")
-		local vehProtect02 = GetEntityByName("Protection02")
-		local CToch = GetEntityByName("CamTochka")
-		if CToch then  CToch:Remove() end
-		if vehProtect01 then  vehProtect01:Remove() end
-		if vehProtect02 then vehProtect02:Remove() end
+			RestoreAllToleranceStatus()
 
-		StartConversation("r3m1_NearFist_Guard1")
+			local vehProtect01 = GetEntityByName("Protection01")
+			local vehProtect02 = GetEntityByName("Protection02")
+			if vehProtect01 then  vehProtect01:Remove() end
+			if vehProtect02 then vehProtect02:Remove() end
 
-		TDeactivate("RolikBegin_PostFist")
-		TDeactivate("trPostFist_cam01")
+			StartConversation("r3m1_NearFist_Guard1")
 
-		RuleConsole("cinematic_spring_coeff 0.7")
+			TDeactivate("RolikBegin_PostFist")
+			TDeactivate("trPostFist_cam01")
 
-		TeamCreate("FistDefenders",1019,CVector(getPos("FistGuardSpawn_loc")),{"Revolutioner1","Revolutioner1"})
-		TeamCreate("FistDefenders2",1019,CVector(getPos("FistGuardSpawn2_loc")),{"Revolutioner1","Revolutioner1"})
-		local veh1 = GetEntityByName("FistDefenders_vehicle_0")
-		local veh2 = GetEntityByName("FistDefenders_vehicle_1")
-		if veh1 and veh2 then
-			veh1:SetSkin(6)
-			veh1:SetGamePositionOnGround(CVector(3461.994, 249.639, 1449.962))
-			veh1:SetRotation(Quaternion(0.009, -0.431, 0.007, -0.902))
-			veh2:SetSkin(6)
-			veh2:SetGamePositionOnGround(CVector(3455.952, 249.646, 1459.107))
-			veh2:SetRotation(Quaternion(-0.002, -0.410, -0.010, -0.912))
-		end
+			RuleConsole("cinematic_spring_coeff 0.7")
 
-		TActivate("trCreateFistDefend")
+			TeamCreate("FistDefenders",1019,CVector(getPos("FistGuardSpawn_loc")),{"Revolutioner1","Revolutioner1"})
+			TeamCreate("FistDefenders2",1019,CVector(getPos("FistGuardSpawn2_loc")),{"Revolutioner1","Revolutioner1"})
+			local veh1 = GetEntityByName("FistDefenders_vehicle_0")
+			local veh2 = GetEntityByName("FistDefenders_vehicle_1")
+			if veh1 and veh2 then
+				veh1:SetSkin(6)
+				veh1:SetGamePositionOnGround(CVector(3461.994, 249.639, 1449.962))
+				veh1:SetRotation(Quaternion(0.009, -0.431, 0.007, -0.902))
+				veh2:SetSkin(6)
+				veh2:SetGamePositionOnGround(CVector(3455.952, 249.646, 1459.107))
+				veh2:SetRotation(Quaternion(-0.002, -0.410, -0.010, -0.912))
+			end
 
-		StopPlayingCustomMusic()
-		SetCameraBehindPlayerVehicle()
-		trigger:Deactivate()
+			TActivate("trCreateFistDefend")
+
+			StopPlayingCustomMusic()
+			
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -648,15 +645,13 @@
 		TActivate("trMoveFromR2M1_cam02")
 		TActivate("trMoveFromR2M1_cam03")
 		TActivate("trMoveFromR2M1_cam04")
-		TActivate("trMoveFromR2M1_cam05")
 		TActivate("trMoveFromR2M1_cam06")
 		TActivate("trMoveFromR2M1_anim01")
 
 		Fly("MoveFromR2M1_cam01", CINEMATIC_NO_AIM, 0, 7, 1, 0 )
-		Fly("MoveFromR2M1_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-		Fly("MoveFromR2M1_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-		Fly("MoveFromR2M1_cam04", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
-		Fly("MoveFromR2M1_cam05", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+		Fly("MoveFromR2M1_cam02", CINEMATIC_NO_AIM, 0, 4.5, 0, 0 )
+		Fly("MoveFromR2M1_cam03", CINEMATIC_NO_AIM, 0, 4.5, 0, 0 )
+		Fly("MoveFromR2M1_cam04", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
 		Fly("MoveFromR2M1_cam06", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
 		StartCinematic()
 		UpdateCinematic( 1 )
@@ -752,6 +747,7 @@
 
 		AddCinematicMessage( 1022, 0.25)
 		AddCinematicMessage( 1023, 0.25)
+		AddCinematicMessage( 1024, 0.25)
 
 			trigger:Deactivate()
 		</script>
@@ -764,21 +760,6 @@
 			getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
 			getObj("humLisa"):SetNodeAction(AT_STAND2)
 			getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trMoveFromR2M1_cam05" active="0">
-		<event flypath="MoveFromR2M1_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-
-		getObj("humPlayer"):SetNodeAction(AT_STAND1)
-		getObj("humPlayer"):SetNextForAnimation(AT_STAND1, AT_STAND1)
-		getObj("humLisa"):SetNodeAction(AT_STAND2)
-		getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
-
-		AddCinematicMessage( 1024, 0.25)
 
 			trigger:Deactivate()
 		</script>
@@ -837,7 +818,6 @@
 		TDeactivate("trMoveFromR2M1_cam02")
 		TDeactivate("trMoveFromR2M1_cam03")
 		TDeactivate("trMoveFromR2M1_cam04")
-		TDeactivate("trMoveFromR2M1_cam05")
 		TDeactivate("trMoveFromR2M1_cam06")
 		TDeactivate("trMoveFromR2M1_anim01")
 

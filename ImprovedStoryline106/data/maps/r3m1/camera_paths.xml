@@ -21,8 +21,8 @@
 	</Path>
 
 	<Path	Name="PostFist_cam01">
-		<Point
-			coord="0 4 0" />
+		<Point  coord="3501.405 253.261 1501.223" rotation="-0.006 0.937 -0.017 0.349"/>
+		<Point  coord="3494.718 252.844 1491.214" rotation="-0.010 0.930 -0.025 0.365"/>
 	</Path>
 
 	<Path	Name="PostFist_cam02">

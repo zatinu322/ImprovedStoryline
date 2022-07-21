@@ -53,6 +53,11 @@
 		<Point  coord="1483.922 292.044 5551.387" rotation="0.084 0.788 0.110 0.600"/>
 	</Path>
 
+	<Path Name = "Zasada_cam00">
+		<Point  coord="30.000 10.000 0.000"/>
+		<Point  coord="60.000 25.000 30.000"/>
+	</Path>
+
 	<Path Name = "Zasada_cam01">
 		<Point  coord="1850.556 284.965 5390.143" rotation="-0.075 -0.084 0.006 0.994"/>
 		<Point  coord="1825.840 307.176 5245.819" rotation="-0.075 -0.084 0.006 0.994"/>

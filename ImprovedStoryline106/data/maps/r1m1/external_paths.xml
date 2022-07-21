@@ -79,6 +79,12 @@
 	</Path>
 
 	<Path
+		Name="FelixAway_path1">
+		<Point
+			coord="1876.764 2445.776" />
+	</Path>
+
+	<Path
 		Name="FelixPay_path">
 		<Point
 			coord="1996.998 2426.086" />
@@ -1753,6 +1759,24 @@
 		Name="player_path07">
 		<Point
 			coord="488.171 1771.626" />
+	</Path>
+
+	<Path
+		Name="player_path08">
+		<Point
+			coord="604.378 1584.573" />
+
+		<Point
+			coord="571.163 1641.609" />
+
+		<Point
+			coord="530.832 1709.696" />
+
+		<Point
+			coord="503.267 1769.498" />
+
+		<Point
+			coord="508.402 1826.172" />
 	</Path>
 
 	<Path

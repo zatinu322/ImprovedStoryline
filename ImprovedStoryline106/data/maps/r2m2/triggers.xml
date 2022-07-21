@@ -250,18 +250,22 @@
 			if vehEret1 then
 				vehEret1:SetRotation(Quaternion(0.006, -0.312, -0.002, 0.950))
 				vehEret1:setGodMode(1)
+				vehEret1:SetRandomSkin()
 			end
 			if vehEret2 then
 				vehEret2:SetRotation(Quaternion(0.003, 0.190, -0.025, 0.981))
 				vehEret2:setGodMode(1)
+				vehEret2:SetRandomSkin()
 			end
 			if vehEret3 then
 				vehEret3:SetRotation(Quaternion(-0.000, -0.387, 0.003, 0.922))
 				vehEret3:setGodMode(1)
+				vehEret3:SetRandomSkin()
 			end
 			if vehEret4 then
 				vehEret4:SetRotation(Quaternion(0.020, 0.245, 0.019, 0.969))
 				vehEret4:setGodMode(1)
+				vehEret4:SetRandomSkin()
 			end
 
 			local hs1 = GetEntityByName("FIRE01")
@@ -428,6 +432,12 @@
 			AddHistory( "r2_After_Axel_02" )
 			AddFadingMsgId( "fm_history_got" )
 
+			if IsQuestComplete("Eretik_Quest") then
+				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(2983.596, 320.756, 999.595), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(3007.236, 319.616, 1074.728), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE07", -1, -1, CVector(2984.372, 320.633, 1024.796), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			end
+
 			trigger:Deactivate()   
 		</script>
 	</trigger>
@@ -436,14 +446,18 @@
 	<trigger Name="ChangeTownsBelongR2M2" active="0">
 		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
 		<script>
+			SetTolerance(1100, 1043, RS_ALLY)
+			SetTolerance(1100, 1015, RS_ALLY)
+
 			if QuestStatus("d_GetAkselBandit_Quest")==Q_COMPLETED then
-				SetTolerance(1100, 1043, RS_ALLY);
+				SetTolerance(1100, 1016, RS_ALLY)
 				belong = 1016
 				towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
 
 			elseif QuestStatus("r2m2_MoveToZeonToAlex")==Q_COMPLETED then
 				belong = 1015
 				towns = {"GranicaVillage"}
+				SetTolerance(1100, 1016, RS_ALLY)
 
 			elseif QuestStatus("Eretik_Quest")==Q_COMPLETED then
 				belong = 1083
@@ -517,13 +531,6 @@
 			CompleteQuest( "r2m2_Head2HunterQuest" )
 
 			trigger:Deactivate()   
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
 		</script>
 	</trigger>
 

@@ -153,7 +153,7 @@
 			
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 						
 			trigger:Deactivate()
 		</script>
@@ -436,30 +436,28 @@
 		</script>
 	</trigger>
 
-	<!--			Ролик подьезда к конвою лидера экстримистов		-->
+	<!-- Ролик подьезда к конвою лидера экстримистов -->
 	<trigger Name="RolikBegin_NearCaravanLeader" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 		    SaveAllToleranceStatus(RS_NEUTRAL)
 
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetThrottle(0)
-
 			TActivate("RolikEnd_NearCaravanLeader")
 			TActivate("trCaravan_cam02")
 			TActivate("trCaravan_cam03")
+			TActivate("trCaravan_Fade")
 
 			PlayCustomMusic("Passage01unloop")
 
-			RuleConsole("cinematic_spring_coeff 3.0")
+			RuleConsole("cinematic_spring_coeff 6.0")
 
-			local Band = GetEntityByName("LeaderGuardTeam_vehicle_0")
+			local Band = GetEntityByName("LeaderGuardTeam_vehicle_2")
 			local BandID = Band:GetId()
 			local vehPID = GetPlayerVehicleId()
 			local Lider = GetEntityByName("LeaderCar_vehicle_0")
 			local LiderID = Lider:GetId()
 
-			FlyLinked( "Caravan_cam01", BandID , 13, 1, 0, vehPID, nil, true, nil, nil )
+			FlyLinked( "Caravan_cam01", BandID , 14, 1, 0, vehPID, nil, true, nil, nil )
 			FlyLinked("Caravan_cam02", vehPID, 17, 0, 0, BandID, nil, true, nil, true )
 			FlyLinked("Caravan_cam03", LiderID, 18, 0, 1, LiderID, nil, true, nil, true )
 			StartCinematic()
@@ -471,17 +469,28 @@
 		</script>
 	</trigger>
 
+	<trigger Name="trCaravan_Fade" active="0">
+	<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(2616.202, 251.012, 2590.022))
+				vehPlayer:SetRotation(Quaternion(0.001, -0.582, 0.004, 0.813))
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<trigger Name="trCaravan_cam02" active="0">
 		<event flypath="Caravan_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
 			PlayCustomMusic("IntenseDialogue01")
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetThrottle(0)
-				vehPlayer:SetCustomLinearVelocity(0)
-			end
 
 			AddCinematicMessage( 6, 1 )
 			AddCinematicMessage( 7, 1 )
@@ -513,9 +522,9 @@
 
 		StopPlayingCustomMusic()
 
-		TDeactivate("RolikEnd_NearCaravanLeader")
 		TDeactivate("trCaravan_cam02")           
 		TDeactivate("trCaravan_cam03")   
+		TDeactivate("trCaravan_Fade")
 
 		SetCameraBehindPlayerVehicle()
 
@@ -588,6 +597,7 @@
 		<script>
 		
 			RestoreAllToleranceStatus()
+
 			StopPlayingCustomMusic()
 
 			if getObj("LeaderCar_vehicle_0") then
@@ -650,7 +660,7 @@
 			
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>
@@ -692,17 +702,17 @@
 			TeamCreate("ArmiaTTSP",1010,CVector(1083.182, 308.385, 2288.191),{"BelazTSP", "TSPFighter", "tspfighter2"})
 			local tsp1 = GetEntityByName("ArmiaTTSP_vehicle_0")
 			if tsp1 then
-				tsp1:SetRotation(Quaternion(0.025, -0.997, 0.003, -0.068))
+				tsp1:SetRotation(Quaternion(-0.010, -0.142, -0.005, 0.990))
 			end
 			local tsp2 = GetEntityByName("ArmiaTTSP_vehicle_1")
 			if tsp2 then
 				tsp2:SetGamePositionOnGround( CVector(1069.780, 308.822, 2290.176))
-				tsp2:SetRotation(Quaternion(-0.052, -0.986, -0.000, -0.157))
+				tsp2:SetRotation(Quaternion(-0.010, -0.142, -0.005, 0.990))
 			end
 			local tsp3 = GetEntityByName("ArmiaTTSP_vehicle_2")
 			if tsp3 then
 				tsp3:SetGamePositionOnGround( CVector(1054.854, 311.288, 2287.232))
-				tsp3:SetRotation(Quaternion(-0.102, -0.975, 0.027, -0.195))
+				tsp3:SetRotation(Quaternion(-0.010, -0.142, -0.005, 0.990))
 			end
 
 			TeamCreate("ArmiaRybakov",1084,CVector(1097.065, 307.341, 2576.101),{"OL_Belaz", "BrigadaCruiser", "AKF_Belaz2", "Cruiser01", "CoolBelaz_2"})
@@ -750,40 +760,8 @@
 			
 			TActivate("ArmiaRybakovDIE")
 			
-			local newControllerId1 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "TSPCont1"
-			}
-
-			local newControllerId2 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "TSPCont2"
-			}
-
-			local newControllerId3 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "TSPCont3"
-			}
-
-			local newController1 = GetEntityByID(newControllerId1)
-			local newController2 = GetEntityByID(newControllerId2)
-			local newController3 = GetEntityByID(newControllerId3)
-
-			local FVehicle1 = GetEntityByName("ArmiaTTSP_vehicle_0")
-			local FVehicle2 = GetEntityByName("ArmiaTTSP_vehicle_1")
-			local FVehicle3 = GetEntityByName("ArmiaTTSP_vehicle_2")
-
-			if newController1 and FVehicle1 then
-				newController1:setVehicleUnderControl(FVehicle1)
-			end
-			
-			if newController2 and FVehicle2 then
-				newController2:setVehicleUnderControl(FVehicle2)
-			end
-			
-			if newController3 and FVehicle3 then
-				newController3:setVehicleUnderControl(FVehicle3)
-			end
+			local TSP_Army = GetEntityByName("ArmiaTTSP")
+			if TSP_Army then TSP_Army:SetDestination(CVector(996.347, 308.007, 2494.511)) end
 			
 			trigger:Deactivate()
 		</script>
@@ -1074,7 +1052,7 @@
 			if vehLisa then vehLisa:Remove() end
 			
 			Fly("Explos_cam1", CINEMATIC_NO_AIM, 0, 17, 1, 0 )
-			Fly("Explos_cam2", CINEMATIC_NO_AIM, 0, 29, 0, 1 )
+			Fly("Explos_cam2", CINEMATIC_NO_AIM, 0, 30, 0, 1 )
 			StartCinematic()
 			
 			TActivate("ExplosRolikFade")
@@ -1849,7 +1827,7 @@
 
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>
@@ -1873,7 +1851,7 @@
 
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>

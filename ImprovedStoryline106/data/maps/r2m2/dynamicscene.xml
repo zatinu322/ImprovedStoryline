@@ -1944,15 +1944,6 @@
 
 	<Object
 		Flags="21"
-		Name="Ending51_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1235.841 261.017 3657.356"
-		Radius="130.000"
-		LookingTimeOut="10.000" />
-
-	<Object
-		Flags="21"
 		Name="Shlyapa3_loc"
 		Belong="1100"
 		Prototype="genericLocation"

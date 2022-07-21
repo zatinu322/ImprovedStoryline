@@ -178,6 +178,7 @@
 					bezum:GetVehicle(i):setImmortalMode(1)
 					bezum:GetVehicle(i):SetExternalPathByName("Bezumcy_path01")
 					bezum:GetVehicle(i):SetCanBeDistractedFromMoving(true)
+					bezum:SetRandomSkin()
 				end
 			end
 
@@ -199,7 +200,19 @@
 
 	<trigger Name="AnalDestroyersRippedPlayerArse" active="0">
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="PlayerVehicleToDestroy" />
+		<event        timeout="300"        eventid="GE_TIME_PERIOD" />
 		<script>
+
+			TActivate("AnalDestroyersRippedPlayerArse1sec")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="AnalDestroyersRippedPlayerArse1sec" active="0">
+		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
+		<script>
+
 			CompleteQuestIfTaken("CheckTheEast")
 
 			if GetPlayerVehicle() then GetPlayerVehicle():setGodMode(1) end
@@ -731,13 +744,6 @@
 			TActivate("GoodEndCin")
 			
 			trigger:Deactivate()    
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
 		</script>
 	</trigger>
 

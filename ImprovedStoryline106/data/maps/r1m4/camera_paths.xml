@@ -81,8 +81,8 @@
 	</Path>
 
 	<Path Name = "Caravan_cam01">                         
-		<Point  coord="-2.000 3.500 -30.000"/>
-		<Point  coord="2.000 4.500 -40.000"/>
+		<Point  coord="10.000 3.500 -20.000"/>
+		<Point  coord="10.000 4.500 -10.000"/>
 	</Path>
 
 	<Path Name = "Caravan_cam02">                         
@@ -157,8 +157,8 @@
 	</Path>
 
 	<Path Name = "Sklad_cam4">
-        <Point  coord="1324.415 308.927 2442.770" rotation="-0.049 0.874 -0.089 0.474"/>
-		<Point  coord="1324.415 308.927 2442.770" rotation="-0.050 0.847 -0.082 0.522"/>
+		<Point  coord="1324.374 309.004 2442.715" rotation="-0.036 0.906 -0.079 0.414"/>
+		<Point  coord="1322.767 309.040 2441.247" rotation="-0.051 0.896 -0.107 0.428"/>
 	</Path>
 
 	<Path Name = "Sklad_cam5">
@@ -182,9 +182,6 @@
 	</Path>
 
 	<Path Name = "KSGCamPath">
-        <!-- <Point  coord="1118.512 336.663 2316.101" rotation="-0.117 0.842 -0.203 0.486"/>
-		<Point  coord="1118.512 336.663 2316.101" rotation="-0.037 0.184 -0.007 0.982"/> -->
-		<!-- <Point  coord="1124.245 317.056 2237.557" rotation="-0.105 0.517 -0.064 0.847"/> -->
 		<Point  coord="1098.624 313.037 2236.916" rotation="-0.048 0.250 -0.012 0.967"/>
 		<Point  coord="1132.940 370.338 2230.023" rotation="-0.082 0.107 -0.009 0.991"/>
 	</Path>

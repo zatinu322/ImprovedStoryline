@@ -1528,6 +1528,21 @@
 	</Path>
 
 	<Path
+		Name="player_path08">
+		<Point
+			coord="1793.642 5396.746" />
+
+		<Point
+			coord="1816.076 5402.309" />
+
+		<Point
+			coord="1845.512 5414.727" />
+
+		<Point
+			coord="1869.926 5438.892" />
+	</Path>
+
+	<Path
 		Name="vehPioneer_path">
 		<Point
 			coord="1499.563 5540.043" />

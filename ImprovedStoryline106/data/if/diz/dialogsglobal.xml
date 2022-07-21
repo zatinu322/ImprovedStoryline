@@ -1145,7 +1145,7 @@
 
 	<Reply
 		name="Dlg_pl_003129"
-		text="С удовольств… Что за чертовщина?! Но ведь конструкция моей маски не подразумевает употребление пищи и напитки! Но как я тогда всё это время ел и пил?!"
+		text="С удовольств… Что за чертовщина?! Но ведь конструкция моей маски не подразумевает употребления пищи и напитков! Но как я тогда всё это время ел и пил?!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003130" />
 
@@ -1981,7 +1981,7 @@
 
 	<Reply
 		name="Dlg_npc_002943"
-		text="Вот, возьми - мы привезли немного металла, добытого нашими мужьями во время их последней смены. Отвези их в Ринольск, негоже таким крупным заводам простаивать. А мы сообщим Верховному Мудрецу о том, что ты нам помог."
+		text="Вот, возьми - мы привезли немного руды, добытой нашими мужьями во время их последней смены. Отвези её в Ринольск, негоже таким крупным заводам простаивать. А мы сообщим Верховному Мудрецу о том, что ты нам помог."
 		role="NPC"
 		nextReplies="Dlg_pl_002944" />
 
@@ -6877,7 +6877,7 @@
 
 	<Reply
 		name="Dlg_pl_002310"
-		text="Спасибо."
+		text="Враг будет повержен."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Eretik_Toskana'); TActivate('trEretikPreSave'); EndConversation()" />
 <!--Root/r2m2/Сюжетные/Аксель в Зионе-->
@@ -12939,7 +12939,7 @@
 		name="Dlg_pl_002076"
 		text="Хорошо, я к нему зайду."
 		role="PLAYER"
-		scriptResult="CompleteQuest('Zachisti3_Quest'); SetTolerance( 1100, 1012, RS_ALLY ); EndConversation()" />
+		scriptResult="CompleteQuest('Zachisti3_Quest'); SetTolerance( 1100, 1012, RS_ALLY ); AddPlayerMoney(50000); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002077"
@@ -15135,7 +15135,7 @@
 		name="Dlg_pl_001564"
 		text="Кажется, у меня есть всё, что нужно. Нужно скорее сматываться."
 		role="PLAYER"
-		scriptResult="CompleteQuest('Chifir_Quest'); TakeQuest('FindBen2_Quest'); SetVar('NoChifir', 1);  LeaveTown(true)" />
+		scriptResult="CompleteQuest('Chifir_Quest'); TakeQuest('FindBen2_Quest'); SetVar('NoChifir', 1); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001556"

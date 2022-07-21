@@ -53,6 +53,18 @@
 		</script>
 	</trigger>
 
+	<!-- Удаляем пожарище после битвы с Боссом -->
+	<trigger Name="RemoveFireNodes" active="0">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			for fire = 1,3 do
+				local FireNode = GetEntityByName("FIRE0"..fire)
+				if FireNode then FireNode:Remove() end
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Машинка игрока останавливается -->
 	<trigger Name="trVehSTOP" active="0">
  		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
@@ -204,6 +216,7 @@
 			if vehCar then
 				vehCar:AttachTrailer("MolokovozTrailer")
 				PaintTrailer(vehCar)
+				vehCar:SetMaxTorque(200)
 			end
 
 			TakeQuest("d_SecondVillage_Quest")
@@ -746,13 +759,6 @@
 			end
 
 			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
 		</script>
 	</trigger>
 

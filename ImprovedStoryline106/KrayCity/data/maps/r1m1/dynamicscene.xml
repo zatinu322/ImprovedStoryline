@@ -358,8 +358,8 @@
 		Name="FelixBaseLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="496.095 303.849 1801.254"
-		Radius="139.000"
+		Pos="513.617 303.023 1697.748"
+		Radius="171.000"
 		LookingTimeOut="100.000" />
 
 	<Object

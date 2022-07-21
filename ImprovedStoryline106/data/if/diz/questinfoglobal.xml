@@ -795,7 +795,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m2"
-			targetObjName="Ending51_loc" />
+			targetObjName="ToR2M1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1058,6 +1058,8 @@
 
 	<QuestInfo
 		questName="FirstTimePlay"
+		briefDiz="Взять грузовик отца"
+		fullDiz="Не могу поверить,что отец отпустил меня в одиночку в город. Нужно скорее взять из гаража его грузовик, пока он не передумал!"
 		isMainQuest="0" />
 
 	<QuestInfo
@@ -2998,7 +3000,7 @@
 
 	<QuestInfo
 		questName="d_FirstVillage_Quest"
-		briefDiz="Следовать за транспортом до деревни Роторск"
+		briefDiz="Следовать за караваном до деревни Роторск"
 		isMainQuest="1">
 		<Map
 			name="r2m1"
@@ -3442,7 +3444,7 @@
 
 	<QuestInfo
 		questName="d_SecondVillage_Quest"
-		briefDiz="Следовать за транспортом до деревни Генденбургск"
+		briefDiz="Следовать за караваном до деревни Генденбургск"
 		isMainQuest="1">
 		<Map
 			name="r2m1"

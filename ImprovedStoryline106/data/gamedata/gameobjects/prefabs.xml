@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: Prefabs.xml,v 1.12 2005/09/27 10:13:33 anton Exp $
+-->
+
+<Prototypes>
+<Prototype
+	Class="ObjPrefab"
+	Name="two">
+	<ObjInfos>
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_dot2"
+			RelPos="22.669 0.000 -10.983"
+			RelAngle="0.000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="workshop2"
+			RelPos="20.136 0.000 5.381"
+			RelAngle="130.002" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_smallwall1"
+			RelPos="20.972 0.000 -3.789"
+			RelAngle="-67.999" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_smallwall1"
+			RelPos="19.059 0.000 16.435"
+			RelAngle="-41.000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="brokvehicle1"
+			RelPos="-7.931 0.000 -12.417"
+			RelAngle="-86.190" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="brokvehicle2"
+			RelPos="-3.826 0.000 12.374"
+			RelAngle="-43.013" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_dot3"
+			RelPos="-16.024 0.000 -6.979"
+			RelAngle="-61.009" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_smallwall1"
+			RelPos="-0.246 0.000 -21.124"
+			RelAngle="-21.996" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_smallwall1"
+			RelPos="-11.648 0.000 -13.253"
+			RelAngle="-54.001" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_dot1"
+			RelPos="-9.065 0.000 15.746"
+			RelAngle="-82.008" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_smallwall1"
+			RelPos="-1.135 0.000 17.782"
+			RelAngle="-165.996" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="heavy_smallwall1"
+			RelPos="-11.702 0.000 10.228"
+			RelAngle="-123.067" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="house3"
+			RelPos="-6.214 0.000 -18.100"
+			RelAngle="-32.997" />
+	</ObjInfos>
+</Prototype>
+	<Prototype 
+		Class			= "ObjPrefab"
+		Name			= "prefabTest" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_Barrel1"	RelPos = "5 0 5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_Barrel2"	RelPos = "-5 0 5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_Stolb1"		RelPos = "5 0 -5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_TankEg"		RelPos = "-5 0 -5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Scout01"		RelPos = "0 0 0"	RelAngle = "45" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "ObjPrefab"
+		Name			= "prefabTest1" >
+		<ObjInfos>
+			<ObjInfo Prototype = "someDummyObject"	ModelName = "cargo"	RelPos = "5 0 5"	RelAngle = "0" />
+			<ObjInfo Prototype = "someDummyObject"  	ModelName = "box"	RelPos = "-5 0 5"	RelAngle = "90" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricadeTest" 
+		Probability		= "0.3" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_Barrel1"	RelPos = "5 0 5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_Barrel2"	RelPos = "-5 0 5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_Stolb1"		RelPos = "5 0 -5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_TankEg"		RelPos = "-5 0 -5"	RelAngle = "0" />
+			<ObjInfo Prototype = "Scout01"		RelPos = "0 0 0"	RelAngle = "45" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade1" 
+		Probability		= "0.3" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "-6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun05"		RelPos = "0 0 0"		RelAngle = "0" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade2" 
+		Probability		= "0.3" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall2"	RelPos = "0 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun05"		RelPos = "-6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun05"		RelPos = "6 0 0"		RelAngle = "0" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade3" 
+		Probability		= "0.3" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "0 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall2"	RelPos = "-7 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall2"	RelPos = "7 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Sml101"				RelPos = "5 0 5"		RelAngle = "45" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade4_wGw" 
+		Probability		= "0.5" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "-6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun08"		RelPos = "0 0 0"		RelAngle = "0" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade5_GwG" 
+		Probability		= "0.5" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "0 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun07"		RelPos = "-6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun07"		RelPos = "6 0 0"		RelAngle = "0" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade6_wGw" 
+		Probability		= "0.5" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall2"	RelPos = "-6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun07"		RelPos = "0 0 0"		RelAngle = "0" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade7_GwG" 
+		Probability		= "0.5" >
+		<ObjInfos>
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "0 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun08"		RelPos = "-6 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "staticAutoGun08"		RelPos = "6 0 0"		RelAngle = "0" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype 
+		Class			= "Barricade"
+		Name			= "barricade8_wwwC" 
+		Probability		= "0.5" >
+		<ObjInfos>	
+			<ObjInfo Prototype = "Breakable_SackWall2"	RelPos = "0 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall1"	RelPos = "-7 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Breakable_SackWall2"	RelPos = "7 0 0"		RelAngle = "0" />
+			<ObjInfo Prototype = "Sml301"				RelPos = "5 0 5"		RelAngle = "45" />
+		</ObjInfos>
+	</Prototype>
+
+<Prototype
+	Class="ObjPrefab"
+	Name="InFatherHause_01">
+	<ObjInfos>
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="conteiner"
+			Scale="0.300"
+			RelPos="2.908 2.973 3.500"
+			RelRot="-0.0055 -0.1950 0.0278 0.9804" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="Dimzavesa"
+			Scale="1.000"
+			RelPos="0.640 2.914 3.340"
+			RelRot="0.0000 -0.8950 0.0000 0.4460" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="mikro"
+			Scale="0.329"
+			RelPos="0.263 2.449 1.870"
+			RelRot="-0.0100 -0.2381 0.0400 0.9704" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="Turboakselerator"
+			Scale="1.000"
+			RelPos="4.225 2.799 2.314"
+			RelRot="0.0190 -0.2320 0.0270 0.9721" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="factory_box"
+			Scale="0.739"
+			RelPos="4.935 1.066 -3.106"
+			RelRot="0.0000 -0.3261 0.0000 0.9453" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="gadget_12"
+			Scale="0.150"
+			RelPos="4.635 2.866 -2.806"
+			RelRot="0.000 0.328 0.000 0.944" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_tube_angle"
+			Scale="1.000"
+			RelPos="1.108 1.033 1.329"
+			RelRot="0.0040 0.0240 0.1650 0.9860" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_plate1"
+			Scale="2.297"
+			RelPos="1.071 -0.000 6.123"
+			RelRot="-0.5009 -0.5159 0.4989 0.4839" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="wood_tramp"
+			Scale="1.000"
+			RelPos="-9.089 -0.789 5.111"
+			RelRot="0.1330 0.7240 -0.1460 0.6610" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="pack"
+			Scale="0.591"
+			RelPos="-1.338 1.005 -3.207"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="barrel1"
+			Scale="1.373"
+			RelPos="-1.953 1.072 0.008"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="poddon"
+			Scale="1.000"
+			RelPos="1.419 0.842 0.928"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="agro_tech2"
+			Scale="0.218"
+			RelPos="3.012 1.947 0.500"
+			RelRot="-0.8789 0.1840 0.0730 -0.4340" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="agro_tech3"
+			Scale="0.244"
+			RelPos="2.911 2.020 0.800"
+			RelRot="-0.4371 -0.0890 0.1780 0.8771" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_plate1"
+			Scale="2.297"
+			RelPos="0.855 -0.374 -11.910"
+			RelRot="-0.4942 -0.5102 0.5052 0.4902" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="kanistr"
+			Scale="0.286"
+			RelPos="4.075 1.211 -3.500"
+			RelRot="-0.1330 -0.8480 -0.0310 -0.5120" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="potatoe"
+			Scale="0.258"
+			RelPos="-1.448 1.306 -0.682"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="rabochee_oborudovanie"
+			Scale="1.000"
+			RelPos="-1.852 2.441 3.929"
+			RelRot="0.0000 0.5680 0.0000 0.8230" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="lom"
+			Scale="0.637"
+			RelPos="-1.339 1.357 -4.366"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_plate3"
+			Scale="1.741"
+			RelPos="1.386 5.388 7.825"
+			RelRot="-0.5020 0.4960 -0.5040 0.4980" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="factory_conteiner2"
+			Scale="1.776"
+			RelPos="0.022 -0.000 -1.315"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="angar2"
+			Scale="2.913"
+			RelPos="-11.810 -8.328 -9.494"
+			RelRot="0.7082 -0.0190 -0.0280 0.7052" />
+	</ObjInfos>
+</Prototype>
+
+<Prototype
+	Class="ObjPrefab"
+	Name="InFatherHause_02">
+	<ObjInfos>
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="conteiner"
+			Scale="0.300"
+			RelPos="0.820 1.887 1.123"
+			RelRot="-0.1722 0.0161 0.0257 0.9846" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="Dimzavesa"
+			Scale="1.000"
+			RelPos="-0.510 2.250 3.953"
+			RelRot="0.0000 -0.8950 0.0000 0.4460" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="Turboakselerator"
+			Scale="1.000"
+			RelPos="6.311 0.807 0.702"
+			RelRot="0.0027 0.2935 0.0329 0.9554" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="factory_box"
+			Scale="0.739"
+			RelPos="-2.238 1.066 -1.370"
+			RelRot="0.0000 -0.3261 0.0000 0.9453" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_tube_angle"
+			Scale="1.000"
+			RelPos="2.070 1.033 1.711"
+			RelRot="0.0040 0.0240 0.1650 0.9860" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="wood_tramp"
+			Scale="1.000"
+			RelPos="-8.127 -0.789 5.493"
+			RelRot="0.1502 0.7199 -0.1649 0.6573" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="pack"
+			Scale="0.591"
+			RelPos="-2.179 2.615 -1.247"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="barrel1"
+			Scale="1.373"
+			RelPos="-1.848 1.409 -0.004"
+			RelRot="-0.6852 -0.6792 -0.1852 -0.1868" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="poddon"
+			Scale="1.000"
+			RelPos="2.381 0.842 1.310"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="agro_tech2"
+			Scale="0.218"
+			RelPos="3.974 1.947 0.882"
+			RelRot="-0.8789 0.1840 0.0730 -0.4340" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="agro_tech3"
+			Scale="0.244"
+			RelPos="3.873 2.020 1.182"
+			RelRot="-0.4371 -0.0890 0.1780 0.8771" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_plate1"
+			Scale="2.297"
+			RelPos="1.817 -0.374 -11.528"
+			RelRot="-0.4942 -0.5102 0.5052 0.4902" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="kanistr"
+			Scale="0.286"
+			RelPos="5.037 1.007 -3.118"
+			RelRot="-0.2286 -0.2347 0.6768 0.6593" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="potatoe"
+			Scale="0.258"
+			RelPos="-0.486 1.306 -0.300"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="rabochee_oborudovanie"
+			Scale="1.000"
+			RelPos="-2.843 2.214 4.444"
+			RelRot="0.0000 -0.0635 0.0000 0.9980" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="lom"
+			Scale="0.637"
+			RelPos="-0.377 1.357 -3.984"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="metal_plate3"
+			Scale="1.741"
+			RelPos="2.348 5.388 8.207"
+			RelRot="-0.5020 0.4960 -0.5040 0.4980" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="factory_conteiner2"
+			Scale="1.776"
+			RelPos="0.984 -0.000 -0.933"
+			RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+		<ObjInfo
+			Prototype="someDummyObject"
+			ModelName="angar2"
+			Scale="2.913"
+			RelPos="-12.232 -8.328 -8.774"
+			RelRot="0.7082 -0.0190 -0.0280 0.7052" />
+	</ObjInfos>
+</Prototype>
+	<Prototype 
+Class="ObjPrefab" 
+Name="js_3barrels" Probability="0.5">
+		<ObjInfos>
+			<ObjInfo Prototype="Breakable_Barrel_Explosive3" RelPos="-0.493 0.000 -0.390" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_Barrel_Explosive2" RelPos="-0.101 0.000 0.659" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_Barrel_Explosive3" RelPos="0.594 0.000 -0.269" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+		</ObjInfos>
+	</Prototype>
+	<Prototype Class="ObjPrefab" Name="js_barrelbar" Probability="0.5">
+		<ObjInfos>
+			<ObjInfo Prototype="Breakable_WoodFence2" Scale="1.000" RelPos="4.602 0.000 -0.046" RelRot="0.0000 0.7025 0.0000 0.7117"/>
+			<ObjInfo Prototype="Breakable_WoodFence2" Scale="1.000" RelPos="-4.363 0.000 0.113" RelRot="0.0000 -0.7102 0.0000 0.7040"/>
+			<ObjInfo Prototype="Breakable_WoodFence2" Scale="1.000" RelPos="0.148 0.000 4.494" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_WoodFence2" Scale="1.000" RelPos="0.141 0.000 -4.426" RelRot="0.0000 -1.0000 0.0000 -0.0044"/>
+			<ObjInfo Prototype="Breakable_Barrel_Explosive3" Scale="1.000" RelPos="-1.428 0.000 -0.012" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_Barrel_Explosive3" Scale="1.000" RelPos="0.405 0.000 -1.450" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_Barrel_Explosive3" Scale="1.000" RelPos="0.495 0.000 1.328" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+		</ObjInfos>
+	</Prototype>
+	<Prototype Class="ObjPrefab" Name="js_barricade1" Probability="0.5">
+		<ObjInfos>
+			<ObjInfo Prototype="Breakable_SackWall2" Scale="1.000" RelPos="4.231 0.000 4.081" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" Scale="1.000" RelPos="-3.279 0.000 4.096" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" Scale="1.000" RelPos="-7.081 0.000 0.071" RelRot="0.0000 0.7431 0.0000 0.6691"/>
+			<ObjInfo Prototype="Breakable_SackWall2" Scale="1.000" RelPos="7.238 0.000 0.035" RelRot="0.0000 0.7576 0.0000 0.6528"/>
+			<ObjInfo Prototype="sack_dot2_kord" Scale="1.000" RelPos="-0.259 0.000 -0.369" RelRot="0.0000 -0.9999 0.0000 0.0109"/>
+			<ObjInfo Prototype="Breakable_SackWall2" Scale="1.000" RelPos="3.189 0.000 -3.997" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" Scale="1.000" RelPos="-4.188 0.000 -4.063" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+		</ObjInfos>
+	</Prototype>
+	<Prototype Class="ObjPrefab" Name="js_brickbar" Probability="0.5">
+		<ObjInfos>
+			<ObjInfo Prototype="brick_dot1_vulcan" Scale="1.000" RelPos="0.008 0.000 0.045" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_BrickWall1" Scale="1.000" RelPos="-6.014 0.000 0.172" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_BrickWall1" Scale="1.000" RelPos="6.018 0.000 -0.083" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+		</ObjInfos>
+	</Prototype>
+	<Prototype Class="ObjPrefab" Name="js_wallwithenemy1" Probability="0.5">
+		<ObjInfos>
+			<ObjInfo Prototype="Breakable_BrickWall2" Scale="1.000" RelPos="-7.931 0.000 5.085" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_BrickWall2" Scale="1.000" RelPos="0.018 0.000 5.061" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_BrickWall2" RelPos="7.865 0.000 5.060" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" RelPos="-8.587 0.000 7.035" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" RelPos="-0.975 0.000 7.005" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" RelPos="6.782 0.000 6.935" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="r1m1_scout01" RelPos="8.355 1.584 -2.934" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="r1m3_hunter02" RelPos="-8.070 1.989 -2.374" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+		</ObjInfos>
+	</Prototype>
+	<Prototype Class="ObjPrefab" Name="js_wallwithenemy2" Probability="0.5">
+		<ObjInfos>
+			<ObjInfo Prototype="Breakable_BrickWall2" RelPos="-8.096 0.000 5.229" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_BrickWall2" RelPos="-0.147 0.000 5.204" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_BrickWall2" RelPos="7.699 0.000 5.204" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" RelPos="-8.752 0.000 7.178" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" RelPos="-1.140 0.000 7.149" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="Breakable_SackWall2" RelPos="6.616 0.000 7.079" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="r2m2_Hunter01" RelPos="-7.072 2.025 -2.181" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+			<ObjInfo Prototype="r2m2_scout01" RelPos="8.677 1.488 -3.343" RelRot="0.0000 0.0000 0.0000 1.0000"/>
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype
+		Class="ObjPrefab"
+		Name="ZavalR3m1_01">
+		<ObjInfos>
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder4"
+				Scale="1.000"
+				RelPos="17.450 -0.039 21.842"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder1"
+				Scale="1.172"
+				RelPos="-31.571 8.332 14.790"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="r3_junglebush3"
+				Scale="1.000"
+				RelPos="-28.665 2.417 -3.536"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="r3_junglebush1"
+				Scale="1.000"
+				RelPos="-15.188 0.104 1.882"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder3"
+				Scale="0.695"
+				RelPos="-2.510 14.502 -7.571"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder2"
+				Scale="1.000"
+				RelPos="-2.472 -0.006 -7.322"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder1"
+				Scale="1.000"
+				RelPos="32.336 -0.052 -13.939"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder3"
+				Scale="0.628"
+				RelPos="30.616 13.114 -6.147"
+				RelRot="0.0000 0.0000 0.0000 1.0000" />
+		</ObjInfos>
+	</Prototype>
+
+	<Prototype
+		Class="ObjPrefab"
+		Name="ZavalR3m1_02">
+		<ObjInfos>
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder3"
+				Scale="0.628"
+				RelPos="35.924 17.838 0.667"
+				RelRot="-0.4358 -0.1640 0.3117 0.8283" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder1"
+				Scale="1.000"
+				RelPos="40.337 2.877 -17.714"
+				RelRot="0.1995 -0.9285 0.0658 0.3062" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder2"
+				Scale="1.000"
+				RelPos="-37.009 2.555 -11.571"
+				RelRot="0.0000 0.3987 0.0000 0.9171" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder3"
+				Scale="0.695"
+				RelPos="-23.497 14.648 10.711"
+				RelRot="-0.2860 -0.2154 0.3356 0.8705" />
+
+			<ObjInfo
+				Prototype="someDummyObject"
+				ModelName="crag_boulder4"
+				Scale="1.000"
+				RelPos="-15.757 -31.834 17.906"
+				RelRot="0.0000 0.2142 0.0000 0.9764" />
+		</ObjInfos>
+	</Prototype>
+
+</Prototypes>	

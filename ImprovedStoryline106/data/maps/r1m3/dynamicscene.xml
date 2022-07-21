@@ -2038,8 +2038,8 @@
 		Name="ZasadaLocQ"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1853.000 277.625 5421.000"
-		Radius="20.000"
+		Pos="1788.311 279.505 5399.008"
+		Radius="30.000"
 		LookingTimeOut="10.000" />
 
 	<Object

@@ -146,7 +146,7 @@
 	</trigger>
 
 	<trigger Name="Rasstrel1" active="0">
-		<event timeout="1" eventid="GE_TIME_PERIOD" />
+		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 			local vehPal1 = GetEntityByName("Palach01")
 			local vehPal2 = GetEntityByName("Palach02")
@@ -2406,7 +2406,7 @@
 			
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>

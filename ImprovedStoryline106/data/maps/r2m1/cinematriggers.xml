@@ -168,23 +168,13 @@
 			local vehNeznID = vehNezn:GetId()
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			local NeznCoor = vehNezn:GetPosition()
-
-			PlfCoor.x = PlfCoor.x + 20
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z - 20
-
-			NeznCoor.x = PlfCoor.x + 20
-			NeznCoor.y = PlfCoor.y + 5
-			NeznCoor.z = PlfCoor.z + 20
 
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround( 1, 0, 20, 14, PlfCoor, vehNeznID, 1, 1 )
+			FlyLinked("Nezn_cam01", PlfID, 15, 1, 1, vehNeznID)
 			StartCinematic()
 
 			AddCinematicMessage( 11, 1 )
@@ -199,7 +189,7 @@
 	</trigger>
 
 	<trigger Name="trFIRSTATTACK_PathOut" active="0">
-		<event timeout="10" eventid="GE_TIME_PERIOD" />
+		<event timeout="5" eventid="GE_TIME_PERIOD" />
 		<script>
 		local vehNezn = GetEntityByName("AfterTunnel")
 			if vehNezn then
@@ -437,7 +427,7 @@
 			PlfCoor.y = PlfCoor.y + 3
 			PlfCoor.z = PlfCoor.z + 5
 
-			FlyAround( 1, 0, 25, 18, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 25, 21, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 143, 1)
@@ -513,7 +503,7 @@
 		</script>
 	</trigger>
 
-	<!-- Победили СНГ. Одетт получает ранение. -->
+	<!-- Победа над СНГ. Одетт получает ранение. -->
 	<trigger Name="OIDRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -524,7 +514,11 @@
 			
 			Fly("preOIDCam", CINEMATIC_NO_AIM, 0, 9.5, 1, 0 )
 			Fly("OIDCam1", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
-			Fly("OIDCam2", CINEMATIC_NO_AIM, 0, 20, 0, 1 )
+			if IsQuestItemPresent("quest_medicine_box") then
+				Fly("OIDCam2", CINEMATIC_NO_AIM, 0, 23, 0, 1 )
+			else
+				Fly("OIDCam2", CINEMATIC_NO_AIM, 0, 21.5, 0, 1 )
+			end
 			StartCinematic()
 			
 			AddCinematicMessage( 147, 0.1 )
@@ -702,7 +696,7 @@
 			PlfCoor.y = PlfCoor.y + 5
 			PlfCoor.z = PlfCoor.z - 25
 
-			FlyAround( 1, 0, 25, 12, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 25, 12.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 13, 1)
@@ -792,7 +786,7 @@
 			PlfCoor.y = PlfCoor.y + 5
 			PlfCoor.z = PlfCoor.z - 20
 
-			FlyAround( 1, 0, 25, 12, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 25, 13, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 15, 1)
@@ -878,7 +872,7 @@
 			PlfCoor.y = PlfCoor.y + 3
 			PlfCoor.z = PlfCoor.z + 5
 
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 25, 7, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			AddCinematicMessage( 18, 1)
 
@@ -902,7 +896,7 @@
 		</script>
 	</trigger>
 
-	<!-- Бой в Туннеле -->
+	<!-- Бой возле Туннеля -->
 	<trigger Name="TUNELFIGHT" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelAttackLocation" />
 		<script>
@@ -968,7 +962,7 @@
 			PlfCoor.y = PlfCoor.y + 3
 			PlfCoor.z = PlfCoor.z + 5
 
-			FlyAround( 1, 0, 25, 18, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 25, 29, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 20, 1)
@@ -1005,7 +999,7 @@
 			local vehSNGID = vehSNG:GetId()
 			local vehSNGCoor = vehSNG:GetPosition()
 
-			local vehAR = GetEntityByName("BossARCar_vehicle_2")
+			local vehAR = GetEntityByName("BossARCar_vehicle_1")
 			local vehARID = vehAR:GetId()
 			local vehARCoor = vehAR:GetPosition()
 			vehARCoor.x = vehARCoor.x + 10
@@ -1015,7 +1009,7 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 
-			FlyLinked( "TAKEBOSSARLOC_cam01", vehSNGID, 5, 1, 0, PlfID, nil, nil, nil, nil )
+			FlyLinked( "TAKEBOSSARLOC_cam01", vehSNGID, 7, 1, 0, PlfID, nil, nil, nil, nil )
 			FlyAround( 1, 0, 10, 4, vehARCoor, vehARID, 0, 1 )
 			StartCinematic()
 
@@ -1081,7 +1075,7 @@
 			PlfCoor.y = PlfCoor.y + 3
 			PlfCoor.z = PlfCoor.z + 5
 
-			FlyAround( 1, 0, 65, 6, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 65, 7.7, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 22, 1)
@@ -1127,7 +1121,7 @@
 				vehPlayer:SetCustomControlEnabled( false )
 			end
 			
-			Fly("CaravDeadCam1", CINEMATIC_NO_AIM, 0, 13, 1, 1 )
+			Fly("CaravDeadCam1", CINEMATIC_NO_AIM, 0, 15, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 8804, 1 )
@@ -1150,7 +1144,7 @@
 			
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>
@@ -1202,6 +1196,7 @@
 			trigger:Deactivate() 
 		</script>
 	</trigger>
+
 <!-- игрок натыкается на лису возле Гельвеции -->
 	<trigger Name="RolikBegin_Lisa" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
@@ -1212,12 +1207,15 @@
 
 			RuleConsole("cinematic_spring_coeff 5.7")
 
+			local vehLisa = CreateVehicleEx("LisaCar","vehLisa_0",CVector(0, 2000, 0), 1042)
+			local vehLisaID = vehLisa:GetId()
+
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 
-			Fly("Lisa_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
-			FlyLinked( "Lisa_cam02", PlfID, 4, 0, 0, nil, nil, true, nil, nil )
-			Fly("Lisa_cam03", CINEMATIC_NO_AIM, 0, 15, 0, 1 )
+			Fly("Lisa_cam01", CINEMATIC_NO_AIM, 0, 3, 1, 0 )
+			FlyLinked( "Lisa_cam02", PlfID, 3, 0, 0, vehLisaID, nil, true, nil, nil )
+			Fly("Lisa_cam03", CINEMATIC_NO_AIM, 0, 18, 0, 1 )
 			StartCinematic()
 
 			TActivate("RolikEnd_Lisa")
@@ -1242,10 +1240,10 @@
 				vehPlayer:SetCustomLinearVelocity(0)
 			end
 
-			CreateVehicleEx("LisaCar","vehLisa_0",CVector(6110.662, 251.541, 6607.340), 1042)
 			local vehLisa = GetEntityByName("vehLisa_0")
 			if vehLisa then
 				vehLisa:SetSkin(2)
+				vehLisa:SetGamePositionOnGround(CVector(6110.662, 251.541, 6607.340))
 				vehLisa:SetRotation(Quaternion(-0.001, -0.792, -0.000, 0.611))
 				vehLisa:SetExternalPathByName("lisa_path01")
 				vehLisa:SetThrottle(1)
@@ -1260,7 +1258,7 @@
 		<event flypath="Lisa_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			AddCinematicMessage( 29, 1 )
-			AddCinematicMessage( 30, 5 )
+			AddCinematicMessage( 30, 1 )
 
 			TActivate( "trLisa_PathOut")
 
@@ -1269,7 +1267,7 @@
 	</trigger>
 
 	<trigger Name="trLisa_PathOut" active="0">
-		<event timeout="8" eventid="GE_TIME_PERIOD" />
+		<event timeout="11" eventid="GE_TIME_PERIOD" />
 		<script>
 			local vehLisa = GetEntityByName("vehLisa_0")
 			if vehLisa then
@@ -1322,8 +1320,6 @@
 
 			RuleConsole("cinematic_spring_coeff 0.7")
 
-
-
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1341,11 +1337,11 @@
 			Fly("LISADIED_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			Fly("LISADIED_cam03", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			Fly("LISADIED_cam04", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-			Fly("LISADIED_cam05", CINEMATIC_NO_AIM, 0, 48, 0, 0 )
+			Fly("LISADIED_cam05", CINEMATIC_NO_AIM, 0, 48.5, 0, 0 )
 			Fly("LISADIED_cam06", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
 			Fly("LISADIED_cam07", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-			Fly("LISADIED_cam08", CINEMATIC_NO_AIM, 0, 23, 0, 0 )
-			Fly("LISADIED_cam09", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
+			Fly("LISADIED_cam08", CINEMATIC_NO_AIM, 0, 24.5, 0, 0 )
+			Fly("LISADIED_cam09", CINEMATIC_NO_AIM, 0, 9.5, 0, 0 )
 			Fly("LISADIED_cam10", CINEMATIC_NO_AIM, 0, 16, 0, 1 )
 			StartCinematic()
 
@@ -1794,26 +1790,71 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetThrottle(0)
-				vehPlayer:SetCustomLinearVelocity(0)
-			end
-
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2181.949, 250.742, 5855.640), Quaternion(0, 0, 0, 0), 1)
 
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
-			local vehPID = GetPlayerVehicleId()
 			local Cont = GetEntityByName("boss02cont")
 			local ContID = Cont:GetId()
+			Fly("BOSSDIE_cam03", CINEMATIC_NO_AIM, 0, 21, 1, 1 )
+			--FlyLinked("BOSSDIE_cam02", CTochID, 21, 1, 1, ContID, nil, nil, nil, nil )
 
-			FlyLinked( "BOSSDIE_cam01", vehPID , 5, 1, 0, ContID, nil, nil, nil, nil )
-			FlyLinked("BOSSDIE_cam02", CTochID, 25, 0, 1, ContID, nil, nil, nil, nil )
 			StartCinematic()
 
 			TActivate("RolikEnd_BOSSDIE")
+			TActivate("BOSSDIE_RolikFade")
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="BOSSDIE_RolikFade" active="0">
+	<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			TActivate("ContainerEffectsCreate")
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetThrottle(0)
+				vehPlayer:SetCustomLinearVelocity(0)
+				vehPlayer:setGodMode(1)
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ContainerEffectsCreate" active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetEntityByName("ParisBoss"):IsAlive()==nil then
+				local Cont = GetEntityByName("boss02cont")
+				if Cont then
+					local ContPos = Cont:GetPosition()
+					Cont:Remove()
+					CreateNewObject {prototypeName = "superBlastWave", objName = "ParisBossBlastWave"}
+					local BW = GetEntityByName("ParisBossBlastWave")
+					if BW then BW:SetPosition(ContPos) end
+					CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", ContPos.x+5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+					CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", ContPos.x-5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+					CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", ContPos.z+5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+					CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", ContPos.z-5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+					CreateEffectInsertedInRemove( "ET_PS_VEH_PART_BLOW_BIG_CAB", ContPos.z+5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+					CreateEffectInsertedInRemove( "ET_PS_VEH_PART_BLOW_BIG_CARGO", ContPos.z-5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+					CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", ContPos, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+					TActivate("ContainerEffectsCreate2")
+				end
+				trigger:Deactivate()
+			end
+
+		</script>
+	</trigger>
+
+	<trigger Name="ContainerEffectsCreate2" active="0">
+		<event	timeout="0.25"		eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(2090.828, 233.744, 5914.090), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(2092.660, 233.435, 5906.795), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(2096.350, 238.067, 5938.659), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1827,13 +1868,18 @@
 			SetTolerance( 1042, 1005, RS_ENEMY )
 
 			local CToch = GetEntityByName("CamTochka")
-			if CToch then
-				CToch:Remove()
-			end
+			if CToch then CToch:Remove() end
 
 			TDeactivate("RolikBegin_BOSSDIE")
+			TDeactivate("ContainerEffectsCreate")
+			TDeactivate("ContainerEffectsCreate2")
+			TDeactivate("BOSSDIE_RolikFade")
+
+			TActivate("RemoveFireNodes")
 
 			StopPlayingCustomMusic()
+
+			DisableGodMode()
 			
 			TakeQuest("Disk2OrakulLisa")
 

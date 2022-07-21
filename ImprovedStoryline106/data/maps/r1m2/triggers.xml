@@ -305,7 +305,16 @@
 	<trigger Name="tr_THEBEN" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheBen_House" />
 		<script>
-			if (GetVar("FindBen").AsInt==1) or QuestStatus("d_FindHouseOfBen_Quest")==Q_TAKEN or QuestStatus("TalkBeforeDesert")==Q_TAKEN or QuestStatus("BenBadEnd")==Q_TAKEN or QuestStatus("LisaUBena")==Q_TAKEN  or QuestStatus("r4m2_LisaDieBen")==Q_TAKEN then
+			if ((GetVar("FindBen").AsInt==1) 
+				or QuestStatus("d_FindHouseOfBen_Quest")==Q_TAKEN 
+				or QuestStatus("TalkBeforeDesert")==Q_TAKEN 
+				or QuestStatus("BenBadEnd")==Q_TAKEN 
+				or QuestStatus("LisaUBena")==Q_TAKEN 
+				or QuestStatus("r4m2_LisaDieBen")==Q_TAKEN 
+				or QuestStatus("BenZima_Quest")==Q_TAKEN 
+				or QuestStatus("BenNormalEnd")==Q_TAKEN 
+				or QuestStatus("BenGoodEnd")==Q_TAKEN) then
+
 				TActivate("RolikBegin_BenHause")
 
 				trigger:Deactivate()
@@ -407,6 +416,27 @@
 		</script>
 	</trigger>
 
+	<!-- Завершение битв в Колизее -->
+	<trigger Name="KOLIZEYFIGHTDIE1" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator1" />
+		<script>
+			
+			TActivate("ROLIK_KOLIZEYFIGHTDIE")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="KOLIZEYFIGHTDIE2" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator2" />
+		<script>
+			
+			TActivate("ROLIK_KOLIZEYFIGHTDIE")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Квесты с археологами. Помощь/похищение. -->
 	<trigger Name="ANTICWAR" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
@@ -470,6 +500,13 @@
 				if b == 1 then
 
 					PassToMap("r1m1", "FromR1M2", -1 )
+
+					if QuestStatus("SharkyVyshka")==Q_TAKEN then
+						local vehLisa = GetEntityByName("CARLISAS")
+						if vehLisa then
+							vehLisa:Remove()
+						end
+					end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 

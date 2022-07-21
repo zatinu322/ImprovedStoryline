@@ -11,15 +11,15 @@
 
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
-			Plf:SetGamePositionOnGround(CVector(getPos("MisterShlyapaFM")))
 
-			FlyAround(6, 0, 25, 19, PlfCoor, PlfID, 1, 1 )
+			local PlfCoor = CVector(4239.508, 69.099, 5136.699)
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			FlyAround(6, 0, 25, 19.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 88056, 1 )
@@ -30,7 +30,16 @@
 				AddCinematicMessage( 88057, 0.25 )
 			end
 
+			TActivate("cinAfterChifir_Fade")
 			TActivate("cinAfterChifir_End")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterChifir_Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
 			
 			trigger:Deactivate()
 		</script>
@@ -73,7 +82,7 @@
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 11, PlfCoor, PlfID, 1, 1 )
+			FlyAround(6, 0, 25, 12.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 5963, 1 )
@@ -968,10 +977,11 @@
 			TDeactivate("BadEndCam3")
 			TDeactivate("BadEndCam4")
 			TDeactivate("BadEndCam5")
-			TActivate("trBenDialogActivate")
 			TDeactivate("BadEndCam6")
 			TDeactivate("PreSuicCam")
 			TDeactivate("SuicCam")
+
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>
@@ -992,11 +1002,12 @@
 			TDeactivate("BadEndCam2")
 			TDeactivate("BadEndCam3")
 			TDeactivate("BadEndCam4")
-			TActivate("trBenDialogActivate")
 			TDeactivate("BadEndCam5")
 			TDeactivate("BadEndCam6")
 			TDeactivate("PreSuicCam")
 			TDeactivate("SuicCam")
+
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>
@@ -1238,7 +1249,12 @@
 
 			TDeactivate("trKol1_cam02")
 
-			TActivate("KOLIZEYFIGHTDIE")
+			-- local trigger = getObj("KOLIZEYFIGHTDIE")
+			-- if trigger then
+			-- 	trigger:AddEvent("GE_OBJECT_DIE", "Gladiator1")
+			-- end
+
+			TActivate("KOLIZEYFIGHTDIE1")
 
 			SetCameraBehindPlayerVehicle()
 
@@ -1360,7 +1376,7 @@
 
 			CompleteQuest("r1m2_Glagiators_Quest1")
 
-			TActivate("KOLIZEYFIGHTDIE")
+			TActivate("KOLIZEYFIGHTDIE2")
 
 			SetCameraBehindPlayerVehicle()
 
@@ -1369,8 +1385,8 @@
 	</trigger>
 
 	<!-- Одержали победу на арене Колизея -->
-	<trigger Name="KOLIZEYFIGHTDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Gladiator1" />
+	<trigger Name="ROLIK_KOLIZEYFIGHTDIE" active="0">
+		<event timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
 
 			SaveAllToleranceStatus(RS_NEUTRAL)

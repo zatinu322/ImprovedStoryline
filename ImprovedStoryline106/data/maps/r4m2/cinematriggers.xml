@@ -387,7 +387,7 @@
 			SpawnMessageBox( "8902" )
 			ShowDeathMenu()
 
-			TActivate("trBenDialogActivate")
+			CheckPlayerVehicle()
 			
 			trigger:Deactivate()
 		</script>

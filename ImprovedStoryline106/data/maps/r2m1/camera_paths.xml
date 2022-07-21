@@ -122,11 +122,16 @@
 <Path Name="Start01_cam04">
 	<Point  coord="2 5 -15"/>
 	<Point  coord="0 10 -25"/>
+</Path>
 
+<Path Name="Nezn_cam01">
+	<Point  coord="15 4 0"/>
+	<Point  coord="15 7 0"/>
 </Path>
 
 <Path Name="TAKEBOSSARLOC_cam01">
 	<Point  coord="-50 5 -30"/>
+	<Point  coord="-50 15 -30"/>
 
 </Path>
 
@@ -139,7 +144,7 @@
 
 <Path Name="Lisa_cam02">
 
-	<Point  coord="0 1 8" rotation="0 0 0 1"/>
+	<Point  coord="0 1 9" rotation="0 0 0 1"/>
 
 </Path>
 
@@ -279,15 +284,35 @@
 
 </Path>
 
-<Path Name="BOSSDIE_cam01">
-	<Point  coord="0 3 -30"/>
-
-</Path>
-
 <Path Name="BOSSDIE_cam02">
 	<Point  coord="0 2 0"/>
 	<Point  coord="0 4 0"/>
 
+</Path>
+
+<Path Name="BOSSDIE_cam03">
+	<!-- <Point  coord="2197.578 238.616 5779.807" rotation="0.012 0.213 0.003 0.977"/> -->
+	<Point  coord="2181.949 252.770 5855.640" rotation="-0.041 0.289 -0.012 0.956"/>
+	<Point  coord="2181.949 252.824 5855.640" rotation="-0.014 0.292 -0.004 0.956"/>
+	<Point  coord="2181.949 252.894 5855.640" rotation="-0.017 0.294 -0.005 0.956"/>
+	<Point  coord="2181.949 252.974 5855.640" rotation="-0.018 0.296 -0.005 0.955"/>
+	<Point  coord="2181.949 253.063 5855.640" rotation="-0.021 0.302 -0.007 0.953"/>
+	<Point  coord="2181.949 253.160 5855.640" rotation="-0.021 0.374 -0.008 0.927"/>
+	<Point  coord="2181.949 253.264 5855.640" rotation="-0.015 0.433 -0.007 0.901"/>
+	<Point  coord="2181.949 253.373 5855.640" rotation="0.009 0.432 0.004 0.902"/>
+	<Point  coord="2181.949 253.485 5855.640" rotation="0.022 0.430 0.010 0.903"/>
+	<Point  coord="2181.949 253.601 5855.640" rotation="0.026 0.398 0.011 0.917"/>
+	<Point  coord="2181.949 253.718 5855.640" rotation="0.033 0.360 0.013 0.932"/>
+	<Point  coord="2181.949 253.835 5855.640" rotation="0.035 0.356 0.014 0.934"/>
+	<Point  coord="2181.949 253.952 5855.640" rotation="0.053 0.373 0.021 0.926"/>
+	<Point  coord="2181.949 254.066 5855.640" rotation="0.081 0.363 0.032 0.928"/>
+	<Point  coord="2181.949 254.177 5855.640" rotation="0.083 0.346 0.031 0.934"/>
+	<Point  coord="2181.949 254.283 5855.640" rotation="0.084 0.348 0.032 0.933"/>
+	<Point  coord="2181.949 254.382 5855.640" rotation="0.085 0.398 0.037 0.913"/>
+	<Point  coord="2181.949 254.475 5855.640" rotation="-0.027 0.506 -0.016 0.862"/>
+	<Point  coord="2181.949 254.559 5855.640" rotation="-0.041 0.511 -0.025 0.858"/>
+	<Point  coord="2181.949 254.634 5855.640" rotation="-0.039 0.506 -0.023 0.861"/>
+	<Point  coord="2181.949 254.697 5855.640" rotation="-0.039 0.504 -0.023 0.863"/>
 </Path>
 
 <Path Name="UFO_cam01">

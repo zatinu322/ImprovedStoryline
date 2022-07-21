@@ -633,23 +633,61 @@
 					veh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
 					veh1:setGodMode(1)
 					veh1:setImmortalMode(1)
+					veh1:SetRandomSkin()
 				end
 				local veh2 = GetEntityByName("ArmyVeh2")
 				if veh2 then
 					veh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
 					veh2:setGodMode(1)
 					veh2:setImmortalMode(1)
+					veh2:SetRandomSkin()
 				end
 				local veh3 = GetEntityByName("ArmyVeh3")
 				if veh3 then
 					veh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
 					veh3:setGodMode(1)
 					veh3:setImmortalMode(1)
+					veh3:SetRandomSkin()
 				end
 
 				TActivate( "ArmiaTSPPreparationBegin" )
 			end
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Создание машины вора -->
+	<trigger Name="TRIGGER_THIEFWAR" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			TeamCreate("ThiefCar",1002,CVector(6919.780, 297.239, 1115.137),{"UralShot"}, nil, 0, Quaternion(-0.030, 0.866, -0.000, 0.498))
+
+			TActivate("TRIGGER_THIEFDIE")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Лиса ворует диск 2 у выезда на Хель -->
+	<trigger Name="TRIGGER_LISAAFTERTHIEF" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SnatchLoc" />
+		<script>
+			TActivate( "RolikBegin_LISAAFTERTHIEF" )
+
+   			FailQuest( "r1m3_MoveToOraculAfterThief" )
+   			TakeQuest( "LisaVPeshte" )
+
+			RemoveQuestItem("quest_disk_1")
+			RemoveQuestItem("quest_disk_2")
+			RemoveQuestItem("quest_key_for_submarine")
+			
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_1")
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_2")
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_key_for_submarine")
+
+			AddFadingMsgId( "fm_history_got" )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -775,41 +813,6 @@
 		</script>
 	</trigger>
 
-	<!-- Создание машины вора -->
-	<trigger Name="TRIGGER_THIEFWAR" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			TeamCreate("ThiefCar",1002,CVector(6919.780, 297.239, 1115.137),{"UralShot"}, nil, 0, Quaternion(-0.030, 0.866, -0.000, 0.498))
-
-			TActivate("TRIGGER_THIEFDIE")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<!-- Лиса ворует диск 2 у выезда на Хель -->
-	<trigger Name="TRIGGER_LISAAFTERTHIEF" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SnatchLoc" />
-		<script>
-			TActivate( "RolikBegin_LISAAFTERTHIEF" )
-
-   			FailQuest( "r1m3_MoveToOraculAfterThief" )
-   			TakeQuest( "LisaVPeshte" )
-
-			RemoveQuestItem("quest_disk_1")
-			RemoveQuestItem("quest_disk_2")
-			RemoveQuestItem("quest_key_for_submarine")
-			
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_1")
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_2")
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_key_for_submarine")
-
-			AddFadingMsgId( "fm_history_got" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<!-- Встреча с Оракулом, который посылает нас в Сель -->
 	<trigger Name="TRIGGER_ORACLEABOTPLATE" active="1">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
@@ -850,13 +853,6 @@
 			TActivate("NormalEndCin")
 			trigger:Deactivate()
 		end
-		</script>
-	</trigger>
-
-	<trigger Name="trBenDialogActivate" active="0">
-		<event        timeout="3"        eventid="GE_TIME_PERIOD" />
-		<script>
-			CheckPlayerVehicle()
 		</script>
 	</trigger>
 

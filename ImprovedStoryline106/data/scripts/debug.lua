@@ -20,7 +20,9 @@ end
 -- some function for camera log
 function p()
     local pos, rot, lookAt = GetCameraPos()
-    LOG(' <Point  coord="' .. strsub( tostring(pos), 2, strlen( tostring(pos) ) - 1 ) .. '" rotation="'.. strsub( tostring(rot), 2, strlen( tostring(rot) ) - 1 ) .. '"/>')
+    pos = string.gsub(tostring(pos), "%,", "")
+    rot = string.gsub(tostring(rot), "%,", "")
+    LOG(' <Point  coord="' .. strsub( pos, 2, strlen(pos) - 1 ) .. '" rotation="'.. strsub( rot, 2, strlen(rot) - 1 ) .. '"/>')
 end
 
 
@@ -78,7 +80,7 @@ function DebugCreate( PrototypeName, Belong )
 end
 
 
-function CreateVehicleEx( PrototypeName, Name, pos, belong )
+function CreateVehicleEx( PrototypeName, Name, pos, belong, rot )
 	local bel
 
 	if belong then
@@ -106,6 +108,8 @@ function CreateVehicleEx( PrototypeName, Name, pos, belong )
 
 
 	vehicle:SetGamePositionOnGround( pos )
+
+	if rot then vehicle:SetRotation(rot) end
 
 	return vehicle
 end

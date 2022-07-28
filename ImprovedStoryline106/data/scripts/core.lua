@@ -12,6 +12,8 @@
 
 LOG("IMPROVED STORYLINE V1.0.6 COMPATCH BUILD 220515")
 
+ISL_VERSION = "v1.0.6 build 220515"
+
 EXECUTE_SCRIPT "data\\scripts\\compat.lua"
 
 EXECUTE_SCRIPT "data\\scripts\\globalObjects.lua"

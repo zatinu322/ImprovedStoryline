@@ -21,12 +21,12 @@
 		<Point  coord="699.094 332.554 1238.057" rotation="-0.035 0.827 -0.052 0.559"/>
 	</Path>
 
-	<Path Name = "VyezdRolCam1">
-		<Point  coord="2844.112 423.738 144.049" rotation="-0.006 0.987 0.157 -0.040"/>
-		<Point  coord="2840.213 423.738 139.891" rotation="0.109 -0.774 -0.138 0.608"/>
+	<Path Name = "VyezdRolCam2">
+		<Point  coord="2845.415 424.538 142.331" rotation="-0.013 0.972 0.055 -0.229"/> 
+		<Point  coord="2845.720 424.617 141.714" rotation="-0.008 0.974 0.035 -0.222"/>
 	</Path>
 
-	<Path Name = "VyezdRolCam2">
+	<Path Name = "VyezdRolCam1">
 		<Point  coord="3812.583 551.495 569.812" rotation="0.030 -0.474 -0.016 0.880"/>
 		<Point  coord="3820.594 551.495 560.386" rotation="0.038 -0.368 -0.015 0.929"/>
 	</Path>
@@ -93,6 +93,11 @@
 
 	<Path Name = "linkedcam">
 		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
+	<Path Name = "SHRolikCam0">
+		<Point  coord="0.000 3.000 0.000"/>
+		<Point  coord="0.000 -1.000 0.000"/>
 	</Path>
 
 </Paths>

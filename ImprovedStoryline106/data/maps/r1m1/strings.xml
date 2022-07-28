@@ -616,6 +616,13 @@
 		sound=""
 		fontSize="12"
 		time="6" />
+	
+	<string
+		id="15"
+		modelName="mask_hero"
+		value="Кажется, это последний... Теперь жители Южного смогут вздохнуть с облегчением."
+		sound=""
+		time="7" />
 
 	<string
 		id="90000"

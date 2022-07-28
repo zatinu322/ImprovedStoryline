@@ -195,4 +195,24 @@
 	<string
 		id="fm_death"
 		value="...АКТИВАЦИЯ ДЕТОНАТОРА..." />
+
+	<string
+		id="fm_LaBelleEnemies"
+		value="Новые враги были замечены дальше по дороге." />
+
+	<string
+		id="fm_LaBelleMoreEnemies1"
+		value="Ещё больше врагов было замечено дальше по дороге." />
+
+	<string
+		id="fm_LaBelleMoreEnemies2"
+		value="Враги подбираются к деревне! Скорее туда!" />
+
+	<string
+		id="fm_LaBelleMoreEnemies3"
+		value="Главарь этой банды Отшельников был замечен у самого Ла Белля. Не дай ему уйти!" />
+
+	<string
+		id="fm_player_use_thing"
+		value="Вы воспользовались предметом %1p." />
 </resource>

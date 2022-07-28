@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
-	<trigger Name="StartMusic" active="0">
-		<event eventid="GE_GAME_START" ObjName="Player1" />
-		<script>
 
-			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
-				PlayCustomMusic("Passage02")
-			end
-
-		</script>
-	</trigger>
-
+	<!-- Инициализация карты -->
 	<trigger Name="GlobalVar" active="1">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -30,24 +21,28 @@
 				
 				TActivate("LabirintChange11")
 			
-				
 				trigger:Deactivate()
-				
 			end
 			
 		</script>
 	</trigger>
 
+	<!-- Смена машины на лабиринтскую -->
 	<trigger Name="LabirintChange11" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SetVar("GarVehName","LABCAR")
+
 			local excarname="LABCAR"
 			local oldcarname="OldCarPlayer2"
+
 			GetPlayerVehicle():SetNameFromScript( oldcarname )
+
 			SaveWeaponGroups()
+
 			local veh=getObj(excarname)
 			local oldveh=GetPlayerVehicle()
+
 			if veh then
 				GetPlayerVehicle():setGodMode(1)
 				GetPlayerVehicle():SetCustomControlEnabled(1)
@@ -72,60 +67,40 @@
 		</script>
 	</trigger>
 
-	<trigger	Name="PlayerChange11"	active="0">
-		<event	timeout="0.001"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local excarname="OldCarPlayer2"
-			local oldcarname="LABCAR"
-			local veh=getObj(excarname)
-			local oldveh=GetPlayerVehicle()
-			if veh then
-				GetPlayerVehicle():setGodMode(1)
-				GetPlayerVehicle():SetCustomControlEnabled(1)
-				CapturePlayerVehicle(0, "garage")
-   				g_Player:AddChild(veh)
-				GetPlayerVehicle():setGodMode(1)
-				GetPlayerVehicle():SetCustomControlEnabled(0)
-			end
-			if oldveh then
-			   oldveh:setGodMode(0)
-			end
-			RestoreWeaponGroups()
-			GetPlayerVehicle():setGodMode(0)
-			GetPlayerVehicle():setImmortalMode(0)
-
-			PassToMap("r1m5", "FromR1M6JD", 0 , 1)
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Завал входа в лабиринт -->
 	<trigger Name="trExitExplosion" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Explos_loc" />
 		<script>
 			CreateNewDummyObject( "concrete_plate", "obval", -1, -1, CVector(3150.602, 282.007, 2113.764), Quaternion(0.0651, -0.0845, 0.6070, 0.7875), 0)
+
 			CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(3143.630, 255.000, 2116.092), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Подрыв машины игрока, если он всё ещё в лабиринте -->
 	<trigger Name="PlayerDieOrNot" active="0">
 		<event	timeout="420"		eventid="GE_TIME_PERIOD" />
 		<script>
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				GetPlayerVehicle():AddModifier( "hp", "= 0" )
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Таймер -->
 	<trigger Name="Timer1" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 420)
+
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer2")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -134,9 +109,11 @@
 		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 360)
+
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer3")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -145,9 +122,11 @@
 		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 300)
+			
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer4")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -156,9 +135,11 @@
 		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 240)
+
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer5")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -167,9 +148,11 @@
 		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 180)
+
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer6")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -178,9 +161,11 @@
 		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 120)
+
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer7")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -189,9 +174,11 @@
 		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death_count_0", 60)
+
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				TActivate("Timer8")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -200,18 +187,61 @@
 		<event	timeout="58"		eventid="GE_TIME_PERIOD" />
 		<script>
 			AddImportantFadingMsgByStrIdFormatted( "fm_death")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Игрок нашёл выход из лабиринта -->
 	<trigger Name="trExitLabirint" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="LabExit_loc" />
 		<script>
 			AllowSave(true)
+
 			CompleteQuest("LastIspytanie_Quest3")
+
+			for trigger = 2,8 do
+				TDeactivate("Timer"..trigger)
+			end
+
+			TDeactivate("PlayerDieOrNot")
+
 			TActivate("KonRolikBegin")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Смена машины с лабиринтской на машину игрока -->
+	<trigger	Name="PlayerChange11"	active="0">
+		<event	timeout="0.001"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local excarname="OldCarPlayer2"
+			local oldcarname="LABCAR"
+			local veh=getObj(excarname)
+			local oldveh=GetPlayerVehicle()
+
+			if veh then
+				GetPlayerVehicle():setGodMode(1)
+				GetPlayerVehicle():SetCustomControlEnabled(1)
+				CapturePlayerVehicle(0, "garage")
+   				g_Player:AddChild(veh)
+				GetPlayerVehicle():setGodMode(1)
+				GetPlayerVehicle():SetCustomControlEnabled(0)
+			end
+
+			if oldveh then
+			   oldveh:setGodMode(0)
+			end
+
+			RestoreWeaponGroups()
+
+			GetPlayerVehicle():setGodMode(0)
+			GetPlayerVehicle():setImmortalMode(0)
+
+			PassToMap("r1m5", "FromR1M6JD", -1 , 1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
 </triggers>

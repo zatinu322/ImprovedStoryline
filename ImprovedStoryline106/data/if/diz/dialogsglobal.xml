@@ -18245,7 +18245,7 @@
 		name="Dlg_pl_002550"
 		text="Спасибо, оно мне пригодится. Удачи вам."
 		role="PLAYER"
-		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); TActivate('TheSowthDefRemove'); SetWeather(0); EndConversation()" />
+		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); SetWeather(0); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_003264"

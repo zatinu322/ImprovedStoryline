@@ -1729,22 +1729,9 @@
 			
 			StopPlayingCustomMusic()
 			
-			TeamCreate("CheholFighters",1012,CVector(1947.328, 270.788, 3980.524),{"MolokovozChehol", "Cruiser02", "BelazTSPP"})
-			local vehBrig1 = GetEntityByName("CheholFighters_vehicle_0")
-			local vehBrig2 = GetEntityByName("CheholFighters_vehicle_1")
-			local vehBrig3 = GetEntityByName("CheholFighters_vehicle_2")
-			if vehBrig1 then
-				vehBrig1:SetRotation(Quaternion(-0.005, 0.953, 0.003, 0.302))
-				vehBrig1:SetGamePositionOnGround( CVector(1947.328, 270.788, 3980.524))
-			end
-			if vehBrig2 then
-				vehBrig2:SetRotation(Quaternion(0.002, -0.607, 0.014, -0.794))
-				vehBrig2:SetGamePositionOnGround( CVector(1553.049, 264.343, 4023.615))
-			end
-			if vehBrig3 then
-				vehBrig3:SetRotation(Quaternion(0.003, 0.960, 0.000, 0.279))
-				vehBrig3:SetGamePositionOnGround( CVector(1635.032, 259.942, 3990.873))
-			end
+			TeamCreate("CheholFighter1",1012,CVector(1947.328, 270.788, 3980.524),{"MolokovozChehol"}, nil, nil, Quaternion(-0.005, 0.953, 0.003, 0.302))
+			TeamCreate("CheholFighter2",1012,CVector(1553.049, 264.343, 4023.615),{"Cruiser02"}, nil, nil, Quaternion(0.002, -0.607, 0.014, -0.794))
+			TeamCreate("CheholFighter3",1012,CVector(1635.032, 259.942, 3990.873),{"BelazTSPP"}, nil, nil, Quaternion(0.003, 0.960, 0.000, 0.279))
 
 			SetTolerance(1100,1012,RS_ENEMY)
 			
@@ -1759,15 +1746,16 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 20
+		
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 15, 8, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 8809, 0.25 )

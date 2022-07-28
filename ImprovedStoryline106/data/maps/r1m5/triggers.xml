@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<!-- Инициализация карты -->
 	<trigger Name="GlobalVar" active="1">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
@@ -23,6 +24,7 @@
 		</script>
 	</trigger>
 
+	<!-- Фейк ворота для Ринольска -->
 	<trigger Name="SpawnRinolskGates" active="0">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
@@ -34,6 +36,7 @@
 		</script>
 	</trigger>
 
+	<!-- Создание ходящих человечков -->
 	<trigger Name="CreateWalkingHumans" active="0">
 		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
 		<script>
@@ -54,61 +57,7 @@
 		</script>
 	</trigger>
 
-	<trigger Name="triggerExitToMap16" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M6" />
-		<script>
-			local b = SpawnMessageBox( "8801" )
-			if b == 1 then
-				PassToMap("r1m6", "FromR1M5", -1 )
-				
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
-				
-			else
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetGamePositionOnGround( CVector(239.243, 347.996, 2738.524))
-					vehPlayer:SetRotation(Quaternion(-0.037, 0.757, 0.012, 0.653))
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
-			end
- 		</script>
-	</trigger>
-
-	<trigger Name="triggerExitToMap16Extra" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M6JD" />
-		<script>
-		if QuestStatus("LastIspytanie_Quest2")==Q_TAKEN then
-			local b = SpawnMessageBox( "8801" )
-			if b == 1 then
-				PassToMap("r1m6", "FromR1M5JD", -1 )
-				
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
-				
-				SetGameTime(9,0)
-				
-				trigger:Deactivate()
-			else
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetGamePositionOnGround( CVector(3374.700, 372.697, 1742.609))
-					vehPlayer:SetRotation(Quaternion(0.012, 0.150, -0.033, 0.988))
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
-			end
-		end
- 		</script>
-	</trigger>
-
+	<!-- Приехали в шахту -->
 	<trigger Name="SHRolikStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Shahta_loc" />
 		<script>
@@ -116,15 +65,45 @@
 			CompleteQuest("LaBelleHelp_Quest2")
 			
 			TActivate("SHRolikBegin")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Создание тел рабочих на шахте -->
+	<trigger Name="ShahtaCreate" active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewDummyObject( "dweller", "hum1", -1, -1, CVector(1494.786, 266.950, 2815.538), Quaternion(-0.4855, 0.5183, 0.5138, 0.4813), 0)
+			CreateNewDummyObject( "dweller3", "hum2", -1, -1, CVector(1494.860, 267.028, 2817.021), Quaternion(-0.4868, 0.5129, 0.5171, 0.4822), 1)
+			CreateNewDummyObject( "dweller", "hum3", -1, -1, CVector(1494.977, 266.950, 2818.521), Quaternion(-0.4912, 0.5086, 0.5172, 0.4823), 1)
+			CreateNewDummyObject( "dweller", "hum4", -1, -1, CVector(1495.053, 266.950, 2819.842), Quaternion(-0.4967, 0.5033, 0.5140, 0.4856), 1)
+			CreateNewDummyObject( "dweller2", "hum5", -1, -1, CVector(1495.056, 267.099, 2821.026), Quaternion(-0.4956, 0.5043, 0.5043, 0.4956), 1)
+			CreateNewDummyObject( "dweller", "hum6", -1, -1, CVector(1495.108, 266.950, 2822.201), Quaternion(-0.5043, 0.4956, 0.5043, 0.4956), 0)
+			CreateNewDummyObject( "dweller", "hum7", -1, -1, CVector(1492.984, 266.950, 2822.263), Quaternion(-0.4978, 0.5022, 0.4978, 0.5022), 2)
+			CreateNewDummyObject( "dweller3", "hum8", -1, -1, CVector(1492.947, 267.056, 2821.105), Quaternion(-0.4945, 0.5054, 0.5054, 0.4945), 0)
+			CreateNewDummyObject( "dweller", "hum9", -1, -1, CVector(1492.926, 267.023, 2819.908), Quaternion(-0.5011, 0.4989, 0.5119, 0.4879), 0)
+			CreateNewDummyObject( "dweller_white", "hum10", -1, -1, CVector(1492.873, 266.950, 2818.677), Quaternion(-0.4945, 0.5054, 0.5097, 0.4901), 0)
+			CreateNewDummyObject( "dweller2", "hum11", -1, -1, CVector(1492.800, 267.126, 2817.157), Quaternion(-0.4934, 0.5065, 0.5172, 0.4823), 0)
+			CreateNewDummyObject( "dweller", "hum12", -1, -1, CVector(1492.733, 266.950, 2815.603), Quaternion(-0.4945, 0.5054, 0.5076, 0.4923), 0)
+
+			for i=1,12 do
+				getObj("hum"..i):SetNodeAction(AT_STAND2)
+			end
+			
+			CreateNewSgNodeObject( "factorytunne", "shah1", -1, -1, CVector(1487.994, 274.142, 2874.270), Quaternion(-0.1478, 0.0233, -0.0059, 0.9887), 0.400)
+			CreateNewDummyObject( "agro_gate", "shah2", -1, -1, CVector(1488.677, 275.025, 2874.442), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Защита Ла Белля -->
 	<trigger Name="trLBProtect1" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			TeamCreate("LBBandits1",1092,CVector(924.444, 299.674, 1077.717),{"r1m2_bug04","r1m2_bug04","Molokovoz02"}, CVector(710.581, 309.349, 1204.370), 1)
-			TeamCreate("ArmiaLaBelle",1090,CVector(647.762, 322.614, 1240.646),{"Mudr_Belaz", "Mudr_Cruiser2"}, CVector(971.696, 303.987, 1052.079))
+			TeamCreate("ArmiaLaBelle",1090,CVector(647.762, 322.614, 1240.646),{"Mudr_Belaz", "Mudr_Cruiser2"}, CVector(924.444, 299.674, 1077.717))
 			
 			local amb1 = GetEntityByName("ArmiaLaBelle_vehicle_0")
 			if amb1 then amb1:SetRotation(Quaternion(0.015, -0.890, 0.104, -0.443)) end
@@ -155,8 +134,8 @@
 
 			CompleteQuest("LaBelleHelp_Quest4")
 
-			AddImportantFadingMsg("Новые враги были замечены дальше по дороге.")
-			AddFadingMsg("Новые враги были замечены дальше по дороге.")
+			AddImportantFadingMsgId("fm_LaBelleEnemies")
+			AddFadingMsgId("fm_LaBelleEnemies")
 						
 			TActivate("trLBDie2")
 			
@@ -177,8 +156,8 @@
 
 			CompleteQuest("LaBelleHelp_Quest5")
 
-			AddImportantFadingMsg("Ещё больше врагов было замечено дальше по дороге.")
-			AddFadingMsg("Ещё больше врагов было замечено дальше по дороге.")
+			AddImportantFadingMsgId("fm_LaBelleMoreEnemies1")
+			AddFadingMsgId("fm_LaBelleMoreEnemies1")
 
 			TActivate("trLBDie3")
 			
@@ -199,8 +178,8 @@
 
 			CompleteQuest("LaBelleHelp_Quest6")
 
-			AddImportantFadingMsg("Враги подбираются к деревне! Скорее туда!")
-			AddFadingMsg("Враги подбираются к деревне! Скорее туда!")
+			AddImportantFadingMsgId("fm_LaBelleMoreEnemies2")
+			AddFadingMsgId("fm_LaBelleMoreEnemies2")
 
 			TActivate("trLBDie4")
 			
@@ -221,8 +200,8 @@
 
 			CompleteQuest("LaBelleHelp_Quest7")
 
-			AddImportantFadingMsg("Главарь нападающей группировки был замечен у самого Ла Белля. Не дайте ему уйти!")
-			AddFadingMsg("Главарь нападающей группировки был замечен у самого Ла Белля. Не дайте ему уйти!")
+			AddImportantFadingMsgId("fm_LaBelleMoreEnemies3")
+			AddFadingMsgId("fm_LaBelleMoreEnemies3")
 
 			TActivate("trLBDie5")
 			
@@ -244,85 +223,59 @@
 		</script>
 	</trigger>
 
-	<trigger Name="ShahtaCreate" active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			CreateNewDummyObject( "dweller", "hum1", -1, -1, CVector(1494.786, 266.950, 2815.538), Quaternion(-0.4855, 0.5183, 0.5138, 0.4813), 0)
-			CreateNewDummyObject( "dweller3", "hum2", -1, -1, CVector(1494.860, 267.028, 2817.021), Quaternion(-0.4868, 0.5129, 0.5171, 0.4822), 1)
-			CreateNewDummyObject( "dweller", "hum3", -1, -1, CVector(1494.977, 266.950, 2818.521), Quaternion(-0.4912, 0.5086, 0.5172, 0.4823), 1)
-			CreateNewDummyObject( "dweller", "hum4", -1, -1, CVector(1495.053, 266.950, 2819.842), Quaternion(-0.4967, 0.5033, 0.5140, 0.4856), 1)
-			CreateNewDummyObject( "dweller2", "hum5", -1, -1, CVector(1495.056, 267.099, 2821.026), Quaternion(-0.4956, 0.5043, 0.5043, 0.4956), 1)
-			CreateNewDummyObject( "dweller", "hum6", -1, -1, CVector(1495.108, 266.950, 2822.201), Quaternion(-0.5043, 0.4956, 0.5043, 0.4956), 0)
-			CreateNewDummyObject( "dweller", "hum7", -1, -1, CVector(1492.984, 266.950, 2822.263), Quaternion(-0.4978, 0.5022, 0.4978, 0.5022), 2)
-			CreateNewDummyObject( "dweller3", "hum8", -1, -1, CVector(1492.947, 267.056, 2821.105), Quaternion(-0.4945, 0.5054, 0.5054, 0.4945), 0)
-			CreateNewDummyObject( "dweller", "hum9", -1, -1, CVector(1492.926, 267.023, 2819.908), Quaternion(-0.5011, 0.4989, 0.5119, 0.4879), 0)
-			CreateNewDummyObject( "dweller_white", "hum10", -1, -1, CVector(1492.873, 266.950, 2818.677), Quaternion(-0.4945, 0.5054, 0.5097, 0.4901), 0)
-			CreateNewDummyObject( "dweller2", "hum11", -1, -1, CVector(1492.800, 267.126, 2817.157), Quaternion(-0.4934, 0.5065, 0.5172, 0.4823), 0)
-			CreateNewDummyObject( "dweller", "hum12", -1, -1, CVector(1492.733, 266.950, 2815.603), Quaternion(-0.4945, 0.5054, 0.5076, 0.4923), 0)
-
-			for i=1,12 do
-				getObj("hum"..i):SetNodeAction(AT_STAND2)
---				println("Animation set for dweller "..i)
-			end
-			
-			CreateNewSgNodeObject( "factorytunne", "shah1", -1, -1, CVector(1487.994, 274.142, 2874.270), Quaternion(-0.1478, 0.0233, -0.0059, 0.9887), 0.400)
-			CreateNewDummyObject( "agro_gate", "shah2", -1, -1, CVector(1488.677, 275.025, 2874.442), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Приехали к первому выезду -->
 	<trigger Name="VyezdRolik1Start" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Vyezd1_loc" />
 		<script>
 			CompleteQuest("FindDaughter_Quest3")
+
 			TActivate("VyezdRolik1Begin")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="trhumPlayerRemove" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local humP = GetEntityByName("humPlayer1")
-			if humP then humP:Remove() end
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Приехали ко второму выезду -->
 	<trigger Name="VyezdRolik2Start" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Vyezd2_loc" />
 		<script>
 			CompleteQuest("FindDaughter_Quest4")
+
 			TActivate("VyezdRolik2Begin")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="VyezdRolik3Start" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Vyezd3_loc" />
-		<script>
-			CompleteQuest("FindDaughter_Quest6")
-			TActivate("VyezdRolik3Begin")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Создание машины Тихомира -->
 	<trigger Name="CreateTikhomirCar" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateVehicleEx("UralTikhomir","TikhomirCar",CVector(3053.686, 329.370, 3152.573), 1092)
-			local bcar = GetEntityByName("TikhomirCar")
+			local bcar = CreateVehicleEx("UralTikhomir","TikhomirCar",CVector(3053.686, 329.370, 3152.573), 1092)
 			if bcar then
 				bcar:SetRotation(Quaternion(-0.007, 0.340, -0.085, 0.937))
 				bcar:setGodMode(1)
 				bcar:setImmortalMode(1)
 				bcar:SetRandomSkin()
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Подъехали к ферме Тихомира -->
+	<trigger Name="VyezdRolik3Start" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Vyezd3_loc" />
+		<script>
+			CompleteQuest("FindDaughter_Quest6")
+
+			TActivate("VyezdRolik3Begin")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Уничтожили Тихомира -->
 	<trigger Name="trTikhomirsCarDIE" active="0">
 	<event eventid="GE_OBJECT_DIE" ObjName="TikhomirAgressor" />
 		<script>
@@ -334,46 +287,60 @@
 		</script>
 	</trigger>
 
-	<trigger Name="RPGSignsRolik1" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RPGSigns_loc" />
+	<!-- Переход в Лидденклауд -->
+	<trigger Name="triggerExitToMap16" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M6" />
 		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			PlayCustomMusic("Bio01")
-			
-			Fly("RPGSignsCam", CINEMATIC_NO_AIM, 0, 10, 1, 1 )
-			StartCinematic()
-			
-			AddCinematicMessage( 26, 1 )
-			
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
+			local b = SpawnMessageBox( "8801" )
+			if b == 1 then
+				PassToMap("r1m6", "FromR1M5", -1 )
+				
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+				end
+				
+			else
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetGamePositionOnGround( CVector(239.243, 347.996, 2738.524))
+					vehPlayer:SetRotation(Quaternion(-0.037, 0.757, 0.012, 0.653))
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+				end
 			end
-			
-			CompleteQuest("RPGSigns_Quest1")
-			
-			TActivate("RPGSignsRolik2")
-			
-			trigger:Deactivate()
-		</script>
+ 		</script>
 	</trigger>
 
-	<trigger Name="RPGSignsRolik2" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+	<!-- Секретный тоннель на станцию в Лиденклауде -->
+	<trigger Name="triggerExitToMap16Extra" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M6JD" />
 		<script>
-			RestoreAllToleranceStatus()
-			
-			StopPlayingCustomMusic()
-			
-			SetCameraBehindPlayerVehicle()
-			
-			trigger:Deactivate()
-		</script>
+		if QuestStatus("LastIspytanie_Quest2")==Q_TAKEN then
+			local b = SpawnMessageBox( "8801" )
+			if b == 1 then
+				PassToMap("r1m6", "FromR1M5JD", -1 )
+				
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+				end
+				
+				SetGameTime(9,0)
+				
+				trigger:Deactivate()
+			else
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetGamePositionOnGround( CVector(3374.700, 372.697, 1742.609))
+					vehPlayer:SetRotation(Quaternion(0.012, 0.150, -0.033, 0.988))
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+				end
+			end
+		end
+ 		</script>
 	</trigger>
-
 </triggers>

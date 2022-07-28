@@ -323,7 +323,7 @@
 
    				CompleteQuest( "d_DestroyBridge_Quest2" )
    
-				AddFadingMsg("Вы воспользовались предметом: Взрывчатка")
+				AddFadingMsgByStrIdFormatted("fm_player_use_thing", "quest_explosive")
 
 				local a = GetEntityByName("BaseGuardian_enter")
 				if a then a:SetProperty("Active",0) end

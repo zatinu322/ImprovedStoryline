@@ -56,7 +56,9 @@
 	</Path>
 
 	<Path Name = "linkedcam1">
-		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="3429.867 267.882 2094.416" rotation="-0.006 0.994 -0.082 0.071"/>
+		<Point  coord="3419.878 267.817 2140.776" rotation="-0.010 0.956 -0.033 0.290"/>
+		<Point  coord="3384.023 269.371 2134.431" rotation="-0.002 0.751 -0.002 0.660"/>
 	</Path>
 
 </Paths>

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<!-- Стартовый ролик -->
 	<trigger Name="NachRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(3327.621, 260.700, 2005.542), Quaternion(0, 0, 0, 0), 1)
-			CreateNewDummyObject( "brick_debris1", "CamTochka2", -1, -1, CVector(3465.244, 270.920, 2045.155), Quaternion(0, 0, 0, 0), 1)
 			CreateNewDummyObject( "rr_locovagon", "loco2", -1, -1, CVector(3492.906, 255.000, 2039.886), Quaternion(0.0000, -0.7475, 0.0000, 0.6643), 0)
 			
 			local p1 = GetEntityByName("loco2")
 			local p1ID = p1:GetId()
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
-			local CToch1 = GetEntityByName("CamTochka2")
-			local CToch1ID = CToch1:GetId()
 			local vehP = GetPlayerVehicle()
 			local vehPID = vehP:GetId()
 			
 			FlyLinked( "linkedcam", CTochID, 18, 1, 0, p1ID )
 			Fly("NachRolikCam1", CINEMATIC_NO_AIM, 0, 23, 0, 0 )
 			Fly("NachRolikCam2", CINEMATIC_NO_AIM, 0, 26, 0, 0 )
-			FlyLinked( "linkedcam1", CToch1ID, 9, 0, 0, vehPID )
-			Fly("NachRolikCam3", CINEMATIC_NO_AIM, 0, 24, 0, 0 )
+			Fly("linkedcam1", CINEMATIC_AIM_TO_ID, vehPID, 9, 0, 0)
+			Fly("NachRolikCam3", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
 			Fly("NachRolikCam4", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 			Fly("NachRolikCam5", CINEMATIC_NO_AIM, 0, 45, 0, 0 )
 			Fly("NachRolikCam6", CINEMATIC_NO_AIM, 0, 23, 0, 1 )
@@ -46,13 +44,17 @@
 	<trigger Name="trNachRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+
 			PlayCustomMusic("Bio04")
+
 			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
 			local mover = GetEntityByID( moverId ) 
 			local controlledObj = GetEntityByName("loco2")
+
 			if controlledObj then
 				mover:SetObjAndPath( controlledObj:GetId(), "poezdPrPath", 40 )
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -79,6 +81,7 @@
 			AddCinematicMessage( 5, 0.1 )
 			AddCinematicMessage( 6, 0.1 )
 			AddCinematicMessage( 7, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -107,8 +110,11 @@
 		<event flypath="NachRolikCam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			PlayCustomMusic("IntenseDialogue01")
+
 			AddCinematicMessage( 8, 5 )
+
 			AddCinematicMessage( 81, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -117,6 +123,7 @@
 		<event flypath="NachRolikCam4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			AddCinematicMessage( 9, 1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -138,6 +145,7 @@
 			AddCinematicMessage( 12, 0.1 )
 			AddCinematicMessage( 13, 0.1 )
 			AddCinematicMessage( 14, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -146,7 +154,9 @@
 		<event flypath="NachRolikCam6" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			AddCinematicMessage( 15, 1 )
+
 			AddCinematicMessage( 16, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -175,9 +185,6 @@
 
 			local cToch1 = GetEntityByName("CamTochka")
 			if cToch1 then cToch1:Remove() end
-
-			local cToch2 = GetEntityByName("CamTochka2")
-			if cToch2 then cToch2:Remove() end
 			
 			CreateNewDummyObject( "rr_locovagon", "loco3", -1, -1, CVector(3343.139, 255.000, 2023.689), Quaternion(0.0000, -0.7475, 0.0000, 0.6643), 0)
 			
@@ -204,12 +211,13 @@
 			TActivate("trExitExplosion")
 			TActivate("PlayerDieOrNot")
 			TActivate("trExitLabirint")
-			TActivate("StartMusic")
 			TActivate("Timer1")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Игрок нашёл выход из лабиринта -->
 	<trigger Name="KonRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -223,7 +231,7 @@
 			local vehP = GetPlayerVehicle()
 			local vehPID = vehP:GetId()
 			
-			Fly("KonRolikCam1", CINEMATIC_NO_AIM, 0, 32, 1, 0 )
+			Fly("KonRolikCam1", CINEMATIC_NO_AIM, 0, 32.5, 1, 0 )
 			FlyLinked( "linkedcam", CTochID, 7, 0, 0, vehPID )
 			Fly("KonRolikCam2", CINEMATIC_NO_AIM, 0, 17, 0, 1 )
 			StartCinematic()
@@ -244,6 +252,7 @@
 	<trigger Name="trKonRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -264,12 +273,14 @@
 	<trigger Name="trKonRolikCam1" active="0">
 		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetGamePositionOnGround( CVector(1445.241, 257.309, 1982.662))
 				vehPlayer:SetRotation(Quaternion(-0.003, -1.000, 0.001, 0.007))
 				vehPlayer:SetExternalPathByName("Player_path3")
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -277,6 +288,7 @@
 	<trigger Name="trKonRolikCam2" active="0">
 		<event flypath="KonRolikCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("Player_path3")
@@ -292,6 +304,7 @@
 			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
 			local mover = GetEntityByID( moverId ) 
 			local controlledObj = GetEntityByName("loco3")
+
 			if controlledObj then
 				mover:SetObjAndPath( controlledObj:GetId(), "poezdUePath", 40 )
 			end
@@ -321,10 +334,9 @@
 			TDeactivate("trKonRolikCam2")
 			TDeactivate("trKonRolikCam1")
 			TDeactivate("trKonRolikFade")
-			TDeactivate("StartMusic")
 			TActivate("PlayerChange11")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
 </triggers>

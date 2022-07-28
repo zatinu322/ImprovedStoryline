@@ -1197,20 +1197,26 @@
 
 	<!-- Возвращаемся из Лидденклауда -->
 	<trigger Name="ChehlyRolikBegin" active="1">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			if QuestStatus("GoBackToHel_Quest")==Q_TAKEN then
 			
 				SaveAllToleranceStatus(RS_NEUTRAL)
+				local Plf = GetPlayerVehicle()
+				local PlfID = GetPlayerVehicleId()
+				local PlfCoor = Plf:GetPosition()
+				PlfCoor.y = PlfCoor.y + 2
+				PlfCoor.z = PlfCoor.z - 20
+
 				if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
-					Fly("ChehlyCamPath", CINEMATIC_NO_AIM, 0, 37, 1, 1 )
+					FlyAround( 2, 0, 15, 37, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
 			
 					AddCinematicMessage( 8826, 5 )
 					AddCinematicMessage( 8827, 0.1 )
 					AddCinematicMessage( 8832, 0.1 )
 				else
-					Fly("ChehlyCamPath", CINEMATIC_NO_AIM, 0, 30, 1, 1 )
+					FlyAround( 2, 0, 15, 30, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
 			
 					AddCinematicMessage( 8826, 5 )
@@ -1322,7 +1328,7 @@
 			local vehPlayer = GetPlayerVehicle()
 			local vehPID = vehPlayer:GetId()
 			
-			FlyLinked( "Boloto_cam02", CTochID, 8, 1, 1, vehPID )
+			FlyLinked( "RRRolikCam1", CTochID, 8, 1, 1, vehPID )
 			StartCinematic()
 			
 			TActivate("RRRolikFade")

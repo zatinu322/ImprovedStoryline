@@ -12334,7 +12334,7 @@
 		Name="poddon2838"
 		Belong="1001"
 		Prototype="poddon"
-		Pos="1556.619 378.510 2313.316"
+		Pos="1565.249 378.462 2308.634"
 		Rot="0.000 0.707 0.000 0.707" />
 
 	<Object
@@ -17265,6 +17265,14 @@
 	<Object
 		Name="LisaZapret_loc"
 		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1292.002 263.556 1007.085"
+		Radius="45.000"
+		LookingTimeOut="2.000" />
+
+	<Object
+		Name="LisaZapret1_loc"
+		Belong="1042"
 		Prototype="genericLocation"
 		Pos="1292.002 263.556 1007.085"
 		Radius="45.000"
@@ -24511,7 +24519,7 @@
 		Name="Breakable_Dub25291"
 		Belong="1001"
 		Prototype="Breakable_Dub2snow"
-		Pos="2361.232 260.174 1669.125"
+		Pos="2361.232 255.000 1669.125"
 		Rot="0.000 0.976 0.000 0.216"
 		Mass="2702.337"
 		NodeScale="2.081" />

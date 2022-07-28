@@ -638,6 +638,8 @@
 		<event 	timeout="0.01" eventid="GE_TIME_PERIOD" />
 		<script>
 
+			PlayCustomMusic("Passage03")
+
 			TeamCreate("CMBandits1",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
 
 			local FVehicle = GetEntityByName("CMBandits1_vehicle_0")
@@ -692,18 +694,7 @@
 		 
 			CompleteQuest("DefendSowth_Quest4")
 
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="TheSowthDefRemove" active="0">
-		<event        timeout="0.01"        eventid="GE_TIME_PERIOD" />
-		<script>
-
-			local vehAlly1 = GetEntityByName("Defenders_vehicle_0")
-			if vehAlly1 then vehAlly1:Remove() end
-			local vehAlly2 = GetEntityByName("Defenders_vehicle_1")
-			if vehAlly2 then vehAlly2:Remove() end
+			TActivate("SDCRolikBegin")
 
 			trigger:Deactivate()
 		</script>

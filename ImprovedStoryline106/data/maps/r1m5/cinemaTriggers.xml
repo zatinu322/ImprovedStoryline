@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<!-- Приехали в шахту разгребать завал -->
 	<trigger Name="SHRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -14,10 +15,11 @@
 			local CTochID = CToch:GetId()
 			local vehP = GetPlayerVehicle()
 			local vehPID = vehP:GetId()
-			FlyLinked( "linkedcam", CTochID, 9, 1, 0, vehPID )
+
+			FlyLinked( "SHRolikCam0", CTochID, 9, 1, 0, vehPID )
 			Fly("SHRolikCam1", CINEMATIC_NO_AIM, 0, 22, 0, 0 )
 			Fly("SHRolikCam2", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-			Fly("SHRolikCam3", CINEMATIC_NO_AIM, 0, 11, 0, 1 )
+			Fly("SHRolikCam3", CINEMATIC_NO_AIM, 0, 12, 0, 1 )
 			StartCinematic()
 			
 			TActivate("SHRolikFade")
@@ -33,6 +35,7 @@
 	<trigger Name="SHRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:LimitMaxSpeed(15)
@@ -121,7 +124,6 @@
 			for i=1,12 do		
 				local h1 = GetEntityByName("hum"..i)
 				if h1 then h1:Remove() end
---				println("Deleted Human "..i)
 			end
 
 			for i=1,2 do
@@ -139,12 +141,20 @@
 		</script>
 	</trigger>
 
+	<!-- Защитили Ла Белль -->
 	<trigger Name="PLBRolikBegin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("PLBRolikCam1", CINEMATIC_NO_AIM, 0, 15, 1, 1 )
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.x = PlfCoor.x + 20
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 10
+
+			FlyAround(0.5, 0, 25, 16, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 5, 1 )
@@ -174,6 +184,7 @@
 			
 			local amb2 = GetEntityByName("ArmiaLaBelle_vehicle_1")
 			if amb2 then amb2:Remove() end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -189,22 +200,21 @@
 			for i=1,12 do		
 				local h1 = GetEntityByName("hum"..i)
 				if h1 then h1:Remove() end
---				println("Deleted Human "..i)
 			end
 
-			
 			StartConversation( "Babca" )
 			
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
+	<!-- Осмотр первого выезда -->
 	<trigger Name="VyezdRolik1Begin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("VyezdRolCam2", CINEMATIC_NO_AIM, 0, 14, 1, 1 )
+			Fly("VyezdRolCam1", CINEMATIC_NO_AIM, 0, 14, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 6, 0.1 )
@@ -216,11 +226,11 @@
 		</script>
 	</trigger>
 
-	<trigger Name="VyezdRolik2Fade" active="0">
+	<trigger Name="VyezdRolik1Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 			
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(2845.790, 423.352, 139.217), Quaternion(-0.0128, 0.9548, 0.0417, 0.2942), 1)
+			CreateNewDummyObject( "dweller_player", "humPlayer1", -1, -1, CVector(3831.671, 548.804, 577.268), Quaternion(0.0000, 0.4127, 0.0000, 0.9109), 1)
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -228,8 +238,8 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(2828.741, 416.105, 161.458))
-				vehPlayer:SetRotation(Quaternion(-0.128, 0.111, -0.121, -0.978))
+				vehPlayer:SetGamePositionOnGround( CVector(3836.162, 550.767, 571.276))
+				vehPlayer:SetRotation(Quaternion(-0.011, 0.422, -0.014, 0.906))
 			end
 			
 			trigger:Deactivate()
@@ -254,12 +264,23 @@
 		</script>
 	</trigger>
 
+	<trigger Name="trhumPlayerRemove" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local humP = GetEntityByName("humPlayer1")
+			if humP then humP:Remove() end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Осмотр второго выезда -->
 	<trigger Name="VyezdRolik2Begin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("VyezdRolCam1", CINEMATIC_NO_AIM, 0, 11, 1, 1 )
+			Fly("VyezdRolCam2", CINEMATIC_NO_AIM, 0, 11, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 7, 0.1 )
@@ -271,11 +292,11 @@
 		</script>
 	</trigger>
 
-	<trigger Name="VyezdRolik1Fade" active="0">
+	<trigger Name="VyezdRolik2Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 			
-			CreateNewDummyObject( "dweller_player", "humPlayer1", -1, -1, CVector(3831.671, 548.804, 577.268), Quaternion(0.0000, 0.4127, 0.0000, 0.9109), 1)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(2845.790, 423.352, 139.217), Quaternion(-0.0128, 0.9548, 0.0417, 0.2942), 1)
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -283,8 +304,8 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(3836.162, 550.767, 571.276))
-				vehPlayer:SetRotation(Quaternion(-0.011, 0.422, -0.014, 0.906))
+				vehPlayer:SetGamePositionOnGround( CVector(2828.741, 416.105, 161.458))
+				vehPlayer:SetRotation(Quaternion(-0.128, 0.111, -0.121, -0.978))
 			end
 			
 			trigger:Deactivate()
@@ -317,7 +338,7 @@
 			Fly("VRRolikCam1", CINEMATIC_NO_AIM, 0, 27, 1, 0 )
 			Fly("VRRolikCam2", CINEMATIC_NO_AIM, 0, 14.5, 0, 0 )
 			Fly("VRRolikCam3", CINEMATIC_NO_AIM, 0, 7.5, 0, 0 )
-			Fly("VRRolikCam4", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+			Fly("VRRolikCam4", CINEMATIC_NO_AIM, 0, 10.5, 0, 0 )
 			Fly("VRRolikCam5", CINEMATIC_NO_AIM, 0, 13.5, 0, 0 )
 			Fly("VRRolikCam6", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 			StartCinematic()
@@ -341,6 +362,7 @@
 	<trigger Name="VRRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -356,6 +378,7 @@
 				vehTikh:SetGamePositionOnGround(CVector(3053.686, 329.370, 3152.573))
 				vehTikh:SetRotation(Quaternion(-0.007, 0.340, -0.085, 0.937))
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -467,6 +490,7 @@
 
 				PlayCustomMusic("QuietDialogue02")
 
+				-- Отпустили Тихомира
 				if QuestStatus("GoToMudrec_Quest")==Q_COMPLETED then
 					Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 					Fly("VRRolikCam8", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
@@ -490,9 +514,10 @@
 				TActivate("trVRRolikCam_linked")
 				TActivate("trVRRolikCam11")
 				
+			-- Сражаемся с Тихомиром
 			elseif GetVar("Tikhomir").AsInt == 2 then
-				Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
-				Fly("VRRolikCam8", CINEMATIC_NO_AIM, 0, 9, 0, 1 )
+				Fly("VRRolikCam7", CINEMATIC_NO_AIM, 0, 8.5, 0, 0 )
+				Fly("VRRolikCam8", CINEMATIC_NO_AIM, 0, 10, 0, 1 )
 				StartCinematic()
 
 				AddCinematicMessage(16, 1)
@@ -554,7 +579,7 @@
 		<event flypath="VRRolikCam11" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			CreateNewDummyObject( "dweller_father", "humAiven", -1, -1, CVector(3402.435, 395.165, 3303.069), Quaternion(0.0000, -0.8290, 0.0000, 0.5592), 0)
---			AddCinematicMessage( 25, 1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -611,12 +636,13 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 10
+			PlfCoor.y = PlfCoor.y + 3
+			PlfCoor.z = PlfCoor.z - 20
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(1, 0, 25, 10, PlfCoor, PlfID, 1, 0 )
+			FlyAround(0.5, 0, 15, 10, PlfCoor, PlfID, 1, 0 )
 			Fly("VRRolikCam10", CINEMATIC_NO_AIM, 0, 15.5, 0, 0 )
 			Fly("VRRolikCam11", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
 			StartCinematic()
@@ -683,6 +709,49 @@
 			TDeactivate("trVRRolikCam10")
 			TDeactivate("trVRRolikCam11")
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Осмотр поля со знаками -->
+	<trigger Name="RPGSignsRolik1" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RPGSigns_loc" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			
+			PlayCustomMusic("Bio01")
+			
+			Fly("RPGSignsCam", CINEMATIC_NO_AIM, 0, 13, 1, 1 )
+			StartCinematic()
+			
+			AddCinematicMessage( 26, 1 )
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+			
+			CompleteQuest("RPGSigns_Quest1")
+			
+			TActivate("RPGSignsRolik2")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RPGSignsRolik2" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+			
+			StopPlayingCustomMusic()
+			
+			SetCameraBehindPlayerVehicle()
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>

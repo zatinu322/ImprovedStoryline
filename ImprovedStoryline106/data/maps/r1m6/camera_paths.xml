@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
-<!--
-‚ нв®¬ д ©«Ґ б®¤Ґа¦ вбп ЇгвЁ Є ¬Ґа ¤«п а®«ЁЄ®ў
-ЏаЁ¬Ґа:
 
-	<Path Name = "Primer_cam01">                         
-		<Point  coord="1266.468 213.171 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
-		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
-	</Path>
--->
 <Paths>
 	<Path Name = "start1">
 		<Point  coord="403.050 265.864 1742.360" rotation="-0.003 0.634 -0.003 0.773"/>
@@ -55,8 +47,8 @@
 	</Path>
 
 	<Path Name = "start10">
-		<Point  coord="1200.507 268.074 334.713" rotation="-0.019 -0.560 0.013 0.828"/>
-		<Point  coord="1259.980 264.743 364.843" rotation="-0.022 -0.488 0.012 0.872"/>
+		<Point  coord="10.702 262.411 741.869" rotation="-0.033 -0.625 0.026 0.779"/>
+		<Point  coord="20.010 261.612 743.935" rotation="-0.033 -0.625 0.026 0.779"/>
 	</Path>
 
 	<Path Name = "start11">
@@ -84,9 +76,19 @@
 		<Point  coord="522.956 306.654 1795.796" rotation="-0.109 0.757 -0.131 0.630"/>
 	</Path>
 
+	<Path Name = "LisaLinkedTrap_cam01">
+		<Point  coord="1108.034 302.293 587.033" rotation="-0.173 -0.733 0.203 0.625"/>
+		<Point  coord="1099.180 303.395 521.275" rotation="-0.111 -0.626 0.091 0.767"/>
+	</Path>
+
+	<Path Name = "LisaLinkedTrap_cam02">
+		<Point  coord="1155.011 271.742 851.836" rotation="-0.001 0.993 -0.004 0.122"/>
+		<Point  coord="1209.799 280.391 919.013" rotation="-0.149 0.276 -0.043 0.949"/>
+	</Path>
+
 	<Path Name = "TrapCam1">
-		<Point  coord="1112.650 287.425 497.957" rotation="-0.018 -0.642 0.015 0.766"/>
-		<Point  coord="1112.650 287.425 497.957" rotation="-0.004 -0.675 0.004 0.738"/>
+		<Point  coord="1116.119 287.610 490.995" rotation="-0.037 -0.570 0.026 0.821"/>
+		<Point  coord="1121.586 287.316 488.298" rotation="-0.018 -0.536 0.011 0.844"/>
 	</Path>
 
 	<Path Name = "TrapCam2">
@@ -111,11 +113,11 @@
 
 	<Path Name = "TrapCam6">
 		<Point  coord="1178.529 270.338 949.420" rotation="0.128 0.707 -0.683 -0.133"/>
-		<Point  coord="1176.863 400.476 953.663" rotation="0.128 0.707 -0.683 -0.133"/>
+		<Point  coord="1176.863 356.476 953.663" rotation="0.128 0.707 -0.683 -0.133"/>
 	</Path>
 
 	<Path Name = "TrapCam7">
-		<Point  coord="1176.863 400.476 953.663" rotation="0.128 0.707 -0.683 -0.133"/>
+		<Point  coord="1176.863 356.476 953.663" rotation="0.128 0.707 -0.683 -0.133"/>
 		<Point  coord="1174.202 443.480 960.554" rotation="0.128 0.707 -0.683 -0.133"/>
 	</Path>
 
@@ -126,22 +128,22 @@
 
 	<Path Name = "TrapCam9">
 		<Point  coord="375.064 461.922 1801.963" rotation="0.314 0.660 -0.584 -0.354"/>
-		<Point  coord="397.200 415.052 1787.275" rotation="0.314 0.660 -0.584 -0.354"/>
+		<Point  coord="397.200 362.052 1787.275" rotation="0.314 0.660 -0.584 -0.354"/>
 	</Path>
 
 	<Path Name = "TrapCam10">
-		<Point  coord="397.200 415.052 1787.275" rotation="0.314 0.660 -0.584 -0.354"/>
+		<Point  coord="397.200 362.052 1787.275" rotation="0.314 0.660 -0.584 -0.354"/>
 		<Point  coord="393.050 263.219 1782.014" rotation="-0.050 -0.794 0.066 0.602"/>
 	</Path>
 
 	<Path Name = "TrapCam11">
 		<Point  coord="393.050 263.219 1782.014" rotation="-0.050 -0.794 0.066 0.602"/>
-		<Point  coord="393.050 263.219 1782.014" rotation="-0.031 -0.823 0.046 0.566"/>
+		<Point  coord="403.779 262.046 1766.150" rotation="-0.078 -0.448 0.039 0.890"/>
 	</Path>
 
 	<Path Name = "TrapCam12">
-		<Point  coord="529.233 258.743 1756.157" rotation="-0.041 0.720 -0.042 0.692"/>
-		<Point  coord="529.233 258.743 1756.157" rotation="-0.033 0.732 -0.035 0.679"/>
+		<Point  coord="529.618 258.947 1756.200" rotation="-0.010 0.705 -0.010 0.709"/>
+		<Point  coord="519.692 258.682 1756.660" rotation="-0.010 0.682 -0.009 0.731"/>
 	</Path>
 
 	<Path Name = "TrapCam13">
@@ -171,7 +173,7 @@
 
 	<Path Name = "ASSCam1">
 		<Point  coord="1627.580 263.385 730.293" rotation="-0.081 -0.166 0.014 0.983"/>
-		<Point  coord="1578.806 288.861 708.994" rotation="-0.165 -0.399 0.073 0.899"/>
+		<Point  coord="1604.795 275.286 720.343" rotation="-0.121 -0.277 0.042 0.952"/>
 	</Path>
 
 	<Path Name = "StationCam1">
@@ -181,7 +183,8 @@
 
 	<Path Name = "StationCam2">
 		<Point  coord="2455.727 268.894 2826.497" rotation="-0.042 0.778 -0.053 0.624"/>
-		<Point  coord="2455.727 268.894 2826.497" rotation="-0.031 0.225 -0.007 0.974"/>
+		<!-- <Point  coord="2455.727 268.894 2826.497" rotation="-0.031 0.225 -0.007 0.974"/> -->
+		<Point  coord="2455.727 268.894 2826.497" rotation="-0.038 0.488 -0.028 0.871"/>
 	</Path>
 
 	<Path Name = "HomeCam1">
@@ -193,7 +196,8 @@
 
 	<Path Name = "HomeCam2">
 		<Point  coord="1341.370 261.487 2772.507" rotation="0.009 0.954 0.027 0.299"/>
-		<Point  coord="1341.370 261.487 2772.507" rotation="-0.017 0.983 -0.137 0.120"/>
+		<!-- <Point  coord="1341.370 261.487 2772.507" rotation="-0.017 0.983 -0.137 0.120"/> -->
+		<Point  coord="1330.896 258.586 2749.659" rotation="-0.018 0.979 -0.102 0.175"/>
 	</Path>
 
 	<Path Name = "HomeCam3">
@@ -243,27 +247,8 @@
 	</Path>
 
 	<Path Name = "PKERolikCam2">
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.146 -0.064 0.010 0.987"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
+		<Point  coord="1713.401 448.768 2134.849" rotation="-0.206 0.217 -0.047 0.953"/>
+		<Point  coord="1702.911 437.775 2156.675" rotation="-0.206 0.217 -0.047 0.953"/>
 	</Path>
 
 	<Path Name = "PKERolikCam3">
@@ -303,23 +288,18 @@
 	</Path>
 
 	<Path Name = "SeraTortPath1">
-		<Point  coord="1667.849 267.919 551.623" rotation="0.020 0.978 -0.115 -0.174"/>
-		<Point  coord="1642.221 267.919 529.901" rotation="-0.044 -0.842 0.070 0.534"/>
+		<Point  coord="10.000 4.000 -20.000" />
+		<Point  coord="10.000 5.000 0.000" />
 	</Path>
 
 	<Path Name = "SeraTortPath2">
-		<Point  coord="1642.221 267.919 529.901" rotation="-0.044 -0.842 0.070 0.534"/>
-		<Point  coord="1642.221 267.919 529.901" rotation="-0.022 0.016 -0.000 1.000"/>
-	</Path>
-
-	<Path Name = "SeraTortPath3">
-		<Point  coord="1642.221 267.919 529.901" rotation="-0.022 0.016 -0.000 1.000"/>
-		<Point  coord="1635.589 261.614 687.047" rotation="-0.018 0.037 -0.001 0.999"/>
+		<Point  coord="-5 3 25" />
+		<Point  coord="-5 3 15" />
 	</Path>
 
 	<Path Name = "BurnVil1Path">
-		<Point  coord="732.801 273.077 2495.799" rotation="-0.030 0.533 -0.019 0.846"/>
-		<Point  coord="752.479 273.077 2557.363" rotation="-0.014 0.721 -0.014 0.693"/>
+		<Point  coord="715.870 270.390 2535.161" rotation="-0.072 0.565 -0.049 0.820"/>
+		<Point  coord="703.138 267.995 2540.028" rotation="-0.072 0.565 -0.049 0.820"/>
 	</Path>
 
 	<Path Name = "BurnVil2Path">
@@ -328,25 +308,32 @@
 	</Path>
 
 	<Path Name = "SinkTheShipPath">
-		<Point  coord="189.266 256.281 693.439" rotation="-0.013 0.475 -0.007 0.880"/>
-		<Point  coord="189.266 256.281 693.439" rotation="-0.049 0.365 -0.019 0.929"/>
+		<Point  coord="188.250 256.323 692.700" rotation="-0.031 0.311 -0.010 0.950"/>
+		<Point  coord="187.610 256.252 693.575" rotation="-0.031 0.311 -0.010 0.950"/>
 	</Path>
 
 	<Path Name = "PotopPath">
 		<Point  coord="88.858 228.141 774.987" rotation="0.1092 0.8838 -0.3300 0.3131"/>
 	</Path>
 
-	<Path Name = "linkedcam">
-		<Point  coord="0.000 1.000 0.000"/>
+	<Path Name = "PKERolikCam1_2">
+		<Point  coord="1648.718 383.324 2405.380" rotation="0.080 0.877 -0.157 -0.447"/>
+		<Point  coord="1617.928 392.348 2399.365" rotation="0.040 0.959 -0.213 -0.181"/>
 	</Path>
 
-	<Path Name = "linkedcam1">
+	<Path Name = "PKERolikCam1_3">
+		<Point  coord="1522.614 389.104 2247.499" rotation="-0.099 -0.238 0.024 0.966"/>
+		<Point  coord="1522.614 410.606 2247.499" rotation="0.013 0.871 -0.022 -0.491"/>
+	</Path>
+
+	<Path Name = "LisaDirectionRolik_cam01">
 		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="0.000 -8.000 10.000"/>
 	</Path>
 
 	<Path Name = "SerafimaTupikPath">
-		<Point  coord="1545.706 307.439 2750.558" rotation="-0.192 0.461 -0.103 0.860"/>
-		<Point  coord="1412.616 307.439 2675.498" rotation="-0.201 0.006 -0.001 0.980"/>
+		<Point  coord="1437.710 273.570 2779.649" rotation="-0.107 0.388 -0.046 0.914"/>
+		<Point  coord="1412.342 273.570 2761.922" rotation="-0.116 0.181 -0.022 0.976"/>
 	</Path>
 
 	<Path Name = "LocoSudaPath">

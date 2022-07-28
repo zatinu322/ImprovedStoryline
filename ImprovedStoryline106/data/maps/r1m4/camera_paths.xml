@@ -188,8 +188,10 @@
 
 	<Path Name = "ChehlyCamPath">
         <Point  coord="2051.533 309.556 3593.695" rotation="0.059 0.931 -0.316 -0.173"/>
-		<Point  coord="2214.717 309.556 3550.318" rotation="-0.039 0.957 -0.153 0.243"/>
-		<Point  coord="2185.050 264.544 3363.654" rotation="-0.074 0.415 -0.034 0.906"/>
+		<Point  coord="2135.559 277.772 3484.596" rotation="0.024 0.970 -0.110 -0.214"/>
+		<Point  coord="2164.429 259.516 3394.423" rotation="-0.054 0.733 -0.058 0.676"/>
+		<Point  coord="2163.128 259.516 3376.972" rotation="-0.063 0.538 -0.040 0.840"/>
+		<Point  coord="2150.899 256.723 3394.401" rotation="-0.011 0.364 -0.004 0.931"/>
 	</Path>
 
 	<Path Name = "PlayerSinkCamPath">
@@ -229,6 +231,11 @@
 	<Path Name = "AivenSonClothes">
         <Point  coord="3504.582 213.320 3698.208" rotation="-0.087 0.894 -0.198 0.393"/>
 		<Point  coord="3499.417 209.921 3693.460" rotation="-0.135 0.865 -0.336 0.347"/>
+	</Path>
+
+	<Path Name = "RRRolikCam1">
+		<Point  coord="0.000 2.000 0.000"/>
+		<Point  coord="-5.000 -3.000 0.000"/>
 	</Path>
 
 </Paths>

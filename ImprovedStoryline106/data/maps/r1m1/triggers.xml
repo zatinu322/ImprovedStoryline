@@ -6,6 +6,7 @@
 		<script>
 		    SetVar("FelixRevenge",0)
 		    SetVar("FelixChoise",0)
+			if ISL_VERSION then SetVar("ISLVersion", ISL_VERSION) end
 
 			if getObj("Ruin") then
 				SetVar("KrayCity", 1)
@@ -27,7 +28,6 @@
 			local len = getn(gunlist)
 
 			for i=1,4 do
-				--println("step"..i.."succesful")
 				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0,2))
 			end
 			trigger:Deactivate()
@@ -864,7 +864,9 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if IsQuestComplete("d_SinFather_Quest") or GetVar("FelixRevenge").AsInt==1 then 
+			if IsQuestComplete("d_SinFather_Quest") or GetVar("FelixRevenge").AsInt==1 then
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
@@ -945,6 +947,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestComplete("d_FindHouseOfBen_Quest") or IsQuestComplete("QuickFindBen") then 
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
@@ -1024,6 +1028,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestTaken("r3m2_FindInfoAboutFather") or IsQuestTaken("r3m2_RevengeDestroyVillage") then 
+				ValidateGameVersion()
+				
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 

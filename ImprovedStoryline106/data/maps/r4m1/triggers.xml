@@ -13,6 +13,7 @@
 			SetVar("Strahovka",0)
 			SetVar("KnownMap",0)
 			SetVar("Tankisty", 0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 		    trigger:Deactivate()
 		</script>
@@ -884,8 +885,11 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="ExitFromMapToR4M2_loc" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
 
-			if IsQuestTaken("r4m1_FindMilitaryBase") or IsQuestTaken("r4m1_GotoAivenGo") then 
+			if IsQuestTaken("r4m1_FindMilitaryBase") or IsQuestTaken("r4m1_GotoAivenGo") then
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
@@ -927,6 +931,8 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 
 			if QuestStatus("r4m1_RescueBuharsCivilian")~=Q_TAKEN and QuestStatus("r4m1_KNO_GotoOiler")~=Q_TAKEN and QuestStatus("r4m1_KNO_BringOil")~=Q_TAKEN then
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 
 				if b == 1 then
@@ -963,6 +969,8 @@
 					Plf:SetCustomLinearVelocity( 0 )
 					Plf:SetThrottle( 0 )
 					Plf:SetCustomControlEnabled( false )
+
+					ValidateGameVersion()
  
 					local b = SpawnMessageBox( "8801" )
 					if b == 1 then

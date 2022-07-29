@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
-
-
 <triggers>
-
 	<!-- Инициализация карты -->
 	<trigger Name="GlobalVar" active="1">
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 			SetVar("Serafima", 0)
 			SetVar("Starosta", 0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 			
 			CreateNewDummyObject( "agro_gate", "vorota", -1, -1, CVector(458.534, 255.420, 1763.684), Quaternion(0.0000, -0.5948, 0.0000, 0.8039), 0)
 			CreateNewDummyObject( "arena_barricade8", "gate1", -1, -1, CVector(2850.631, 256.083, 3023.677), Quaternion(0.0000, -0.8940, 0.0000, 0.4481), 0)
@@ -703,15 +701,17 @@
 	<trigger Name="triggerExitToMap14" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M4" />
 		<script>
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 				PassToMap("r1m4", "FromR1M6", -1 )
 				
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-			end
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+				end
 			else
 				local vehPlayer = GetPlayerVehicle()
 				if vehPlayer then
@@ -728,6 +728,8 @@
 	<trigger Name="triggerExitToMap15" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M5" />
 		<script>
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 			

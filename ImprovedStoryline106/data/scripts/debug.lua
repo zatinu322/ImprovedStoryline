@@ -178,6 +178,33 @@ function fff()
 	AddCinematicMessage( 1, 0.1 )
 end
 
+function ValidateGameVersion()
+	GAME_VERSION = GetVar("ISLVersion").AsString
+	if GAME_VERSION ~= ISL_VERSION then
+
+		if GetComputerName() == "PAVLIKRPG" then
+
+			LOG("Current build "..GAME_VERSION.." is not supported in "..ISL_VERSION)
+
+			AddImportantFadingMsgByStrIdFormatted("fm_wrong_game_version", GAME_VERSION)
+
+			AddFadingMsgByStrIdFormatted("fm_wrong_game_version", GAME_VERSION)
+
+			SpawnMessageBox("wrong_game_version")
+		else
+			LOG("Current build "..GAME_VERSION.." is not supported in "..ISL_VERSION)
+
+			SpawnMessageBox("wrong_game_version")
+
+			ShowDeathMenu()
+
+			InvalidFunctionName() -- валим триггер, иначе интерфейс может сломаться
+		end
+	else
+		AddFadingMsg("Game version validated.")
+		return GAME_VERSION
+	end
+end
 
 function testpath()
 	GetEntityByName("enemy"):SetPathByName("testVehicle")

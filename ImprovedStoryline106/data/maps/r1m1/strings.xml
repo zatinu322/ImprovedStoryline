@@ -794,4 +794,8 @@
 		id="5983"
 		value="Вы желаете перенестись сразу в Хель?"
 		numButtons="2" />
+
+	<string
+		id="wrong_game_version"
+		value="Данное сохранение несовместимо с текущей версией Improved Storyline. ||Пожалуйста, начните новую игру.| "/>
 </resource>

@@ -12,6 +12,7 @@
 			
 			SetVar("KnownMap",0)
 			SetVar("Tikhomir",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			CreateNewDummyObject("minin", "rinolskbuilding", -1, -1, CVector(1949.495, 255.193, 338.593), Quaternion(-0.004, -0.666, -0.005, -0.746), 0)
 			CreateNewDummyObject("big_gate01", "rinolskgate", -1, -1, CVector(1919.866, 258.721, 341.483), Quaternion(-0.004, -0.659, -0.005, -0.752), 0)
@@ -287,10 +288,12 @@
 		</script>
 	</trigger>
 
-	<!-- Переход в Лидденклауд -->
+	<!-- Переход в Лиденклауд -->
 	<trigger Name="triggerExitToMap16" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M6" />
 		<script>
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 				PassToMap("r1m6", "FromR1M5", -1 )
@@ -318,6 +321,8 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M6JD" />
 		<script>
 		if QuestStatus("LastIspytanie_Quest2")==Q_TAKEN then
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 				PassToMap("r1m6", "FromR1M5JD", -1 )

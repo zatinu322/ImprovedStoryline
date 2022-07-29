@@ -11,6 +11,7 @@
 		   SetVar("FirstVehChange", 0)
 		   SetVar("SOAgressor", 0)
 		   SetVar("PlayerSkin", 0)
+		   if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 		   CreateVehicleEx("ArcadeScout01","PlayerScout",CVector(getPos("ScoutPos_loc")))
 		   local veh=GetEntityByName("PlayerScout")
@@ -511,6 +512,9 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="ExitFromMap_loc" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
+
+			ValidateGameVersion()
 
 			local b = SpawnMessageBox( "8801" )
 
@@ -532,5 +536,4 @@
 			end
 		</script>
 	</trigger>
-
 </triggers>

@@ -215,4 +215,8 @@
 	<string
 		id="fm_player_use_thing"
 		value="Вы воспользовались предметом %1p." />
+
+	<string
+		id="fm_wrong_game_version"
+		value="@FFFF0000Вы используете устаревший билд: %1p" />
 </resource>

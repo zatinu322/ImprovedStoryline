@@ -10,6 +10,7 @@
 			SetVar("KnownMap",0)
 			SetVar("NoChifir",1)
 			SetVar("Player4eeter",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			local shl = GetEntityByName("MisterShlyapaFM")
 			if shl then
@@ -496,6 +497,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if QuestStatus("d_CaravanToPortoBen_Quest")~=Q_TAKEN and QuestStatus("d_CaravanToMidgardBen_Quest")~=Q_TAKEN then
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
@@ -566,6 +569,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestComplete("d_FindHouseOfBen_Quest") or IsQuestComplete("QuickFindBen") then 
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 

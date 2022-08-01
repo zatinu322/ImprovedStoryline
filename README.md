@@ -54,6 +54,8 @@ Improved Storyline - сюжетная модификация к игре Ex Mach
 
 # Совместимость
 
+Данная модификация совместима только с проектами, указанными ниже.
+
 * [Improved Storyline для Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp)
 
 Планируется адаптация под [Community Remaster](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) после его релиза.

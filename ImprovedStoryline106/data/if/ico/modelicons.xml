@@ -388,7 +388,7 @@
    <Item id="Belong_1083"		file="data\if\ico\clans\antimilitarists03.dds" 			file1="data\if\ico\clans\antimilitarists02.dds"/>
 
    <Item id="Belong_1060"		file="data\if\ico\clans\desert_people03.dds" 			file1="data\if\ico\clans\desert_people02.dds"/>
-   <Item id="Belong_1061"		file="data\if\ico\clans\scientists_followers03.dds" 		file1="data\if\ico\clans\scientists_followers02.dds"/>
+   <Item id="Belong_1061"		file="data\if\ico\clans\militarists03.dds" 		file1="data\if\ico\clans\militarists02.dds"/>
    <Item id="Belong_1062"		file="data\if\ico\clans\militarists03.dds" 		file1="data\if\ico\clans\militarists02.dds"/>
    <Item id="Belong_1063"		file="data\if\ico\clans\brigade03.dds" 			file1="data\if\ico\clans\brigade02.dds"/>
    <Item id="Belong_1064"		file="data\if\ico\clans\children_of_iron03.dds" 	file1="data\if\ico\clans\children_of_iron02.dds"/>

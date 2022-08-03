@@ -11,22 +11,23 @@
 
 	<Path Name = "NearBase">
 		<Point  coord="1916.104 327.118 1115.399" rotation="-0.030 -0.722 0.031 0.690"/>
-		<Point  coord="1916.104 327.118 1115.399" rotation="-0.024 -0.532 0.015 0.846"/>
+		<Point  coord="2004.453 359.134 1134.352" rotation="-0.089 -0.718 0.093 0.684"/>
 	</Path>
 
 	<Path Name = "SavePlInBase1">
-		<Point  coord="2374.137 332.390 1102.836" rotation="-0.138 0.452 -0.071 0.878"/>
-		<Point  coord="2374.137 332.390 1102.836" rotation="-0.142 -0.366 0.056 0.918"/>
+		<Point  coord="2179.453 330.573 1054.697" rotation="-0.150 -0.341 0.055 0.926"/>
+		<Point  coord="2176.030 353.428 1043.912" rotation="-0.156 -0.382 0.065 0.909"/>
 	</Path>
 
 	<Path Name = "SavePlInBase2">
-		<Point  coord="2374.137 332.390 1102.836" rotation="-0.142 -0.366 0.056 0.918"/>
-		<Point  coord="2476.372 304.887 1190.707" rotation="-0.059 -0.264 0.016 0.963"/>
+		<Point  coord="2463.141 301.197 1191.710" rotation="-0.082 -0.318 0.028 0.944"/>
+		<Point  coord="2468.475 299.643 1198.762" rotation="-0.054 -0.319 0.018 0.946"/>
 	</Path>
 
 	<Path Name = "SavePlInBase3">
-		<Point  coord="2640.260 331.206 1329.874" rotation="-0.306 0.271 -0.091 0.908"/>
-		<Point  coord="2639.940 324.771 1330.013" rotation="-0.189 0.293 -0.059 0.935"/>
+		<Point  coord="2977.898 379.186 1616.070" rotation="-0.052 0.925 -0.138 0.351"/>
+		<Point  coord="2952.771 379.818 1464.691" rotation="-0.093 0.688 -0.089 0.714"/>
+		<Point  coord="2871.190 365.110 1494.992" rotation="-0.172 0.272 -0.049 0.946"/>
 	</Path>
 
 	<Path Name = "SavePlInBase4">
@@ -35,8 +36,8 @@
 	</Path>
 
 	<Path Name = "SavePlInBase5">
-		<Point  coord="2976.597 310.340 1823.661" rotation="-0.047 0.782 -0.060 0.619"/>
-		<Point  coord="2988.413 330.568 1826.744" rotation="-0.095 0.759 -0.113 0.634"/>
+		<Point  coord="3325.142 300.811 1838.625" rotation="-0.161 0.148 -0.024 0.975"/>
+		<Point  coord="3327.879 317.127 1830.346" rotation="-0.243 0.170 -0.043 0.954"/>
 	</Path>
 
 	<Path Name = "SavePlInBase6">
@@ -95,8 +96,13 @@
 	</Path>
 
 	<Path Name = "FatherCar_Cam">
-		<Point  coord="1569.835 339.009 326.884" rotation="-0.205 0.387 -0.089 0.895"/>
-		<Point  coord="1573.958 347.360 306.011" rotation="-0.215 0.218 -0.049 0.951"/>
+		<Point  coord="1546.235 336.135 325.238" rotation="-0.197 -0.272 0.057 0.940"/>
+		<Point  coord="1571.781 336.135 329.583" rotation="-0.180 0.445 -0.092 0.872"/>
+	</Path>
+
+	<Path Name = "FatherCar_Cam2">
+		<Point  coord="1556.309 333.988 358.809" rotation="-0.003 0.994 -0.102 0.028"/>
+		<Point  coord="1557.189 337.071 373.671" rotation="-0.003 0.994 -0.102 0.028"/>
 	</Path>
 
 	<Path Name = "linkedcam">

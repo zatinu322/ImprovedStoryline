@@ -13,7 +13,6 @@
 	<Path Name = "molokovozChange">
 		<Point  coord="6901.536 313.774 5284.921" rotation="0.037 0.936 -0.335 -0.105"/>
 		<Point  coord="6926.370 314.351 5267.711" rotation="-0.066 0.916 -0.171 0.356"/>
-		<!--Point  coord="6881.158 305.112 5208.522" rotation="-0.035 0.932 -0.093 0.350"/-->
 		<Point  coord="6880.117 331.512 5208.103" rotation="-0.058 0.926 -0.160 0.338"/>
 	</Path>
 
@@ -39,7 +38,7 @@
 
 	<Path Name = "EngineerCamPath3">
 		<Point  coord="4118.938 254.659 6031.023" rotation="-0.070 0.132 -0.009 0.989"/>
-		<Point  coord="4118.938 254.659 6031.023" rotation="-0.062 -0.107 0.007 0.992"/>
+		<Point  coord="4118.938 257.659 6031.023" rotation="-0.062 -0.107 0.007 0.992"/>
 	</Path>
 
 	<Path Name = "EngineerCamPath4">
@@ -55,7 +54,7 @@
 
 	<Path Name = "BuharsInPortPath">
 		<Point  coord="1422.299 228.675 3193.721" rotation="-0.007 0.931 -0.018 0.366"/>
-		<Point  coord="1422.299 228.675 3193.720" rotation="-0.007 0.931 -0.018 0.366"/>
+		<Point  coord="1421.082 238.189 3094.892" rotation="-0.122 0.475 -0.067 0.869"/>
 	</Path>
 
 
@@ -92,9 +91,9 @@
 
 
 	<Path Name = "FirstPriezd">
-		<Point  coord="3154.568 276.153 7451.825" rotation="-0.006 0.392 -0.002 0.920"/>
-		<Point  coord="3197.695 276.955 7426.953" rotation="-0.005 0.525 -0.003 0.851"/>
-		<Point  coord="3257.986 270.974 7411.343" rotation="0.015 0.626 0.012 0.779"/>
+		<Point coord="-15 3 15"/>
+		<Point coord="-15 5 -15"/>
+		<Point coord="0 7 -20"/>
 	</Path>
 
 	<Path Name = "BuharaDie">
@@ -139,9 +138,12 @@
 
 	<Path Name = "Shlyapa_cam">
 		<Point  coord="6554.425 272.500 4427.969" rotation="-0.161 -0.334 0.058 0.927"/>
-		<Point  coord="6426.174 374.981 4265.626" rotation="-0.194 -0.304 0.063 0.931"/>
-		<Point  coord="6388.120 399.754 4213.941" rotation="-0.276 -0.317 0.097 0.902"/>
-		
+		<Point  coord="6484.350 328.880 4339.507" rotation="-0.174 -0.316 0.058 0.931"/>
+	</Path>
+
+	<Path Name = "Shlyapa_cam2">
+		<Point  coord="6373.214 376.960 4277.208" rotation="0.086 0.862 -0.154 -0.476"/>
+		<Point  coord="6362.825 389.159 4248.575" rotation="-0.187 -0.659 0.174 0.707"/>
 	</Path>
 
 	<Path Name = "lodka1">
@@ -159,8 +161,14 @@
 		<Point  coord="1134.856 215.500 3201.983" rotation="0.0000 0.8204 0.0000 0.5718"/>
 	</Path>
 
-	<Path Name = "linkedcam">
+	<Path Name = "PlayerRaceFinish">
 		<Point  coord="0.000 0.000 0.000"/>
+		<Point  coord="0.000 5.000 -5.000"/>
+	</Path>
+
+	<Path Name = "TankistyRolik_cam1">
+		<Point  coord="-5.000 4.000 -20.000"/>
+		<Point  coord="-5.000 9.000 -20.000"/>
 	</Path>
 
 </Paths>

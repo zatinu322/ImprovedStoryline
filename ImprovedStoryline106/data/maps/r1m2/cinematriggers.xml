@@ -716,7 +716,7 @@
 
 	<!-- Плохая концовка -->
 	<trigger Name="BadEndingBegin" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>			
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
@@ -725,19 +725,20 @@
 			SetGameTime( 9, 0 )
 			
 			SetWeather(0)
+
+			local vehPID = GetPlayerVehicleId()
 			
-			Fly("BenSamokillCam", CINEMATIC_NO_AIM, 0, 11, 1, 0 )
-			Fly("EndingCam1", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-			Fly("EndingCam2", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-			Fly("EndingCam3", CINEMATIC_NO_AIM, 0, 30, 0, 0 )
-			Fly("EndingCam4", CINEMATIC_NO_AIM, 0, 27, 0, 0 )
-			Fly("EndingCam5", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
-			Fly("EndingCam6", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
-			Fly("PreSuicCam", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-			Fly("SuicCam", CINEMATIC_NO_AIM, 0, 20, 0, 1 )
+			Fly("BenSamokillCam", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+			Fly("EndingCam1", CINEMATIC_AIM_TO_ID, vehPID, 7, 0, 0 )
+			Fly("EndingCam2", CINEMATIC_AIM_TO_ID, vehPID, 10, 0, 0 )
+			Fly("EndingCam3", CINEMATIC_AIM_TO_ID, vehPID, 31, 0, 0 )
+			Fly("EndingCam4", CINEMATIC_AIM_TO_ID, vehPID, 28, 0, 0 )
+			Fly("EndingCam5", CINEMATIC_AIM_TO_ID, vehPID, 13, 0, 0 )
+			Fly("EndingCam6", CINEMATIC_AIM_TO_ID, vehPID, 12, 0, 0 )
+			Fly("PreSuicCam", CINEMATIC_NO_AIM, 0, 20, 0, 0 )
+			Fly("SuicCam", CINEMATIC_NO_AIM, 0, 17.5, 0, 1 )
 			StartCinematic()
 			
-			TActivate("BadEnd_Fade")
 			TActivate("BadEndCam1")
 			TActivate("BadEndCam2")
 			TActivate("BadEndCam3")
@@ -747,25 +748,27 @@
 			TActivate("PreSuicCam")
 			TActivate("SuicCam")
 			TActivate("preTitryCam")
+			TActivate("BenExplode")
 
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="BadEnd_Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-		
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:LimitMaxSpeed(40)
+				vehPlayer:LimitMaxSpeed(25)
 				vehPlayer:SetThrottle( 1 )
 				vehPlayer:setImmortalMode(1)
+				vehPlayer:setGodMode(1)
 				vehPlayer:SetCustomLinearVelocity( 20 )
 				vehPlayer:SetGamePositionOnGround( CVector(3706.163, 123.341, 1864.144))
 				vehPlayer:SetRotation(Quaternion(-0.007, -0.990, -0.019, 0.139))
 				vehPlayer:SetExternalPathByName("BenSuic")
 			end
+
+			for name = 2,3 do
+				local dot = GetEntityByName("barricade7_GwG95_Child"..name)
+				if dot then dot:Remove() end
+			end
+
+			local murav = GetEntityByName("barricade8_wwwC97_Child4")
+			if murav then murav:Remove() end
 
 			trigger:Deactivate()
 		</script>
@@ -810,8 +813,8 @@
 		
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(2459.969, 74.435, 1638.339))
-				vehPlayer:SetRotation(Quaternion(0.046, -0.273, 0.057, 0.959))
+				vehPlayer:SetGamePositionOnGround( CVector(2464.559, 74.963, 1638.169))
+				vehPlayer:SetRotation(Quaternion(0.056, -0.326, 0.043, 0.943))
 				vehPlayer:SetExternalPathByName("EndingPlWay2")
 				vehPlayer:SetThrottle( 1 )
 				vehPlayer:SetCustomLinearVelocity( 20 )

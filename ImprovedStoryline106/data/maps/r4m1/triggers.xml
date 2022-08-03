@@ -316,30 +316,13 @@
 		</script>
 	</trigger>
 
-	<!-- Создание танкиста и слежка за ним -->
-	<trigger	Name="trTankistyCreate"	active="0">
-		<event	timeout="0.01"			eventid="GE_TIME_PERIOD" />
+	<!-- Старт ролика с танкистом в Кефе после выезда из города -->
+	<trigger	Name="trTankistyRolikStart"	active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
-			CreateVehicleEx("Tank01","Tankisty",CVector(6244.019, 251.303, 5029.185), 1031)
-			
-			local tank1 = GetEntityByName("Tankisty")
-			if tank1 then
-				tank1:SetRotation(Quaternion(0.002, 0.926, -0.002, -0.378))
-				tank1:SetExternalPathByName("TankistyPath")
-			end
-
-			TActivate("SPYTANKI")
-			TActivate("SPYTANKIEND")
-
-			SetTolerance(1100,1031,RS_ALLY)
-			SetTolerance(1031,1023,RS_NEUTRAL)
-			SetTolerance(1031,1025,RS_NEUTRAL)
-			SetTolerance(1031,1060,RS_NEUTRAL)
-			SetTolerance(1031,1002,RS_NEUTRAL)
-			SetTolerance(1031,1033,RS_NEUTRAL)
-			
-			TakeQuest("r4m1_Tankisty")
+			TActivate("trTankistyRolikBegin")
 
 			trigger:Deactivate()
 		</script>

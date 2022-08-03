@@ -16,15 +16,12 @@
 				Plf:SetCustomControlEnabled( false )
 			end
 
-			Fly("FatherCar_Cam", CINEMATIC_NO_AIM, 0, 18, 1, 1 )
+			Fly("FatherCar_Cam", CINEMATIC_NO_AIM, 0, 17, 1, 0 )
+			Fly("FatherCar_Cam2", CINEMATIC_NO_AIM, 0, 13.5, 0, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 201, 0.25 )
 			AddCinematicMessage( 202, 0.25 )
-			AddCinematicMessage( 203, 0.25 )
-			AddCinematicMessage( 204, 0.25 )
-
-			AddPlayerMoney(20000)
 
 			AddHistory( "r4_FindFatherCar" )
 			AddFadingMsgId( "fm_history_got" )
@@ -32,7 +29,20 @@
 			TakeQuest("LookAtAivenCar")
 			CompleteQuest("LookAtAivenCar")
 
+			TActivate("trMoveToFatherCar_cam02")
 			TActivate("trMoveToFatherCarEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trMoveToFatherCar_cam02" active="0">
+		<event flypath="FatherCar_Cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(1559.076, 328.491, 342.180), Quaternion(0.0000, 0.9938, 0.0000, 0.1110), 0)
+
+			AddCinematicMessage( 203, 0.25 )
+			AddCinematicMessage( 204, 0.25 )
 
 			trigger:Deactivate()
 		</script>
@@ -51,6 +61,11 @@
 				Plf:AddItemsToRepository("add_stability_and_speed2", 1)
 				Plf:AddItemsToRepository("additional_durability3", 1)
 			end
+
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+
+			TDeactivate("trMoveToFatherCar_cam02")
 			
 			trigger:Deactivate()
 		</script>
@@ -67,7 +82,7 @@
 
 			TActivate("cinNearBase_End")
 
-			Fly("NearBase", CINEMATIC_NO_AIM, nil, 6, 1,1)
+			Fly("NearBase", CINEMATIC_NO_AIM, nil, 11, 1,1)
 			StartCinematic()
 
 			AddCinematicMessage( 101, 0.5 )
@@ -85,6 +100,8 @@
 			StopPlayingCustomMusic()
 
 			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>
@@ -106,13 +123,10 @@
 			TActivate("cinHelpers_StartFly2")
 			TActivate("cinHelpers_StartFly3")
 			TActivate("cinHelpers_StartFly4")
+			TActivate("cinHelpers_StartFly5")
 			
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2924.103, 317.313, 1547.942), Quaternion(0, 0, 0, 0), 1)
 			CreateNewDummyObject( "brick_debris1", "CamTochka1", -1, -1, CVector(3088.719, 285.508, 1817.517), Quaternion(0, 0, 0, 0), 1)
-			
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
-			
+						
 			local CToch1 = GetEntityByName("CamTochka1")
 			local CToch1ID = CToch1:GetId()
 			
@@ -120,9 +134,10 @@
 			local vehPID = vehPlayer:GetId()
 			
 			Fly("SavePlInBase1", CINEMATIC_NO_AIM, nil, 9, 1,0)
-			Fly("SavePlInBase2", CINEMATIC_NO_AIM, nil, 22, 0,0)
-			FlyLinked( "linkedcam", CTochID, 13, 0, 0, vehPID )
-			FlyLinked( "linkedcam1", CToch1ID, 21, 0, 1, vehPID )
+			Fly("SavePlInBase2", CINEMATIC_NO_AIM, nil, 24, 0,0, nil, nil, true)
+			Fly("SavePlInBase3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 14, 0,0)
+			FlyLinked( "linkedcam1", CToch1ID, 10.5, 0, 0, vehPID )
+			Fly("SavePlInBase5", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 12, 0, 1)
 			StartCinematic()
 			
 			CompleteQuest("r4m2_FightWithCrazy")
@@ -136,11 +151,10 @@
 		<script>
 			PlayCustomMusic("IntenseDialogue01")
 			
-			CreateVehicleEx("r1m2_hunter02","Sergo",CVector(2488.479, 299.532, 1212.001), 1062)
-			
-			local veh = GetEntityByName("Sergo")
+			local veh = CreateVehicleEx("r1m2_hunter02","Sergo",CVector(2567.135, 312.267, 1257.607), 1062, Quaternion(0.027, -0.879, 0.054, 0.473))
 			if veh then
-				veh:SetRotation(Quaternion(0.035, -0.797, 0.049, 0.601))
+				veh:SetExternalPathByName("SergoPath0")
+				veh:SetCruisingSpeed(15)
 			end
 			
 			AddCinematicMessage( 401, 0.5 )
@@ -160,14 +174,16 @@
 	<trigger Name="cinHelpers_StartFly2" active="0">
 		<event flypath="SavePlInBase2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			AddCinematicMessage( 402, 1 )
 
-			if QuestStatus("KillTankistov")==Q_COMPLETED then
-				AddCinematicMessage( 404, 0.1 )
-			else
-				AddCinematicMessage( 403, 0.1 )
+			local veh = GetEntityByName("Sergo")	
+			if veh then
+				veh:PlaceToEndOfPath("SergoPath0")
+				veh:SetGamePositionOnGround(CVector(2475.154, 297.917, 1207.921))
+				veh:SetRotation(Quaternion(0.028, -0.810, 0.039, 0.584))
 			end
-			
+
+			AddCinematicMessage( 402, 3 )
+			AddCinematicMessage( 403, 0.1 )
 			AddCinematicMessage( 405, 0.1 )
 			
 			trigger:Deactivate()
@@ -175,24 +191,28 @@
 	</trigger>
 
 	<trigger Name="cinHelpers_StartFly3" active="0">
-		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<event flypath="SavePlInBase3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			PlayCustomMusic("Passage02")
 			
 			local veh = GetEntityByName("Sergo")
 			if veh then
-				veh:LimitMaxSpeed(30)
-				veh:SetGamePositionOnGround( CVector(2794.308, 315.461, 1418.499))
-				veh:SetRotation(Quaternion(-0.045, -0.407, -0.023, -0.912))
+				
+				veh:SetGamePositionOnGround( CVector(2799.558, 315.302, 1419.463))
+				veh:SetRotation(Quaternion(0.044, 0.360, 0.013, 0.932))
 				veh:SetExternalPathByName("SergoPath1")
+				veh:SetCruisingSpeed(15)
+				veh:SetMaxSpeed(15)
+				veh:SetCustomLinearVelocity(20)
 			end
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:LimitMaxSpeed(30)
-				vehPlayer:SetGamePositionOnGround( CVector(2811.423, 316.035, 1407.262))
-				vehPlayer:SetRotation(Quaternion(-0.030, -0.354, -0.006, -0.935))
-				vehPlayer:SetExternalPathByName("PlayerPath1")
+				vehPlayer:SetGamePositionOnGround( CVector(2744.236, 316.955, 1387.196))
+				vehPlayer:SetRotation(Quaternion(0.013, 0.619, 0.035, 0.785))
+				vehPlayer:SetExternalPathByName("SergoPath1")
+				vehPlayer:LimitMaxSpeed(17.5)
+				vehPlayer:SetCustomLinearVelocity(20)
 			end
 			
 			trigger:Deactivate()
@@ -207,6 +227,9 @@
 				veh:SetGamePositionOnGround( CVector(2933.171, 235.667, 1937.929))
 				veh:SetRotation(Quaternion(-0.018, -0.685, 0.027, -0.728))
 				veh:SetExternalPathByName("SergoPath2")
+				veh:SetCruisingSpeed(20)
+				veh:SetMaxSpeed(20)
+				veh:SetCustomLinearVelocity(20)
 			end
 			
 			local vehPlayer = GetPlayerVehicle()
@@ -214,6 +237,34 @@
 				vehPlayer:SetGamePositionOnGround( CVector(2946.298, 234.886, 1923.478))
 				vehPlayer:SetRotation(Quaternion(-0.002, -0.665, 0.003, -0.747))
 				vehPlayer:SetExternalPathByName("PlayerPath2")
+				vehPlayer:LimitMaxSpeed(15)
+				vehPlayer:SetCustomLinearVelocity(20)
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinHelpers_StartFly5" active="0">
+		<event flypath="SavePlInBase5" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local veh = GetEntityByName("Sergo")
+			if veh then
+				veh:SetGamePositionOnGround(CVector(3322.491, 255.634, 1997.423))
+				veh:SetRotation(Quaternion(-0.000, 0.999, 0.000, 0.049))
+				veh:SetExternalPathByName("SergoPath3")
+				veh:SetCruisingSpeed(20)
+				veh:SetMaxSpeed(20)
+				veh:SetCustomLinearVelocity(20)
+			end
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround(CVector(3311.374, 255.076, 2031.465))
+				vehPlayer:SetRotation(Quaternion(-0.017, 0.971, 0.016, 0.236))
+				vehPlayer:SetExternalPathByName("PlayerPath3")
+				vehPlayer:LimitMaxSpeed(15)
+				vehPlayer:SetCustomLinearVelocity(20)
 			end
 			
 			trigger:Deactivate()
@@ -233,25 +284,29 @@
 			DisableGodMode()
 			
 			local veh = GetEntityByName("Sergo")
-			if veh then
-				veh:Remove()
-			end
+			if veh then veh:Remove() end
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetExternalPathByName("PlayerPath2")
-				vehPlayer:PlaceToEndOfPath("PlayerPath2")
+				vehPlayer:SetExternalPathByName("PlayerPath3")
+				vehPlayer:PlaceToEndOfPath("PlayerPath3")
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:UnlimitMaxSpeed()
+				vehPlayer:SetGamePositionOnGround(CVector(3284.052, 255.459, 1935.116))
+				vehPlayer:SetRotation(Quaternion(-0.000, 0.831, 0.000, -0.556))
 			end
 			
-			local CToch = GetEntityByName("CamTochka")
-			if CToch then CToch:Remove() end
 			local CToch1 = GetEntityByName("CamTochka1")
 			if CToch1 then CToch1:Remove() end
 			
 			AddHistory( "r4_AfterMilitaryBase" )
 			AddFadingMsgId( "fm_history_got" )
+
+			TDeactivate("cinHelpers_FadeIn")
+			TDeactivate("cinHelpers_StartFly2")
+			TDeactivate("cinHelpers_StartFly3")
+			TDeactivate("cinHelpers_StartFly4")
+			TDeactivate("cinHelpers_StartFly5")
 			
 			StartConversation("ScientiferVillage_Bar_Scientif")
 
@@ -272,8 +327,8 @@
 			TActivate( "cinLookToTarelka_End" )
 			TActivate( "cinLookToTarelka_cam2" )
 
-			Fly("NearTarelka1", CINEMATIC_NO_AIM, nil, 7, 1,0)
-			Fly("NearTarelka2", CINEMATIC_NO_AIM, nil, 15, 0,1)
+			Fly("NearTarelka1", CINEMATIC_NO_AIM, nil, 9, 1,0)
+			Fly("NearTarelka2", CINEMATIC_NO_AIM, nil, 17, 0,1)
 			StartCinematic()
 
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
@@ -378,7 +433,7 @@
 			TActivate("cinPlate_HumReach2")
 
 			Fly("ToTarelka2", CINEMATIC_NO_AIM, nil, 17, 0,0)
-			Fly("ToTarelka3", CINEMATIC_NO_AIM, nil, 11, 0,1)
+			Fly("ToTarelka3", CINEMATIC_NO_AIM, nil, 14, 0,1,nil,nil,true)
 			StartCinematic()
 
 			AddCinematicMessage( 502, 0.25 )
@@ -458,8 +513,8 @@
 			local vehP = GetPlayerVehicle()
 			local vehPID = vehP:GetId()
 			
-			FlyLinked( "linkedcam", CTochID, 15, 1, 0, vehPID )
-			Fly("PlayerLeave_Cam", CINEMATIC_NO_AIM, 0, 18.5, 0, 1 )
+			FlyLinked( "linkedcam", CTochID, 11.5, 1, 0, vehPID )
+			Fly("PlayerLeave_Cam", CINEMATIC_NO_AIM, 0, 24.5, 0, 1 )
 			StartCinematic()
 			
 			TActivate("SergoAivenTalk2")
@@ -514,8 +569,8 @@
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("PlayerLeave_Path")
 				vehPlayer:PlaceToEndOfPath("PlayerLeave_Path")
-				vehPlayer:SetGamePositionOnGround( CVector(2897.862, 238.021, 1924.226))
-				vehPlayer:SetRotation(Quaternion(-0.002, 0.783, 0.029, -0.622))
+				vehPlayer:SetGamePositionOnGround( CVector(2899.987, 237.999, 1917.554))
+				vehPlayer:SetRotation(Quaternion(0.031, 0.918, 0.018, -0.396))
 			end
 			
 			local CToch = GetEntityByName("CamTochka")

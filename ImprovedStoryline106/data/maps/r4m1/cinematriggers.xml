@@ -7,9 +7,12 @@
 		<script>
 			EnableGodMode()
 
+			RuleConsole("cinematic_spring_coeff 6.0")
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("FirstPriezd", CINEMATIC_NO_AIM, nil, 16, 1,1)
+			--Fly("FirstPriezd", CINEMATIC_NO_AIM, nil, 300, 1,1)
+			FlyLinked("FirstPriezd", GetPlayerVehicleId(), 65, 1, 1, GetPlayerVehicleId())
 			StartCinematic()
 			UpdateCinematic( 1 )
 
@@ -48,15 +51,22 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			GetPlayerVehicle():SetExternalPathByName("PriezdToR4M1")
-			GetPlayerVehicle():PlaceToEndOfPath("PriezdToR4M1")
-			GetPlayerVehicle():UnlimitMaxSpeed()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetExternalPathByName("PriezdToR4M1")
+				Plf:PlaceToEndOfPath("PriezdToR4M1")
+				Plf:UnlimitMaxSpeed()
+				Plf:AddModifier("hp", "= 500")
+				Plf:AddModifier("fuel", "= 10")
+			end
 
 			RestoreAllToleranceStatus()
 
 			DisableGodMode()
 
 			SetCameraBehindPlayerVehicle()
+
+			RuleConsole("cinematic_spring_coeff 0.7")
 
 			trigger:Deactivate()
 		</script>
@@ -139,6 +149,18 @@
 
 			CompleteQuest("r4m1_KNO_TakeCar")
 
+			local town1 = GetEntityByName("TheKef")
+			if town1 then town1:SetOpenGateToPlayer( false ) end
+
+			local town2 = GetEntityByName("TheGadad")
+			if town2 then town2:SetOpenGateToPlayer( false ) end
+
+			local town3 = GetEntityByName("TheKazif")
+			if town3 then town3:SetOpenGateToPlayer( false ) end
+
+			local a = GetEntityByName("StartGonka_loc")
+			if a then a:SetProperty("Active",0) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -156,7 +178,7 @@
 			TActivate("cinOil_FadeIn")
 			TActivate("cinOil_StartFly")
 
-			Fly("OilPath1", CINEMATIC_NO_AIM, nil, 6, 1,0)
+			Fly("OilPath1", CINEMATIC_NO_AIM, nil, 13, 1,0)
 			Fly("OilPath2", CINEMATIC_NO_AIM, nil, 4, 0,1)
 			StartCinematic()
 
@@ -283,6 +305,18 @@
 			AddQuestItem("Lisa_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "Lisa_P")
 
+			local town1 = GetEntityByName("TheKef")
+			if town1 then town1:SetOpenGateToPlayer( true ) end
+
+			local town2 = GetEntityByName("TheGadad")
+			if town2 then town2:SetOpenGateToPlayer( true ) end
+
+			local town3 = GetEntityByName("TheKazif")
+			if town3 then town3:SetOpenGateToPlayer( true ) end
+
+			local a = GetEntityByName("StartGonka_loc")
+			if a then a:SetProperty("Active",1) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -330,8 +364,8 @@
 			local enveh=CreateVehicleEx("Sml101","EngCar",CVector(4273.473, 300, 5923.936), 1033)
 			if enveh then
 				enveh:SetMaxTorque(100)
-				enveh:SetMaxSpeed(50)
-				enveh:SetCruisingSpeed(50)
+				enveh:SetMaxSpeed(20)
+				enveh:SetCruisingSpeed(20)
 				enveh:SetRotation(Quaternion(-0.002, -0.490, -0.011, 0.872))
 				enveh:SetExternalPathByName("NearEngineerEngineerPath")
 				enveh:setGodMode(1)
@@ -359,15 +393,15 @@
 			local speed = GetVar("PlSpeed").AsInt
 			local crspeed = GetVar("PlCrSpeed").AsInt
 
+			local Plf = GetPlayerVehicle()
 			if Plf then
 				Plf:SetExternalPathByName("NearEngineerPlayerPath")
 				Plf:PlaceToEndOfPath("NearEngineerPlayerPath")
-				Plf:SetGamePositionOnGround(CVector(4097.918, 249.925, 6058.852))
-				Plf:SetRotation(Quaternion(-0.016, 0.831, 0.003, 0.555))
+				Plf:SetGamePositionOnGround( CVector(4099.129, 251.143, 6057.058))
+				Plf:SetRotation(Quaternion(-0.011, 0.849, -0.000, 0.529))
 				Plf:SetMaxSpeed(speed)
 				Plf:SetCruisingSpeed(crspeed)
 				Plf:ResetForcedMaxTorque()
-
 			end
 
 			StopPlayingCustomMusic()
@@ -393,6 +427,7 @@
 			ShowHostileVehicles(false)
 
 			TActivate("cinEngineerMustDie_End")
+			TActivate("cinEngineerMustDie_cam02")
 
 			local enveh=getObj("EngCar")
 			if enveh then
@@ -400,12 +435,11 @@
 				enveh:SetExternalPathByName("engineerWantDiePath")
 			end
 
-			Fly("EngineerCamPath3", CINEMATIC_NO_AIM, nil, 6, 0,0)
-			Fly("EngineerCamPath4", CINEMATIC_NO_AIM, nil, 3.5, 0,1)
+			Fly("EngineerCamPath3", CINEMATIC_NO_AIM, nil, 12, 0,0)
+			Fly("EngineerCamPath4", CINEMATIC_NO_AIM, nil, 7, 0,1)
 			StartCinematic()
 			
 			AddCinematicMessage( 16, 0.5 )
-			AddCinematicMessage( 17, 0.5 )
 
 			PlayCustomMusic("Passage05")
 
@@ -416,6 +450,16 @@
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
 			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinEngineerMustDie_cam02" active="0">
+		<event flypath="EngineerCamPath4" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			AddCinematicMessage( 17, 0.5 )
 
 			trigger:Deactivate()
 		</script>
@@ -434,9 +478,84 @@
 			RestoreAllToleranceStatus()
 
 			local enveh=getObj("EngCar")
-			if enveh then
-				enveh:PlaceToEndOfPath("engineerWantDiePath")
+			if enveh then 
+				enveh:PlaceToEndOfPath("engineerWantDiePath") 
+				enveh:AddModifier("hp", "= 0")
 			end
+
+			TDeactivate("cinEngineerMustDie_cam02")
+			TDeactivate("trEngineerMustDie")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Начало слежки за танкистом -->
+
+	<trigger Name="trTankistyRolikBegin" active="0">
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("Bio02")
+
+			local tank = CreateVehicleEx("Tank01","Tankisty",CVector(0, 2000, 0), 1031)
+			local tankID = tank:GetId()
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+
+			if Plf then
+				Plf:SetCustomLinearVelocity(0)
+				Plf:SetThrottle(0)
+				Plf:SetGamePositionOnGround(CVector(6302.845, 251.241, 5092.278))
+				Plf:SetRotation(Quaternion(0.002, 0.926, -0.002, -0.377))
+			end
+
+			if tank then
+				tank:SetGamePositionOnGround(CVector(6281.624, 251.233, 4977.553))
+				tank:SetRotation(Quaternion(0.002, 0.662, -0.004, -0.750))
+				tank:SetExternalPathByName("preTankistyPath")
+				tank:SetCustomLinearVelocity(15)
+			end
+
+			FlyLinked("TankistyRolik_cam1", PlfID, 15, 0, 1, tankID)
+			StartCinematic()
+
+			TActivate("trTankistyRolikEnd")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trTankistyRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			local tank = getObj("Tankisty")
+			if tank then
+				tank:PlaceToEndOfPath("preTankistyPath")
+				tank:SetGamePositionOnGround(CVector(6135.232, 251.121, 5081.549))
+				tank:SetRotation(Quaternion(0.002, -0.850, 0.005, 0.527))
+				tank:SetExternalPathByName("TankistyPath")
+				tank:SetCustomLinearVelocity(5)
+				SetCameraDirectionToObj(tank:GetId())
+			end
+			
+			TActivate("SPYTANKI")
+			TActivate("SPYTANKIEND")
+
+			SetTolerance(1100,1031,RS_NEUTRAL)
+			SetTolerance(1031,1023,RS_NEUTRAL)
+			SetTolerance(1031,1025,RS_NEUTRAL)
+			SetTolerance(1031,1060,RS_NEUTRAL)
+			SetTolerance(1031,1002,RS_NEUTRAL)
+			SetTolerance(1031,1033,RS_NEUTRAL)
+			
+			TakeQuest("r4m1_Tankisty")
 
 			trigger:Deactivate()
 		</script>
@@ -450,8 +569,8 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 7
+			PlfCoor.z = PlfCoor.z + 25
 
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
@@ -460,7 +579,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
+			FlyAround(1, 0, 15, 7, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
 
 			AddCinematicMessage( 8804, 1 )
@@ -503,13 +622,14 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 5
+			PlfCoor.y = PlfCoor.y + 6
+			PlfCoor.z = PlfCoor.z - 35
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 30, PlfCoor, PlfID, 1, 1 )
+			FlyAround(3, 0, 15, 48, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 23, 0.5 )
@@ -724,13 +844,14 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 5
+			PlfCoor.y = PlfCoor.y + 6
+			PlfCoor.z = PlfCoor.z - 35
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 51, PlfCoor, PlfID, 1, 1 )
+			FlyAround(3, 0.1, 15, 52, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 40, 1 )
@@ -783,7 +904,7 @@
 
 			PlayCustomMusic("QuietDialogue03")
 
-			Fly("BuharsInPortPath", CINEMATIC_NO_AIM, nil, 18, 1,1)
+			Fly("BuharsInPortPath", CINEMATIC_AIM_TO_POINT, CVector(1355.880, 220.086, 3133.145), 39.5, 1,1)
 			StartCinematic()
 
 			trigger:Deactivate()
@@ -871,13 +992,16 @@
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("Bio02")
+
+			local humS = CreateHuman( "Human3", 1001, CVector(6420.099, 274.402, 4256.425), "HumanNaSkale", "Human31_Path" )
+			humSID = humS:GetId()
 			
-			Fly("Shlyapa_cam", CINEMATIC_NO_AIM, 0, 33, 1, 1 )
+			Fly("Shlyapa_cam", CINEMATIC_NO_AIM, 0, 9, 1, 0)
+			Fly("Shlyapa_cam2", CINEMATIC_AIM_TO_ID, humSID, 17.5, 0, 1, nil, nil, true )
 			StartCinematic()
 			
-			AddCinematicMessage( 39, 18 )
-			
 			TActivate("HumanSkala_Fade")
+			TActivate("HumanSkala_cam02")
 			TActivate("HumanSkala_End")
 			
 			trigger:Deactivate()
@@ -898,10 +1022,18 @@
 			end
 			
 			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(6567.414, 260.033, 4447.929), Quaternion(0.009, -0.939, -0.033, 0.343), 0)
-
-			CreateHuman( "Human3", 1001, CVector(6420.099, 274.402, 4256.425), "HumanNaSkale", "Human31_Path" )
 			
 			getObj("humPlayer"):SetNodeAction(AT_STAND1)
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="HumanSkala_cam02" active="0">
+		<event flypath="Shlyapa_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			AddCinematicMessage( 39, 3 )
 			
 			trigger:Deactivate()
 		</script>
@@ -918,11 +1050,12 @@
 			StopPlayingCustomMusic()
 			
 			local hp = GetEntityByName("humPlayer")
-			if hp then
-				hp:Remove()
-			end
+			if hp then hp:Remove() end
 			
 			CompleteQuest("MrShlyapa4_Quest")
+
+			TDeactivate("HumanSkala_Fade")
+			TDeactivate("HumanSkala_cam02")
 			
 			trigger:Deactivate()
 		</script>
@@ -932,18 +1065,20 @@
 	<trigger	Name="trFalseStartRace"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 10
+			PlfCoor.z = PlfCoor.z - 25
 
 			Plf:SetCustomControlEnabled(true)
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 			Plf:SetCustomControlEnabled(false)
 
-			FlyAround(6, 0, 6, 6, PlfCoor, PlfID, 1, 1 )
+			FlyAround(0.5, 0, 15, 7, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			SetVar("PlayerPlace",0)
@@ -961,19 +1096,21 @@
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="PlayerFormula" />
 		<script>
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			local Plf = getObj("PlayerFormula")
 			if Plf then 
 				local PlfID = Plf:GetId()
 				local PlfCoor = Plf:GetPosition()
-				PlfCoor.y = PlfCoor.y + 25*0.74
-				PlfCoor.z = PlfCoor.z + 25*0.74
+				PlfCoor.y = PlfCoor.y + 10
+				PlfCoor.z = PlfCoor.z - 25
 
 				Plf:SetCustomControlEnabled(true)
 				Plf:SetCustomLinearVelocity(0)
 				Plf:SetThrottle(0)
 				Plf:SetCustomControlEnabled(false)
 
-				FlyAround(6, 0, 6, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.5, 0, 15, 7, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 			    AddCinematicMessage( 8, 0.5 )
@@ -1009,14 +1146,15 @@
 
 			AddPlayerMoney(ostcena)
 
-
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(4176.459, 284.317, 2168.970), Quaternion(0, 0, 0, 0), 1)
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 
-			FlyLinked("linkedcam", CTochID, 5, 0, 1, PlfID)
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyLinked("PlayerRaceFinish", CTochID, 6, 0, 1, PlfID)
 			StartCinematic()
 
 		    AddCinematicMessage( place+3, 0.5 )
@@ -1065,10 +1203,20 @@
 				RestoreWeaponGroups()
 			end
 
-			GetPlayerVehicle():setGodMode(0)
-			GetPlayerVehicle():SetCustomControlEnabled(0)
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:setGodMode(0)
+				Plf:SetCustomControlEnabled(0)
+				Plf:SetThrottle(0)
+				Plf:SetGamePositionOnGround(CVector(4422.050, 280.216, 2025.034))
+				Plf:SetRotation(Quaternion(-0.001, -0.703, -0.000, -0.711))
+			end
 
 			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
+
+			RestoreAllToleranceStatus()
 
 		    trigger:Deactivate()
 		</script>
@@ -1088,7 +1236,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("ExitTo42Return", CINEMATIC_NO_AIM, nil, 6, 1,1)
+			Fly("ExitTo42Return", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 6, 1,1)
 			StartCinematic()
 
 			if QuestStatus("r4m1_RescueBuharsCivilian")~=Q_COMPLETED then

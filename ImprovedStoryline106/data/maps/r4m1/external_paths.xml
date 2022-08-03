@@ -4261,6 +4261,33 @@
 
 		<Point
 			coord="3245.912 7411.823" />
+
+		<Point
+			coord="3261.615 7403.042" />
+
+		<Point
+			coord="3292.615 7363.980" />
+
+		<Point
+			coord="3302.755 7346.217" />
+
+		<Point
+			coord="3311.537 7315.246" />
+
+		<Point
+			coord="3322.403 7284.031" />
+
+		<Point
+			coord="3339.095 7244.371" />
+
+		<Point
+			coord="3364.251 7189.295" />
+
+		<Point
+			coord="3361.476 7141.554" />
+
+		<Point
+			coord="3373.208 7115.131" />
 	</Path>
 
 	<Path
@@ -4283,12 +4310,6 @@
 
 	<Path
 		Name="TankistyPath">
-		<Point
-			coord="6169.188 5050.682" />
-
-		<Point
-			coord="6107.967 5068.489" />
-
 		<Point
 			coord="6054.859 5037.649" />
 
@@ -4483,6 +4504,30 @@
 
 		<Point
 			coord="6721.107 5008.326" />
+	</Path>
+
+	<Path
+		Name="preTankistyPath">
+		<Point
+			coord="6252.799 4981.521" />
+
+		<Point
+			coord="6223.662 4984.730" />
+
+		<Point
+			coord="6207.583 4996.588" />
+
+		<Point
+			coord="6188.858 5030.152" />
+
+		<Point
+			coord="6167.785 5068.763" />
+
+		<Point
+			coord="6153.661 5090.965" />
+
+		<Point
+			coord="6123.376 5075.115" />
 	</Path>
 
 	<Path

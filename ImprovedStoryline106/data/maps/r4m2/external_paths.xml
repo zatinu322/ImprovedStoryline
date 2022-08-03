@@ -358,6 +358,21 @@
 	</Path>
 
 	<Path
+		Name="PlayerLeave_Path">
+		<Point
+			coord="3192.086 2125.777" />
+
+		<Point
+			coord="3129.112 2076.563" />
+
+		<Point
+			coord="3068.908 1969.720" />
+
+		<Point
+			coord="2897.862 1924.226" />
+	</Path>
+
+	<Path
 		Name="PlayerPath1">
 		<Point
 			coord="2831.948 1433.123" />
@@ -409,12 +424,39 @@
 	</Path>
 
 	<Path
+		Name="PlayerPath3">
+		<Point
+			coord="3313.920 2020.016" />
+
+		<Point
+			coord="3323.444 1983.384" />
+
+		<Point
+			coord="3317.821 1953.475" />
+
+		<Point
+			coord="3278.966 1933.025" />
+	</Path>
+
+	<Path
 		Name="ReturnPathR4M1">
 		<Point
 			coord="589.598 3251.288" />
 
 		<Point
 			coord="602.518 3234.875" />
+	</Path>
+
+	<Path
+		Name="SergoPath0">
+		<Point
+			coord="2537.036 1238.961" />
+
+		<Point
+			coord="2500.840 1217.705" />
+
+		<Point
+			coord="2472.235 1207.446" />
 	</Path>
 
 	<Path
@@ -432,13 +474,16 @@
 			coord="2837.195 1571.638" />
 
 		<Point
-			coord="2751.409 1674.725" />
+			coord="2775.986 1638.762" />
 
 		<Point
-			coord="2740.389 1718.723" />
+			coord="2738.046 1712.995" />
 
 		<Point
-			coord="2750.241 1749.414" />
+			coord="2767.083 1766.634" />
+
+		<Point
+			coord="2806.584 1782.737" />
 	</Path>
 
 	<Path
@@ -478,6 +523,18 @@
 	</Path>
 
 	<Path
+		Name="SergoPath3">
+		<Point
+			coord="3323.518 1980.538" />
+
+		<Point
+			coord="3314.508 1938.535" />
+
+		<Point
+			coord="3269.532 1916.030" />
+	</Path>
+
+	<Path
 		Name="ToTarelkaHuman_Path2">
 		<Point
 			coord="2921.522 2363.626" />
@@ -497,20 +554,4 @@
 		<Point
 			coord="2928.118 2362.586" />
 	</Path>
-
-	<Path
-		Name="PlayerLeave_Path">
-		<Point
-			coord="3192.086 2125.777" />
-
-		<Point
-			coord="3129.112 2076.563" />
-
-		<Point
-			coord="3068.908 1969.720" />
-
-		<Point
-			coord="2897.862 1924.226" />
-	</Path>
-
 </Paths>

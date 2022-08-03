@@ -3820,7 +3820,7 @@
 		name="Dlg_pl_002406"
 		text="Ты права, старики никуда не денутся, а эти ребята могут нам предоставить важную информацию. Давай сядем им на хвост."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r4m1_LisaKef2'); TActivate('trTankistyCreate'); LeaveTown()" />
+		scriptResult="CompleteQuest('r4m1_LisaKef2'); TActivate('trTankistyRolikStart'); LeaveTown()" />
 <!--Root/r4m1/Сюжетные/Приехал в Бухару-->
 	<Reply
 		name="Buhara_Outside_Leader_1_N01"
@@ -14797,7 +14797,7 @@
 		name="Dlg_pl_002458"
 		text="Прощай, Бен."
 		role="PLAYER"
-		scriptResult="TActivate('StartBadEnd'); GetCurNpc():SetSpokenCount(5); EndConversation()" />
+		scriptResult="TActivate('BadEndingBegin'); GetCurNpc():SetSpokenCount(5); EndConversation()" />
 
 	<Reply
 		name="NormalEndingDlg"

@@ -350,18 +350,6 @@
 		</script>
 	</trigger>
 
-	<!-- Плохая концовка -->
-	<trigger Name="StartBadEnd" active="0">
-		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
-		<script>
-			SetGameTime( 10, 0 )
-			TActivate("BadEndingBegin")
-			TActivate("BenExplode")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<!-- Нормальная концовка -->
 	<trigger Name="ToFaterEnd" active="0">
 		<event	timeout="3"		eventid="GE_TIME_PERIOD" />

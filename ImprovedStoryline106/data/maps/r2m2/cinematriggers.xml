@@ -1491,8 +1491,8 @@
 			if vehPlayer then
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetPosition( CVector(3001.291, 267.525, 2082.625))
-		   		vehPlayer:SetRotation(Quaternion(0.002, 0.482, 0.001, 0.876))
+				vehPlayer:SetGamePositionOnGround( CVector(3025.345, 266.034, 2097.585))
+		   		vehPlayer:SetRotation(Quaternion(-0.001, -0.464, 0.004, -0.886))
 		   	end
 		   	
 			trigger:Deactivate()

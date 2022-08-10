@@ -210,8 +210,8 @@
 		Name="OraculEndLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2575.615 278.109 5833.329"
-		Radius="171.000"
+		Pos="2325.813 275.901 5791.747"
+		Radius="209.000"
 		LookingTimeOut="10.000">
 		<Object
 			Name="DecidePlz"

@@ -2179,6 +2179,7 @@
 		Rot="0.000 0.617 0.000 0.787"
 		PathNamesForDrones="dron1 dron2 dron3">
 		<Object
+			Name="AliensShipStation1"	
 			Belong="1030"
 			Prototype="boss04station"
 			Pos="1367.696 483.361 1801.875"
@@ -2187,6 +2188,7 @@
 		</Object>
 
 		<Object
+			Name="AliensShipStation2"
 			Belong="1030"
 			Prototype="boss04station"
 			Pos="1368.555 483.301 1796.631"
@@ -2195,6 +2197,7 @@
 		</Object>
 
 		<Object
+			Name="AliensShipStation3"	
 			Belong="1030"
 			Prototype="boss04station"
 			Pos="1362.245 480.637 1803.102"

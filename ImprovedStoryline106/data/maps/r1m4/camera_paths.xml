@@ -200,13 +200,13 @@
 	</Path>
 
 	<Path Name = "PlaneRCam1">
-        <Point  coord="2103.423 242.630 776.835" rotation="-0.094 0.770 -0.116 0.621"/>
-		<Point  coord="2082.321 242.630 807.729" rotation="-0.051 0.934 -0.148 0.322"/>
+		<Point  coord="2056.143 237.389 692.743" rotation="-0.057 -0.022 0.001 0.998"/>
+		<Point  coord="2056.710 235.919 705.566" rotation="-0.057 -0.022 0.001 0.998"/>
 	</Path>
 
 	<Path Name = "PlaneRCam2">
-        <Point  coord="2144.921 297.596 911.425" rotation="-0.061 0.920 -0.157 0.355"/>
-		<Point  coord="2030.482 297.596 961.174" rotation="0.004 0.982 -0.186 -0.020"/>
+		<Point  coord="2119.615 290.204 934.477" rotation="-0.045 0.942 -0.141 0.300"/>
+		<Point  coord="2108.627 284.395 919.001" rotation="-0.045 0.942 -0.141 0.300"/>
 	</Path>
 
 	<Path Name = "PlaneRCam3">
@@ -215,17 +215,23 @@
 	</Path>
 
 	<Path Name = "linkedcam">
-		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="5.000 2.000 -15.000"/>
+		<Point  coord="5.000 5.000 -15.000"/>
 	</Path>
 
 	<Path Name = "RTMRolikCam1">
-        <Point  coord="3494.994 298.878 3736.586" rotation="-0.000 1.000 -0.023 0.003"/>
-		<Point  coord="3494.994 298.878 3736.586" rotation="-0.020 0.841 -0.032 0.540"/>
+        <Point  coord="3523.887 315.098 3907.916" rotation="-0.013 0.982 -0.071 0.175"/>
+		<Point  coord="3493.501 302.326 3825.246" rotation="-0.013 0.982 -0.071 0.175"/>
+	</Path>
+
+	<Path Name = "RTMRolikCam1_1">
+        <Point  coord="3508.476 208.918 3728.737" rotation="0.004 0.975 0.016 0.221"/>
+		<Point  coord="3493.638 208.743 3728.828" rotation="-0.001 0.954 0.004 -0.300"/>
 	</Path>
 
 	<Path Name = "RTMRolikCam2">
-		<Point  coord="3498.069 209.928 3694.331" rotation="0.024 -0.011 -0.000 1.000"/>
-		<Point  coord="3498.640 210.546 3715.595" rotation="-0.007 -0.014 0.000 1.000"/>
+		<Point  coord="3501.123 210.108 3713.882" rotation="-0.031 -0.020 0.001 0.999"/>
+		<Point  coord="3501.127 210.518 3715.811" rotation="-0.022 -0.003 0.000 1.000"/>
 	</Path>
 
 	<Path Name = "AivenSonClothes">

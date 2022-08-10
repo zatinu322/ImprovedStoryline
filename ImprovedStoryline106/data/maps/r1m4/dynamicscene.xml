@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="3621">
+	LastId="3622">
 	<TargetNamesForDestroy
 		Names="urod1 urod2 urod3 urod4 urod5 urod6 urod7 urod8 urod9" />
 
@@ -1435,8 +1435,8 @@
 		Name="SpecEndPlane_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1622.015 234.142 1603.264"
-		Radius="113.000"
+		Pos="1395.755 215.743 1560.802"
+		Radius="169.000"
 		LookingTimeOut="137.000" />
 
 	<Object
@@ -1444,8 +1444,8 @@
 		Name="SpecEndPlane2_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="502.221 236.614 1655.558"
-		Radius="113.000"
+		Pos="533.023 241.576 1720.310"
+		Radius="145.000"
 		LookingTimeOut="137.000" />
 
 	<Object
@@ -30685,7 +30685,7 @@
 		<Post
 			ServerObjName="stolb13537"
 			NodesNameHierarchy=""
-			PostTiePos="2808.167 255.118 2007.399"
+			PostTiePos="2808.167 255.065 2007.399"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -30759,7 +30759,7 @@
 		<Post
 			ServerObjName="stolb13505"
 			NodesNameHierarchy=""
-			PostTiePos="2897.618 253.700 1847.562"
+			PostTiePos="2897.618 253.646 1847.562"
 			LpName="LP_PART02" />
 
 		<Post
@@ -30775,7 +30775,7 @@
 		<Post
 			ServerObjName="stolb13505"
 			NodesNameHierarchy=""
-			PostTiePos="2896.861 254.043 1846.552"
+			PostTiePos="2896.861 253.990 1846.552"
 			LpName="LP_PART01" />
 
 		<Post
@@ -30855,7 +30855,7 @@
 		<Post
 			ServerObjName="stolb13523"
 			NodesNameHierarchy=""
-			PostTiePos="2686.550 232.163 1725.147"
+			PostTiePos="2686.550 232.109 1725.147"
 			LpName="LP_PART02" />
 
 		<Post
@@ -30871,7 +30871,7 @@
 		<Post
 			ServerObjName="stolb13523"
 			NodesNameHierarchy=""
-			PostTiePos="2687.576 232.506 1725.883"
+			PostTiePos="2687.576 232.453 1725.883"
 			LpName="LP_PART01" />
 
 		<Post
@@ -30887,13 +30887,13 @@
 		<Post
 			ServerObjName="stolb13522"
 			NodesNameHierarchy=""
-			PostTiePos="2719.209 231.910 1679.177"
+			PostTiePos="2719.209 231.856 1679.177"
 			LpName="LP_PART02" />
 
 		<Post
 			ServerObjName="stolb13523"
 			NodesNameHierarchy=""
-			PostTiePos="2686.550 232.163 1725.147"
+			PostTiePos="2686.550 232.109 1725.147"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -30903,13 +30903,13 @@
 		<Post
 			ServerObjName="stolb13522"
 			NodesNameHierarchy=""
-			PostTiePos="2720.236 232.253 1679.913"
+			PostTiePos="2720.236 232.199 1679.913"
 			LpName="LP_PART01" />
 
 		<Post
 			ServerObjName="stolb13523"
 			NodesNameHierarchy=""
-			PostTiePos="2687.576 232.506 1725.883"
+			PostTiePos="2687.576 232.453 1725.883"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -30919,13 +30919,13 @@
 		<Post
 			ServerObjName="stolb13537"
 			NodesNameHierarchy=""
-			PostTiePos="2806.993 254.775 2007.863"
+			PostTiePos="2806.993 254.722 2007.863"
 			LpName="LP_PART02" />
 
 		<Post
 			ServerObjName="stolb13538"
 			NodesNameHierarchy=""
-			PostTiePos="2821.679 254.688 2055.362"
+			PostTiePos="2821.679 254.488 2055.362"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -30935,13 +30935,13 @@
 		<Post
 			ServerObjName="stolb13537"
 			NodesNameHierarchy=""
-			PostTiePos="2808.167 255.118 2007.399"
+			PostTiePos="2808.167 255.065 2007.399"
 			LpName="LP_PART01" />
 
 		<Post
 			ServerObjName="stolb13538"
 			NodesNameHierarchy=""
-			PostTiePos="2822.853 255.031 2054.898"
+			PostTiePos="2822.853 254.831 2054.898"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -30957,7 +30957,7 @@
 		<Post
 			ServerObjName="stolb13537"
 			NodesNameHierarchy=""
-			PostTiePos="2806.993 254.775 2007.863"
+			PostTiePos="2806.993 254.722 2007.863"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -31069,7 +31069,7 @@
 		<Post
 			ServerObjName="stolb13522"
 			NodesNameHierarchy=""
-			PostTiePos="2719.209 231.910 1679.177"
+			PostTiePos="2719.209 231.856 1679.177"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -31085,7 +31085,7 @@
 		<Post
 			ServerObjName="stolb13522"
 			NodesNameHierarchy=""
-			PostTiePos="2720.236 232.253 1679.913"
+			PostTiePos="2720.236 232.199 1679.913"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -31095,7 +31095,7 @@
 		<Post
 			ServerObjName="stolb13520"
 			NodesNameHierarchy=""
-			PostTiePos="2760.216 232.013 1617.494"
+			PostTiePos="2760.216 231.959 1617.494"
 			LpName="LP_PART02" />
 
 		<Post
@@ -31111,7 +31111,7 @@
 		<Post
 			ServerObjName="stolb13520"
 			NodesNameHierarchy=""
-			PostTiePos="2761.374 232.356 1617.998"
+			PostTiePos="2761.374 232.302 1617.998"
 			LpName="LP_PART01" />
 
 		<Post
@@ -31133,7 +31133,7 @@
 		<Post
 			ServerObjName="stolb13520"
 			NodesNameHierarchy=""
-			PostTiePos="2760.216 232.013 1617.494"
+			PostTiePos="2760.216 231.959 1617.494"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -31149,7 +31149,7 @@
 		<Post
 			ServerObjName="stolb13520"
 			NodesNameHierarchy=""
-			PostTiePos="2761.374 232.356 1617.998"
+			PostTiePos="2761.374 232.302 1617.998"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -31255,7 +31255,7 @@
 		<Post
 			ServerObjName="stolb13515"
 			NodesNameHierarchy=""
-			PostTiePos="2773.971 231.887 1430.183"
+			PostTiePos="2773.971 231.833 1430.183"
 			LpName="LP_PART02" />
 
 		<Post
@@ -31271,7 +31271,7 @@
 		<Post
 			ServerObjName="stolb13515"
 			NodesNameHierarchy=""
-			PostTiePos="2775.193 232.230 1429.865"
+			PostTiePos="2775.193 232.177 1429.865"
 			LpName="LP_PART01" />
 
 		<Post
@@ -31293,7 +31293,7 @@
 		<Post
 			ServerObjName="stolb13515"
 			NodesNameHierarchy=""
-			PostTiePos="2773.971 231.887 1430.183"
+			PostTiePos="2773.971 231.833 1430.183"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -31309,7 +31309,7 @@
 		<Post
 			ServerObjName="stolb13515"
 			NodesNameHierarchy=""
-			PostTiePos="2775.193 232.230 1429.865"
+			PostTiePos="2775.193 232.177 1429.865"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -32029,7 +32029,7 @@
 		<Post
 			ServerObjName="stolb13505"
 			NodesNameHierarchy=""
-			PostTiePos="2896.861 254.043 1846.552"
+			PostTiePos="2896.861 253.990 1846.552"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -32045,7 +32045,7 @@
 		<Post
 			ServerObjName="stolb13505"
 			NodesNameHierarchy=""
-			PostTiePos="2897.618 253.700 1847.562"
+			PostTiePos="2897.618 253.646 1847.562"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -32407,7 +32407,7 @@
 		<Post
 			ServerObjName="stolb13538"
 			NodesNameHierarchy=""
-			PostTiePos="2822.853 255.031 2054.898"
+			PostTiePos="2822.853 254.831 2054.898"
 			LpName="LP_PART01" />
 
 		<Post
@@ -32423,7 +32423,7 @@
 		<Post
 			ServerObjName="stolb13538"
 			NodesNameHierarchy=""
-			PostTiePos="2821.679 254.688 2055.362"
+			PostTiePos="2821.679 254.488 2055.362"
 			LpName="LP_PART02" />
 
 		<Post
@@ -32509,7 +32509,7 @@
 		<Post
 			ServerObjName="stolb13496"
 			NodesNameHierarchy=""
-			PostTiePos="2886.172 246.945 2184.199"
+			PostTiePos="2886.172 246.891 2184.199"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -32525,7 +32525,7 @@
 		<Post
 			ServerObjName="stolb13496"
 			NodesNameHierarchy=""
-			PostTiePos="2887.019 246.601 2183.262"
+			PostTiePos="2887.019 246.548 2183.262"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -32535,7 +32535,7 @@
 		<Post
 			ServerObjName="stolb13496"
 			NodesNameHierarchy=""
-			PostTiePos="2886.172 246.945 2184.199"
+			PostTiePos="2886.172 246.891 2184.199"
 			LpName="LP_PART01" />
 
 		<Post
@@ -32551,7 +32551,7 @@
 		<Post
 			ServerObjName="stolb13496"
 			NodesNameHierarchy=""
-			PostTiePos="2887.019 246.601 2183.262"
+			PostTiePos="2887.019 246.548 2183.262"
 			LpName="LP_PART02" />
 
 		<Post
@@ -33460,10 +33460,6 @@
 		Rot="0.000 0.469 0.000 0.883" />
 
 	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
-
-	<Object
 		Belong="-1"
 		Prototype="Cable">
 		<Post
@@ -33494,4 +33490,15 @@
 			PostTiePos="3288.382 228.799 2062.063"
 			LpName="LP_PART02" />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
+
+	<Object
+		Name="RTMRolik_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3502.771 216.773 3621.281"
+		Radius="85.000" />
 </DynamicScene>

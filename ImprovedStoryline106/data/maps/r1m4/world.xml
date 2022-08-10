@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76488936">
+	LastId="76489026">
 	<Node
 		name="Object9"
 		class="SgAnimatedModelNode"
@@ -20929,7 +20929,7 @@
 		class="SgAnimatedModelNode"
 		org="3500.933 207.000 3694.143"
 		orgRel="0"
-		rot="0.0000 0.0000 0.0000 1.0000"
 		id="berth"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 </World>

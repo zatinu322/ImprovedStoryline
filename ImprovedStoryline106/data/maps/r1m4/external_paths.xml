@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
+		Name="Aiven_path1">
+		<Point
+			coord="818.201 1699.343" />
+
+		<Point
+			coord="714.138 1711.387" />
+
+		<Point
+			coord="638.137 1735.313" />
+
+		<Point
+			coord="579.418 1762.955" />
+	</Path>
+
+	<Path
 		Name="BolotoCantMove">
 		<Point
 			coord="1455.955 1585.493" />
 
 		<Point
 			coord="1468.045 1583.369" />
+	</Path>
+
+	<Path
+		Name="BolotoPlayerSink_path">
+		<Point
+			coord="1323.614 1613.513" />
+
+		<Point
+			coord="1294.563 1651.125" />
+
+		<Point
+			coord="1269.707 1665.368" />
 	</Path>
 
 	<Path
@@ -40,6 +67,12 @@
 	</Path>
 
 	<Path
+		Name="Chehly_path">
+		<Point
+			coord="2132.598 3404.413" />
+	</Path>
+
+	<Path
 		Name="ExitMapPath">
 		<Point
 			coord="2752.208 443.648" />
@@ -61,6 +94,12 @@
 
 		<Point
 			coord="2839.525 37.264" />
+	</Path>
+
+	<Path
+		Name="ExpGetaway_path">
+		<Point
+			coord="2104.918 3468.073" />
 	</Path>
 
 	<Path
@@ -868,6 +907,24 @@
 	</Path>
 
 	<Path
+		Name="LisaSklad_path">
+		<Point
+			coord="1278.106 2507.586" />
+
+		<Point
+			coord="1303.591 2462.206" />
+	</Path>
+
+	<Path
+		Name="PlaneRPath">
+		<Point
+			coord="1681.994 829.359" />
+
+		<Point
+			coord="1857.186 803.203" />
+	</Path>
+
+	<Path
 		Name="ReturnPath">
 		<Point
 			coord="2755.850 455.396" />
@@ -877,6 +934,12 @@
 
 		<Point
 			coord="2742.875 484.296" />
+	</Path>
+
+	<Path
+		Name="Rrybak_path">
+		<Point
+			coord="2486.432 2721.369" />
 	</Path>
 
 	<Path
@@ -1703,71 +1766,4 @@
 		<Point
 			coord="714.643 699.526" />
 	</Path>
-
-	<Path
-		Name="Aiven_path1">
-		<Point
-			coord="818.201 1699.343" />
-
-		<Point
-			coord="714.138 1711.387" />
-
-		<Point
-			coord="638.137 1735.313" />
-
-		<Point
-			coord="579.418 1762.955" />
-	</Path>
-
-	<Path
-		Name="LisaSklad_path">
-		<Point
-			coord="1278.106 2507.586" />
-
-		<Point
-			coord="1303.591 2462.206" />
-	</Path>
-
-	<Path
-		Name="ExpGetaway_path">
-		<Point
-			coord="2104.918 3468.073" />
-	</Path>
-
-	<Path
-		Name="Chehly_path">
-		<Point
-			coord="2132.598 3404.413" />
-	</Path>
-
-	<Path
-		Name="Rrybak_path">
-		<Point
-			coord="2486.432 2721.369" />
-	</Path>
-
-	<Path
-		Name="BolotoPlayerSink_path">
-		<Point
-			coord="1323.614 1613.513" />
-
-		<Point
-			coord="1294.563 1651.125" />
-
-		<Point
-			coord="1269.707 1665.368" />
-	</Path>
-
-	<Path
-		Name="PlaneRPath">
-		<Point
-			coord="1537.452 879.827" />
-
-		<Point
-			coord="1681.994 829.359" />
-
-		<Point
-			coord="1857.186 803.203" />
-	</Path>
-
 </Paths>

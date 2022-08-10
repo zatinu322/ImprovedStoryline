@@ -2,11 +2,11 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76484601">
+	LastId="76484751">
 	<Node
 		name="Object27"
 		class="SgAnimatedModelNode"
-		org="1455.956 0.000 5539.021"
+		org="1455.956 -0.620 5539.021"
 		orgRel="1"
 		rot="0.0000 0.6915 0.0000 0.7224"
 		id="tunnel"
@@ -16429,20 +16429,11 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object20105"
-		class="SgAnimatedModelNode"
-		org="6657.513 0.000 5657.343"
-		orgRel="1"
-		rot="-0.0129 0.9866 -0.0993 0.1286"
-		id="heavy_bigwall1"
-		ndmAction="0" />
-
-	<Node
 		name="Object20106"
 		class="SgAnimatedModelNode"
-		org="6648.130 0.000 5651.958"
+		org="6646.220 0.000 5654.612"
 		orgRel="1"
-		rot="0.0000 0.9663 0.0000 0.2575"
+		rot="0.0000 0.8187 0.0000 0.5742"
 		id="heavy_bigwall1"
 		ndmAction="0" />
 
@@ -16615,16 +16606,6 @@
 		orgRel="1"
 		rot="0.0000 -0.1865 0.0000 0.9825"
 		id="heavy_dot2"
-		ndmAction="0" />
-
-	<Node
-		name="Object20127"
-		class="SgAnimatedModelNode"
-		org="6718.542 -0.604 5747.152"
-		orgRel="1"
-		rot="-0.3620 0.5734 0.2916 0.6747"
-		scale="1.400 1.400 1.400"
-		id="rr_barrier3"
 		ndmAction="0" />
 
 	<Node
@@ -29566,7 +29547,7 @@
 	<Node
 		name="Object720247806"
 		class="SgAnimatedModelNode"
-		org="1442.592 15.000 5538.501"
+		org="1442.592 12.965 5538.501"
 		orgRel="1"
 		rot="0.0000 0.6915 0.0000 0.7224"
 		id="tunnel_gate"

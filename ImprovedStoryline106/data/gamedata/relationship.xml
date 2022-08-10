@@ -37,7 +37,7 @@ $Id: Relationship.xml,v 1.19 2005/11/24 09:45:17 anton Exp $
 
 		<set
 			forwhom="1009"
-			who="1052 1100 1016"
+			who="1052 1100 1016 1015 1083"
 			tolerance="neutral" />
 
 		<set

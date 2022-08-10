@@ -1264,7 +1264,7 @@
 		<event flypath="Tunel_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			local vehPlayer = GetPlayerVehicle()
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(1466.568, 292.173, 5546.978), Quaternion(0.000, -0.731, 0.000, 0.682), 0)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(1466.568, 291.553, 5546.978), Quaternion(0.000, -0.731, 0.000, 0.682), 0)
 
 			if vehPlayer then
 				vehPlayer:SetThrottle( 0 )                      
@@ -1796,48 +1796,72 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("ORACLEABOTPLATE_cam01", CINEMATIC_NO_AIM, 0, 28, 1, 0 )
-			Fly("ORACLEABOTPLATE_cam02", CINEMATIC_NO_AIM, 0, 43, 0, 0 )
-			Fly("ORACLEABOTPLATE_cam03", CINEMATIC_NO_AIM, 0, 27, 0, 1 )
+			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
+			local bossOracleID = bossOracle:GetId()
+
+			RuleConsole("cinematic_spring_coeff 6.0")
+
+			FlyLinked("ORACLEABOTPLATE_cam01", GetPlayerVehicleId(), 13, 1, 0, bossOracleID)
+			FlyLinked("ORACLEABOTPLATE_cam02", bossOracleID, 54, 0, 0, GetPlayerVehicleId())
+			FlyLinked("ORACLEABOTPLATE_cam021", GetPlayerVehicleId(), 19, 0, 0, GetPlayerVehicleId())
+			FlyLinked("ORACLEABOTPLATE_cam03", GetPlayerVehicleId(), 28, 0, 0, bossOracleID)
+			FlyLinked("ORACLEABOTPLATE_cam04", bossOracleID, 49, 0, 1, GetPlayerVehicleId())
 			StartCinematic()
+			UpdateCinematic(1)
+
+			PlayCustomMusic("Techno02")
+			
+			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
+			if bossOracle then
+				bossOracle:SetRotation(Quaternion(-0.049, -0.795, -0.012, 0.604))
+				bossOracle:SetPosition( CVector(3647.236, 269.676, 1286.019))
+			end
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3102.565, 236.058, 1236.750))
+				vehPlayer:SetRotation(Quaternion(0.018, -0.395, 0.035, -0.918))
+				vehPlayer:SetExternalPathByName("player_path09")
+				vehPlayer:SetCustomLinearVelocity( 20 )
+				vehPlayer:LimitMaxSpeed( 30 )
+			end
+
+			AddCinematicMessage( 3412, 7 )
 
 			TActivate("RolikEnd_ORACLEABOTPLATE")
 			TActivate("trORACLEABOTPLATE_cam01")
 			TActivate("trORACLEABOTPLATE_cam02")
+			TActivate("trORACLEABOTPLATE_cam021")
 			TActivate("trORACLEABOTPLATE_cam03")
+			TActivate("trORACLEABOTPLATE_cam04")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
 	<trigger Name="trORACLEABOTPLATE_cam01" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("Techno02")
 			
+			TActivate("trORACLEABOTPLATE_Flight1")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trORACLEABOTPLATE_Flight1" active="0">
+		<event	timeout="4"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "moverOracle1" }
+			local mover = GetEntityByID( moverId ) 
 			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
 
-			if bossOracle then
-				bossOracle:SetRotation(Quaternion(-0.050, -0.959, 0.006, 0.277))
-				bossOracle:SetPosition( CVector(2968.664, 280, 1063.772))
+			if bossOracle and mover then
+				mover:SetObjAndPath( bossOracle:GetId(), "boss03Move01", 10 )
 			end
-
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(2909.970, 232.980, 945.917))
-				vehPlayer:SetRotation(Quaternion(0.022, -0.245, 0.042, -0.968))
-			end
-
-			AddCinematicMessage( 3412, 1 )
-			AddCinematicMessage( 35, 0.5 )
-			AddCinematicMessage( 36, 1 )
-			AddCinematicMessage( 361, 0.5 )
-			AddCinematicMessage( 3610, 0.1 )
-
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1848,15 +1872,36 @@
 			local vehPlayer = GetPlayerVehicle()
 
 			if vehPlayer then
-				vehPlayer:PlaceToEndOfPath("player_path03")
+				vehPlayer:PlaceToEndOfPath("player_path09")
 				vehPlayer:SetThrottle( 0 )
 			end
 
+			local moverOld = GetEntityByName("moverOracle1")
+			if moverOld then moverOld:Remove() end
+
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "moverOracle2" }
+			local mover = GetEntityByID( moverId ) 
+			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
+
+			if bossOracle and mover then
+				mover:SetObjAndPath( bossOracle:GetId(), "boss03Move02", 150 )
+			end
+
+			AddCinematicMessage( 35, 0.5 )
+			AddCinematicMessage( 36, 1 )
+			AddCinematicMessage( 361, 0.5 )
+			AddCinematicMessage( 3610, 0.1 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trORACLEABOTPLATE_cam021" active="0">
+		<event flypath="ORACLEABOTPLATE_cam021" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
 			AddCinematicMessage( 362, 0.5 )
-			AddCinematicMessage( 363, 0.5 )
-			AddCinematicMessage( 364, 0.5 )
-			AddCinematicMessage( 365, 0.5 )
-	
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1864,6 +1909,18 @@
 	<trigger Name="trORACLEABOTPLATE_cam03" active="0">
 		<event flypath="ORACLEABOTPLATE_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+			
+			AddCinematicMessage( 363, 0.5 )
+			AddCinematicMessage( 364, 0.5 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trORACLEABOTPLATE_cam04" active="0">
+		<event flypath="ORACLEABOTPLATE_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage( 365, 0.5 )	
 			AddCinematicMessage( 366, 0.5 )
 			AddCinematicMessage( 367, 0.5 )
 
@@ -1877,28 +1934,48 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			for move = 1,2 do
+				local moverOld = GetEntityByName("moverOracle"..move)
+				if moverOld then moverOld:Remove() end
+			end
+
 			local vehPlayer = GetPlayerVehicle()
-
 			if vehPlayer then
-				vehPlayer:PlaceToEndOfPath("player_path03")
+				vehPlayer:PlaceToEndOfPath("player_path09")
 				vehPlayer:SetThrottle( 0 )
+				vehPlayer:UnlimitMaxSpeed()
 			end
 
-			if bossOracle then
-				bossOracle:SetRotation(Quaternion(-0.022, 0.998, 0.016, -0.050))
-				bossOracle:SetPosition( CVector(7640.151, 236.887, 7807.008))
-			end
-			
 			TDeactivate( "trORACLEABOTPLATE_cam01")
 			TDeactivate( "trORACLEABOTPLATE_cam02" )
+			TDeactivate( "trORACLEABOTPLATE_cam021" )
 			TDeactivate( "trORACLEABOTPLATE_cam03")
+			TDeactivate( "trORACLEABOTPLATE_cam04")
 			TDeactivate( "RolikBegin_ORACLEABOTPLATE" )
 			TDeactivate("trZasadaAR")
+			TDeactivate("trORACLEABOTPLATE_Flight1")
+			TActivate("trORACLEABOTPLATE_OraclePlace")
 
 			StopPlayingCustomMusic()
 
 			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Ставим Оракула под землю, т.к. в предыдущем триггере не срабатывает. -->
+	<trigger Name="trORACLEABOTPLATE_OraclePlace" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
+			if bossOracle then
+				bossOracle:SetRotation(Quaternion(-0.022, 0.998, 0.016, -0.050))
+				bossOracle:SetPosition( CVector(7640.151, 236.887, 7807.008))
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -1910,17 +1987,21 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
+			RuleConsole("cinematic_spring_coeff 6.0")
+
 			PlayCustomMusic("Techno02")
 
 			local vehBoss = GetEntityByName("OracleFlyBoss_Rolik")
 			local idn01 = GetPlayerVehicleId()
 			local vehBossID = vehBoss:GetId()
 
-			Fly("ORACLEAGRESSOR_cam01", CINEMATIC_NO_AIM, 0, 17, 1, 0)
-			FlyLinked("ORACLEAGRESSOR_cam02", vehBossID, 23, 0, 0, idn01 )
+			FlyLinked("ORACLEAGRESSOR_cam00", idn01, 6, 1, 0, idn01 )
+			FlyLinked("ORACLEAGRESSOR_cam01", idn01, 13, 0, 0, vehBossID, nil, nil, nil, true )
+			FlyLinked("ORACLEAGRESSOR_cam02", vehBossID, 32, 0, 0, idn01 )
 			StartCinematic()
 
 			TActivate("RolikEnd_CHOOSE")
+			TActivate("trORACLEAGRESSOR_cam00")
 			TActivate("trORACLEAGRESSOR_cam01")
 			TActivate("trORACLEAGRESSOR_cam02")
 
@@ -1928,31 +2009,38 @@
 		</script>
 	</trigger>
 
-	<trigger Name="trORACLEAGRESSOR_cam01" active="0">
+	<trigger Name="trORACLEAGRESSOR_cam00" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 
 			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
 			if bossOracle then
-				bossOracle:SetRotation(Quaternion(0.039, 0.918, -0.093, -0.383))
-				bossOracle:SetPosition( CVector(2540.916, 341.577, 5954.685))
+				bossOracle:SetRotation(Quaternion(-0.025, -0.865, 0.084, 0.495))
+				bossOracle:SetPosition( CVector(2573.981, 327.815, 5920.739))
 			end
 
 			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "MoverB" }
-			local mover = GetEntityByID( moverId ) 
+			local mover = GetEntityByID( moverId )
 			if bossOracle then
-				mover:SetObjAndPath( bossOracle:GetId(), "boss03Move", 37 )
+				mover:SetObjAndPath( bossOracle:GetId(), "boss03Move", 105 )
 			end
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetGamePositionOnGround( CVector(2733.191, 277.533, 5836.819))
-				vehPlayer:SetRotation(Quaternion(-0.016, -0.720, 0.004, 0.693))
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(2245.033, 276.707, 5731.052))
+				vehPlayer:SetRotation(Quaternion(0.007, 0.508, 0.002, 0.861))
+				vehPlayer:SetExternalPathByName("player_path10")
+				vehPlayer:SetCustomLinearVelocity( 20 )
+				vehPlayer:LimitMaxSpeed(30)
 			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trORACLEAGRESSOR_cam01" active="0">
+		<event flypath="ORACLEAGRESSOR_cam01" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
 
 			AddCinematicMessage( 3002, 1 )
 
@@ -1976,9 +2064,17 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
-
+			TDeactivate( "trORACLEAGRESSOR_cam00")	
 			TDeactivate( "trORACLEAGRESSOR_cam01")
 			TDeactivate( "trORACLEAGRESSOR_cam02" )
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath("player_path10")
+				vehPlayer:SetGamePositionOnGround( CVector(2405.884, 279.144, 5823.081))
+				vehPlayer:SetRotation(Quaternion(0.001, -0.557, -0.010, -0.831))
+				vehPlayer:UnlimitMaxSpeed()
+			end
 
 			StartConversation("DecidePlz")
 
@@ -1995,14 +2091,38 @@
 			local idn01 = GetPlayerVehicleId()
 			local vehBossID = vehBoss:GetId()
 
-			FlyLinked("ORACLEAGRESSOR_cam03", idn01, 15, 0, 1, vehBossID )
+			FlyLinked("ORACLEAGRESSOR_cam03", vehBossID, 21, 0, 1, idn01 )
 			StartCinematic()
+
+			local mover = GetEntityByName("MoverB")
+			if mover == nil then
+				TActivate("trORACLEAGRESSOR_FlySkipped")
+			end
 
 			TActivate("RolikEnd_ORACLEAGRESSOR")
 
 			AddCinematicMessage( 3007, 0.5 )
 			AddCinematicMessage( 3008, 0.5 )
 			AddCinematicMessage( 3009, 0.5 )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trORACLEAGRESSOR_FlySkipped" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local bossOracle = GetEntityByName("OracleFlyBoss_Rolik")
+			if bossOracle then
+				bossOracle:SetRotation(Quaternion(-0.025, -0.865, 0.084, 0.495))
+				bossOracle:SetPosition( CVector(2573.981, 327.815, 5920.739))
+			end
+
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "MoverB" }
+			local mover = GetEntityByID( moverId )
+			if bossOracle then
+				mover:SetObjAndPath( bossOracle:GetId(), "boss03Move", 105 )
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -2015,10 +2135,13 @@
 			RestoreAllToleranceStatus()
 			SetTolerance( 1100, 1049, RS_ENEMY )
 
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			local mover = GetEntityByName("MoverB")
+			if mover then mover:Remove() end
+
 			local BossRolik = GetEntityByName("OracleFlyBoss_Rolik")
-			if BossRolik then
-				BossRolik:Remove()
-			end
+			if BossRolik then BossRolik:Remove() end
 
 			CreateNewDummyObject( "big_crag_2", "qa1", -1, -1, CVector(2327, 260, 5694), Quaternion(0, 0, 0, 1), 0)
 			CreateNewDummyObject( "big_crag_2", "qa2", -1, -1, CVector(2341, 255, 5822), Quaternion(0, 0, 0, 1), 0)
@@ -2027,6 +2150,7 @@
 			CreateNewDummyObject( "big_crag_7", "qa5", -1, -1, CVector(2333, 270, 5775), Quaternion(0, 0, 0, 1), 0)
 
 			TDeactivate( "trORACLEAGRESSOR_cam03")
+			TDeactivate("trORACLEAGRESSOR_FlySkipped")
 
 			TActivate("TRIGGER_ORACLEAGRESSORDIE")
 			
@@ -2038,7 +2162,9 @@
 			if bossp then
 				ShowBossIndicator(bossp:GetId())
 				bossp:SetPosition(CVector(2540.916, 341.577, 5954.685))
+				bossp:SetRotation(Quaternion(-0.014, 0.872, -0.000, -0.489))
 				bossp:NoticePlayer()
+				SetCameraDirectionToObj( bossp:GetId() )
 			end
 
 			trigger:Deactivate()
@@ -2054,10 +2180,15 @@
 			local idn01 = GetPlayerVehicleId()
 			local vehBossID = vehBoss:GetId()
 
-			FlyLinked("ORACLEAGRESSOR_cam03", idn01, 15, 0, 1, vehBossID )
+			FlyLinked("ORACLEAGRESSOR_cam03", vehBossID, 10, 0, 1, idn01 )
 			StartCinematic()
 
 			TActivate("RolikEnd_ORACLEAGRESSOR2")
+
+			local mover = GetEntityByName("MoverB")
+			if mover == nil then
+				TActivate("trORACLEAGRESSOR_FlySkipped")
+			end
 
 			AddCinematicMessage( 368, 0.5 )
 			AddCinematicMessage( 369, 0.5 )
@@ -2072,12 +2203,16 @@
 		<script>
 			RestoreAllToleranceStatus()
 
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			local mover = GetEntityByName("MoverB")
+			if mover then mover:Remove() end
+			
 			local BossRolik = GetEntityByName("OracleFlyBoss_Rolik")
-			if BossRolik then
-				BossRolik:Remove()
-			end
+			if BossRolik then BossRolik:Remove() end
 
 			TDeactivate( "trORACLEAGRESSOR_cam03")
+			TDeactivate("trORACLEAGRESSOR_FlySkipped")
 
 			StopPlayingCustomMusic()
 
@@ -2106,14 +2241,19 @@
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 
-			FlyLinked("ORACLEAGRESSOR_cam03", idn01, 11, 0, 0, vehBossID )
+			FlyLinked("ORACLEAGRESSOR_cam03", vehBossID, 11, 0, 0, idn01 )
 			FlyLinked( "SPYMER_cam01", CTochID, 5, 0, 0, idn01 )
-			Fly("PlBuhCam1", CINEMATIC_NO_AIM, 0, 24, 0, 0 )
+			Fly("PlBuhCam1", CINEMATIC_NO_AIM, 0, 28, 0, 0 )
 			StartCinematic()
 
 			TActivate("SpecEndLinkCam")
 			TActivate("SpecEndCam1")
 			TActivate("FakeEndSpec")
+
+			local mover = GetEntityByName("MoverB")
+			if mover == nil then
+				TActivate("trORACLEAGRESSOR_FlySkipped")
+			end
 
 			AddCinematicMessage( 370, 1 )
 
@@ -2132,13 +2272,16 @@
 				vehPlayer:SetRotation(Quaternion(0.006, 0.739, -0.009, 0.673))
 				vehPlayer:SetExternalPathByName("PlBuhPath")
 			end
+
+			local mover = GetEntityByName("MoverB")
+			if mover then mover:Remove() end
+
+			local BossRolik = GetEntityByName("OracleFlyBoss_Rolik")
+			if BossRolik then BossRolik:Remove() end
 			
-			CreateVehicleEx("DemoUral1","Buhar1",CVector(3141.057, 276.041, 5719.707), 1026)
-			CreateVehicleEx("DemoMolokovoz1","Buhar2",CVector(3156.552, 275.828, 5712.425), 1026)
-			local buh1 = GetEntityByName("Buhar1")
-			local buh2 = GetEntityByName("Buhar2")
-			if buh1 then buh1:SetRotation(Quaternion(0.005, 0.191, 0.031, 0.981)) end
-			if buh2 then buh2:SetRotation(Quaternion(-0.011, 0.183, -0.046, 0.982)) end
+			CreateVehicleEx("DemoUral1","Buhar1",CVector(3146.185, 277.446, 5717.556), 1026, Quaternion(-0.001, -0.187, -0.005, -0.982))
+			CreateVehicleEx("DemoMolokovoz1","Buhar2",CVector(3151.739, 276.337, 5714.316), 1026, Quaternion(0.005, -0.187, 0.011, -0.982))
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2146,9 +2289,10 @@
 	<trigger Name="SpecEndCam1" active="0">
 		<event flypath="PlBuhCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			AddCinematicMessage( 371, 1 )
+			AddCinematicMessage( 371, 5 )
 			AddCinematicMessage( 372, 0.1 )
 			AddCinematicMessage( 373, 0.1 )
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2181,12 +2325,8 @@
 	
 			local buhar = GetEntityByName("Buhar1")
 			if buhar==nil then
-				CreateVehicleEx("DemoUral1","Buhar1",CVector(3141.057, 276.041, 5719.707), 1026)
-				CreateVehicleEx("DemoMolokovoz1","Buhar2",CVector(3156.552, 275.828, 5712.425), 1026)
-				local buh1 = GetEntityByName("Buhar1")
-				local buh2 = GetEntityByName("Buhar2")
-				if buh1 then buh1:SetRotation(Quaternion(0.005, 0.191, 0.031, 0.981)) end
-				if buh2 then buh2:SetRotation(Quaternion(-0.011, 0.183, -0.046, 0.982)) end
+				CreateVehicleEx("DemoUral1","Buhar1",CVector(3146.185, 277.446, 5717.556), 1026, Quaternion(-0.001, -0.187, -0.005, -0.982))
+				CreateVehicleEx("DemoMolokovoz1","Buhar2",CVector(3151.739, 276.337, 5714.316), 1026, Quaternion(0.005, -0.187, 0.011, -0.982))
 
 				local vehPlayer = GetPlayerVehicle()
 				if vehPlayer then
@@ -2209,10 +2349,13 @@
 
 			RestoreAllToleranceStatus()
 
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			local mover = GetEntityByName("MoverB")
+			if mover then mover:Remove() end
+
 			local BossRolik = GetEntityByName("OracleFlyBoss_Rolik")
-			if BossRolik then
-				BossRolik:Remove()
-			end
+			if BossRolik then BossRolik:Remove() end
 
 			TDeactivate( "trORACLEAGRESSOR_cam03")
 			TDeactivate("SpecEndLinkCam")
@@ -2257,6 +2400,7 @@
 			FailQuestIfTaken("r1m3_DestroyOracle")
 			FailQuestIfTaken("r2m1_DeployBloks")
 			FailQuestIfTaken("r4m2_DestroyPlate")
+
 			RemoveQuestItem("quest_blokirator")
 			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_blokirator")
 
@@ -2277,13 +2421,14 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 10
+			PlfCoor.y = PlfCoor.y + 10
+			PlfCoor.z = PlfCoor.z + 25
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
+			FlyAround(1, 0, 15, 17, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 8810, 1)
@@ -2302,6 +2447,8 @@
 			RestoreAllToleranceStatus()
 			
 			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
 		
 			GetEntityByName("qa1"):Remove()
 			GetEntityByName("qa2"):Remove()
@@ -2317,43 +2464,41 @@
 
 	<!-- Приезд каравана с картошкой в Минин -->
 	<trigger Name="LOPRolikBegin" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("Bio02")
 			
-			CreateVehicleEx("r2m2_CaravanUral02","KartoshVeh",CVector(6633.571, 239.886, 5833.665), 1010)
-			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(6776.104, 258.729, 5899.462), Quaternion(0, 0, 0, 0), 1)
-			local CToch = GetEntityByName("CamTochka")
-			local CTochID = CToch:GetId()
+			CreateVehicleEx("r2m2_CaravanUral02","KartoshVeh",CVector(0, 2000, 0), 1010, Quaternion(0.023, -0.667, 0.027, -0.744))
 			local vehK = GetEntityByName("KartoshVeh")
 			local vehKID = vehK:GetId()
-			
-			FlyLinked( "SPYMER_cam01", CTochID, 15, 1, 0, vehKID )
-			Fly("LOPCam3", CINEMATIC_NO_AIM, 0, 17, 0, 0 )
-			Fly("LOPCam1", CINEMATIC_NO_AIM, 0, 46, 0, 0 )
-			Fly("LOPCam2", CINEMATIC_NO_AIM, 0, 40, 0, 1 )
-			StartCinematic()
-			
-			TActivate("LOPRolikFade")
-			TActivate("trLOPRolikCam1")
-			TActivate("trLOPRolikCam2")
-			TActivate("trLOPRolikCam3")
-			TActivate("LOPRolikEnd")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
 
-	<trigger Name="LOPRolikFade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
+			Fly("LOPCam0", CINEMATIC_AIM_TO_ID, vehKID, 17, 0, 0)
+			Fly("LOPCam3", CINEMATIC_NO_AIM, 0, 17, 0, 0 )
+			Fly("LOPCam1", CINEMATIC_NO_AIM, 0, 25.5, 0, 0 )
+			Fly("LOPCam1_2", CINEMATIC_NO_AIM, 0, 22, 0, 0 )
+			Fly("LOPCam2", CINEMATIC_NO_AIM, 0, 40.5, 0, 1 )
+			StartCinematic()
+
 			local vehK = GetEntityByName("KartoshVeh")
 			if vehK then
-				vehK:SetRotation(Quaternion(0.023, -0.667, 0.027, -0.744))
+				vehK:SetGamePositionOnGround(CVector(6721.877, 241.258, 5828.994))
 				vehK:SetExternalPathByName("KartoshVehPath")
+				vehK:SetCustomLinearVelocity(15)
 			end
+
+			local barr = GetEntityByName("mininBarrier")
+			if barr then barr:Remove() end
+			
+			TActivate("trLOPRolikCam1")
+			TActivate("trLOPRolikCam1_2")
+			TActivate("trLOPRolikCam2")
+			TActivate("trLOPRolikCam3")
+			TActivate("trLOPRolikMsg380")
+			TActivate("LOPRolikEnd")
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2361,19 +2506,28 @@
 	<trigger Name="trLOPRolikCam3" active="0">
 		<event flypath="LOPCam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+
 			local vehK = GetEntityByName("KartoshVeh")
 			if vehK then
-				vehK:SetExternalPathByName("KartoshVehPath")
 				vehK:PlaceToEndOfPath("KartoshVehPath")
-				vehK:SetCustomLinearVelocity( 0 )
-				vehK:SetThrottle( 0 )
-				vehK:SetGamePositionOnGround( CVector(6622.653, 232.377, 5729.754))
-				vehK:SetRotation(Quaternion(0.000, 0.101, 0.000, 0.995))
 			end
 			
 			AddCinematicMessage( 379, 1 )
 			AddCinematicMessage( 380, 3 )
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trLOPRolikMsg380" active="0">
+		<event msgid="380" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+
+			local vehK = GetEntityByName("KartoshVeh")
+			if vehK then
+				vehK:SetExternalPathByName("KartoshVehPath2")
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2385,9 +2539,7 @@
 			PlayCustomMusic("IntenseDialogue01")
 			
 			local vehK = GetEntityByName("KartoshVeh")
-			if vehK then
-				vehK:Remove()
-			end
+			if vehK then vehK:Remove() end
 			
 			CreateNewDummyObject( "potatoe", "kartosh1", -1, -1, CVector(6614.875, 232.608, 5716.154), Quaternion(0.0000, 0.5057, 0.0000, 0.8627), 0)
 			CreateNewDummyObject( "potatoe", "kartosh2", -1, -1, CVector(6614.910, 232.683, 5714.803), Quaternion(0.0000, 0.4501, 0.0000, 0.8930), 0)
@@ -2407,6 +2559,15 @@
 			
 			AddCinematicMessage( 381, 1 )
 			AddCinematicMessage( 382, 0.1 )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trLOPRolikCam1_2" active="0">
+		<event flypath="LOPCam1_2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			
 			AddCinematicMessage( 383, 0.1 )
 			AddCinematicMessage( 384, 0.1 )
 			
@@ -2417,6 +2578,8 @@
 	<trigger Name="trLOPRolikCam2" active="0">
 		<event flypath="LOPCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+
+			PlayCustomMusic("QuietDialogue01")
 
 			AddCinematicMessage( 385, 1 )
 			AddCinematicMessage( 386, 0.1 )
@@ -2452,13 +2615,12 @@
 			if humP then humP:Remove() end
 			local humA = GetEntityByName("humAiven")
 			if humA then humA:Remove() end
-			local humT = GetEntityByName("CamTochka")
-			if humT then humT:Remove() end
 			
 			TDeactivate("trLOPRolikCam1")
+			TDeactivate("trLOPRolikCam1_2")
 			TDeactivate("trLOPRolikCam2")
 			TDeactivate("trLOPRolikCam3")
-			TDeactivate("LOPRolikFade")
+			TDeactivate("trLOPRolikMsg380")
 			
 			trigger:Deactivate()
 		</script>

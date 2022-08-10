@@ -1278,7 +1278,7 @@
 		name="Dlg_pl_003154"
 		text="Ну, давай подождём."
 		role="PLAYER"
-		scriptResult="CompleteQuest('ATMinin_Quest'); TActivate('LOPRolikBegin'); LeaveTown(true)" />
+		scriptResult="CompleteQuest('ATMinin_Quest'); TActivate('LOPRolikBegin'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_npc_003106"

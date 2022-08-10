@@ -460,8 +460,9 @@
 		<Point  coord="3345.694 418.518 1375.326" rotation="-0.101 0.874 -0.205 0.430"/>
 	</Path>
 
-	<Path Name = "linkedcam">
+	<Path Name = "AivenRolik_linkedcam">
 		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="0.000 15.000 0.000"/>
 	</Path>
 
 	<Path Name = "AivenRolik_cam01">
@@ -485,13 +486,13 @@
 	</Path>
 
 	<Path Name = "ATGRolikCam2">
-		<Point  coord="3363.433 369.000 3289.556" rotation="-0.015 0.984 -0.126 0.121"/>
-		<Point  coord="3364.372 370.006 3293.288" rotation="-0.015 0.984 -0.126 0.121"/>
+		<Point  coord="3362.515 368.251 3288.867" rotation="0.002 0.998 -0.066 -0.025"/>
+		<Point  coord="3362.285 368.414 3291.463" rotation="-0.001 0.991 -0.135 0.007"/>
 	</Path>
 
 	<Path Name = "ATGRolikCam3">
-		<Point  coord="3392.140 430.206 3402.975" rotation="-0.029 0.962 -0.249 0.111"/>
-		<Point  coord="3383.332 406.705 3366.709" rotation="-0.033 0.954 -0.275 0.114"/>
+		<Point  coord="3329.178 372.066 3297.573" rotation="-0.030 -0.803 0.041 0.594"/>
+		<Point  coord="3330.312 372.066 3301.274" rotation="-0.030 -0.803 0.041 0.594"/>
 	</Path>
 	
 </Paths>

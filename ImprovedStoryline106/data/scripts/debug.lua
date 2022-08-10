@@ -421,3 +421,31 @@ function SetGameTime( h, m )
 	end
 
 end
+
+function LogObjHeight(x, z, objName, y)
+
+	if objName == nil then
+		objName = "Object name missing"
+	end
+
+	local name = objName
+	local level = GET_GLOBAL_OBJECT( "CurrentLevel" ):GetLevelName()
+
+	local cont = g_ObjCont
+	if cont then
+		local height = cont:GetHeight(x, z)
+		if y then
+			height = math.ceil((height + y)*1000)
+		else
+			height = math.ceil(height*1000)
+		end
+
+		LOG("\""..name.."\" on level "..level)
+		LOG(height/1000)
+		println(height/1000)
+
+	else
+		LOG("g_ObjCont is missing!!!")
+	end
+
+end

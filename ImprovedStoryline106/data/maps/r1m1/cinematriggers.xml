@@ -2813,6 +2813,8 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			SetWeather(1)
 			
 			PlayCustomMusic("Techno02")
 			
@@ -2823,7 +2825,7 @@
 			local vehP = GetPlayerVehicle()
 			local vehPID = vehP:GetId()
 			
-			FlyLinked( "linkedcam", CTochID, 9, 1, 0, vehPID )
+			FlyLinked( "AivenRolik_linkedcam", CTochID, 9, 1, 0, vehPID )
 			Fly("ATGRolikCam1", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 			Fly("ATGRolikCam2", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
 			Fly("ATGRolikCam3", CINEMATIC_NO_AIM, 0, 15, 0, 1 )
@@ -2845,13 +2847,10 @@
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
 				vehPlayer:SetGamePositionOnGround( CVector(3314.015, 360.766, 3155.099))
 				vehPlayer:SetRotation(Quaternion(-0.034, 0.419, 0.021, 0.907))
 				vehPlayer:SetExternalPathByName("ATGRolik_path")
+				vehPlayer:SetCustomLinearVelocity( 10 )
 			end
 			
 			CreateNewDummyObject( "dweller_father", "humFather", -1, -1, CVector(3360.821, 367.317, 3289.118), Quaternion(0.0000, -0.9483, 0.0000, -0.3173), 1)
@@ -2889,6 +2888,7 @@
 		<script>
 			getObj("humFather"):SetNodeAction(AT_RESERVED1)
 			getObj("humFather"):SetNodeForAnimation(AT_RESERVED1, AT_STAND1)
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2909,6 +2909,15 @@
 
 	<trigger Name="trATGRolikCam3" active="0">
 		<event flypath="ATGRolikCam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			TActivate("trATGRolikFatherDisappear")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trATGRolikFatherDisappear" active="0">
+		<event	timeout="5"		eventid="GE_TIME_PERIOD" />
 		<script>
 			local humF = GetEntityByName("humFather")
 			if humF then humF:Remove() end
@@ -2944,6 +2953,7 @@
 			TDeactivate("trATGRolikCam2")
 			TDeactivate("trATGRolikCam3")
 			TDeactivate("ATGRolikMsg5974")
+			TDeactivate("trATGRolikFatherDisappear")
 			
 			local humF = GetEntityByName("humFather")
 			if humF then humF:Remove() end

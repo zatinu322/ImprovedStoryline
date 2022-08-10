@@ -45,7 +45,7 @@
 	<Path
 		Name="KartoshVehPath">
 		<Point
-			coord="6725.670 5832.308" />
+			coord="6728.543 5827.283" />
 
 		<Point
 			coord="6788.614 5813.483" />
@@ -54,7 +54,31 @@
 			coord="6808.619 5762.645" />
 
 		<Point
-			coord="6738.140 5752.850" />
+			coord="6737.661 5746.026" />
+
+		<Point
+			coord="6712.442 5739.410" />
+
+		<Point
+			coord="6675.526 5731.859" />
+
+		<Point
+			coord="6632.544 5727.257" />
+	</Path>
+
+	<Path
+		Name="KartoshVehPath2">
+		<Point
+			coord="6674.744 5743.172" />
+
+		<Point
+			coord="6715.770 5740.513" />
+
+		<Point
+			coord="6804.915 5762.865" />
+
+		<Point
+			coord="6793.236 5806.690" />
 	</Path>
 
 	<Path
@@ -258,10 +282,19 @@
 	<Path
 		Name="PlBuhPath">
 		<Point
-			coord="3169.421 5809.682" />
+			coord="3104.526 5808.532" />
 
 		<Point
-			coord="3164.853 5750.153" />
+			coord="3134.200 5801.941" />
+
+		<Point
+			coord="3168.874 5797.503" />
+
+		<Point
+			coord="3176.587 5780.297" />
+
+		<Point
+			coord="3160.309 5741.496" />
 	</Path>
 
 	<Path
@@ -1540,6 +1573,30 @@
 
 		<Point
 			coord="1869.926 5438.892" />
+	</Path>
+
+	<Path
+		Name="player_path09">
+		<Point
+			coord="3260.175 1367.400" />
+
+		<Point
+			coord="3293.994 1392.480" />
+
+		<Point
+			coord="3343.379 1423.580" />
+	</Path>
+
+	<Path
+		Name="player_path10">
+		<Point
+			coord="2264.022 5740.961" />
+
+		<Point
+			coord="2337.601 5782.321" />
+
+		<Point
+			coord="2386.239 5811.198" />
 	</Path>
 
 	<Path

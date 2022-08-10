@@ -3,10 +3,19 @@
 	<Path
 		Name="AfterBattle_path01">
 		<Point
-			coord="2752.420 1760.803" />
+			coord="2711.058 1741.141" />
 
 		<Point
-			coord="2779.061 1806.862" />
+			coord="2746.950 1756.863" />
+
+		<Point
+			coord="2774.750 1804.519" />
+	</Path>
+
+	<Path
+		Name="AfterBattle_path02">
+		<Point
+			coord="2804.360 1823.128" />
 	</Path>
 
 	<Path

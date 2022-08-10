@@ -595,14 +595,14 @@
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_1111_njeri.ogg"
 		value="НЬЕРИ|Его нужно расположить рядом со сбитым кораблем, но ни мы, ни наша техника не можем приблизиться на нужное расстояние."
-		time="12" />
+		time="9" />
 
 	<string
 		id="112"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_112_hero.ogg"
 		value="Все понятно. Я уже был там, и со мной ничего не случилось. Значит, я смогу доставить ваш блокиратор."
-		time="12" />
+		time="7" />
 
 	<string
 		id="113"
@@ -611,7 +611,7 @@
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_113_njeri.ogg"
 		value="НЬЕРИ|Мы надеялись на твою помощь. Ты – последняя надежда человечества."
-		time="4" />
+		time="8" />
 
 	<string
 		id="120"

@@ -1895,6 +1895,8 @@
 		<script>
 			PlayCustomMusic("Techno04")
 
+			SetWeather(0)
+
 			if QuestStatus("r2m1_TW_AlienInShip")==Q_TAKEN then
 				
 				getObj("AliensShip"):SetPosition( CVector(1366.725, 0.804, 1801.638))
@@ -1958,16 +1960,16 @@
 				RuleConsole("cinematic_spring_coeff 1.7")
 
 				Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-				FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, humPlID, nil, nil, nil, nil )
+				FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, humPlID )
 				Fly(		"UFODIOLOG_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam03", CTochID , 14, 0, 0, humPlID, nil, nil, nil, nil )
-				Fly(		"UFODIOLOG_cam04", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam05", CTochID , 41, 0, 0, humPlID, nil, nil, nil, nil )
+				FlyLinked(	"UFODIOLOG_cam03", CTochID , 14, 0, 0, humPlID )
+				Fly(		"UFODIOLOG_cam04", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
+				FlyLinked(	"UFODIOLOG_cam05", CTochID , 41, 0, 0, humPlID )
 				Fly(		"UFODIOLOG_cam06", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
-				Fly(		"UFODIOLOG_cam07", CINEMATIC_NO_AIM, 0, 47, 0, 0 )
-				Fly(		"UFODIOLOG_cam08", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
-				FlyLinked(	"UFODIOLOG_cam09", CTochID , 23, 0, 0, humPlID, nil, nil, nil, nil )
-				Fly(		"UFODIOLOG_cam10", CINEMATIC_NO_AIM, 0, 18, 0, 1 )
+				Fly(		"UFODIOLOG_cam07", CINEMATIC_NO_AIM, 0, 52, 0, 0 )
+				Fly(		"UFODIOLOG_cam08", CINEMATIC_NO_AIM, 0, 10, 0, 0 )
+				FlyLinked(	"UFODIOLOG_cam09", CTochID , 23, 0, 0, humPlID )
+				Fly(		"UFODIOLOG_cam10", CINEMATIC_NO_AIM, 0, 19, 0, 1 )
 				StartCinematic()
 
 				TActivate("trUFODIOLOG_cam01")
@@ -2008,16 +2010,12 @@
 				local CTochID = CToch:GetId()
 				local vehPID = GetPlayerVehicleId()
 
-				Fly(		"UFODIOLOG_cam01", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
-				FlyLinked(	"BattleUFO_cam01", CTochID , 5, 0, 0, vehPID, nil, nil, nil, nil )
-				Fly(		"BattleUFO_cam02", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-				Fly(		"BattleUFO_cam03", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-				Fly(		"BattleUFO_cam04", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+				Fly(		"UFODIOLOG_cam01", CINEMATIC_AIM_TO_ID, controlledObj:GetId(), 5, 0, 0 )
+				FlyLinked(	"BattleUFO_cam01", CTochID, 5, 0, 0, vehPID )
+				Fly(		"BattleUFO_cam04", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 6, 0, 1 )
 				StartCinematic()
 
 				TActivate("trBattleUFO_cam01")
-				TActivate("trBattleUFO_cam02")
-				TActivate("trBattleUFO_cam03")
 				TActivate("trBattleUFO_cam04")
 				TActivate("RolikEnd_BattleUFO")
 			end
@@ -2220,22 +2218,6 @@
 		</script>
 	</trigger>
 
-	<trigger Name="trBattleUFO_cam02" active="0">
-		<event flypath="BattleUFO_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trBattleUFO_cam03" active="0">
-		<event flypath="BattleUFO_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
-		<script>
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<trigger Name="trBattleUFO_cam04" active="0">
 		<event flypath="BattleUFO_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
@@ -2269,8 +2251,6 @@
 				Droid0:Remove()
 			end
 			TDeactivate("trBattleUFO_cam01")
-			TDeactivate("trBattleUFO_cam02")
-			TDeactivate("trBattleUFO_cam03")
 			TDeactivate("trBattleUFO_cam04")
 
 			CreateNewDummyObject( "r2_crag_copped_3", "cragTR", -1, -1, CVector(1255, 420, 1591), Quaternion(0.0000, 0.1951, 0.0000, 0.9808), 0)
@@ -2300,66 +2280,67 @@
 		<script>
 			PlayCustomMusic("Passage04")
 
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			local PlfCoor2 = PlfCoor
-			local ufopos = GetEntityByName("AliensShip"):GetPosition()
-			local camPos = GetCameraPos()
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z + 60
+			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			PlfCoor2.y = PlfCoor2.y + 10
-			PlfCoor2.z = PlfCoor2.z + 7
-
-			FlyAround( 1, 0, 15, 2, PlfCoor2, PlfID, 1, 0 )
-			Fly("UFODIE_cam01", CINEMATIC_NO_AIM, 0, 6, 0, 0, nil, nil, nil)
-			Fly("UFODIE_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			local ufo = GetEntityByName("AliensShip")
+			local ufopos = ufo:GetPosition()
+			local ufoID = ufo:GetId()
+			
+			Fly("UFODIE_cam01", CINEMATIC_NO_AIM, 0, 8, 1, 0)
+			Fly("UFODIE_cam02", CINEMATIC_AIM_TO_ID, ufoID, 5, 0, 0 )
 			Fly("UFODIE_cam032", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 			Fly("UFODIE_cam031", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
 
 			if BookExists("r1_book_doklad") then
-				Fly("UFODIE_cam04", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
-				Fly("AfterBattle", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
+				local pcar = CreateVehicleEx("FelixVehicle2", "ProfessorCar", CVector(2693.961, 285.541, 1732.479), 1009, Quaternion(0.000, 0.522, 0.000, 0.853))
+				local pcarId = pcar:GetId()
+
+				RuleConsole("cinematic_spring_coeff 6.0")
+
+				Fly("UFODIE_cam04", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
+				FlyLinked("AfterBattle", pcarId, 11, 0, 1, GetPlayerVehicleId())
 				StartCinematic()
 
 				TActivate("trAfterBattle")
 			else
-				Fly("UFODIE_cam04", CINEMATIC_NO_AIM, 0, 15, 0, 1 )
+				Fly("UFODIE_cam04", CINEMATIC_NO_AIM, 0, 16, 0, 1 )
 				StartCinematic()
 			end
 
 			CreateEffectTTLed("ET_S_UFODEATH", CVector(ufopos), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 30000)
-			
-			SetTolerance(1016,1009,RS_ALLY)
-
-			GetEntityByName("AliensShip"):NextState()
-			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
-			local mover = GetEntityByID( moverId ) 
-			local controlledObj = GetEntityByName("AliensShip")
-			if controlledObj then
-				mover:SetObjAndPath( controlledObj:GetId(), "bossMove1", 30 )
-			end
 
 			TActivate("RolikEnd_UFODIE")
 			TActivate("trUFODIE_EF")
-			TActivate("trUFODIE_cam01")
+			TActivate("trUFODIE_cam02")
 			TActivate("trUFODIE_cam04")
+			TActivate("trUFODIE_FADE")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<trigger Name="trUFODIE_cam01" active="0">
-		<event flypath="UFODIE_cam01" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+	<trigger Name="trUFODIE_FADE" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "ufoMover" }
+			local mover = GetEntityByID( moverId ) 
+			local controlledObj = GetEntityByName("AliensShip")
+			if controlledObj then
+				controlledObj:SetRotation(Quaternion(0.004, -0.683, -0.009, 0.730))
+				mover:SetObjAndPath( controlledObj:GetId(), "bossMove1", 30 )
+			end
+			
 			local vehPlayer = GetPlayerVehicle()
-			local camPos = GetCameraPos()
 			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
 				vehPlayer:SetGamePositionOnGround( CVector(2795.072, 284.827, 1836.845))
 				vehPlayer:SetRotation(Quaternion(0.000, -0.952, -0.000, 0.306))
 			end
-				trigger:Deactivate()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -2388,6 +2369,16 @@
 		</script>
 	</trigger>
 
+	<trigger Name="trUFODIE_cam02" active="0">
+		<event flypath="UFODIE_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local station = GetEntityByName("AliensShipStation3")
+			if station then station:Remove() end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<trigger Name="trUFODIE_cam04" active="0">
 		<event flypath="UFODIE_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
@@ -2404,13 +2395,15 @@
 		<script>
 			PlayCustomMusic("Bio06")
 			
-			TeamCreate("ProfessorCar",1009,CVector(2710.045, 286.885, 1740.700),{"FelixVehicle2"})
-			
-			local pcar = GetEntityByName("ProfessorCar_vehicle_0")
+			local pcar = GetEntityByName("ProfessorCar")
 			if pcar then
-				pcar:SetRotation(Quaternion(-0.000, 0.587, 0.000, 0.809))
-				pcar:SetCustomLinearVelocity( 20 )
+				pcar:SetSkin(1)
+				pcar:SetGamePositionOnGround(CVector(2693.961, 285.541, 1732.479))
+				pcar:SetRotation(Quaternion(0.000, 0.522, 0.000, 0.853))
 				pcar:SetExternalPathByName("AfterBattle_path01")
+				pcar:SetCustomLinearVelocity( 13 )
+				pcar:SetCruisingSpeed(13)
+				pcar:SetMaxSpeed(13)
 			end
 
 				trigger:Deactivate()
@@ -2421,36 +2414,61 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			RestoreAllToleranceStatus()
 		
+			TDeactivate("trUFODIE_FADE")	
 			TDeactivate("trUFODIE_EF")
+			TDeactivate("trUFODIE_cam02")
 			TDeactivate("trUFODIE_cam04")
-			TDeactivate("trUFODIE_cam05")
-			TDeactivate("trUFODIE_cam06")
 			TDeactivate("trAfterBattle")
 			
 			TActivate("VyborFinala")
+			TActivate("trUFODIE_PlaceUfo")
 
 			local vehPlayer = GetPlayerVehicle()
-			local camPos = GetCameraPos()
 			if vehPlayer then
 				vehPlayer:SetGamePositionOnGround( CVector(2795.072, 284.827, 1836.845))
 				vehPlayer:SetRotation(Quaternion(0.000, -0.952, -0.000, 0.306))
 			end
 
+			local mover = GetEntityByName("ufoMover")
+			if mover then mover:Remove() end
+
 			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
 			
-			if IsQuestComplete("Signs_Quest")  and  IsQuestComplete("r2m2_Znaki2Midgard_Quest")  and  IsQuestComplete("q_PlaceWithSign") and IsQuestComplete("RPGSigns_Quest") and BookExists( "r1_book_doklad" ) then
-			
-				local pcar = GetEntityByName("ProfessorCar_vehicle_0")
+			if BookExists( "r1_book_doklad" ) then
+				local pcar = GetEntityByName("ProfessorCar")
 				if pcar then
+					pcar:PlaceToEndOfPath("AfterBattle_path01")
 					pcar:SetGamePositionOnGround( CVector(2772.473, 286.377, 1791.452))
 		   			pcar:SetRotation(Quaternion(-0.000, 0.216, 0.000, 0.976))
 					pcar:setGodMode(1)
+					pcar:setImmortalMode(1)
+					pcar:SetExternalPathByName("AfterBattle_path02")
 				end
+
+				RuleConsole("cinematic_spring_coeff 0.7")
 			
 				StartConversation("ProfessorMal")
 			else
 				TActivate("ToR2M1AfterBoss")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Ставим НЛО на последнюю позицию отдельно, так как не работает в триггере завершения -->
+	<trigger Name="trUFODIE_PlaceUfo" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local ufo = GetEntityByName("AliensShip")
+			if ufo then
+				ufo:SetPosition(CVector(1900.168, 280.978, 1610.655))
+				ufo:SetRotation(Quaternion(0.179, 0.810, -0.266, -0.491))
 			end
 
 			trigger:Deactivate()

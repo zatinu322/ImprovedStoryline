@@ -69,19 +69,6 @@
 		</script>
 	</trigger>
 
-	<!-- Подъезжаем к самолёту -->
-	<trigger Name="SpecEndTrStart" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SpecEndPlane_loc" />
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SpecEndPlane2_loc" />
-		<script>
-			if QuestStatus("ToAivenToHel_Quest")==Q_TAKEN then
-				TActivate("PlaneRBegin")
-				CompleteQuest("ToAivenToHel_Quest")
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
 	<!-- Болото закрыто. Фейковый выбор. -->
 	<trigger	Name="BolotoChoice"	active="1">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="MorassRoad_loc" />
@@ -360,9 +347,22 @@
 		</script>
 	</trigger>
 
+	<!-- Подъезжаем к самолёту -->
+	<trigger Name="SpecEndTrStart" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SpecEndPlane_loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SpecEndPlane2_loc" />
+		<script>
+			if QuestStatus("ToAivenToHel_Quest")==Q_TAKEN then
+				TActivate("PlaneRBegin")
+				CompleteQuest("ToAivenToHel_Quest")
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
 	<!-- Последний разговор с Айвеном. Истинная концовка. -->
 	<trigger Name="RTMRolikStart" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="HomerRyba_loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RTMRolik_loc" />
 		<script>
 			if QuestStatus("RevealTheMask_Quest")==Q_TAKEN then
 				CompleteQuest("RevealTheMask_Quest")

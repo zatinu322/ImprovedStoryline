@@ -165,7 +165,7 @@
 	<trigger Name="SpawnAnalDestroyers" active="0">
 		<event        timeout="0.01"        eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("BezummecCars",1062,CVector(3960.564, 347.046, 2588.471),{"CoolBelaz", "CoolBelaz_2"}, nil, 0, Quaternion(0.013, -0.093, -0.011, 0.996))
+			TeamCreate("BezummecCars",1062,CVector(3960.564, 347.046, 2588.471),{"CoolBelaz", "CoolBelaz_2"}, nil, nil, Quaternion(0.013, -0.093, -0.011, 0.996))
 
 			local bezum = GetEntityByName("BezummecCars")
 			if bezum then
@@ -178,7 +178,7 @@
 					bezum:GetVehicle(i):setImmortalMode(1)
 					bezum:GetVehicle(i):SetExternalPathByName("Bezumcy_path01")
 					bezum:GetVehicle(i):SetCanBeDistractedFromMoving(true)
-					bezum:SetRandomSkin()
+					bezum:GetVehicle(i):SetRandomSkin()
 				end
 			end
 

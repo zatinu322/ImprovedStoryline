@@ -441,8 +441,8 @@ function LogObjHeight(x, z, objName, y)
 		end
 
 		LOG("\""..name.."\" on level "..level)
-		LOG(height/1000)
-		println(height/1000)
+		LOG(string.format( "%.3f", height/1000))
+		println(string.format( "%.3f", height/1000))
 
 	else
 		LOG("g_ObjCont is missing!!!")

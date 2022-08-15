@@ -494,5 +494,24 @@
 		<Point  coord="3329.178 372.066 3297.573" rotation="-0.030 -0.803 0.041 0.594"/>
 		<Point  coord="3330.312 372.066 3301.274" rotation="-0.030 -0.803 0.041 0.594"/>
 	</Path>
+
+	<Path Name = "GoodEndCam1">
+		<Point  coord="3131.565 320.278 422.900" rotation="-0.021 0.829 -0.031 0.559"/>
+		<Point  coord="3131.016 320.234 422.677" rotation="-0.021 0.829 -0.031 0.559"/>
+	</Path>
+
+	<Path Name = "GoodEndCam2">
+		<Point  coord="3127.677 319.891 418.166" rotation="-0.032 0.766 -0.038 0.641"/>
+		<Point  coord="3127.813 322.395 418.236" rotation="-0.032 0.721 -0.035 0.691"/>
+	</Path>
+
+	<Path Name = "GoodEndCam3">
+		<Point  coord="3127.813 322.395 418.236" rotation="-0.032 0.721 -0.035 0.691"/>
+		<Point  coord="3128.769 340.055 418.726" rotation="-0.026 0.328 -0.009 0.944"/>
+	</Path>
+
+	<Path Name = "NarratorsCam1">
+		<Point  coord="1344.575 338.532 820.433" rotation="-0.000 1.000 0.006 -0.002"/>
+	</Path>
 	
 </Paths>

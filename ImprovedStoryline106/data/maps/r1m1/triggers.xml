@@ -727,7 +727,7 @@
 
 	<!-- Отличная концовка -->
 	<trigger Name="GoodEndAlmostHere" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheFreedomQ" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheContraQ" />
 		<script>
 
 			CompleteQuest("VisitTroick")

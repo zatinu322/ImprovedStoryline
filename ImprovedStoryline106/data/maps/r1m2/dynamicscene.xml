@@ -1754,7 +1754,7 @@
 			Prototype="NPC"
 			ModelName="mask_ben"
 			cfg="47"
-			helloReplyNames="Ben_hellodlg0 Ben_hellodlg2 Ben_hellodlg3 Dlg_npc_002081 BadEndingDlg Dlg_npc_002431 Dlg_npc_002459 Dlg_npc_002472 Dlg_npc_002482 Dlg_npc_002488 Dlg_npc_002498"
+			helloReplyNames="Ben_hellodlg0 Ben_hellodlg2 Ben_hellodlg3 Dlg_npc_002081 BadEndingDlg Dlg_npc_002431 Dlg_npc_002459 Dlg_npc_002472 Dlg_npc_002482 Dlg_npc_002488 Dlg_npc_002498 Dlg_npc_003278 Dlg_npc_003282"
 			SpokenCount="0" />
 
 		<Object
@@ -1763,7 +1763,7 @@
 			Prototype="NPC"
 			ModelName="mask_lisa"
 			cfg="92"
-			helloReplyNames="Dlg_npc_002203 Dlg_npc_002211 NormalEndingDlg Dlg_npc_002468 GoodEndingDlg Dlg_npc_002478 Dlg_npc_002484 Dlg_npc_002492 Dlg_npc_002506"
+			helloReplyNames="Dlg_npc_002203 Dlg_npc_002211 NormalEndingDlg Dlg_npc_002468 GoodEndingDlg Dlg_npc_002478 Dlg_npc_002484 Dlg_npc_002492 Dlg_npc_002506 Dlg_npc_003274 Dlg_npc_003284"
 			SpokenCount="0" />
 
 		<Object

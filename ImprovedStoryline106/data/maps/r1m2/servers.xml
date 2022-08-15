@@ -894,6 +894,9 @@
 			id="midgard_gate"
 			file="data\models\AnimModels.xml" />
 
+		<Item
+			id="end_screen"
+			file="data\models\AnimModels.xml" />
 <!-- objects -->
 		<Item
 			id="cargo"

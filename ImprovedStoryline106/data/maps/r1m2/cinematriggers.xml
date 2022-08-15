@@ -600,10 +600,12 @@
 
 	<!-- Перебивка "На следующий день" у Бена -->
 	<trigger Name="NextDayTr" active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			SetGameTime(9, 0)
 			
 			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
 			StartCinematic()
@@ -611,6 +613,15 @@
 			AddCinematicMessage( 88060, 1 )
 			
 			TActivate("NextTrEnd2")
+
+			if IsQuestComplete("BenNormalEnd") or IsQuestComplete("BenGoodEnd") then
+				CreateNewDummyObject("dweller_ben", "humBen", -1, -1, CVector(3780.104, 121.954, 1814.842), Quaternion(0.0000, 0.7056, 0.0000, 0.7086), 0)
+				CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(3780.797, 121.956, 1813.882), Quaternion(0, 0, 0, 1), 0)
+				CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(3781.449, 121.956, 1814.840), Quaternion(0.0000, -0.7826, 0.0000, 0.6225), 0)
+
+				getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
+				getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -621,11 +632,23 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			local humB = GetEntityByName("humBen")
+			if humB then humB:Remove() end
+
+			local humL = GetEntityByName("humLisa")
+			if humL then humL:Remove() end
+
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
 			
-			if QuestStatus("FindGomer2_Quest")==Q_TAKEN then
+			if IsQuestComplete("BenNormalEnd") or IsQuestComplete("BenGoodEnd") then
+				StartConversation("Lisa")
+
 				trigger:Deactivate()
-			else
-				StartConversation("Ben")
+			elseif QuestStatus("FindGomer2_Quest")==Q_TAKEN then
 				trigger:Deactivate()
 			end
 			
@@ -645,6 +668,29 @@
 			
 			TActivate("NextTrEnd")
 
+			if IsQuestComplete("BenNormalEnd") or IsQuestComplete("BenGoodEnd") then
+				if GetVar("BenDwelPosition").AsString == "normal" then
+					CreateNewDummyObject("dweller_ben", "humBen", -1, -1, CVector(3780.104, 121.954, 1814.842), Quaternion(0.0000, 0.7056, 0.0000, 0.7086), 0)
+					CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(3780.797, 121.956, 1813.882), Quaternion(0, 0, 0, 1), 0)
+					CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(3781.449, 121.956, 1814.840), Quaternion(0.0000, -0.7826, 0.0000, 0.6225), 0)
+
+					getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
+					getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+				elseif GetVar("BenDwelPosition").AsString == "LisaNewCar" then
+					CreateNewDummyObject("dweller_ben", "humBen", -1, -1, CVector(3765.977, 116.988, 1806.781), Quaternion(0.0000, -0.5592, 0.0000, 0.8290), 0)
+					CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(3762.207, 116.903, 1808.512), Quaternion(0.0000, 0.8605, 0.0000, 0.5094), 0)
+					CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(3778.596, 121.960, 1814.233), Quaternion(0.0000, -0.8266, 0.0000, 0.5628), 0)
+
+					local vehLisa = CreateVehicleEx("LisaCar", "CARLISA_1", CVector(3763.702, 117.920, 1805.722), 1042, Quaternion(-0.008, -0.245, -0.030, 0.969))
+					if vehLisa then
+						vehLisa:SetSkin(2)
+					end
+
+					getObj("humBen"):SetNodeAction(AT_RESERVED1)
+					getObj("humBen"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+				end
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -655,12 +701,31 @@
 		<script>
 			
 			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			local humB = GetEntityByName("humBen")
+			if humB then humB:Remove() end
+
+			local humL = GetEntityByName("humLisa")
+			if humL then humL:Remove() end
+
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+
+			local vehLisa = GetEntityByName("CARLISA_1")
+			if vehLisa then vehLisa:Remove() end
 			
 			if IsQuestComplete("BenNormalEnd") then
 				StartConversation("Ben")
+			elseif good_ending == 1 then
+				StartConversation("Ben")
+				good_ending = 0
 			else
 				StartConversation("Lisa")
 			end
+
+			SetVar("BenDwelPosition", "normal")
 
 			trigger:Deactivate()
 		</script>
@@ -951,9 +1016,11 @@
 			StartCinematic()
 
 			AddCinematicMessage( 5968, 0)
+			AddCinematicMessage( 5967, 0.1)
+			AddCinematicMessage( 59689, 0.1)
 			AddCinematicMessage( 5965, 0.1)
 			AddCinematicMessage( 5966, 0.1)
-			AddCinematicMessage( 5967, 0.1)
+			
 
 			TActivate("BadEndEnd")
 			TActivate("BadEndSkip")
@@ -1009,6 +1076,324 @@
 			TDeactivate("BadEndCam6")
 			TDeactivate("PreSuicCam")
 			TDeactivate("SuicCam")
+
+			CheckPlayerVehicle()
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Нормальное концовка -->
+	<trigger Name="NormalEndCin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("QuietDialogue01")
+
+			fly_amount = 1
+
+			SetGameTime( 9, 0 )
+			
+			SetWeather(0)
+
+			if IsQuestComplete("r4m2_BlokiratorToUFO") then
+				boss_skin = 1
+			elseif IsQuestComplete("r2m1_DestroyAlienShip") then
+				boss_skin = 0
+			end
+
+			CreateNewDummyObject("end_screen", "CurPicture", -1, -1, CVector(4953.597, 19.018, 7935.530), Quaternion(0.0000, 0.7284, 0.0000, 0.6852), boss_skin)
+
+			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3782.793, 121.943, 1820.308), Quaternion( 0.000, -0.313, 0.000, 0.950 ), 0)
+
+			local vehLisa = CreateVehicleEx("LisaCar", "CARLISA", CVector(3760.050, 118.701, 1779.471), 1042, Quaternion(-0.008, -0.245, -0.030, 0.969))
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetGamePositionOnGround(CVector(3766.743, 118.064, 1787.009))
+				Plf:SetRotation(Quaternion(-0.004, -0.230, -0.045, 0.972))
+			end
+
+			if vehLisa then vehLisa:SetSkin(2) end
+
+			Fly("NormalEndCam1", CINEMATIC_NO_AIM, nil, 30, 0, 1)
+			Fly("start_game", CINEMATIC_NO_AIM, nil, 1, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 1)
+			StartCinematic()
+
+			TActivate("NormalEndFade")
+			TActivate("NormalEndBeforeNarrator")
+			TActivate("narratorschoose")
+			TActivate("preTirtyNormal_cam")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="NormalEndFade" active="0">
+		<event	timeout="5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			local vehLisa = GetEntityByName("CARLISA")
+			local Plf = GetPlayerVehicle()
+
+			if Plf then
+				Plf:SetExternalPathByName("Player_path04")
+				Plf:LimitMaxSpeed(20)
+			end
+
+			if vehLisa then
+				vehLisa:SetExternalPathByName("Lisa_path02")
+				vehLisa:SetMaxSpeed(20)
+				vehLisa:SetCruisingSpeed(20)
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="NormalEndBeforeNarrator" active="0">
+		<event flypath="start_game" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			PlayCustomMusic("IntenseDialogue04")
+
+			AddCinematicMessage( 5968, 0)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="narratorschoose" active="0">
+		<event flypath="EndingScreenCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			if fly_amount == 1 then
+				RuleConsole("g_postEffect BWFadeIn")
+
+				-- блок Оракул/Ньери
+				if IsQuestComplete("r4m2_BlokiratorToUFO") then
+					AddCinematicMessage( 77774, 0 )
+					AddCinematicMessage( 77775, 0.1 )
+					AddCinematicMessage( 77776, 0.1 )
+					boss_skin = 1
+				elseif IsQuestComplete("r2m1_DestroyAlienShip") then
+					AddCinematicMessage( 77771, 0 )
+					AddCinematicMessage( 77772, 0.1 )
+					AddCinematicMessage( 77773, 0.1 )
+					boss_skin = 0
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(boss_skin) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 2 then
+			
+				-- блок Фатерлянд        
+				if IsQuestComplete("Zachisti3_Quest") then
+					AddCinematicMessage( 77779, 0 )
+					if QuestStatus("d_IntrigaOfMerMinin_Quest")==Q_COMPLETED then
+						AddCinematicMessage( 77780, 0.1 )
+					end
+					r1m3_skin = 2
+				elseif IsQuestComplete("FightForPesht") then
+					AddCinematicMessage( 77778, 0 )
+					r1m3_skin = 3
+				else
+					AddCinematicMessage( 77777, 0 )
+					r1m3_skin = 4
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(r1m3_skin) end
+
+				fly_amount = fly_amount + 1
+			
+			elseif fly_amount == 3 then
+			
+				-- блок Роща Друидов
+				if IsQuestComplete("r3m1_RescueUlukCivil_TakeToSet") and IsQuestComplete("r3m1_ClearSanctuary") then
+					AddCinematicMessage( 77781, 0 )
+					r3m1_skin = 5
+				elseif IsQuestComplete("r3m1_ClearSanctuary") and not(IsQuestComplete("r3m1_RescueUlukCivil_TakeToSet")) then
+					AddCinematicMessage( 77782, 0 )
+					AddCinematicMessage( 77783, 0.1 )
+					r3m1_skin = 6
+				else 
+					AddCinematicMessage( 77784, 0 )
+					AddCinematicMessage( 77785, 0.1 )
+					r3m1_skin = 7
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(r3m1_skin) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 4 then
+
+				-- блок Либриум/Аржан
+				if IsQuestComplete("FinalBattle_Quest") then
+					AddCinematicMessage( 77786, 0 )
+					AddCinematicMessage( 77787, 0.1 )
+					r2m1_skin = 8
+				elseif IsQuestComplete("d_MoveWithGeneralToGelvetcia_Quest") then
+					AddCinematicMessage( 77788, 0 )
+					r2m1_skin = 9
+				elseif IsQuestComplete("r2m2_KillMrPresidentAndOther") then
+					AddCinematicMessage( 77789, 0 )
+					AddCinematicMessage( 77790, 0.1 )
+					r2m1_skin = 10
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(r2m1_skin) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 5 then
+			
+				-- блок ТСП/Рыбаки
+				if QuestStatus("FreeExtremistLeader_Quest5")==Q_COMPLETED then
+					AddCinematicMessage( 77794, 0 )
+					r1m4_skin = 11
+				elseif QuestStatus("WaitTillEnd")==Q_COMPLETED then
+					AddCinematicMessage( 77795, 0 )
+					r1m4_skin = 12
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(r1m4_skin) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 6 then
+			
+				-- блок ОЛ/АКФ
+				if QuestStatus("GoToMudrec_Quest")==Q_COMPLETED then
+					AddCinematicMessage( 77796, 0 )
+					r1m6_skin = 13
+				elseif QuestStatus("GoToMudr_Quest")==Q_COMPLETED then
+					AddCinematicMessage( 77797, 0 )
+					r1m6_skin = 14
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(r1m6_skin) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 7 then
+
+				AddCinematicMessage( 77792, 0 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(15) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 8 then
+			
+				AddCinematicMessage( 77793, 0 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(16) end
+
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="preTirtyNormal_cam" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RuleConsole("g_postEffect BWFadeOut")
+
+			local pic = GetEntityByName("CurPicture")
+			if pic then pic:Remove() end
+
+			local hBen = GetEntityByName("HumanBen")
+			if hBen then hBen:Remove() end
+
+			local vehLisa = GetEntityByName("CARLISA")
+			if vehLisa then vehLisa:Remove() end
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:PlaceToEndOfPath("Player_path04")
+				Plf:UnlimitMaxSpeed()
+			end
+
+			TDeactivate("NormalEndBeforeNarrator")
+
+			PlayCustomMusic("Tiamat")
+
+			Fly("start_game", CINEMATIC_NO_AIM, 0, 327, 0, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 5968, 0)
+			AddCinematicMessage( 5973, 0.1)
+			AddCinematicMessage( 5974, 0.1)
+			AddCinematicMessage( 5971, 0.1)
+			AddCinematicMessage( 5972, 0.1)
+
+			fly_amount = nil
+			boss_skin = nil
+			r1m3_skin = nil
+			r3m1_skin = nil
+			r2m1_skin = nil
+			r1m4_skin = nil
+			r1m6_skin = nil
+
+			TActivate("TirtyNormal_End")
+			TActivate("TirtyNormal_Skip")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TirtyNormal_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+
+			RestoreAllToleranceStatus()	
+		
+			StopPlayingCustomMusic()
+			
+			SpawnMessageBox( "5970" )
+			
+			ShowDeathMenu()
+
+			TDeactivate("TirtyNormal_Skip")
+
+			CheckPlayerVehicle()
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TirtyNormal_Skip" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+
+			RestoreAllToleranceStatus()	
+		
+			StopPlayingCustomMusic()
+			
+			SpawnMessageBox( "5969" )
+			
+			ShowDeathMenu()
+
+			TDeactivate("TirtyNormal_End")
 
 			CheckPlayerVehicle()
 			

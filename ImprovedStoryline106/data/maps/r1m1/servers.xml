@@ -801,6 +801,10 @@
 			id="lamppost2_broken"
 			file="data\models\AnimModels.xml" />
 
+		<Item
+			id="end_screen"
+			file="data\models\AnimModels.xml" />
+
 <!-- objects -->
 		<Item
 			id="exit"

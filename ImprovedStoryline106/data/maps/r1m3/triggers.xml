@@ -848,17 +848,6 @@
 		</script>
 	</trigger>
 
-	<!-- Нормальная концовка -->
-	<trigger Name="StartNormalEnd" active="1">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locNormalEnd" />
-		<script>
-		if IsQuestComplete("BenNormalEnd") then
-			TActivate("NormalEndCin")
-			trigger:Deactivate()
-		end
-		</script>
-	</trigger>
-
 	<!-- Конни и Блайд -->
 	<trigger Name="TriggerBonnyTrap" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />

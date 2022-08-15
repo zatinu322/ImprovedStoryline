@@ -18963,5 +18963,12 @@
 		shadow="0"
 		windwavy="0"
 		trans="0" />
+	
+	<model
+		id="end_screen"
+		file="data\models\buildings\region1\ekran\end_screen.gam"
+		shadow="0"
+		windwavy="0"
+		trans="0" />
 
 </AnimatedModels>

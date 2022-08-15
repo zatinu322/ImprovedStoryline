@@ -16251,7 +16251,71 @@
 		name="Dlg_pl_002473"
 		text="Мудрые слова, Бен! А сейчас давайте хорошенько отметим конец этого долгого приключения! Хочу сказать тост! За вас, мои друзья! Без вашей помощи у меня навряд ли что-то получилось бы! До дна!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 5 ); TActivate('ToFaterEnd'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 5 ); TActivate('NextDayTr'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003274"
+		text="Ничего себе! Это что, моя машина?!"
+		role="NPC"
+		scriptCondition="(IsQuestComplete('BenNormalEnd') and GetCurNpc():GetSpokenCount() == 4) or (IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 6)"
+		nextReplies="Dlg_pl_003275" />
+
+	<Reply
+		name="Dlg_pl_003275"
+		text="И правда, выглядит точь-в-точь будто..."
+		role="PLAYER"
+		scriptResult="if IsQuestComplete('BenNormalEnd') then GetCurNpc():SetSpokenCount( 5 ) elseif IsQuestComplete('BenGoodEnd') then GetCurNpc():SetSpokenCount( 7 ) end StartConversation('Ben')" />
+
+	<Reply
+		name="Dlg_npc_003278"
+		text="Ну, она, конечно, не совсем как твоя, но я очень постарался сделать её максимально похожей..."
+		role="NPC"
+		scriptCondition="(IsQuestComplete('BenNormalEnd') and GetCurNpc():GetSpokenCount() == 5) or (IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 5)"
+		nextReplies="Dlg_pl_003279" />
+
+	<Reply
+		name="Dlg_pl_003279"
+		text="Вот это да! Действительно, внешне никак не отличается."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003280" />
+
+	<Reply
+		name="Dlg_npc_003280"
+		text="Внешне - да. А вот под капотом... Пойдём, Лиса, я тебе покажу."
+		role="NPC"
+		nextReplies="Dlg_pl_003281" />
+
+	<Reply
+		name="Dlg_pl_003281"
+		text="С удовольствием присоединюсь."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 6 ); SetVar('BenDwelPosition', 'LisaNewCar'); if IsQuestComplete('BenGoodEnd') then good_ending = 1 end; TActivate('NextHoursTr'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003282"
+		text="Даже на чай не останешься?"
+		role="NPC"
+		scriptCondition="IsQuestComplete('BenNormalEnd') and GetCurNpc():GetSpokenCount() == 6"
+		nextReplies="Dlg_pl_003283" />
+
+	<Reply
+		name="Dlg_pl_003283"
+		text="Да я и так уже засиделся. Хорошо то, что хорошо заканчивается, но дорога не ждёт. Поедешь со мной, Лиса?"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 7 ); StartConversation('Lisa')" />
+
+	<Reply
+		name="Dlg_npc_003284"
+		text="Поеду. Но не с тобой. Ты правильно сказал, что всё закончилось. А там, где кончается что-то одно..."
+		role="NPC"
+		scriptCondition="IsQuestComplete('BenNormalEnd') and GetCurNpc():GetSpokenCount() == 5"
+		nextReplies="Dlg_pl_003286" />
+
+	<Reply
+		name="Dlg_pl_003286"
+		text="Сразу же начинается другое. Понимаю. Ну, до скорого, Бен! Я буду заезжать, вот увидишь!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 6 ); TActivate('NormalEndCin'); EndConversation() " />
 <!--Root/r1m2/Сюжетные/Отличная концовка-->
 	<Reply
 		name="GoodEndingDlg"
@@ -16350,7 +16414,7 @@
 
 	<Reply
 		name="Dlg_pl_002489"
-		text="Не думаю. Я выполнил задуманное, узнал судьбу Айвена, а все эти длительные поездки мне порядком поднадоели. Наверное, вернусь в Край. Там как раз бармен предлагал мне домик в Троицком. Поселюсь там и буду вести скучную и унылую фермерскую жизнь."
+		text="Не думаю. Я выполнил задуманное, узнал судьбу Айвена, а все эти длительные поездки мне порядком поднадоели. Наверное, вернусь в Край. Там как раз бармен предлагал мне домик в Гугулино. Поселюсь там и буду вести скучную и унылую фермерскую жизнь."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002490" />
 
@@ -16407,7 +16471,7 @@
 		name="Dlg_npc_002498"
 		text="Уже уезжаете?"
 		role="NPC"
-		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 5 "
+		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 6 "
 		nextReplies="Dlg_pl_002499" />
 
 	<Reply
@@ -16450,20 +16514,20 @@
 		name="Dlg_pl_002505"
 		text="Хорошо, обязательно передам! Ну что, Лиса, ты готова?"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 6 ); StartConversation('Lisa')" />
+		scriptResult="GetCurNpc():SetSpokenCount( 7 ); StartConversation('Lisa')" />
 
 	<Reply
 		name="Dlg_npc_002506"
 		text="Готова! Ну, мы поехали! Пока, отец!"
 		role="NPC"
-		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 6 "
+		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 7 "
 		nextReplies="Dlg_pl_002507" />
 
 	<Reply
 		name="Dlg_pl_002507"
 		text="До скорого, Бен!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 7 ); TakeQuest('StartCalmLife'); StopPlayingCustomMusic(); AddQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Lisa_P'); AddQuestItem('quest_babka_package'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_babka_package'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 8 ); TakeQuest('StartCalmLife'); StopPlayingCustomMusic(); AddQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Lisa_P'); AddQuestItem('quest_babka_package'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_babka_package'); TActivate('LisaFollowsUsGoodEnd'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002508"
@@ -16568,7 +16632,7 @@
 
 	<Reply
 		name="Dlg_pl_002524"
-		text="Это очень долгая и невероятная история, Дронн! Когда-нибудь я тебе всё расскажу. Помнишь, ты говорил, что у тебя в Троицком есть домик? Он до сих пор свободен?"
+		text="Это очень долгая и невероятная история, Дронн! Когда-нибудь я тебе всё расскажу. Помнишь, ты говорил, что у тебя в Гугулино есть домик? Он до сих пор свободен?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002525" />
 
@@ -16592,7 +16656,7 @@
 
 	<Reply
 		name="Dlg_pl_002528"
-		text="Приятно слышать. Ладно, поедем мы в Троицком обживаться."
+		text="Приятно слышать. Ладно, поедем мы в Гугулино обживаться."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002529" />
 
@@ -16606,7 +16670,7 @@
 		name="Dlg_pl_002530"
 		text="Ха-ха-ха, не переживай, обязательно расскажу."
 		role="PLAYER"
-		scriptResult="CompleteQuest('VisitBarmen'); TActivate('GoodEndAlmostHere'); EndConversation()" />
+		scriptResult="CompleteQuest('VisitBarmen'); TActivate('GoodEndAlmostHere'); SetGameTime(9,0); SetWeather(0); EndConversation()" />
 <!--Root/r1m2/Сюжетные/СпецКонцовка-->
 	<Reply
 		name="Dlg_npc_002576nifiga"
@@ -17867,7 +17931,7 @@
 
 	<Reply
 		name="Dlg_npc_001386"
-		text="Слушай, а тебе ведь теперь жить-то негде. У меня есть пустой дом в Троицком. Немного обживёшься, потом работу тебе найдём."
+		text="Слушай, а тебе ведь теперь жить-то негде. У меня есть пустой дом в селе Гугулино. Немного обживёшься, потом работу тебе найдём."
 		role="NPC"
 		nextReplies="Dlg_pl_001387" />
 

@@ -259,6 +259,9 @@
 		id="IntenseDialogue04"
 		file="data\music\cinematics\IntenseDialogue04.ogg" />
 	<model
+		id="IntenseDialogue05"
+		file="data\music\cinematics\IntenseDialogue05.ogg" />
+	<model
 		id="Passage01unloop"
 		file="data\music\cinematics\Passage01unloop.ogg" />
 	<model

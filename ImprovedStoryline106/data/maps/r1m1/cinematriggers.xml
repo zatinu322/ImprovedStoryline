@@ -465,14 +465,14 @@
 			TDeactivate( "ROLIK13" )
 			TDeactivate( "ROLIK18" )
 			TDeactivate( "ROLIK14" )
-			TDeactivate( "OpeningOpen1" )
-			TDeactivate( "Opening1" )
-			TDeactivate( "Opening11" )
-			TDeactivate( "Opening2" )
-			TDeactivate( "Opening22" )
-			TDeactivate( "Opening3" )
-			TDeactivate( "Opening4" )
-			TDeactivate( "Opening5" )
+			TDeactivate( "trOpeningOpen1" )
+			TDeactivate( "trOpening1" )
+			TDeactivate( "trOpening11" )
+			TDeactivate( "trOpening2" )
+			TDeactivate( "trOpening22" )
+			TDeactivate( "trOpening3" )
+			TDeactivate( "trOpening4" )
+			TDeactivate( "trOpening5" )
 			TDeactivate( "trOpeningEnd" )
 			TDeactivate( "StartGame" )
 			TActivate("triggerExitToMap12")
@@ -2394,6 +2394,7 @@
 			TDeactivate( "RolikBegin_Felix3" )
 			TDeactivate( "trFelix3" )
 			TDeactivate( "trFelix2_cam03" )
+			TDeactivate( "trFelix2_cam01" )
 
 			TActivate( "METALFELIXDIE3" )
 
@@ -2651,6 +2652,10 @@
 			TDeactivate( "trFelix4_cam05" )
 			TDeactivate( "trFelix4_cam06" )
 			TDeactivate( "trFelix4_cam07" )
+			TDeactivate( "trFelix4_cam08" )
+			TDeactivate( "trFelix4_cam09" )
+			TDeactivate( "trFelix4_cam10" )
+			TDeactivate( "trFelix4_cam11" )
 			TDeactivate( "RolikBegin_Felix4" )
 
 			SetCameraBehindPlayerVehicle()
@@ -2977,11 +2982,29 @@
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("QuietDialogue05")
-			
-			Fly("Narrators", CINEMATIC_NO_AIM, 0, 177, 1, 1 )
+
+			fly_amount = 1
+
+			Fly("lisa6_cam02", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
+			Fly("GoodEndCam1", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			Fly("GoodEndCam2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("GoodEndCam3", CINEMATIC_NO_AIM, 0, 32, 0, 1 )
+			Fly("start_game", CINEMATIC_NO_AIM, 0, 1, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("NarratorsCam1", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
 			StartCinematic()
 
 			TActivate("GoodEndFade")
+			TActivate("trGoodEndCam1")
+			TActivate("trGoodEndCam2")
+			TActivate("trGoodEndCam3")
+			TActivate("trBeforeNarrators")
+			TActivate("GoodEndNarrators")
 			TActivate("GoodEndpreTitry")
 
 			trigger:Deactivate()
@@ -2991,69 +3014,184 @@
 	<trigger Name="GoodEndFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			SetGameTime( 9, 0 )
-			
-			SetWeather(0)
+
+			local oldLisa = GetEntityByName("LisaInTroick_vehicle_0")
+			if oldLisa then oldLisa:Remove() end
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetGamePositionOnGround( CVector(3074.432, 317.903, 431.046) )
+				vehPlayer:SetRotation(Quaternion(-0.010, -0.517, -0.021, -0.855))
+				vehPlayer:SetExternalPathByName("player_path03")
 				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(3189.708, 321.001, 1247.208))
-				vehPlayer:SetRotation(Quaternion(-0.008, 0.984, -0.013, -0.176))
+				vehPlayer:SetThrottle( 1 )
+				vehPlayer:SetCustomLinearVelocity( 10 )
+				vehPlayer:LimitMaxSpeed(20)
 			end
-						
-			AddCinematicMessage( 77776, 3 )
-			AddCinematicMessage( 77777, 0.1 )
-			AddCinematicMessage( 77778, 0.1 )
-			
-			if IsQuestComplete("d_GiveMoneyToBase_Quest") and not(IsQuestComplete("FightForPesht")) then
-				AddCinematicMessage( 77785, 3 )
+
+			local vehLisa = CreateVehicleEx("LisaCar","vehLisaGood",CVector(3054.574, 317.000, 413.382), 1042)
+			if vehLisa then
+				vehLisa:SetSkin(2)
+				vehLisa:SetExternalPathByName("lisa_path03")
+				vehLisa:SetMaxSpeed(20)
+				vehLisa:SetCruisingSpeed(20)
 			end
-			
-			if not(IsQuestComplete("d_GiveMoneyToBase_Quest")) and not(IsQuestComplete("d_DestroyBridge_Quest")) and not(IsQuestComplete("FightForPesht")) then
-				AddCinematicMessage( 77785, 3 )
-			end
-			
-			if IsQuestComplete("FightForPesht") then
-				AddCinematicMessage( 77786, 3 )
-			end
-			
-			if IsQuestComplete("Zachisti3_Quest") then
-				AddCinematicMessage( 77779, 3 )
-				if QuestStatus("d_IntrigaOfMerMinin_Quest")==Q_COMPLETED then
-					AddCinematicMessage( 77780, 1 )
-				end
-			end
-			
-			if IsQuestComplete("r3m1_RescueUlukCivil_TakeToSet") and IsQuestComplete("r3m1_ClearSanctuary") then
-				AddCinematicMessage( 77781, 3 )
-			end
-			
-			if IsQuestComplete("r3m1_ClearSanctuary") and not(IsQuestComplete("r3m1_RescueUlukCivil_TakeToSet")) then
-				AddCinematicMessage( 77787, 3 )
-				AddCinematicMessage( 77788, 1 )
-			end
-			
-			if IsQuestComplete("r3m1_LureMainDriud") then
-				AddCinematicMessage( 77789, 3 )
-				AddCinematicMessage( 77790, 1 )
-			end
-			
-			if not(IsQuestComplete("r3m1_LureMainDriud")) and not(IsQuestComplete("r3m1_ClearSanctuary")) then
-				AddCinematicMessage( 77789, 3 )
-				AddCinematicMessage( 77790, 1 )
-			end
-			
-			AddCinematicMessage( 77782, 3 )
-			AddCinematicMessage( 77783, 0.1 )
-			AddCinematicMessage( 77791, 3 )
-			AddCinematicMessage( 77792, 3 )
-			AddCinematicMessage( 77784, 3 )
+
+			CreateNewDummyObject("end_screen", "CurPicture", -1, -1, CVector(1344.532, 333.877, 810.539), Quaternion(0.0000, -0.7117, 0.0000, 0.7025), 0)
 
 			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trGoodEndCam1" active="0">
+		<event flypath="GoodEndCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetGamePositionOnGround( CVector(3143.495, 319.796, 370.701) )
+				vehPlayer:SetRotation(Quaternion(0.000, -0.849, -0.000, 0.529))
+				vehPlayer:PlaceToEndOfPath("player_path03")
+			end
+
+			local vehLisa = GetEntityByName("vehLisaGood")
+			if vehLisa then vehLisa:Remove() end
+
+			CreateNewDummyObject("dweller_player", "humPlayer", -1, -1, CVector(3128.930, 318.458, 420.100), Quaternion(0.0000, -0.8266, 0.0000, 0.5628), 0)
+			CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(3128.755, 318.449, 420.887), Quaternion(0.0000, -0.8327, 0.0000, 0.5538), 0)
+
+			AddCinematicMessage(5984, 1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trGoodEndCam2" active="0">
+		<event flypath="GoodEndCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local humPlayer = GetEntityByName("humPlayer")
+			if humPlayer then
+				humPlayer:SetPosition(CVector(3125.330, 318.387, 418.929))
+				humPlayer:SetRotation(Quaternion(0.0000, -0.8266, 0.0000, 0.5628))
+			end
+
+			local humLisa = GetEntityByName("humLisa")
+			if humLisa then
+				humLisa:SetPosition(CVector(3116.525, 318.432, 417.357))
+				humLisa:SetRotation(Quaternion(0.0000, -0.6772, 0.0000, -0.7358))
+			end
+
+			AddCinematicMessage(5985, 1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trGoodEndCam3" active="0">
+		<event flypath="GoodEndCam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+
+			AddCinematicMessage(5986, 3)
+			AddCinematicMessage(5987, 3)
+			AddCinematicMessage(5988, 5)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBeforeNarrators" active="0">
+		<event flypath="start_game" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage(5981, 0)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="GoodEndNarrators" active="0">
+		<event flypath="NarratorsCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			if fly_amount == 1 then
+				RuleConsole("g_postEffect BWFadeIn")
+
+				-- Ньери
+				AddCinematicMessage( 77776, 0 )
+				AddCinematicMessage( 77777, 0.1 )
+				AddCinematicMessage( 77778, 0.1 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(0) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 2 then
+			
+				-- фатерлянд
+				AddCinematicMessage( 77779, 0 )
+				if QuestStatus("d_IntrigaOfMerMinin_Quest")==Q_COMPLETED then
+					AddCinematicMessage( 77780, 0.1 )
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(2) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 3 then
+
+				-- роща друидов
+				AddCinematicMessage( 77781, 0 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(5) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 4 then
+			
+				-- Антимилитаристы
+				AddCinematicMessage( 77782, 0 )
+				AddCinematicMessage( 77783, 0.1 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(8) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 5 then
+
+				-- Рыбаки
+				AddCinematicMessage( 77791, 0 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(11) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 6 then
+
+				-- Жители Лиденклауда
+				AddCinematicMessage( 77792, 0 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(13) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 7 then
+
+				-- Главный герой
+				AddCinematicMessage( 77784, 0 )
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(17) end
+
+				trigger:Deactivate()
+			end
+
 		</script>
 	</trigger>
 
@@ -3061,6 +3199,31 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+			RuleConsole("g_postEffect BWFadeOut")
+
+			local pic = GetEntityByName("CurPicture")
+			if pic then pic:Remove() end
+
+			local oldLisa = GetEntityByName("LisaInTroick_vehicle_0")
+			if oldLisa then oldLisa:Remove() end
+
+			local vehLisa = GetEntityByName("vehLisaGood")
+			if vehLisa then vehLisa:Remove() end
+
+			local humPlayer = GetEntityByName("humPlayer")
+			if humPlayer then humPlayer:Remove() end
+
+			local humLisa = GetEntityByName("humLisa")
+			if humLisa then humLisa:Remove() end
+
+			fly_amount = nil
+
+			TDeactivate("GoodEndNarrators")
+			TDeactivate("GoodEndFade")
+			TDeactivate("trGoodEndCam1")
+			TDeactivate("trGoodEndCam2")
+			TDeactivate("trGoodEndCam3")
+			TDeactivate("trBeforeNarrators")
 
 			PlayCustomMusic("ToastTo")
 
@@ -3068,10 +3231,10 @@
 			StartCinematic()
 			
 			AddCinematicMessage( 5981, 0)
+			AddCinematicMessage( 5980, 0.1)
 			AddCinematicMessage( 5978, 0.1)
 			AddCinematicMessage( 5979, 0.1)
-			AddCinematicMessage( 5980, 0.1)
-
+			
 			TActivate("GoodEndEnd")
 			TActivate("GoodEndSkip")
 

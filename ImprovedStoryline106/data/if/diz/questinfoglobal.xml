@@ -2397,11 +2397,11 @@
 
 	<QuestInfo
 		questName="VisitTroick"
-		briefDiz="Осмотреть дом в Троицком"
+		briefDiz="Осмотреть дом в Гугулино"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
-			targetObjName="TheFreedom" />
+			targetObjName="TheContraVillage" />
 	</QuestInfo>
 
 	<QuestInfo

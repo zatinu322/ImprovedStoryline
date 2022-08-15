@@ -286,6 +286,36 @@
 	</Path>
 
 	<Path
+		Name="Lisa_path02">
+		<Point
+			coord="3731.835 1852.331" />
+
+		<Point
+			coord="3701.878 1845.391" />
+
+		<Point
+			coord="3693.708 1802.565" />
+
+		<Point
+			coord="3700.336 1774.119" />
+
+		<Point
+			coord="3712.026 1739.559" />
+
+		<Point
+			coord="3750.038 1665.874" />
+
+		<Point
+			coord="3750.755 1598.281" />
+
+		<Point
+			coord="3724.818 1542.331" />
+
+		<Point
+			coord="3669.361 1472.290" />
+	</Path>
+
+	<Path
 		Name="MtoP_path">
 		<Point
 			coord="4340.774 881.814" />
@@ -538,6 +568,57 @@
 		Name="Player_path03">
 		<Point
 			coord="3790.681 1826.667" />
+	</Path>
+
+	<Path
+		Name="Player_path04">
+		<Point
+			coord="3750.349 1850.191" />
+
+		<Point
+			coord="3754.795 1877.340" />
+
+		<Point
+			coord="3793.156 1897.673" />
+
+		<Point
+			coord="3833.963 1897.914" />
+
+		<Point
+			coord="3859.513 1908.061" />
+
+		<Point
+			coord="3874.993 1941.653" />
+
+		<Point
+			coord="3906.912 1987.072" />
+
+		<Point
+			coord="3936.371 2008.480" />
+
+		<Point
+			coord="3968.425 2016.614" />
+
+		<Point
+			coord="3997.594 2043.673" />
+
+		<Point
+			coord="4015.992 2084.716" />
+
+		<Point
+			coord="4062.221 2148.285" />
+
+		<Point
+			coord="4123.690 2196.749" />
+
+		<Point
+			coord="4168.175 2194.751" />
+
+		<Point
+			coord="4219.037 2230.461" />
+
+		<Point
+			coord="4254.795 2237.515" />
 	</Path>
 
 	<Path

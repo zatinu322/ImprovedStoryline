@@ -10,6 +10,7 @@
 			SetVar("KnownMap",0)
 			SetVar("NoChifir",1)
 			SetVar("Player4eeter",0)
+			SetVar("BenDwelPosition", "normal")
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			local shl = GetEntityByName("MisterShlyapaFM")
@@ -350,14 +351,27 @@
 		</script>
 	</trigger>
 
-	<!-- Нормальная концовка -->
-	<trigger Name="ToFaterEnd" active="0">
-		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
+	<!-- Создание и привязка машины Лисы в отличной концовке -->
+	<trigger Name="LisaFollowsUsGoodEnd" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
+			local teamLisa = CreateTeam("LisaInTroick", 1042, CVector(3760.050, 118.701, 1779.471), {"LisaCar"}, nil, nil, Quaternion(-0.008, -0.245, -0.030, 0.969))
+			local vehLisa = teamLisa:GetVehicle(0)
+			if vehLisa then
+				vehLisa:SetSkin(2)
+				vehLisa:setImmortalMode(1)
+			end
+
+			local newControllerId = CreateNewObject {
+				prototypeName	= "someNPCMotionController",
+				objName	= "LisaContGoodEnd"
+			}
 			
-			AutoSave( "" )
+			local newController = GetEntityByID(newControllerId)
 			
-			PassToMap("r1m3", "locNormalEnd", -1 )
+			if newController and vehLisa then
+				newController:setVehicleUnderControl(vehLisa)
+			end
 
 			trigger:Deactivate()
 		</script>

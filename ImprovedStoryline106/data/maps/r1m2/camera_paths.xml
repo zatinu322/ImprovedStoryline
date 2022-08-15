@@ -99,15 +99,13 @@
 	</Path>
 
 	<Path Name = "BefDesert">
-		<!-- <Point  coord="4244.565 151.726 958.858" rotation="0.009 0.971 -0.036 -0.235"/>
-		<Point  coord="4244.565 151.726 958.858" rotation="0.009 0.971 -0.036 -0.235"/> -->
 		<Point  coord="4154.308 135.414 950.932" rotation="0.027 0.968 -0.217 -0.121"/>
 		<Point  coord="4249.732 158.928 920.471" rotation="0.047 0.873 -0.087 -0.477"/>
 	</Path>
 
 	<Path Name = "NextDayCam">
 		<Point  coord="3749.487 137.608 1855.208" rotation="0.051 0.912 -0.119 -0.389"/>
-		<Point  coord="3734.831 131.816 1814.501" rotation="-0.056 -0.716 0.058 0.694"/>
+		<Point  coord="3744.043 135.456 1840.087" rotation="-0.054 -0.852 0.098 0.511"/>
 	</Path>
 
 	<Path Name = "MidragdOut1">
@@ -181,5 +179,15 @@
 	<Path Name = "ShlyapaCam1">
 		<Point  coord="3406.604 103.955 5158.792" rotation="-0.053 -0.527 0.033 0.848"/>
 		<Point  coord="3431.378 100.466 5171.074" rotation="-0.055 -0.527 0.034 0.848"/>
+	</Path>
+
+	<Path Name = "NormalEndCam1">
+		<Point  coord="3747.497 131.305 1887.091" rotation="0.027 0.969 -0.120 -0.215"/>
+		<Point  coord="3782.077 123.599 1821.450" rotation="0.015 0.969 -0.060 -0.240"/>
+	</Path>
+
+	<Path Name = "EndingScreenCam1">
+		<Point  coord="4953.300 23.716 7925.755" rotation="0.007 -0.026 -0.000 1.000"/>
+		<!-- <Point  coord="4953.300 23.734 7926.214" rotation="0.011 -0.029 -0.000 1.000"/> 4:3 path -->
 	</Path>
 </Paths>

@@ -1340,6 +1340,20 @@ function DefineTheEnding()
 
 	LOG("Selecting appropriate ending...")
 
+	if QuestStatus("Zachisti3_Quest")==Q_COMPLETED then
+		LOG("Minin is safe: True")
+	else
+		LOG("Minin is safe: False")
+		good = 0
+	end
+
+	if QuestStatus("r3m1_RescueUlukCivil_TakeToSet")==Q_COMPLETED and QuestStatus("r3m1_ClearSanctuary")==Q_COMPLETED then
+		LOG("Uluk refugees: True")
+	else
+		LOG("Uluk refugees: False")
+		good = 0
+	end
+
 	if QuestStatus("FinalBattle_Quest")==Q_COMPLETED then
 		LOG("Antimilitarists: True")
 	else

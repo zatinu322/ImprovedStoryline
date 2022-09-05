@@ -241,8 +241,9 @@
 	</Path>
 
 	<Path Name = "FightForPesht_cam">
-		<Point  coord="4535.004 239.301 3380.326" rotation="-0.037 0.526 -0.023 0.850"/>
-		<Point  coord="4548.214 239.301 3406.815" rotation="-0.019 0.679 -0.017 0.734"/>
+		<Point  coord="4570.139 241.461 3365.930" rotation="-0.034 0.557 -0.023 0.829"/>
+		<Point  coord="4542.757 243.286 3378.555" rotation="-0.021 0.570 -0.015 0.821"/>
+		<Point  coord="4490.667 308.041 3438.927" rotation="-0.094 0.302 -0.030 0.948"/>
 	</Path>
 
 	<Path Name = "Ending34">

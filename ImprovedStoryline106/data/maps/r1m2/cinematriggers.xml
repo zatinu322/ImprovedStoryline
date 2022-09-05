@@ -1083,7 +1083,7 @@
 		</script>
 	</trigger>
 
-	<!-- Нормальное концовка -->
+	<!-- Нормальная концовка -->
 	<trigger Name="NormalEndCin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1787,25 +1787,23 @@
 
 				CompleteQuestIfTaken( "CombatInKollizey_Quest2" )
 
-				PlfCoor.y = PlfCoor.y + 5
-				PlfCoor.z = PlfCoor.z + 50
-				rad = 35
 			elseif QuestStatus("r1m2_Glagiators_Quest2")==Q_TAKEN then
 
 				CompleteQuestIfTaken( "r1m2_Glagiators_Quest2" )
 				TakeQuest("r1m2_MovemineralToMidgard_Quest")
 
-				PlfCoor.y = PlfCoor.y + 25*0.74
-				PlfCoor.z = PlfCoor.z + 25*0.74
-				rad = 25
 			end
+
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 50
+			rad = 35
 
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround(2, 0.01, rad, 6, PlfCoor, PlfID, 1, 1 )
+			FlyAround(0.5, 0.01, rad, 6, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 22224, 1 )

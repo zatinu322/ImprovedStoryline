@@ -1288,7 +1288,9 @@
 			if vehPlayer then
 				vehPlayer:PlaceToEndOfPath("player_path01")
 				vehPlayer:SetThrottle( 0 )                      
-				vehPlayer:SetCustomLinearVelocity( 0 )         
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetGamePositionOnGround(CVector(1460.428, 293.606, 5540.105))
+				vehPlayer:SetRotation(Quaternion(-0.001, -0.712, 0.003, 0.703))
 			end
 			if humPl then
 				humPl:Remove()
@@ -1443,15 +1445,16 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 25
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 25
 
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 3, 1)
+			FlyAround( 1, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage(9, 2)
@@ -1479,9 +1482,7 @@
 			SetCameraBehindPlayerVehicle()
 
 			local run = GetEntityByName("Pioneer_vehicle_0")
-			if run then
-				run:Remove()
-			end
+			if run then run:Remove() end
 
 			trigger:Deactivate() 
 		</script>
@@ -2632,7 +2633,7 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("FightForPesht_cam", CINEMATIC_NO_AIM, 0, 21, 1, 1)
+			Fly("FightForPesht_cam", CINEMATIC_NO_AIM, 0, 23, 1, 1)
 			StartCinematic()
 
 			AddCinematicMessage( 8811, 1 )
@@ -2650,35 +2651,36 @@
 		<script>
 			PlayCustomMusic("Passage03")
 
-			TeamCreate("ArmiaTSP",1010,CVector(4493.482, 237.003, 3382.276),{"BelazTSP", "TSPFighter", "tspfighter2"})
+			TeamCreate("ArmiaTSP",1010,CVector(4493.482, 237.003, 3382.276),{"BelazTSP", "TSPFighter", "tspfighter2"}, nil, nil, Quaternion(0.000, 0.730, 0.000, 0.684))
+			TeamCreate("ArmiaBrigada",1012,CVector(4299.682, 241.634, 3702.067),{"Cruiser01", "Cruiser02", "CoolBelaz", "r1m1_molokovoz02", "TSPFighter"}, nil, nil, Quaternion(0.003, 0.995, -0.011, 0.096))
+			local TSPPos = {CVector(4493.482, 237.507, 3382.276), 
+							CVector(4492.263, 236.190, 3392.768), 
+							CVector(4491.775, 235.032, 3401.858)}
 
-			local vehArmy1 = GetEntityByName("ArmiaTSP_vehicle_0")
-			local vehArmy2 = GetEntityByName("ArmiaTSP_vehicle_1")
-			local vehArmy3 = GetEntityByName("ArmiaTSP_vehicle_2")
+			local BrigadePos = {CVector(4299.682, 241.433, 3702.067), 
+								CVector(4308.985, 241.489, 3702.634), 
+								CVector(4319.621, 242.543, 3703.470), 
+								CVector(4292.251, 240.381, 3701.055), 
+								CVector(4284.151, 241.035, 3700.641)}
+
 			local vehPlayer = GetPlayerVehicle()
-			
 			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(4516.099, 236.069, 3402.483))
-				vehPlayer:SetRotation(Quaternion(-0.036, 0.577, 0.006, -0.816))
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(4523.394, 236.190, 3391.237))
+				vehPlayer:SetRotation(Quaternion(-0.035, 0.672, 0.010, -0.740))
 			end
-			
-			if vehArmy1 then
-				vehArmy1:SetGamePositionOnGround( CVector(4493.482, 237.003, 3382.276))
-				vehArmy1:SetRotation(Quaternion(-0.017, -0.404, -0.001, -0.915))
+
+			for veh = 0,2 do
+				local vehTSP = GetEntityByName("ArmiaTSP_vehicle_"..veh)
+				if vehTSP then vehTSP:SetGamePositionOnGround(TSPPos[veh+1]) end
 			end
-			
-			if vehArmy2 then
-				vehArmy2:SetGamePositionOnGround( CVector(4490.138, 236.076, 3418.992))
-				vehArmy2:SetRotation(Quaternion(-0.003, -0.769, -0.001, -0.639))
-			end
-			
-			if vehArmy3 then
-				vehArmy3:SetGamePositionOnGround( CVector(4489.588, 236.073, 3442.650))
-				vehArmy3:SetRotation(Quaternion(-0.003, -0.818, -0.001, -0.576))
+
+			for veh = 0,4 do
+				local vehBrig = GetEntityByName("ArmiaBrigada_vehicle_"..veh)
+				if vehBrig then vehBrig:SetGamePositionOnGround(BrigadePos[veh+1]) end
 			end
 
 			trigger:Deactivate()
@@ -2690,43 +2692,14 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
-			
-			TeamCreate("ArmiaBrigada",1012,CVector(4299.682, 241.634, 3702.067),{"Cruiser01", "Cruiser02", "CoolBelaz", "r1m1_molokovoz02", "TSPFighter"})
-			
-			local newControllerId1 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "ArmyCont1"
-			}
 
-			local newControllerId2 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "ArmyCont2"
-			}
+			SetCameraBehindPlayerVehicle()
 
-			local newControllerId3 = CreateNewObject {
-				prototypeName	= "someNPCMotionController",
-				objName	= "ArmyCont3"
-			}
+			local ArmyTSP = GetEntityByName("ArmiaTSP")
+			if ArmyTSP then ArmyTSP:SetDestination(CVector(4388.183, 237.488, 3520.204)) end
 
-			local newController1 = GetEntityByID(newControllerId1)
-			local newController2 = GetEntityByID(newControllerId2)
-			local newController3 = GetEntityByID(newControllerId3)
-
-			local FVehicle1 = GetEntityByName("ArmiaTSP_vehicle_0")
-			local FVehicle2 = GetEntityByName("ArmiaTSP_vehicle_1")
-			local FVehicle3 = GetEntityByName("ArmiaTSP_vehicle_2")
-
-			if newController1 and FVehicle1 then
-				newController1:setVehicleUnderControl(FVehicle1)
-			end
-
-			if newController2 and FVehicle2 then
-				newController2:setVehicleUnderControl(FVehicle2)
-			end
-
-			if newController3 and FVehicle3 then
-				newController3:setVehicleUnderControl(FVehicle3)
-			end
+			local ArmyBrigade = GetEntityByName("ArmiaBrigada")
+			if ArmyBrigade then ArmyBrigade:SetDestination(CVector(4388.183, 237.488, 3520.204)) end
 			
 			TActivate("BrigadaIsDead")
 			
@@ -2745,15 +2718,15 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 20
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 8812, 1 )

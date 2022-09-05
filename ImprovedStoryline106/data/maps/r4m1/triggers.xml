@@ -4,7 +4,6 @@
 	<trigger	Name="GlobalVar"	active="1">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
-			SetVar("MaxWalkHuman",30)
 			SetVar("MaxLap",2)
 			SetVar("BuhPoint",0)
 			SetVar("CountCar",8)
@@ -36,52 +35,7 @@
 		</script>
 	</trigger>
 
-	<!-- Выпилить эту механику в последующих апдейтах -->
-	<trigger	Name="trStartHumans"	active="1">
-		<event	timeout="1"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local maxhum = GetVar("MaxWalkHuman").AsInt
-			if maxhum then
-				for i=1,maxhum do
-					local tr = getObj("trHumanDie")
-					if tr then
-					   tr:AddEvent("GE_OBJECT_DIE", "WalkerHuman"..i )
-					end
-				end
-			end
-			TActivate("trCreateHumans")
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trCreateHumans"	active="0">
-		<event	timeout="10"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local maxhum = GetVar("MaxWalkHuman").AsInt
-			if maxhum then
-				for i=1,maxhum do
-					local hum = getObj("WalkerHuman"..i)
-					if not hum then      	
-						local hummodlist = {"Human","Human2","Human3"}
-		    		  	local newhum = CreateHuman( hummodlist[random(3)], 1001, CVector(getPos("SpawnHuman"..i.."_loc")), "WalkerHuman"..i, "Human"..i.."_Path")
-		    		  	if newhum then
-		    		  	   newhum:SetSkin(random(2))
-		    		  	end
-			        end
-				end
-				TActivate("trHumanDie")
-			end
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trHumanDie"	active="0">
-		<script>
-			TActivate("trCreateHumans")
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
+	<!-- Первый сюжетный приезд игрока -->
 	<trigger	Name="trStartMap"	active="1">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>

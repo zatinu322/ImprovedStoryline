@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="3622">
+	LastId="3629">
 	<TargetNamesForDestroy
 		Names="urod1 urod2 urod3 urod4 urod5 urod6 urod7 urod8 urod9" />
 
@@ -3185,118 +3185,6 @@
 
 	<Object
 		Flags="21"
-		Name="SpawnHuman1_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2720.953 248.332 1047.434"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman2_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2661.387 248.332 951.503"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman3_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2429.219 248.332 1050.609"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman4_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2590.135 248.332 1120.995"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman5_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="3087.975 226.000 735.578"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman6_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2993.174 249.000 1762.916"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawbHuman7_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="3314.709 224.243 2107.971"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman8_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="3210.975 224.227 2181.762"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman9_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2827.153 216.000 3594.064"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman10_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="1622.035 270.000 1797.126"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman11_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="313.890 337.889 3195.587"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman12_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="424.300 337.525 3343.525"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman13_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="1615.530 270.000 1801.580"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SpawnHuman14_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="530.477 335.226 3476.067"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
 		Name="NearBoss_loc"
 		Belong="1100"
 		Prototype="genericLocation"
@@ -3307,40 +3195,36 @@
 		Name="Human64"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3243.055 224.334 2160.844"
+		Pos="3208.754 224.417 2145.521"
 		PathsNames="human01" />
 
 	<Object
 		Name="Human16"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3297.038 224.231 2118.263"
-		PathsNames="Human7_Path Human8_Path" />
+		Pos="3208.876 224.370 2183.392"
+		PathsNames="Human8_Path" />
 
 	<Object
 		Name="Human23"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3281.436 224.192 2080.920" />
-
-	<Object
-		Name="Human44"
-		Belong="1001"
-		Prototype="Human"
-		Pos="3211.646 224.227 2152.610"
-		PathsNames="human01" />
+		Pos="2993.410 249.000 1758.425"
+		PathsNames="Human6_Path" />
 
 	<Object
 		Name="Human99"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3290.082 224.231 2159.987" />
+		Pos="3311.067 224.231 2176.326"
+		Rot="0.000 -0.845 0.000 0.535" />
 
 	<Object
 		Name="Human87"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3390.302 228.024 2059.548" />
+		Pos="3413.992 228.024 2032.623"
+		Rot="0.000 -0.663 0.000 0.749" />
 
 	<Object
 		Name="Human4"
@@ -3360,29 +3244,22 @@
 		Name="Human89"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2762.238 216.000 3658.208"
-		PathsNames="human04 human05" />
+		Pos="2826.855 216.000 3590.073"
+		PathsNames="Human9_Path" />
 
 	<Object
 		Name="Human12"
 		Belong="1001"
-		Prototype="Human"
+		Prototype="Human2"
 		Pos="2689.545 216.000 3650.981"
-		PathsNames="human04 human05" />
-
-	<Object
-		Name="Human46"
-		Belong="1001"
-		Prototype="Human"
-		Pos="2638.243 216.000 3629.512"
-		PathsNames="human04 human05" />
+		PathsNames="human05" />
 
 	<Object
 		Name="Human3"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2753.898 216.000 3689.584"
-		PathsNames="human04 human05" />
+		Pos="2756.429 216.000 3667.935"
+		PathsNames="human04" />
 
 	<Object
 		Name="Human6"
@@ -3396,8 +3273,9 @@
 		Name="Human96"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3068.923 226.000 725.946"
-		Rot="0.000 -0.663 0.000 0.749" />
+		Pos="3089.909 226.000 724.601"
+		Rot="0.000 -0.663 0.000 0.749"
+		PathsNames="Human5_Path" />
 
 	<Object
 		Name="Human63"
@@ -3448,13 +3326,6 @@
 		PathsNames="human10" />
 
 	<Object
-		Name="Human71"
-		Belong="1001"
-		Prototype="Human"
-		Pos="2737.679 248.333 1038.097"
-		PathsNames="human08" />
-
-	<Object
 		Name="Human91"
 		Belong="1001"
 		Prototype="Human"
@@ -3462,28 +3333,12 @@
 		PathsNames="Human2_Path" />
 
 	<Object
-		Name="Human8"
-		Belong="1001"
-		Prototype="Human"
-		Pos="1659.065 270.000 1802.661"
-		Rot="0.000 0.407 0.000 0.914"
-		PathsNames="Human10_Path" />
-
-	<Object
-		Name="Human40"
-		Belong="1001"
-		Prototype="Human"
-		Pos="1644.694 270.000 1830.795"
-		Rot="0.000 0.988 0.000 -0.156"
-		PathsNames="Human10_Path" />
-
-	<Object
 		Name="Human85"
 		Belong="1001"
 		Prototype="Human"
 		Pos="1660.456 270.000 1831.486"
 		Rot="0.000 -0.623 0.000 0.783"
-		PathsNames="Human10_Path" />
+		PathsNames="human11" />
 
 	<Object
 		Flags="21"
@@ -32789,22 +32644,15 @@
 		Name="Human23595"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="1656.403 270.000 1822.765"
-		PathsNames="Human10_Path human11" />
+		Pos="1615.338 270.000 1791.702"
+		PathsNames="Human13_Path" />
 
 	<Object
 		Name="Human33596"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="1654.508 270.000 1827.308"
-		PathsNames="Human10_Path human11" />
-
-	<Object
-		Name="Human3598"
-		Belong="1001"
-		Prototype="Human"
-		Pos="1648.381 270.000 1823.085"
-		PathsNames="Human10_Path human11" />
+		Pos="1622.479 270.000 1785.905"
+		PathsNames="Human10_Path" />
 
 	<Object
 		Name="Human3599"
@@ -32828,13 +32676,6 @@
 		PathsNames="human07" />
 
 	<Object
-		Name="Human3602"
-		Belong="1001"
-		Prototype="Human"
-		Pos="2636.298 248.333 961.289"
-		PathsNames="human07" />
-
-	<Object
 		Name="Human23603"
 		Belong="1001"
 		Prototype="Human2"
@@ -32842,52 +32683,39 @@
 		PathsNames="human09" />
 
 	<Object
-		Name="Human33604"
-		Belong="1001"
-		Prototype="Human3"
-		Pos="2700.170 248.660 995.671"
-		PathsNames="human08" />
-
-	<Object
 		Name="Human33605"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="2485.306 248.333 1067.019"
-		Rot="0.000 0.506 0.000 0.863" />
+		Pos="2713.911 248.333 1047.187"
+		Rot="0.000 -1.000 0.000 0.002"
+		PathsNames="Human1_Path" />
 
 	<Object
 		Name="Human23606"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="3282.275 224.464 2125.828"
-		PathsNames="Human7_Path Human8_Path" />
+		Pos="3312.862 224.236 2109.541"
+		PathsNames="Human7_Path" />
 
 	<Object
 		Name="Human33607"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="3284.756 224.369 2118.285"
-		PathsNames="Human7_Path Human8_Path" />
+		Pos="3296.245 224.231 2101.052"
+		Rot="0.000 -0.595 0.000 0.804" />
 
 	<Object
 		Name="Human33608"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="3869.827 249.000 947.949"
+		Pos="3886.316 249.000 933.274"
 		PathsNames="human13" />
 
 	<Object
 		Name="Human23609"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="3869.269 249.000 947.013"
-		PathsNames="human13" />
-
-	<Object
-		Name="Human3610"
-		Belong="1001"
-		Prototype="Human"
-		Pos="3871.437 249.000 945.662"
+		Pos="3918.414 249.116 915.815"
 		PathsNames="human13" />
 
 	<Object
@@ -32895,27 +32723,6 @@
 		Belong="1001"
 		Prototype="Human"
 		Pos="3868.142 249.000 946.228"
-		PathsNames="human13" />
-
-	<Object
-		Name="Human3612"
-		Belong="1001"
-		Prototype="Human"
-		Pos="3870.548 249.000 944.042"
-		PathsNames="human13" />
-
-	<Object
-		Name="Human3613"
-		Belong="1001"
-		Prototype="Human"
-		Pos="3873.988 249.000 944.037"
-		PathsNames="human13" />
-
-	<Object
-		Name="Human3614"
-		Belong="1001"
-		Prototype="Human"
-		Pos="3871.899 249.000 946.573"
 		PathsNames="human13" />
 
 	<Object
@@ -33492,13 +33299,55 @@
 	</Object>
 
 	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
-
-	<Object
 		Name="RTMRolik_loc"
 		Belong="1001"
 		Prototype="genericLocation"
 		Pos="3502.771 216.773 3621.281"
 		Radius="85.000" />
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
+
+	<Object
+		Name="Human3622"
+		Belong="1001"
+		Prototype="Human"
+		Pos="311.466 338.270 3198.266"
+		PathsNames="Human11_Path" />
+
+	<Object
+		Name="Human23623"
+		Belong="1001"
+		Prototype="Human2"
+		Pos="431.355 336.472 3336.955"
+		PathsNames="Human12_Path" />
+
+	<Object
+		Name="Human33624"
+		Belong="1001"
+		Prototype="Human3"
+		Pos="522.747 335.538 3481.486"
+		PathsNames="Human14_Path" />
+
+	<Object
+		Name="Human33626"
+		Belong="1001"
+		Prototype="Human3"
+		Pos="3197.381 224.823 2127.472"
+		PathsNames="human02" />
+
+	<Object
+		Name="Human23627"
+		Belong="1001"
+		Prototype="Human2"
+		Pos="3377.609 228.024 2063.301"
+		PathsNames="human03" />
+
+	<Object
+		Name="Human23628"
+		Belong="1001"
+		Prototype="Human2"
+		Pos="1650.889 270.000 1823.350"
+		PathsNames="human12" />
 </DynamicScene>

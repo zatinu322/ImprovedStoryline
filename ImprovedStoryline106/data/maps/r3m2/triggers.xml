@@ -6,7 +6,6 @@
 
 		   SetVar("ThingStatus",0)
 		   SetVar("GarVehName","PlayerScout")
-		   SetVar("MaxWalkHuman",5)
 		   SetVar("KnownMap",0)
 		   SetVar("FirstVehChange", 0)
 		   SetVar("SOAgressor", 0)
@@ -34,52 +33,6 @@
 				TActivate("OracleCinStart")
 				trigger:Deactivate()
 			end
-		</script>
-	</trigger>
-
-	<!-- Создаём и восполняем количество человечков на карте -->
-	<trigger	Name="trStartHumans"	active="1">
-		<event	timeout="1"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local maxhum = GetVar("MaxWalkHuman").AsInt
-			if maxhum then
-				for i=1,maxhum do
-					local tr = getObj("trHumanDie")
-					if tr then
-					   tr:AddEvent("GE_OBJECT_DIE", "WalkerHuman"..i )
-					end
-				end
-			end
-			TActivate("trCreateHumans")
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trCreateHumans"	active="0">
-		<event	timeout="10"			eventid="GE_TIME_PERIOD" />
-		<script>
-			local maxhum = GetVar("MaxWalkHuman").AsInt
-			if maxhum then
-				for i=1,maxhum do
-					local hum = getObj("WalkerHuman"..i)
-					if not hum then
-						local hummodlist = {"Human","Human2","Human3"}
-		    		  	local newhum = CreateHuman( hummodlist[random(3)], 1001, CVector(getPos("SpawnHuman"..i.."_loc")), "WalkerHuman"..i, "Human"..i.."_Path")
-		    		  	if newhum then
-		    		  	   newhum:SetSkin(random(2))
-		    		  	end
-			        end
-				end
-				TActivate("trHumanDie")
-			end
-        	trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="trHumanDie"	active="0">
-		<script>
-			TActivate("trCreateHumans")
-        	trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -137,6 +90,7 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="OracleDefenders_loc" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
 			if (CanQuestBeGiven("r3m2_OvercomeOracleGuard") and QuestStatus("r3m1_GoToOracle")==Q_TAKEN) or (QuestStatus("r3m2_OvercomeOracleGuard")==Q_TAKEN) then
 				TActivate("cinWentOracleDef")
 			elseif QuestStatus("r3m2_OvercomeOracleGuard")==Q_COMPLETED then

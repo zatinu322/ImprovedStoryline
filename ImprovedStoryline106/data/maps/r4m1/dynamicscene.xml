@@ -5195,244 +5195,214 @@
 	</Object>
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman1_loc"
+		Name="WalkerHuman1"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="5388.844 249.002 6964.285"
-		Radius="5.455" />
+		PathsNames="Human1_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman2_loc"
+		Name="WalkerHuman2"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="5533.911 249.002 7060.219"
-		Radius="4.281" />
+		PathsNames="Human2_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman3_loc"
+		Name="WalkerHuman3"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="5422.949 249.002 7081.990"
-		Radius="4.457" />
+		PathsNames="Human3_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman4_loc"
+		Name="WalkerHuman4"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="5555.774 249.023 6961.600"
-		Radius="6.412" />
+		PathsNames="Human4_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman5_loc"
+		Name="WalkerHuman5"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="5708.084 249.002 6863.357"
-		Radius="5.134" />
+		PathsNames="Human5_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman6_loc"
+		Name="WalkerHuman6"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="5657.108 249.002 7012.973"
-		Radius="4.732" />
+		PathsNames="Human6_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman7_loc"
+		Name="WalkerHuman7"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="5582.098 249.000 6762.863"
-		Radius="6.158" />
+		PathsNames="Human7_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman8_loc"
+		Name="WalkerHuman8"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="5460.326 249.002 7261.582"
-		Radius="4.029" />
+		PathsNames="Human8_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman9_loc"
+		Name="WalkerHuman9"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="5520.813 249.002 7055.088"
-		Radius="4.735" />
+		PathsNames="Human9_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman10_loc"
+		Name="WalkerHuman10"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="5826.252 249.000 6895.856"
-		Radius="4.548" />
+		PathsNames="Human10_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman11_loc"
+		Name="WalkerHuman11"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="5360.898 248.973 6342.087"
-		Radius="10.000" />
+		PathsNames="Human11_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman12_loc"
+		Name="WalkerHuman12"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="6986.949 300.489 5302.564"
-		Radius="10.000" />
-
+		PathsNames="Human12_Path" />
+	
 	<Object
-		Flags="21"
-		Name="SpawnHuman13_loc"
+		Name="WalkerHuman13"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="6878.376 300.080 5243.694"
-		Radius="10.000" />
+		PathsNames="Human13_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman14_loc"
+		Name="WalkerHuman14"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="6954.845 300.296 5348.267"
-		Radius="10.000" />
+		PathsNames="Human14_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman15_loc"
+		Name="WalkerHuman15"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="6856.598 300.054 5376.472"
-		Radius="10.000" />
+		PathsNames="Human15_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman16_loc"
+		Name="WalkerHuman16"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="6867.131 300.284 5356.432"
-		Radius="10.000" />
+		PathsNames="Human16_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman17_loc"
+		Name="WalkerHuman17"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="6364.637 249.000 5203.180"
-		Radius="10.000" />
+		PathsNames="Human17_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman18_loc"
+		Name="WalkerHuman18"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="6017.371 248.375 5235.041"
-		Radius="10.000" />
+		PathsNames="Human18_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman19_loc"
+		Name="WalkerHuman19"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="6335.632 249.000 5238.633"
-		Radius="10.000" />
+		PathsNames="Human19_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman20_loc"
+		Name="WalkerHuman20"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="6490.485 249.000 5137.792"
-		Radius="10.000" />
+		PathsNames="Human20_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman21_loc"
+		Name="WalkerHuman21"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="4555.312 279.056 2531.578"
-		Radius="4.029" />
+		PathsNames="Human21_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman22_loc"
+		Name="WalkerHuman22"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="4585.571 279.056 2387.241"
-		Radius="10.000" />
+		PathsNames="Human22_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman23_loc"
+		Name="WalkerHuman23"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="4816.223 279.056 2211.724"
-		Radius="10.000" />
+		PathsNames="Human23_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman24_loc"
+		Name="WalkerHuman24"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="4412.915 308.383 2249.472"
-		Radius="10.000" />
+		PathsNames="Human24_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman25_loc"
+		Name="WalkerHuman25"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="4352.132 279.056 2071.305"
-		Radius="10.000" />
+		PathsNames="Human25_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman26_loc"
+		Name="WalkerHuman26"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="4300.226 279.056 1984.570"
-		Radius="10.000" />
-
+		PathsNames="Human26_Path" />
+	
 	<Object
-		Flags="21"
-		Name="SpawnHuman27_loc"
+		Name="WalkerHuman27"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="4477.177 279.056 1916.046"
-		Radius="10.000" />
+		PathsNames="Human27_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman28_loc"
+		Name="WalkerHuman28"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human"
 		Pos="4572.257 279.056 2596.244"
-		Radius="10.000" />
+		PathsNames="Human28_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman29_loc"
+		Name="WalkerHuman29"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human2"
 		Pos="4926.516 249.830 5674.182"
-		Radius="10.000" />
+		PathsNames="Human29_Path" />
 
 	<Object
-		Flags="21"
-		Name="SpawnHuman30_loc"
+		Name="WalkerHuman30"
 		Belong="1001"
-		Prototype="genericLocation"
+		Prototype="Human3"
 		Pos="4872.581 249.830 5696.575"
-		Radius="10.000" />
+		PathsNames="Human30_Path" />
 
 	<Object
 		Flags="21"

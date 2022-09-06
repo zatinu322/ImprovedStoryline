@@ -27,6 +27,10 @@ EXECUTE_SCRIPT "data\\scripts\\dialoghelpers.lua"
 -- include queststates.lua
 EXECUTE_SCRIPT "data\\scripts\\queststates.lua"
 
+LOG("IMPROVED STORYLINE V1.0.5.3 BUILD 220906")
+
+ISL_VERSION = "1053-220906"
+
 -- global object repository
 g_ObjCont = GET_GLOBAL_OBJECT "g_ObjContainer"
 
@@ -329,7 +333,7 @@ function StartCinematic()
 	UpdateCinematic( 0 ) -- by Anton: don't touch this!
 
 	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
+	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP_MSG" )
 end
 
 -- Подготавливает игру к проигрыванию скриптового ролика

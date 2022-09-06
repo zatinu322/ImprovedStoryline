@@ -40,60 +40,68 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			SetWeather(0)
+			if CP1_VERSION then
+				SetWeather(0)
 
-			PlayCustomMusic("GreenLeaves")
+				PlayCustomMusic("GreenLeaves")
 
-			Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
-			Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
-			Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
-			Fly("Opening11", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 0 )
-			Fly("Opening2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
-			Fly("Opening22", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
-			Fly("Opening3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
-			Fly("Opening4", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
-			Fly("Opening5", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
-			Fly("Opening_End", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
-			Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 35, 0, 0 )
-			Fly("start_rolik5", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
-			Fly("start_rolik6", CINEMATIC_NO_AIM, 0, 14.5, 0, 0 )
-			Fly("start_rolik2", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-			Fly("start_rolik3", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
-			Fly("start_rolik8", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
-			Fly("start_rolik4", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
-			StartCinematic()
-			UpdateCinematic(1)
+				Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
+				Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+				Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
+				Fly("Opening11", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 0 )
+				Fly("Opening2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+				Fly("Opening22", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
+				Fly("Opening3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
+				Fly("Opening4", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
+				Fly("Opening5", CINEMATIC_NO_AIM, 0, 16, 0, 0 )
+				Fly("Opening_End", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
+				Fly("start_rolik1", CINEMATIC_NO_AIM, 0, 35, 0, 0 )
+				Fly("start_rolik5", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+				Fly("start_rolik6", CINEMATIC_NO_AIM, 0, 14.5, 0, 0 )
+				Fly("start_rolik2", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+				Fly("start_rolik3", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+				Fly("start_rolik8", CINEMATIC_NO_AIM, 0, 13, 0, 0 )
+				Fly("start_rolik4", CINEMATIC_NO_AIM, 0, 5, 0, 1 )
+				StartCinematic()
+				UpdateCinematic(1)
 
-			TActivate( "trOpeningOpen1" )
-			TActivate( "trOpening1" )
-			TActivate( "trOpening11" )
-			TActivate( "trOpening2" )
-			TActivate( "trOpening22" )
-			TActivate( "trOpening3" )
-			TActivate( "trOpening4" )
-			TActivate( "trOpening5" )
-			TActivate( "trOpeningEnd" )
-			TActivate( "StartGame" )
-			TActivate( "ROLIK15" )
-			TActivate( "ROLIK16" )
-			TActivate( "ROLIK12" )
-			TActivate( "ROLIK13" )
-			TActivate( "ROLIK18" )
-			TActivate( "ROLIK14" )
-			TActivate( "Finish00" )
+				TActivate( "trOpeningOpen1" )
+				TActivate( "trOpening1" )
+				TActivate( "trOpening11" )
+				TActivate( "trOpening2" )
+				TActivate( "trOpening22" )
+				TActivate( "trOpening3" )
+				TActivate( "trOpening4" )
+				TActivate( "trOpening5" )
+				TActivate( "trOpeningEnd" )
+				TActivate( "StartGame" )
+				TActivate( "ROLIK15" )
+				TActivate( "ROLIK16" )
+				TActivate( "ROLIK12" )
+				TActivate( "ROLIK13" )
+				TActivate( "ROLIK18" )
+				TActivate( "ROLIK14" )
+				TActivate( "Finish00" )
 
-			AddCinematicMessage( 10, 1)
-			AddCinematicMessage( 11, 0.25 )
-			
-			
-			TakeQuest( "Buyer_Quest1" )
+				AddCinematicMessage( 10, 1)
+				AddCinematicMessage( 11, 0.25 )
+				
+				
+				TakeQuest( "Buyer_Quest1" )
 
-			AddQuestItem("quest_potato")
+				AddQuestItem("quest_potato")
 
-			AddHistory( "r1_Firsy_History_00" )
-			AddFadingMsgId( "fm_history_got" )
-			
-			CreateNewDummyObject( "quest_medicine_box", "medicine_box", -1, -1, CVector(2607.000, 322.000, 1614.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+				AddHistory( "r1_Firsy_History_00" )
+				AddFadingMsgId( "fm_history_got" )
+				
+				CreateNewDummyObject( "quest_medicine_box", "medicine_box", -1, -1, CVector(2607.000, 322.000, 1614.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			else
+				SpawnMessageBox("wrong_game_version_main")
+
+				ShowDeathMenu()
+
+				InvalidFunctionName()
+			end
 
 			trigger:Deactivate()    
 		</script>

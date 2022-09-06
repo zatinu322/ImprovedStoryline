@@ -794,4 +794,8 @@
 	<string
 		id="wrong_game_version"
 		value="Данное сохранение несовместимо с текущей версией Improved Storyline. ||Пожалуйста, начните новую игру.| "/>
+
+	<string
+		id="wrong_game_version_main"
+		value="Данная версия Improved Storyline предназначена только для работы в составе с Community Patch/Remaster.||Пожалуйста, произведите корректную установку этих двух модификаций и попробуйте снова.| "/>
 </resource>

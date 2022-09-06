@@ -22,3 +22,4 @@ EXECUTE_SCRIPT "data\\scripts\\renderHelpers.lua"
 
 -- autoexec
 EXECUTE_SCRIPT "data\\scripts\\autoexec.lua"
+EXECUTE_SCRIPT "data\\scripts\\compatch.lua"

@@ -10,7 +10,9 @@
 -- $Id: core.lua,v 1.2 2004/09/20 09:21:00 plus Exp $
 ------------------------------------------------------------------------------
 
-LOG("IMPROVED STORYLINE V1.0.5.3 ORIGINAL BUILD 220422")
+LOG("IMPROVED STORYLINE V1.0.5.3 BUILD 220922")
+
+ISL_VERSION = "1053-220906"
 
 EXECUTE_SCRIPT "data\\scripts\\compat.lua"
 

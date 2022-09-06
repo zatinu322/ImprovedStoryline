@@ -8,6 +8,7 @@
 			SetVar("KnownMap",0)
 			SetVar("BezhenAlive",0)
 			SetVar("OracleQuickWay",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			CreateNewDummyObject("druid_gate", "TheSetGate", -1, -1, CVector(1496.905, 289.235, 2635.424), Quaternion(0.000, -0.294, 0.000, 0.956), 0)
 
@@ -479,6 +480,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestTaken("Disk2OrakulLisa") then
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
     			if b == 1 then
 					PassToMap("r2m1", "FromR3M1", -1 )
@@ -549,7 +552,9 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if IsQuestTaken("r3m1_GoToOracle")~=nil then 
+			if IsQuestTaken("r3m1_GoToOracle")~=nil then
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 					PassToMap("r3m2", "FromR3M1", -1 )
@@ -557,7 +562,7 @@
 					SetTolerance(1020,1002,RS_ENEMY)
 
 					local Fion = getObj("Set_Bar_Customer1")
-					if Fion then Fion:SetSpokenCount(1) end
+					if Fion then Fion:SetSpokenCount( 1 ) end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -570,6 +575,8 @@
 				end
 			else
 				if QuestStatus("r3m1_LureMainDriud_Ambush")~=Q_TAKEN and QuestStatus("r3m1_RescueUlukCivil")~=Q_TAKEN then
+					ValidateGameVersion()
+
 					TActivate("cinFastPlay1")
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
@@ -675,6 +682,8 @@
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			if IsQuestItemPresent( "quest_key_for_submarine" ) or  IsQuestItemPresent( "quest_key_for_submarine1" ) then
+				ValidateGameVersion()
+				
 				local b = SpawnMessageBox( "8801" )
    				if b == 1 then
 --					println ("Yes")

@@ -235,4 +235,8 @@
 		id="8801"
 		value="Вы желаете покинуть эту область?"
 		numButtons="2" />
+
+	<string
+		id="wrong_game_version"
+		value="Данное сохранение несовместимо с текущей версией Improved Storyline. ||Пожалуйста, начните новую игру.| "/>
 </resource>

@@ -5,6 +5,8 @@
 		<script>
 --			println("Map Region 4 map 2: Initialised")
 			SetVar("CountArmyKill",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
+
 			local test=0
 			if test==1 then
 --				println("TESTING: MAP DON'T WORK CORRECT WITH ANOTHER MAPS ")
@@ -210,6 +212,10 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="ExitFromMap" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
+
+			ValidateGameVersion()
+			
 			local b = SpawnMessageBox( "8801" )
 
 			if b == 1 then

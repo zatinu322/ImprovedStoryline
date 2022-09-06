@@ -9,6 +9,7 @@
 			SetVar("Ryba",0)
 			SetVar("KnownMap",0)
 			SetVar("MainCarDead",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 			
 			CreateNewDummyObject( "big_crag_5", "kamexp1", -1, -1, CVector(2059.066, 257.000, 3559.212), Quaternion(0.3953, -0.0829, -0.2476, 0.8807), 0)
 			CreateNewDummyObject( "big_crag_12", "kamexp2", -1, -1, CVector(2052.101, 263.000, 3567.510), Quaternion(-0.3090, 0.0000, 0.0000, 0.9511), 0)
@@ -394,6 +395,8 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 
 			if b == 1 then
@@ -445,6 +448,8 @@
 			local PlfCoor = Plf:GetPosition()
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			ValidateGameVersion()
 
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
@@ -604,6 +609,8 @@
 					vehPl:SetThrottle( 0 )
 					vehPl:SetCustomLinearVelocity(0)
 				end
+
+				ValidateGameVersion()
 
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then

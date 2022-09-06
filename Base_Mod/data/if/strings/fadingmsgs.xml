@@ -195,4 +195,8 @@
 	<string
 		id="fm_death"
 		value="...ÀÊÒÈÂÀÖÈß ÄÅÒÎÍÀÒÎÐÀ..." />
+
+	<string
+		id="fm_wrong_game_version"
+		value="@FFFF0000Âû èñïîëüçóåòå íåñîâìåñòèìûé áèëä: %1p" />
 </resource>

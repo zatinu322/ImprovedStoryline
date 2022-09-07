@@ -197,7 +197,8 @@ function ValidateGameVersion()
 			InvalidFunctionName() -- валим триггер, иначе интерфейс может сломаться
 		end
 	else
-		AddFadingMsg("Game version validated.")
+		--AddFadingMsg("Game version validated.")
+		LOG("Game version validated.")
 		return GAME_VERSION
 	end
 end

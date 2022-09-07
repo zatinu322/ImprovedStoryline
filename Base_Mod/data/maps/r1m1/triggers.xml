@@ -182,7 +182,7 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			if CP_VERSION then
-				SpawnMessageBox("wrong_game_version_main")
+				SpawnMessageBox("5984")
 
 				ShowDeathMenu()
 

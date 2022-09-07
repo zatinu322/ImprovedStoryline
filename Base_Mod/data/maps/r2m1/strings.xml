@@ -941,6 +941,6 @@
 		numButtons="2" />
 
 	<string
-		id="wrong_game_version"
+		id="9999"
 		value="Данное сохранение несовместимо с текущей версией Improved Storyline. ||Пожалуйста, начните новую игру.| "/>
 </resource>

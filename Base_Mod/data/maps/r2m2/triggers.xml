@@ -5,6 +5,7 @@
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			SetVar("KnownMap",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			local zeon = getObj("Zeon_enter")
 			if zeon then
@@ -477,6 +478,8 @@
 					Plf:SetCustomLinearVelocity( 0 )
 					Plf:SetThrottle( 0 )
 					Plf:SetCustomControlEnabled( false )
+
+					ValidateGameVersion()
  
 					local b = SpawnMessageBox( "8800" )
 					if b == 1 then
@@ -711,6 +714,8 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 				local hs5 = GetEntityByName("FIRE05")
@@ -774,6 +779,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestTaken("d_GetAkselBandit_Quest") then 
+				ValidateGameVersion()
+				
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 					local hs5 = GetEntityByName("FIRE05")

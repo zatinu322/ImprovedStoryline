@@ -11,6 +11,8 @@
 			SetVar("QuickWayAlt",0)
 			SetVar("KnownMap",0)
 			SetVar("BeglecPrice",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1178,6 +1180,8 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 
@@ -1236,6 +1240,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestComplete("d_FindHouseOfBen_Quest") or IsQuestComplete("QuickFindBen") then 
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
@@ -1304,6 +1310,7 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
+			ValidateGameVersion()
 			
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
@@ -1382,6 +1389,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestTaken("d_OpenTunel_Quest") then 
+				ValidateGameVersion()
+				
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 

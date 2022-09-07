@@ -17,6 +17,8 @@
 		   SetVar("KnownMap",0)
 		   SetVar("FirstVehChange", 0)
 		   SetVar("SOAgressor", 0)
+		   if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
+
 		   CreateNewDummyObject( "oracle_gate", "oraclegate", -1, -1, CVector(693.708, 282.100, 3233.653), Quaternion(0.0000, 0.9455, 0.0000, 0.3256), 0)
 		   trigger:Deactivate()
 		</script>
@@ -674,6 +676,10 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="ExitFromMap_loc" />
 		<script>
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
+
+			ValidateGameVersion()
+			
 			local b = SpawnMessageBox( "8801" )
 
 			if b == 1 then

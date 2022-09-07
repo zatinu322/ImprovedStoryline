@@ -9,6 +9,7 @@
 			SetVar("R", 0)
 			SetVar("Go",0)
 			SetVar("KnownMap",0)
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			CreateNewDummyObject("factorytunnelgate", "HelveticaGates", -1, -1, CVector(6556.667, 282.379, 6985.063), Quaternion(0.000, 0.750, 0.000, 0.661), 0)
 			getObj("HelveticaGates"):SetNodeAction(AT_RESERVED3)
@@ -948,6 +949,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestComplete("FigureOutWhatsGoingOn_Quest") and QuestStatus("d_CaravanFromTuzzToVillage_Quest")~=Q_TAKEN then 
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 					PassToMap("r2m2", "FromR2M1", -1 )
@@ -1014,6 +1017,8 @@
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
 			if IsQuestTaken("d_GetAkselBandit_Quest") then 
+				ValidateGameVersion()
+
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 					PassToMap("r2m2", "FromR2M1small", -1 )
@@ -1079,6 +1084,8 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
+			ValidateGameVersion()
+
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
 				PassToMap("r1m3", "FromR2M1", -1 )
@@ -1133,6 +1140,8 @@
 			local PlfCoor = Plf:GetPosition()
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			ValidateGameVersion()
 
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then

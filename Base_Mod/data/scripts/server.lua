@@ -27,6 +27,10 @@ EXECUTE_SCRIPT "data\\scripts\\dialoghelpers.lua"
 -- include queststates.lua
 EXECUTE_SCRIPT "data\\scripts\\queststates.lua"
 
+LOG("IMPROVED STORYLINE V1.0.5.3 BUILD 220906")
+
+ISL_VERSION = "1053-220906"
+
 -- global object repository
 g_ObjCont = GET_GLOBAL_OBJECT "g_ObjContainer"
 

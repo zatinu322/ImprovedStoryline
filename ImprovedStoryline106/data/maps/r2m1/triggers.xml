@@ -130,9 +130,9 @@
 	<trigger Name="ZashitaCaravan" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			SetTolerance(1100,1015,RS_ENEMY)
-
+			SetTolerance(1100, 1015, RS_ENEMY)
 			SetTolerance(1100, 1016, RS_ALLY)
+			SetTolerance(1016, 1015, RS_NEUTRAL)
 			
 			TeamCreate("CaravanTuzz",1016,CVector(2425.274, 233.000, 2887.595),{"r2m1_CaravanMolokovoz03"})
 			local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
@@ -148,6 +148,16 @@
 			
 			TActivate("ARKillersDIE")
 			TActivate("CaravanAMDEAD")
+			TActivate("CaravanSNGTolerance2sec")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="CaravanSNGTolerance2sec" active="0">
+		<event	timeout="2"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SetTolerance(1016, 1015, RS_ENEMY)
 
 			trigger:Deactivate()
 		</script>
@@ -159,15 +169,19 @@
 		<script>
 			local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
 			local vehCarTrailer = GetEntityByName("CaravanTuzz_vehicle_0_Trailer")
+
 			if vehCar and vehCar:IsAlive() then
 				vehCar:Remove()
 			end
+
 			if vehCarTrailer and vehCarTrailer:IsAlive() then
 				vehCarTrailer:Remove()
 			end
+
 			FailQuest("Zashita_Quest2")
 			FailQuest("r1m3_LisaWithOberegAndDisk_Quest")
 			TActivate("CaravDeadEnd1")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -190,6 +204,7 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Prebattle_Loc" />
 		<script>
 			TActivate("prebattlecin_begin")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

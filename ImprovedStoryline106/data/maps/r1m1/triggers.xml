@@ -144,7 +144,7 @@
 		</script>
 	</trigger>
 
-	<!-- Запрет въезда/выезда в/из Глухого -->
+	<!-- Запрет въезда/выезда в/из Глухого; активация катсцены с Айвеном -->
 	<trigger Name="trZapretGluhoeStart" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZapterGluhoe_Loc" />
 		<script>

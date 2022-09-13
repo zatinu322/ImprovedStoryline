@@ -164,7 +164,8 @@
 
 			PlayCustomMusic("Passage03a")
 			
-			SetTolerance(1100,1015,RS_ENEMY)
+			SetTolerance(1100, 1015, RS_ENEMY)
+			SetTolerance(1100, 1043, RS_ENEMY)
 			
 			TActivate("KvestNaEnding5")
 			
@@ -199,13 +200,13 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
+			FlyAround(1, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 58, 1 )
@@ -239,8 +240,6 @@
 			
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			SetWeather(0)
-			
 			PlayCustomMusic("IntenseDialogue03")
 			
 			Fly("Ending5", CINEMATIC_NO_AIM, 0, 17, 1, 1 )
@@ -262,6 +261,7 @@
 	<trigger Name="EndingRolik5Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			SetWeather(0)
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -269,6 +269,8 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(1674.653, 318.061, 3231.908))
+				vehPlayer:SetRotation(Quaternion(-0.003, -0.946, -0.000, -0.325))
 			end
 			
 			trigger:Deactivate()
@@ -285,6 +287,7 @@
 			CompleteQuest("EscapeArzhan")
 
 			SpawnMessageBox("8809")
+
 			ShowDeathMenu()
 
 			TDeactivate("EndingRolik5Fade")
@@ -310,12 +313,13 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 10
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 12, PlfCoor, PlfID, 1, 1 )
+			FlyAround(1, 0, 25, 12, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage(8811, 1)
@@ -367,7 +371,7 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			Fly("Eretik_cam", CINEMATIC_NO_AIM, 0, 36, 1, 1 )
+			Fly("Eretik_cam", CINEMATIC_AIM_TO_POINT, CVector(2772.568, 264.030, 501.365), 36, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 68, 0.25 )
@@ -1260,15 +1264,15 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			FlyAround(0.5, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
-			AddCinematicMessage( 8802, 0.5 )
+			AddCinematicMessage( 8803, 0.5 )
 
 			TActivate ("RolikStoneUralZapret")
 			TActivate ("RolikENDStoneUralZapret")
@@ -1279,8 +1283,13 @@
 	<trigger Name="RolikStoneUralZapret" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("Shlyapa32_loc")), CVector(getPos("Shlyapa33_loc")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("Shlyapa33_loc")))
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
 
 			trigger:Deactivate()    
 		</script>
@@ -1292,7 +1301,11 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("Shlyapa33_loc")))
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(269.615, 262.940, 3611.922))
+				vehPlayer:SetRotation(Quaternion(-0.023, 0.900, 0.008, -0.436))
+			end
 
 			TDeactivate( "RolikStoneUralZapret" )
 

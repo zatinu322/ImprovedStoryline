@@ -270,15 +270,16 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 20
-			PlfCoor.z = PlfCoor.z + 20
+			PlfCoor.x = PlfCoor.x + 5
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0.3, 25, 23, PlfCoor, PlfID, 1, 1)
+			FlyAround(1, 0, 25, 23, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
 
 			AddCinematicMessage( 1001, 0.25 )

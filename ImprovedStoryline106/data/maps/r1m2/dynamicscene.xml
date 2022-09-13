@@ -30,8 +30,8 @@
 		Name="MisterShlyapaFM"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="4238.803 68.121 5136.708"
-		Radius="30.000"
+		Pos="4228.270 68.876 5122.070"
+		Radius="69.000"
 		LookingTimeOut="10.000">
 		<Object
 			Name="MrShlyapa"
@@ -46072,19 +46072,19 @@
 		Name="tankeg5712"
 		Belong="-1"
 		Prototype="Breakable_TankEg"
-		Pos="3740.932 118.384 1745.398" />
+		Pos="3740.932 118.417 1745.398" />
 
 	<Object
 		Name="tankeg5713"
 		Belong="-1"
 		Prototype="Breakable_TankEg"
-		Pos="3758.333 117.175 1743.736" />
+		Pos="3758.333 117.145 1743.736" />
 
 	<Object
 		Name="tankeg5714"
 		Belong="-1"
 		Prototype="Breakable_TankEg"
-		Pos="3768.895 116.822 1742.571" />
+		Pos="3768.895 116.528 1742.571" />
 
 	<Object
 		Name="tankeg5716"

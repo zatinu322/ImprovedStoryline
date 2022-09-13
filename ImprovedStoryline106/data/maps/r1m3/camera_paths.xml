@@ -231,8 +231,8 @@
 	</Path>
 
 	<Path Name = "Armia_cam01">
-		<Point  coord="6042.650 255.653 1863.000" rotation="-0.123 0.105 -0.013 0.987"/>
-		<Point  coord="5990.868 250.138 1892.382" rotation="-0.071 -0.422 0.033 0.903"/>
+		<Point  coord="6045.698 237.881 1999.740" rotation="-0.005 0.993 -0.042 0.113"/>
+		<Point  coord="6038.706 250.658 2025.086" rotation="-0.005 0.995 -0.084 0.053"/>
 	</Path>
 
 	<Path Name = "Chehly_cam1">

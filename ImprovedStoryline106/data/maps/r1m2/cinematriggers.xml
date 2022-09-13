@@ -5,22 +5,43 @@
 	<trigger	Name="cinAfterChifir"	active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			PlayCustomMusic("Bio04")
+			if GetVar("NoChifir").AsInt == 0 then
+				PlayCustomMusic("Bio04")
 
-			SaveAllToleranceStatus(RS_NEUTRAL)
+				SaveAllToleranceStatus(RS_NEUTRAL)
 
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
+				local Plf = GetPlayerVehicle()
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
 
-			Plf:SetCustomLinearVelocity(0)
-			Plf:SetThrottle(0)
+				Fly("ShlyapaCam0_0", CINEMATIC_NO_AIM, nil, 7, 0, 0)
+				Fly("ShlyapaCam0", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 19.5, 0, 1)
+				StartCinematic()
 
-			local PlfCoor = CVector(4239.508, 69.099, 5136.699)
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+				TActivate("cinAfterChifir_cam00")
+				TActivate("cinAfterChifir_End")
 
-			FlyAround(6, 0, 25, 19.5, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
+			elseif GetVar("NoChifir").AsInt == 1 then
+				local shl1 = GetEntityByName("MisterShlyapaFM")
+				if shl1 then shl1:SetProperty("Active",1) end
+			else
+				LOG("ERROR! Can not define variable NoChifir")
+			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="cinAfterChifir_cam00" active="0">
+		<event flypath="ShlyapaCam0" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetGamePositionOnGround(CVector(4236.602, 68.916, 5117.343))
+				vehPlayer:SetRotation(Quaternion(0.046, 0.988, -0.007, 0.148))
+			end
 
 			AddCinematicMessage( 88056, 1 )
 
@@ -30,17 +51,6 @@
 				AddCinematicMessage( 88057, 0.25 )
 			end
 
-			TActivate("cinAfterChifir_Fade")
-			TActivate("cinAfterChifir_End")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="cinAfterChifir_Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -62,6 +72,8 @@
 			if not(IsQuestComplete("FirstTimePlay")) then
 				StartConversation( "MrShlyapa" )
 			end
+
+			TDeactivate("cinAfterChifir_cam00")
 			
 			trigger:Deactivate()
 		</script>
@@ -76,13 +88,13 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 12.5, PlfCoor, PlfID, 1, 1 )
+			FlyAround(1, 0, 15, 12.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 5963, 1 )
@@ -109,42 +121,31 @@
 
 	<!-- Игрока выгоняют из Мидгарда -->
 	<trigger	Name="RolikBegin_OutOfMidgard"	active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			PlayCustomMusic("Bio07unloop")
 
-			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
-			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 6, 0, 1 )
+			Fly("MidragdOut1", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("MidragdOut3", CINEMATIC_NO_AIM, 0, 8, 0, 1, nil, nil, true )
 			StartCinematic()
 
 			AddCinematicMessage( 88055, 1 )
 			
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomLinearVelocity(0)
+				Plf:SetThrottle(0)
+				Plf:SetGamePositionOnGround( CVector(4345.800, 128.327, 855.063))
+				Plf:SetRotation(Quaternion(-0.020, -1.000, 0.000, 0.009))
 			end
 			
-			TActivate("OutOfMidgard_FadeIn")
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(4342.388, 127.361, 852.012), Quaternion(-0.008, 0.999, 0.017, -0.026), 0)
+			
 			TActivate("OutOfMidgard_FadeIn2")
 			TActivate("OutOfMidgard_End")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="OutOfMidgard_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-		
-			GetPlayerVehicle():SetGamePositionOnGround( CVector(4353.645, 129.190, 856.392))
-			GetPlayerVehicle():SetRotation(Quaternion(0.007, 0.960, 0.005, -0.279))
-			
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(4337.363, 127.261, 853.542), Quaternion(-0.004, 0.982, 0.018, 0.189), 0)
 
 			trigger:Deactivate()
 		</script>
@@ -154,7 +155,7 @@
 		<event flypath="MidragdOut3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			
-			AddCinematicMessage( 880555, 0.25 )
+			AddCinematicMessage( 880555, 2 )
 			
 			trigger:Deactivate()
 		</script>
@@ -166,9 +167,18 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			SetCameraBehindPlayerVehicle()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetGamePositionOnGround( CVector(4368.368, 128.350, 876.529))
+				Plf:SetRotation(Quaternion(-0.000, -0.524, 0.003, -0.852))
+			end
 		
-			GetEntityByName("humPlayer"):Remove()
+			local humP = GetEntityByName("humPlayer")
+			if humP then humP:Remove() end
+
+			TDeactivate("OutOfMidgard_FadeIn2")
+
+			SetCameraBehindPlayerVehicle()
 			
 			StopPlayingCustomMusic()
 			
@@ -183,16 +193,17 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
+			FlyAround(1, 0, 15, 11.5, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
+
 			AddCinematicMessage( 88058, 0.25 )
 
 			AddQuestItem("quest_thief_package")
@@ -1403,11 +1414,9 @@
 
 	<!-- После Бабы Поли, активация бонусной концовки -->
 	<trigger	Name="cinAfterChifir2"	active="0">
-		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			PlayCustomMusic("Bio04")
 
 			Fly("ShlyapaCam1", CINEMATIC_NO_AIM, 0, 9, 1, 1 )
 			StartCinematic()
@@ -1422,6 +1431,8 @@
 	<trigger Name="cinAfterChifir2Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			PlayCustomMusic("Bio04")
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -1431,6 +1442,7 @@
 				vehPlayer:SetGamePositionOnGround(CVector(3518.390, 90.903, 5192.647))
 				vehPlayer:SetRotation(Quaternion(-0.010, 0.745, 0.010, -0.667))
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1445,7 +1457,7 @@
 
 			StopPlayingCustomMusic()
 
-			StartConversation( "MrShlyapa" )
+			--StartConversation( "MrShlyapa" )
 
 			trigger:Deactivate()
 		</script>
@@ -1501,16 +1513,17 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
+			FlyAround(1, 0, 15, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
+
 			AddCinematicMessage( 88059, 1 )
 
 			TActivate("cinAfterKidnappingEnd")
@@ -1526,6 +1539,9 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
+
+			local arch = GetEntityByName("CarOfSiencer_vehicle_0")
+			if arch then arch:Remove() end
 
 			AddQuestItem("ArchProrab_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ArchProrab_P")
@@ -1636,11 +1652,6 @@
 			CompleteQuest("CombatInKollizey_Quest1")
 
 			TDeactivate("trKol1_cam02")
-
-			-- local trigger = getObj("KOLIZEYFIGHTDIE")
-			-- if trigger then
-			-- 	trigger:AddEvent("GE_OBJECT_DIE", "Gladiator1")
-			-- end
 
 			TActivate("KOLIZEYFIGHTDIE1")
 

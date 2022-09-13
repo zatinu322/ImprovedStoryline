@@ -224,11 +224,11 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			local tp = GetEntityByName("Midragd")
-			tp:SetOpenGateToPlayer( false )
+			if tp then tp:SetOpenGateToPlayer( false ) end
 
 			SetConditionalClosingForTown( "Midragd", "r1m2", true )
 
-			CreateNewDummyObject("midgard_gate", "MidgragdGates", -1, -1, CVector(4344.384, 128.562, 833.465), Quaternion(0.000, 1.000, 0.000, 0.009), 0)
+			--CreateNewDummyObject("midgard_gate", "MidgragdGates", -1, -1, CVector(4344.384, 128.562, 833.465), Quaternion(0.000, 1.000, 0.000, 0.009), 0)
 
 			trigger:Deactivate()
  		</script>
@@ -382,8 +382,6 @@
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			
-			AutoSave( "" )
-			
 			PassToMap("r1m8", "FromR1M2", -1 )
 
 			trigger:Deactivate()
@@ -458,6 +456,8 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			TeamCreate("CarOfSiencer",1032,CVector(7468.556, 184.763, 5213.779),{"r1m1_bug02"}, nil, 1)
+			local arch = GetEntityByName("CarOfSiencer_vehicle_0")
+			if arch then arch:setImmortalMode(1) end
 
 			TakeQuest("DestroyRuins_Quest")
 
@@ -469,7 +469,7 @@
 
 	<trigger Name="RUINSWAR" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="CarOfAntiSiencer" />
-		<event eventid="GE_OBJECT_DIE" ObjName="CarOfSiencer" />
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="CarOfSiencer_vehicle_0" />
 		<script>
 			if QuestStatus("HelpRuins_Quest")==Q_TAKEN then
 				CompleteQuest( "HelpRuins_Quest" )

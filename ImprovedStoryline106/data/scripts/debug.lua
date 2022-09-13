@@ -190,11 +190,11 @@ function ValidateGameVersion()
 
 			AddFadingMsgByStrIdFormatted("fm_wrong_game_version", GAME_VERSION)
 
-			SpawnMessageBox("wrong_game_version")
+			SpawnMessageBox("9999")
 		else
 			LOG("Current build "..GAME_VERSION.." is not supported in "..ISL_VERSION)
 
-			SpawnMessageBox("wrong_game_version")
+			SpawnMessageBox("9999")
 
 			ShowDeathMenu()
 

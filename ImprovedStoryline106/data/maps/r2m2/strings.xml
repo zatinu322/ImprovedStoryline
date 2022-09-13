@@ -487,7 +487,7 @@
 		id="8803"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
-		value="Какое-то странное место. Лучше держаться отсюда подальше. "
+		value="Какое-то странное место. Лучше держаться отсюда подальше."
 		time="3" />
 
 	<string
@@ -541,6 +541,6 @@
 		time="10" />
 
 	<string
-		id="wrong_game_version"
-		value="Данное сохранение несовместимо с текущей версией Improved Storyline. ||Пожалуйста, начните новую игру.| "/>
+		id="9999"
+		value="Improved Storyline v1.0.6||Данное сохранение несовместимо с текущей версией Improved Storyline. ||Пожалуйста, начните новую игру.| "/>
 </resource>

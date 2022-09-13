@@ -40,7 +40,7 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-			if CP1_VERSION then
+			if CP_VERSION then
 				SetWeather(0)
 
 				PlayCustomMusic("GreenLeaves")
@@ -96,7 +96,7 @@
 				
 				CreateNewDummyObject( "quest_medicine_box", "medicine_box", -1, -1, CVector(2607.000, 322.000, 1614.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
 			else
-				SpawnMessageBox("wrong_game_version_main")
+				SpawnMessageBox("9998")
 
 				ShowDeathMenu()
 
@@ -465,10 +465,8 @@
 
 			ShowMap()
 
-			TDeactivate( "ROLIK11" )
 			TDeactivate( "ROLIK15" )
 			TDeactivate( "ROLIK16" )
-			TDeactivate( "ROLIK17" )
 			TDeactivate( "ROLIK12" )
 			TDeactivate( "ROLIK13" )
 			TDeactivate( "ROLIK18" )
@@ -500,18 +498,28 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
-
+			
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(1, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
+			
 
 			if QuestStatus("d_Lisa_Quest")==Q_TAKEN or QuestStatus("d_Lisa_Quest_NoKC")==Q_TAKEN then
+				PlfCoor.y = PlfCoor.y + 5
+				PlfCoor.z = PlfCoor.z + 10
+
+				FlyAround(1, 0, 15, 9, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
 				AddCinematicMessage( 5972, 0.5 )
+
 			elseif IsQuestTaken("TalkToVasily") then
+				PlfCoor.y = PlfCoor.y + 5
+				PlfCoor.z = PlfCoor.z - 10
+
+				FlyAround(1, 0, 15, 7, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
 				AddCinematicMessage( 8802, 1 )
 			end
 
@@ -533,8 +541,8 @@
 				coord = CVector(3207.985, 341.474, 2596.141)
 				rotation = Quaternion(-0.025, 0.988, 0.024, -0.151)
 			elseif IsQuestTaken("TalkToVasily") then
-				coord = CVector(3241.910, 348.713, 2978.992)
-				rotation = Quaternion(-0.078, 0.086, 0.016, 0.993)
+				coord = CVector(3291.914, 341.492, 2879.443)
+				rotation = Quaternion(-0.011, -0.200, -0.006, 0.980)
 			end
 
 			local vehPlayer = GetPlayerVehicle()
@@ -747,7 +755,6 @@
 
 			TActivate("RolikBegin_Lisa")
 			TActivate("RolikEnd_Lisa")
-			TActivate("trLisa_npc")
 
 			trigger:Deactivate()    
 		</script>
@@ -1477,7 +1484,6 @@
 			TActivate( "trMsg02" )
 			TActivate( "trMsg03" )
 			TActivate( "trMsg04" )
-			TActivate( "trMsg05" )
 
 			trigger:Deactivate()  
 		</script>
@@ -1630,13 +1636,11 @@
 			TDeactivate( "trMsg02" )
 			TDeactivate( "trMsg03" )
 			TDeactivate( "trMsg04" )
-			TDeactivate( "trMsg05" )
 			TDeactivate( "trLisa8" )
 			TDeactivate( "trLisa8_cam02" )
 			TDeactivate( "trLisa8_cam021" )
 			TDeactivate( "trLisa8_cam03" )
 			TDeactivate( "trLisa8_cam04" )
-			TDeactivate( "trLisa_Out" )
 
 			TActivate("METALFELIX")
 
@@ -1658,7 +1662,6 @@
 			StopPlayingCustomMusic()
 
 			SetCameraBehindPlayerVehicle()
-
 
 			trigger:Deactivate()
 		</script>
@@ -3298,15 +3301,15 @@
 				local Plf = GetPlayerVehicle()
 				local PlfID = GetPlayerVehicleId()
 				local PlfCoor = Plf:GetPosition()
-				PlfCoor.y = PlfCoor.y + 25*0.74
-				PlfCoor.z = PlfCoor.z + 25*0.74
+				PlfCoor.y = PlfCoor.y + 5
+				PlfCoor.z = PlfCoor.z + 15
 
 				Plf:SetCustomControlEnabled( true )
 				Plf:SetCustomLinearVelocity( 0 )
 				Plf:SetThrottle( 0 )
 				Plf:SetCustomControlEnabled( false )
 
-				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(1, 0, 15, 7, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 				AddCinematicMessage( 2222, 1 )
 

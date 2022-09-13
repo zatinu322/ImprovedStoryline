@@ -395,23 +395,7 @@
 				len = Dist(pl, run)
 
 				if (len > 305) or (15 > len) then
-					SaveAllToleranceStatus(RS_NEUTRAL)
-
-					local Plf = GetPlayerVehicle()
-					local PlfID = GetPlayerVehicleId()
-					local PlfCoor = Plf:GetPosition()
-					PlfCoor.y = PlfCoor.y + 25*0.74
-					PlfCoor.z = PlfCoor.z + 25*0.74
-
-					Plf:SetCustomControlEnabled( true )
-					Plf:SetCustomLinearVelocity( 0 )
-					Plf:SetThrottle( 0 )
-					Plf:SetCustomControlEnabled( false )
-
-					FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
-					StartCinematic()
-
-					AddCinematicMessage( 18, 1 )
+					runer = 18
 
 					TActivate("RUNTORUNER_cp")
 
@@ -420,23 +404,7 @@
 					trigger:Deactivate()
 				end
 			else
-				SaveAllToleranceStatus(RS_NEUTRAL)
-
-				local Plf = GetPlayerVehicle()
-				local PlfID = GetPlayerVehicleId()
-				local PlfCoor = Plf:GetPosition()
-				PlfCoor.y = PlfCoor.y + 25*0.74
-				PlfCoor.z = PlfCoor.z + 25*0.74
-
-				Plf:SetCustomControlEnabled( true )
-				Plf:SetCustomLinearVelocity( 0 )
-				Plf:SetThrottle( 0 )
-				Plf:SetCustomControlEnabled( false )
-
-				FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
-				StartCinematic()
-
-				AddCinematicMessage( 38, 1 )
+				runer = 38
 
 				TActivate("RUNTORUNER_cp")
 
@@ -444,22 +412,6 @@
 
 				trigger:Deactivate()
 			end
-		</script>
-	</trigger>
-	<trigger Name="RUNTORUNER_cp" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			local r = GetEntityByName ("OilMineRuner")
-			if r then r:Remove() end
-
-			FailQuestIfTaken("d_FindBanditBaseOfOilMine_Quest")
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
 		</script>
 	</trigger>
 
@@ -538,23 +490,6 @@
 			if run and run:IsAlive()  then
 				len = Dist(pl, run)
 				if (len > 305) or (15 > len) then
-					SaveAllToleranceStatus(RS_NEUTRAL)
-
-					local Plf = GetPlayerVehicle()
-					local PlfID = GetPlayerVehicleId()
-					local PlfCoor = Plf:GetPosition()
-					PlfCoor.y = PlfCoor.y + 25*0.74
-					PlfCoor.z = PlfCoor.z + 25*0.74
-
-					Plf:SetCustomControlEnabled( true )
-					Plf:SetCustomLinearVelocity( 0 )
-					Plf:SetThrottle( 0 )
-					Plf:SetCustomControlEnabled( false )
-
-					FlyAround(6, 0, 25, 6, PlfCoor, PlfID, 1, 1)
-					StartCinematic()
-
-					AddCinematicMessage( 19, 1 )
 
 					TActivate( "RUNMER_cp" )
 
@@ -571,25 +506,6 @@
 
 				trigger:Deactivate()
 			end
-		</script>
-	</trigger>
-	<trigger Name="RUNMER_cp" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			local r = GetEntityByName ("MerCar")
-			if r then r:Remove() end
-
-			FailQuestIfTaken("d_MoveToMer_Quest")
-			FailQuestIfTaken("d_FindWorkersToOilMine_Quest")
-
-			TakeQuest("d_PayWorkersMoney_Quest")
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
 		</script>
 	</trigger>
 
@@ -627,9 +543,9 @@
 		
 			if IsQuestComplete("d_DestroyBridge_Quest") then
 
-				CreateVehicleEx( "BelazTSP", "ArmyVeh1", CVector(6057.330, 238.386, 1933.433), 1010 )
-				CreateVehicleEx( "TSPFighter", "ArmyVeh2", CVector(6027.587, 237.066, 1926.612), 1010 )
-				CreateVehicleEx( "tspfighter2", "ArmyVeh3", CVector(6012.056, 237.713, 1931.321), 1010 )
+				CreateVehicleEx( "BelazTSP", "ArmyVeh1", CVector(6026.965, 238.828, 1919.051), 1010, Quaternion(0.073, 0.298, 0.026, 0.951) )
+				CreateVehicleEx( "TSPFighter", "ArmyVeh2", CVector(6020.172, 237.190, 1926.912), 1010, Quaternion(0.004, 0.276, 0.015, 0.961) )
+				CreateVehicleEx( "tspfighter2", "ArmyVeh3", CVector(6012.056, 236.525, 1931.321), 1010, Quaternion(0.041, 0.236, -0.038, 0.970) )
 
 				local veh1 = GetEntityByName("ArmyVeh1")
 				if veh1 then
@@ -638,6 +554,7 @@
 					veh1:setImmortalMode(1)
 					veh1:SetRandomSkin()
 				end
+
 				local veh2 = GetEntityByName("ArmyVeh2")
 				if veh2 then
 					veh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
@@ -645,6 +562,7 @@
 					veh2:setImmortalMode(1)
 					veh2:SetRandomSkin()
 				end
+				
 				local veh3 = GetEntityByName("ArmyVeh3")
 				if veh3 then
 					veh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))

@@ -10,7 +10,16 @@
 -- ----------------------------------------------------------------------------
 --  $Id: server.lua,v 1.53 2005/07/26 09:06:59 anton Exp $
 -- ----------------------------------------------------------------------------
-anticheat = 0
+
+if ISL_VERSION == nil then
+	LOG("IMPROVED STORYLINE V1.0.6 BUILD 220515")
+
+	ISL_VERSION = "106-220515"
+
+	-- only for development needs, should not be in release!
+	EXECUTE_SCRIPT "data\\scripts\\compatch.lua"
+end
+
 -- include cheats.lua
 EXECUTE_SCRIPT "data\\scripts\\cheats.lua"
 
@@ -26,6 +35,8 @@ EXECUTE_SCRIPT "data\\scripts\\dialoghelpers.lua"
 
 -- include queststates.lua
 EXECUTE_SCRIPT "data\\scripts\\queststates.lua"
+
+anticheat = 0
 
 -- global object repository
 g_ObjCont = GET_GLOBAL_OBJECT "g_ObjContainer"
@@ -119,7 +130,10 @@ end
 function TActivate( TriggerName )
 	local trig1 = GetEntityByName(TriggerName)
 	if trig1 then 
-		trig1:Activate() 
+		trig1:Activate()
+	else
+		LOG("ERROR! Trigger "..TriggerName.." does not exists.")
+		println("ERROR! Trigger "..TriggerName.." does not exists.")
 	end
 end
 
@@ -129,6 +143,9 @@ function TDeactivate( TriggerName )
 	local trig1 = GetEntityByName(TriggerName)
 	if trig1 then 
 		trig1:Deactivate() 
+	else
+		LOG("ERROR! Trigger "..TriggerName.." does not exists.")
+		println("ERROR! Trigger "..TriggerName.." does not exists.")
 	end
 end
 

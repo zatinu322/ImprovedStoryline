@@ -112,6 +112,7 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearFist_TalkGuard_loc" />
 		<script>
 			TActivate("RolikBegin_PostFist")
+			
 	  		trigger:Deactivate()
 		</script>
 	</trigger>
@@ -126,12 +127,12 @@
 			      veh:SetExternalPathByName("FistGuard"..(i+1).."_1")
 			   end
 			end
-		   local veh = getObj("FistDefenders2_vehicle_0")
-		   if veh then
-		      veh:SetExternalPathByName("FistGuard3_1")
-		   end
 
-			TActivate("trFistDefendersDie")
+			local veh = getObj("FistDefenders2_vehicle_0")
+			if veh then
+			   veh:SetExternalPathByName("FistGuard3_1")
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

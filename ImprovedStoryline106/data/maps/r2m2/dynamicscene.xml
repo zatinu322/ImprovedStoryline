@@ -1961,14 +1961,6 @@
 
 	<Object
 		Flags="21"
-		Name="Shlyapa33_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="282.057 263.799 3600.855"
-		Radius="15.000" />
-
-	<Object
-		Flags="21"
 		Name="Shlyapa31_loc"
 		Belong="1100"
 		Prototype="genericLocation"

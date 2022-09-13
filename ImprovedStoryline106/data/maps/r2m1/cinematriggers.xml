@@ -10,6 +10,8 @@
 			local b = GetEntityByName("ToR1M3")
 			if b then b:SetProperty("Active",0) end
 
+			SetWeather(0)
+
 			PlayCustomMusic("QuietDialogue02")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -236,11 +238,14 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 25
+
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
-			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
+
+			FlyAround(0.5, 0.1, 25, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage(8807, 1)
@@ -276,13 +281,17 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(2442.923, 235.955, 2909.160), Quaternion(0, 0, 0, 0), 1)
 			
-			local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
-			local vehCarID = vehCar:GetId()
+			local CToch = GetEntityByName("CamTochka")
+			local CTochID = CToch:GetId()
+			--local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
+			--local vehCarID = vehCar:GetId()
 			local Plf = GetPlayerVehicle()
 			local PlfID = Plf:GetId()
 
-			FlyLinked( "DefendSngMolok_Path1", PlfID, 35, 1, 0, vehCarID )
+			FlyLinked( "DefendSngMolok_Path1", PlfID, 35, 1, 0, CTochID )
 			FlyLinked( "DefendSngMolok_Path2", PlfID, 33, 0, 1, PlfID )
 			StartCinematic()
 			
@@ -294,6 +303,7 @@
 			TActivate("ZashitacinFade")
 			TActivate("ZashitacinCam2")
 			TActivate("Zashitacin_End")
+			TDeactivate("CaravanSNGTolerance2sec")
 			
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 		    GetPlayerVehicle():SetThrottle( 0 )
@@ -326,6 +336,9 @@
 	<trigger Name="ZashitacinCam2" active="0">
 	<event flypath="DefendSngMolok_Path2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+			local CToch = GetEntityByName("CamTochka")
+			if CToch then CToch:Remove() end
+
 			local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
 			if vehCar then
 				vehCar:SetGamePositionOnGround( CVector(2441.203, 235.944, 2903.727))
@@ -352,6 +365,9 @@
 			
 			local carVeh = GetEntityByName("CaravanTuzz_vehicle_0")
 			if carVeh then carVeh:Remove() end
+
+			local CToch = GetEntityByName("CamTochka")
+			if CToch then CToch:Remove() end
 			
 			SetTolerance(1100,1016,RS_NEUTRAL)
 
@@ -463,11 +479,14 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 30
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 30
+
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
-			FlyAround(6, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
+
+			FlyAround(0.5, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			TActivate("prebattlecin_end")
@@ -1162,15 +1181,15 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround( 6, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 0.5, 0, 25, 8, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 60, 1 )
@@ -1186,6 +1205,7 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
+
 			SetTolerance( 1100, 1016, RS_ENEMY )
 
 			SetCameraBehindPlayerVehicle()
@@ -2487,13 +2507,13 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
 
-			FlyAround(6, 0, 25, 5, PlfCoor, PlfID, 1, 1 )
+			FlyAround(0.5, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 70, 1 )
@@ -2510,6 +2530,8 @@
 		<script>
 		
 			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
 
 			AddQuestItem("quest_art_masterpice")
 			

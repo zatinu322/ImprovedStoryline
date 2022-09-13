@@ -109,8 +109,8 @@
 	</Path>
 
 	<Path Name = "MidragdOut1">
-		<Point  coord="4322.137 133.317 868.686" rotation="0.011 0.908 -0.023 -0.418"/>
-		<Point  coord="4336.229 133.317 882.877" rotation="0.005 0.978 -0.025 -0.205"/>
+		<Point  coord="4340.464 131.398 864.884" rotation="0.004 0.995 -0.051 -0.086"/>
+		<Point  coord="4339.914 131.757 868.324" rotation="0.004 0.995 -0.051 -0.086"/>
 	</Path>
 
 	<Path Name = "MidragdOut2">
@@ -119,11 +119,13 @@
 	</Path>
 
 	<Path Name = "MidragdOut3">
-		<Point  coord="4336.229 133.317 882.877" rotation="0.005 0.978 -0.025 -0.205"/>
+		<!-- <Point  coord="4339.914 131.757 868.324" rotation="0.004 0.995 -0.051 -0.086"/>
 		<Point  coord="4361.414 135.606 873.966" rotation="-0.013 -0.634 0.010 0.773"/>
 		<Point  coord="4765.022 124.942 1133.474" rotation="-0.009 -0.442 0.005 0.897"/>
 		<Point  coord="4998.938 109.478 1500.913" rotation="-0.013 -0.211 0.003 0.977"/>
-		<Point  coord="5096.346 100.316 1761.626" rotation="-0.074 -0.225 0.017 0.971"/>
+		<Point  coord="5096.346 100.316 1761.626" rotation="-0.074 -0.225 0.017 0.971"/> -->
+		<Point  coord="5062.225 110.014 1753.815" rotation="-0.110 -0.323 0.038 0.939"/>
+		<Point  coord="5082.107 102.304 1779.329" rotation="-0.110 -0.323 0.038 0.939"/>
 	</Path>
 
 	<Path Name = "PreSuicCam">
@@ -176,6 +178,16 @@
 		<Point  coord="2531.426 145.883 6972.929" rotation="-0.095 -0.510 0.057 0.853"/>
 	</Path>
 
+	<Path Name = "ShlyapaCam0_0">
+		<Point  coord="3532.765 108.281 5230.042" rotation="-0.096 0.537 -0.061 0.836"/>
+		<Point  coord="3539.631 108.281 5245.028" rotation="-0.096 0.537 -0.061 0.836"/>
+	</Path>
+
+	<Path Name = "ShlyapaCam0">
+		<Point  coord="4243.228 73.554 5111.499" rotation="-0.190 0.421 -0.090 0.883"/>
+		<Point  coord="4280.838 94.201 5081.589" rotation="-0.181 0.425 -0.087 0.882"/>
+	</Path>
+
 	<Path Name = "ShlyapaCam1">
 		<Point  coord="3406.604 103.955 5158.792" rotation="-0.053 -0.527 0.033 0.848"/>
 		<Point  coord="3431.378 100.466 5171.074" rotation="-0.055 -0.527 0.034 0.848"/>
@@ -188,6 +200,5 @@
 
 	<Path Name = "EndingScreenCam1">
 		<Point  coord="4953.300 23.716 7925.755" rotation="0.007 -0.026 -0.000 1.000"/>
-		<!-- <Point  coord="4953.300 23.734 7926.214" rotation="0.011 -0.029 -0.000 1.000"/> 4:3 path -->
 	</Path>
 </Paths>

@@ -412,7 +412,6 @@
 			for i = 0,2 do
 				if GetEntityByName("OilMineBoss_vehicle_"..i) then
 					GetEntityByName("OilMineBoss_vehicle_"..i):Remove()
-					-- println("Removed vehicle "..i)
 				end
 			end
 
@@ -456,6 +455,58 @@
 			TActivate("RUNTORUNERENDRACE")
 
 			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<!-- Провал слежки за бандитов с нефтяной вышки -->
+	<trigger Name="RUNTORUNER_cp" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.x = PlfCoor.x - 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
+
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			FlyAround(0.5, 0, 15, 7, PlfCoor, PlfID, 1, 1)
+			StartCinematic()
+
+			if runer then
+				AddCinematicMessage( runer, 1 )
+			else
+				AddCinematicMessage( 38, 1 )
+			end
+
+			TActivate("RUNTORUNER_cp_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RUNTORUNER_cp_End" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local r = GetEntityByName ("OilMineRuner")
+			if r then r:Remove() end
+
+			FailQuestIfTaken("d_FindBanditBaseOfOilMine_Quest")
+
+			SetCameraBehindPlayerVehicle()
+
+			runer = nil
 
 			trigger:Deactivate() 
 		</script>
@@ -535,7 +586,54 @@
 		</script>
 	</trigger>
 
-<!-- Мер подъезжает к тайнику. -->
+	<!-- Провал слежки за мэром -->
+	<trigger Name="RUNMER_cp" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 15
+
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			FlyAround(0.5, 0, 15, 6, PlfCoor, PlfID, 1, 1)
+			StartCinematic()
+
+			AddCinematicMessage( 19, 1 )
+
+			TActivate("RUNMER_cp_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="RUNMER_cp_End" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local r = GetEntityByName ("MerCar")
+			if r then r:Remove() end
+
+			FailQuestIfTaken("d_MoveToMer_Quest")
+			FailQuestIfTaken("d_FindWorkersToOilMine_Quest")
+
+			TakeQuest("d_PayWorkersMoney_Quest")
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+	<!-- Мер подъезжает к тайнику. -->
 	<trigger Name="RolikBegin_THESPY" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -667,11 +765,14 @@
 			if stat==1 then
 				Fly("Ending34", CINEMATIC_NO_AIM, 0, 12, 1, 1 )
 				StartCinematic()
+
 				AddCinematicMessage( 5963, 1 )
+
 				SetVar("DeadMer",2)
 			else
 				Fly("Ending34", CINEMATIC_NO_AIM, 0, 15, 1, 1 )
 				StartCinematic()
+
 				AddCinematicMessage( 5964, 1 )
 			end
 			
@@ -771,23 +872,44 @@
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			PlayCustomMusic("Passage03")
-		
-   			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-			end
-   			
-			Fly("Armia_cam01", CINEMATIC_NO_AIM, 0, 22, 1, 1 )
+		   			
+			Fly("Armia_cam01", CINEMATIC_AIM_TO_POINT, CVector(6037.410, 235.193, 1952.599), 22, 1, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 8806, 0.5 )
 			AddCinematicMessage( 8807, 0.5 )
 			
-   			TActivate("ArmiaTSPPreparationEnd")
+			TActivate("ArmiaTSPPreparationFade")
+			TActivate("ArmiaTSPPreparationEnd")
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="ArmiaTSPPreparationFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local armycoord = {CVector(6026.965, 238.828, 1919.051), CVector(6020.172, 237.190, 1926.912), CVector(6012.056, 236.525, 1931.321)}
+			local armyrot = {Quaternion(0.073, 0.298, 0.026, 0.951), Quaternion(0.004, 0.276, 0.015, 0.961), Quaternion(0.041, 0.236, -0.038, 0.970)}
+
+			for veh = 1,3 do
+				local armyveh = GetEntityByName("ArmyVeh"..veh)
+				if armyveh then
+					armyveh:SetGamePositionOnGround(armycoord[veh])
+					armyveh:SetRotation(armyrot[veh])
+				end
+			end
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(6046.493, 233.394, 1976.438))
+				vehPlayer:SetRotation(Quaternion(0.017, 0.978, 0.016, -0.209))
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -885,6 +1007,7 @@
 			end
 
 			TActivate("TRIGGER_THIEFDIE")
+			TDeactivate("ArmiaTSPPreparationFade")
 			
 			CompleteQuest( "Zachisti1_Quest" )
 			
@@ -901,15 +1024,15 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 15
 
 			Plf:SetCustomControlEnabled( true )
 			Plf:SetCustomLinearVelocity( 0 )
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyAround(6, 0, 25, 8, PlfCoor, PlfID, 1, 1)
+			FlyAround(1, 0, 25, 8, PlfCoor, PlfID, 1, 1)
 			StartCinematic()
 
 			AddCinematicMessage(31, 1 )
@@ -926,6 +1049,7 @@
    			
 			AddQuestItem("quest_disk_2")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_disk_2")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -936,25 +1060,16 @@
 			RestoreAllToleranceStatus()
 
 			StopPlayingCustomMusic()
+
+			for cont = 1,3 do
+				local vehCont = GetEntityByName("ArmyCont"..cont)
+				if vehCont then vehCont:Remove() end
+			end
 			
-			local ArmyVeh1 = GetEntityByName("ArmiaTSP_vehicle_0")
-			local ArmyVeh2 = GetEntityByName("ArmiaTSP_vehicle_1")
-			local ArmyVeh3 = GetEntityByName("ArmiaTSP_vehicle_2")
-			if ArmyVeh1 then
-				ArmyVeh1:Remove()
+			for veh = 0,2 do
+				local armyVeh = GetEntityByName("ArmiaTSP_vehicle_"..veh)
+				if armyVeh then armyVeh:Remove() end
 			end
-			if ArmyVeh2 then
-				ArmyVeh2:Remove()
-			end
-			if ArmyVeh3 then
-				ArmyVeh3:Remove()
-			end
-
-			local vehBrig = GetEntityByName("Brigada1_vehicle_0")
-			if vehBrig then vehBrig:Remove() end
-
-			local vehBrig1 = GetEntityByName("Brigada2_vehicle_0")
-			if vehBrig1 then vehBrig1:Remove() end
 
 			if IsQuestComplete( "Zachisti2_Quest" ) then
 				SetTolerance( 1100, 1012, RS_ALLY )

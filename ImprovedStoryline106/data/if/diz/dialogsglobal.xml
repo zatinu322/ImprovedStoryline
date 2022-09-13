@@ -8330,7 +8330,7 @@
 
 	<Reply
 		name="Dlg_npc_002305"
-		text='Тебе предстоит проникнуть вглубь вражеской территории и встретиться там с нашим связным в Тоскане. Пароль: "Старая чушка плодила подсвинков". Он выведет тебя на людей, способных уничтожить диктатуру церкви. Действовать будешь один. И да, будь осторожен. По завершению получишь 50000 монет.'
+		text='Тебе предстоит проникнуть вглубь вражеской территории и встретиться там с нашим связным в Тоскане. Пароль: "Старая чушка плодила подсвинков". Не спрашивай.|Он выведет тебя на людей, способных уничтожить диктатуру церкви. Действовать будешь один. И да, будь осторожен. По завершению получишь 50000 монет.'
 		role="NPC"
 		nextReplies="Dlg_pl_002306" />
 
@@ -14344,7 +14344,7 @@
 		name="Dlg_pl_001635"
 		text="Кажется, зря я это сделал…"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); FailQuest('d_FindBenInMidgard_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown(true)" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); FailQuest('d_FindBenInMidgard_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_xyz302"
@@ -14983,7 +14983,7 @@
 		name="Dlg_pl_003038"
 		text="Подожди, а про жилище Бена рассказать?!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); TActivate('tr_THEBEN'); CompleteQuest('CaravDead_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown(true)" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); TActivate('tr_THEBEN'); CompleteQuest('CaravDead_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown()" />
 <!--Root/r1m2/Сюжетные/Старуха-->
 	<Reply
 		name="Staruha_hellodlg0"
@@ -15015,6 +15015,7 @@
 		text="Кто стучится в дверь мою?"
 		role="NPC"
 		scriptCondition="QuestStatus('Chifir_Quest')==Q_TAKEN"
+		scriptResult="TActivate('cinAfterChifir');"
 		nextReplies="Dlg_pl_001540" />
 
 	<Reply
@@ -15141,7 +15142,7 @@
 		name="Dlg_pl_001556"
 		text="Не вижу ничего плохого в том, чтобы выпить чифиря."
 		role="PLAYER"
-		scriptResult="TActivate('cinAfterChifir'); SetVar('NoChifir', 0);"
+		scriptResult="SetVar('NoChifir', 0);"
 		nextReplies="Dlg_npc_001557" />
 
 	<Reply

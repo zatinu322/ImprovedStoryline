@@ -371,19 +371,65 @@
 	<trigger Name="trMovePlToR1M4" active="1">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToSubmarine_loc" />
 		<script>
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetThrottle( 0 )
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.x = PlfCoor.x + 30
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 15
+
+			ValidateGameVersion()
 
 			if IsQuestItemPresent( "quest_key_for_submarine" ) or  IsQuestItemPresent( "quest_key_for_submarine1" ) then
-				ValidateGameVersion()
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 					TActivate("RolikBegin_ToComeSubmarine")
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(0.1, 0, -45, 3, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("trMovePlToR1M4_Fade")
+					TActivate ("trMovePlToR1M4_End")
 				end
 			else
 				AddImportantFadingMsgId( "fm_key_lost" )
 			end
 
+		</script>
+	</trigger>
+	<trigger Name="trMovePlToR1M4_Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="trMovePlToR1M4_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetGamePositionOnGround( CVector(3788.010, 252.965, 1923.627))
+				Plf:SetRotation(Quaternion(-0.000, -0.962, -0.001, 0.274))
+			end
+
+			TDeactivate( "trMovePlToR1M4_Fade" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -397,8 +443,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 35
+			PlfCoor.y = PlfCoor.y + 10
+			PlfCoor.z = PlfCoor.z + 35
 
 			if IsQuestTaken("Disk2OrakulLisa") then
 				ValidateGameVersion()
@@ -406,17 +453,18 @@
 				local b = SpawnMessageBox( "8801" )
     			if b == 1 then
 					PassToMap("r2m1", "FromR3M1", -1 )
+
 					TActivate("trMoveFromR1M4")
 					TActivate("CutsceneDisable")
+
 					TDeactivate("UlukBattle2")
+
 					SetTolerance(1020,1002,RS_ENEMY)
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
-					FlyAround(1, 0, 25, 7, PlfCoor, PlfID, 1, 1 )
+					FlyAround(0.1, 0, -25, 3, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
-
-					Plf:SetExternalPathByName("ReturnPathR2M1")
 
 					TActivate("trExitFromMap21_End")
 
@@ -425,10 +473,9 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 7, PlfCoor, PlfID, 1, 1 )
+				
+				FlyAround(0.5, 0, -45, 9, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
-
-				Plf:SetExternalPathByName("ReturnPathR2M1")
 
 				AddCinematicMessage(8803, 0.5)
 
@@ -445,14 +492,13 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			SetCameraBehindPlayerVehicle()
-
 			Plf = GetPlayerVehicle()
 			if Plf then
-				Plf:PlaceToEndOfPath("ReturnPathR2M1")
 				Plf:SetGamePositionOnGround(CVector(877.703, 289.290, 998.304))
 				Plf:SetRotation(Quaternion(0.002, 0.354, 0.004, 0.935))
 			end
+
+			SetCameraBehindPlayerVehicle()
 
 			TActivate("trExitFromMap21")
 
@@ -470,8 +516,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 5
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			if IsQuestTaken("r3m1_GoToOracle")~=nil then 
 				ValidateGameVersion()
@@ -487,10 +534,8 @@
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
-					FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+					FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
-
-					Plf:SetExternalPathByName("ReturnPathR3M2")
 
 					TActivate("trExitFromMap32_End")
 				end
@@ -511,10 +556,8 @@
 					else
 						SaveAllToleranceStatus(RS_NEUTRAL)
 
-						FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+						FlyAround(0.5, 0, 25, 7, PlfCoor, PlfID, 1, 1 )
 						StartCinematic()
-
-						Plf:SetExternalPathByName("ReturnPathR3M2")
 
 						AddCinematicMessage(8802, 0.5)
 
@@ -523,9 +566,8 @@
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
-					FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+					FlyAround(0.5, 0, 25, 7, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
-					Plf:SetExternalPathByName("ReturnPathR3M2")
 
 					AddCinematicMessage(8802, 0.5)
 
@@ -541,14 +583,13 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			SetCameraBehindPlayerVehicle()
-
 			Plf = GetPlayerVehicle()
 			if Plf then
-				Plf:PlaceToEndOfPath("ReturnPathR3M2")
 				Plf:SetGamePositionOnGround(CVector(1110.618, 354.281, 3722.601))
 				Plf:SetRotation(Quaternion(-0.000, 0.968, 0.000, -0.250))
 			end
+
+			SetCameraBehindPlayerVehicle()
 
 			trigger:Deactivate()
 		</script>

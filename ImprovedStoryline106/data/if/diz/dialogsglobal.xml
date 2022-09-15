@@ -11492,7 +11492,7 @@
 		name="Dlg_pl_001862"
 		text="До скорого!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('d_MoveCanistraToMinin_Quest');  if IsQuestComplete('d_TalkAboutVrataInMinin_Quest') then TakeQuest('MorskieVrata2_Quest');  TakeQuest('d_FindVrata_Quest') end;  if IsQuestComplete('r1m3_FindHmirinSever') then TakeQuest('r1m4_TalkWithOldTraderAboutSecondDisk') end;  AddBook('r1_book_travel_kupchina2');  TActivate ('CARAVANTOR1M4');  EndConversation()" />
+		scriptResult="CompleteQuest('d_MoveCanistraToMinin_Quest');  if IsQuestComplete('d_TalkAboutVrataInMinin_Quest') then TakeQuest('MorskieVrata2_Quest');  TakeQuest('d_FindVrata_Quest') end;  AddBook('r1_book_travel_kupchina2');  TActivate ('CARAVANTOR1M4');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Наемный рабочий-->
 	<Reply
 		name="WorkerForMoney_hellodlg0"

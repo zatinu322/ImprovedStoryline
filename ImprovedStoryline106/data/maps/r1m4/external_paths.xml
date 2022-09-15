@@ -925,18 +925,6 @@
 	</Path>
 
 	<Path
-		Name="ReturnPath">
-		<Point
-			coord="2755.850 455.396" />
-
-		<Point
-			coord="2748.469 468.235" />
-
-		<Point
-			coord="2742.875 484.296" />
-	</Path>
-
-	<Path
 		Name="Rrybak_path">
 		<Point
 			coord="2486.432 2721.369" />

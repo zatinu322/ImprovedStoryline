@@ -872,8 +872,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 10
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 15
 
 			if IsQuestComplete("FigureOutWhatsGoingOn_Quest") and QuestStatus("d_CaravanFromTuzzToVillage_Quest")~=Q_TAKEN then 
 				ValidateGameVersion()
@@ -884,7 +885,7 @@
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
-					FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+					FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
 
 					TActivate ("RolikExitToMap22")
@@ -893,8 +894,9 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.5, 0, 35, 7, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
+
 				AddCinematicMessage( 8802, 0.5 )
 
 				TActivate ("RolikExitToMap22")
@@ -905,10 +907,12 @@
 	<trigger Name="RolikExitToMap22" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR2M2")), CVector(getPos("FromR2M2")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M2")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
-			trigger:Deactivate()    
+			trigger:Deactivate()
 		</script>
 	</trigger>
 	<trigger Name="RolikENDExitToMap22" active="0">
@@ -918,6 +922,7 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M2")))
+			RotationPlayerByPoints(CVector(getPos("ToR2M2")), CVector(getPos("FromR2M2")))
 
 			TDeactivate( "RolikExitToMap22" )
 
@@ -937,8 +942,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 10
 
 			if IsQuestTaken("d_GetAkselBandit_Quest") then 
 				ValidateGameVersion()
@@ -949,7 +955,7 @@
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
-					FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+					FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
 
 					TActivate ("RolikExitToMap22small")
@@ -958,8 +964,9 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.5, 0, 25, 9, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
+
 				AddCinematicMessage( 8803, 0.5 )
 
 				TActivate ("RolikExitToMap22small")
@@ -970,8 +977,10 @@
 	<trigger Name="RolikExitToMap22small" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR2M2small")), CVector(getPos("FromR2M2small")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M2small")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -983,6 +992,7 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M2small")))
+			RotationPlayerByPoints(CVector(getPos("ToR2M2small")), CVector(getPos("FromR2M2small")))
 
 			TDeactivate( "RolikExitToMap22small" )
 
@@ -1002,8 +1012,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 25
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 20
 
 			ValidateGameVersion()
 
@@ -1013,7 +1024,7 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.1, 0, -45, 3, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 				TActivate ("RolikExitToMap13")
@@ -1024,8 +1035,10 @@
 	<trigger Name="RolikExitToMap13" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR1M3")), CVector(getPos("FromR1M3")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -1037,8 +1050,9 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M3")))
+			RotationPlayerByPoints(CVector(getPos("ToR1M3")), CVector(getPos("FromR1M3")))
 
-			TDeactivate( "RolikExitToMap21" )
+			TDeactivate( "RolikExitToMap13" )
 
 			SetCameraBehindPlayerVehicle()
 
@@ -1056,8 +1070,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 5
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 25
 
 			ValidateGameVersion()
 
@@ -1067,7 +1082,7 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.1, 0, -45, 3, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 				TActivate ("RolikExitToMap31")
@@ -1078,8 +1093,10 @@
 	<trigger Name="RolikExitToMap31" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR3M1")), CVector(getPos("FromR3M1")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR3M1")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -1091,6 +1108,7 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR3M1")))
+			RotationPlayerByPoints(CVector(getPos("ToR3M1")), CVector(getPos("FromR3M1")))
 
 			TDeactivate( "RolikExitToMap31" )
 

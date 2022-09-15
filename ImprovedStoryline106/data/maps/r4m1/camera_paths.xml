@@ -69,27 +69,6 @@
 		<Point  coord="6509.371 275.117 3542.981" rotation="-0.014 -0.709 0.014 0.705"/>
 	</Path>
 
-
-	<Path Name = "ExitTo42Return">
-		<Point coord="7475.230 285.147 3653.854" rotation="-0.076 -0.062 0.005 0.995"/>
-		<Point coord="7475.230 285.147 3653.854" rotation="-0.077 0.325 -0.026 0.942"/>
-	</Path>
-
-	<Path Name = "ExitTo42Ok">
-		<Point  coord="7437.083 279.015 3691.363" rotation="0.001 -0.622 -0.001 0.783"/>
-	</Path>
-
-	<Path Name = "ExitTo11Return">
-		<Point  coord="3127.460 279.751 7451.502" rotation="-0.033 0.258 -0.009 0.966"/>
-		<Point  coord="3127.460 279.751 7451.502" rotation="-0.161 -0.452 0.083 0.874"/>
-	</Path>
-
-
-	<Path Name = "ExitTo11Ok">
-		<Point  coord="3119.839 283.629 7478.335" rotation="-0.043 0.276 -0.012 0.960"/>
-	</Path>
-
-
 	<Path Name = "FirstPriezd">
 		<Point coord="-15 3 15"/>
 		<Point coord="-15 5 -15"/>

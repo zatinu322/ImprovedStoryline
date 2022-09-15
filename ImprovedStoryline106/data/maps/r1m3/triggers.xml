@@ -735,6 +735,72 @@
 		</script>
 	</trigger>
 
+	<!-- Засада незнакомца из тоннеля, если мы украли у него диск -->
+	<trigger Name="trZasadaAR" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZasadaAR_loc" />
+		<script>
+			local stat = GetVar("ZasadaAR").AsInt
+			if stat==1 and IsQuestComplete("d_GetSupportOneOfTheBands1_Quest") then
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetCustomControlEnabled( true )
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+					vehPlayer:SetCustomControlEnabled( false )
+				end
+				
+				TActivate("RolikZasadaARStart")
+				
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="trZasadaAR_Delete" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local zas1 = GetEntityByName("ZasadaAR1")
+			local zas2 = GetEntityByName("ZasadaAR2")
+			if zas1 then
+				zas1:Remove()
+			end
+			
+			if zas2 then
+				zas2:Remove()
+			end
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trZasadaAR_Create" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local zas1 = GetEntityByName("ZasadaAR1")
+			local zas2 = GetEntityByName("ZasadaAR2")
+			if zas1 then
+				zas1:Remove()
+			end
+			
+			if zas2 then
+				zas2:Remove()
+			end
+			
+			TeamCreate("ZasadaARTeam",1015,CVector(1798.483, 279.056, 5487.830),{"Cruiser01", "CoolBelaz_2"})
+			
+			TActivate("trZasadaAR_Dead")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trZasadaAR_Dead" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ZasadaARTeam" />
+		<script>
+			SetTolerance(1100,1015,RS_ALLY)
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Встреча с Оракулом, который посылает нас в Сель -->
 	<trigger Name="TRIGGER_ORACLEABOTPLATE" active="1">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
@@ -840,8 +906,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 10
 
 			ValidateGameVersion()
 
@@ -852,7 +919,7 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 				TActivate ("RolikExitToMap11")
@@ -863,8 +930,10 @@
 	<trigger Name="RolikExitToMap11" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR1M1")), CVector(getPos("FromR1M1")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M1")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -876,6 +945,7 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M1")))
+			RotationPlayerByPoints(CVector(getPos("ToR1M1")), CVector(getPos("FromR1M1")))
 
 			TDeactivate( "RolikExitToMap11" )
 
@@ -895,32 +965,21 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x - 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 5
 
-			if IsQuestComplete("d_FindHouseOfBen_Quest") or IsQuestComplete("QuickFindBen") then 
-				ValidateGameVersion()
+			ValidateGameVersion()
 
-				local b = SpawnMessageBox( "8801" )
-				if b == 1 then
+			local b = SpawnMessageBox( "8801" )
+			if b == 1 then
 
-					PassToMap("r1m2", "FromR1M3", -1 )
-				else
-					SaveAllToleranceStatus(RS_NEUTRAL)
-
-					FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
-					StartCinematic()
-
-					TActivate ("RolikExitToMap12")
-					TActivate ("RolikENDExitToMap12")
-				end
+				PassToMap("r1m2", "FromR1M3", -1 )
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
-
-				AddCinematicMessage( 8802, 0.5 )
 
 				TActivate ("RolikExitToMap12")
 				TActivate ("RolikENDExitToMap12")
@@ -930,8 +989,10 @@
 	<trigger Name="RolikExitToMap12" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR1M2")), CVector(getPos("FromR1M2")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -943,6 +1004,7 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M2")))
+			RotationPlayerByPoints(CVector(getPos("ToR1M2")), CVector(getPos("FromR1M2")))
 
 			TDeactivate( "RolikExitToMap12" )
 
@@ -962,16 +1024,18 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
 
 			ValidateGameVersion()
 			
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
-				if IsQuestTaken("d_FindVrata_Quest") or IsQuestTaken("r1m4_TalkWithOldTraderAboutSecondDisk") then
+				if IsQuestTaken("d_FindVrata_Quest") then
 
 					PassToMap("r1m4", "FromR1M3", -1 )
+
 					local kar = GetEntityByName("KARAVAN14_vehicle_0")
 					if kar then kar:Remove() end
 					local hs = GetEntityByName ("FIRE01")
@@ -990,6 +1054,7 @@
 					if pavlo then pavlo:SetSpokenCount(1) end
 					local pogor = getObj("TheCircus")
 					if pogor then pogor:SetProperty("Active", 0) end
+
 					TDeactivate("TriggerFindCircus")
 				else
 					TActivate ("Ending35")
@@ -997,8 +1062,16 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
-				StartCinematic()
+				if IsQuestTaken("d_FindVrata_Quest") then
+					FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1)
+					StartCinematic()
+				else
+					FlyAround(0.5, 0, 25, 7, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					AddCinematicMessage(8802)
+				end
+
 				TActivate ("RolikExitToMap14")
 				TActivate ("RolikENDExitToMap14")
 			end
@@ -1008,8 +1081,10 @@
 	<trigger Name="RolikExitToMap14" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR1M4")), CVector(getPos("FromR1M4")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M4")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -1021,6 +1096,7 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR1M4")))
+			RotationPlayerByPoints(CVector(getPos("ToR1M4")), CVector(getPos("FromR1M4")))
 
 			TDeactivate( "RolikExitToMap14" )
 
@@ -1040,8 +1116,9 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 25*0.74
-			PlfCoor.z = PlfCoor.z + 25*0.74
+			PlfCoor.x = PlfCoor.x + 30
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 10
 
 			if IsQuestTaken("d_OpenTunel_Quest") then 
 				ValidateGameVersion()
@@ -1056,7 +1133,7 @@
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 
-					FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+					FlyAround(0.1, 0, -25, 3, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
 
 					TActivate ("RolikExitToMap21")
@@ -1065,7 +1142,7 @@
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.5, 0, -25, 9, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 				AddCinematicMessage( 8803, 0.5 )
@@ -1078,8 +1155,10 @@
 	<trigger Name="RolikExitToMap21" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			RotationPlayerByPoints(CVector(getPos("ToR2M1")), CVector(getPos("FromR2M1")))
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1")))
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
 
 			trigger:Deactivate()    
 		</script>
@@ -1091,77 +1170,12 @@
 			RestoreAllToleranceStatus()
 
 			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR2M1")))
+			RotationPlayerByPoints(CVector(getPos("ToR2M1")), CVector(getPos("FromR2M1")))
 
 			TDeactivate( "RolikExitToMap21" )
 
 			SetCameraBehindPlayerVehicle()
 
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<!-- Засада незнакомца из тоннеля, если мы украли у него диск -->
-	<trigger Name="trZasadaAR" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZasadaAR_loc" />
-		<script>
-			local stat = GetVar("ZasadaAR").AsInt
-			if stat==1 and IsQuestComplete("d_GetSupportOneOfTheBands1_Quest") then
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetCustomControlEnabled( true )
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-					vehPlayer:SetCustomControlEnabled( false )
-				end
-				
-				TActivate("RolikZasadaARStart")
-				
-				trigger:Deactivate()
-			end
-		</script>
-	</trigger>
-
-	<trigger Name="trZasadaAR_Delete" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local zas1 = GetEntityByName("ZasadaAR1")
-			local zas2 = GetEntityByName("ZasadaAR2")
-			if zas1 then
-				zas1:Remove()
-			end
-			
-			if zas2 then
-				zas2:Remove()
-			end
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trZasadaAR_Create" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			local zas1 = GetEntityByName("ZasadaAR1")
-			local zas2 = GetEntityByName("ZasadaAR2")
-			if zas1 then
-				zas1:Remove()
-			end
-			
-			if zas2 then
-				zas2:Remove()
-			end
-			
-			TeamCreate("ZasadaARTeam",1015,CVector(1798.483, 279.056, 5487.830),{"Cruiser01", "CoolBelaz_2"})
-			
-			TActivate("trZasadaAR_Dead")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trZasadaAR_Dead" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="ZasadaARTeam" />
-		<script>
-			SetTolerance(1100,1015,RS_ALLY)
 			trigger:Deactivate()
 		</script>
 	</trigger>

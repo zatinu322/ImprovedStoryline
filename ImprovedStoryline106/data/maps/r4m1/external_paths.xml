@@ -682,36 +682,6 @@
 	</Path>
 
 	<Path
-		Name="ExitTo11Ok">
-		<Point
-			coord="3091.602 7505.336" />
-
-		<Point
-			coord="3075.091 7532.311" />
-
-		<Point
-			coord="3065.570 7565.064" />
-
-		<Point
-			coord="3063.432 7598.792" />
-
-		<Point
-			coord="3073.845 7637.481" />
-	</Path>
-
-	<Path
-		Name="ExitTo42Ok">
-		<Point
-			coord="7504.752 3704.247" />
-
-		<Point
-			coord="7536.433 3715.296" />
-
-		<Point
-			coord="7566.010 3724.229" />
-	</Path>
-
-	<Path
 		Name="Gonka_1-2_L">
 		<Point
 			coord="3463.343 1428.842" />
@@ -4288,24 +4258,6 @@
 
 		<Point
 			coord="3373.208 7115.131" />
-	</Path>
-
-	<Path
-		Name="ReturnPathR1M1">
-		<Point
-			coord="3126.931 7474.900" />
-
-		<Point
-			coord="3140.977 7459.200" />
-	</Path>
-
-	<Path
-		Name="ReturnPathR4M2">
-		<Point
-			coord="7440.931 3693.357" />
-
-		<Point
-			coord="7410.738 3690.090" />
 	</Path>
 
 	<Path

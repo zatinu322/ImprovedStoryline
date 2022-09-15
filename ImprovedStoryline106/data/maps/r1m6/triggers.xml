@@ -701,33 +701,79 @@
 	<trigger Name="triggerExitToMap14" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M4" />
 		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.x = PlfCoor.x + 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 15
+
 			ValidateGameVersion()
 
 			local b = SpawnMessageBox( "8801" )
 			if b == 1 then
+
 				PassToMap("r1m4", "FromR1M6", -1 )
 				
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
 			else
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetGamePositionOnGround( CVector(271.465, 256.071, 1736.162))
-					vehPlayer:SetRotation(Quaternion(-0.000, 0.526, 0.000, 0.850))
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(0.1, 0, 35, 3, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap14")
+				TActivate ("RolikENDExitToMap14")
 			end
  		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap14" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap14" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(271.465, 256.071, 1736.162))
+				vehPlayer:SetRotation(Quaternion(-0.000, 0.526, 0.000, 0.850))
+			end
+
+			TDeactivate( "RolikExitToMap14" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
 	</trigger>
 
 	<!-- Переход в Горы Мудрецов -->
 	<trigger Name="triggerExitToMap15" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR1M5" />
 		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.x = PlfCoor.x + 15
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 15
+
 			ValidateGameVersion()
 
 			local b = SpawnMessageBox( "8801" )
@@ -740,25 +786,49 @@
 				
 				PassToMap("r1m5", "FromR1M6", -1 )
 				
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
-				
 				if QuestStatus("GoToMudrec2")==Q_TAKEN or QuestStatus("GoToMudr_Quest2")==Q_TAKEN then
 					CompleteQuestIfTaken("GoToMudrec2")
 					CompleteQuestIfTaken("GoToMudr_Quest2")
 				end
 			else
-				local vehPlayer = GetPlayerVehicle()
-				if vehPlayer then
-					vehPlayer:SetGamePositionOnGround( CVector(3768.328, 259.453, 3779.808))
-					vehPlayer:SetRotation(Quaternion(-0.026, 0.920, -0.061, -0.386))
-					vehPlayer:SetCustomLinearVelocity( 0 )
-					vehPlayer:SetThrottle( 0 )
-				end
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap15")
+				TActivate ("RolikENDExitToMap15")
 			end
  		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap15" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			trigger:Deactivate()    
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap15" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(3768.328, 259.453, 3779.808))
+				vehPlayer:SetRotation(Quaternion(-0.026, 0.920, -0.061, -0.386))
+			end
+
+			TDeactivate( "RolikExitToMap15" )
+
+			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
 	</trigger>
 </triggers>

@@ -986,7 +986,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="any taken"
-		PrecedingQuests="r4m1_GotoAivenGo r4m1_FindMilitaryBase"
+		PrecedingQuests="r4m1_GotoAivenGo"
 		OnComplete="AddPlayerMoney(100000)" />
 
 	<quest
@@ -1056,7 +1056,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="any taken"
-		PrecedingQuests="r3m2_FindInfoAboutFather r3m2_RevengeDestroyVillage"
+		PrecedingQuests="r3m2_FindInfoAboutFather"
 		OnComplete="AddPlayerMoney(5000)"
 		OnTake='ShowCircleOnMinimapByName("TheGadad")' />
 
@@ -1176,15 +1176,6 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r4m1_KNO_ReportToKef"
 		OnTake='ShowCircleOnMinimapByName("ToR4M2");AddFadingMsgId( "fm_take_quest" )' />
-
-	<quest
-		Name="r4m1_FindMilitaryBase"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="r4m1_KNO_ReportToKef"
-		OnTake='ShowCircleOnMinimapBName("ToR4M2");AddFadingMsgId( "fm_take_quest" )' />
 
 	<quest
 		Name="r4m1_LisaGadad"
@@ -1481,15 +1472,6 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(40000)" />
-
-	<quest
-		Name="r3m2_RevengeDestroyVillage"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="r3m1_FindNative r3m2_ReadyToTravel"
 		OnComplete="AddPlayerMoney(40000)" />
 <!--Root/r3m1/ сюжетные-->
 	<quest

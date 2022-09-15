@@ -746,7 +746,7 @@
 
 	<!-- Тупиковые концовки с мёртвым мэром и ранним переходом в Хель -->
 	<trigger Name="Ending35" active="0">
-		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			
 			PlayCustomMusic("IntenseDialogue03")

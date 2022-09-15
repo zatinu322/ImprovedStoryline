@@ -880,15 +880,6 @@
 	</Path>
 
 	<Path
-		Name="ReturnPathR3M1">
-		<Point
-			coord="2899.089 189.593" />
-
-		<Point
-			coord="2880.997 182.527" />
-	</Path>
-
-	<Path
 		Name="playerOracleDefPath">
 		<Point
 			coord="1430.020 2773.388" />

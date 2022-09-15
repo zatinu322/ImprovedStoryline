@@ -1046,49 +1046,9 @@
 
 			RestoreAllToleranceStatus()
 
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<!-- Ролик при отказе от переезда в Рощу Друидов -->
-	<trigger	Name="cinExit31ReturnFirst"	active="0">
-		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			EnableGodMode()
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate("cinExit31Return_FadeIn")
-			TActivate("cinExit31Return_End")
-
-			Fly("ExitTo31Return", CINEMATIC_NO_AIM, nil, 4, 1,1)
-			StartCinematic()
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger	Name="cinExit31Return_FadeIn"	active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			GetPlayerVehicle():SetGamePositionOnGround(CVector(2893.049, 269.876, 186.546))
-			GetPlayerVehicle():SetRotation(Quaternion(-0.077, -0.800, -0.013, 0.595))
-			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger	Name="cinExit31Return_End"	active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			DisableGodMode()
-			RestoreAllToleranceStatus()
-			GetPlayerVehicle():SetExternalPathByName("ReturnPathR3M1")
-			GetPlayerVehicle():PlaceToEndOfPath("ReturnPathR3M1")
 			SetCameraBehindPlayerVehicle()
+
 			trigger:Deactivate()
 		</script>
-	</trigger>
- 
+	</trigger> 
 </triggers>

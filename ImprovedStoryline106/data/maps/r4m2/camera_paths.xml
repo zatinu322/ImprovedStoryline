@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
-	<Path Name = "ExitTo41Return">
-		<Point  coord="563.674 302.971 3218.489" rotation="-0.116 -0.301 0.037 0.946"/>
-	</Path>
-
-	<Path Name = "ExitTo41Ok">
-		<Point  coord="619.276 302.075 3211.128" rotation="-0.052 0.273 -0.015 0.960"/>
-	</Path>
-
-
 	<Path Name = "NearBase">
 		<Point  coord="1916.104 327.118 1115.399" rotation="-0.030 -0.722 0.031 0.690"/>
 		<Point  coord="2004.453 359.134 1134.352" rotation="-0.089 -0.718 0.093 0.684"/>

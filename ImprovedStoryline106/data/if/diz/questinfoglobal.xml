@@ -5230,40 +5230,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r3m2_RevengeDestroyVillage"
-		briefDiz="Отомстить за уничтожение деревни"
-		fullDiz="Дневник Айвена Го действительно содержал чертёж устройства, с помощью которого можно пересечь пустыню смерти. Теперь я выслежу и накажу тех, кто разрушил мою деревню!"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="ToR4M1" />
-
-		<Map
-			name="r1m2"
-			targetObjName="ToR1M1" />
-
-		<Map
-			name="r1m3"
-			targetObjName="ToR1M2" />
-
-		<Map
-			name="r1m4"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r2m1"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r3m1"
-			targetObjName="ToR2M1" />
-
-		<Map
-			name="r3m2"
-			targetObjName="ToR3M1" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r3m2_RideToFatherRoomAfterOracul"
 		briefDiz="Вернуться в дом отца"
 		fullDiz="Возможно, второй диск находится в доме отца. Я мог пропустить что-то, когда был там в первый раз, но теперь-то я точно знаю, что искать."
@@ -5455,31 +5421,6 @@
 		isMainQuest="1">
 		<Map
 			name="r4m1" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r4m1_FindMilitaryBase"
-		briefDiz="Найти базу бандитов"
-		fullDiz="Мне известно только примерное направление на эту базу. Но я уверен, что смогу легко найти это место и наказать убийц моего отца!"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="ToR4M1" />
-
-		<Map
-			name="r1m2"
-			targetObjName="ToR1M1" />
-
-		<Map
-			name="r1m3"
-			targetObjName="ToR1M2" />
-
-		<Map
-			name="r4m1"
-			targetObjName="ToR4M2" />
-
-		<Map
-			name="r4m2" />
 	</QuestInfo>
 
 	<QuestInfo

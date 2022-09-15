@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
-		Name="ExitTo41Ok">
-		<Point
-			coord="574.734 3277.099" />
-
-		<Point
-			coord="559.885 3308.054" />
-
-		<Point
-			coord="548.465 3341.249" />
-	</Path>
-
-	<Path
 		Name="HelpMens1_path1">
 		<Point
 			coord="2594.590 1309.552" />
@@ -436,15 +424,6 @@
 
 		<Point
 			coord="3278.966 1933.025" />
-	</Path>
-
-	<Path
-		Name="ReturnPathR4M1">
-		<Point
-			coord="589.598 3251.288" />
-
-		<Point
-			coord="602.518 3234.875" />
 	</Path>
 
 	<Path

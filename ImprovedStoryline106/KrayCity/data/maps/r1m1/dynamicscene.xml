@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="4599">
+	LastId="4600">
 	<TargetNamesForDestroy
 		Names="u1 u2 u3 u4 u5 u6 u7 u8 u9" />
 
@@ -1181,8 +1181,8 @@
 			Name="TheFreedom_enter"
 			Belong="1008"
 			Prototype="genericLocation"
-			Pos="3188.756 319.981 1238.609"
-			Radius="72.445"
+			Pos="3214.099 319.999 1219.303"
+			Radius="37.445"
 			LookingTimeOut="10.000" />
 
 		<Object
@@ -52014,4 +52014,11 @@
 			PostTiePos="3220.043 325.327 1144.675"
 			LpName="LP_PART02" />
 	</Object>
+
+	<Object
+		Name="FelixGangNearFreedom_Loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2785.455 340.490 1284.689"
+		Radius="129.000" />
 </DynamicScene>

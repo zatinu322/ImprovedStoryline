@@ -109,7 +109,7 @@
 	<trigger Name="trNachRolikCam3" active="0">
 		<event flypath="NachRolikCam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 
 			AddCinematicMessage( 8, 5 )
 

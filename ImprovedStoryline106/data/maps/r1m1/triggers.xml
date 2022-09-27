@@ -6,6 +6,8 @@
 		<script>
 		    SetVar("FelixRevenge",0)
 		    SetVar("FelixChoise",0)
+			SetVar("DrunkRide", 0)
+			SetVar("AutoSaveCount", 0)
 			if ISL_VERSION then SetVar("ISLVersion", ISL_VERSION) end
 
 			if getObj("Ruin") then
@@ -17,6 +19,19 @@
 			end
 
 		    trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Автосохранение -->
+	<trigger Name="trAutoSave" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("AutoSaveCount").AsInt == 0 then
+				SetVar("AutoSaveCount", 1)
+				AutoSave()
+			end
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -744,16 +759,84 @@
 		<script>
 			TeamCreate("Punishers",1051,CVector(3168, 319, 1144),{"PetroBug","NazarBug"},CVector(2845,330,1333), 1)
 
-			local terr = TeamCreate("Terrorists",1013,CVector(2845,336,1319),{"Fighter01","r1m1_bug02","Scout03"}, nil, 1)
+			local terr = TeamCreate("Terrorists",1013,CVector(2845,336,1319),{"Fighter01","DemoHunter1","Scout03"}, nil, 1)
 			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
 			terr:_AdjustBehaviour ()
 
 			TakeQuest( "d_PunishBandits_Quest" )
 
+			AllowSave(false)
+
+			local towns = {"TheOilVillage", "TheContraVillage", "TheFreedom", "Ruin", "Kolhoz", "TheTown"}
+			for ent = 1, 5 do
+				local entry = GetEntityByName(towns[ent].."_enter")
+				if entry then entry:SetProperty("Active", 0) end
+			end
+
+			for i=3,4 do
+				local zone = GetEntityByName("InfectionZone"..i)
+				if zone then zone:SetProperty("Belong", 1008) end
+			end
+
 			TActivate("REVOLUTIONTIMEEND")
 			TActivate("REVOLUTIONTIMEDEAD")
+			TActivate("PlayerDrunkBehaviour")
+			TActivate("PlayerDrunkBehaviourInPlace")
+			TActivate("trAutoSave")
 
 			trigger:Deactivate()    
+		</script>
+	</trigger>
+
+	<trigger Name="PlayerDrunkBehaviour" active="0">
+		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
+		<script>
+			RuleConsole("g_postEffect PlayerDrunkStart")
+
+			AllowSave(false)
+
+			if GetVar("DrunkRide").AsInt == 0 then
+				local Plf = GetPlayerVehicle()
+				local drunk = random(1000)
+
+				if drunk > 500 then
+					local side = random(1000)
+					if side > 500 then
+						Plf:SetExternalPathByName("PlayerDrunkSide_path01")
+					else
+						Plf:SetExternalPathByName("PlayerDrunkSide_path02")
+					end
+
+					TActivate("PlayerDrunkBehaviourOff")
+
+					trigger:Deactivate()
+				end
+			else
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="PlayerDrunkBehaviourOff" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetExternalPathByName("")
+
+			if QuestStatus("d_PunishBandits_Quest")==Q_TAKEN then
+				TActivate("PlayerDrunkBehaviour")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="PlayerDrunkBehaviourInPlace" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixGangNearFreedom_Loc" />
+		<script>
+			SetVar("DrunkRide", 1)
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -761,8 +844,9 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="Punishers" />
 		<script>
 			FailQuest("d_PunishBandits_Quest")
-			AddImportantFadingMsg( "Петро погиб. Теперь вам не стоит расчитывать на награду." )
-			TDeactivate("REVOLUTIONTIMEEND")
+
+			AddImportantFadingMsgId("fm_petro_death")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -774,7 +858,25 @@
 				local punish = getObj("Punishers_vehicle_"..i)
 				if punish then punish:Remove() end
 			end
-			
+
+			AllowSave(true)
+
+			RuleConsole("g_postEffect cinematicEnd")
+
+			local towns = {"TheOilVillage", "TheContraVillage", "TheFreedom", "Ruin", "Kolhoz", "TheTown"}
+			for ent = 1, 5 do
+				local entry = GetEntityByName(towns[ent].."_enter")
+				if entry then entry:SetProperty("Active", 1) end
+			end
+
+			local zone1 = GetEntityByName("InfectionZone3")
+			if zone1 then zone1:SetProperty("Belong", 1005) end
+
+			local zone2 = GetEntityByName("InfectionZone4")
+			if zone2 then zone2:SetProperty("Belong", 1002) end
+
+			SetVar("DrunkRide", 1)
+
 			trigger:Deactivate()    
 		</script>
 	</trigger>

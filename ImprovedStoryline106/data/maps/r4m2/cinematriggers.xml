@@ -149,7 +149,7 @@
 	<trigger	Name="cinHelpers_FadeIn"	active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 			
 			local veh = CreateVehicleEx("r1m2_hunter02","Sergo",CVector(2567.135, 312.267, 1257.607), 1062, Quaternion(0.027, -0.879, 0.054, 0.473))
 			if veh then

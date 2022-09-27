@@ -9,7 +9,7 @@
 
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 
 			TActivate("cinWentOracleDef_FadeIn")
 			TActivate("cinWentOracleDef_End")
@@ -199,7 +199,7 @@
 			TActivate("cinNearMonster_FadeIn")
 			TActivate("cinNearMonster_End")
 
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 
 			Fly("NearMonster_Path1", CINEMATIC_NO_AIM, nil, 16.5, 1,1)
 			StartCinematic()
@@ -903,7 +903,7 @@
 	<trigger Name="cin_FanatikRage" active="0">
 		<event flypath="FanatikPriehal2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 
 			local zashitt = GetEntityByName("OracleDefenders")
 			

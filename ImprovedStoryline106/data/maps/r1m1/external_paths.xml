@@ -175,6 +175,18 @@
 	</Path>
 
 	<Path
+		Name="PlayerDrunkSide_path01">
+		<Point
+			coord="2946.047 204.520" />
+	</Path>
+
+	<Path
+		Name="PlayerDrunkSide_path02">
+		<Point
+			coord="2566.747 1661.953" />
+	</Path>
+
+	<Path
 		Name="PlayerPathAiven">
 		<Point
 			coord="2710.477 2292.893" />

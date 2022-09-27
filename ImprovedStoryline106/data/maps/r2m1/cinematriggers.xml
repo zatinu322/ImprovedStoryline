@@ -2006,7 +2006,7 @@
 			
 			elseif QuestStatus("r2m1_DestroyAlienShip")==Q_TAKEN then
 
-				PlayCustomMusic("IntenseDialogue01")
+				PlayCustomMusic("IntenseDialogue05")
 
 				CreateNewDummyObject( "boss04dronegun", "Droid", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(-0.043, -0.927, -0.115, 0.356), 0)
 				CreateNewDummyObject( "boss04drone", "Droid0", -1, -1, CVector(1282.018, 523.862, 1646.997), Quaternion(-0.043, -0.927, -0.115, 0.356), 0)

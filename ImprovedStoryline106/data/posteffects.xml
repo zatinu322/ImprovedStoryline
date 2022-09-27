@@ -2383,6 +2383,108 @@
 	</Model>
 
 	<Model
+		Name="PlayerDrunk">
+		<Unit
+			VarName="Bloom"
+			InitVal="1.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="BloomWidth"
+			InitVal="30.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="BloomOrigTerm"
+			InitVal="0.520"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="BloomBlurTerm"
+			InitVal="1.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="BloomThreshold"
+			InitVal="0.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="BloomIntensity"
+			InitVal="0.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="Sepia"
+			InitVal="1.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="SepiaIntensity"
+			InitVal="0.110"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="SepiaColorR"
+			InitVal="1.000"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="SepiaColorG"
+			InitVal="0.190"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+
+		<Unit
+			VarName="SepiaColorB"
+			InitVal="0.030"
+			Param1="0"
+			Param2="0"
+			Param3="0"
+			Param4="0"
+			Action="none" />
+	</Model>
+
+	<Model
 		Name="cinematicEnd">
 		<Unit
 			VarName="Bloom"
@@ -2524,6 +2626,13 @@
 		Loop="false">
 		<Unit
 			Name="cinematicEnd" />
+	</Sequence>
+
+	<Sequence
+		Name="PlayerDrunkStart"
+		Loop="false">
+		<Unit
+			Name="PlayerDrunk" />
 	</Sequence>
 
 	<Model

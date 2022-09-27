@@ -809,7 +809,7 @@
 	<trigger Name="RolikBegin_FATHERHOUSERETURN" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -2652,7 +2652,7 @@
 		<event flypath="LOPCam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 			
 			local vehK = GetEntityByName("KartoshVeh")
 			if vehK then vehK:Remove() end

@@ -387,7 +387,7 @@
 		<event flypath="VRRolikCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			
-			PlayCustomMusic("IntenseDialogue01")
+			PlayCustomMusic("IntenseDialogue05")
 						
 			AddCinematicMessage( 11, 1 )
 			

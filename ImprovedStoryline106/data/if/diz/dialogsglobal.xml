@@ -17120,7 +17120,7 @@
 		name="Dlg_pl_001497"
 		text="Готов как никогда! Поехали!"
 		role="PLAYER"
-		scriptResult="TActivate('REVOLUTIONTIME'); EndConversation()" />
+		scriptResult="TActivate('PlayerDrunkFirst'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_npc_001498"

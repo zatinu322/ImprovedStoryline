@@ -4064,7 +4064,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(100)"
-		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD"); TActivate("REVOLUTIONTIMEREMOVE")'
+		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD"); TActivate("REVOLUTIONTIMEREMOVE"); TDeactivate("PlayerDrunkBehaviour"); TDeactivate("PlayerDrunkBehaviourInPlace")'
 		OnTake='ShowCircleOnMinimapByName("RevolutionTimeEndLoc")'
 		Levels="r1m1" />
 

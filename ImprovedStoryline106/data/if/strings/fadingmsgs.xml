@@ -219,4 +219,16 @@
 	<string
 		id="fm_wrong_game_version"
 		value="@FFFF0000Вы используете устаревший билд: %1p" />
+
+	<string
+		id="fm_petro_death"
+		value="Петро погиб. Теперь вам не стоит расчитывать на награду." />
+
+	<string
+		id="fm_mr_shlyapa_on"
+		value="Мистер Шляпа включен." />
+
+	<string
+		id="fm_mr_shlyapa_off"
+		value="Мистер Шляпа отключен." />
 </resource>

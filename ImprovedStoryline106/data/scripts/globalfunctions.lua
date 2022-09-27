@@ -26,7 +26,7 @@ function println( s )
 	if g_Console == nil then
 		LOG( s )
 	else
-		g_Console:PrintF( tostring(s).."\n\n" )
+		g_Console:PrintF( "\n"..tostring(s).."\n" )
 	end
 end
 

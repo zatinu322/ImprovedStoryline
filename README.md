@@ -7,7 +7,9 @@
 
 Версия для Community Remaster - TBD
 # Установка
-Скачать мод можно через зелёную кнопку **Code - Download ZIP**.
+~~Скачать мод можно через зелёную кнопку **Code - Download ZIP**.~~
+
+**Скачивайте актуальный билд в [релизах](https://github.com/zatinu322/ImprovedStoryline/releases)!**
 ## 1 способ (на чистую игру)
 1. Создать в корневой папке с игрой папку mods, скопировать туда папку ImprovedStoryline106.
 2. Установить [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch). После завершения установки патча, установщик должен предложить установить обнаруженные моды.

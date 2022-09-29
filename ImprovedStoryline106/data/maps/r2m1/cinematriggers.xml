@@ -559,7 +559,7 @@
 			
 			CreateVehicleEx("r1m2_hunter02","OdettCar",CVector(3907.163, 280.141, 2785.892), 1083)
 
-			CreateVehicleEx("r1m2_CaravanBug01","FirstB_1",CVector(4078.927, 280.560, 2840.551), 1016)
+			CreateVehicleEx("r1m2_CaravanBug02","FirstB_1",CVector(4078.927, 280.560, 2840.551), 1016)
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then

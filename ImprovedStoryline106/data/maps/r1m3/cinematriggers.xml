@@ -373,6 +373,7 @@
 			CompleteQuest( "d_DriveBanditFromOilMine_Quest" )
 
 			SetTolerance( 1100, 1047, RS_NEUTRAL )
+			SetTolerance(1100, 1044, RS_NEUTRAL)
 
 			CreateVehicleEx("DemoBandit", "vehicleRunner", CVector(7006.653, 258.253, 7163.328), 1044)
 			CreateNewDummyObject( "brick_debris1", "CamTochka", -1, -1, CVector(6931.543, 280.175, 7110.825), Quaternion(0, 0, 0, 0), 1)
@@ -460,7 +461,7 @@
 		</script>
 	</trigger>
 
-	<!-- Провал слежки за бандитов с нефтяной вышки -->
+	<!-- Провал слежки за бандитом с нефтяной вышки -->
 	<trigger Name="RUNTORUNER_cp" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
@@ -2888,6 +2889,83 @@
 
 			getObj("Pesht"):SetBelong(1011)
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Катсцены на кладбище -->
+	<trigger Name="CemeteryCutscenesActivation_1" active="0">
+		<event	timeout="7"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local cem = GetVar("Cemetery").AsInt
+			if GetVar("Cemetery").AsInt == 0 then
+				SetVar("Cemetery", 1)
+
+				Fly("cemetery_cam01", CINEMATIC_NO_AIM, 0, 2, 0, 0, 0)	
+			elseif GetVar("Cemetery").AsInt == 1 then
+				SetVar("Cemetery", 2)
+
+				Fly("cemetery_cam02", CINEMATIC_NO_AIM, 0, 2, 0, 0, 0)
+			end
+				StartCinematic()
+
+				TActivate("CemeteryCutscenesEnd")
+
+				RuleConsole("g_postEffect DamageWater")
+
+				trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="CemeteryCutscenesActivation_2" active="0">
+		<event	timeout="7"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local cem = GetVar("Cemetery").AsInt
+			if cem == 2 then
+				SetVar("Cemetery", 3)
+
+				Fly("cemetery_cam03", CINEMATIC_NO_AIM, 0, 2, 0, 0, 0)
+				StartCinematic()
+
+				TActivate("CemeteryCutscenesEnd")
+
+				RuleConsole("g_postEffect DamageWater")
+
+				trigger:Deactivate()
+			elseif cem == 3 then
+				SetVar("Cemetery", 4)
+
+				Fly("cemetery_cam04", CINEMATIC_NO_AIM, 0, 2, 0, 0, 0)
+				StartCinematic()
+
+				TActivate("CemeteryCutscenesEnd")
+
+				RuleConsole("g_postEffect DamageWater")
+
+				trigger:Deactivate()
+			elseif cem == 4 then
+
+				RuleConsole("g_postEffect DamagePiercing")
+
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="CemeteryCutscenesEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			SetCameraBehindPlayerVehicle()
+
+			RuleConsole("g_postEffect DamageWater")
+
+			local cem = GetVar("Cemetery").AsInt
+			if 2 > cem then
+				TActivate("CemeteryCutscenesActivation_1")
+			elseif cem >= 2 then
+				TActivate("CemeteryCutscenesActivation_2")
+			end
 			trigger:Deactivate()
 		</script>
 	</trigger>

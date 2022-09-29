@@ -1856,7 +1856,6 @@
 			if vehFelix0 then vehFelix0:Remove() end
 
 			TDeactivate( "RolikBegin_Felix1" )
-			TDeactivate( "trFelix1_Msg3")
 			TDeactivate( "trFelix1" )
 			TDeactivate( "trFelix1_cam02" )
 			TDeactivate( "trFelix1_cam03" )

@@ -294,4 +294,9 @@ $Id: Relationship.xml,v 1.19 2005/11/24 09:45:17 anton Exp $
 			who="1002 1005 1009 1003 1004 1008 1042 "
 			tolerance="neutral" />
 
+		<set
+			forwhom="1034"
+			who="1002 1005 1020 1063"
+			tolerance="neutral" />
+
 </relationship>

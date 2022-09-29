@@ -20932,4 +20932,14 @@
 		id="berth"
 		ndmAction="0"
 		CastShadow="no" />
+	
+	<Node
+		name="FilimonsElka"
+		class="SgAnimatedModelNode"
+		org="3874.981 0.000 925.486"
+		orgRel="1"
+		rot="0.000 0.292 0.000 0.956"
+		scale="0.800 0.800 0.800"
+		id="elka1"
+		ndmAction="0" />
 </World>

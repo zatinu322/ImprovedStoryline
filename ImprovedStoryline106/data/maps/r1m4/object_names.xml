@@ -25,6 +25,10 @@
 		FullName="Мистер Шляпа" />
 
 	<Object
+		Name="MrShlyapaEmpty"
+		FullName=" " />
+
+	<Object
 		Name="Olme_Bar_Customer2"
 		FullName="Галден" />
 	<Object

@@ -5186,7 +5186,7 @@
 		name="Uluc_Bar_Customer1_2_P04"
 		text="Не смею более задерживать. Прощай. "
 		role="PLAYER"
-		scriptResult="SetTolerance(1100, 1020, RS_ALLY); EndConversation()" />
+		scriptResult="SetTolerance(1100, 1020, RS_ALLY); TActivate('trInfectionChange'); EndConversation()" />
 
 	<Reply
 		name="Set_Bar_MainDruid_5_N01"
@@ -5654,7 +5654,7 @@
 		name="Dlg_pl_003244"
 		text="Ты сам напросился, старик!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate('UlukBattle'); LeaveTown(true)" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate('PreUlukBattle'); LeaveTown()" />
 
 	<Reply
 		name="Uluk_Hram_Zrec_1_N04"
@@ -8622,7 +8622,7 @@
 		name="Dlg_npc_002623"
 		text="Опять ты! Надеюсь, ты не для того весь этот долгий путь проделал, чтобы те деньги из меня выбить?"
 		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and IsQuestComplete('WorkGiver_Quest1') and GetCurNpc():GetSpokenCount() == 0   "
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and IsQuestComplete('WorkGiver_Quest1') and GetCurNpc():GetSpokenCount() == 0 and GetVar('FarmerDickRejection').AsInt==0    "
 		nextReplies="Dlg_pl_002624" />
 
 	<Reply
@@ -8635,7 +8635,7 @@
 		name="Dlg_npc_002625"
 		text="Тебе чего надо?"
 		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and not(IsQuestComplete('WorkGiver_Quest1')) and GetCurNpc():GetSpokenCount() == 0  "
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and not(IsQuestComplete('WorkGiver_Quest1')) and GetCurNpc():GetSpokenCount() == 0 and GetVar('FarmerDickRejection').AsInt==0"
 		nextReplies="Dlg_pl_002626" />
 
 	<Reply
@@ -8682,15 +8682,15 @@
 
 	<Reply
 		name="Dlg_npc_002675"
-		text="Значит, Аллушка сегодня своего муженька не увидит."
+		text="Эвон оно как! Ну, значит, Аллушка сегодня своего муженька не увидит."
 		role="NPC"
 		nextReplies="Dlg_pl_002676" />
 
 	<Reply
 		name="Dlg_pl_002676"
-		text="Пусть сама его ищет, я умываю руки."
+		text="Это мы ещё посмотрим."
 		role="PLAYER"
-		scriptResult="FailQuest('q_FindHusbent'); EndConversation();" />
+		scriptResult="SetVar('FarmerDickRejection',1) EndConversation();" />
 
 	<Reply
 		name="Dlg_pl_002673"
@@ -8783,7 +8783,7 @@
 		name="Dlg_npc_002689"
 		text="Ну что, теперь готов меня угостить?"
 		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetCurNpc():GetSpokenCount() > 0   "
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetCurNpc():GetSpokenCount() > 0"
 		nextReplies="Dlg_pl_002690 Dlg_pl_002691" />
 
 	<Reply
@@ -8848,6 +8848,57 @@
 		text="Обязательно. Веришь или нет, но смерть не входит в мои планы на ближайшее время."
 		role="PLAYER"
 		scriptResult="if CanQuestBeGiven('r1m4_OvercomeMirras') then TakeQuest('r1m4_OvercomeMirras') end; CompleteQuest('r1m3_FindVrata_KnowPlace'); TDeactivate('BolotoChoice'); TActivate('trMorassTeleportBefore'); CompleteQuest('FindGomerNearBereg_Quest2'); RemoveQuestItem('Homer_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'Homer_P') EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003288"
+		text="Ну что там с Филимоном? Ха-ха-ха!"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetVar('FarmerDickRejection').AsInt==1"
+		nextReplies="Dlg_pl_003289 Dlg_pl_003290" />
+
+	<Reply
+		name="Dlg_pl_003290"
+		text="Тебя не касается!"
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003289"
+		text="Я в тупике..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003291" />
+
+	<Reply
+		name="Dlg_npc_003291"
+		text="А я говорил, что сам не найдёшь! Сколько я там просил, кажется, 700 монет? Забудь. Новая цена - 1500."
+		role="NPC"
+		nextReplies="Dlg_pl_003292" />
+
+	<Reply
+		name="Dlg_pl_003292"
+		text="Сколько?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003293" />
+
+	<Reply
+		name="Dlg_npc_003293"
+		text="А это чтобы не выпендривался лишний раз. Хочешь найти Филимона - плати. Нет - знаешь, где выход."
+		role="NPC"
+		nextReplies="Dlg_pl_003294 Dlg_pl_003295" />
+
+	<Reply
+		name="Dlg_pl_003295"
+		text="Ну уж нет, счастливо оставаться! С такими-то ценами."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003294"
+		text="Эх, что ещё остаётся... Вот, держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() > 1500"
+		scriptResult="AddPlayerMoney(-1500)"
+		nextReplies="Dlg_npc_002683" />
 <!--Root/r1m4/В Ольме-->
 	<Reply
 		name="Olme_Bar_Customer1_1_N01"
@@ -8927,7 +8978,7 @@
 		name="r1m4_UnknownBar_Customer1_1_N01"
 		text="Чего надо?"
 		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		scriptCondition="QuestStatus('FindGomerA_Quest1')==Q_TAKEN and GetCurNpc():GetSpokenCount()==0"
 		nextReplies="r1m4_UnknownBar_Customer1_1_P02" />
 
 	<Reply
@@ -9282,7 +9333,31 @@
 
 	<Reply
 		name="Dlg_pl_001938"
-		text="Не кричи, уже ухожу."
+		text="Ты продаёшь рыбу в посёлке возле самого океана? Зачем? Да тут каждый второй житель - рыбак."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003276" />
+
+	<Reply
+		name="Dlg_npc_003276"
+		text="Но-но! Я бы попросил! Не каждый второй, а каждый первый. И почему ты всё ещё здесь? Покупателей мне только распугиваешь!"
+		role="NPC"
+		nextReplies="Dlg_pl_003277" />
+
+	<Reply
+		name="Dlg_pl_003277"
+		text="Каких покупателей? Здесь нет никого. Зачем вообще другим рыбакам твоя рыба, если они могут наловить себе сами?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003285" />
+
+	<Reply
+		name="Dlg_npc_003285"
+		text="Так ты всех распугал, потому и нет никого. Всё, надоел мне этот трёп, иди доставай кого-нибудь другого!"
+		role="NPC"
+		nextReplies="Dlg_pl_003287" />
+
+	<Reply
+		name="Dlg_pl_003287"
+		text="Ладно-ладно..."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
@@ -9340,14 +9415,14 @@
 		name="Dlg_npc_002971"
 		text="Вот мы и на месте. Спасибо, что подбросил, с меня причитается. "
 		role="NPC"
-		scriptCondition="QuestStatus('RybakToOlm_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 1"
+		scriptCondition="QuestStatus('RybakToOlm_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_002972" />
 
 	<Reply
 		name="Dlg_pl_002972"
 		text="Удачи в поисках работы!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(2); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 <!--Root/r1m4/Поиски гомера-->
 	<Reply
 		name="r1m4_RandomBar_Customer1_1_N01"
@@ -9962,7 +10037,8 @@
 		name="r1m4_SomeWhere_Husbent1_1_N01"
 		text="Что ты хочешь от меня, мил человек?"
 		role="NPC"
-		scriptCondition="QuestStatus('q_FH3')==Q_TAKEN"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN or QuestStatus('q_FH3')==Q_TAKEN"
+		scriptResult="CompleteQuestIfTaken('q_FH1'); if QuestStatus('q_FH3')~=Q_TAKEN then TakeQuest('q_FH3') end"
 		nextReplies="r1m4_SomeWhere_Husbent1_1_N02" />
 
 	<Reply
@@ -10017,7 +10093,7 @@
 		name="r1m4_SomeWhere_Husbent1_1_N10b"
 		text="Вот и ладненько."
 		role="PLAYER"
-		scriptResult="CompleteQuest('q_FH3'); TakeQuest('q_FH2'); AddQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Filimon_P'); EndConversation()" />
+		scriptResult="CompleteQuestIfTaken('q_FH3'); TakeQuest('q_FH2'); AddQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Filimon_P'); EndConversation()" />
 
 	<Reply
 		name="r1m4_SomeWhere_Husbent1_1_N08a"
@@ -10027,7 +10103,7 @@
 
 	<Reply
 		name="r1m4_SomeWhere_Husbent1_1_N09a"
-		text="700 монет тебя устроит?"
+		text="500 монет тебя устроит?"
 		role="NPC"
 		nextReplies="r1m4_SomeWhere_Husbent1_1_N10a" />
 
@@ -10035,7 +10111,7 @@
 		name="r1m4_SomeWhere_Husbent1_1_N10a"
 		text="Я большего от тебя и не ждал. Давай сюда."
 		role="PLAYER"
-		scriptResult="CompleteQuest('q_FH3'); AddPlayerMoney(700); FailQuest('q_FindHusbent'); EndConversation()" />
+		scriptResult="CompleteQuestIfTaken('q_FH3'); AddPlayerMoney(500); FailQuest('q_FindHusbent'); EndConversation()" />
 
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_2_N01"
@@ -10089,7 +10165,7 @@
 		name="Dlg_npc_001952"
 		text="Рад тебя видеть. Снова."
 		role="NPC"
-		scriptCondition="IsQuestComplete('FindGomerA_Quest1') and IsQuestComplete('MrShlyapa1_Quest') and GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('r3m1_GoToOracle')==Q_COMPLETED)"
+		scriptCondition="IsQuestComplete('FindGomerNearBereg_Quest2') and IsQuestComplete('MrShlyapa1_Quest') and GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('r3m1_GoToOracle')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001970" />
 
 	<Reply
@@ -10154,9 +10230,21 @@
 
 	<Reply
 		name="Dlg_pl_001980"
+		text="Эй, что за?!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('MrShlyapa2_Quest'); TActivate('MisterShlyapaTr'); StartConversation('MrShlyapaEmpty') " />
+
+	<Reply
+		name="Dlg_npc_003296"
+		role="NPC"
+		scriptCondition="IsQuestTaken('MrShlyapa2_Quest') and GetCurNpc():GetSpokenCount()==0"
+		nextReplies="Dlg_pl_003297" />
+
+	<Reply
+		name="Dlg_pl_003297"
 		text="Исчез...|Да что за чертовщина здесь вообще происходит?!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('MrShlyapa2_Quest'); TActivate('MisterShlyapaTr'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 <!--Root/r1m4/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003014"
@@ -10754,6 +10842,7 @@
 		text="Проезд закрыт!"
 		role="NPC"
 		scriptCondition="IsQuestTaken( 'd_MoveToPesht_Quest' )  and  not(IsQuestTaken( 'd_RideAcrossBase_Quest' ))  and  not(IsQuestComplete( 'd_RideAcrossBase_Quest' ))  and  not(IsQuestTaken( 'd_GiveMoneyToBase_Quest' ))  and  not(IsQuestComplete( 'd_GiveMoneyToBase_Quest' ))"
+		scriptResult="getObj('BaseGuardian_loc'):SetProperty('Active', 1)"
 		nextReplies="PeshtGuardian_hellodlg0_P1" />
 
 	<Reply

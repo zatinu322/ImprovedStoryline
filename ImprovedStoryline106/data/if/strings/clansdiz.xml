@@ -265,6 +265,14 @@
 		value="ПЖ" />
 
 	<string
+		id="Belong_1034"
+		value="Дети Железа" />
+
+	<string
+		id="Belong_1034_abb"
+		value="ДЖ" />
+
+	<string
 		id="Belong_1040"
 		value="Повстанцы" />
 
@@ -559,6 +567,10 @@
 	<string
 		id="Belong_1033_diz"
 		value="Жители города Казиф. Контролируют практически всю нефть региона." />
+
+	<string
+		id="Belong_1034_diz"
+		value="Дети Железа" />
 
 	<string
 		id="Belong_1040_diz"

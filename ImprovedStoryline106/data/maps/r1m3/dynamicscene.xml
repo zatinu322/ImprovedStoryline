@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="9700">
+	LastId="9704">
 	<TargetNamesForDestroy
 		Names="u1 u2 u3 u4 u5 u6 u7 u8 u9" />
 
@@ -2081,12 +2081,13 @@
 
 	<Object
 		Flags="21"
-		Name="BaseGuardian_enter"
+		Name="BaseGuardian_loc"
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="5579.562 173.002 1423.236"
 		Radius="100.000"
-		LookingTimeOut="10.000">
+		LookingTimeOut="10.000"
+		Active="0">
 		<Object
 			Name="BaseGuardian"
 			Belong="1100"
@@ -60834,6 +60835,19 @@
 	</Object>
 
 	<Object
+		Name="Cemetery_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2736.130 241.000 1798.172"
+		Radius="301.000" />
+
+	<Object
 		Belong="1100"
 		Prototype="someRecollection" />
+
+	<Object
+		Belong="1001"
+		Prototype="Light_Red"
+		Pos="2751.820 250.525 1797.148"
+		Rot="0.000 0.900 0.000 0.436" />
 </DynamicScene>

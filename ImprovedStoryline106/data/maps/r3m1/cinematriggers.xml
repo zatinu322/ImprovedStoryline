@@ -1238,8 +1238,6 @@
 			SetVar("OracleQuickWay",1)
 			
 			PassToMap("r3m2", "FromR3M1", -1 , true)
-	
-			SetTolerance(1020,1002,RS_ENEMY)
 			
 			FailQuestIfTaken("r3m1_LureMainDriud")
 			FailQuestIfTaken("r3m1_ClearSanctuary")
@@ -1270,7 +1268,6 @@
 
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			GetPlayerVehicle():SetThrottle( 0 )
-			TDeactivate("trMovePlToR1M4")
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -1280,26 +1277,6 @@
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 			local vehPID = GetPlayerVehicleId()
-
-			Fly("ToSailSubmarine_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
-			Fly("ToSailSubmarine_cam02", CINEMATIC_NO_AIM, 0, 3, 0, 0 )
-			FlyLinked( "linkedcam", CTochID, 8, 0, 1, vehPID)
-			StartCinematic()
-
-
-			PlayCustomMusic("Techno01")
-			TActivate("RolikEnd_ToSailSubmarine")
-			TActivate("trToSailSubmarine_cam01")
-			TActivate("trToSailSubmarine_cam03")
-
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trToSailSubmarine_cam01" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
 
 			getObj("Subm1"):SetNodeAction(AT_STAND2)
 
@@ -1311,10 +1288,21 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 			end
 
+			Fly("ToSailSubmarine_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
+			Fly("ToSailSubmarine_cam02", CINEMATIC_NO_AIM, 0, 3, 0, 0 )
+			FlyLinked( "linkedcam", CTochID, 8, 0, 1, vehPID)
+			StartCinematic()
+			UpdateCinematic(1)
+
+			PlayCustomMusic("Techno01")
+
+			TActivate("RolikEnd_ToSailSubmarine")
+			TActivate("trToSailSubmarine_cam03")
+			TDeactivate("trMovePlToR1M4")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
-
 
 	<trigger Name="trToSailSubmarine_cam03" active="0">
 		<event flypath="linkedcam" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
@@ -1335,28 +1323,32 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetExternalPathByName("player_path09")
-			vehPlayer:PlaceToEndOfPath("player_path09")
-			vehPlayer:UnlimitMaxSpeed()
-			vehPlayer:SetGamePositionOnGround( CVector(3764.077, 251.340, 1889.206))
-			vehPlayer:SetRotation(Quaternion(0.003, 0.973, -0.002, -0.230))
-		end
 
-		local submar = getObj("Subm1")
-		if submar then submar:Remove() end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("player_path09")
+				vehPlayer:PlaceToEndOfPath("player_path09")
+				vehPlayer:UnlimitMaxSpeed()
+				vehPlayer:SetGamePositionOnGround( CVector(3764.077, 251.340, 1889.206))
+				vehPlayer:SetRotation(Quaternion(0.003, 0.973, -0.002, -0.230))
+			end
 
-		local CToch = GetEntityByName("CamTochka")
-		if CToch then CToch:Remove() end
+			local submar = getObj("Subm1")
+			if submar then submar:Remove() end
 
-		StopPlayingCustomMusic()
-		TDeactivate("trToSailSubmarine_cam01")
-		TDeactivate("trToSailSubmarine_cam03")
-		TActivate("trMovePlToR1M4")
-		SetCameraBehindPlayerVehicle()
-		RestoreAllToleranceStatus()
-		trigger:Deactivate()
+			local CToch = GetEntityByName("CamTochka")
+			if CToch then CToch:Remove() end
+
+			StopPlayingCustomMusic()
+
+			TDeactivate("trToSailSubmarine_cam03")
+			TActivate("trMovePlToR1M4")
+
+			SetCameraBehindPlayerVehicle()
+
+			RestoreAllToleranceStatus()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1441,7 +1433,9 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			StopPlayingCustomMusic()
+
 			RestoreAllToleranceStatus()
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("player_path08")
@@ -1450,12 +1444,14 @@
 			end
 						
 			PassToMap("r1m4", "FromR3M1", -90 , 1)
+
 			TDeactivate("trToGoInSet_cam01")
 			TDeactivate("UlukBattle2")
-			SetTolerance(1020,1002,RS_ENEMY)
+			
 			TActivate("SubmarDelete")
 			TActivate("trMoveFromR1M4")
 			TActivate("CutsceneDisable")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

@@ -348,4 +348,7 @@
 	<model
 		id="Silentium"
 		file="data\music\cinematics\Silentium.ogg" />
+	<model
+		id="Cemetery1"
+		file="data\music\cinematics\cemetery1.ogg" />
 </Music>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Paths>
+
+	<Path Name = "cam_Zone01">                         
+		<Point  coord="964.395 221.386 325.998" rotation="-0.013 -0.680 0.012 0.733"  speed="1"/>
+		<Point  coord="1130.149 235.614 261.192" rotation="0.017 -0.159 -0.003 0.987"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone02">                         
+		<Point  coord="24.000 15.00 50.000" rotation="-0.127 -0.473 0.069 0.869"  speed="1"/>
+	</Path>
+
+	<!--  Path Name = "cam_Zone03">                         
+		<Point  coord="20.581 3.650 6.642" rotation="-0.049 0.757 -0.057 0.649"  speed="1"/>
+		<Point  coord="12.236 4.182 -14.412" rotation="-0.072 0.279 -0.021 0.957"  speed="1"/
+	</Path  -->
+
+	<Path Name = "cam_Zone03">                         
+		<Point  coord="10.000 3.000 20.000" rotation="-0.101 0.892 -0.248 0.363"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone04">                         
+		<Point  coord="-34.192 14.307 -34.897" rotation="-0.053 -0.402 0.023 0.914"  speed="1"/>
+		<Point  coord="-18.090 0.518 3.487" rotation="0.023 -0.792 -0.030 0.609"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone05">                         
+		<Point  coord="94.487 59.027 64.538" rotation="-0.102 0.867 -0.199 0.445"  speed="1"/>
+		<Point  coord="23.302 46.106 175.657" rotation="-0.043 0.956 -0.182 0.225"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone06">                         
+		<Point  coord="40.671 6.563 50.000" rotation="-0.001 0.858 -0.001 0.514"  speed="1"/>
+		<Point  coord="19.671 2.563 24.000" rotation="-0.001 0.858 -0.001 0.514"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone07">                         
+		<Point  coord="0 1 0"/>
+	</Path>
+
+	<Path Name = "cam_Zone08">                         
+		<Point  coord="-22.454 1.322 -1.336" rotation="-0.002 -0.749 0.002 0.663"  speed="1"/>
+		<Point  coord="-7.994 6.202 32.075" rotation="-0.001 0.995 0.009 -0.099"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone09">                         
+		<Point  coord="-7.924 2.624 -20.124" rotation="-0.025 -0.244 0.006 0.969"  speed="1"/>
+		<Point  coord="0.732 13.770 -51.890" rotation="-0.046 -0.133 0.006 0.990"  speed="1"/>
+	</Path>
+
+	<Path Name = "cam_Zone0">                         
+		<Point  coord="19.671 2.563 25.000" rotation="-0.001 0.858 -0.001 0.514"/>
+	</Path>
+
+</Paths>

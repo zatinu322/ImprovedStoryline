@@ -299,7 +299,7 @@
 
 	<!--		ролик с босом "война бобра с ослом"	:-)		-->
 	<trigger Name="RolikBegin_Boss02" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<event timeout="1" eventid="GE_TIME_PERIOD" />
 		<script>
 		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 		GetPlayerVehicle():SetThrottle( 0 )
@@ -391,6 +391,8 @@
 		end
 
 		DisableGodMode()
+
+		AllowSave(false)
 
 		trigger:Deactivate()
 		</script>

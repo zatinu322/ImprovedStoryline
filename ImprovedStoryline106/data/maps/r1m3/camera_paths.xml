@@ -341,4 +341,25 @@
 		<Point  coord="-20 0 -75"/>
 	</Path>
 
+	<Path Name = "cemetery_cam01">
+		<Point  coord="2728.197 243.071 1781.348" rotation="-0.055 -0.111 0.006 0.992"/>
+		<Point  coord="2745.359 243.071 1779.635" rotation="-0.045 -0.038 0.002 0.998"/>
+	</Path>
+
+	<Path Name = "cemetery_cam02">
+		<Point  coord="2762.014 249.607 1782.489" rotation="-0.262 -0.069 0.019 0.963"/>
+		<Point  coord="2766.232 241.624 1799.912" rotation="-0.124 -0.165 0.021 0.978"/>
+	</Path>
+
+	<Path Name = "cemetery_cam03">
+		<Point  coord="2761.917 250.852 1768.022" rotation="-0.191 0.211 -0.042 0.958"/>
+		<Point  coord="2752.259 255.527 1752.906" rotation="-0.174 0.080 -0.014 0.981"/>
+	</Path>
+
+	<Path Name = "cemetery_cam04">
+		<Point  coord="2747.019 246.378 1754.970" rotation="-0.063 -0.064 0.004 0.996"/>
+		<Point  coord="2749.793 248.504 1780.077" rotation="-0.039 -0.074 0.003 0.996"/>
+		<Point  coord="2751.653 255.310 1798.694" rotation="0.061 -0.043 -0.003 0.997"/>
+	</Path>
+
 </Paths>

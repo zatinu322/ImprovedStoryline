@@ -275,7 +275,7 @@
 
 	<Object
 		Name="ZoneRazboynik"
-		Belong="1063"
+		Belong="1002"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r3m1_RaboynikTeam"
 		DropOutTimeOut="20.000"
@@ -1904,13 +1904,10 @@
 				Pos="1543.661 658.995" />
 
 			<CameraPoint
-				Pos="-48.469 9.487 -11.255" />
+				Pos="-93.363 17.717 -18.139" />
 
 			<CameraPoint
-				Pos="-63.746 7.362 -4.129" />
-
-			<CameraPoint
-				Pos="-87.978 21.807 5.897" />
+				Pos="-114.931 15.354 -10.431" />
 		</ExitPath>
 	</Object>
 
@@ -2862,7 +2859,7 @@
 		Name="WalkerHuman1"
 		Belong="1001"
 		Prototype="Human"
-		Pos="1426.782 290.392 2725.874"
+		Pos="1426.782 290.264 2725.874"
 		PathsNames="Human1_Path" />
 
 	<Object
@@ -2890,7 +2887,7 @@
 		Name="WalkerHuman5"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="1648.228 253.898 712.420"
+		Pos="1648.228 253.927 712.420"
 		PathsNames="Human5_Path" />
 
 	<Object
@@ -2904,28 +2901,28 @@
 		Name="WalkerHuman7"
 		Belong="1001"
 		Prototype="Human"
-		Pos="1576.776 249.010 691.696"
+		Pos="1576.776 249.035 691.696"
 		PathsNames="Human7_Path" />
 
 	<Object
 		Name="WalkerHuman8"
 		Belong="1001"
 		Prototype="Human2"
-		Pos="3032.831 260.806 1330.498"
+		Pos="3032.831 260.805 1330.498"
 		PathsNames="Human8_Path" />
 
 	<Object
 		Name="WalkerHuman9"
 		Belong="1001"
 		Prototype="Human3"
-		Pos="3065.691 261.218 1222.425"
+		Pos="3065.691 261.221 1222.425"
 		PathsNames="Human9_Path" />
 
 	<Object
 		Name="WalkerHuman10"
 		Belong="1001"
 		Prototype="Human"
-		Pos="2943.120 266.220 1353.749"
+		Pos="2943.120 266.162 1353.749"
 		PathsNames="Human10_Path" />
 
 	<Object
@@ -2941,12 +2938,12 @@
 		Prototype="Human3"
 		Pos="1549.979 288.000 2564.564"
 		PathsNames="Human12_Path" />
-	
+
 	<Object
 		Name="WalkerHuman13"
 		Belong="1001"
 		Prototype="Human"
-		Pos="3425.454 287.682 2211.660"
+		Pos="3425.454 288.000 2211.660"
 		PathsNames="Human13_Path" />
 
 	<Object

@@ -2656,7 +2656,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="BaseGuardian_enter" />
+			targetObjName="BaseGuardian_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3113,7 +3113,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="BaseGuardian_enter" />
+			targetObjName="BaseGuardian_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3439,7 +3439,7 @@
 		isMainQuest="1">
 		<Map
 			name="r1m3"
-			targetObjName="BaseGuardian_enter" />
+			targetObjName="BaseGuardian_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3735,8 +3735,8 @@
 
 	<QuestInfo
 		questName="q_FH1"
-		briefDiz="Поискать по деревням"
-		fullDiz="Филимон, скорее всего, пьёт в баре одного из рыбацких посёлков."
+		briefDiz="Поискать по округе"
+		fullDiz="Филимон, скорее всего, пьёт в баре одного из рыбацких посёлков. А может и нет..."
 		isMainQuest="0">
 		<Map
 			name="r1m4" />

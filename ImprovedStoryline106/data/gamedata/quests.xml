@@ -2977,7 +2977,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("BaseGuardian_enter")' />
+		OnTake='ShowCircleOnMinimapByName("BaseGuardian_loc")' />
 <!--Root/r1m3/Сюжетные/ Заплатить бандитам деньги-->
 	<quest
 		Name="d_GiveMoneyToBase_Quest"
@@ -2985,7 +2985,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("BaseGuardian_enter")' />
+		OnTake='ShowCircleOnMinimapByName("BaseGuardian_loc")' />
 <!--Root/r1m3/Сюжетные/ Достать взрывчатку-->
 	<quest
 		Name="d_GetBomb_Quest"
@@ -3047,7 +3047,7 @@
 		PrecedingQuests="d_GetBomb_Quest"
 		OnComplete="AddPlayerMoney(200)"
 		OnFail='RemoveQuestItem("quest_explosive")'
-		OnTake='ShowCircleOnMinimapByName("BaseGuardian_enter")'>
+		OnTake='ShowCircleOnMinimapByName("BaseGuardian_loc")'>
 		<quest
 			Name="d_DestroyBridge_Quest1"
 			Automatic="1"

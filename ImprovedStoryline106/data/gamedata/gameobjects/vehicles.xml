@@ -32,7 +32,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
 		DriftCoeff		="0.3"
@@ -95,7 +95,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
 		DriftCoeff		="0.3"
@@ -263,7 +263,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		DecisionMatrix		= "vehiclemain.lua"
 		AdditionalWheelsHover   ="0.1"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
 		DriftCoeff		="0.3"
@@ -310,7 +310,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
 		DriftCoeff		= "0.3"
@@ -359,7 +359,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
 		DriftCoeff		= "0.3"
@@ -408,7 +408,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
 		DriftCoeff		= "0.3"
@@ -499,7 +499,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		HornSound		= "ET_S_HORN01"
 
 		DecisionMatrix		= "vehiclemain.lua"
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "3.0"
 		TakingRadius		= "30.0"
 		DriftCoeff		= "0.2"
@@ -560,7 +560,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 		IsIntersecting		= "true"
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "3.0"
 		TakingRadius		= "30.0"
 
@@ -613,7 +613,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 		IsIntersecting		= "true"
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "3.0"
 		TakingRadius		= "30.0"
 
@@ -663,7 +663,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 		DriftCoeff		= "0.5"
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "5.0"
 		TakingRadius		= "30.0"
 
@@ -723,7 +723,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "4.5"
 		TakingRadius		= "30.0"
 
@@ -784,7 +784,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "5.5"
 		TakingRadius		= "30.0"
 
@@ -851,7 +851,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "5.5"
 		TakingRadius		= "30.0"
 
@@ -912,7 +912,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "7.0"
 		TakingRadius		= "30.0"
 
@@ -971,7 +971,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "4.5"
 		TakingRadius		= "30.0"
 		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
@@ -1029,7 +1029,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "4.0"
 		TakingRadius		= "30.0"
 
@@ -1123,7 +1123,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "7.0"
 		TakingRadius		= "30.0"
 
@@ -1193,7 +1193,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius		= "200.0"
+		LookRadius		= "300.0"
 		IntersectionRadius	= "9.0"
 		TakingRadius		= "30.0"
 
@@ -1257,7 +1257,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "9.0"
 		TakingRadius		= "30.0"
 
@@ -2814,7 +2814,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 		DecisionMatrix		= "vehiclemain.lua"
 
-		LookRadius			= "200.0"
+		LookRadius			= "300.0"
 		IntersectionRadius	= "2.5"
 		TakingRadius		= "30.0"
                 CameraHeight            = "2"

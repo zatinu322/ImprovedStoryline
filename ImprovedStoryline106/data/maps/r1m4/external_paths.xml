@@ -67,6 +67,57 @@
 	</Path>
 
 	<Path
+		Name="CaravanR1M3_path01">
+		<Point
+			coord="2715.807 550.675" />
+
+		<Point
+			coord="2717.309 594.587" />
+
+		<Point
+			coord="2732.696 637.358" />
+
+		<Point
+			coord="2742.771 684.427" />
+
+		<Point
+			coord="2727.821 716.279" />
+
+		<Point
+			coord="2692.238 763.353" />
+
+		<Point
+			coord="2664.510 812.625" />
+
+		<Point
+			coord="2634.745 860.244" />
+
+		<Point
+			coord="2620.484 919.557" />
+
+		<Point
+			coord="2613.089 955.266" />
+
+		<Point
+			coord="2607.582 982.643" />
+
+		<Point
+			coord="2620.125 1000.124" />
+
+		<Point
+			coord="2659.542 1001.214" />
+
+		<Point
+			coord="2712.347 1001.142" />
+
+		<Point
+			coord="2725.967 1027.431" />
+
+		<Point
+			coord="2723.238 1065.687" />
+	</Path>
+
+	<Path
 		Name="Chehly_path">
 		<Point
 			coord="2132.598 3404.413" />

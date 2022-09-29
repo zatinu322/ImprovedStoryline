@@ -11,6 +11,7 @@
 			SetVar("QuickWayAlt",0)
 			SetVar("KnownMap",0)
 			SetVar("BeglecPrice",0)
+			SetVar("Cemetery", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			CreateNewDummyObject("rr_barrier3", "mininBarrier", -1, -1, CVector(6718.542, 230.886, 5747.152), Quaternion(-0.3620, 0.5734, 0.2916, 0.6747), 0)
@@ -88,6 +89,10 @@
 			TDeactivate("SHAHTSBANDITBOSSDIE")
 
 			CompleteQuestIfTaken("d_MoveToPesht_Quest")
+
+			local a = GetEntityByName("BaseGuardian_loc")
+			if a then a:SetProperty("Active",1) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -261,7 +266,7 @@
 			local rrr = GetEntityByName ("zagr2")
 			if rrr then rrr:Remove() end
 
-			local a = GetEntityByName("BaseGuardian_enter")
+			local a = GetEntityByName("BaseGuardian_loc")
 			if a then a:SetProperty("Active",0) end
 
 			TActivate( "BASEATTACKEND" )
@@ -276,12 +281,94 @@
 			CreateNewDummyObject( "arena_barricade8", "zagr1", -1, -1, CVector(5523.000, 217, 1423.368), Quaternion(0.0000, -0.7056, 0.0000, 0.7086), 0)
 			CreateNewDummyObject( "arena_barricade8", "zagr2", -1, -1, CVector(5631.000, 217, 1422.771), Quaternion(0.0000, -0.7056, 0.0000, 0.7086), 0)
 
-			local a = GetEntityByName("BaseGuardian_enter")
+			local a = GetEntityByName("BaseGuardian_loc")
 			if a then a:SetProperty("Active",1) end
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
+
+	<!-- Кладбище -->
+	<trigger Name="trPlayerEntersCemetery" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Cemetery_loc" />
+		<script>
+			PlayCustomMusic("Cemetery1")
+
+			AllowSave(false)
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:LimitMaxSpeed(11.11)
+			end
+
+			TActivate("trPlayerLeavesCemetery")
+			TActivate("trCemeteryEffects")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trCemeteryEffects" active="0">
+		<event	timeout="1.8"		eventid="GE_TIME_PERIOD" />
+		<script>
+			RuleConsole("g_postEffect cinematic04")
+
+			TActivate("trCemeteryHpDecreasing")
+			TActivate("CemeteryCutscenesActivation_1")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trCemeteryHpDecreasing" active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			RuleConsole("g_postEffect cinematic04")
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				local PlHP = Plf:GetHealth()
+				if PlHP > 667 then
+					Plf:AddModifier("hp", "- 3")
+				elseif 666 > PlHP then
+					Plf:AddModifier("hp", "+ 3")
+				else
+					Plf:AddModifier("hp", "= 666")
+				end
+			end
+
+			print("CURSED ")
+			
+		</script>
+	</trigger>
+
+	<trigger Name="trPlayerLeavesCemetery" active="0">
+		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="Cemetery_loc" />
+		<script>
+			StopPlayingCustomMusic()
+
+			AllowSave(true)
+
+			RuleConsole("g_postEffect cinematicEnd")
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:UnlimitMaxSpeed()
+			end
+
+			TActivate("trPlayerEntersCemetery")
+			TDeactivate("trCemeteryHpDecreasing")
+			TDeactivate("trCemeteryEffects")
+			TDeactivate("CemeteryCutscenesActivation_1")
+			TDeactivate("CemeteryCutscenesActivation_2")
+			TDeactivate("CemeteryCutscenesEnd")
+
+			SetVar("Cemetery", 0)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 
 	<!-- Нападение бандитов на Горные шахты -->
 	<trigger Name="SHAHTSBANDIT" active="0">
@@ -328,7 +415,7 @@
    
 				AddFadingMsgByStrIdFormatted("fm_player_use_thing", "quest_explosive")
 
-				local a = GetEntityByName("BaseGuardian_enter")
+				local a = GetEntityByName("BaseGuardian_loc")
 				if a then a:SetProperty("Active",0) end
 
 				TActivate( "RolikBegin_BOOOM" )
@@ -373,11 +460,13 @@
 	<trigger Name="ATTACKOILMINE" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("OilMineBoss",1002,CVector(6969,257,7068),{"Sml401","r1m3_Fighter01","r1m1_scout02"}, nil, 1)
+			TeamCreate("OilMineBoss",1044,CVector(6969,257,7068),{"Sml401","r1m3_Fighter01","r1m1_scout02"}, nil, 1)
 
 			TakeQuest("d_DriveBanditFromOilMine_Quest")
 
 			TActivate("BOSSOILMINEDIE")
+
+			SetTolerance(1100, 1044, RS_ENEMY)
 
 			trigger:Deactivate()
 		</script>
@@ -419,7 +508,9 @@
 	<trigger Name="RUNTORUNERENDRACE" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="EndRaceLoc" />
 		<script>
-			TeamCreate("OilMineBaseBoss",1002,CVector(4483, 265, 7496),{"r1m3_Fighter01","r1m3_Fighter02", "DemoBandit"},CVector(4546, 263, 7479), 1)
+			SetTolerance( 1100, 1044, RS_ENEMY )
+			
+			TeamCreate("OilMineBaseBoss",1044,CVector(4483, 265, 7496),{"r1m3_Fighter01","r1m3_Fighter02", "DemoBandit"},CVector(4546, 263, 7479), 1)
 
 			local runner = GetEntityByName("OilMineRuner_vehicle_0")
 			local runner_new = GetEntityByName("OilMineBaseBoss"):GetVehicle(2)

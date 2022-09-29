@@ -113,7 +113,7 @@
 			}
 
 			local RandBelong = {	1002,
-							1003
+							1005
 			}
 
 			local r4 = random(2)

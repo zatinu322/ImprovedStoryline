@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76484751">
+	LastId="76484827">
 	<Node
 		name="Object27"
 		class="SgAnimatedModelNode"
@@ -32630,9 +32630,9 @@
 	<Node
 		name="Object76484371"
 		class="SgAnimatedModelNode"
-		org="2752.858 0.000 1823.768"
+		org="2752.359 -1.018 1807.437"
 		orgRel="1"
-		rot="0.0000 -0.6978 0.0000 0.7163"
+		rot="0.0167 -0.6976 -0.0172 0.7161"
 		scale="1.238 1.238 1.238"
 		id="cerkov"
 		ndmAction="0" />

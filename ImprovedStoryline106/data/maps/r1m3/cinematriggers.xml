@@ -1323,10 +1323,9 @@
 			TDeactivate( "trMsg01" )
 			TDeactivate( "trLISAAFTERTHIEF_cam01")
 			TDeactivate( "trLISAAFTERTHIEF_cam02" )
-			TDeactivate( "trLISAAFTERTHIEF_cam03")
+			TDeactivate( "trLISAAFTERTHIEF_cam031")
 			TDeactivate( "trLISAAFTERTHIEF_cam04")
 			TDeactivate( "trLISAAFTERTHIEF_cam05")
-			TDeactivate( "trLISAAFTERTHIEF_cam07")
 			TDeactivate( "trLISAAFTERTHIEF_cam06")
 			TDeactivate( "RolikBegin_LISAAFTERTHIEF" )
 
@@ -1433,7 +1432,7 @@
 
 			RuleConsole("cinematic_spring_coeff 6.0")
 
-			CreateVehicleEx("Cruiser02","vehPioneer",CVector(0, 10000, 0), 1015)
+			CreateVehicleEx("Cruiser02","vehPioneer",CVector(0, 10000, 0), 1046)
 			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(1757.628, 285.696, 5439.641), Quaternion(0, 0, 0, 0), 0)
 
 			local vehP = GetEntityByName("vehPioneer")
@@ -1729,19 +1728,9 @@
 			FlyLinked( "ZASADA_AR_cam01", CTochID, 17.5, 1, 1, vehPID )
 			StartCinematic()
 			
-			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1015)
-			CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1800.970, 280.535, 5493.521), 1015)
-			
-			local zas1 = GetEntityByName("ZasadaAR1")
-			if zas1 then
-				zas1:SetRotation(Quaternion(-0.027, -0.711, -0.027, 0.702))
-			end
-			
-			local zas2 = GetEntityByName("ZasadaAR2")
-			if zas2 then
-				zas2:SetRotation(Quaternion(-0.000, -0.706, 0.004, 0.709))
-			end
-			
+			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1046, Quaternion(-0.027, -0.711, -0.027, 0.702))
+			CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1800.970, 280.535, 5493.521), 1046, Quaternion(-0.000, -0.706, 0.004, 0.709))
+						
 			TActivate("RolikZasadaARFade")
 			TActivate("RolikZasadaARMusic")
 			TActivate("RolikZasadaAREnd")
@@ -1756,6 +1745,7 @@
 	<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("IntenseDialogue01")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2907,13 +2897,17 @@
 
 				Fly("cemetery_cam02", CINEMATIC_NO_AIM, 0, 2, 0, 0, 0)
 			end
-				StartCinematic()
 
-				TActivate("CemeteryCutscenesEnd")
+			StartCinematic()
 
-				RuleConsole("g_postEffect DamageWater")
+			TActivate("CemeteryCutscenesEnd")
 
-				trigger:Deactivate()
+			RuleConsole("g_postEffect DamageWater")
+
+			CreateNewDummyObject("dweller_white", "Sextant1", -1, -1, CVector(2749.376, 240.346, 1799.206), Quaternion(0.0022, 1.0000, -0.0000, 0.0065), 0)
+			CreateNewDummyObject("dweller_white", "Sextant2", -1, -1, CVector(2754.863, 240.100, 1799.345), Quaternion(0.0000, -1.0000, 0.0000, -0.0000), 0)
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -2931,6 +2925,9 @@
 
 				RuleConsole("g_postEffect DamageWater")
 
+				CreateNewDummyObject("dweller_white", "Sextant1", -1, -1, CVector(2749.376, 240.346, 1799.206), Quaternion(0.0022, 1.0000, -0.0000, 0.0065), 0)
+				CreateNewDummyObject("dweller_white", "Sextant2", -1, -1, CVector(2754.863, 240.100, 1799.345), Quaternion(0.0000, -1.0000, 0.0000, -0.0000), 0)
+
 				trigger:Deactivate()
 			elseif cem == 3 then
 				SetVar("Cemetery", 4)
@@ -2941,6 +2938,9 @@
 				TActivate("CemeteryCutscenesEnd")
 
 				RuleConsole("g_postEffect DamageWater")
+
+				CreateNewDummyObject("dweller_white", "Sextant1", -1, -1, CVector(2749.376, 240.346, 1799.206), Quaternion(0.0022, 1.0000, -0.0000, 0.0065), 0)
+				CreateNewDummyObject("dweller_white", "Sextant2", -1, -1, CVector(2754.863, 240.100, 1799.345), Quaternion(0.0000, -1.0000, 0.0000, -0.0000), 0)
 
 				trigger:Deactivate()
 			elseif cem == 4 then
@@ -2966,6 +2966,12 @@
 			elseif cem >= 2 then
 				TActivate("CemeteryCutscenesActivation_2")
 			end
+
+			for hum = 1,2 do
+				local sext = GetEntityByName("Sextant"..hum)
+				if sext then sext:Remove() end
+			end
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>

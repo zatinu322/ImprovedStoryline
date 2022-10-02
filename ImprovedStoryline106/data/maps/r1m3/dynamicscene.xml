@@ -2053,7 +2053,7 @@
 
 	<Object
 		Flags="21"
-		Name="PeshtGuardian_enter"
+		Name="PeshtGuardian_loc"
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="4055.497 183.182 3714.249"

@@ -286,8 +286,6 @@
 			
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
-			--local vehCar = GetEntityByName("CaravanTuzz_vehicle_0")
-			--local vehCarID = vehCar:GetId()
 			local Plf = GetPlayerVehicle()
 			local PlfID = Plf:GetId()
 
@@ -373,13 +371,14 @@
 
 			TDeactivate("ZashitacinFade")
 			TDeactivate("ZashitacinCam2")
+			TActivate('TheNewSibillaOpen')
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
-	<!-- Подъехали к тоннелю, охраняемому СНГ -->
-	<trigger Name="TUNELFIGHT1" active="0">
+	<!-- Подъехали к тоннелю, охраняемому СНГ/АР -->
+	<trigger Name="TUNELFIGHT" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelAttackLocation" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -396,25 +395,34 @@
 			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
-			AddCinematicMessage( 19, 1)
+			if QuestStatus("d_FreeTunel_Quest1")==Q_TAKEN then
+				AddCinematicMessage( 19, 1)
+				belong = 1015
+			elseif QuestStatus("Tunnel_Quest1")==Q_TAKEN then
+				belong = 1016
+			end
 
-			TActivate ("trTunelTeamFighters1")
-			TActivate ("TUNELFIGHT_ce1")
+			TActivate ("trTunelTeamFighters")
+			TActivate ("TUNELFIGHT_ce")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
-	<trigger Name="trTunelTeamFighters1" active="0">
+	<trigger Name="trTunelTeamFighters" active="0">
  		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			TeamCreate("TunelTeamFighters",1016,CVector(7603, 276, 4813),{"r2m1_Fighter01","r2m1_Ural01","r2m1_Fighter01"})
+			if belong == nil then
+				belong = 1002
+			end
 
-			TActivate ("TUNELFIGHTERDEAD1")
+			TeamCreate("TunelTeamFighters", belong, CVector(7718.427, 287.327, 4945.496), {"r2m1_Fighter01","r2m1_Ural01","r2m1_Fighter01"}, nil, nil, Quaternion(0.036, -0.890, 0.043, 0.452))
+
+			TActivate ("TUNELFIGHTERDEAD")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
-	<trigger Name="TUNELFIGHT_ce1" active="0">
+	<trigger Name="TUNELFIGHT_ce" active="0">
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
@@ -422,14 +430,22 @@
 
 			SetCameraBehindPlayerVehicle()
 
-			CompleteQuest("Tunnel_Quest1")
+			if QuestStatus("Tunnel_Quest1")==Q_TAKEN then
+				CompleteQuest("Tunnel_Quest1")
+
+			elseif QuestStatus("d_FreeTunel_Quest1")==Q_TAKEN then
+				SetTolerance( 1100, 1015, RS_ENEMY )
+				SetTolerance( 1016, 1015, RS_ENEMY )
+
+				CompleteQuest( "d_FreeTunel_Quest1" )
+			end
 
 			trigger:Deactivate() 
 		</script>
 	</trigger>
 
 	<!-- Разбили СНГ у тоннеля -->
-	<trigger Name="TUNELFIGHTERDEAD1" active="0">
+	<trigger Name="TUNELFIGHTERDEAD" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="TunelTeamFighters" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
@@ -443,29 +459,46 @@
 			PlfCoor.y = PlfCoor.y + 3
 			PlfCoor.z = PlfCoor.z + 5
 
-			FlyAround( 1, 0, 25, 21, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
+			if QuestStatus("Tunnel_Quest2")==Q_TAKEN then
+				FlyAround( 1, 0, 25, 21, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
 
-			AddCinematicMessage( 143, 1)
-			AddCinematicMessage( 144, 1)
+				AddCinematicMessage( 143, 1)
+				AddCinematicMessage( 144, 1)
 
-			TActivate ("TUNELFIGHTERDEAD_ce1")
+				CompleteQuest( "Tunnel_Quest2" )
 
-			CompleteQuest( "Tunnel_Quest2" )
+			elseif QuestStatus("d_FreeTunel_Quest2")==Q_TAKEN then
+				FlyAround( 1, 0, 25, 29, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 20, 1)
+				AddCinematicMessage( 2012, 0.25)
+
+				CompleteQuest( "d_FreeTunel_Quest2" )
+			end
+
+			TActivate ("TUNELFIGHTERDEAD_ce")
 
 			trigger:Deactivate()
 		</script>
 	</trigger>
-	<trigger Name="TUNELFIGHTERDEAD_ce1" active="0">
+	<trigger Name="TUNELFIGHTERDEAD_ce" active="0">
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
-			
-			TActivate("prebattletr")
 
+			if QuestStatus("FinalBattle_Quest1")==Q_TAKEN then
+				TActivate("prebattletr")
+
+			elseif QuestStatus("d_FromTuzzToGelvetcia_Quest")==Q_TAKEN then
+				SetTolerance( 1100, 1015, RS_ENEMY )
+				SetTolerance( 1016, 1015, RS_ENEMY )
+			end
+			
 			trigger:Deactivate() 
 		</script>
 	</trigger>
@@ -792,7 +825,7 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="Razboy_vehicle_1" />
 		<event eventid="GE_OBJECT_DIE" ObjName="Razboy_vehicle_2" />
 		<script>
-			TeamCreate("SNGArmy1",1016,CVector(4072, 306, 1765),{"Revolutioner1", "Revolutioner2"}, CVector(4011, 306, 1405), 1)
+			TeamCreate("SNGArmy1",1016,CVector(4072, 306, 1765),{"AKF_Cruiser1", "r1m1_molokovoz02"}, CVector(4011, 306, 1405), 1)
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -908,99 +941,6 @@
 
 			TActivate( "trCaravanToT5sec" )
 			TActivate( "trCaravanToTuzzINPLACE" )
-
-			SetCameraBehindPlayerVehicle()
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<!-- Бой возле Туннеля -->
-	<trigger Name="TUNELFIGHT" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TunnelAttackLocation" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z - 5
-
-			FlyAround( 1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 19, 1)
-
-			TActivate ("trTunelTeamFighters")
-			TActivate ("TUNELFIGHT_ce")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="trTunelTeamFighters" active="0">
- 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			TeamCreate("TunelTeamFighters",1015,CVector(7603, 276, 4813),{"r2m1_Fighter01","r2m1_Ural01","r2m1_Fighter01"})
-
-			TActivate ("TUNELFIGHTERDEAD")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TUNELFIGHT_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
-
-			SetCameraBehindPlayerVehicle()
-
-			CompleteQuest( "d_FreeTunel_Quest1" )
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
-	<trigger Name="TUNELFIGHTERDEAD" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="TunelTeamFighters" />
-		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-
-			TActivate( "trVehSTOP" )
-
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 25
-			PlfCoor.y = PlfCoor.y + 3
-			PlfCoor.z = PlfCoor.z + 5
-
-			FlyAround( 1, 0, 25, 29, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 20, 1)
-			AddCinematicMessage( 2012, 0.25)
-
-			TActivate ("TUNELFIGHTERDEAD_ce")
-
-			CompleteQuest( "d_FreeTunel_Quest2" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-	<trigger Name="TUNELFIGHTERDEAD_ce" active="0">
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-			SetTolerance( 1100, 1015, RS_ENEMY )
-			SetTolerance( 1016, 1015, RS_ENEMY )
 
 			SetCameraBehindPlayerVehicle()
 
@@ -1217,7 +1157,7 @@
 		</script>
 	</trigger>
 
-<!-- игрок натыкается на лису возле Гельвеции -->
+<!-- Игрок натыкается на лису возле Гельвеции -->
 	<trigger Name="RolikBegin_Lisa" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1412,7 +1352,7 @@
 			end
 
 			CreateNewDummyObject( "dweller_lisa", "humLisa", -1, -1, CVector(6046.292, 249.190, 6583.665), Quaternion(0.000, -0.746, 0.000, 0.666), 0)
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(6044.253, 249.267, 6583.188), Quaternion(0.000, 0.487, 0.000, 0.874), 0)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(6044.253, 249.267, 6583.188), Quaternion(0.000, 0.659, 0.000, 0.752), 0)
 
 			getObj("humPlayer"):SetNodeAction(AT_STAND1)
 			getObj("humPlayer"):SetNextForAnimation( AT_STAND1, AT_STAND1 )
@@ -1688,7 +1628,7 @@
 
 <!-- Игрок приезжает в Париж, битва с Боссом -->
 	<trigger Name="RolikBegin_OPARIS" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<event timeout="2" eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -1738,8 +1678,6 @@
 				vehLisa:SetCustomLinearVelocity(0)
 			end
 
-
-
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1766,6 +1704,9 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
+
+			PlayCustomMusic("Passage03b")
+			
 			SetTolerance( 1042, 1002, RS_ENEMY )
 			SetTolerance( 1042, 1005, RS_ENEMY )
 
@@ -1793,10 +1734,16 @@
 
 			TDeactivate("RolikBegin_OPARIS")
 			TDeactivate("trOPARIS_cam01")
-			TDeactivate("trOPARIS_cam02")
 			TDeactivate("trOPARIS_cam03")
 
 			TActivate("RolikBegin_BOSSDIE")
+
+			CompleteQuest( "d_MoveInParis_Quest" )
+
+			TActivate("PARISTUBECREATE")
+			TActivate("TRIGGER_OPARISPARISBOSSDIE")
+
+			AllowSave(false)
 
 			trigger:Deactivate()
 		</script>
@@ -1904,6 +1851,8 @@
 			TakeQuest("Disk2OrakulLisa")
 
 			SetCameraBehindPlayerVehicle()
+
+			AllowSave(true)
 
 			trigger:Deactivate()
 		</script>

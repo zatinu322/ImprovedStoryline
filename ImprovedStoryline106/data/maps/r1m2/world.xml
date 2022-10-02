@@ -2,7 +2,7 @@
 <World
 	name="îÄa"
 	class="SgNode"
-	LastId="76480521">
+	LastId="76480577">
 	<Node
 		name="Object21"
 		class="SgAnimatedModelNode"
@@ -4261,7 +4261,8 @@
 		orgRel="1"
 		rot="0.0000 -0.6643 0.0000 0.7475"
 		id="ancient_temple"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object5077"
@@ -20804,7 +20805,8 @@
 		org="7645.368 -15.951 5189.129"
 		orgRel="1"
 		id="rotund"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object14454"
@@ -20812,7 +20814,8 @@
 		org="7607.301 0.000 5117.265"
 		orgRel="1"
 		id="aquaduct2"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object14455"
@@ -20820,7 +20823,8 @@
 		org="7628.194 -18.415 5139.556"
 		orgRel="1"
 		id="ancient_temple"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object14513"
@@ -20829,7 +20833,8 @@
 		orgRel="1"
 		rot="0.2292 0.0000 0.0000 0.9734"
 		id="ancient_temple"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object14514"
@@ -20838,7 +20843,8 @@
 		orgRel="1"
 		rot="0.2693 0.0000 0.0000 0.9630"
 		id="aquaduct2"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object14515"
@@ -20847,7 +20853,8 @@
 		orgRel="1"
 		rot="-0.6962 0.0000 0.0000 0.7178"
 		id="aquaduct2"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object14570"

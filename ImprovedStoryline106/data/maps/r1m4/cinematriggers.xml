@@ -299,28 +299,28 @@
 
 	<!--		ролик с босом "война бобра с ослом"	:-)		-->
 	<trigger Name="RolikBegin_Boss02" active="0">
-		<event timeout="1" eventid="GE_TIME_PERIOD" />
+		<event timeout="2" eventid="GE_TIME_PERIOD" />
 		<script>
-		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-		GetPlayerVehicle():SetThrottle( 0 )
+			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
+			GetPlayerVehicle():SetThrottle( 0 )
 
-		EnableGodMode()
+			EnableGodMode()
 
-		PlayCustomMusic("Techno01")
-		TActivate("RolikEnd_Boss02")
-		TActivate("trBoss02_cam01")
-		TActivate("trBoss02_cam02")
-		TActivate("trBoss02_cam03")
+			PlayCustomMusic("Techno01")
+			TActivate("RolikEnd_Boss02")
+			TActivate("trBoss02_cam01")
+			TActivate("trBoss02_cam02")
+			TActivate("trBoss02_cam03")
 
-		local BossID = GetEntityByName("bigboss1"):GetId()
-		local vehPID = GetPlayerVehicleId()
+			local BossID = GetEntityByName("bigboss1"):GetId()
+			local vehPID = GetPlayerVehicleId()
 
-		Fly("Boss02_cam01", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 1, 0 )
-		Fly("Boss02_cam02", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
-		FlyLinked("Boss02_cam03", vehPID, 13.5, 0, 1, BossID, nil, nil, nil, nil )
-		StartCinematic()
+			Fly("Boss02_cam01", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 1, 0 )
+			Fly("Boss02_cam02", CINEMATIC_NO_AIM, 0, 14, 0, 0 )
+			FlyLinked("Boss02_cam03", vehPID, 13.5, 0, 1, BossID, nil, nil, nil, nil )
+			StartCinematic()
 
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -328,14 +328,14 @@
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetGamePositionOnGround( CVector(741.410, 271.384, 1461.900))
-			vehPlayer:SetRotation(Quaternion(0.022, 0.881, -0.034, 0.472))
-			vehPlayer:SetExternalPathByName("player_path06")
-		end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(741.410, 271.384, 1461.900))
+				vehPlayer:SetRotation(Quaternion(0.022, 0.881, -0.034, 0.472))
+				vehPlayer:SetExternalPathByName("player_path06")
+			end
 
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -343,13 +343,13 @@
 		<event flypath="Boss02_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:PlaceToEndOfPath("player_path06")
-		end
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath("player_path06")
+			end
 
-		AddCinematicMessage( 15, 0.5)
-		AddCinematicMessage( 16, 0.5)
+			AddCinematicMessage( 15, 0.5)
+			AddCinematicMessage( 16, 0.5)
 
 
 		trigger:Deactivate()
@@ -359,9 +359,9 @@
 	<trigger Name="trBoss02_cam03" active="0">
 		<event flypath="Boss02_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-		AddCinematicMessage( 17, 0.5)
+			AddCinematicMessage( 17, 0.5)
 
-		trigger:Deactivate()
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -370,31 +370,31 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
-		local vehPlayer = GetPlayerVehicle()
-		if vehPlayer then
-			vehPlayer:SetExternalPathByName("player_path06")
-			vehPlayer:PlaceToEndOfPath("player_path06")
-		end
-
-		TActivate("trGateClose")
-
-		TDeactivate("RolikBegin_Boss02")
-		TDeactivate("trBoss02_cam01")
-		TDeactivate("trBoss02_cam02")
-		TDeactivate("trBoss02_cam03")
-
-		PlayCustomMusic("Battle01")
-		SetCameraBehindPlayerVehicle()
-		local boss = getObj("bigboss1")
-		if boss then
-			ShowBossIndicator( boss:GetId() )
-		end
-
-		DisableGodMode()
-
-		AllowSave(false)
-
-		trigger:Deactivate()
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetExternalPathByName("player_path06")
+				vehPlayer:PlaceToEndOfPath("player_path06")
+			end
+			
+			TActivate("trGateClose")
+			
+			TDeactivate("RolikBegin_Boss02")
+			TDeactivate("trBoss02_cam01")
+			TDeactivate("trBoss02_cam02")
+			TDeactivate("trBoss02_cam03")
+			
+			PlayCustomMusic("Battle01")
+			SetCameraBehindPlayerVehicle()
+			local boss = getObj("bigboss1")
+			if boss then
+				ShowBossIndicator( boss:GetId() )
+			end
+			
+			DisableGodMode()
+			
+			AllowSave(false)
+			
+			trigger:Deactivate()
 		</script>
 	</trigger>
 

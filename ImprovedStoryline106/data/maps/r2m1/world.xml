@@ -2,7 +2,7 @@
 <World
 	name="Object13"
 	class="SgNode"
-	LastId="76478815">
+	LastId="76479034">
 	<Node
 		name="Object3"
 		class="SgAnimatedModelNode"
@@ -139,7 +139,8 @@
 		orgRel="1"
 		rot="0.0000 -0.4617 0.0000 0.8870"
 		id="city_ruins"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object47"
@@ -455,7 +456,8 @@
 		orgRel="1"
 		rot="0.1215 0.6662 -0.1066 0.7280"
 		id="ruin_town_hose_1"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object284"
@@ -528,7 +530,8 @@
 		rot="0.1414 -0.6193 0.1114 0.7642"
 		scale="3.154 3.154 3.154"
 		id="wood_tramp"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object342"
@@ -17433,7 +17436,8 @@
 		orgRel="1"
 		scale="0.850 0.850 0.850"
 		id="prom_3"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object8171"
@@ -17443,7 +17447,8 @@
 		rot="0.0000 0.6836 0.0000 -0.7299"
 		scale="0.681 0.681 0.681"
 		id="prom_brock1"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object8172"
@@ -17463,7 +17468,8 @@
 		rot="0.0000 0.8515 0.0000 -0.5244"
 		scale="0.446 0.446 0.446"
 		id="prom_brock1"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object8174"
@@ -18192,7 +18198,8 @@
 		rot="-0.0843 0.0107 -0.1257 0.9884"
 		scale="0.941 0.941 0.941"
 		id="prom_3"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object8539"
@@ -18202,7 +18209,8 @@
 		rot="-0.4086 0.1841 0.8465 -0.2874"
 		scale="0.868 0.868 0.868"
 		id="berth"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object8541"
@@ -24820,7 +24828,8 @@
 		rot="0.0000 -0.4501 0.0000 -0.8930"
 		scale="0.446 0.446 0.446"
 		id="prom_brock1"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object009836"
@@ -32252,8 +32261,9 @@
 		orgRel="1"
 		rot="-0.6588 -0.2618 -0.2480 0.6602"
 		scale="1.266 1.266 1.266"
-		id="fence_long2_Sibilla"
-		ndmAction="0" />
+		id="fence_long2"
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object76478490"
@@ -32262,6 +32272,7 @@
 		orgRel="1"
 		rot="0.2624 -0.6551 -0.6640 -0.2473"
 		scale="1.266 1.266 1.266"
-		id="fence_long2_Sibilla"
-		ndmAction="0" />
+		id="fence_long2"
+		ndmAction="0"
+		CastShadow="no" />
 </World>

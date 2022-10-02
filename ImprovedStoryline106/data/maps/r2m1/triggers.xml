@@ -9,6 +9,7 @@
 
 			SetVar("R", 0)
 			SetVar("Go",0)
+			SetVar("AutoSaveCount", 0)
 			SetVar("KnownMap",0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
@@ -27,6 +28,19 @@
 
 			for i=1,19 do
 				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[random(len)], random(0, 2))
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Автосохранение -->
+	<trigger Name="trAutoSave" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("AutoSaveCount").AsInt == 0 then
+				SetVar("AutoSaveCount", 1)
+				AutoSave()
 			end
 
 			trigger:Deactivate()
@@ -98,10 +112,8 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 
-			local tp = GetEntityByName("TheNewSibilla")
-			tp:SetOpenGateToPlayer( false )
-
-			SetConditionalClosingForTown( "TheNewSibilla", "r2m1", true )
+			local tp = GetEntityByName("TheNewSibilla_enter")
+			if tp then tp:SetProperty("Active", 0) end
 
 			trigger:Deactivate()
 		</script>
@@ -111,10 +123,8 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 
-			local tp = GetEntityByName("TheNewSibilla")
-			tp:SetOpenGateToPlayer( true )
-
-			SetConditionalClosingForTown( "TheNewSibilla", "r2m1", false )
+			local tp = GetEntityByName("TheNewSibilla_enter")
+			if tp then tp:SetProperty("Active", 1) end
 
 			for i = 1,8 do
 				local kol = GetEntityByName("koluch"..i)
@@ -228,7 +238,7 @@
 	<trigger Name="trCaravanToVill1" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			local vehCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANvvt_vehicle_0", CVector(2594.703, 260, 1755.095), 1016)
+			local vehCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANvvt_vehicle_0", CVector(2626.940, 281.148, 1704.669), 1016, Quaternion(0.002, 0.439, -0.009, -0.898))
 			if vehCar then
 				vehCar:AttachTrailer("MolokovozTrailer")
 				PaintTrailer(vehCar)
@@ -242,6 +252,11 @@
 			TActivate( "trCaravanToVill1INPLACE" )
 			TActivate( "trCaravanLength" )
 			TDeactivate("triggerExitToMap13")
+
+			for car = 0,1 do
+				local veh = GetEntityByName("SNGArmy1"):GetVehicle(car)
+				if veh then veh:Remove() end
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -442,12 +457,20 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ParisLocation" />
 		<script>
 			if  IsQuestTaken("d_MoveInParis_Quest") and not(IsQuestComplete("d_MoveInParis_Quest") or IsQuestFailed("d_MoveInParis_Quest"))  then
+
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetCustomControlEnabled( true )
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+					vehPlayer:SetCustomControlEnabled( false )
+				end
+
 				TActivate("RolikBegin_OPARIS")
 
-   				CompleteQuest( "d_MoveInParis_Quest" )
+				TActivate("trAutoSave")
 
-				TActivate("PARISTUBECREATE")
-				TActivate("TRIGGER_OPARISPARISBOSSDIE")
+				AllowSave(false)
 
 				trigger:Deactivate()
 			end

@@ -1226,6 +1226,7 @@
 				Belong="1019"
 				Prototype="NPC"
 				ModelName="r3_man"
+				skin="2"
 				cfg="1137"
 				helloReplyNames="Dlg_npc_003026"
 				SpokenCount="0" />

@@ -18951,13 +18951,6 @@
 		trans="0" />
 
 	<model
-		id="fence_long2_Sibilla"
-		file="data\models\buildings\region3\factory\fence_long2.gam"
-		shadow="0"
-		windwavy="0"
-		trans="0" />
-
-	<model
 		id="cerkov"
 		file="data\models\buildings\region1\cemetery\cerkov.gam"
 		shadow="0"

@@ -66,6 +66,14 @@
 			CompleteQuest("Chifir_Quest")
 			TakeQuest("FindBen2_Quest")
 
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetGamePositionOnGround(CVector(4236.602, 68.916, 5117.343))
+				vehPlayer:SetRotation(Quaternion(0.046, 0.988, -0.007, 0.148))
+			end
+
 			local shl1 = GetEntityByName("MisterShlyapaFM")
 			if shl1 then shl1:SetProperty("Active",1) end
 			

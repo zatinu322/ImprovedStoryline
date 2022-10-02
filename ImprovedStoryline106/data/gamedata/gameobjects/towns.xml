@@ -1048,7 +1048,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			NodeScale	= "1 1 1" 
 
 			MusicName		= "military_town1"
-			GateModelFile 	= ""
+			GateModelFile 	= "gate_monastyr"
 
 			NumCollisionLayersBelowVehicle = "0"
 
@@ -3191,8 +3191,21 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "25" 
 
-			Vehicles 	= ""
-			/>
+			Vehicles 	= "" />
+
+		<Prototype
+			Class		= "Town"
+			Name		= "PetrolStationTown_NoSt"
+			ModelFile	= "point"
+			NodeScale	= "1 1 1" 
+
+			GateModelFile 	= ""
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "25" 
+
+			Vehicles 	= "" />
 
 		<Prototype
 			Class		= "Town"

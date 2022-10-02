@@ -14570,31 +14570,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object8622"
-		class="SgAnimatedModelNode"
-		org="1515.720 -1.406 2359.554"
-		orgRel="1"
-		rot="-0.0108 0.6819 0.0108 -0.7313"
-		id="r2_substation_barrel"
-		ndmAction="0" />
-
-	<Node
-		name="Object8623"
-		class="SgAnimatedModelNode"
-		org="1532.312 -1.287 2442.721"
-		orgRel="1"
-		id="r2_substation_barrel"
-		ndmAction="0" />
-
-	<Node
-		name="Object8624"
-		class="SgAnimatedModelNode"
-		org="1523.373 -1.287 2442.399"
-		orgRel="1"
-		id="r2_substation_barrel"
-		ndmAction="0" />
-
-	<Node
 		name="Object8629"
 		class="SgAnimatedModelNode"
 		org="2712.294 16.877 3522.964"

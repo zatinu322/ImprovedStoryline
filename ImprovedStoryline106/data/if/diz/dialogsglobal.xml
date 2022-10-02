@@ -5812,7 +5812,7 @@
 		name="TrashFarmer_hellodlg1"
 		text="Ага, ты привез мне этот движок. Спасибо. Вот твои честно заработанные монеты."
 		role="NPC"
-		scriptCondition="IsQuestTaken('r2m2_OldDvigatel2_Quest')  and  not(IsQuestComplete('r2m2_OldDvigatel2_Quest'))  and  not(IsQuestFailed('r2m2_OldDvigatel2_Quest'))"
+		scriptCondition="IsQuestTaken('r2m2_OldDvigatel2_Quest')  and  not(IsQuestComplete('r2m2_OldDvigatel2_Quest'))  and  not(IsQuestFailed('r2m2_OldDvigatel2_Quest')) and GetVar('MarezziaCutscene').AsInt == 0"
 		nextReplies="Dlg_pl_001255" />
 
 	<Reply
@@ -5966,9 +5966,21 @@
 
 	<Reply
 		name="Dlg_pl_002185"
+		text="Эй, погоди! Зачем туда ехать? Что там находится?"
+		role="PLAYER"
+		scriptResult="TakeQuest('MrShlyapa3_Quest'); TActivate('Shlyapa3cin'); TActivate('ShlyapaSpokenCounts'); TDeactivate( 'StoneUralZapret' ); GetCurNpc():SetSpokenCount(1); StartConversation('MrShlyapaEmpty')" />
+
+	<Reply
+		name="Dlg_npc_003298"
+		role="NPC"
+		scriptCondition="IsQuestTaken('MrShlyapa3_Quest') and GetCurNpc():GetSpokenCount()==0"
+		nextReplies="Dlg_pl_003299" />
+
+	<Reply
+		name="Dlg_pl_003299"
 		text="Опять исчез... Меня начинают напрягать подобные разговоры. Надеюсь, это всё-таки галлюцинации из-за стресса."
 		role="PLAYER"
-		scriptResult="TakeQuest('MrShlyapa3_Quest'); TActivate('Shlyapa3cin'); TActivate('ShlyapaSpokenCounts'); TDeactivate( 'StoneUralZapret' ); GetCurNpc():SetSpokenCount(1); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 <!--Root/r2m2/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003023"
@@ -6385,7 +6397,7 @@
 		name="Dlg_pl_002284"
 		text="И почему я ожидал подобный исход?"
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('Podderzhka_cin'); LeaveTown(true)" />
+		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('trMarezziaHuksExit'); SetVar('MarezziaCutscene', 1) LeaveTown()" />
 <!--Root/r2m2/Сюжетные/Монах-->
 	<Reply
 		name="Monah_hellodlg0out"
@@ -8137,6 +8149,7 @@
 		name="Dlg_npc_002254"
 		text="Ну, в принципе, у тебя есть три варианта. Ты либо воюешь на стороне СНГ, либо на стороне АР, либо ты принимаешь единственно верное решение и помогаешь нам прекратить это бессмысленное кровопролитие."
 		role="NPC"
+		scriptResult="AddBook('r1_book_true_ar')"
 		nextReplies="Dlg_pl_002258 Dlg_pl_002255" />
 
 	<Reply
@@ -8265,7 +8278,7 @@
 		name="Dlg_pl_002290"
 		text="Так точно!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); TActivate('TheNewSibillaOpen'); EndConversation()" />
+		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002295"
@@ -8349,13 +8362,13 @@
 
 	<Reply
 		name="Dlg_pl_002342"
-		text="Рад стараться. Ну что, Алый Рассвет повержен, война закончилась. Теперь остаётся только наладить диалог между двумя странами, и в этот регион придёт мир. А сейчас прошу меня извинить, но мне пора в Гельвецию."
+		text="Рад стараться. Ну что, Алый Рассвет повержен, война закончилась. Теперь остаётся только наладить диалог между двумя странами, и в этот регион придёт мир. Одно меня беспокоит - по пути к вам меня попытались обстрелять СНГ. Наверняка это какая-то ошибка, но..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002343" />
 
 	<Reply
 		name="Dlg_npc_002343"
-		text="Если бы всё было так просто. Видишь ли, засранцам из СНГ не нужно прекращение войны. Они не остановятся, пока полностью не захватят Аржан. И теперь, когда там разруха, у них есть все шансы на успех. И да, в Гельвецию теперь нам путь заказан. Почти все силы СНГ теперь направлены на то, чтобы определить наше местоположение."
+		text="Ошибка, как же! Видишь ли, засранцам из СНГ не нужно прекращение войны. Они не остановятся, пока полностью не захватят Аржан. И теперь, когда там разруха, у них есть все шансы на успех. И да, в Гельвецию теперь тебе путь заказан. Почти все силы СНГ теперь направлены на то, чтобы определить наше местоположение."
 		role="NPC"
 		nextReplies="Dlg_pl_002344" />
 
@@ -8387,7 +8400,7 @@
 		name="Dlg_pl_002348"
 		text="Понял. Приступаю."
 		role="PLAYER"
-		scriptResult="CompleteQuest('ReturnQuest'); TActivate('TUNELFIGHT1'); EndConversation()" />
+		scriptResult="CompleteQuest('ReturnQuest'); TActivate('TUNELFIGHT'); EndConversation()" />
 <!--Root/r1m4/Разговоры с Гомером-->
 	<Reply
 		name="r1m4Random_Bar_Gomer1_N03"
@@ -12771,7 +12784,7 @@
 		name="Dlg_pl_002640"
 		text="Восхитительная наглость! Приготовьтесь умереть!"
 		role="PLAYER"
-		scriptResult="SetVar('ZasadaAR',0); SetTolerance(1100,1015,RS_ENEMY); TActivate('trZasadaAR_Create'); EndConversation()" />
+		scriptResult="SetVar('ZasadaAR',0); SetTolerance(1100,1046,RS_ENEMY); TActivate('trZasadaAR_Create'); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Разговор о воре-->
 	<Reply
 		name="AboutThief_hellodlg0"

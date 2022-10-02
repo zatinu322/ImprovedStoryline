@@ -638,28 +638,13 @@
 				CreateVehicleEx( "TSPFighter", "ArmyVeh2", CVector(6020.172, 237.190, 1926.912), 1010, Quaternion(0.004, 0.276, 0.015, 0.961) )
 				CreateVehicleEx( "tspfighter2", "ArmyVeh3", CVector(6012.056, 236.525, 1931.321), 1010, Quaternion(0.041, 0.236, -0.038, 0.970) )
 
-				local veh1 = GetEntityByName("ArmyVeh1")
-				if veh1 then
-					veh1:SetRotation(Quaternion(-0.063, 0.206, 0.004, -0.976))
-					veh1:setGodMode(1)
-					veh1:setImmortalMode(1)
-					veh1:SetRandomSkin()
-				end
-
-				local veh2 = GetEntityByName("ArmyVeh2")
-				if veh2 then
-					veh2:SetRotation(Quaternion(-0.001, -0.033, -0.003, -0.999))
-					veh2:setGodMode(1)
-					veh2:setImmortalMode(1)
-					veh2:SetRandomSkin()
-				end
-				
-				local veh3 = GetEntityByName("ArmyVeh3")
-				if veh3 then
-					veh3:SetRotation(Quaternion(-0.015, -0.461, 0.090, -0.883))
-					veh3:setGodMode(1)
-					veh3:setImmortalMode(1)
-					veh3:SetRandomSkin()
+				for car = 1,3 do
+					local veh = GetEntityByName("ArmyVeh"..car)
+					if veh then
+						veh:setGodMode(1)
+						veh:setImmortalMode(1)
+						veh:SetRandomSkin()
+					end
 				end
 
 				TActivate( "ArmiaTSPPreparationBegin" )
@@ -673,7 +658,10 @@
 	<trigger Name="TRIGGER_THIEFWAR" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("ThiefCar",1002,CVector(6919.780, 297.239, 1115.137),{"UralShot"}, nil, 0, Quaternion(-0.030, 0.866, -0.000, 0.498))
+			TeamCreate("ThiefCar",1044,CVector(6919.780, 297.239, 1115.137),{"UralShot"}, nil, 0, Quaternion(-0.030, 0.866, -0.000, 0.498))
+
+			SetTolerance(1100, 1044, RS_ENEMY)
+			SetTolerance(1012, 1044, RS_ALLY)
 
 			TActivate("TRIGGER_THIEFDIE")
 
@@ -850,15 +838,12 @@
 	<trigger Name="trZasadaAR_Delete" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			local zas1 = GetEntityByName("ZasadaAR1")
-			local zas2 = GetEntityByName("ZasadaAR2")
-			if zas1 then
-				zas1:Remove()
+
+			for car = 1,2 do
+				local veh = GetEntityByName("ZasadaAR"..car)
+				if veh then veh:Remove() end
 			end
-			
-			if zas2 then
-				zas2:Remove()
-			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -866,28 +851,16 @@
 	<trigger Name="trZasadaAR_Create" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			local zas1 = GetEntityByName("ZasadaAR1")
-			local zas2 = GetEntityByName("ZasadaAR2")
-			if zas1 then
-				zas1:Remove()
+
+			for car = 1,2 do
+				local veh = GetEntityByName("ZasadaAR"..car)
+				if veh then veh:Remove() end
 			end
 			
-			if zas2 then
-				zas2:Remove()
-			end
-			
-			TeamCreate("ZasadaARTeam",1015,CVector(1798.483, 279.056, 5487.830),{"Cruiser01", "CoolBelaz_2"})
+			TeamCreate("ZasadaARTeam",1046,CVector(1798.483, 279.056, 5487.830),{"Cruiser01", "CoolBelaz_2"})
 			
 			TActivate("trZasadaAR_Dead")
 			
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="trZasadaAR_Dead" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="ZasadaARTeam" />
-		<script>
-			SetTolerance(1100,1015,RS_ALLY)
 			trigger:Deactivate()
 		</script>
 	</trigger>

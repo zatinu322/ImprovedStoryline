@@ -37,6 +37,10 @@
 		FullName="Мистер Шляпа" />
 
 	<Object
+		Name="MrShlyapaEmpty"
+		FullName=" " />
+
+	<Object
 		Name="Ateist1"
 		FullName="Крестьянка Алессандра" />
 
@@ -94,6 +98,10 @@
 
 	<Object
 		Name="TrashFarmer"
+		FullName="Мусорщик Сакс" />
+
+	<Object
+		Name="TrashFarmer1"
 		FullName="Мусорщик Сакс" />
 
 	<Object

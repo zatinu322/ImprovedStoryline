@@ -344,13 +344,14 @@
 		getObj("Zaval01"):SetPosition( CVector(3193.610, 430.741, 3396.857))
 
 		StopPlayingCustomMusic()
+
 		TDeactivate("trDestroyCave_cam01")
 		TDeactivate("trDestroyCave_cam02")
 		TDeactivate("trDestroyCave_PathOut")
+
 		SetCameraBehindPlayerVehicle()
-		RestoreAllToleranceStatus()
 		
-		TDeactivate("RobotsCinem2")
+		RestoreAllToleranceStatus()
 		
 		trigger:Deactivate()
 		</script>

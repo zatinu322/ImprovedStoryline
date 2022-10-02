@@ -111,7 +111,7 @@
 	<trigger Name="CreateHomerRybak" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateNewDummyObject( "dweller3", "humGomer", -1, -1, CVector(3502.483, 208.900, 3717.994), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+			CreateNewDummyObject( "dweller3", "humGomer", -1, -1, CVector(3502.483, 208.900, 3717.994), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2)
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -153,6 +153,7 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearBoss_loc" />
 		<script>
 			TActivate("trAutoSave")
+			
 			TActivate("RolikBegin_Boss02")
 
 			AllowSave(false)

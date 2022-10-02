@@ -2345,10 +2345,6 @@
 		<Item
 			id="light_dots_brocken2"
 			file="data\models\AnimModels.xml" />
-		
-		<Item
-			id="fence_long2_Sibilla"
-			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 
 	<StaticModelsServer />

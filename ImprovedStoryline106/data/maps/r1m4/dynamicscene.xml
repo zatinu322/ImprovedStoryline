@@ -4121,8 +4121,8 @@
 		Name="FilimonLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3791.353 249.000 962.527"
-		Radius="50.000">
+		Pos="3856.241 249.000 924.827"
+		Radius="77.000">
 		<Object
 			Name="FVCalis_Bar_Husbent1"
 			Belong="1100"

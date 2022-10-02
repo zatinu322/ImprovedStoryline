@@ -6,6 +6,7 @@
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			SetVar("KnownMap",0)
+			SetVar("MarezziaCutscene", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			local zeon = getObj("Zeon_enter")
@@ -16,6 +17,11 @@
 			if QuestStatus("MrShlyapa2_Quest")==Q_COMPLETED then
 				TActivate("StoneUralZapret")
 			end
+
+			CreateNewDummyObject("petrolstation", "FuelStBarrel1", -1, -1, CVector(1489.241, 292.000, 2397.451), Quaternion(0.000, -0.695, 0.000, 0.719), 0)
+			CreateNewDummyObject("r2_substation_barrel", "FuelStBarrel2", -1, -1, CVector(1515.720, 290.596, 2359.554), Quaternion(-0.0108, 0.6819, 0.0108, -0.7313), 0)
+			CreateNewDummyObject("r2_substation_barrel", "FuelStBarrel3", -1, -1, CVector(1532.312, 290.674, 2442.721), Quaternion(0, 0, 0, 1), 0)
+			CreateNewDummyObject("r2_substation_barrel", "FuelStBarrel4", -1, -1, CVector(1523.373, 290.713, 2442.399), Quaternion(0, 0, 0, 1), 0)
 
 			trigger:Deactivate()
 		</script>
@@ -95,6 +101,17 @@
 	</trigger>
 
 <!-- ÀÍÒÈÌÈËËÈÒÀÐÈÑÒÛ è ÑÍÃ -->
+	<!-- Âûåçä èç Ìàðåööèè ïîñëå ðàçãîâîðà ñ Õóêñîì -->
+	<trigger Name="trMarezziaHuksExit" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			TActivate("Podderzhka_cin")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Ìàðåööèÿ -->
 	<trigger Name="MarezziaClose" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
@@ -104,6 +121,9 @@
 			tp:SetOpenGateToPlayer( false )
 
 			SetConditionalClosingForTown( "Marezzia", "r2m2", true )
+
+			local sucks = GetEntityByName("MarezziaSucks_loc")
+			if sucks then sucks:SetProperty("Active", 1) end
 
 			trigger:Deactivate()
 		</script>
@@ -125,6 +145,9 @@
 				end
 
 			SetConditionalClosingForTown( "Monastery", "r2m2", true )
+
+			local sucks = GetEntityByName("MarezziaSucks_loc")
+			if sucks then sucks:SetProperty("Active", 0) end
 
 			trigger:Deactivate()
 		</script>
@@ -205,14 +228,45 @@
 
 			TeamCreate("EretFriendKillers",1017,CVector(1534.165, 292.030, 2408.654),{"r2m1_Fighter01", "Ural00", "Cruiser01"})
 
-			GetEntityByName("PetrolStationTown2"):SetOpenGateToPlayer( false )
-			GetEntityByName("PetrolStationTown2"):SetRuined( true )
-			SetConditionalClosingForTown( "PetrolStationTown2", "r2m2", true )
-
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(1511.523, 292, 2353.962), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(1483.508, 292, 2395.730), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(1517.705, 292, 2445.091), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(1526.627, 292, 2444.976), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+
+			local fuelst = GetEntityByName("PetrolStationTown2")
+			if fuelst then fuelst:SetRuined( true ) end
+
+			CreateNewDummyObject("segments_big_02", "FStRuins2", -1, -1, CVector(1521.933, 292.000, 2432.144), Quaternion(0.0000, -0.2143, 0.0000, 0.9768), 0)
+			CreateNewDummyObject("segments_big_03", "FStRuins3", -1, -1, CVector(1487.419, 291.801, 2391.893), Quaternion(0.0187, 0.0447, 0.2582, 0.9649), 0)
+			CreateNewDummyObject("segments_big_04", "FStRuins4", -1, -1, CVector(1534.876, 292.019, 2411.714), Quaternion(0, 0, 0, 1), 0)
+			CreateNewDummyObject("segments_big_05", "FStRuins5", -1, -1, CVector(1493.815, 292.000, 2426.922), Quaternion(0.0000, 0.3645, 0.0000, 0.9312), 0)
+			CreateNewDummyObject("segments_big_06", "FStRuins6", -1, -1, CVector(1502.810, 291.851, 2382.083), Quaternion(0.0000, -0.7314, 0.0000, 0.6820), 0)
+			CreateNewDummyObject("segments_big_07", "FStRuins7", -1, -1, CVector(1512.019, 291.988, 2396.315), Quaternion(-0.7384, -0.0516, -0.0469, 0.6707), 0)
+			CreateNewDummyObject("segments_big_08", "FStRuins8", -1, -1, CVector(1519.612, 291.852, 2368.838), Quaternion(0.0300, 0.1864, 0.0057, 0.9820), 0)
+
+			local BarrelPos = {CVector(1481.059, 290.255, 2400.320), 
+							   CVector(1515.720, 290.255, 2359.554), 
+							   CVector(1532.312, 287.103, 2442.721), 
+							   CVector(1516.439, 300.873, 2433.815)}
+
+			local BarrelRot = {Quaternion(-0.0879, -0.6739, -0.0813, 0.7290), 
+							   Quaternion(0.1132, 0.6906, -0.1411, -0.7003), 
+							   Quaternion(-0.1908, 0.2475, -0.0498, 0.9486), 
+							   Quaternion(0.1539, 0.1552, 0.7448, 0.6305)}
+
+			for bar = 1, 4 do
+				local fstb = GetEntityByName("FuelStBarrel"..bar)
+				if fstb then 
+					fstb:SetPosition(BarrelPos[bar])
+					fstb:SetRotation(BarrelRot[bar])
+				end
+			end
+
+			local humans = {"Human5etertert6", "Human36", "Human53"}		
+			for i = 1,3 do
+				local hum = GetEntityByName(humans[i])
+				if hum then hum:Remove() end
+			end
 			
 			TActivate("EretFriendDIE")
 
@@ -239,44 +293,22 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 		
-			CreateVehicleEx( "r1m3_hunter03", "EretCrewVeh1", CVector(2713.906, 260.585, 950.311), 1083 )
-			CreateVehicleEx( "Hunter01", "EretCrewVeh2", CVector(2709.803, 260.460, 923.294), 1083 )
-			CreateVehicleEx( "Cruiser01", "EretCrewVeh3", CVector(2750.392, 260.074, 955.896), 1083 )
-			CreateVehicleEx( "Hunter01", "EretCrewVeh4", CVector(2678.722, 260.542, 940.045), 1083 )
+			CreateVehicleEx( "r1m3_hunter03", "EretCrewVeh1", CVector(2713.906, 260.585, 950.311), 1083, Quaternion(0.006, -0.312, -0.002, 0.950) )
+			CreateVehicleEx( "Hunter01", "EretCrewVeh2", CVector(2709.803, 260.460, 923.294), 1083, Quaternion(0.003, 0.190, -0.025, 0.981) )
+			CreateVehicleEx( "Cruiser01", "EretCrewVeh3", CVector(2750.392, 260.074, 955.896), 1083, Quaternion(-0.000, -0.387, 0.003, 0.922) )
+			CreateVehicleEx( "Hunter01", "EretCrewVeh4", CVector(2678.722, 260.542, 940.045), 1083, Quaternion(0.020, 0.245, 0.019, 0.969) )
 			
-			local vehEret1 = GetEntityByName("EretCrewVeh1")
-			local vehEret2 = GetEntityByName("EretCrewVeh2")
-			local vehEret3 = GetEntityByName("EretCrewVeh3")
-			local vehEret4 = GetEntityByName("EretCrewVeh4")
-			if vehEret1 then
-				vehEret1:SetRotation(Quaternion(0.006, -0.312, -0.002, 0.950))
-				vehEret1:setGodMode(1)
-				vehEret1:SetRandomSkin()
-			end
-			if vehEret2 then
-				vehEret2:SetRotation(Quaternion(0.003, 0.190, -0.025, 0.981))
-				vehEret2:setGodMode(1)
-				vehEret2:SetRandomSkin()
-			end
-			if vehEret3 then
-				vehEret3:SetRotation(Quaternion(-0.000, -0.387, 0.003, 0.922))
-				vehEret3:setGodMode(1)
-				vehEret3:SetRandomSkin()
-			end
-			if vehEret4 then
-				vehEret4:SetRotation(Quaternion(0.020, 0.245, 0.019, 0.969))
-				vehEret4:setGodMode(1)
-				vehEret4:SetRandomSkin()
-			end
+			for i = 1,4 do
+				local veh = GetEntityByName("EretCrewVeh"..i)
+				if veh then
+					veh:setGodMode(1)
+					veh:setImmortalMode(1)
+					veh:SetRandomSkin()
+				end
 
-			local hs1 = GetEntityByName("FIRE01")
-			if hs1 then hs1:Remove() end
-			local hs2 = GetEntityByName("FIRE02")
-			if hs2 then hs2:Remove() end
-			local hs3 = GetEntityByName("FIRE03")
-			if hs3 then hs3:Remove() end
-			local hs4 = GetEntityByName("FIRE04")
-			if hs4 then hs4:Remove() end
+				local hs = GetEntityByName("FIRE0"..i)
+				if hs then hs:Remove() end
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -287,21 +319,9 @@
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			
-			local vehEret1 = GetEntityByName("EretCrewVeh1")
-			local vehEret2 = GetEntityByName("EretCrewVeh2")
-			local vehEret3 = GetEntityByName("EretCrewVeh3")
-			local vehEret4 = GetEntityByName("EretCrewVeh4")
-			if vehEret1 then
-				vehEret1:SetExternalPathByName("EretOff_Path")
-			end
-			if vehEret2 then
-				vehEret2:SetExternalPathByName("EretOff_Path")
-			end
-			if vehEret3 then
-				vehEret3:SetExternalPathByName("EretOff_Path")
-			end
-			if vehEret4 then
-				vehEret4:SetExternalPathByName("EretOff_Path")
+			for car = 1,4 do
+				local veh = GetEntityByName("EretCrewVeh"..car)
+				if veh then veh:SetExternalPathByName("EretOff_Path") end
 			end
 
 			trigger:Deactivate()

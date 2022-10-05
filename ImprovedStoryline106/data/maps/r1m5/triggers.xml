@@ -6,34 +6,18 @@
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			local town = GetEntityByName ("TheSign")
-			if town then
-				town:SetRuined(true)
-			end
+			if town then town:SetRuined(true) end
 			
 			SetVar("KnownMap",0)
 			SetVar("Tikhomir",0)
+			SetVar("CurComponent",0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
-			CreateNewDummyObject("minin", "rinolskbuilding", -1, -1, CVector(1949.495, 255.193, 338.593), Quaternion(-0.004, -0.666, -0.005, -0.746), 0)
-			CreateNewDummyObject("big_gate01", "rinolskgate", -1, -1, CVector(1919.866, 258.721, 341.483), Quaternion(-0.004, -0.659, -0.005, -0.752), 0)
-			getObj("rinolskgate"):SetNodeAction(AT_RESERVED3)
+			CreateNewDummyObject("metal_plate1", "BPlate", -1, -1, CVector(2086.678, 255.500, 1321.640), Quaternion(-0.5943, 0.5918, -0.3824, 0.3878), 0)
 
 			TActivate("CreateWalkingHumans")
-			TActivate("SpawnRinolskGates")
 			
 			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<!-- Фейк ворота для Ринольска -->
-	<trigger Name="SpawnRinolskGates" active="0">
-		<event eventid="GE_GAME_START" ObjName="Player1" />
-		<script>
-			local rgates = getObj("rinolskgate")
-			if rgates then
-				rgates:SetNodeAction(AT_RESERVED3)
-			end
-
 		</script>
 	</trigger>
 
@@ -284,6 +268,81 @@
 
 			CompleteQuest("KillTikhomir_Quest1")
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Создаём детали для аппарата Братислава -->
+	<trigger Name="trComponentsCreate" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewDummyObject("gadget_03", "BComponent1", -1, -1, CVector(2089.521, 256.056, 1327.646), Quaternion(-0.6127, 0.3591, 0.3560, 0.6074), 0)
+			CreateNewSgNodeObject( "gadget_07", "BComponent2", -1, -1, CVector(689.960, 270.620, 3268.822), Quaternion(-0.526, 0.592, -0.405, 0.456), 0.258)
+			CreateNewDummyObject("gadget_04", "BComponent3", -1, -1, CVector(3461.680, 415.693, 3587.736), Quaternion(0.5129, 0.3781, -0.7224, -0.2684), 0)
+
+			local eBars = {CVector(2081.526, 255.000, 1325.059), CVector(2082.647, 255.000, 1325.511), CVector(2083.397, 255.000, 1324.624), CVector(2082.096, 255.000, 1324.030)}
+			for pos = 1,4 do
+				CreateNewBreakableObject( "Breakable_Barrel_Explosive2", "ExpBarrel"..pos, 1001, eBars[pos], Quaternion(0, 0, 0, 1), 0 )
+			end
+
+			TActivate("trBarrelsExploded")
+			TActivate("tr2ndComponentFound")
+			TActivate("tr3rdComponentFound")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Бочки взорвались, контейнер открылся -->
+	<trigger Name="trBarrelsExploded" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ExpBarrel1" />
+		<event eventid="GE_OBJECT_DIE" ObjName="ExpBarrel2" />
+		<event eventid="GE_OBJECT_DIE" ObjName="ExpBarrel3" />
+		<event eventid="GE_OBJECT_DIE" ObjName="ExpBarrel4" />
+		<script>
+			local mplate = GetEntityByName("BPlate")
+			if mplate then mplate:Remove() end
+
+			CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", CVector(2086.710, 255.117, 1321.848), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
+
+			TActivate("tr1stComponentFound")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Нашли первую запчасть -->
+	<trigger Name="tr1stComponentFound" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Ananaga_loc1" />
+		<script>
+			SetVar("CurComponent", 1)
+
+			TActivate("BComponentsFoundStart")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Нашли вторую запчасть -->
+	<trigger Name="tr2ndComponentFound" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Ananaga_loc2" />
+		<script>
+			SetVar("CurComponent", 2)
+
+			TActivate("BComponentsFoundStart")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Нашли третью запчасть -->
+	<trigger Name="tr3rdComponentFound" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Ananaga_loc3" />
+		<script>
+			SetVar("CurComponent", 3)
+
+			TActivate("BComponentsFoundStart")
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>

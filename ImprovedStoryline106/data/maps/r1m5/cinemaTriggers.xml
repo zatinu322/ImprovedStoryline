@@ -713,6 +713,79 @@
 		</script>
 	</trigger>
 
+	<!-- Находим запчасти аппарата Братислава -->
+	<trigger Name="BComponentsFoundStart" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local comp = tostring(GetVar("CurComponent").AsInt)
+
+			Fly("BComponentsFound_path0"..comp, CINEMATIC_NO_AIM, nil, 7, 1, 1)
+			StartCinematic()
+
+			AddCinematicMessage("26"..comp, 1)
+
+			TActivate("BComponentsFoundFade")
+			TActivate("BComponentsFoundEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="BComponentsFoundFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local comp = GetVar("CurComponent").AsInt
+
+			local poses = {CVector(2066.753, 255.784, 1316.054), 
+						   CVector(684.131, 279.893, 3182.012), 
+						   CVector(3431.086, 398.795, 3550.731)}
+
+			local rots = {Quaternion(0.000, 0.542, 0.000, -0.841), 
+						  Quaternion(0.005, 0.998, 0.039, -0.046), 
+						  Quaternion(0.010, -0.947, 0.122, 0.296)}
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(poses[comp])
+				vehPlayer:SetRotation(rots[comp])
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="BComponentsFoundEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			local comp = tostring(GetVar("CurComponent").AsInt)
+
+			local zap = GetEntityByName("BComponent"..comp)
+			if zap then zap:Remove() end
+
+			AddQuestItem("quest_bratislav_component"..comp)
+			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_bratislav_component"..comp)
+
+			CompleteQuest("r1m5_AnanagaFind_Quest"..comp)
+
+			SetVar("CurComponent", 0)
+
+			TDeactivate("BComponentsFoundFade")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Осмотр поля со знаками -->
 	<trigger Name="RPGSignsRolik1" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="RPGSigns_loc" />

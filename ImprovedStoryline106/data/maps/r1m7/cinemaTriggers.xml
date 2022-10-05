@@ -3,7 +3,7 @@
 
 	<!-- Стартовый ролик -->
 	<trigger Name="NachRolikBegin" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
@@ -26,6 +26,7 @@
 			Fly("NachRolikCam5", CINEMATIC_NO_AIM, 0, 45, 0, 0 )
 			Fly("NachRolikCam6", CINEMATIC_NO_AIM, 0, 23, 0, 1 )
 			StartCinematic()
+			UpdateCinematic(1)
 			
 			TActivate("trNachRolikFade")
 			TActivate("trNachRolikCam1")
@@ -42,7 +43,7 @@
 	</trigger>
 
 	<trigger Name="trNachRolikFade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
 		<script>
 
 			PlayCustomMusic("Bio04")

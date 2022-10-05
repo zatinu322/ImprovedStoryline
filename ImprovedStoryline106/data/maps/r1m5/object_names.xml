@@ -26,8 +26,6 @@
 		Name="Esting_Bar"
 		FullName="Трактир &quot;Знание&quot;" />
 
-
-
 	<Object
 		Name="TheSign"
 		FullName="РУДНАЯ ШАХТА" />
@@ -239,5 +237,13 @@
 	<Object
 		Name="PlayerAboutTikhomirsFate"
 		FullName=" " />
+
+	<Object
+		Name="BratislavVolozh"
+		FullName="Рабочий Братислав" />
+
+	<Object
+		Name="BratislavRinolsk"
+		FullName="Рабочий Братислав" />
 
 </ObjectNames>

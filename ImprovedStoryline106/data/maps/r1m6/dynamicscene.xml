@@ -11074,9 +11074,33 @@
 
 		<Parts />
 
-		<EntryPath />
+		<EntryPath>
+			<Point
+				Pos="1676.405 2201.155" />
 
-		<ExitPath />
+			<Point
+				Pos="1663.284 2244.767" />
+
+			<CameraPoint
+				Pos="62.588 41.342 -126.617" />
+
+			<CameraPoint
+				Pos="40.236 32.845 -102.733" />
+		</EntryPath>
+
+		<ExitPath>
+			<Point
+				Pos="1663.284 2244.767" />
+
+			<Point
+				Pos="1676.405 2201.155" />
+
+			<CameraPoint
+				Pos="40.236 32.845 -102.733" />
+
+			<CameraPoint
+				Pos="62.588 41.342 -126.617" />
+		</ExitPath>
 	</Object>
 
 	<Object
@@ -12899,9 +12923,9 @@
 			Name="Esting_enter"
 			Belong="1091"
 			Prototype="genericLocation"
-			Pos="2269.825 255.000 737.411"
+			Pos="2272.133 255.000 725.535"
 			Rot="0.000 -0.998 0.000 -0.055"
-			Radius="24.022"
+			Radius="17.022"
 			LookingTimeOut="30.000" />
 
 		<Object
@@ -13066,30 +13090,30 @@
 
 		<EntryPath>
 			<Point
-				Pos="2269.455 764.936" />
+				Pos="2270.422 738.680" />
 
 			<Point
-				Pos="2270.693 685.888" />
+				Pos="2276.088 685.896" />
 
 			<CameraPoint
-				Pos="120.045 41.057 39.143" />
+				Pos="4.591 60.890 154.985" />
 
 			<CameraPoint
-				Pos="-76.431 41.168 62.278" />
+				Pos="6.188 48.248 121.164" />
 		</EntryPath>
 
 		<ExitPath>
 			<Point
-				Pos="2270.693 685.888" />
+				Pos="2276.088 685.896" />
 
 			<Point
-				Pos="2269.455 764.936" />
+				Pos="2270.422 738.680" />
 
 			<CameraPoint
-				Pos="-76.431 41.168 62.278" />
+				Pos="6.188 48.248 121.164" />
 
 			<CameraPoint
-				Pos="120.045 41.057 39.143" />
+				Pos="4.591 60.890 154.985" />
 		</ExitPath>
 	</Object>
 
@@ -33514,7 +33538,7 @@
 		Rot="0.000 -0.688 0.000 0.725" />
 
 	<Object
-		Name="heavy_dot4_big_rainmetal6845"
+		Name="bridge_dot1"
 		Belong="1089"
 		Prototype="heavy_dot4_big_rainmetal"
 		Pos="2881.225 255.025 3050.504"
@@ -33523,7 +33547,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_rainmetal6846"
+		Name="bridge_dot2"
 		Belong="1089"
 		Prototype="heavy_dot4_big_rainmetal"
 		Pos="2914.735 255.025 3010.761"
@@ -33532,7 +33556,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hunterLauncher6851"
+		Name="bridge_dot5"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hunterLauncher"
 		Pos="3090.358 254.981 3229.611"
@@ -33541,7 +33565,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hunterLauncher6852"
+		Name="bridge_dot3"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hunterLauncher"
 		Pos="3068.946 255.027 3210.570"
@@ -33550,7 +33574,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hunterLauncher6853"
+		Name="bridge_dot4"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hunterLauncher"
 		Pos="3102.302 255.027 3174.241"
@@ -33559,7 +33583,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hunterLauncher6854"
+		Name="bridge_dot6"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hunterLauncher"
 		Pos="3121.013 255.017 3189.711"
@@ -33568,7 +33592,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hurricane6855"
+		Name="bridge_dot10"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hurricane"
 		Pos="3290.667 255.017 3401.634"
@@ -33577,7 +33601,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hurricane6856"
+		Name="bridge_dot7"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hurricane"
 		Pos="3257.189 255.014 3374.856"
@@ -33586,7 +33610,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hurricane6858"
+		Name="bridge_dot9"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hurricane"
 		Pos="3320.836 255.017 3363.197"
@@ -33595,7 +33619,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot4_big_hurricane6859"
+		Name="bridge_dot8"
 		Belong="1089"
 		Prototype="heavy_dot4_big_hurricane"
 		Pos="3291.018 255.014 3335.946"
@@ -33604,7 +33628,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot3_rainmetal6860"
+		Name="bridge_dot14"
 		Belong="1089"
 		Prototype="heavy_dot3_rainmetal"
 		Pos="3739.519 255.024 3720.360"
@@ -33613,7 +33637,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot3_rainmetal6861"
+		Name="bridge_dot13"
 		Belong="1089"
 		Prototype="heavy_dot3_rainmetal"
 		Pos="3706.462 255.024 3759.492"
@@ -33622,7 +33646,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot3_rainmetal6862"
+		Name="bridge_dot11"
 		Belong="1089"
 		Prototype="heavy_dot3_rainmetal"
 		Pos="3530.301 254.990 3606.740"
@@ -33631,7 +33655,7 @@
 	</Object>
 
 	<Object
-		Name="heavy_dot3_rainmetal6863"
+		Name="bridge_dot12"
 		Belong="1089"
 		Prototype="heavy_dot3_rainmetal"
 		Pos="3560.728 255.026 3568.853"

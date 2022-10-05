@@ -315,12 +315,36 @@ $Id: QuestItems.xml,v 1.11 2005/10/18 06:12:48 anton Exp $
 	<Prototype
 		Class		= "QuestItem"
 		Name		= "Homer_P"
-		ModelFile	= "dweller3"
+		ModelFile	= "dweller_homer"
 		ResourceType	= "POPYT4IK" />
 	
 	<Prototype
 		Class		= "QuestItem"
 		Name			= "quest_babka_package"
 		ModelFile		= "parsel"
+		ResourceType	= "QUEST_POTATO" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_ananaga_bottle"
+		ModelFile		= "ananaga_bottle"
+		ResourceType	= "QUEST_POTATO" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_bratislav_component1"
+		ModelFile		= "gadget_03"
+		ResourceType	= "QUEST_POTATO" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_bratislav_component2"
+		ModelFile		= "gadget_07"
+		ResourceType	= "QUEST_POTATO" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name			= "quest_bratislav_component3"
+		ModelFile		= "gadget_04"
 		ResourceType	= "QUEST_POTATO" />
 </Prototypes>

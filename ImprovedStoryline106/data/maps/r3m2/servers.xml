@@ -185,6 +185,10 @@
 			file="data\models\AnimModels.xml"/>
 
 		<Item 
+			id="ananaga_bottle" 
+			file="data\models\AnimModels.xml"/>
+
+		<Item 
 			id="detail" 
 			file="data\models\AnimModels.xml"/>
 

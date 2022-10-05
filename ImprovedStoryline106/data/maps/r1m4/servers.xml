@@ -108,6 +108,10 @@
 			file="data\models\AnimModels.xml"/>
 
 		<Item 
+			id="dweller_homer" 
+			file="data\models\AnimModels.xml"/>
+
+		<Item 
 			id="dweller07" 
 			file="data\models\AnimModels.xml"/>
 
@@ -239,6 +243,10 @@
 
 		<Item 
 			id="bottles" 
+			file="data\models\AnimModels.xml"/>
+
+		<Item 
+			id="ananaga_bottle" 
 			file="data\models\AnimModels.xml"/>
 
 		<Item 

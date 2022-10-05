@@ -29155,13 +29155,4 @@
 		rot="-0.0473 0.7729 -0.0386 0.6315"
 		id="fence_short1"
 		ndmAction="0" />
-
-	<Node
-		name="Object92389452"
-		class="SgAnimatedModelNode"
-		org="1668.172 408.638 2247.250"
-		orgRel="0"
-		rot="0.0000 0.1520 0.0000 -0.9880"
-		id="minin"
-		ndmAction="0" />
 </World>

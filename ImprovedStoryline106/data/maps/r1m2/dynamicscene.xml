@@ -48,9 +48,10 @@
 		Name="MidgardProfessor"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="4348.429 115.202 991.918"
+		Pos="4345.077 127.360 846.956"
 		Radius="30.000"
-		LookingTimeOut="10.000">
+		LookingTimeOut="10.000"
+		Active="0">
 		<Object
 			Name="Professor"
 			Belong="1100"
@@ -1735,9 +1736,33 @@
 
 		<Parts />
 
-		<EntryPath />
+		<EntryPath>
+			<Point
+				Pos="6730.000 6502.000" />
 
-		<ExitPath />
+			<Point
+				Pos="6670.606 6502.543" />
+
+			<CameraPoint
+				Pos="206.194 12.138 10.756" />
+
+			<CameraPoint
+				Pos="154.753 87.029 -62.890" />
+		</EntryPath>
+
+		<ExitPath>
+			<Point
+				Pos="6713.802 6502.847" />
+
+			<Point
+				Pos="6757.869 6502.380" />
+
+			<CameraPoint
+				Pos="154.753 87.029 -62.890" />
+
+			<CameraPoint
+				Pos="206.194 12.138 10.756" />
+		</ExitPath>
 	</Object>
 
 	<Object

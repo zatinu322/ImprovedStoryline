@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="11955">
+	LastId="11958">
 	<TargetNamesForDestroy
 		Names="u1 u2 u3 u4 u5 u6 u7 u8 u9" />
 
@@ -212,7 +212,7 @@
 		Name="Breakable_Sosna252"
 		Belong="1001"
 		Prototype="Breakable_Elka2snow"
-		Pos="3818.343 582.073 685.672"
+		Pos="3818.343 580.635 685.672"
 		Rot="0.000 0.508 0.000 0.862" />
 
 	<Object
@@ -2175,7 +2175,7 @@
 		Name="sack_dot2_vulcan435"
 		Belong="1092"
 		Prototype="sack_dot2_kord"
-		Pos="2853.085 426.709 129.960"
+		Pos="2853.085 426.655 129.960"
 		Rot="0.000 -0.330 0.000 0.944">
 		<Parts />
 	</Object>
@@ -3153,7 +3153,7 @@
 		Name="Esting"
 		Belong="1090"
 		Prototype="TownMoska"
-		Pos="2407.850 255.176 2168.875"
+		Pos="2407.850 255.149 2168.875"
 		Rot="0.000 -0.888 0.000 -0.460"
 		PointOfViewInInterface="-76.431 41.168 62.278"
 		CaravansDest="">
@@ -3178,7 +3178,7 @@
 				ModelName="r1_man"
 				skin="1"
 				cfg="62"
-				helloReplyNames="Dlg_npc_002884 Dlg_npc_002967 Dlg_npc_002983"
+				helloReplyNames="Dlg_npc_002884 Dlg_npc_002967 Dlg_npc_002983 Dlg_npc_003352"
 				SpokenCount="0" />
 
 			<Object
@@ -3206,6 +3206,16 @@
 				ModelName="r1_man"
 				cfg="172"
 				helloReplyNames="Dlg_npc_003174"
+				SpokenCount="0" />
+
+			<Object
+				Name="BratislavVolozh"
+				Belong="1090"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="142"
+				helloReplyNames="Dlg_npc_003342"
 				SpokenCount="0" />
 
 			<Object
@@ -3680,30 +3690,30 @@
 
 		<EntryPath>
 			<Point
-				Pos="2377.000 2200.000" />
+				Pos="2360.641 2210.311" />
 
 			<Point
-				Pos="2407.000 2168.000" />
+				Pos="2411.842 2174.181" />
 
 			<CameraPoint
-				Pos="120.045 41.057 39.143" />
+				Pos="-92.978 51.703 122.133" />
 
 			<CameraPoint
-				Pos="-76.431 41.168 62.278" />
+				Pos="-58.269 47.057 87.074" />
 		</EntryPath>
 
 		<ExitPath>
 			<Point
-				Pos="2407.000 2168.000" />
+				Pos="2411.842 2174.181" />
 
 			<Point
-				Pos="2377.000 2200.000" />
+				Pos="2360.641 2210.311" />
 
 			<CameraPoint
-				Pos="-76.431 41.168 62.278" />
+				Pos="-58.269 47.057 87.074" />
 
 			<CameraPoint
-				Pos="120.045 41.057 39.143" />
+				Pos="-92.978 51.703 122.133" />
 		</ExitPath>
 	</Object>
 
@@ -3787,7 +3797,7 @@
 		Name="PetrolStationTown2"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="1846.621 255.212 1135.596"
+		Pos="1846.621 255.175 1135.596"
 		Rot="0.000 0.609 0.000 -0.793"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -3817,7 +3827,7 @@
 		Name="PetrolStationTown3"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="1314.862 255.198 2368.361"
+		Pos="1314.862 255.145 2368.361"
 		Rot="-0.002 -0.989 0.001 -0.148"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -3847,7 +3857,7 @@
 		Name="PetrolStationTown4"
 		Belong="1080"
 		Prototype="PetrolStationTown"
-		Pos="3196.633 333.927 2650.712"
+		Pos="3196.633 333.874 2650.712"
 		Rot="0.000 -0.687 0.000 0.727"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
@@ -8322,7 +8332,7 @@
 		Name="Breakable_Listvenoe31517"
 		Belong="1001"
 		Prototype="Breakable_Listvenoe3snow"
-		Pos="2529.550 357.437 1313.660"
+		Pos="2529.550 356.281 1313.660"
 		Rot="0.000 -0.602 0.000 0.799"
 		Mass="8.397"
 		NodeScale="0.304" />
@@ -8466,7 +8476,7 @@
 		Name="Breakable_Listvenoe31567"
 		Belong="1001"
 		Prototype="Breakable_Listvenoe3snow"
-		Pos="2909.576 435.452 89.985"
+		Pos="2909.576 435.398 89.985"
 		Rot="0.000 -0.182 0.000 0.983"
 		Mass="16.356"
 		NodeScale="0.379" />
@@ -8700,7 +8710,7 @@
 		Name="road_sign21685"
 		Belong="1001"
 		Prototype="road_sign2"
-		Pos="3868.539 549.596 599.869"
+		Pos="3868.539 549.543 599.869"
 		Rot="0.000 0.930 0.000 -0.367"
 		Mass="882.950"
 		NodeScale="1.806" />
@@ -8718,7 +8728,7 @@
 		Name="road_sign51687"
 		Belong="1001"
 		Prototype="road_sign5"
-		Pos="2764.753 358.174 543.162"
+		Pos="2764.753 358.173 543.162"
 		Rot="0.011 0.863 0.041 -0.504"
 		Mass="588.170"
 		NodeScale="1.577" />
@@ -8727,7 +8737,7 @@
 		Name="road_sign21691"
 		Belong="1001"
 		Prototype="road_sign2"
-		Pos="2710.742 354.409 508.609"
+		Pos="2710.742 354.355 508.609"
 		Rot="0.000 0.415 0.000 0.910"
 		Mass="344.586"
 		NodeScale="1.319" />
@@ -9318,11 +9328,9 @@
 	<Object
 		Name="TheTown"
 		Belong="1090"
-		Prototype="r1m6_Kateberg"
-		Pos="1949.495 255.193 338.593"
-		Rot="-0.004 -0.666 -0.005 -0.746"
-		Mass="0.992"
-		NodeScale="0.997"
+		Prototype="TownMoska"
+		Pos="1822.061 255.178 335.944"
+		Rot="0.000 -0.737 0.000 0.676"
 		PointOfViewInInterface="-35.000 60.000 35.000"
 		CaravansDest="">
 		<Object
@@ -9346,6 +9354,16 @@
 				skin="1"
 				cfg="94"
 				helloReplyNames="Dlg_npc_002885 Dlg_npc_002927"
+				SpokenCount="0" />
+
+			<Object
+				Name="BratislavRinolsk"
+				Belong="1090"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="142"
+				helloReplyNames="Dlg_npc_003303 Dlg_npc_003318"
 				SpokenCount="0" />
 
 			<Object
@@ -9544,9 +9562,9 @@
 			Name="TheTown_enter"
 			Belong="1090"
 			Prototype="genericLocation"
-			Pos="1911.616 255.000 340.923"
+			Pos="1864.531 255.000 333.828"
 			Rot="-0.004 -0.666 -0.005 -0.746"
-			Radius="30.000"
+			Radius="19.000"
 			LookingTimeOut="10.000" />
 
 		<Object
@@ -9564,7 +9582,7 @@
 			Name="TheTown_deploy"
 			Belong="1090"
 			Prototype="genericLocation"
-			Pos="1881.286 255.000 366.949"
+			Pos="1867.505 255.000 357.381"
 			Rot="-0.004 -0.666 -0.005 -0.746"
 			Radius="5.000"
 			LookingTimeOut="20.000" />
@@ -9676,9 +9694,33 @@
 
 		<Parts />
 
-		<EntryPath />
+		<EntryPath>
+			<Point
+				Pos="1883.085 335.644" />
 
-		<ExitPath />
+			<Point
+				Pos="1825.605 329.776" />
+
+			<CameraPoint
+				Pos="187.512 71.395 -24.413" />
+
+			<CameraPoint
+				Pos="137.151 59.928 -17.172" />
+		</EntryPath>
+
+		<ExitPath>
+			<Point
+				Pos="1825.605 329.776" />
+
+			<Point
+				Pos="1883.085 335.644" />
+
+			<CameraPoint
+				Pos="137.151 59.928 -17.172" />
+
+			<CameraPoint
+				Pos="187.512 71.395 -24.413" />
+		</ExitPath>
 	</Object>
 
 	<Object
@@ -10791,7 +10833,7 @@
 		Name="pack_breakable2106"
 		Belong="1001"
 		Prototype="pack_breakable"
-		Pos="1925.934 255.154 395.080"
+		Pos="1925.934 255.068 395.080"
 		Rot="0.000 -0.788 0.000 0.616" />
 
 	<Object
@@ -10805,35 +10847,35 @@
 		Name="pack_breakable2108"
 		Belong="1001"
 		Prototype="pack_breakable"
-		Pos="1929.317 255.075 377.587"
+		Pos="1929.317 255.000 377.587"
 		Rot="0.000 0.853 0.000 0.522" />
 
 	<Object
 		Name="pack_breakable2109"
 		Belong="1001"
 		Prototype="pack_breakable"
-		Pos="1926.016 255.146 379.736"
+		Pos="1926.016 255.051 379.736"
 		Rot="0.000 0.993 0.000 -0.122" />
 
 	<Object
 		Name="factory_box2110"
 		Belong="1001"
 		Prototype="factory_box"
-		Pos="1921.831 255.150 409.735"
+		Pos="1921.831 255.121 409.735"
 		Rot="0.000 0.804 0.000 0.595" />
 
 	<Object
 		Name="factory_box2111"
 		Belong="1001"
 		Prototype="factory_box"
-		Pos="1918.484 255.132 410.071"
+		Pos="1918.484 255.121 410.071"
 		Rot="0.000 0.301 0.000 0.954" />
 
 	<Object
 		Name="factory_box2112"
 		Belong="1001"
 		Prototype="factory_box"
-		Pos="1915.312 255.142 409.506"
+		Pos="1915.312 255.133 409.506"
 		Rot="0.000 0.951 0.000 0.309" />
 
 	<Object
@@ -10910,14 +10952,14 @@
 		Name="Breakable_Poster32123"
 		Belong="1001"
 		Prototype="Breakable_Poster3"
-		Pos="1904.585 255.080 293.482"
+		Pos="1904.585 255.030 293.482"
 		Rot="0.000 -0.740 0.000 0.672" />
 
 	<Object
 		Name="TheContraVillage"
 		Belong="1090"
 		Prototype="r1m1_ContraVillage"
-		Pos="451.443 334.260 2616.238"
+		Pos="451.443 334.207 2616.238"
 		Rot="0.000 0.429 0.000 0.903"
 		PointOfViewInInterface="-35.000 60.000 35.000"
 		CaravansDest="">
@@ -11447,7 +11489,7 @@
 		Name="Breakable_Barrel32218"
 		Belong="1001"
 		Prototype="Breakable_Barrel3"
-		Pos="451.820 334.957 2638.016"
+		Pos="451.820 339.936 2638.016"
 		Rot="0.000 0.970 0.000 -0.242" />
 
 	<Object
@@ -11538,7 +11580,7 @@
 		Name="lamppost12231"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="419.617 334.432 2591.950"
+		Pos="419.617 334.371 2591.950"
 		Rot="0.000 -0.407 0.000 -0.914" />
 
 	<Object
@@ -15748,28 +15790,28 @@
 		Name="Breakable_Barrel33370"
 		Belong="1001"
 		Prototype="Breakable_Barrel3"
-		Pos="2330.365 255.128 2266.333"
+		Pos="2330.365 255.109 2266.333"
 		Rot="0.000 0.087 0.000 0.996" />
 
 	<Object
 		Name="Breakable_Barrel33371"
 		Belong="1001"
 		Prototype="Breakable_Barrel3"
-		Pos="2317.744 255.165 2274.810"
+		Pos="2317.744 255.134 2274.810"
 		Rot="0.000 -0.848 0.000 0.530" />
 
 	<Object
 		Name="Breakable_Barrel23372"
 		Belong="1001"
 		Prototype="Breakable_Barrel2"
-		Pos="2316.172 255.151 2275.936"
+		Pos="2316.172 255.106 2275.936"
 		Rot="0.000 -0.760 0.000 0.649" />
 
 	<Object
 		Name="Breakable_Barrel13373"
 		Belong="1001"
 		Prototype="Breakable_Barrel1"
-		Pos="2331.545 255.171 2265.456"
+		Pos="2331.545 255.170 2265.456"
 		Rot="0.000 0.122 0.000 0.993" />
 
 	<Object
@@ -16137,7 +16179,7 @@
 		Name="lamppost13437"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2285.981 255.160 2157.713"
+		Pos="2285.981 255.070 2157.713"
 		Rot="0.000 0.880 0.000 0.475" />
 
 	<Object
@@ -16214,7 +16256,7 @@
 		Name="lamppost13448"
 		Belong="1001"
 		Prototype="lamppost1"
-		Pos="2334.830 255.082 2063.379"
+		Pos="2334.830 255.045 2063.379"
 		Rot="0.000 -0.460 0.000 0.888" />
 
 	<Object
@@ -27633,7 +27675,7 @@
 		Name="Breakable_Barrel36138"
 		Belong="1001"
 		Prototype="Breakable_Barrel3"
-		Pos="2035.035 255.080 2505.368"
+		Pos="2035.035 255.000 2505.368"
 		Rot="0.000 0.804 0.000 0.595" />
 
 	<Object
@@ -43824,7 +43866,7 @@
 		Name="Breakable_Elka18708"
 		Belong="1001"
 		Prototype="Breakable_Elka1snow"
-		Pos="715.712 301.365 2948.336"
+		Pos="715.712 301.335 2948.336"
 		Rot="0.000 1.000 0.000 0.026" />
 
 	<Object
@@ -44066,7 +44108,7 @@
 		Name="Breakable_Elka38746"
 		Belong="1001"
 		Prototype="Breakable_Elka3snow"
-		Pos="595.403 343.620 3293.573"
+		Pos="595.403 341.881 3293.573"
 		Rot="0.000 0.997 0.000 0.078"
 		Mass="1108.491"
 		NodeScale="1.546" />
@@ -44075,7 +44117,7 @@
 		Name="Breakable_Elka38747"
 		Belong="1001"
 		Prototype="Breakable_Elka3snow"
-		Pos="612.998 328.773 3326.777"
+		Pos="612.998 325.993 3326.777"
 		Rot="0.000 0.943 0.000 -0.334"
 		Mass="1108.491"
 		NodeScale="1.546" />
@@ -44102,7 +44144,7 @@
 		Name="Breakable_Elka38750"
 		Belong="1001"
 		Prototype="Breakable_Elka3snow"
-		Pos="626.993 300.718 3292.782"
+		Pos="626.993 299.271 3292.782"
 		Rot="0.000 -0.676 0.000 0.737"
 		Mass="823.625"
 		NodeScale="1.400" />
@@ -44129,7 +44171,7 @@
 		Name="Breakable_Elka38753"
 		Belong="1001"
 		Prototype="Breakable_Elka3snow"
-		Pos="584.622 316.367 3210.786"
+		Pos="584.622 315.660 3210.786"
 		Rot="0.000 -0.559 0.000 0.829"
 		Mass="776.120"
 		NodeScale="1.373" />
@@ -44250,7 +44292,7 @@
 		Name="Breakable_Elka28774"
 		Belong="1001"
 		Prototype="Breakable_Elka2snow"
-		Pos="589.331 324.621 3228.752"
+		Pos="589.331 323.833 3228.752"
 		Rot="0.000 0.924 0.000 -0.383" />
 
 	<Object
@@ -57217,7 +57259,7 @@
 		Name="staticAutoGun0711615"
 		Belong="1092"
 		Prototype="staticAutoGun07"
-		Pos="699.225 279.633 3178.032"
+		Pos="699.225 279.579 3178.032"
 		Rot="0.029 -0.994 -0.014 0.109">
 		<Parts />
 	</Object>
@@ -57507,7 +57549,7 @@
 		Name="brokvehicle2_breakable11902"
 		Belong="1001"
 		Prototype="brokvehicle2_breakable"
-		Pos="2430.577 255.208 2167.310"
+		Pos="2430.577 255.155 2167.310"
 		Rot="0.000 -0.216 0.000 0.976" />
 
 	<Object
@@ -57612,7 +57654,7 @@
 		Name="Human11951"
 		Belong="1005"
 		Prototype="Human"
-		Pos="2417.001 255.178 2178.549"
+		Pos="2417.001 255.160 2178.549"
 		Rot="0.000 0.425 0.000 0.905" />
 
 	<Object
@@ -57873,6 +57915,27 @@
 		Prototype="Breakable_WoodFence1"
 		Pos="1889.833 260.950 2235.540"
 		Rot="0.000 -0.548 0.000 0.836" />
+
+	<Object
+		Name="Ananaga_loc3"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3457.918 408.934 3578.433"
+		Radius="13.000" />
+
+	<Object
+		Name="Ananaga_loc2"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="688.600 269.770 3270.907"
+		Radius="6.000" />
+
+	<Object
+		Name="Ananaga_loc1"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2086.368 255.000 1320.751"
+		Radius="6.000" />
 
 	<Object
 		Belong="1100"

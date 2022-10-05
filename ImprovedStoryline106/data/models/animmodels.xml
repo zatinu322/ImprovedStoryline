@@ -18964,4 +18964,18 @@
 		windwavy="0"
 		trans="0" />
 
+	<model
+		id="ananaga_bottle"
+		file="data\models\goods\bottle.gam"
+		shadow="1"
+		windwavy="0"
+		trans="0" />
+
+	<model
+		id="dweller_homer"
+		file="data\models\objects\dweller_Homer.gam"
+		shadow="1"
+		windwavy="0"
+		trans="0" />
+
 </AnimatedModels>

@@ -287,6 +287,26 @@
 		value="Посылка бабе Поле" />
 
 	<Item
+		id="quest_ananaga_bottle"
+		locForm="0"
+		value="Бутылка &quot;ледяной&quot; ананаги" />
+
+	<Item
+		id="quest_bratislav_component1"
+		locForm="0"
+		value="Первая деталь" />
+
+	<Item
+		id="quest_bratislav_component2"
+		locForm="0"
+		value="Вторая деталь" />
+
+	<Item
+		id="quest_bratislav_component3"
+		locForm="0"
+		value="Третья деталь" />
+
+	<Item
 		id="quest_chehly_box"
 		locForm="0"
 		value="Коробка с чехлами" />
@@ -2065,7 +2085,7 @@
 	<Item
 		id="ExtLeader_P"
 		locForm="0"
-		value="Лидер Экстремистов" />
+		value="Лидер Рыбаков" />
 
 	<Item
 		id="SNGSpy_P"

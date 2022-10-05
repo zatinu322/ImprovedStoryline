@@ -552,6 +552,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			NodeScale	= "1 1 1" 
 
 			MusicName		= "bar"
+			GateModelFile 	= "big_gate01"
 
 			NumCollisionLayersBelowVehicle = "2"
 
@@ -2864,9 +2865,10 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 	<Prototype
 			Class		= "Town"
 			Name		= "r1m6_Kateberg"
-			ModelFile	= "point"
-			NodeScale	= "1 1 1" 
+			ModelFile	= "minin"
+			NodeScale	= "1 1 1"
 
+			GateModelFile 	= "big_gate01"
 			MusicName		= "military_town1"
 			
 			GunGenerator		= "gunMirgradGenerator"
@@ -2882,7 +2884,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "15"
 
 			MaxDefenders	="0"
-			Vehicles	= "Molokovoz">
+			Vehicles	= "Belaz">
 
 			<Article
 				Prototype				= "tobacco"				

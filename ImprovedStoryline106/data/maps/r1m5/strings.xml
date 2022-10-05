@@ -230,6 +230,30 @@
 		value="А знаки-то всё красивее и красивее получаются. Думаю, в Мидгарде этим заинтересуются."
 		sound=""
 		time="9" />
+	
+	<string
+		id="261"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Вот тебе и раз! Неплохо запрятал!"
+		sound=""
+		time="5" />
+
+	<string
+		id="262"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Так, ну это было довольно просто."
+		sound=""
+		time="5" />
+
+	<string
+		id="263"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Чёртовы трубы - ещё с Игнотта в кошмарах мне снятся."
+		sound=""
+		time="5" />
 
 	<string
 		id="8801"

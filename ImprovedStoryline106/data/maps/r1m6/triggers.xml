@@ -6,6 +6,7 @@
 		<script>
 			SetVar("Serafima", 0)
 			SetVar("Starosta", 0)
+			SetVar("DozerSkin", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 			
 			CreateNewDummyObject( "agro_gate", "vorota", -1, -1, CVector(458.534, 255.420, 1763.684), Quaternion(0.0000, -0.5948, 0.0000, 0.8039), 0)
@@ -69,17 +70,11 @@
 			CreateNewDummyObject( "petrolhouse1", "town13", -1, -1, CVector(1729.249, 415.017, 2173.106), Quaternion(0.0038, 0.9153, -0.0079, 0.4027), 0)
 			CreateNewDummyObject( "petrolhouse2", "town14", -1, -1, CVector(1664.590, 408.075, 2162.590), Quaternion(-0.0030, -0.0479, 0.0632, 0.9968), 0)
 			CreateNewDummyObject( "house2", "town15", -1, -1, CVector(1643.608, 404.886, 2160.180), Quaternion(0.0261, -0.0508, 0.0476, 0.9972), 0)
-			CreateNewDummyObject( "big_gate01", "town16", -1, -1, CVector(1671.436, 411.445, 2217.576), Quaternion(-0.0021, -0.1607, 0.0129, 0.9869), 0)
-
-			--CreateNewDummyObject( "minin", "MoskaMain", -1, -1, CVector(1668.172, 408.638, 2247.250), Quaternion(0.000, 0.152, 0.000, -0.988), 0)
 
 			CreateNewBreakableObject( "lamppost1","lamp01", 1089, CVector(1701.368, 406.412, 2265.806), Quaternion(0.000, 0.653, 0.000, 0.758),0 )
 			CreateNewBreakableObject( "lamppost1","lamp02", 1089, CVector(1688.357, 409.171, 2217.482), Quaternion(0.000, 0.990, 0.000, 0.141),0 )
 			CreateNewBreakableObject( "lamppost1","lamp03", 1089, CVector(1659.556, 407.358, 2207.118), Quaternion(0.000, -0.990, 0.000, -0.139),0 )
 			CreateNewBreakableObject( "lamppost1","lamp04", 1089, CVector(1656.203, 409.868, 2266.350), Quaternion(0.000, 0.989, 0.000, 0.150),0 )
-
-			local fix = GetEntityByName("town16")
-			if fix then fix:SetNodeAction(AT_RESERVED3) end
 
 			trigger:Deactivate()
 		</script>
@@ -99,7 +94,7 @@
 				if d then d:Remove() end
 			end
 			
-			for building = 1,16 do
+			for building = 1,15 do
 				local town = GetEntityByName("town"..building)
 				if town then town:Remove() end
 			end
@@ -108,6 +103,9 @@
 				local l = GetEntityByName("lamp0"..lamp)
 				if l then l:Remove() end
 			end
+
+			local townM = GetEntityByName("TheTown")
+			if townM then townM:Remove() end
 			
 			CreateNewDummyObject("concrete_ruins1", "d_town1", -1, -1, CVector(1697.665, 405.454, 2285.421), Quaternion(0.0000, 0.5592, 0.0000, 0.8290), 0)
 			CreateNewDummyObject("concrete_ruins2", "d_town2", -1, -1, CVector(1710.799, 404.386, 2283.772), Quaternion(0.0000, -0.6852, 0.0000, 0.7284), 0)
@@ -129,6 +127,7 @@
 			CreateNewDummyObject("concrete_ruins2", "d_town18", -1, -1, CVector(1642.656, 410.157, 2257.661), Quaternion(0.0000, 0.9799, 0.0000, 0.1994), 0)
 			CreateNewDummyObject("concrete_ruins4", "d_town19", -1, -1, CVector(1681.432, 407.885, 2260.063), Quaternion(0.0000, -0.1779, 0.0000, 0.9840), 0)
 			CreateNewDummyObject("concrete_ruins1", "d_town20", -1, -1, CVector(1664.160, 408.737, 2276.835), Quaternion(0.0000, 0.6756, 0.0000, 0.7373), 0)
+			CreateNewDummyObject( "minin", "MoskaMain", -1, -1, CVector(1668.172, 408.638, 2247.250), Quaternion(0.000, 0.152, 0.000, -0.988), 0)
 
 			
 
@@ -707,21 +706,31 @@
 
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x + 15
+			PlfCoor.x = PlfCoor.x + 10
 			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z - 15
+			PlfCoor.z = PlfCoor.z + 30
 
-			ValidateGameVersion()
+			if QuestStatus("SerafimaHome_Quest")~=Q_TAKEN then
+				ValidateGameVersion()
 
-			local b = SpawnMessageBox( "8801" )
-			if b == 1 then
+				local b = SpawnMessageBox( "8801" )
+				if b == 1 then
 
-				PassToMap("r1m4", "FromR1M6", -1 )
-				
+					PassToMap("r1m4", "FromR1M6", -1 )
+					
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(0.01, 0, 35, 3, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap14")
+					TActivate ("RolikENDExitToMap14")
+				end
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(0.1, 0, 35, 3, PlfCoor, PlfID, 1, 1 )
+				FlyAround(0.01, 0, 35, 3, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
 
 				TActivate ("RolikExitToMap14")

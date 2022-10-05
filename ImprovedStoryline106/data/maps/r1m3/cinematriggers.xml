@@ -1714,7 +1714,7 @@
 
 	<!-- Засада незнакомца из тоннеля, если игрок украл у него ключ -->
 	<trigger Name="RolikZasadaARStart" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
@@ -1724,14 +1724,22 @@
 			local CTochID = CToch:GetId()
 			local vehPlayer = GetPlayerVehicle()
 			local vehPID = vehPlayer:GetId()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(1646.556, 282.216, 5509.132))
+				vehPlayer:SetRotation(Quaternion(0.022, 0.800, 0.032, 0.599))
+				vehPlayer:SetExternalPathByName("player_path06")
+				vehPlayer:LimitMaxSpeed(20)
+			end
 			
-			FlyLinked( "ZASADA_AR_cam01", CTochID, 17.5, 1, 1, vehPID )
+			FlyLinked( "ZASADA_AR_cam01", CTochID, 9, 1, 1, vehPID )
 			StartCinematic()
+			UpdateCinematic(1)
 			
 			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1046, Quaternion(-0.027, -0.711, -0.027, 0.702))
 			CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1800.970, 280.535, 5493.521), 1046, Quaternion(-0.000, -0.706, 0.004, 0.709))
-						
-			TActivate("RolikZasadaARFade")
+
 			TActivate("RolikZasadaARMusic")
 			TActivate("RolikZasadaAREnd")
 			
@@ -1750,21 +1758,6 @@
 		</script>
 	</trigger>
 
-	<trigger Name="RolikZasadaARFade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
-			local vehPlayer = GetPlayerVehicle()
-			if vehPlayer then
-				vehPlayer:SetGamePositionOnGround( CVector(1493.472, 291.262, 5539.845))
-				vehPlayer:SetRotation(Quaternion(0.024, 0.701, -0.046, 0.712))
-				vehPlayer:SetExternalPathByName("player_path06")
-				vehPlayer:LimitMaxSpeed(20)
-			end
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<trigger Name="RolikZasadaAREnd" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
@@ -1775,7 +1768,7 @@
 
 			SetCameraBehindPlayerVehicle()
 			
-			StartConversation("UnknownFromTunel")
+			StartConversation("UnknownFromTunel1")
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -1786,10 +1779,11 @@
 			
 			local CToch = GetEntityByName("CamTochka")
 			if CToch then CToch:Remove() end
-			trigger:Deactivate()
-
+			
 			TDeactivate("RolikZasadaARFade")
 			TDeactivate("RolikZasadaARMusic")
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 

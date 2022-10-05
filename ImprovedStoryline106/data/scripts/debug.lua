@@ -22,7 +22,7 @@ function p()
     local pos, rot, lookAt = GetCameraPos()
     pos = string.gsub(tostring(pos), "%,", "")
     rot = string.gsub(tostring(rot), "%,", "")
-    LOG(' <Point  coord="' .. strsub( pos, 2, strlen(pos) - 1 ) .. '" rotation="'.. strsub( rot, 2, strlen(rot) - 1 ) .. '"/>')
+    LOG('<Point  coord="' .. strsub( pos, 2, strlen(pos) - 1 ) .. '" rotation="'.. strsub( rot, 2, strlen(rot) - 1 ) .. '"/>')
 end
 
 

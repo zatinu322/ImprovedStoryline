@@ -120,7 +120,16 @@
 	<Path
 		Name="Chehly_path">
 		<Point
-			coord="2132.598 3404.413" />
+			coord="2083.934 3513.172" />
+
+		<Point
+			coord="2113.505 3465.211" />
+
+		<Point
+			coord="2122.999 3429.146" />
+
+		<Point
+			coord="2130.401 3402.848" />
 	</Path>
 
 	<Path

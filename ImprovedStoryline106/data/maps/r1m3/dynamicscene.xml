@@ -157,8 +157,8 @@
 		Name="BanditVyshkaLoc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="4539.893 263.937 7484.750"
-		Radius="100.000">
+		Pos="0 263.937 0"
+		Radius="1.000">
 		<Object
 			Name="BanditVyshka"
 			Belong="1100"
@@ -167,6 +167,16 @@
 			skin="5"
 			cfg="86"
 			helloReplyNames="BanditVyshkadlg"
+			SpokenCount="0" />
+
+		<Object
+			Name="UnknownFromTunel1"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="r2_man"
+			skin="2"
+			cfg="164"
+			helloReplyNames="Dlg_npc_002633"
 			SpokenCount="0" />
 	</Object>
 
@@ -285,7 +295,7 @@
 				ModelName="r2_man"
 				skin="2"
 				cfg="164"
-				helloReplyNames="UnknownFromTunel_hellodlg0 Dlg_npc_002633"
+				helloReplyNames="UnknownFromTunel_hellodlg0"
 				SpokenCount="0" />
 
 			<Object

@@ -100,4 +100,19 @@
 		<Point  coord="0.000 -1.000 0.000"/>
 	</Path>
 
+	<Path Name = "BComponentsFound_path01">
+		<Point  coord="2082.363 261.185 1309.181" rotation="-0.142 -0.209 0.031 0.967"/>
+		<Point  coord="2084.645 259.643 1314.573" rotation="-0.129 -0.188 0.025 0.973"/>
+	</Path>
+
+	<Path Name = "BComponentsFound_path02">
+		<Point  coord="688.159 274.223 3277.859" rotation="0.015 0.976 -0.204 -0.071"/>
+		<Point  coord="688.478 273.264 3275.678" rotation="0.015 0.976 -0.204 -0.071"/>
+	</Path>
+
+	<Path Name = "BComponentsFound_path03">
+		<Point  coord="3459.539 412.828 3574.326" rotation="0.072 -0.088 -0.006 0.994"/>
+		<Point  coord="3460.272 413.623 3578.257" rotation="0.069 -0.092 -0.006 0.993"/>
+	</Path>
+
 </Paths>

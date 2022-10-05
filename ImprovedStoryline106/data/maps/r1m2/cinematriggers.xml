@@ -189,6 +189,11 @@
 			SetCameraBehindPlayerVehicle()
 			
 			StopPlayingCustomMusic()
+
+			SetVar("MidgardCutscene", 0)
+
+			local ploc = GetEntityByName("MidgardProfessor")
+			if ploc then ploc:SetProperty("Active", 1) end
 			
 			trigger:Deactivate()
 		</script>
@@ -759,7 +764,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("BefDesert", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 1, 1 )
+			Fly("BefDesert", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 1 )
 			StartCinematic()
 
 			AddCinematicMessage( 88060, 1 )
@@ -1809,7 +1814,6 @@
 			elseif QuestStatus("r1m2_Glagiators_Quest2")==Q_TAKEN then
 
 				CompleteQuestIfTaken( "r1m2_Glagiators_Quest2" )
-				TakeQuest("r1m2_MovemineralToMidgard_Quest")
 
 			end
 

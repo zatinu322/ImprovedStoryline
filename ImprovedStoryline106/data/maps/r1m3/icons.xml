@@ -2,6 +2,7 @@
 <icons>
 
 	<Item id="BaseGuardian_loc"		file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
+	<Item id="BanditVyshkaLoc"		file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
 	<Item id="PeshtGuardian_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
 	<Item id="TheCircus"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
 	<Item id="TheLibrary"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>

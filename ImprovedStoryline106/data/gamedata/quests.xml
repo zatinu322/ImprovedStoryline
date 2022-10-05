@@ -65,6 +65,14 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r1m2_RedkiyMineral_Quest" />
 	</quest>
+
+	<quest
+		Name="r1m2_NoCompositeFast_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="OpenMid2_Quest" />
 <!--Root/Доехать до локации и вернуться -->
 	<quest
 		Name="Human1_Quest1"
@@ -542,6 +550,83 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="RPGSigns_Quest1" />
 	</quest>
+<!--Root/r5m2/Ананага-->
+	<quest
+		Name="r1m5_AnanagaFind_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnFail='RemoveQuestItem("quest_bratislav_component1"); RemoveQuestItem("quest_bratislav_component2"); RemoveQuestItem("quest_bratislav_component3"); TDeactivate("trBarrelsExploded"); TDeactivate("tr1stComponentFound"); TDeactivate("tr2ndComponentFound"); TDeactivate("tr3rdComponentFound");'
+		Levels="r1m5">
+		<quest
+			Name="r1m5_AnanagaFind_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r1m5_AnanagaFind_Quest" />
+
+		<quest
+			Name="r1m5_AnanagaFind_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r1m5_AnanagaFind_Quest" />
+
+		<quest
+			Name="r1m5_AnanagaFind_Quest3"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r1m5_AnanagaFind_Quest" />
+
+		<quest
+			Name="r1m5_AnanagaFind_Quest4"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r1m5_AnanagaFind_Quest1 r1m5_AnanagaFind_Quest2 r1m5_AnanagaFind_Quest3" />
+	</quest>
+
+	<quest
+		Name="r1m5_AnanagaWait_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r1m5_AnanagaFind_Quest"
+		Levels="r1m5 r1m7 r1m6">
+		<quest
+			Name="r1m5_AnanagaWait_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r1m5_AnanagaWait_Quest"
+			Levels="r1m5 r1m7 r1m6" />
+
+		<quest
+			Name="r1m5_AnanagaWait_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r1m5_AnanagaWait_Quest1"
+			Levels="r1m5 r1m7 r1m6" />
+	</quest>
+
+	<quest
+		Name="r1m5_AnanagaBetrayal_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r1m5_AnanagaFind_Quest"
+		Levels="r1m5" />
 <!--Root/r5m1/Доехать и заехать-->
 	<quest
 		Name="GoToLiden_Quest"
@@ -3555,8 +3640,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="r1m2_RedkiyMineral_Quest"
+		ConditionToGive="any complete"
+		PrecedingQuests="r1m2_RedkiyMineral_Quest OpenMid11_Quest"
 		OnComplete="AddPlayerMoney(15000)"
 		OnFail='TDeactivate("KOLIZEYFIGHTDIE"); TDeactivate("KOLIZEYFIGHT")'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
@@ -4004,8 +4089,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="r1m2_MovemineralToMidgard_Quest" />
+		ConditionToGive="any complete"
+		PrecedingQuests="r1m2_MovemineralToMidgard_Quest r1m2_NoCompositeFast_Quest" />
 
 	<quest
 		Name="FindGomer2_Quest"
@@ -4014,6 +4099,14 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="BenZima_Quest">
+		<quest
+			Name="SharkyVyshka"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="FindGomer2_Quest" />
+
 		<quest
 			Name="GomerSaliniom"
 			Automatic="1"
@@ -4037,14 +4130,6 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="GomerOlme" />
-
-		<quest
-			Name="SharkyVyshka"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="FindGomer2_Quest" />
 	</quest>
 <!--Root/r1m1/Сюжетные--><!--Root/r1m1/Опциональные--><!--Root/r1m1/Опциональные/Квест работодателя-->
 	<quest

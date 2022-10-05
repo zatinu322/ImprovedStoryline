@@ -262,6 +262,7 @@
    <Item id="r3_NearOracul"				file1="data\if\ico\LocalMap\icn_outpost.dds" file=""/>
    <Item id="r3_FarVillage"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="PetrolStationTown"			file1="data\if\ico\LocalMap\icn_gasstation.dds" file=""/>
+   <Item id="PetrolStationTown_NoSt"			file1="data\if\ico\LocalMap\icn_gasstation.dds" file=""/>
    <Item id="r4_Aliham"					file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r4_Buhara"					file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r4_OilCity"				file1="data\if\ico\LocalMap\icn_oilpump.dds" file=""/>

@@ -284,8 +284,10 @@
 
 			TDeactivate("RolikBegin_Boloto")
 			TDeactivate("trBoloto_cam01")
+			TDeactivate("trBoloto_cam02")
 			TDeactivate("trBoloto_cam03")
 			TDeactivate("trBoloto_Aiven")
+
 			TActivate("trMorassTeleportBefore")
 			TActivate("trMorassTeleportAfter")
 
@@ -433,6 +435,9 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
+
+			local zone = GetEntityByName("SorageZone1")
+			if zone then zone:SetProperty("Belong", 1100) end
 			
 			trigger:Deactivate()
 		</script>
@@ -516,24 +521,31 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 
-		RuleConsole("cinematic_spring_coeff 0.7")
+			RuleConsole("cinematic_spring_coeff 0.7")
 
-	    RestoreAllToleranceStatus()
+			RestoreAllToleranceStatus()
 
-		SetTolerance(1100, 1010, RS_ENEMY)
+			SetTolerance(1100, 1010, RS_ENEMY)
 
-		StopPlayingCustomMusic()
+			StopPlayingCustomMusic()
 
-		TDeactivate("trCaravan_cam02")           
-		TDeactivate("trCaravan_cam03")   
-		TDeactivate("trCaravan_Fade")
+			TDeactivate("trCaravan_cam02")           
+			TDeactivate("trCaravan_cam03")   
+			TDeactivate("trCaravan_Fade")
 
-		SetCameraBehindPlayerVehicle()
+			SetCameraBehindPlayerVehicle()
 
-		CompleteQuest("FreeExtremistLeader_Quest3")
-		TakeQuest("FreeExtremistLeader_Quest3_1")
+			CompleteQuest("FreeExtremistLeader_Quest3")
+			TakeQuest("FreeExtremistLeader_Quest3_1")
 
-		trigger:Deactivate()
+			-- Переключение белонгов инфекшн зон
+			local zones = {"TraidersZone3", "FisherZone1", "Banditi4", "Banditi1", "Banditi2"}
+			for name = 1,5 do
+				local zone = GetEntityByName(zones[name])
+				if zone then zone:SetProperty("Belong", 1010) end
+			end
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -602,6 +614,8 @@
 
 			StopPlayingCustomMusic()
 
+			SetCameraBehindPlayerVehicle()
+
 			if getObj("LeaderCar_vehicle_0") then
 				getObj("LeaderCar_vehicle_0"):Remove()
 			end
@@ -611,6 +625,7 @@
 
 			AddQuestItem("ExtLeader_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ExtLeader_P")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1192,7 +1207,7 @@
 			TDeactivate("ExplosRoliktr2")
 			TDeactivate("ExplosRolikPPath")
 			TDeactivate("ExplosRolikBoom")
-			TDeactivate("ExplosRolikDel")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1211,8 +1226,9 @@
 				PlfCoor.z = PlfCoor.z - 20
 
 				if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
-					FlyAround( 2, 0, 15, 37, PlfCoor, PlfID, 1, 1 )
+					FlyAround( 2, 0, 15, 38, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
+					UpdateCinematic(1)
 			
 					AddCinematicMessage( 8826, 5 )
 					AddCinematicMessage( 8827, 0.1 )
@@ -1220,13 +1236,25 @@
 				else
 					FlyAround( 2, 0, 15, 30, PlfCoor, PlfID, 1, 1 )
 					StartCinematic()
+					UpdateCinematic(1)
 			
 					AddCinematicMessage( 8826, 5 )
 					AddCinematicMessage( 8827, 0.1 )
 				end
+
+				local vehPlayer = GetPlayerVehicle()
+				if vehPlayer then
+					vehPlayer:SetCustomLinearVelocity( 0 )
+					vehPlayer:SetThrottle( 0 )
+					vehPlayer:SetGamePositionOnGround( CVector(2071.633, 259.047, 3534.827))
+					vehPlayer:SetRotation(Quaternion(0.003, 0.977, -0.001, 0.214))
+					vehPlayer:LimitMaxSpeed(0.1)
+					vehPlayer:SetExternalPathByName("Chehly_path")
+				end
 				
 				TActivate("ChehlyRolikFade")
 				TActivate("ChehlyRolikEnd")
+				TDeactivate("triggerExitToMap16")
 				
 				trigger:Deactivate()
 			end
@@ -1235,19 +1263,15 @@
 	</trigger>
 
 	<trigger Name="ChehlyRolikFade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<event	timeout="2.5"		eventid="GE_TIME_PERIOD" />
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(2078.772, 257.824, 3520.836))
-				vehPlayer:SetRotation(Quaternion(0.000, -0.973, -0.000, -0.231))
-				vehPlayer:SetExternalPathByName("Chehly_path")
+				vehPlayer:LimitMaxSpeed(5)
 			end
-			
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1267,6 +1291,7 @@
 				vehPlayer:PlaceToEndOfPath("Chehly_path")
 				vehPlayer:SetGamePositionOnGround( CVector(2130.926, 254.631, 3392.508))
 				vehPlayer:SetRotation(Quaternion(0.035, 0.965, -0.049, 0.256))
+				vehPlayer:UnlimitMaxSpeed()
 			end
 			
 			CompleteQuest("GoBackToHel_Quest")
@@ -1311,6 +1336,9 @@
 				local tikh = getObj("TikhomirInSorrow")
 				if tikh then tikh:SetSpokenCount(1) end
 			end
+
+			TDeactivate("ChehlyRolikFade")
+			TActivate("triggerExitToMap16")
 			
 			trigger:Deactivate()
 		</script>

@@ -111,7 +111,7 @@
 	<trigger Name="CreateHomerRybak" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateNewDummyObject( "dweller3", "humGomer", -1, -1, CVector(3502.483, 208.900, 3717.994), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2)
+			CreateNewDummyObject( "dweller_homer", "humGomer", -1, -1, CVector(3502.483, 208.900, 3717.994), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 2)
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -322,6 +322,8 @@
 			SetTolerance(1100, 1010, RS_NEUTRAL)
 
 			TActivate("RolikBegin_NearCaravanLeader")
+
+			TDeactivate("trMoveCaravanLoc")
 
 			trigger:Deactivate()
 		</script>

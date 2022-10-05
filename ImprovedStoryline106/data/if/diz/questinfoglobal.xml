@@ -286,7 +286,7 @@
 	<QuestInfo
 		questName="BenZima_Quest"
 		briefDiz="Спросить Бена про Айвена и композит"
-		fullDiz="Мастер из Мидгарда рассказал мне, что много лет назад некто с инициалами А и Г также заказывал у него броню на кабину. Может, Бен знает, где Айвен смог раздобыть столь редкий материал?"
+		fullDiz="Мастер из Мидгарда рассказал мне, что много лет назад некто с инициалами А и Г также заказывал в их мастерской броню на кабину. Может, Бен знает, где Айвен смог раздобыть столь редкий материал?"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -1074,8 +1074,8 @@
 
 	<QuestInfo
 		questName="FreeExtremistLeader_Quest1"
-		briefDiz="Освободить лидера экстремистов"
-		fullDiz="Склад заняли экстремисты. Если я освобожу их лидера из плена, они позволят мне забрать со склада всё, что нужно для путешествия в Лиденклауд."
+		briefDiz="Освободить лидера Рыбаков"
+		fullDiz="Склад заняли Рыбаки. Если я освобожу их лидера из плена, они позволят мне забрать со склада всё, что нужно для путешествия в Лиденклауд."
 		isMainQuest="1">
 		<Map
 			name="r1m4" />
@@ -1294,7 +1294,7 @@
 	<QuestInfo
 		questName="KillExtremist_Quest1"
 		briefDiz="Убить бандитов, захвативших склад"
-		fullDiz="Склад можно очистить двумя путями, один из них - это убить всех экстремистов."
+		fullDiz="Склад можно очистить двумя путями, один из них - это убить всех рыбаков."
 		isMainQuest="0">
 		<Map
 			name="r1m4"
@@ -1599,7 +1599,7 @@
 
 	<QuestInfo
 		questName="LastIspytanie_Quest4"
-		briefDiz="Вернуться в волож"
+		briefDiz="Вернуться в Волож"
 		isMainQuest="1">
 		<Map
 			name="r1m5"
@@ -1773,8 +1773,22 @@
 
 	<QuestInfo
 		questName="OpenMid11_Quest"
-		briefDiz="Подождать, пока Сальваторе осуществит взлом"
-		fullDiz="Сальваторе собирается проникнуть в Мидгард и уничтожить информацию обо мне. А пока мне стоит просто ждать."
+		briefDiz="Узнать в Колизее про композит"
+		fullDiz="Сальваторе собирается проникнуть в Мидгард и уничтожить информацию обо мне. А пока я могу позаниматься другими не менее полезными делами."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheTickets" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="OpenMid11_Quest1"
+		briefDiz="Спросить в Колизее про композит"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="OpenMid11_Quest2"
+		briefDiz="Вернуться к Сальваторе"
 		isMainQuest="0" />
 
 	<QuestInfo
@@ -3925,6 +3939,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r1m2_NoCompositeFast_Quest"
+		briefDiz="Поговорить с мастером в Мидгарде"
+		fullDiz="Теперь, когда путь в Мидгард открыт, я наконец-то смогу подготовить свой грузовик к суровым условиям Пустыни."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r1m2_RedkiyMineral_Quest"
 		briefDiz="Спросить про редкий материал"
 		isMainQuest="1">
@@ -4255,6 +4279,81 @@
 		<Map
 			name="r1m4"
 			targetObjName="TheOlme_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaBetrayal_Quest"
+		briefDiz="Донести на Братислава Верховному  Мудрецу"
+		fullDiz='Полдня я ковырялся по пояс в снегу, только чтобы потом узнать, что "жизненно важным" агрегатом является обычный ананаговый аппарат. '
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest"
+		briefDiz='Найти детали для "агрегата"'
+		fullDiz="Довольно странный человек из Ринольска попросил меня найти три спрятанных детали для какого-то агрегата, который ему жизненно необходим."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest1"
+		briefDiz="Найти первую деталь"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			coordinate="2082.000 255.000 1349.000" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest2"
+		briefDiz="Найти вторую деталь"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			coordinate="700.000 277.000 3201.000" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest3"
+		briefDiz="Найти третью деталь"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			coordinate="3418.000 400.000 3562.000" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest4"
+		briefDiz="Вернуться к Братиславу"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaWait_Quest"
+		briefDiz="Подождать, пока Братислав сделает свою лучшую ананагу"
+		fullDiz="Оказалось, что запчасти Братиславу нужны были для починки его ананагового аппарата, а скрыл он это от меня потому, что боялся гнева Верховного Мудреца. Я согласился его не выдавать, если он сделает ананагу по моим рецептам."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="r1m5_AnanagaWait_Quest1"
+		briefDiz="Заняться другими делами, пока Братислав делает ананагу"
+		isMainQuest="0">
+		<Map
+			name="r1m5" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaWait_Quest2"
+		briefDiz="Забрать готовую ананагу"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
 	</QuestInfo>
 
 	<QuestInfo

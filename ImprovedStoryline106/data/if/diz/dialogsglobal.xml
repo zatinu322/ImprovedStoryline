@@ -1713,7 +1713,7 @@
 		name="Dlg_pl_003059"
 		text="Всенепременно."
 		role="PLAYER"
-		scriptResult="RemoveQuestItem('quest_key_for_station'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_key_for_station'); AddHistory( 'r5_SplavTaken' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="RemoveQuestItem('quest_key_for_station'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_key_for_station'); AddHistory( 'r5_SplavTaken' ); AddFadingMsgId( 'fm_history_got' ); CompleteQuestIfTaken('r1m5_AnanagaWait_Quest1'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_003174"
@@ -2249,6 +2249,319 @@
 		text="Ну-ка, посмотрим, что на этот раз."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('RPGSigns_Quest'); TActivate('RPGSignsRolik1'); EndConversation()" />
+<!--Root/r5m2/Ананага-->
+	<Reply
+		name="Dlg_npc_003303"
+		text="Эй, парень, не проходи мимо. Помоги хорошему человеку!"
+		role="NPC"
+		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and IsQuestTaken('HelpVillages_Quest') and not(IsQuestComplete('LastIspytanie_Quest1'))"
+		nextReplies="Dlg_pl_003304" />
+
+	<Reply
+		name="Dlg_pl_003304"
+		text="Ну раз хорошему, то я тебя слушаю."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003305" />
+
+	<Reply
+		name="Dlg_npc_003305"
+		text="Видишь ли, дело в том, что мне жизненно необходим один агрегат, к которому мне не достаёт несколько запчастей."
+		role="NPC"
+		nextReplies="Dlg_pl_003306" />
+
+	<Reply
+		name="Dlg_pl_003306"
+		text="Тебе нужны деньги, чтобы их купить?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003307" />
+
+	<Reply
+		name="Dlg_npc_003307"
+		text="Нет же! Все эти детали есть, ну, то есть, у меня-то их нет, но они есть..."
+		role="NPC"
+		nextReplies="Dlg_pl_003308" />
+
+	<Reply
+		name="Dlg_pl_003308"
+		text="Ты предлагаешь мне выкрасть их у кого-то?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003309" />
+
+	<Reply
+		name="Dlg_npc_003309"
+		text="Да что ты такой торопыга-то а! Не нужно ничего ни покупать, ни воровать. Я тебе просто скажу, где эти детали примерно находятся, а ты их найдёшь и привезёшь мне."
+		role="NPC"
+		nextReplies="Dlg_pl_003310" />
+
+	<Reply
+		name="Dlg_pl_003310"
+		text="Так а почему-бы тебе самому за ними не съездить? Я тебе что, мальчик на побегушках?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003311" />
+
+	<Reply
+		name="Dlg_npc_003311"
+		text="Смилуйся, добрый человек! Ноги у меня уже не ходят, грузовик разваливается, да и глаза уже не те - что я там на ослепительном горном снегу увижу-то?"
+		role="NPC"
+		nextReplies="Dlg_pl_003312 Dlg_pl_003313" />
+
+	<Reply
+		name="Dlg_pl_003313"
+		text="Слишком это всё странно, не буду я в этом участвовать."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003312"
+		text="Всё это очень странно. Но хорошо, я привезу, что ты просишь. Где мне искать твои запчасти?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003314" />
+
+	<Reply
+		name="Dlg_npc_003314"
+		text="Давай сюда карту, я покажу. Вот здесь, здесь и здесь. Но это только примерные ориентиры - они довольно неплохо спрятаны, так что ты поищи там получше."
+		role="NPC"
+		nextReplies="Dlg_pl_003315" />
+
+	<Reply
+		name="Dlg_pl_003315"
+		text="Спрятаны?! Что за?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003316" />
+
+	<Reply
+		name="Dlg_npc_003316"
+		text="Ну, а мне уже пора! Удачи, мил человек!"
+		role="NPC"
+		nextReplies="Dlg_pl_003317" />
+
+	<Reply
+		name="Dlg_pl_003317"
+		text="Ох, знал бы я об этом заранее..."
+		role="PLAYER"
+		scriptResult="TakeQuest('r1m5_AnanagaFind_Quest'); GetCurNpc():SetSpokenCount(1); TActivate('trComponentsCreate'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003318"
+		text="Ну что? Привёз?"
+		role="NPC"
+		scriptCondition="QuestStatus('r1m5_AnanagaFind_Quest4')==Q_TAKEN"
+		nextReplies="Dlg_pl_003319" />
+
+	<Reply
+		name="Dlg_pl_003319"
+		text="Да. Вот, держи. Не знаю, зачем они тебе и знать не хочу, но передай тогда Верховному Мудрецу, что я тебе помог."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003320" />
+
+	<Reply
+		name="Dlg_npc_003320"
+		text="В-в-верховному мудрецу? А м-может мы как-нибудь по-другому сочтёмся?"
+		role="NPC"
+		nextReplies="Dlg_pl_003321" />
+
+	<Reply
+		name="Dlg_pl_003321"
+		text="А в чём проблема? Так и знал, что не стоило мне в это ввязываться!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003322" />
+
+	<Reply
+		name="Dlg_npc_003322"
+		text="Да никакой проблемы тут нет! Просто наш Верховный, как бы это сказать... Не терпит любых проявлений праздности. Некоторые с этим смирились, но я не из их числа!"
+		role="NPC"
+		nextReplies="Dlg_pl_003323" />
+
+	<Reply
+		name="Dlg_pl_003323"
+		text='То есть тот "агрегат", который был тебе жизненно необходим, это...'
+		role="PLAYER"
+		nextReplies="Dlg_npc_003324" />
+
+	<Reply
+		name="Dlg_npc_003324"
+		text="Так точно! Ананаговый аппарат! Не так давно прошёл слух, что я гоню лучшую ананагу в Ринольске, и сам Верховный лично приезжал и устраивал обыск. Я тогда сильно струхнул и под покровом ночи спрятал ключевые запчасти в разных местах. Перед этим выпил пару бутылочек для храбрости, а на следующее утро осознал, что абсолютно не помню, куда именно я их запрятал."
+		role="NPC"
+		nextReplies="Dlg_pl_003325" />
+
+	<Reply
+		name="Dlg_pl_003325"
+		text="И поэтому ты решил навешать лапши на уши ничего не подозревающему незнакомцу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003326" />
+
+	<Reply
+		name="Dlg_npc_003326"
+		text="Мне стыдно, мил человек, очень стыдно! Но эта страсть сильнее меня. Так что, могу я вас попросить, чтобы вы не доносили на меня Верховному?"
+		role="NPC"
+		scriptResult="CompleteQuest('r1m5_AnanagaFind_Quest4'); RemoveQuestItem('quest_bratislav_component1'); RemoveQuestItem('quest_bratislav_component2'); RemoveQuestItem('quest_bratislav_component3'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_bratislav_component1'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_bratislav_component2'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_bratislav_component3');"
+		nextReplies="Dlg_pl_003327 Dlg_pl_003328 Dlg_pl_003329" />
+
+	<Reply
+		name="Dlg_pl_003329"
+		text="Ну уж нет! Сначала заставил меня по пояс в снегу свои железяки искать, а теперь ещё и смеешь просить, чтобы я молча это стерпел? Верховный Мудрец узнает об этом незамедлительно!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003340" />
+
+	<Reply
+		name="Dlg_npc_003340"
+		text="Мил человек, сжальтесь..."
+		role="NPC"
+		nextReplies="Dlg_pl_003341" />
+
+	<Reply
+		name="Dlg_pl_003341"
+		text="И не думай даже. Лучше снова иди прячь свои детальки, пока время есть."
+		role="PLAYER"
+		scriptResult="TakeQuest('r1m5_AnanagaBetrayal_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003328"
+		text="Я никому об этом не расскажу, будь спокоен."
+		role="PLAYER"
+		scriptCondition="not(BookExists('r1_ananaga_technology'))"
+		nextReplies="Dlg_npc_003338" />
+
+	<Reply
+		name="Dlg_npc_003338"
+		text="Спасибо, спасибо огромное!"
+		role="NPC"
+		nextReplies="Dlg_pl_003339" />
+
+	<Reply
+		name="Dlg_pl_003339"
+		text="Бывай."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003327"
+		text="Может, и не расскажу. Тем более, что у меня к тебе есть одно интересное предложение."
+		role="PLAYER"
+		scriptCondition="BookExists('r1_ananaga_technology')"
+		nextReplies="Dlg_npc_003330" />
+
+	<Reply
+		name="Dlg_npc_003330"
+		text="Я слушаю."
+		role="NPC"
+		nextReplies="Dlg_pl_003331" />
+
+	<Reply
+		name="Dlg_pl_003331"
+		text="Так уж вышло, что за долгое время своих странствий я обзавёлся двумя достаточно интересными рецептами. Не взглянешь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003332" />
+
+	<Reply
+		name="Dlg_npc_003332"
+		text='Ну-ка, ну-ка...|Батюшки мои! Это же то, что мне не доставало все эти годы - достойный рецепт и особенности выдержки. Да ты хоть представляешь какой напиток богов мы получим, если соединим твои рецепты с моим методом "отдыха"?'
+		role="NPC"
+		nextReplies="Dlg_pl_003333" />
+
+	<Reply
+		name="Dlg_pl_003333"
+		text="Отдыха? Рановато мне ещё на отдых, знаешь ли."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003334" />
+
+	<Reply
+		name="Dlg_npc_003334"
+		text='Нет-нет, ты не понял! "Отдыха" спиртного. Сначала приготовление, потом выдержка, а потом самый важный этап - "отдых". Ты не представляешь что творит даже с посредственной ананагой отдых в ледяном снегу на одном из здешних склонов, а если мы приготовим всё по твоим рецептам... Парень, это будет мой опус магнум!'
+		role="NPC"
+		nextReplies="Dlg_pl_003335" />
+
+	<Reply
+		name="Dlg_pl_003335"
+		text="Звучит недурно. Что от меня требуется?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003336" />
+
+	<Reply
+		name="Dlg_npc_003336"
+		text="Абсолютно ничего, я всем займусь сам. Ты пока своими делами занимайся, а как всё будет готово, я тебе бутылочку передам. "
+		role="NPC"
+		nextReplies="Dlg_pl_003337" />
+
+	<Reply
+		name="Dlg_pl_003337"
+		text="Ну, добро. Надеюсь, не обманешь."
+		role="PLAYER"
+		scriptResult="TakeQuest('r1m5_AnanagaWait_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003342"
+		text="Наконец-то, так и знал, что найду тебя здесь!"
+		role="NPC"
+		scriptCondition="QuestStatus('LastIspytanie_Quest')==Q_COMPLETED and QuestStatus('r1m5_AnanagaWait_Quest2')==Q_TAKEN"
+		nextReplies="Dlg_pl_003343" />
+
+	<Reply
+		name="Dlg_pl_003343"
+		text="Уже всё готово? Так быстро?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003344" />
+
+	<Reply
+		name="Dlg_npc_003344"
+		text="Да, готово. Но почему быстро? Так-то несколько месяцев прошло!"
+		role="NPC"
+		nextReplies="Dlg_pl_003345" />
+
+	<Reply
+		name="Dlg_pl_003345"
+		text="Стоп, что?! Несколько месяцев?! Но ведь..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003346" />
+
+	<Reply
+		name="Dlg_npc_003346"
+		text="Ну да, несколько месяцев. Если быть совсем точным, то семьдесят три дня."
+		role="NPC"
+		nextReplies="Dlg_pl_003347" />
+
+	<Reply
+		name="Dlg_pl_003347"
+		text="В голове не укладывается... Я же несколько дней назад сюда приехал..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003348" />
+
+	<Reply
+		name="Dlg_npc_003348"
+		text="А говорят, что это я ещё много пью! Ладно, парень, не переживай ты так. Какая разница: день, месяц, год? Вздор всё это! А бутылочку ты всё-таки возьми."
+		role="NPC"
+		nextReplies="Dlg_pl_003349" />
+
+	<Reply
+		name="Dlg_pl_003349"
+		text="Ах, да, конечно. Спасибо."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003350" />
+
+	<Reply
+		name="Dlg_npc_003350"
+		text="Тебе спасибо! До конца времён помнить буду, как ты подсобил, и с деталями, и с рецептами. Ну, удачи тебе!"
+		role="NPC"
+		nextReplies="Dlg_pl_003351" />
+
+	<Reply
+		name="Dlg_pl_003351"
+		text="И тебе.|Несколько месяцев... Да быть того не может..."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r1m5_AnanagaWait_Quest2'); AddQuestItem('quest_ananaga_bottle'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_ananaga_bottle'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003352"
+		text="Верховный Мудрец негодуэ"
+		role="NPC"
+		scriptCondition="QuestStatus('r1m5_AnanagaBetrayal_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_003353" />
+
+	<Reply
+		name="Dlg_pl_003353"
+		text="Сыглы"
+		role="PLAYER"
+		scriptResult="CompleteQuest('r1m5_AnanagaBetrayal_Quest'); EndConversation()" />
 <!--Root/r4m2/Сюжетные--><!--Root/r4m2/Сюжетные/Битва у базы-->
 	<Reply
 		name="r4m2_MilitaryBase_Man1_1_N01"
@@ -9865,7 +10178,7 @@
 		name="Dlg_npc_002652"
 		text="Эй, а я тебя помню! Вижу, тебе удалось победить этого механического монстра! Если не секрет, как ты это сделал?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('GomerOlme') and not(IsQuestComplete('GomerOlme'))"
+		scriptCondition="QuestStatus('GomerOlme')==Q_TAKEN or QuestStatus('GomerSaliniom')==Q_TAKEN"
 		nextReplies="Dlg_pl_002653" />
 
 	<Reply
@@ -9950,6 +10263,7 @@
 		name="Dlg_npc_002666"
 		text="В корень зришь. Склад захватили местные и отказываются его освобождать, пока торговцы не выполнят их требования. Вроде бы последние как раз искали переговорщика. Раз уж тебе сильнее всех надо, можешь попытать счастья. Поговори вон с тем мужиком, он тебе расскажет, что да как."
 		role="NPC"
+		scriptResult="if QuestStatus('GomerSaliniom')==Q_TAKEN then CompleteQuest('GomerSaliniom') end CompleteQuestIfTaken('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' );"
 		nextReplies="Dlg_pl_002667 Dlg_pl_003270" />
 
 	<Reply
@@ -9969,7 +10283,7 @@
 		name="Dlg_pl_003272"
 		text="Прости, сам на мели. Ну, я пошёл."
 		role="PLAYER"
-		scriptResult="CompleteQuest('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002667"
@@ -9988,7 +10302,7 @@
 		name="Dlg_pl_002669"
 		text="Ладно, всего хорошего."
 		role="PLAYER"
-		scriptResult="CompleteQuest('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' ); AddPlayerMoney(-2500); EndConversation()" />
+		scriptResult="AddPlayerMoney(-2500); EndConversation()" />
 <!--Root/r1m4/Опциональные/Поиски муженька-->
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_1_N01"
@@ -13550,7 +13864,7 @@
 		name="Kollizey1_hellodlg0"
 		text="Приветствую. На кого поставить хочешь?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('MidgardTalkKollizey_Quest')  and  not(IsQuestComplete('MidgardTalkKollizey_Quest'))  and  not(IsQuestFailed('MidgardTalkKollizey_Quest'))"
+		scriptCondition="IsQuestTaken('MidgardTalkKollizey_Quest')  and  not(IsQuestComplete('MidgardTalkKollizey_Quest'))  and  not(IsQuestFailed('MidgardTalkKollizey_Quest')) and GetVar('MidgardCutscene').AsInt == 0"
 		nextReplies="Kollizey1_hellodlg0_P1_1" />
 
 	<Reply
@@ -13645,7 +13959,7 @@
 		name="Professor_hellodlg0"
 		text="Молодой человек, Вы хотели меня видеть?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('TalkProfessor_Quest')  and  not(IsQuestComplete('TalkProfessor_Quest'))  and  not(IsQuestFailed('TalkProfessor_Quest'))"
+		scriptCondition="IsQuestTaken('TalkProfessor_Quest')  and  not(IsQuestComplete('TalkProfessor_Quest'))  and  not(IsQuestFailed('TalkProfessor_Quest')) and GetVar('MidgardCutscene').AsInt == 0 "
 		nextReplies="Professor_hellodlg0_P1" />
 
 	<Reply
@@ -14031,7 +14345,7 @@
 		name="Director_hellodlg4"
 		text="Приветствую тебя, приятель. В прошлый раз ты мне несказанно помог. Ты просто спас мой бизнес. Вот, держи. Это твоя часть выручки."
 		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount() == 5)  and  IsQuestTaken('r3m2_ReadyToTravel') and QuestStatus('BuyKollizey_Quest')==Q_COMPLETED"
+		scriptCondition="(GetCurNpc():GetSpokenCount() == 5)  and  (IsQuestTaken('r3m2_ReadyToTravel') or IsQuestTaken('OpenMid11_Quest')) and QuestStatus('BuyKollizey_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_pl_001271" />
 
 	<Reply
@@ -14446,7 +14760,7 @@
 		name="Dlg_pl_001635"
 		text="Кажется, зря я это сделал…"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); FailQuest('d_FindBenInMidgard_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); SetVar('MidgardCutscene', 1); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); FailQuest('d_FindBenInMidgard_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_xyz302"
@@ -15275,7 +15589,7 @@
 		name="Umelec_hellodlg0"
 		text="Добрый день."
 		role="NPC"
-		scriptCondition="IsQuestTaken('r1m2_TalkAboutRedkiyMineral_Quest')  and  not(IsQuestComplete('r1m2_TalkAboutRedkiyMineral_Quest'))"
+		scriptCondition="QuestStatus('r1m2_TalkAboutRedkiyMineral_Quest')==Q_TAKEN or QuestStatus('r1m2_NoCompositeFast_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000590" />
 
 	<Reply
@@ -15324,13 +15638,22 @@
 		name="Dlg_npc_000602"
 		text="Чехлы напрямую в Мидгард не поставляют, но я могу заказать их через свои каналы, что, естественно, потребует некоторого времени. А что касается композита... Дай подумать... Я знаю только одно место, где, возможно, ты сможешь их найти. Попытай счастья в Колизее. Там бойцы нередко ставят на кон различные редкие вещицы, может и этот материал там окажется."
 		role="NPC"
-		nextReplies="Dlg_pl_000603" />
+		nextReplies="Dlg_pl_000603 Dlg_pl_003302" />
+
+	<Reply
+		name="Dlg_pl_003302"
+		text="Я уже был там. К сожалению, ни у одного из бойцов композита не оказалось."
+		role="PLAYER"
+		scriptCondition="IsQuestTaken('OpenMid11_Quest')"
+		scriptResult="CompleteQuest('r1m2_NoCompositeFast_Quest')"
+		nextReplies="Dlg_npc_002217" />
 
 	<Reply
 		name="Dlg_pl_000603"
 		text="Хорошо, спасибо, я понял, где искать."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m2_TalkAboutRedkiyMineral_Quest');  EndConversation()" />
+		scriptCondition="not(IsQuestTaken('OpenMid11_Quest'))"
+		scriptResult="CompleteQuest('r1m2_TalkAboutRedkiyMineral_Quest'); EndConversation()" />
 
 	<Reply
 		name="Umelec_hellodlg1"
@@ -15469,7 +15792,7 @@
 		name="Dlg_pl_002220"
 		text="Ни слова больше, я знаю, кого можно спросить об этом материале."
 		role="PLAYER"
-		scriptResult=" CompleteQuest('r1m2_MovemineralToMidgard_Quest'); TakeQuest('BenZima_Quest'); TActivate('LisaBen');  EndConversation()" />
+		scriptResult=" CompleteQuestIfTaken('r1m2_MovemineralToMidgard_Quest'); TakeQuest('BenZima_Quest'); TActivate('LisaBen');  EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002225"
@@ -15500,7 +15823,7 @@
 		name="Fighter1_hellodlg0"
 		text="Ну, что герой?! Хочешь сразиться и победить?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('r1m2_RedkiyMineral_Quest')   and   not(IsQuestComplete('r1m2_RedkiyMineral_Quest'))"
+		scriptCondition="QuestStatus('r1m2_RedkiyMineral_Quest')==Q_TAKEN or QuestStatus('OpenMid11_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000606" />
 
 	<Reply
@@ -15525,25 +15848,26 @@
 		name="Dlg_npc_002589"
 		text="Вот уж чего не знаю... Но ты всё равно можешь сразиться со мной, раз уж приехал сюда."
 		role="NPC"
+		scriptResult="CompleteQuestIfTaken('r1m2_RedkiyMineral_Quest'); CompleteQuestIfTaken('OpenMid11_Quest'); AddBook('r1_book_kollizey_flyer2'); "
 		nextReplies="Dlg_pl_002591 Dlg_pl_002590" />
 
 	<Reply
 		name="Dlg_pl_002591"
 		text="Почему бы и нет. На арену!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m2_RedkiyMineral_Quest'); TakeQuest('r1m2_Glagiators_Quest'); TActivate('KOLIZEYFIGHT'); AddBook('r1_book_kollizey_flyer2'); EndConversation()" />
+		scriptResult="TakeQuest('r1m2_Glagiators_Quest'); TActivate('KOLIZEYFIGHT'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002590"
 		text="Мне неинтересны бои на арене. Всего тебе хорошего."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m2_RedkiyMineral_Quest'); AddBook('r1_book_kollizey_flyer2');  EndConversation()" />
+		scriptResult="EndConversation()" />
 <!--Root/r1m2/Сюжетные/Гладиатор без материала-->
 	<Reply
 		name="Fighter2_hellodlg0"
 		text="Чего тебе? Хочешь сразиться со мной на Арене?!"
 		role="NPC"
-		scriptCondition="IsQuestTaken('r1m2_RedkiyMineral_Quest')   and   not(IsQuestComplete('r1m2_RedkiyMineral_Quest'))   and   GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="(QuestStatus('r1m2_RedkiyMineral_Quest')==Q_TAKEN or QuestStatus('OpenMid11_Quest')==Q_TAKEN) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_000607" />
 
 	<Reply
@@ -16098,7 +16422,7 @@
 
 	<Reply
 		name="Dlg_pl_001699"
-		text="Я не могу проехать в Мидгард из-за той стычки в музее. С этим необходимо что-то сделать."
+		text="Мне нужны квалифицированные мастера, но меня не пускают в Мидгард из-за той стычки в музее. С этим необходимо что-то сделать."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001700" />
 
@@ -16122,21 +16446,33 @@
 
 	<Reply
 		name="Dlg_pl_001703"
-		text="Это я могу. Бармен!"
+		text="А мне чем заниматься всё это время?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001704" />
 
 	<Reply
 		name="Dlg_npc_001704"
-		text="Да, ты пока пей, а мне это всё обмозговать нужно."
+		text="А я откуда знаю? Покажи-ка мне чертёж свой. Да не бойся, ничего я с ним не сделаю.|Так, ага... Ты в курсе что у тебя в качестве основного материала указан композит?"
 		role="NPC"
 		nextReplies="Dlg_pl_001705" />
 
 	<Reply
 		name="Dlg_pl_001705"
-		text="Бармен, плесни ананаги!"
+		text="И что это значит?"
 		role="PLAYER"
-		scriptResult="CompleteQuest('OpenMid_Quest'); TActivate('WaitForThief'); EndConversation()" />
+		nextReplies="Dlg_npc_003300" />
+
+	<Reply
+		name="Dlg_npc_003300"
+		text="Это значит, что тебе придётся изрядно попотеть, чтобы его достать - материал очень редкий, буквально на вес золота.|Знаешь что, вот пока я вожусь с Мидгардом, вместо того, чтобы сидеть в баре, скатайся лучше в Колизей. Там много всяких интересных артефактов на кон ставят, глядишь, и композит там найдёшь."
+		role="NPC"
+		nextReplies="Dlg_pl_003301" />
+
+	<Reply
+		name="Dlg_pl_003301"
+		text="А это неплохая идея. Всё равно пока заняться нечем."
+		role="PLAYER"
+		scriptResult="CompleteQuest('OpenMid_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_001690"
@@ -16161,7 +16497,7 @@
 		name="Dlg_pl_001708"
 		text="Я подумаю над твоим предложением. А теперь мне пора."
 		role="PLAYER"
-		scriptResult="CompleteQuest('OpenMid2_Quest'); TakeQuest('r3m2_ReadyToTravel'); TActivate('trMidgardOpens'); EndConversation()" />
+		scriptResult="CompleteQuest('OpenMid2_Quest'); TakeQuest('r1m2_NoCompositeFast_Quest'); TActivate('trMidgardOpens'); EndConversation()" />
 <!--Root/r1m2/Сюжетные/Римская-->
 	<Reply
 		name="Dlg_npc_001642"

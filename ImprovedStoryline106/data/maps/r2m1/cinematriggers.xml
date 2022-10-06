@@ -1860,7 +1860,8 @@
 
 <!-- ролик с появлением тарелки -->
 	<trigger Name="RolikBegin_UFO" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			PlayCustomMusic("Techno04")
 
@@ -1910,7 +1911,6 @@
 
 				RuleConsole("g_postEffect cinematicEnd")
 
-				TDeactivate("RolikBegin_LightOff")
 				TDeactivate("trUFO_cam03")
 				TDeactivate("trGeneric")
 				TActivate("trLightRemove")

@@ -8,6 +8,7 @@
 		    SetVar("FelixChoise",0)
 			SetVar("DrunkRide", 0)
 			SetVar("AutoSaveCount", 0)
+			SetVar("DestroyedSowth", 0)
 			if ISL_VERSION then SetVar("ISLVersion", ISL_VERSION) end
 
 			if getObj("Ruin") then
@@ -262,20 +263,10 @@
 				town:SetOpenGateToPlayer(false)
 			end
 
-			local hs = GetEntityByName ("hs01")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("hs02")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("hs03")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("hs04")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("hs05")	
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("hs06")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("hs07")
-			if hs then hs:Remove() end
+			for house = 1,7 do
+				local hs = GetEntityByName ("hs0"..house)
+				if hs then hs:Remove() end
+			end
 
 			CreateNewDummyObject( "ruins1", "hs01", -1, -1, CVector(3355.214,  368, 3322.013), Quaternion(0.0000, -0.9998, 0.0000, -0.0196) )
 			CreateNewDummyObject( "ruins2", "hs02", -1, -1, CVector(3396.989,  370, 3311.444), Quaternion(0.0000, -0.7880, 0.0000, 0.6157) )
@@ -540,19 +531,19 @@
 	<trigger Name="Create_ConstructionPlace01" active="0">
 		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateNewSgNodeObject( "ET_PS_HLIGHT",      "constlight01", -1, -1, CVector(1538.165, 306.032, 3254.301), Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
+			CreateNewSgNodeObject( "ET_PS_HLIGHT", "const11", -1, -1, CVector(1538.165, 306.032, 3254.301), Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
 
-			CreateNewDummyObject( "factory_box",       "constbox01",   -1, -1, CVector(1537.821, 305.904, 3248.180),   Quaternion(-0.0477, 0.0048, -0.1001, 0.9938)  )
-			CreateNewDummyObject( "pack",              "constpck01",   -1, -1, CVector(1539.686, 307.000, 3259.838),   Quaternion(0.0493, 0.3579, -0.0700, 0.9298)   )
-			CreateNewDummyObject( "pack",              "constpck02",   -1, -1, CVector(1544.301, 305.500, 3254.510),   Quaternion(-0.0744, -0.4663, -0.0852, 0.8774) )
-			CreateNewDummyObject( "pack",              "constpck03",   -1, -1, CVector(1531.284, 308.054, 3256.912),   Quaternion(-0.0135, -0.3143, -0.0698, 0.9467) )
-			CreateNewDummyObject( "factory_box", "constcnt01",   -1, -1, CVector(1529.463, 307.055, 3249.927),   Quaternion(-0.0614, -0.3087, -0.0363, 0.9485) )
+			CreateNewDummyObject( "factory_box", "const12", -1, -1, CVector(1537.821, 305.904, 3248.180), Quaternion(-0.0477, 0.0048, -0.1001, 0.9938))
+			CreateNewDummyObject( "pack", "const13", -1, -1, CVector(1539.686, 307.000, 3259.838), Quaternion(0.0493, 0.3579, -0.0700, 0.9298))
+			CreateNewDummyObject( "pack", "const14", -1, -1, CVector(1544.301, 305.500, 3254.510), Quaternion(-0.0744, -0.4663, -0.0852, 0.8774))
+			CreateNewDummyObject( "pack", "const15", -1, -1, CVector(1531.284, 308.054, 3256.912), Quaternion(-0.0135, -0.3143, -0.0698, 0.9467))
+			CreateNewDummyObject( "factory_box", "const16", -1, -1, CVector(1529.463, 307.055, 3249.927), Quaternion(-0.0614, -0.3087, -0.0363, 0.9485))
 
-			CreateNewDummyObject( "factory_box",       "constbox02",   -1, -1, CVector(1569.746, 295.000, 3107.854),   Quaternion(0.0000, -0.4285, 0.0000, 0.9035)  )
-			CreateNewDummyObject( "pack",              "constpck04",   -1, -1, CVector(1562.311, 295.000, 3107.815),   Quaternion(0.0000, 0.7009, 0.0000, 0.7133)   )
-			CreateNewDummyObject( "pack",              "constpck05",   -1, -1, CVector(1571.102, 295.000, 3113.075),   Quaternion(0.0000, -0.5244, 0.0000, 0.8515) )
-			CreateNewDummyObject( "pack",              "constpck06",   -1, -1, CVector(1563.571, 294.000, 3119.301),   Quaternion(0.0065, 0.0004, 0.0676, 0.9977) )
-			CreateNewDummyObject( "factory_box",       "constbox03",   -1, -1, CVector(1571.197, 295.000, 3117.813),   Quaternion(0.0000, 0.5610, 0.0000, 0.8278) )
+			CreateNewDummyObject( "factory_box", "const22", -1, -1, CVector(1569.746, 295.000, 3107.854), Quaternion(0.0000, -0.4285, 0.0000, 0.9035))
+			CreateNewDummyObject( "pack", "const23", -1, -1, CVector(1562.311, 295.000, 3107.815), Quaternion(0.0000, 0.7009, 0.0000, 0.7133))
+			CreateNewDummyObject( "pack", "const24", -1, -1, CVector(1571.102, 295.000, 3113.075), Quaternion(0.0000, -0.5244, 0.0000, 0.8515))
+			CreateNewDummyObject( "pack", "const25", -1, -1, CVector(1563.571, 294.000, 3119.301), Quaternion(0.0065, 0.0004, 0.0676, 0.9977))
+			CreateNewDummyObject( "factory_box", "const26", -1, -1, CVector(1571.197, 295.000, 3117.813), Quaternion(0.0000, 0.5610, 0.0000, 0.8278))
 
 			TActivate("Trigged_ConstructionPlace01")
 			trigger:Deactivate()
@@ -564,18 +555,10 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ConstructionPlace01" />
 		<script>
 
-			local hs = GetEntityByName ("constlight01")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constbox01")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constpck01")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constpck02")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constpck03")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constcnt01")
-			if hs then hs:Remove() end
+			for const = 1,6 do
+				local hs = GetEntityByName("const1"..const)
+				if hs then hs:Remove() end
+			end
 			
 			TeamCreate("Defenders",1008,CVector(1311, 288, 2832),{"BelazTSP","TSPFighter"}, CVector(1549, 288, 3185), 1)
 			
@@ -602,8 +585,7 @@
 	<trigger Name="Create_ConstructionPlace02" active="0">
 		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateNewSgNodeObject( "ET_PS_HLIGHT",      "constlight02", -1, -1, CVector(1565.589, 295.000, 3113.854),   Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
-
+			CreateNewSgNodeObject( "ET_PS_HLIGHT", "constl21", -1, -1, CVector(1565.589, 295.000, 3113.854), Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
 
 			TActivate("Trigged_ConstructionPlace02")
 
@@ -615,18 +597,10 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ConstructionPlace02" />
 		<script>
 
-			local hs = GetEntityByName ("constlight02")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constbox02")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constpck04")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constpck05")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constpck06")
-			if hs then hs:Remove() end
-			local hs = GetEntityByName ("constbox03")
-			if hs then hs:Remove() end
+			for const = 1,6 do
+				local hs = GetEntityByName("const2"..const)
+				if hs then hs:Remove() end
+			end
 
 			TActivate("Build_ConstructionPlace02")
 
@@ -710,6 +684,33 @@
 			CompleteQuest("DefendSowth_Quest4")
 
 			TActivate("SDCRolikBegin")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Захват Южного Бродягами, если мы отказались его защищать -->
+	<trigger Name="trSowthTakeover" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local dot_names = {"staticAutoGun047", "staticAutoGun04444", 
+							   "staticAutoGun044", "staticAutoGun045", 
+							   "staticAutoGun0444", "staticAutoGun043", 
+							   "staticAutoGun040"}
+			for name = 1,7 do
+				local dot = GetEntityByName(dot_names[name])
+				if dot then
+					local dot_pos = dot:GetPosition()
+					local dot_rot = dot:GetRotation()
+					dot:Remove()
+					CreateNewDummyObject( "heavy_dot_brocken4", "SowthBrokenDot"..name, -1, -1, dot_pos, dot_rot, 0 )
+				end
+			end
+
+			local town = GetEntityByName("TheTown")
+			if town then town:SetProperty("Belong", 1035) end
+
+			SetVar("DestroyedSowth", 1)
 
 			trigger:Deactivate()
 		</script>
@@ -975,18 +976,22 @@
 
 					PassToMap("r1m2", "FromR1M1", -1 )
 
-					local hs = GetEntityByName ("FIRE01")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE02")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE03")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE04")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE05")	
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE06")
-					if hs then hs:Remove() end
+					for fire = 1,6 do
+						local hs = GetEntityByName ("FIRE0"..fire)
+						if hs then hs:Remove() end
+					end
+
+					if IsQuestComplete("d_KillFelix_Quest") then
+						if getObj("TheContraDot1") then
+							LOG("TheContra and TheFreedom dots already exists.")
+						else
+							CreateNewBreakableObject( "brick_dot1_vulcan","TheContraDot1", 1008, CVector(3075.444, 317.966, 405.052), Quaternion(0.000, -0.707, 0.000, 0.707),0)
+							CreateNewBreakableObject( "brick_dot1_vulcan","TheContraDot2", 1008, CVector(3128.200, 318.012, 440.179), Quaternion(0.000, -0.543, 0.000, 0.840),0)
+							CreateNewBreakableObject( "staticAutoGun04","TheFreedomDot1", 1008, CVector(3159.318, 319.755, 1167.116), Quaternion(0.009, 1.000, 0.000, -0.002),0)
+							CreateNewBreakableObject( "staticAutoGun04","TheFreedomDot2", 1008, CVector(3187.464, 319.924, 1167.089), Quaternion(0.000, 1.000, 0.000, -0.017),0)
+							LOG("Created 4 TheContra and TheFreedom dots")
+						end
+					end
 
 					TDeactivate("ZASADA_1")
 				else
@@ -1061,19 +1066,6 @@
 
 					PassToMap("r1m3", "FromR1M1", -1 )
 
-					local hs = GetEntityByName ("FIRE01")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE02")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE03")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE04")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE05")	
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE06")
-					if hs then hs:Remove() end
-
 					TDeactivate("ZASADA_1")
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
@@ -1145,17 +1137,12 @@
 				local b = SpawnMessageBox( "8801" )
 				if b == 1 then
 
+					if not(IsQuestComplete("DefendSowth_Quest")) and GetVar("DestroyedSowth").AsInt == 0 then
+						TActivate("trSowthTakeover")
+					end
+
 					PassToMap("r4m1", "FromR1M1", -1 )
 
-					if getObj("TheContraDot1") then
-						LOG("TheContra and TheFreedom dots already exists.")
-					else
-						CreateNewBreakableObject( "brick_dot1_vulcan","TheContraDot1", 1008, CVector(3075.444, 317.966, 405.052), Quaternion(0.000, -0.707, 0.000, 0.707),0)
-						CreateNewBreakableObject( "brick_dot1_vulcan","TheContraDot2", 1008, CVector(3128.200, 318.012, 440.179), Quaternion(0.000, -0.543, 0.000, 0.840),0)
-						CreateNewBreakableObject( "staticAutoGun04","TheFreedomDot1", 1008, CVector(3159.318, 319.755, 1167.116), Quaternion(0.009, 1.000, 0.000, -0.002),0)
-						CreateNewBreakableObject( "staticAutoGun04","TheFreedomDot2", 1008, CVector(3187.464, 319.924, 1167.089), Quaternion(0.000, 1.000, 0.000, -0.017),0)
-						LOG("Created 4 TheContra and TheFreedom dots")
-					end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 

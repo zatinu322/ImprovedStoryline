@@ -653,6 +653,14 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="MrShlyapaAbs"
+				Belong="1025"
+				Prototype="NPC"
+				ModelName="point"
+				helloReplyNames="Dlg_npc_003358"
+				SpokenCount="0" />
+
+			<Object
 				Name="Kartograph2"
 				Belong="1025"
 				Prototype="NPC"

@@ -273,6 +273,14 @@
 		value="ДЖ" />
 
 	<string
+		id="Belong_1035"
+		value="Бродяги" />
+
+	<string
+		id="Belong_1035_abb"
+		value="Бродяга" />
+
+	<string
 		id="Belong_1040"
 		value="Повстанцы" />
 
@@ -571,6 +579,10 @@
 	<string
 		id="Belong_1034_diz"
 		value="Дети Железа" />
+
+	<string
+		id="Belong_1035_diz"
+		value="Бродяги" />
 
 	<string
 		id="Belong_1040_diz"

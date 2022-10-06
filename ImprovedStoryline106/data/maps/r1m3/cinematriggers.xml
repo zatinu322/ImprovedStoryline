@@ -2084,7 +2084,7 @@
 
 <!-- Игрок вновь встречает Оракула. Выбор концовки. -->
 	<trigger Name="RolikBegin_ORACLEAGRESSOR" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<event timeout="2" eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -2177,6 +2177,8 @@
 				vehPlayer:UnlimitMaxSpeed()
 			end
 
+			getObj("DecidePlz"):SetSpokenCount(1)
+
 			StartConversation("DecidePlz")
 
 			trigger:Deactivate()
@@ -2238,6 +2240,8 @@
 
 			RuleConsole("cinematic_spring_coeff 0.7")
 
+			TakeQuest( "r1m3_DestroyOracle" )
+
 			local mover = GetEntityByName("MoverB")
 			if mover then mover:Remove() end
 
@@ -2267,6 +2271,8 @@
 				bossp:NoticePlayer()
 				SetCameraDirectionToObj( bossp:GetId() )
 			end
+
+			AllowSave(false)
 
 			trigger:Deactivate()
 		</script>
@@ -2324,7 +2330,6 @@
 			
 			TakeQuest("r1m3_DestroyRadiationSource")
 			
-			FailQuest("r1m3_DestroyOracle")
 			FailQuest("r2m1_DeployBloks")
 
 			trigger:Deactivate()
@@ -2498,7 +2503,6 @@
 				SetCoordinateForQuest( "ToAivenToHel_Quest",	CVector(1640.591, 246.708, 1645.471),   "r1m4")
 			end
 
-			FailQuestIfTaken("r1m3_DestroyOracle")
 			FailQuestIfTaken("r2m1_DeployBloks")
 			FailQuestIfTaken("r4m2_DestroyPlate")
 
@@ -2551,13 +2555,14 @@
 
 			SetCameraBehindPlayerVehicle()
 		
-			GetEntityByName("qa1"):Remove()
-			GetEntityByName("qa2"):Remove()
-			GetEntityByName("qa3"):Remove()
-			GetEntityByName("qa4"):Remove()
-			GetEntityByName("qa5"):Remove()
+			for rock = 1,5 do
+				local rk = GetEntityByName("qa"..rock)
+				if rk then rk:Remove() end
+			end
 			
 			CompleteQuest("r4m2_DestroyPlate")
+
+			AllowSave(true)
 
 			trigger:Deactivate()
 		</script>

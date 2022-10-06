@@ -2552,14 +2552,38 @@
 
 	<Reply
 		name="Dlg_npc_003352"
-		text="Верховный Мудрец негодуэ"
+		text="Что-нибудь ещё?"
 		role="NPC"
 		scriptCondition="QuestStatus('r1m5_AnanagaBetrayal_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_003353" />
 
 	<Reply
 		name="Dlg_pl_003353"
-		text="Сыглы"
+		text="Да, я был в Ринольске и там один работяга попросил помочь ему в сборке анагового аппарата."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003354" />
+
+	<Reply
+		name="Dlg_npc_003354"
+		text="Так я и знал, что он до сих пор этим промышляет! Ты ведь не помог ему?"
+		role="NPC"
+		nextReplies="Dlg_pl_003355" />
+
+	<Reply
+		name="Dlg_pl_003355"
+		text="К сожалению, так получилось. Когда он просил меня достать ему эти детали, он ни слова не сказал про истинное их предназначение."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003356" />
+
+	<Reply
+		name="Dlg_npc_003356"
+		text="Каков наглец! Но, честно сказать, я ожидал от него нечто подобное. Спасибо тебе, добрый путник. Я незамедлительно отправлюсь в Ринольск и радикально решу этот вопрос."
+		role="NPC"
+		nextReplies="Dlg_pl_003357" />
+
+	<Reply
+		name="Dlg_pl_003357"
+		text="Нет проблем. Не люблю, когда меня держат за дурака."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m5_AnanagaBetrayal_Quest'); EndConversation()" />
 <!--Root/r4m2/Сюжетные--><!--Root/r4m2/Сюжетные/Битва у базы-->
@@ -3236,15 +3260,27 @@
 
 	<Reply
 		name="Dlg_npc_002586"
-		text="Не ной, это последнее, о чём я тебя попрошу. Дальше я не смогу тебя сопровождать, тебе придётся действовать самому."
+		text="Не ной, это последнее, о чём я тебя прошу. Дальше я не смогу тебя сопровождать, тебе придётся действовать самому. И если всё сложится удачно, то мы с тобой, наконец-то, поговорим. А теперь, вынужден откланяться."
 		role="NPC"
 		nextReplies="Dlg_pl_002587" />
 
 	<Reply
 		name="Dlg_pl_002587"
+		text="Да объясни ты мне уже, что здесь происходит!"
+		role="PLAYER"
+		scriptResult="TakeQuest('MrShlyapa4_Quest'); TActivate('HumanSkala_Rolik'); GetCurNpc():SetSpokenCount(1); StartConversation('MrShlyapaAbs'); " />
+
+	<Reply
+		name="Dlg_npc_003358"
+		role="NPC"
+		scriptCondition="IsQuestTaken('MrShlyapa4_Quest') and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_003359" />
+
+	<Reply
+		name="Dlg_pl_003359"
 		text="И всё-таки он ненастоящий. Да, ну не может он быть настоящим. Бред."
 		role="PLAYER"
-		scriptResult="TakeQuest('MrShlyapa4_Quest'); GetCurNpc():SetSpokenCount(1); TActivate('HumanSkala_Rolik'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 <!--Root/r4m1/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003032"
@@ -7763,7 +7799,7 @@
 		name="Dlg_pl_002560"
 		text="Вот и молодец. А теперь иди отсюда."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_002555"
@@ -7782,7 +7818,7 @@
 		name="Dlg_pl_002558"
 		text="Ты оказал миру неоценимую услугу!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_000645"
@@ -7801,7 +7837,7 @@
 		name="Dlg_pl_000651"
 		text="Ты оказал миру неоценимую услугу!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
 
 	<Reply
 		name="SelCitizen_hellodlg2"
@@ -7838,7 +7874,7 @@
 		name="Dlg_pl_001269"
 		text="Да ладно-ладно."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip');  TActivate('RolikBegin_UFO');  LeaveTown(true)" />
+		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
 <!--Root/r2m1/Сюжетные/Бармен из Селя-->
 	<Reply
 		name="SelBarmen_hellodlg0"
@@ -13733,7 +13769,7 @@
 		name="Dlg_npc_002425"
 		text="Итак, каков же мой выбор?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('r1m3_DestroyOracle') and not(IsQuestComplete('r1m3_DestroyOracle')) and (GetCurNpc():GetSpokenCount( ) == 0)"
+		scriptCondition="GetCurNpc():GetSpokenCount( ) == 1"
 		nextReplies="Dlg_pl_002426 Dlg_pl_002427 Dlg_pl_002991" />
 
 	<Reply
@@ -13741,19 +13777,19 @@
 		text="Остаться в стороне."
 		role="PLAYER"
 		scriptCondition="QuestStatus('LookAtAivenCar')==Q_COMPLETED"
-		scriptResult="TActivate('trORACLEAGRESSOR_cam05'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+		scriptResult="TActivate('trORACLEAGRESSOR_cam05'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002427"
 		text="Встать на сторону Оракула."
 		role="PLAYER"
-		scriptResult="TActivate('trORACLEAGRESSOR_cam04'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+		scriptResult="TActivate('trORACLEAGRESSOR_cam04'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002426"
 		text="Встать на сторону Ньери."
 		role="PLAYER"
-		scriptResult="TActivate('trORACLEAGRESSOR_cam03'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+		scriptResult="TActivate('trORACLEAGRESSOR_cam03'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
 <!--Root/r1m2/Сюжетные--><!--Root/r1m2/Опциональные--><!--Root/r1m2/Опциональные/Археолог в Порто-->
 	<Reply
 		name="Anticwar_hellodlg0"
@@ -18735,7 +18771,7 @@
 		name="Dlg_pl_002573"
 		text="Что ж, надеюсь, кто-нибудь согласится. А мне пора. Удачи вам!"
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); SetWeather(0); EndConversation()" />
+		scriptResult="TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002549"

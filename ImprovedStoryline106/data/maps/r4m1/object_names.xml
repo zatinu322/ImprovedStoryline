@@ -33,6 +33,10 @@
 		FullName="Мистер Шляпа" />
 
 	<Object
+		Name="MrShlyapaAbs"
+		FullName=" " />
+
+	<Object
 		Name="Tankist"
 		FullName="Танкист" />
 

@@ -17904,6 +17904,117 @@
 		skin="1" />
 
 	<Node
+		name="Object739"
+		class="SgAnimatedModelNode"
+		org="1261.797 -1.000 2829.321"
+		orgRel="1"
+		rot="0.0000 -0.2714 0.0000 0.9625"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object740"
+		class="SgAnimatedModelNode"
+		org="1210.954 0.218 2827.224"
+		orgRel="1"
+		id="heavy_smallwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object83723"
+		class="SgAnimatedModelNode"
+		org="1194.998 -2.521 2860.101"
+		orgRel="1"
+		id="big_crag_6"
+		ndmAction="0" />
+
+	<Node
+		name="Object83720"
+		class="SgAnimatedModelNode"
+		org="1155.092 0.000 2891.626"
+		orgRel="1"
+		rot="0.0000 -0.1586 0.0000 0.9873"
+		id="big_crag_12"
+		ndmAction="0" />
+
+	<Node
+		name="Object6059"
+		class="SgAnimatedModelNode"
+		org="1215.580 0.000 2807.490"
+		orgRel="1"
+		rot="0.0000 0.9763 0.0000 0.2164"
+		scale="1.010 1.010 1.010"
+		id="agro_tech4"
+		ndmAction="0" />
+
+	<Node
+		name="Object6051"
+		class="SgAnimatedModelNode"
+		org="1095.746 0.000 2932.010"
+		orgRel="1"
+		rot="0.0000 0.6361 0.0000 -0.7716"
+		scale="0.860 0.860 0.860"
+		id="agro_tech3"
+		ndmAction="0" />
+
+	<Node
+		name="Object6039"
+		class="SgAnimatedModelNode"
+		org="1097.480 0.000 2951.540"
+		orgRel="1"
+		rot="0.0000 0.0610 0.0000 -0.9981"
+		scale="1.060 1.060 1.060"
+		id="agro_tech1"
+		ndmAction="0" />
+
+	<Node
+		name="Object5556"
+		class="SgAnimatedModelNode"
+		org="1097.209 0.000 2956.395"
+		orgRel="1"
+		rot="0.0000 0.1045 0.0000 0.9945"
+		scale="0.838 0.838 0.838"
+		id="r1_Dub_Kust2"
+		ndmAction="0" />
+
+	<Node
+		name="Object5532"
+		class="SgAnimatedModelNode"
+		org="1088.534 0.000 2971.817"
+		orgRel="1"
+		rot="0.0000 -0.7064 0.0000 0.7078"
+		id="house2"
+		ndmAction="0" />
+
+	<Node
+		name="Object5536"
+		class="SgAnimatedModelNode"
+		org="1042.009 0.000 2961.650"
+		orgRel="1"
+		rot="0.0000 0.7121 0.0000 0.7020"
+		id="house3"
+		ndmAction="0" />
+
+	<Node
+		name="Object5557"
+		class="SgAnimatedModelNode"
+		org="1044.154 0.000 2975.231"
+		orgRel="1"
+		rot="0.0000 0.1045 0.0000 0.9945"
+		scale="0.838 0.838 0.838"
+		id="r1_Dub_Kust2"
+		ndmAction="0" />
+
+	<Node
+		name="Object5535"
+		class="SgAnimatedModelNode"
+		org="1042.386 0.000 2987.990"
+		orgRel="1"
+		rot="0.0000 0.7121 0.0000 0.7020"
+		id="house3"
+		ndmAction="0" />
+
+	<Node
 		name="Object76481959"
 		class="SgAnimatedModelNode"
 		org="3869.815 0.000 1735.703"

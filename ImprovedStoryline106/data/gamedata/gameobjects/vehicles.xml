@@ -2569,6 +2569,17 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 	<Prototype
 		Class			= "Vehicle"
+		Name			= "SmlOilRunner"
+		ParentPrototype 	= "Sml1">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml1Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
 		Name			= "Sml201"
 		ParentPrototype 	= "Sml2">
 		<Parts>

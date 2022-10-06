@@ -11,7 +11,6 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			--Fly("FirstPriezd", CINEMATIC_NO_AIM, nil, 300, 1,1)
 			FlyLinked("FirstPriezd", GetPlayerVehicleId(), 65, 1, 1, GetPlayerVehicleId())
 			StartCinematic()
 			UpdateCinematic( 1 )
@@ -321,6 +320,59 @@
 		</script>
 	</trigger>
 
+	<!-- Прицеп уничтожен. Тупиковая концовка -->
+	<trigger Name="TrailerDieRolikBegin" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("IntenseDialogue03")
+
+			Fly("Ending11", CINEMATIC_NO_AIM, 0, 17.5, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage("42", 1)
+
+			TActivate("TrailerDieRolikFade")
+			TActivate("TrailerDieRolikEnd")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TrailerDieRolikFade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="TrailerDieRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			SpawnMessageBox("8901")
+
+			ShowDeathMenu()
+
+			CheckPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Догнали инженера-нефтегонщика -->
 	<trigger	Name="cinEngineerFirst"	active="0">
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
@@ -361,7 +413,7 @@
 				Plf:SetExternalPathByName("NearEngineerPlayerPath")
 			end
 
-			local enveh=CreateVehicleEx("Sml101","EngCar",CVector(4273.473, 300, 5923.936), 1033)
+			local enveh=CreateVehicleEx("SmlOilRunner","EngCar",CVector(4273.473, 300, 5923.936), 1033)
 			if enveh then
 				enveh:SetMaxTorque(100)
 				enveh:SetMaxSpeed(20)

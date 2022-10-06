@@ -12,9 +12,23 @@
 			SetVar("KnownMap",0)
 			SetVar("BeglecPrice",0)
 			SetVar("Cemetery", 0)
+			SetVar("AutoSaveCount", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			CreateNewDummyObject("rr_barrier3", "mininBarrier", -1, -1, CVector(6718.542, 230.886, 5747.152), Quaternion(-0.3620, 0.5734, 0.2916, 0.6747), 0)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Автосохранение -->
+	<trigger Name="trAutoSave" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("AutoSaveCount").AsInt == 0 then
+				SetVar("AutoSaveCount", 1)
+				AutoSave()
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -888,7 +902,8 @@
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="OraculEndLoc" />
 		<script>
 			if  IsQuestTaken("r2m1_DeployBloks") and not(IsQuestComplete("r2m1_DeployBloks") or IsQuestFailed("r2m1_DeployBloks")) then
-   				TakeQuest( "r1m3_DestroyOracle" )
+
+				TActivate("trAutoSave")
 
 				TActivate( "RolikBegin_ORACLEAGRESSOR" )
 
@@ -1102,20 +1117,15 @@
 
 					local kar = GetEntityByName("KARAVAN14_vehicle_0")
 					if kar then kar:Remove() end
-					local hs = GetEntityByName ("FIRE01")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE02")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE03")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE04")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE05")	
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE06")
-					if hs then hs:Remove() end
+
+					for fire = 1,6 do
+						local hs = GetEntityByName ("FIRE0"..fire)
+						if hs then hs:Remove() end
+					end
+
 					local pavlo = getObj("CrazyRoadRiders")
 					if pavlo then pavlo:SetSpokenCount(1) end
+
 					local pogor = getObj("TheCircus")
 					if pogor then pogor:SetProperty("Active", 0) end
 

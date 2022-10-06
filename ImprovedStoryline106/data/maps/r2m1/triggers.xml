@@ -679,43 +679,16 @@
 	<trigger Name="trLightRemove" active="0">
 		<event timeout="2.5" eventid="GE_TIME_PERIOD" />
 		<script>
-			local p = getObj("p003")	 if p then p:Remove() end
-			local p = getObj("p004")	 if p then p:Remove() end
-			local p = getObj("p005")	 if p then p:Remove() end
-			local p = getObj("p006")	 if p then p:Remove() end
-			local p = getObj("p007")	 if p then p:Remove() end
-			local p = getObj("p008")	 if p then p:Remove() end
-			local p = getObj("p009")	 if p then p:Remove() end
-			local p = getObj("p010")	 if p then p:Remove() end
-			local p = getObj("p011")	 if p then p:Remove() end
-			local p = getObj("p012")	 if p then p:Remove() end
-			local p = getObj("p013")	 if p then p:Remove() end
-			local p = getObj("p014")	 if p then p:Remove() end
-			local p = getObj("p015")	 if p then p:Remove() end
-			local p = getObj("p016")	 if p then p:Remove() end
-			local p = getObj("p017")	 if p then p:Remove() end
-			local p = getObj("p018")	 if p then p:Remove() end
-			local p = getObj("p019")	 if p then p:Remove() end
-			local p = getObj("p020")	 if p then p:Remove() end
-			local p = getObj("p021")	 if p then p:Remove() end
-			local p = getObj("p022")	 if p then p:Remove() end
-			local p = getObj("p023")	 if p then p:Remove() end
-			local p = getObj("p024")	 if p then p:Remove() end
-			local p = getObj("p025")	 if p then p:Remove() end
-			local p = getObj("p026")	 if p then p:Remove() end
-			local p = getObj("p027")	 if p then p:Remove() end
-			local p = getObj("p028")	 if p then p:Remove() end
-			local p = getObj("p029")	 if p then p:Remove() end
-			local p = getObj("p030")	 if p then p:Remove() end
-			local p = getObj("p031")	 if p then p:Remove() end
-			local p = getObj("p032")	 if p then p:Remove() end
-			local p = getObj("p033")	 if p then p:Remove() end
-			local p = getObj("p034")	 if p then p:Remove() end
-			local p = getObj("p035")	 if p then p:Remove() end
-			local p = getObj("p036")	 if p then p:Remove() end
-			local p = getObj("p037")	 if p then p:Remove() end
-			local p = getObj("p038")	 if p then p:Remove() end
-			local p = getObj("p039")	 if p then p:Remove() end
+
+			for light = 3,9 do
+				local p = getObj("p00"..light)
+				if p then p:Remove() end
+			end
+
+			for light = 10, 39 do
+				local p = getObj("p0"..light)
+				if p then p:Remove() end
+			end
 
 			trigger:Deactivate()
 		</script>

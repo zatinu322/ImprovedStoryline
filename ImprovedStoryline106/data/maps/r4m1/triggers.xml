@@ -96,7 +96,7 @@
 		</script>
 	</trigger>
 
-	<!--  -->
+	<!-- Взрыв бочек, когда игрок проезжает рядом -->
 	<trigger	Name="trBabah"	active="1">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Babah_loc" />
 		<script>
@@ -135,6 +135,7 @@
 				   local tr = getObj("trTrailerDie")
 				   if tr then
 				      tr:AddEvent("GE_OBJECT_DIE",nametr)
+					  println(nametr)
 			    	  TActivate("trTrailerDie")
 	   			   end
 			   end
@@ -200,11 +201,8 @@
 	<!-- Если прицеп Молоковоза уничтожается -->
 	<trigger	Name="trTrailerDie"	active="0">
 		<script>
-			SpawnMessageBox( "8902" )
 
-			ShowDeathMenu()
-
-			CheckPlayerVehicle()
+			TActivate("TrailerDieRolikBegin")
 			
 			trigger:Deactivate()
 		</script>
@@ -429,7 +427,6 @@
 			SetVar("BuhPoint5",0)
 
 			TActivate("trBuharsDie")
-			TActivate("trBuharsEnterToPort")
 			TActivate("trBuhReachPoint")
 			TakeQuest("r4m1_RBC_Evacuate")
 
@@ -496,7 +493,6 @@
 
 			TakeQuest("r4m2_LisaDieBen")
 
-			TDeactivate("trBuharsEnterToPort")
 			TDeactivate("trBuhReachPoint")
 
 			TActivate("LisaBuharDie")
@@ -831,7 +827,7 @@
 			PlfCoor.y = PlfCoor.y + 5
 			PlfCoor.z = PlfCoor.z - 5
 
-			if IsQuestTaken("r4m1_FindMilitaryBase") then
+			if IsQuestTaken("r4m1_GotoAivenGo") then
 				ValidateGameVersion()
 
 				local b = SpawnMessageBox( "8801" )
@@ -839,22 +835,10 @@
 
 					PassToMap("r4m2", "FromR4M1", -1 )
 
-					local hs = GetEntityByName ("FIRE01")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE02")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE03")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE04")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE05")	
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE06")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE07")
-					if hs then hs:Remove() end
-					local hs = GetEntityByName ("FIRE08")
-					if hs then hs:Remove() end
+					for fire = 1,8 do
+						local hs = GetEntityByName ("FIRE0"..fire)
+						if hs then hs:Remove() end
+					end
 
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)

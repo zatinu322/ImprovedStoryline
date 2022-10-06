@@ -1267,6 +1267,11 @@
 		value="Клоп" />
 
 	<Item
+		id="SmlOilRunner"
+		locForm="0"
+		value="Нефтегонщик" />
+
+	<Item
 		id="Sml201"
 		locForm="0"
 		value="Таракан" />

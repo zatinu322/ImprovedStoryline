@@ -73,38 +73,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="OpenMid2_Quest" />
-<!--Root/Доехать до локации и вернуться -->
-	<quest
-		Name="Human1_Quest1"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="1"
-		ConditionToGive="all complete"
-		OnComplete="Human1_Quest1_Complete"
-		OnTake="Human1_Quest1_Take" />
-
-	<quest
-		Name="Human1_Quest2"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="1"
-		ConditionToGive="all complete">
-		<quest
-			Name="Human1_Quest1_1"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="Human1_Quest1" />
-
-		<quest
-			Name="Human1_Quest1_2"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="Human1_Quest1_1" />
-	</quest>
 <!--Root/r5m1--><!--Root/r5m2-->
 	<quest
 		Name="GoBackToHel_Quest"
@@ -1557,6 +1525,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkToBarmenBeforeDesert"
 		OnComplete="AddPlayerMoney(40000)" />
 <!--Root/r3m1/ сюжетные-->
 	<quest

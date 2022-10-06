@@ -150,4 +150,9 @@
 		<Point  coord="-5.000 9.000 -20.000"/>
 	</Path>
 
+	<Path Name = "Ending11">
+		<Point  coord="6486.322 288.541 3530.846" rotation="0.024 0.946 -0.071 -0.314"/>
+		<Point  coord="6495.448 286.225 3518.456" rotation="0.024 0.946 -0.071 -0.314"/>
+	</Path>
+
 </Paths>

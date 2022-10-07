@@ -1571,7 +1571,7 @@
 		<Caravans>
 			<Caravan
 				Prototype="r1m1_CaravanTeam"
-				Locations="locEx2 locZaimka locGugulino locTroika locInRock locEx1" />
+				Locations="locEx2 locGugulino locTroika locInRock locEx1" />
 
 			<Caravan
 				Prototype="r1m1_CaravanTeam"
@@ -1579,7 +1579,7 @@
 
 			<Caravan
 				Prototype="r1m1_CaravanTeam"
-				Locations="locEx1 locSouth locArka locTroika locGugulino locZaimka locEx2" />
+				Locations="locEx1 locSouth locArka locTroika locGugulino locEx2" />
 
 			<Caravan
 				Prototype="r1m1_CaravanOne"
@@ -1587,11 +1587,11 @@
 
 			<Caravan
 				Prototype="r1m1_CaravanOne"
-				Locations="locEx1 locSouth locArka locTroika locGugulino locZaimka locEx2" />
+				Locations="locEx1 locSouth locArka locTroika locGugulino locEx2" />
 
 			<Caravan
 				Prototype="r1m1_CaravanOne"
-				Locations="locEx2 locZaimka locGugulino locTroika locInRock locEx1" />
+				Locations="locEx2 locGugulino locTroika locInRock locEx1" />
 		</Caravans>
 	</Object>
 

@@ -1740,10 +1740,6 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
-			SetWeather(0)
-			
-			SetGameTime(21,0)
-			
 			PlayCustomMusic("QuietDialogue05")
 
 			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(0, 100, 0), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
@@ -1771,6 +1767,10 @@
 	<trigger Name="RTMRolikFade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			SetWeather(0)
+			
+			SetGameTime(21,0)
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -1827,9 +1827,10 @@
 			StartCinematic()
 
 			AddCinematicMessage( 5971, 0)
+			AddCinematicMessage( 5970, 0.1)
+			AddCinematicMessage( 5973, 0.1)
 			AddCinematicMessage( 5968, 0.1)
 			AddCinematicMessage( 5969, 0.1)
-			AddCinematicMessage( 5970, 0.1)
 
 			local humP = GetEntityByName("humPlayer")
 			if humP then humP:Remove() end

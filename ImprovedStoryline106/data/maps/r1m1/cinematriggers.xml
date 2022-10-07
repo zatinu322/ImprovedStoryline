@@ -3262,6 +3262,7 @@
 			
 			AddCinematicMessage( 5981, 0)
 			AddCinematicMessage( 5980, 0.1)
+			AddCinematicMessage( 5990, 0.1)
 			AddCinematicMessage( 5978, 0.1)
 			AddCinematicMessage( 5979, 0.1)
 			

@@ -7648,7 +7648,7 @@
 		name="Dlg_npc_002537"
 		text="Ну, и какое у тебя оправдание?"
 		role="NPC"
-		scriptCondition="not(IsQuestComplete('FirstTimePlay')) and IsQuestComplete('MrShlyapa2_Quest') and (GetCurNpc():GetSpokenCount() == 0)"
+		scriptCondition="not(IsQuestTaken('TalkToLisaArtefact')) and IsQuestComplete('MrShlyapa2_Quest') and (GetCurNpc():GetSpokenCount() == 0)"
 		nextReplies="Dlg_pl_002538" />
 
 	<Reply

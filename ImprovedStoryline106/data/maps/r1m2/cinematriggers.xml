@@ -1431,8 +1431,25 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("ShlyapaCam1", CINEMATIC_NO_AIM, 0, 9, 1, 1 )
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(3518.390, 90.903, 5192.647))
+				vehPlayer:SetRotation(Quaternion(-0.010, 0.745, 0.010, -0.667))
+			end
+
+			Fly("ShlyapaCam1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 9, 0, 1 )
 			StartCinematic()
+
+			stuff = {"LisaContGoodEnd", "LisaInTroick_vehicle_0", "Human59" ,"Human4", "Human99"}
+
+			for item = 1,5 do
+				local st = GetEntityByName(stuff[item])
+				if st then st:Remove() end
+			end
 
 			TActivate("cinAfterChifir2Fade")
 			TActivate("cinAfterChifir2End")
@@ -1442,7 +1459,7 @@
 	</trigger>
 
 	<trigger Name="cinAfterChifir2Fade" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
 		<script>
 			PlayCustomMusic("Bio04")
 
@@ -1470,7 +1487,7 @@
 
 			StopPlayingCustomMusic()
 
-			--StartConversation( "MrShlyapa" )
+			PassToMap("r1m8", "FromR1M2", -1, 1)
 
 			trigger:Deactivate()
 		</script>

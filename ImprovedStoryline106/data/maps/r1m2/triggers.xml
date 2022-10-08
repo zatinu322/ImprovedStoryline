@@ -351,10 +351,9 @@
 
 	<!-- Бонусная концовка -->
 	<trigger Name="ToSpecEnd" active="0">
-		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			
-			PassToMap("r1m8", "FromR1M2", -1 )
+			StartConversation( "MrShlyapa" )
 
 			trigger:Deactivate()
 		</script>

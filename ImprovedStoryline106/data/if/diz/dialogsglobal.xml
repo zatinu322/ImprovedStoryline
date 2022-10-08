@@ -17053,7 +17053,7 @@
 		text="ќп€ть это странное ощущение..."
 		role="PLAYER"
 		scriptCondition="IsQuestComplete('MrShlyapa4_Quest') and IsQuestComplete('MrShlyapaSecret')"
-		scriptResult="TActivate('cinAfterChifir2'); FailQuestIfTaken('TalkToLisaArtefact'); LeaveTown()" />
+		scriptResult="FailQuestIfTaken('TalkToLisaArtefact'); TActivate('ToSpecEnd'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_002517"
@@ -17170,7 +17170,7 @@
 		name="Dlg_pl_002579"
 		text="Ёй, стой!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TActivate('ToSpecEnd'); TakeQuest('FollowMrShlyapa'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('FollowMrShlyapa'); TActivate('cinAfterChifir2'); EndConversation()" />
 <!--Root/r1m2/—южетные/ѕеред поездкой-->
 	<Reply
 		name="Dlg_npc_002604"

@@ -211,13 +211,17 @@ function testpath()
 	GetEntityByName("enemy"):PlaceToEndOfPath()
 end
 
-function AddPlayerVehicle(modelname)
+function AddPlayerVehicle(modelname, PositionOnGround)
 -- добавляет игроку машину (если только у него ее нет)
 -- можно использовать, когда убъют или типа того.
 -- modelname - модель машины, которую надо. По умолчанию дается Урал
     if not modelname then
 		modelname="Ural01"
 	end
+	if PositionOnGround == nil then
+		PositionOnGround = true
+	end
+
 	if GetPlayerVehicle() then
 		pl_coord = GetPlayerVehicle():GetPosition()
 		pl_rotate = GetPlayerVehicle():GetRotation()
@@ -246,9 +250,16 @@ function AddPlayerVehicle(modelname)
 		vehicle:SetPosition(pos)
 		pl:AddChild(vehicle)
     end
-	if GetPlayerVehicle() and pl_coord and pl_rotate then
-		GetPlayerVehicle():SetGamePositionOnGround(pl_coord)
-		GetPlayerVehicle():SetRotation(pl_rotate)
+	if PositionOnGround ~= false then
+		if GetPlayerVehicle() and pl_coord and pl_rotate then
+			GetPlayerVehicle():SetGamePositionOnGround(pl_coord)
+			GetPlayerVehicle():SetRotation(pl_rotate)
+		end
+	else
+		if GetPlayerVehicle() and pl_coord and pl_rotate then
+			GetPlayerVehicle():SetPosition(pl_coord)
+			GetPlayerVehicle():SetRotation(pl_rotate)
+		end
 	end
 	pl_coord = nil
 	pl_rotate = nil

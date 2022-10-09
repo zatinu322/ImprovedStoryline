@@ -16,15 +16,6 @@
 	</Path>
 
 	<Path
-		Name="BolotoCantMove">
-		<Point
-			coord="1455.955 1585.493" />
-
-		<Point
-			coord="1468.045 1583.369" />
-	</Path>
-
-	<Path
 		Name="BolotoPlayerSink_path">
 		<Point
 			coord="1323.614 1613.513" />
@@ -34,24 +25,6 @@
 
 		<Point
 			coord="1269.707 1665.368" />
-	</Path>
-
-	<Path
-		Name="BolotoViezdMap">
-		<Point
-			coord="1482.350 1583.060" />
-
-		<Point
-			coord="1498.853 1581.359" />
-	</Path>
-
-	<Path
-		Name="BolotoViezdPlane">
-		<Point
-			coord="1118.720 1372.085" />
-
-		<Point
-			coord="1118.255 1262.078" />
 	</Path>
 
 	<Path
@@ -130,30 +103,6 @@
 
 		<Point
 			coord="2130.401 3402.848" />
-	</Path>
-
-	<Path
-		Name="ExitMapPath">
-		<Point
-			coord="2752.208 443.648" />
-
-		<Point
-			coord="2759.319 410.148" />
-
-		<Point
-			coord="2759.026 378.092" />
-
-		<Point
-			coord="2761.570 348.373" />
-
-		<Point
-			coord="2774.548 317.488" />
-
-		<Point
-			coord="2797.006 184.360" />
-
-		<Point
-			coord="2839.525 37.264" />
 	</Path>
 
 	<Path

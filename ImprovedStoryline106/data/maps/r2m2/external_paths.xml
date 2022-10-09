@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
-		Name="Lisa_path01">
-		<Point
-			coord="2683.432 988.705" />
-	</Path>
-
-	<Path
 		Name="h10_m1">
 		<Point
 			coord="1489.371 2410.624" />
@@ -820,12 +814,6 @@
 
 		<Point
 			coord="1512.709 2364.028" />
-	</Path>
-
-	<Path
-		Name="r4m1_path">
-		<Point
-			coord="2887.976 1948.914" />
 	</Path>
 
 	<Path

@@ -103,13 +103,6 @@
 		time="4" />
 
 	<string
-		id="14"
-		modelName="mask_hero"
-		value="Похоже, мне придется захватить склад силой. Невелика задача!"
-		sound="data\sounds\Speech\r1m4\r1m4_14_hero.ogg"
-		time="4" />
-
-	<string
 		id="15"
 		value="ШЕФ|Запретная зона!"
 		sound="data\sounds\Speech\r1m4\r1m4_15_boss.ogg"
@@ -151,45 +144,9 @@
 		time="4" />
 
 	<string
-		id="21"
-		modelName="mask_hero"
-		value="Эти бандиты больше не будут мешать торговцам."
-		sound="data\sounds\Speech\r1m4\r1m4_21_hero.ogg"
-		time="4" />
-
-	<string
-		id="22"
-		modelName="mask_hero"
-		value="Осталось сообщить в Ольм об освобождении склада."
-		sound="data\sounds\Speech\r1m4\r1m4_22_hero.ogg"
-		time="4" />
-
-	<string
-		id="23"
-		modelName="mask_hero"
-		value=""
-		time="4" />
-
-	<string
-		id="24"
-		modelName="mask_hero"
-		value=""
-		time="4" />
-
-	<string
 		id="8801"
 		value="Вы желаете покинуть эту область?"
 		numButtons="2" />
-
-	<string
-		id="8802"
-		modelName="mask_hero"
-		value="Пока что я не знаю дорогу, поэтому останусь здесь." />
-
-	<string
-		id="8803"
-		modelName="mask_hero"
-		value="Что-то там непонятное. Не буду туда соваться." />
 
 	<string
 		id="8804"

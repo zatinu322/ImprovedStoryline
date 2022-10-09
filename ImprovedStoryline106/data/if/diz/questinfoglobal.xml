@@ -135,28 +135,8 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="BenMZ3_Quest1"
-		briefDiz="Вернуться к Сальваторе"
-		fullDiz="Я убил захватчиков. Теперь нужно вернуться к Сальваторе."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="TheRace" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="BenMZ_Quest"
 		briefDiz="Попытать счастья в баре Малой Земли"
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="TheRace" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="BenMZ_Quest1"
-		briefDiz="Попытать счастья в баре Малой Земли"
-		fullDiz="Теперь, когда путь в Мидгард мне заказан, необходимо найти другой способ узнать про жилище Бена. Может, в деревеньке рядом с Мидгардом мне смогут помочь?"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -207,28 +187,8 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="BenRim2_Quest1"
-		briefDiz="Спросить в порте про караван"
-		fullDiz="Необходимо найти караван Стрыги, который не вернулся назад после рейса в Порто."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="Porto" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="BenRim3_Quest"
 		briefDiz="Проверить лагерь бандитов"
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="LisaInBanditPlen" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="BenRim3_Quest1"
-		briefDiz="Проверить лагерь бандитов"
-		fullDiz="В порту мне рассказали про засаду бандитов, в которую мог попасть караван. Стоит проверить."
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -247,16 +207,6 @@
 	<QuestInfo
 		questName="BenRim_Quest"
 		briefDiz="Помочь Стрыге"
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="TheOlimp" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="BenRim_Quest1"
-		briefDiz="Помочь Стрыге"
-		fullDiz='Теперь я должен помочь жуликоватому торговцу с дурацкой кличкой "Стрыга", проживающему в Римской.'
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -799,11 +749,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="FakeQuest1"
-		briefDiz="Найти Лису у Бена"
-		isMainQuest="0" />
-
-	<QuestInfo
 		questName="FightForPesht"
 		briefDiz="Отбить Пешт"
 		fullDiz="Из-за моих неосмотрительных действий в прошлом бандиты из Бригады захватили Пешт. Я должен помочь торговцам отбить его."
@@ -871,37 +816,10 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="FindBenAgain_Quest"
-		briefDiz="Продолжить поиска Бена Дросселя"
-		fullDiz="Теперь, когда Феликс мне не помешает, необходимо продолжить поиски Бена. Бармен посоветовал начать поиски за пределами этих земель с города Восточный."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="ToR1M2" />
-
-		<Map
-			name="r1m2"
-			targetObjName="Esting" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="FindBenMZ_Quest"
 		briefDiz="Продолжить поиски Бена"
 		fullDiz="Теперь, когда путь в Мидгард мне заказан, необходимо найти другой способ узнать про жилище Бена. Может, в деревеньке рядом с Мидгардом мне смогут помочь?"
 		isMainQuest="1" />
-
-	<QuestInfo
-		questName="FindBen_Quest"
-		briefDiz="Узнать, кто такой Бен Дроссель"
-		fullDiz="Вся моя жизнь перевернулась. Чтобы обрести себя, я должен найти своего настоящего отца во что бы то ни стало! Единственная зацепка – имя Бен Дроссель."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheTown" />
-
-		<Map
-			name="r1m2" />
-	</QuestInfo>
 
 	<QuestInfo
 		questName="FindDaughter_Quest"
@@ -964,15 +882,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="FindDaughter_Quest7"
-		briefDiz="Вернуть Доброславу отцу"
-		isMainQuest="1">
-		<Map
-			name="r1m5"
-			targetObjName="PetrolStationTown1" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="FindGomer2_Quest"
 		briefDiz="Узнать путь в заснеженные земли"
 		fullDiz="Наиболее вероятно, что путь в заснеженные земли должен начинаться где-то в Хеле, а я знаю только одного человека в этом регионе, который может что-то об этом знать. Настало время вновь навестить Гомера, но перед этим не помешает заехать к Шарки."
@@ -982,12 +891,6 @@
 		questName="FindGomerA_Quest1"
 		briefDiz="Найти Гомера"
 		fullDiz="Гомер наверняка отсиживается в баре одного из рыбацких поселков. Найти его будет несложно."
-		isMainQuest="1" />
-
-	<QuestInfo
-		questName="FindGomerB_Quest1"
-		briefDiz="Найти Гомера"
-		fullDiz="Гомер наверняка отсиживается в баре одного из рыбацких поселков. Найти его будет довольно непросто."
 		isMainQuest="1" />
 
 	<QuestInfo
@@ -1290,16 +1193,6 @@
 		briefDiz="Помочь людям в трёх поселениях"
 		fullDiz="Для того, чтобы завоевать доверие мудрецов, мне нужно помочь трём людям из разных городов."
 		isMainQuest="1" />
-
-	<QuestInfo
-		questName="KillExtremist_Quest1"
-		briefDiz="Убить бандитов, захвативших склад"
-		fullDiz="Склад можно очистить двумя путями, один из них - это убить всех рыбаков."
-		isMainQuest="0">
-		<Map
-			name="r1m4"
-			targetObjName="StorageVil_enter" />
-	</QuestInfo>
 
 	<QuestInfo
 		questName="KillPalach"
@@ -1687,16 +1580,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="MrShlyapa31_Quest"
-		briefDiz="Проверить место, о котором говорил Мистер Шляпа"
-		fullDiz="Человек без головы продолжает меня преследовать. Он опять хочет, чтобы я съездил в одно место и посетил загадочное ущелье. Не уверен, нужно ли мне это..."
-		isMainQuest="0">
-		<Map
-			name="r2m2"
-			targetObjName="Shlyapa31_loc" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="MrShlyapa3_Quest"
 		briefDiz="Проверить место, о котором говорил Мистер Шляпа"
 		fullDiz="Человек без головы продолжает меня преследовать. Он опять хочет, чтобы я съездил в одно место и посетил загадочное ущелье. Не уверен, нужно ли мне это..."
@@ -1780,16 +1663,6 @@
 			name="r1m2"
 			targetObjName="TheTickets" />
 	</QuestInfo>
-
-	<QuestInfo
-		questName="OpenMid11_Quest1"
-		briefDiz="Спросить в Колизее про композит"
-		isMainQuest="0" />
-
-	<QuestInfo
-		questName="OpenMid11_Quest2"
-		briefDiz="Вернуться к Сальваторе"
-		isMainQuest="0" />
 
 	<QuestInfo
 		questName="OpenMid2_Quest"
@@ -2064,15 +1937,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="SaveSerafimaBack"
-		briefDiz="Вернуться с Серафимой в деревню"
-		isMainQuest="1">
-		<Map
-			name="r1m6"
-			targetObjName="TheDreenorVillage" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="SaveSerafimaCome"
 		briefDiz="Доехать до завода"
 		isMainQuest="1">
@@ -2183,40 +2047,6 @@
 		briefDiz="Начать спокойную жизнь"
 		fullDiz="Теперь, когда мой поиск закончен, следует завершить все дела и затем погрузиться в скучный и неторопливый быт."
 		isMainQuest="1" />
-
-	<QuestInfo
-		questName="TRS_Quest2"
-		briefDiz="Приехать на склад"
-		isMainQuest="1">
-		<Map
-			name="r1m4"
-			targetObjName="StorageVil_enter" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="TRS_Quest3a"
-		briefDiz="Убить захватчиков"
-		isMainQuest="1">
-		<Map
-			name="r1m4" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="TRS_Quest3b"
-		briefDiz="Освободить лидера"
-		isMainQuest="1">
-		<Map
-			name="r1m4" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="TRS_Quest4"
-		briefDiz="Сообщить об отчистке склада"
-		isMainQuest="1">
-		<Map
-			name="r1m4"
-			targetObjName="TheOlme_enter" />
-	</QuestInfo>
 
 	<QuestInfo
 		questName="TalkBeforeDesert"
@@ -2695,24 +2525,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_FindAksel_Quest"
-		briefDiz="Найти Акселя"
-		fullDiz="Аксель заправляет бандой негодяев в Аржане.  Мне нужно найти способ пересечь горы, чтобы добраться до него."
-		isMainQuest="1">
-		<Map
-			name="r1m2" />
-
-		<Map
-			name="r1m3" />
-
-		<Map
-			name="r2m1" />
-
-		<Map
-			name="r2m2" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_FindBanditBaseOfOilMine_Quest"
 		briefDiz="Найти и уничтожить лагерь бандитов"
 		fullDiz="Последний противник убегает. Я могу проследить за ним до базы бандитов и уничтожить это паучье гнездо."
@@ -2737,49 +2549,12 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_FindBenInEast_Quest"
-		briefDiz="Продолжить поиски в Восточном"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="ToR1M2" />
-
-		<Map
-			name="r1m2"
-			targetObjName="Esting" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_FindBenInMidgard_Quest"
 		briefDiz="Последний раз Бена видели в Мидгарде"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
 			targetObjName="Midragd" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindBenInSouth_Quest"
-		briefDiz="Расспросить о нем  в Баре Южного"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheTown" />
-
-		<Map
-			name="r1m2" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindBenInStaruha_Quest"
-		briefDiz="Встретиться с деревенской ведьмой"
-		isMainQuest="1">
-		<Map
-			name="r1m1" />
-
-		<Map
-			name="r1m2"
-			targetObjName="TheArtefact" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2790,15 +2565,6 @@
 		<Map
 			name="r1m3"
 			targetObjName="ToR2M1" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindFelix_Quest"
-		briefDiz="Найти Феликса в баре Южного"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="TheTown" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2822,31 +2588,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_FindLisaInBandit_Quest"
-		briefDiz="Спасти Лису"
-		isMainQuest="1">
-		<Map
-			name="r1m1" />
-
-		<Map
-			name="r1m2"
-			targetObjName="LisaInBanditPlen" />
-
-		<Map
-			name="r1m3" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindLisaInBase_Quest"
-		briefDiz="Спросить о Лисе на Базе 51"
-		fullDiz="Похоже, Лиса не так проста, как кажется. Она явно связана с бандитами. Не то чтобы я очень удивился..."
-		isMainQuest="1">
-		<Map
-			name="r1m3"
-			targetObjName="TheBase" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_FindLisaInGelvetcia_Quest"
 		briefDiz="Догнать Лису в Гельвеции"
 		fullDiz="Догнать Лису в Гельвеции."
@@ -2854,22 +2595,6 @@
 		<Map
 			name="r2m1"
 			targetObjName="TheGelvetcia" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindLisaInMidragd_Quest"
-		briefDiz="Искать Лису в Мидгарде"
-		isMainQuest="1">
-		<Map
-			name="r1m1" />
-
-		<Map
-			name="r1m2"
-			targetObjName="Midragd" />
-
-		<Map
-			name="r1m3"
-			targetObjName="ToR1M2" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2886,36 +2611,6 @@
 		<Map
 			name="r1m3"
 			targetObjName="Pesht" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindLisaInPorto_Quest"
-		briefDiz="Искать Лису в Порто"
-		isMainQuest="1">
-		<Map
-			name="r1m1" />
-
-		<Map
-			name="r1m2"
-			targetObjName="Porto" />
-
-		<Map
-			name="r1m3" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_FindLisaOnSever_Quest"
-		briefDiz="Поговорить с Лисой"
-		fullDiz="Похоже, Феликс все-таки не повинен в смерти моего отца. Остается Лиса - единственный свидетель. Она поехала на север. Мне - за ней."
-		isMainQuest="1">
-		<Map
-			name="r1m1" />
-
-		<Map
-			name="r1m2" />
-
-		<Map
-			name="r1m3" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3131,23 +2826,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_GiveProblemToBase_Quest"
-		briefDiz="Показать бандитам, с кем они связались"
-		fullDiz="Похоже, единственный язык, который понимают эти мерзавцы, - это звук выстрелов. Я им покажу!"
-		isMainQuest="1">
-		<Map
-			name="r1m3"
-			targetObjName="TheBase" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_Glagiators_Quest"
-		isMainQuest="0">
-		<Map
-			name="r1m2" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_HelpSideVillageSNG_Quest"
 		briefDiz="Защитить пограничную деревню"
 		fullDiz="Небольшие поселения постоянно повергаются атакам головорезов Алого Рассвета. Я могу предотвратить нападение, и я сделаю это. "
@@ -3245,15 +2923,6 @@
 
 		<Map
 			name="r2m2" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_MerIsThief_Quest"
-		briefDiz="Поговорить с мэром"
-		isMainQuest="1">
-		<Map
-			name="r1m3"
-			targetObjName="Minin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3395,36 +3064,12 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_ReturnToBen_Quest"
-		briefDiz="Вернуться к Бену"
-		fullDiz="Похоже, это был ложный след. Надеюсь, Бен придумает, что делать дальше."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="TheBen_House" />
-
-		<Map
-			name="r1m3"
-			targetObjName="ToR1M2" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_ReturnToTuzzAfterCaravan_Quest"
 		briefDiz="Вернуться с транспортом в Туз и отчитаться"
 		isMainQuest="1">
 		<Map
 			name="r2m1"
 			targetObjName="KARAVANvvt_vehicle_0" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_ReturnTuzzAfterTunel_Quest"
-		briefDiz="Вернуться в Туз"
-		fullDiz="Вернуться в Туз"
-		isMainQuest="1">
-		<Map
-			name="r2m1"
-			targetObjName="TheTuzz" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3515,26 +3160,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_TalkAboutAksel_Quest"
-		briefDiz="Расспросить об Акселе"
-		fullDiz="Надо спросить у местных, кто такой Аксель и где его найти."
-		isMainQuest="1">
-		<Map
-			name="r2m1"
-			coordinate="6004.000 277.000 4372.000" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_TalkAboutLisa_Quest"
-		briefDiz="Расспросить о Лисе"
-		fullDiz="Все знают Лису. Стоит только спросить, и я легко ее выслежу."
-		isMainQuest="1">
-		<Map
-			name="r2m1"
-			coordinate="6004.000 277.000 4372.000" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_TalkAboutVrataInMinin_Quest"
 		briefDiz="Узнать про Морские Врата"
 		fullDiz="Кто-нибудь в Минине наверняка знает про Морские Врата."
@@ -3574,20 +3199,6 @@
 		<Map
 			name="r1m3"
 			targetObjName="Minin" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_TunelInAsgard_Quest"
-		briefDiz="Спросить в Асгарде о тоннеле"
-		fullDiz="Спросить в Асгарде о тоннеле."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r1m3"
-			targetObjName="Asgard" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3879,16 +3490,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r1m2_FindHmirInMidgard"
-		briefDiz="Скорее в Мидгард"
-		fullDiz="Человек, который продавал диск, мог отправиться в Мидгард после неудачной сделки с Беном."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="Midragd" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r1m2_Glagiators_Quest"
 		briefDiz="Победить Сару на Арене"
 		fullDiz="Несмотря на то, что в Колизее не оказалось нужного мне материала, я не смог отказаться от предложенного поединка."
@@ -3972,28 +3573,6 @@
 		<Map
 			name="r3m2"
 			targetObjName="ToR3M1" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r1m2_TW_BanAboutAlien"
-		briefDiz="Поговорить с Беном о тарелке"
-		fullDiz="Мне нужно точно узнать, не встречался ли Айвен Го в своих путешествиях с иноземным присутствием. Бен – единственный, кто точно может мне это сказать."
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="ToR1M2" />
-
-		<Map
-			name="r1m2"
-			targetObjName="TheBen_House" />
-
-		<Map
-			name="r4m1"
-			targetObjName="ToR1M1" />
-
-		<Map
-			name="r4m2"
-			targetObjName="ToR4M1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -4089,29 +3668,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r1m3_FindHmirinSever"
-		briefDiz="Узнать путь на север"
-		fullDiz="Преследование загадочного торговца оказалось сложнее, чем я рассчитывал. Теперь мне нужно узнать дорогу на север в Минине."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r1m3"
-			targetObjName="Minin" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r1m3_FindManyWorkers_Quest"
-		briefDiz="Найти работников на скважину"
-		fullDiz="Даже освобожденная от бандитов, шахта не будет работать сама по себе. Нужны работники."
-		isMainQuest="0">
-		<Map
-			name="r1m3" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r1m3_FindThiefFromFatherHouse"
 		briefDiz="Узнать про разгром"
 		fullDiz="В доме отца все перевернуто вверх дном. Возможно, кто-то из людей видел, что здесь произошло. Надо спросить в баре."
@@ -4181,16 +3737,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r1m3_OldTownOutsiderCar_Quest"
-		briefDiz="Поймать беглеца в заброшенном городе"
-		fullDiz="В заброшенном городе недалеко от деревни, скрывается бандит. Жители деревни дадут мне неплохие деньги, чтобы я его убил."
-		isMainQuest="0">
-		<Map
-			name="r1m3"
-			targetObjName="OldTownOutsiderCar" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r1m3_TW_OralceAboutAlien"
 		briefDiz="Поговорить с Оракулом"
 		fullDiz="Оракул должен знать, где найти достаточно мощное оружие, чтобы уничтожить Повелителя. Это страшное место нужно выжечь на сотню километров вокруг! "
@@ -4204,8 +3750,7 @@
 			targetObjName="ToR1M3" />
 
 		<Map
-			name="r1m3"
-			targetObjName="SnatchLoc1" />
+			name="r1m3" />
 
 		<Map
 			name="r2m1"
@@ -4423,11 +3968,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r2m1_DeployBloks3"
-		briefDiz='Добраться до "Повелителя"'
-		isMainQuest="1" />
-
-	<QuestInfo
 		questName="r2m1_DestroyAlienShip"
 		briefDiz="Уничтожить базу пришельцев"
 		fullDiz="Боевой корабль пришельцев появился неизвестно откуда. Именно он испускает волны, блокирующие сигналы Оракула. Враг должен быть уничтожен во имя спасения человечества."
@@ -4569,16 +4109,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r2m2_FightLisaToMonastir"
-		briefDiz="Остановить Лису"
-		fullDiz="Любым способом надо остановить Лису. Я больше не позволю ей обманывать меня или кого бы то ни было ещё!"
-		isMainQuest="0">
-		<Map
-			name="r2m2"
-			targetObjName="LisaRunCar" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r2m2_FightWithAxelInArena_Quest"
 		briefDiz="Драться с Акселем"
 		fullDiz="Я сражусь с Акселем на арене и заставлю его рассказать мне все."
@@ -4614,15 +4144,6 @@
 		<Map
 			name="r2m2"
 			targetObjName="ToR2M1" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r2m2_FindMrPresident"
-		briefDiz="Прибыть в условленное место"
-		isMainQuest="1">
-		<Map
-			name="r2m2"
-			coordinate="756.000 261.000 3286.000" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -4820,15 +4341,6 @@
 		<Map
 			name="r2m2"
 			targetObjName="Marezzia" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r2m2_ReturnToMarecciaFromMrPresident"
-		briefDiz="Вернуться с докладом"
-		isMainQuest="1">
-		<Map
-			name="r2m2"
-			coordinate="1829.361 -1.916 3300.456" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -5359,40 +4871,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r3m2_TalkWithBenAboutCarAfterOracul"
-		briefDiz="Поговорить с Беном о втором диске"
-		fullDiz="Некий Бен Дроссель, старый исследователь и друг Айвена Го, может знать что-нибудь о местонахождении второго диска."
-		isMainQuest="1">
-		<Map
-			name="r1m2"
-			targetObjName="TheBen_House" />
-
-		<Map
-			name="r1m3"
-			targetObjName="ToR1M2" />
-
-		<Map
-			name="r1m4"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r2m1"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r2m2"
-			targetObjName="ToR2M1" />
-
-		<Map
-			name="r3m1"
-			targetObjName="ToR2M1" />
-
-		<Map
-			name="r3m2"
-			targetObjName="ToR3M1" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r3m2_TalkWithLisa"
 		briefDiz="Поговорить с Лисой"
 		fullDiz="Теперь, когда стало ясно, куда отправился мой отец, самое время вернуться к Лисе и обсудить с ней наши дальнейшие планы."
@@ -5687,15 +5165,6 @@
 		<Map
 			name="r4m1"
 			targetObjName="Buharers" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r4m1_RBC_GotoPort"
-		briefDiz="Найти порт, откуда я смогу отправить корабль с беженцами в безопасное место"
-		isMainQuest="1">
-		<Map
-			name="r4m1"
-			targetObjName="Port_loc" />
 	</QuestInfo>
 
 	<QuestInfo

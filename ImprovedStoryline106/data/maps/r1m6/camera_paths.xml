@@ -91,16 +91,6 @@
 		<Point  coord="1121.586 287.316 488.298" rotation="-0.018 -0.536 0.011 0.844"/>
 	</Path>
 
-	<Path Name = "TrapCam2">
-		<Point  coord="1173.177 280.972 892.451" rotation="-0.186 -0.030 0.006 0.982"/>
-		<Point  coord="1176.194 276.034 894.461" rotation="-0.208 -0.016 0.004 0.978"/>
-	</Path>
-
-	<Path Name = "TrapCam3">
-		<Point  coord="1176.194 276.034 894.461" rotation="-0.208 -0.016 0.004 0.978"/>
-		<Point  coord="1176.194 276.034 894.461" rotation="-0.167 0.031 -0.005 0.985"/>
-	</Path>
-
 	<Path Name = "TrapCam4">
 		<Point  coord="1133.144 274.970 1013.142" rotation="0.034 0.947 -0.106 -0.302"/>
 		<Point  coord="1172.841 260.404 956.928" rotation="0.036 0.947 -0.116 -0.298"/>
@@ -183,7 +173,6 @@
 
 	<Path Name = "StationCam2">
 		<Point  coord="2455.727 268.894 2826.497" rotation="-0.042 0.778 -0.053 0.624"/>
-		<!-- <Point  coord="2455.727 268.894 2826.497" rotation="-0.031 0.225 -0.007 0.974"/> -->
 		<Point  coord="2455.727 268.894 2826.497" rotation="-0.038 0.488 -0.028 0.871"/>
 	</Path>
 
@@ -196,7 +185,6 @@
 
 	<Path Name = "HomeCam2">
 		<Point  coord="1341.370 261.487 2772.507" rotation="0.009 0.954 0.027 0.299"/>
-		<!-- <Point  coord="1341.370 261.487 2772.507" rotation="-0.017 0.983 -0.137 0.120"/> -->
 		<Point  coord="1330.896 258.586 2749.659" rotation="-0.018 0.979 -0.102 0.175"/>
 	</Path>
 
@@ -226,11 +214,6 @@
 		<Point  coord="1492.144 266.096 2810.986" rotation="-0.094 0.545 -0.062 0.831"/>
 	</Path>
 
-	<Path Name = "TupikEnd">
-		<Point  coord="2925.630 266.187 3055.293" rotation="-0.003 -0.414 0.001 0.910"/>
-		<Point  coord="3120.576 264.636 3225.208" rotation="-0.003 -0.414 0.001 0.910"/>
-	</Path>
-
 	<Path Name = "MBRolikCam">
 		<Point  coord="2084.245 258.355 1192.660" rotation="0.000 1.000 -0.003 -0.028"/>
 		<Point  coord="2089.608 258.326 1184.189" rotation="0.000 0.999 -0.009 -0.048"/>
@@ -249,11 +232,6 @@
 	<Path Name = "PKERolikCam2">
 		<Point  coord="1713.401 448.768 2134.849" rotation="-0.206 0.217 -0.047 0.953"/>
 		<Point  coord="1702.911 437.775 2156.675" rotation="-0.206 0.217 -0.047 0.953"/>
-	</Path>
-
-	<Path Name = "PKERolikCam3">
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.181 -0.012 0.002 0.983"/>
-		<Point  coord="1665.574 455.436 2115.643" rotation="-0.155 -0.073 0.011 0.985"/>
 	</Path>
 
 	<Path Name = "FGRolikCam1">

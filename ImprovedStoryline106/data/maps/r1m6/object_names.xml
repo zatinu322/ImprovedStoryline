@@ -15,10 +15,6 @@
 		FullName="Мастерская" />
 
 	<Object
-		Name="Esting_Bar_Barman"
-		FullName="Barman" />
-
-	<Object
 		Name="Esting_Bar"
 		FullName="Полевой штаб" />
 
@@ -87,16 +83,8 @@
 		FullName="Элитный автосервис" />
 
 	<Object
-		Name="TheTown_Bar_Barman"
-		FullName="Barman" />
-
-	<Object
 		Name="TheTown_Bar"
 		FullName="Бар &quot;Златоглавый&quot;" />
-
-
-
-
 
 	<Object
 		Name="TheDreenorVillage"
@@ -109,10 +97,6 @@
 	<Object
 		Name="TheDreenorVillage_Workshop"
 		FullName="Мастерская" />
-
-	<Object
-		Name="TheDreenorVillage_Bar_Barman"
-		FullName="Трактирщица" />
 
 	<Object
 		Name="TheDreenorVillage_Bar"

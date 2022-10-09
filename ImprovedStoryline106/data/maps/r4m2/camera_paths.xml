@@ -21,19 +21,9 @@
 		<Point  coord="2871.190 365.110 1494.992" rotation="-0.172 0.272 -0.049 0.946"/>
 	</Path>
 
-	<Path Name = "SavePlInBase4">
-		<Point  coord="2802.182 291.435 1549.657" rotation="-0.026 0.957 0.093 -0.273"/>
-		<Point  coord="2815.851 292.584 1563.077" rotation="-0.019 0.976 0.099 -0.192"/>
-	</Path>
-
 	<Path Name = "SavePlInBase5">
 		<Point  coord="3325.142 300.811 1838.625" rotation="-0.161 0.148 -0.024 0.975"/>
 		<Point  coord="3327.879 317.127 1830.346" rotation="-0.243 0.170 -0.043 0.954"/>
-	</Path>
-
-	<Path Name = "SavePlInBase6">
-		<Point  coord="3241.520 292.674 1868.705" rotation="-0.144 -0.342 0.053 0.927"/>
-		<Point  coord="3252.080 292.674 1859.667" rotation="-0.140 -0.271 0.040 0.951"/>
 	</Path>
 
 	<Path Name = "ToTarelka">
@@ -60,13 +50,6 @@
 	<Path Name = "NearTarelka2">
 		<Point  coord="2907.291 227.474 2411.286" rotation="0.040 0.956 -0.155 -0.244"/>
 		<Point  coord="2946.170 232.564 2339.657" rotation="0.025 0.972 -0.125 -0.198"/>
-	</Path>
-
-	<Path Name = "povelit_cam">
-		<Point  coord="2235.385 308.474 2235.755" rotation="-0.075 -0.215 0.016 0.974"/>
-		<Point  coord="1910.862 390.697 2487.397" rotation="-0.049 -0.609 0.038 0.791"/>
-		<Point  coord="2114.933 390.697 3137.386" rotation="0.025 0.919 -0.058 -0.390"/>
-		<Point  coord="2777.327 390.697 3298.502" rotation="-0.013 0.961 -0.046 0.273"/>
 	</Path>
 
 	<Path Name = "ending_cam1">

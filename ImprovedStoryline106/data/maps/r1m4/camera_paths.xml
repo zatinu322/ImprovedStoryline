@@ -5,21 +5,6 @@
 		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
 	</Path>
 
-	<Path Name = "MorassNoPath">
-		<Point coord="0 10 -50" rotation="0.0 0.0 0.0 0.0" zoom="1.0" />
-	</Path>
-
-	<Path Name = "circle">                         
-		<Point coord="36.712 260.283 64.978" rotation="-0.095 -0.742 0.108 0.654" zoom="1.0" />
-		<Point coord="59.839 257.949 33.428" rotation="-0.069 0.008 -0.001 0.998" zoom="2.0" />
-		<Point coord="78.272 264.514 55.376" rotation="-0.243 0.547 -0.170 0.783" zoom="0.7" />
-		<Point coord="66.793 253.438 85.261" rotation="-0.011 0.984 -0.065 0.168" zoom="1.0" />
-	</Path>
-
-	<Path Name = "relative">                         
-		<Point coord="0 10 -50" rotation="0.0 0.0 0.0 0.0" zoom="1.0" />
-	</Path>
-
 	<Path Name = "BolotoOF_cam01">
 		<Point  coord="1266.468 213.171 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
 		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
@@ -41,13 +26,6 @@
 
 	<Path Name = "Boloto_cam03">                         
 		<Point  coord="878.287 241.002 1723.050" rotation="0.038 0.891 -0.075 -0.446"/>
-<!-- 		<Point  coord="878.287 240.002 1723.050" rotation="0.038 0.891 -0.075 -0.446"/>		 -->
-	</Path>
-
-
-	<Path Name = "Boloto_cam03Port">                         
-		<Point  coord="933.167 230.258 1670.495" rotation="0.049 0.579 0.035 0.813"/>
-		<Point  coord="946.653 240.801 1668.705" rotation="-0.007 0.626 -0.005 0.780"/>
 	</Path>
 
 	<Path Name = "PlaneOut_cam01">                         
@@ -126,10 +104,6 @@
         <Point  coord="937.426 276.849 1537.691" rotation="-0.022 0.442 -0.011 0.896"/>
 	</Path>
 
-	<Path Name = "stranger_cam2">
-        <Point  coord="937.426 276.849 1537.691" rotation="-0.022 0.442 -0.011 0.896"/>
-	</Path>
-
 	<Path Name = "peregovor_cam">
         <Point  coord="2533.030 263.052 1129.728" rotation="0.040 0.935 -0.113 -0.334"/>
         <Point  coord="2531.537 260.775 1082.971" rotation="-0.106 -0.647 0.092 0.750"/>
@@ -184,14 +158,6 @@
 	<Path Name = "KSGCamPath">
 		<Point  coord="1098.624 313.037 2236.916" rotation="-0.048 0.250 -0.012 0.967"/>
 		<Point  coord="1132.940 370.338 2230.023" rotation="-0.082 0.107 -0.009 0.991"/>
-	</Path>
-
-	<Path Name = "ChehlyCamPath">
-        <Point  coord="2051.533 309.556 3593.695" rotation="0.059 0.931 -0.316 -0.173"/>
-		<Point  coord="2135.559 277.772 3484.596" rotation="0.024 0.970 -0.110 -0.214"/>
-		<Point  coord="2164.429 259.516 3394.423" rotation="-0.054 0.733 -0.058 0.676"/>
-		<Point  coord="2163.128 259.516 3376.972" rotation="-0.063 0.538 -0.040 0.840"/>
-		<Point  coord="2150.899 256.723 3394.401" rotation="-0.011 0.364 -0.004 0.931"/>
 	</Path>
 
 	<Path Name = "PlayerSinkCamPath">

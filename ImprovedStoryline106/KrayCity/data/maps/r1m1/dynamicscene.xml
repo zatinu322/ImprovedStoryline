@@ -23,14 +23,6 @@
 
 	<Object
 		Flags="21"
-		Name="loc_LisaRunOut"
-		Belong="1042"
-		Prototype="genericLocation"
-		Pos="2329.547 332.782 3836.187"
-		Radius="20.000" />
-
-	<Object
-		Flags="21"
 		Name="ConstructionPlace01"
 		Belong="1100"
 		Prototype="genericLocation"
@@ -44,15 +36,6 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="1565.589 294.768 3113.854"
-		Radius="15.000"
-		LookingTimeOut="15.000" />
-
-	<Object
-		Flags="21"
-		Name="Constructmiscoord"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1549.000 287.648 3185.000"
 		Radius="15.000"
 		LookingTimeOut="15.000" />
 
@@ -234,14 +217,6 @@
 		Pos="3354.562 367.556 3304.536"
 		Radius="59.140"
 		LookingTimeOut="70.000" />
-
-	<Object
-		Flags="21"
-		Name="FatherDeath_Loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3354.562 367.556 3304.536"
-		Radius="500.000" />
 
 	<Object
 		Flags="21"
@@ -1506,14 +1481,6 @@
 		Prototype="Human3"
 		Pos="1311.000 315.560 2976.000"
 		Rot="0.000 -0.369 0.000 0.930" />
-
-	<Object
-		Flags="21"
-		Name="JampLoc01"
-		Belong="1002"
-		Prototype="genericLocation"
-		Pos="2883.841 336.900 2347.616"
-		Radius="10.000" />
 
 	<Object
 		Name="r1m1_CaravanGlobalObject"

@@ -8,13 +8,6 @@
 		time="1" />
 
 	<string
-		id="102"
-		modelName="mask_hero"
-		value="Мне не удалось добраться до цели... а счастье было так возможно, так близко..."
-		sound="data\sounds\Speech\r4m2\r4m2_102_hero.ogg"
-		time="1" />
-
-	<string
 		id="201"
 		modelName="mask_hero"
 		value="Мне как будто знаком этот грузовик. Этот символ, где-то я его уже видел... "
@@ -109,13 +102,6 @@
 		time="5" />
 
 	<string
-		id="404"
-		modelName="mask_hero"
-		value="Ты! Наконец-то я до тебя добрался!"
-		sound=""
-		time="6" />
-
-	<string
 		id="405"
 		modelName="r4_man"
 		modelSkin="1"
@@ -125,12 +111,6 @@
 		sound=""
 		time="11" />
 
-	<string
-		id="406"
-		modelName="mask_hero"
-		value="Я еще вернусь и расквитаюсь с этими убийцами!"
-		sound="data\sounds\Speech\r4m2\r4m2_406_hero.ogg"
-		time="1" />
 <!-- Подъехали близко к падшей тарелке -->
 	<string
 		id="501"
@@ -158,40 +138,6 @@
 		modelName="mask_hero"
 		value="Черт побери... я... не... м-о-г-у... д...в...и...г...а...т...ь..."
 		sound="data\sounds\Speech\r4m2\r4m2_504_hero.ogg"
-		time="1" />
-<!-- когда поговорили с ученым и выбрали одну из сюжетных линий, игрока перебрасывают почти к выходу с карты -->
-	<string
-		id="510"
-		modelName="r4_man"
-		modelSkin="1"
-		modelCfg="128"
-		modelSlot="1"
-		value="ЛАБОРАНТ|Позволь, мы тебе покажем дорогу в обход военной базы. "
-		sound="data\sounds\Speech\r4m2\r4m2_510_assistant.ogg"
-		time="1" />
-
-	<string
-		id="511"
-		modelName="mask_hero"
-		value="Зачем ехать окружным путем? Теперь я готов сразиться с ними! Вместе мы их одолеем!"
-		sound="data\sounds\Speech\r4m2\r4m2_511_hero.ogg"
-		time="1" />
-
-	<string
-		id="512"
-		modelName="r4_man"
-		modelSkin="1"
-		modelCfg="128"
-		modelSlot="1"
-		value="ЛАБОРАНТ|Не горячись. У тебя есть миссия - важная миссия, - и ты должен сосредоточить все силы на ней."
-		sound="data\sounds\Speech\r4m2\r4m2_512_assistant.ogg"
-		time="1" />
-
-	<string
-		id="513"
-		modelName="mask_hero"
-		value="Ладно. Показывайте дорогу."
-		sound="data\sounds\Speech\r4m2\r4m2_513_hero.ogg"
 		time="1" />
 
 	<string

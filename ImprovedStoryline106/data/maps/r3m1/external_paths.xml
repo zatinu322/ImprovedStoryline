@@ -1006,18 +1006,6 @@
 	</Path>
 
 	<Path
-		Name="player_path01">
-		<Point
-			coord="3448.413 1478.464" />
-
-		<Point
-			coord="3464.669 1468.954" />
-
-		<Point
-			coord="3482.873 1480.495" />
-	</Path>
-
-	<Path
 		Name="player_path02">
 		<Point
 			coord="1889.507 1504.289" />

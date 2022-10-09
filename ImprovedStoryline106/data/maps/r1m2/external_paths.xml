@@ -565,12 +565,6 @@
 	</Path>
 
 	<Path
-		Name="Player_path03">
-		<Point
-			coord="3790.681 1826.667" />
-	</Path>
-
-	<Path
 		Name="Player_path04">
 		<Point
 			coord="3750.349 1850.191" />
@@ -793,12 +787,6 @@
 
 		<Point
 			coord="4365.539 854.196" />
-	</Path>
-
-	<Path
-		Name="ben_path">
-		<Point
-			coord="3787.429 1824.044" />
 	</Path>
 
 	<Path

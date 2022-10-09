@@ -673,51 +673,6 @@
 	</Path>
 
 	<Path
-		Name="fun1road">
-		<Point
-			coord="2938.000 2374.000" />
-
-		<Point
-			coord="3092.000 2466.000" />
-
-		<Point
-			coord="3174.000 2533.000" />
-	</Path>
-
-	<Path
-		Name="fun2road">
-		<Point
-			coord="2174.000 2289.000" />
-
-		<Point
-			coord="2239.000 2317.000" />
-
-		<Point
-			coord="2347.000 2357.000" />
-	</Path>
-
-	<Path
-		Name="fun3road">
-		<Point
-			coord="1173.000 2241.000" />
-
-		<Point
-			coord="1229.000 2332.000" />
-
-		<Point
-			coord="1273.000 2454.000" />
-
-		<Point
-			coord="1263.000 2638.000" />
-	</Path>
-
-	<Path
-		Name="fun4road">
-		<Point
-			coord="1935.000 2453.000" />
-	</Path>
-
-	<Path
 		Name="h10_m1">
 		<Point
 			coord="1044.746 2862.985" />
@@ -1384,15 +1339,6 @@
 	</Path>
 
 	<Path
-		Name="lisa_path02">
-		<Point
-			coord="1979.181 806.375" />
-
-		<Point
-			coord="1972.122 766.196" />
-	</Path>
-
-	<Path
 		Name="lisa_path021">
 		<Point
 			coord="1972.611 756.614" />
@@ -1480,75 +1426,6 @@
 		Name="lisa_vil_7">
 		<Point
 			coord="3785.234 1609.381" />
-	</Path>
-
-	<Path
-		Name="lisarunout_path">
-		<Point
-			coord="1197.479 2905.743" />
-
-		<Point
-			coord="1207.567 2886.736" />
-
-		<Point
-			coord="1234.014 2862.563" />
-
-		<Point
-			coord="1304.209 2836.426" />
-
-		<Point
-			coord="1355.819 2899.164" />
-
-		<Point
-			coord="1378.743 2946.223" />
-
-		<Point
-			coord="1389.427 3023.683" />
-
-		<Point
-			coord="1401.276 3086.449" />
-
-		<Point
-			coord="1451.488 3150.667" />
-
-		<Point
-			coord="1543.078 3187.478" />
-
-		<Point
-			coord="1738.541 3154.312" />
-
-		<Point
-			coord="1803.933 3170.671" />
-
-		<Point
-			coord="1856.064 3225.006" />
-
-		<Point
-			coord="2021.813 3462.202" />
-
-		<Point
-			coord="2047.625 3509.215" />
-
-		<Point
-			coord="2066.323 3573.347" />
-
-		<Point
-			coord="2089.386 3627.242" />
-
-		<Point
-			coord="2072.823 3656.458" />
-
-		<Point
-			coord="2101.399 3760.365" />
-
-		<Point
-			coord="2165.919 3800.433" />
-
-		<Point
-			coord="2269.287 3802.380" />
-
-		<Point
-			coord="2332.398 3838.268" />
 	</Path>
 
 	<Path
@@ -1792,27 +1669,6 @@
 	</Path>
 
 	<Path
-		Name="sity_path">
-		<Point
-			coord="1918.526 2597.403" />
-
-		<Point
-			coord="1866.892 2636.789" />
-
-		<Point
-			coord="1807.157 2659.714" />
-
-		<Point
-			coord="1667.982 2692.077" />
-
-		<Point
-			coord="1601.551 2707.496" />
-
-		<Point
-			coord="1552.475 2730.552" />
-	</Path>
-
-	<Path
 		Name="start_rolik_mycar">
 		<Point
 			coord="3357.000 3288.000" />
@@ -1852,11 +1708,5 @@
 
 		<Point
 			coord="598.662 3680.935" />
-	</Path>
-
-	<Path
-		Name="water_rolik">
-		<Point
-			coord="1179.000 1641.000" />
 	</Path>
 </Paths>

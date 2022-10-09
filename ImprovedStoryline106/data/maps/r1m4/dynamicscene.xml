@@ -1767,38 +1767,6 @@
 
 	<Object
 		Flags="21"
-		Name="AfterMorass2_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="848.191 232.292 1692.771"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="AfterMorass_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="896.539 229.345 1680.759"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="BeforeMorass_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1433.497 215.369 1587.563"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="BeforeMorass2_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1477.200 217.446 1582.913"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
 		Name="MorassRoad2_loc"
 		Belong="1100"
 		Prototype="genericLocation"
@@ -2341,14 +2309,6 @@
 				y="2294.799" />
 		</DropOut>
 	</Object>
-
-	<Object
-		Flags="21"
-		Name="AfterMorasTraider_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="1120.466 225.481 1288.744"
-		Radius="10.000" />
 
 	<Object
 		Flags="21"
@@ -3250,15 +3210,6 @@
 		Pos="1660.456 270.000 1831.486"
 		Rot="0.000 -0.623 0.000 0.783"
 		PathsNames="human11" />
-
-	<Object
-		Flags="21"
-		Name="SetSpeed_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="709.137 179.114 700.465"
-		Radius="30.000"
-		LookingTimeOut="200.000" />
 
 	<Object
 		Flags="21"

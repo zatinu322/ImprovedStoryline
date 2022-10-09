@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
-	<Path Name = "engineer">
-		<Point coord="4133.374 278.584 6017.557" rotation="-0.063 0.936 -0.238 0.250"/>
-		<Point coord="4133.374 278.584 6017.557" rotation="-0.097 0.884 -0.211 0.405"/>
-	</Path>
-
-	<Path Name = "engineer2">
-		<Point coord="4052.010 255.879 5999.663" rotation="-0.049 -0.743 0.055 0.665"/>
-		<Point coord="4052.010 255.879 5999.663" rotation="-0.082 -0.524 0.050 0.846"/>
-	</Path>
-
 	<Path Name = "molokovozChange">
 		<Point  coord="6901.536 313.774 5284.921" rotation="0.037 0.936 -0.335 -0.105"/>
 		<Point  coord="6926.370 314.351 5267.711" rotation="-0.066 0.916 -0.171 0.356"/>
@@ -83,36 +73,6 @@
 	<Path Name = "PeregDie">
 		<Point  coord="3635.183 267.355 5393.154" rotation="-0.091 0.066 -0.006 0.994"/>
 		<Point  coord="3667.041 267.355 5400.954" rotation="-0.088 0.186 -0.017 0.978"/>
-	</Path>
-
-	<Path Name = "PeregDie2">
-		<Point  coord="3630.203 258.192 5439.629" rotation="0.047 0.870 -0.085 -0.483"/>
-		<Point  coord="3630.203 258.192 5439.629" rotation="0.047 0.870 -0.085 -0.483"/>
-	</Path>
-
-	<Path Name = "PeregDie3">
-		<Point  coord="3663.438 255.900 5448.815" rotation="0.004 0.992 -0.028 -0.125"/>
-		<Point  coord="3663.438 255.900 5448.815" rotation="0.004 0.992 -0.028 -0.125"/>
-	</Path>
-
-	<Path Name = "PeregDie4">
-		<Point  coord="3670.430 258.340 5432.608" rotation="-0.135 0.664 -0.124 0.724"/>
-		<Point  coord="3663.183 256.980 5411.165" rotation="-0.093 0.229 -0.022 0.969"/>
-	</Path>
-
-	<Path Name = "PeregDie5">
-		<Point  coord="2030.443 233.026 6286.030" rotation="-0.025 0.843 -0.039 0.536"/>
-		<Point  coord="2049.198 250.639 6296.376" rotation="-0.074 0.883 -0.148 0.439"/>
-	</Path>
-
-	<Path Name = "PeregDie6">
-		<Point  coord="2034.583 243.863 6247.183" rotation="-0.104 0.697 -0.103 0.702"/>
-		<Point  coord="2034.583 243.863 6247.183" rotation="-0.057 0.759 -0.067 0.645"/>
-	</Path>
-
-	<Path Name = "PeregDie7">
-		<Point  coord="1991.219 235.754 6275.436" rotation="-0.118 -0.539 0.076 0.831"/>
-		<Point  coord="2011.171 232.189 6269.108" rotation="-0.073 0.001 -0.000 0.997"/>
 	</Path>
 
 	<Path Name = "Shlyapa_cam">

@@ -331,7 +331,7 @@
 			Fly("Ending11", CINEMATIC_NO_AIM, 0, 17.5, 1, 1 )
 			StartCinematic()
 
-			AddCinematicMessage("42", 1)
+			AddCinematicMessage(42, 1)
 
 			TActivate("TrailerDieRolikFade")
 			TActivate("TrailerDieRolikEnd")

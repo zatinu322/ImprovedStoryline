@@ -182,24 +182,6 @@
 
 	<Object
 		Flags="21"
-		Name="Vil_destroy"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3501.893 90.180 5186.700"
-		Radius="70.000"
-		LookingTimeOut="70.000" />
-
-	<Object
-		Flags="21"
-		Name="EstingQ"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1665.969 80.023 5261.847"
-		Radius="70.000"
-		LookingTimeOut="70.000" />
-
-	<Object
-		Flags="21"
 		Name="MidragdQ"
 		Belong="1009"
 		Prototype="genericLocation"
@@ -892,7 +874,7 @@
 				ModelName="r1_man"
 				skin="1"
 				cfg="140"
-				helloReplyNames="Citizen_hellodlg0 Citizen_hellodlg2"
+				helloReplyNames="Citizen_hellodlg0"
 				SpokenCount="0" />
 
 			<Object
@@ -912,7 +894,7 @@
 				ModelName="r1_man"
 				skin="1"
 				cfg="90"
-				helloReplyNames="Zavhoz_hellodlg0 Zavhoz_hellodlg1 Zavhoz_hellodlg2 Citizen_hellodlg1 Dlg_npc_003035"
+				helloReplyNames="Zavhoz_hellodlg0 Zavhoz_hellodlg1 Citizen_hellodlg1 Dlg_npc_003035"
 				SpokenCount="0" />
 		</Object>
 
@@ -2711,14 +2693,6 @@
 			Flags="16"
 			Prototype="scrap_metal" />
 	</Object>
-
-	<Object
-		Flags="21"
-		Name="LisaInBanditPlenRolik"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="5738.933 45.433 4429.499"
-		Radius="237.000" />
 
 	<Object
 		Name="r1m2_CaravanGlobalObject"

@@ -1279,33 +1279,6 @@
 	</Path>
 
 	<Path
-		Name="h4_m1">
-		<Point
-			coord="2644.308 1884.683" />
-
-		<Point
-			coord="2650.675 1888.438" />
-
-		<Point
-			coord="2643.998 1871.360" />
-
-		<Point
-			coord="2643.606 1851.003" />
-
-		<Point
-			coord="2637.657 1843.806" />
-
-		<Point
-			coord="2660.482 1818.900" />
-
-		<Point
-			coord="2690.670 1805.738" />
-
-		<Point
-			coord="2642.348 1882.446" />
-	</Path>
-
-	<Path
 		Name="h5_m1">
 		<Point
 			coord="2705.366 1954.342" />

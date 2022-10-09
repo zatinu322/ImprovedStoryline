@@ -146,12 +146,6 @@
 		value="Главный вход завален, попробую проехать вдоль железной дороги."
 		sound="data\sounds\Speech\r3m2\r3m2_15_hero.ogg"
 		time="1" />
-<!--  -->
-	<string
-		id="16"
-		image=""
-		value="|"
-		time="1" />
 
 	<string
 		id="17"

@@ -129,24 +129,12 @@
 		FullName="Эрик" />
 
 	<Object
-		Name="FVCalis_Bar_Customer2"
-		FullName="Кристиан" />
-
-	<Object
 		Name="FVCalis_Bar_Customer1"
 		FullName="Джэйм" />
 
 	<Object
 		Name="FVCalis_Bar_Barman"
 		FullName="Бармен" />
-
-	<Object
-		Name="FVCalis_Bar_Fioniy"
-		FullName="Филимон" />
-
-	<Object
-		Name="PianiyDrugFilimona"
-		FullName="Пьяница Максим" />
 
 	<Object
 		Name="FVCordan"
@@ -255,10 +243,6 @@
 	<Object
 		Name="FVCalis_Bar_Husbent1"
 		FullName="Филимон" />
-
-	<Object
-		Name="LookingWife"
-		FullName="Жена Аллушка" />
 
 	<Object
 		Name="LookingWife1"

@@ -28,14 +28,6 @@
 		Radius="250.000" />
 
 	<Object
-		Name="UlukArmyPos1_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3065.345 368.008 3228.151"
-		Radius="10.000"
-		Active="0" />
-
-	<Object
 		Flags="21"
 		Name="ExitFromDung_loc"
 		Belong="1100"
@@ -59,14 +51,6 @@
 		Pos="865.810 288.003 977.006"
 		Radius="27.246"
 		ExitLocation="ToR2M1" />
-
-	<Object
-		Flags="21"
-		Name="PlayerMoveFromR1M4"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3752.508 249.025 1869.553"
-		Radius="15.687" />
 
 	<Object
 		Flags="21"
@@ -3064,14 +3048,6 @@
 		Belong="1001"
 		Prototype="genericLocation"
 		Pos="2166.279 269.319 2293.124"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="MegaSecretPlace_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2327.680 443.006 2720.626"
 		Radius="10.000" />
 
 	<Object

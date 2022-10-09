@@ -484,25 +484,11 @@
 		time="4" />
 
 	<string
-		id="3001"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r1m3\r1m3_3001_hero.ogg"
-		value="Это еще что такое?!"
-		time="4" />
-
-	<string
 		id="3002"
 		modelName="mask_oracul"
 		modelSlot="1"
 		sound="data\sounds\Speech\r1m3\r1m3_3002_oracle.ogg"
 		value="ОРАКУЛ|Человек, ты помог мне обрести прежнее могущество, но сейчас вмешиваешься в вещи, сути которых не понимаешь!"
-		time="8" />
-
-	<string
-		id="3003"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r1m3\r1m3_3003_hero.ogg"
-		value="Оракул?! У тебя теперь крылья! Это же просто здорово! Твоя помощь мне пригодится! Человечество в опасности!"
 		time="8" />
 
 	<string

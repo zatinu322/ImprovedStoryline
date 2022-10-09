@@ -1997,15 +1997,6 @@
 
 	<Object
 		Flags="21"
-		Name="Eretik_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="2766.429 262.000 498.827"
-		Radius="30.000"
-		LookingTimeOut="10.000" />
-
-	<Object
-		Flags="21"
 		Name="EretikPreSave_loc"
 		Belong="1100"
 		Prototype="genericLocation"

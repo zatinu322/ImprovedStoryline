@@ -106,14 +106,6 @@
 
 	<Object
 		Flags="21"
-		Name="locNormalEnd"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="7059.587 260.601 4445.748"
-		Radius="50.000" />
-
-	<Object
-		Flags="21"
 		Name="locArmiaTSP"
 		Belong="1100"
 		Prototype="genericLocation"
@@ -203,15 +195,6 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="6170.000 254.901 7845.000"
-		Radius="200.000"
-		LookingTimeOut="10.000" />
-
-	<Object
-		Flags="21"
-		Name="SnatchLoc1"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="2938.151 232.070 1001.828"
 		Radius="200.000"
 		LookingTimeOut="10.000" />
 
@@ -823,7 +806,7 @@
 				Prototype="NPC"
 				ModelName="r1_man"
 				cfg="146"
-				helloReplyNames="MininWorker_hellodlg0 MininWorker_hellodlg1 MininWorker_hellodlg15 MininWorker_hellodlg2 MininWorker_hellodlg3 MininWorker_hellodlg4 Dlg_npc_001823"
+				helloReplyNames="MininWorker_hellodlg0 MininWorker_hellodlg1 MininWorker_hellodlg15 MininWorker_hellodlg2 MininWorker_hellodlg3 Dlg_npc_001823"
 				SpokenCount="0" />
 
 			<Object

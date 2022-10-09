@@ -1510,14 +1510,6 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r3m2_OracleMemory r3m1_FindNative_2"
 		OnComplete="AddPlayerMoney(5000)" />
-
-	<quest
-		Name="r3m2_TalkWithBenAboutCarAfterOracul"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(5000)" />
 <!--Root/r3m2/Сюжетные/Нашли второй диск-->
 	<quest
 		Name="r3m2_FindInfoAboutFather"
@@ -2055,15 +2047,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnTake='ShowCircleOnMinimapByName("Monastery")' />
-<!--Root/r2m2/Сюжетные/Победить Лису в поединке-->
-	<quest
-		Name="r2m2_FightLisaToMonastir"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete='AddPlayerGunsWithRandomAffixOrMoney(1000,"storm01",3,6)'
-		OnTake='ShowCircleOnMinimapByName("ToR2M1")' />
 <!--Root/r2m2/Сюжетные/Отвезти диск 2 к оракулу-->
 	<quest
 		Name="r2m2_GiveDisk2ToOrakul"
@@ -2734,14 +2717,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="d_OpenTunel_Quest" />
-<!--Root/r1m4/Найти гомера: этот квест дается в третий приезд, если игрок не знает как пересечь болота-->
-	<quest
-		Name="FindGomerB_Quest1"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(1500)" />
 <!--Root/r1m4/Освободить склад от гавнюков-->
 	<quest
 		Name="TraiderStorage_Quest1"
@@ -3125,7 +3100,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="any complete"
-		PrecedingQuests="d_TalkAboutVrataInMinin_Quest r1m3_FindHmirinSever"
+		PrecedingQuests="d_TalkAboutVrataInMinin_Quest"
 		OnComplete="AddPlayerMoney(550)">
 		<quest
 			Name="d_TalkMerAboutOilMineAttack_Quest"
@@ -3243,25 +3218,6 @@
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(200)"
 		OnTake='ShowCircleOnMinimapByName("Minin")' />
-<!--Root/r1m3/Сюжетные/ Спросить о Лисе на базе -->
-	<quest
-		Name="d_FindLisaInBase_Quest"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="d_FindLisaInPesht_Quest"
-		OnTake='ShowCircleOnMinimapByName("TheBase")' />
-<!--Root/r1m3/Сюжетные/ Драться на базе -->
-	<quest
-		Name="d_GiveProblemToBase_Quest"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="d_FindLisaInBase_Quest"
-		OnComplete="AddPlayerMoney(350)"
-		OnTake='ShowCircleOnMinimapByName("TheBase")' />
 <!--Root/r1m3/Сюжетные/  Найти вход в тоннель-->
 	<quest
 		Name="d_FindDoorInTunel_Quest"
@@ -3269,7 +3225,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="any complete"
-		PrecedingQuests="d_TunelInAsgard_Quest r1m3_ToLisaToAsgard"
+		PrecedingQuests="r1m3_ToLisaToAsgard"
 		OnTake='ShowCircleOnMinimapByName("ToR2M1")' />
 <!--Root/r1m3/Сюжетные/  Найьт ключ -->
 	<quest
@@ -3789,53 +3745,6 @@
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(330)"
 		OnTake='ShowCircleOnMinimapByName("TheBen_House")' />
-<!--Root/r1m2/Сюжетные/  Найти Акселя -->
-	<quest
-		Name="d_FindAksel_Quest"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="d_FindLisaInBandit_Quest"
-		OnComplete="AddPlayerMoney(1000)" />
-<!--Root/r1m2/Сюжетные/  Спросить в Асгарде про Тоннель -->
-	<quest
-		Name="d_TunelInAsgard_Quest"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="d_FindLisaInBandit_Quest"
-		OnComplete="AddPlayerMoney(100)"
-		OnTake='ShowCircleOnMinimapByName("ToR1M3"); ShowCircleOnMinimap("r1m3",CVector(3599.582, 289.622, 6165.195))' />
-<!--Root/r1m2/Сюжетные/Искать хмыря в Мидгарде-->
-	<quest
-		Name="r1m2_FindHmirInMidgard"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="r3m2_TalkWithBenAboutCarAfterOracul"
-		OnComplete="AddPlayerMoney(100)"
-		OnTake='ShowCircleOnMinimapByName("Midragd")' />
-<!--Root/r1m2/Сюжетные/Путь на Север-->
-	<quest
-		Name="r1m3_FindHmirinSever"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="r1m2_FindHmirInMidgard"
-		OnComplete="AddPlayerMoney(100)"
-		OnTake='ShowCircleOnMinimapByName("ToR1M3"); ShowCircleOnMinimap("r1m3",CVector(6178.344, 276.035, 5928.279))' />
-<!--Root/r1m2/Сюжетные/Поговорить с Беном о тарелке-->
-	<quest
-		Name="r1m2_TW_BanAboutAlien"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(1000)" />
 <!--Root/r1m2/Сюжетные/Установить блокираторы-->
 	<quest
 		Name="r2m1_DeployBloks"
@@ -4014,13 +3923,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		Levels="r1m2" />
-
-	<quest
-		Name="FakeQuest1"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
 
 	<quest
 		Name="Chehly_Quest"
@@ -4365,86 +4267,6 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="d_Village2_NoKC_Quest"
 			OnTake='ShowCircleOnMinimapByName("TheFreedom")' />
-	</quest>
-<!--Root/r1m1/Сюжетные/Найти Лису на Севере -->
-	<quest
-		Name="d_FindLisaOnSever_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="1"
-		ConditionToGive="all complete"
-		PrecedingQuests="d_SinFather_Quest"
-		OnComplete="AddPlayerMoney(500)">
-		<quest
-			Name="d_FindLisaInPesht_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="d_FindLisaOnSever_Quest"
-			OnTake='ShowCircleOnMinimapByName("ToR1M3"); ShowCircleOnMinimap("r1m3",CVector(4065.723, 236.313, 3709.949))' />
-
-		<quest
-			Name="d_FindLisaInMidragd_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="d_GiveProblemToBase_Quest"
-			OnTake='ShowCircleOnMinimapByName("ToR1M2"); ShowCircleOnMinimap("r1m2",CVector(4340.908, 127.360, 810.720))' />
-
-		<quest
-			Name="d_FindLisaInPorto_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="d_FindLisaInMidragd_Quest"
-			OnTake='ShowCircleOnMinimapByName("Porto")' />
-
-		<quest
-			Name="d_FindLisaInBandit_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="d_FindLisaInPorto_Quest"
-			OnTake='ShowCircleOnMinimapByName("LisaInBanditPlen")' />
-	</quest>
-<!--Root/r1m1/Сюжетные/Найти Бена -->
-	<quest
-		Name="FindBen_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(250)"
-		OnTake='ShowCircleOnMinimapByName("TheTown")' />
-
-	<quest
-		Name="FindBenAgain_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(500)">
-		<quest
-			Name="d_FindBenInEast_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="FindBenAgain_Quest"
-			OnTake='ShowCircleOnMinimapByName("ToR1M2"); ShowCircleOnMinimap("r1m2",CVector(1664.596,80.325,5261.399))' />
-
-		<quest
-			Name="d_FindBenInStaruha_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="d_FindBenInEast_Quest"
-			OnTake='ShowCircleOnMinimapByName("TheArtefact")' />
 	</quest>
 <!--Root/r1m1/Сюжетные/Отомстить за смерть отца -->
 	<quest

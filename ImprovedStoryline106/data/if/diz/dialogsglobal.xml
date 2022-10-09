@@ -11607,19 +11607,6 @@
 		nextReplies="Dlg_pl_d3d242" />
 
 	<Reply
-		name="MininWorker_hellodlg4"
-		text="Чего тебе надо, незнакомец?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('r1m3_FindHmirinSever')    and   not(IsQuestComplete( 'r1m3_FindHmirinSever' ))"
-		nextReplies="Dlg_pl_000639" />
-
-	<Reply
-		name="Dlg_pl_000639"
-		text="Я ищу кое-кого, живущего на севере. Не могли бы вы показать мне путь в те края?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000640" />
-
-	<Reply
 		name="Dlg_npc_000640"
 		text="Видишь ли, встает еще одна проблема. Как ты уже заметил, у нас в городе напряг с бензином. Точнее, совсем его нет. Наши караваны не могут ехать на север. А путь до Ольма не самый простой! Один ты его не найдешь. Если поможешь, то сможешь вместе с нашим караваном поехать на север. Они покажут дорогу в Ольм. А сейчас обратись к мэру. Скажи, что Шарки послал помочь с проблемой. "
 		role="NPC"
@@ -11629,7 +11616,7 @@
 		name="Dlg_pl_000641"
 		text="Хорошо, сейчас к нему и пойду"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_FindHmirinSever');  EndConversation()" />
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001813"
@@ -12265,7 +12252,7 @@
 		name="Dlg_pl_002114"
 		text="Да что ты, я и не думал даже! И кстати, спасибо за выпивку."
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken('d_TunelInAsgard_Quest');   CompleteQuestIfTaken('r1m3_ToLisaToAsgard');   GetCurNpc():SetSpokenCount( 2 ); TActivate('TUNNELLOCATION');   EndConversation()" />
+		scriptResult="CompleteQuestIfTaken('r1m3_ToLisaToAsgard');   GetCurNpc():SetSpokenCount( 2 ); TActivate('TUNNELLOCATION');   EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_001806"
@@ -13558,7 +13545,7 @@
 		text="Нет, спасибо. Сами решайте свои проблемы."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-<!--Root/r1m3/Сюжетные/Искать Лису в Пеште и у Бена-->
+<!--Root/r1m3/Сюжетные/Искать Лису в Пеште-->
 	<Reply
 		name="Dlg_npc_002079"
 		text="У тебя взволнованный вид. Ищешь кого?"
@@ -13631,139 +13618,6 @@
 		text="Некогда! Бывай!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('LisaVPeshte'); TakeQuest('LisaUBena'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002081"
-		text="О, ты уже вернулся? Тебе удалось найти Оракула? Он тебе рассказал, где следует искать Айвена?"
-		role="NPC"
-		scriptCondition="IsQuestComplete('LisaUBena') and not(IsQuestTaken('r1m3_ToLisaToAsgard')) and not(IsQuestComplete('r1m3_ToLisaToAsgard'))"
-		nextReplies="Dlg_pl_002082" />
-
-	<Reply
-		name="Dlg_pl_002082"
-		text="Бен, я бы очень рад поболтать и обсудить всё то, что со мной случилось, но сейчас я очень-очень спешу!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002093" />
-
-	<Reply
-		name="Dlg_npc_002093"
-		text="Хорошо, как я могу тебе помочь?"
-		role="NPC"
-		nextReplies="Dlg_pl_002094" />
-
-	<Reply
-		name="Dlg_pl_002094"
-		text="Лиса у тебя? Бен, если она у тебя, то скажи ей, что я не злюсь, мне просто нужен чёртов диск!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002095" />
-
-	<Reply
-		name="Dlg_npc_002095"
-		text="О, господи, что она натворила?!"
-		role="NPC"
-		nextReplies="Dlg_pl_002096" />
-
-	<Reply
-		name="Dlg_pl_002096"
-		text="Я нашёл второй диск Айвена и ехал с ним к Оракулу, но на полпути она украла его у меня!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002097" />
-
-	<Reply
-		name="Dlg_npc_002097"
-		text="Я так и знал, что она что-то задумала! Не стоило ей рассказывать про то, что ты отправился на поиски Айвена!"
-		role="NPC"
-		nextReplies="Dlg_pl_002098" />
-
-	<Reply
-		name="Dlg_pl_002098"
-		text="Не вини себя, я же сам попросил рассказать ей об этом. Но ты бы мог мне очень помочь. "
-		role="PLAYER"
-		nextReplies="Dlg_npc_002099" />
-
-	<Reply
-		name="Dlg_npc_002099"
-		text="И как же?"
-		role="NPC"
-		nextReplies="Dlg_pl_002100" />
-
-	<Reply
-		name="Dlg_pl_002100"
-		text="Если Лиса не у тебя, то она где-то прячется. Я точно знаю, что она проехала через Пешт, но дальше её следы теряются."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002101" />
-
-	<Reply
-		name="Dlg_npc_002101"
-		text="Она могла отправиться в Либриум."
-		role="NPC"
-		nextReplies="Dlg_pl_002102" />
-
-	<Reply
-		name="Dlg_pl_002102"
-		text="Куда-куда?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002103" />
-
-	<Reply
-		name="Dlg_npc_002103"
-		text="В Либриум. Севернее Пешта есть город Асгард. Где-то рядом с ним есть тоннель через горы, который как раз ведёт в Либриум. Если она и могла куда-либо поехать, то только туда."
-		role="NPC"
-		nextReplies="Dlg_pl_002104" />
-
-	<Reply
-		name="Dlg_pl_002104"
-		text="Почему ты в этом так уверен?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002105" />
-
-	<Reply
-		name="Dlg_npc_002105"
-		text="Она провела там несколько лет, заимела много знакомств. Она даже рассказывала, что в неё влюбился какой-то местный диктатор."
-		role="NPC"
-		nextReplies="Dlg_pl_002106" />
-
-	<Reply
-		name="Dlg_pl_002106"
-		text="Как-то сомнительно всё это… |А есть другие места, где она может прятаться?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002107" />
-
-	<Reply
-		name="Dlg_npc_002107"
-		text="Если и есть, то я про них не знаю."
-		role="NPC"
-		nextReplies="Dlg_pl_002108" />
-
-	<Reply
-		name="Dlg_pl_002108"
-		text="В таком случае придётся искать этот тоннель…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002109" />
-
-	<Reply
-		name="Dlg_npc_002109"
-		text="Если я прав и ты действительно найдёшь её там, то, умоляю, не причиняй ей вреда. Просто забери диски! Если из-за того, что я тебе сейчас помог, моя девочка пострадает, то я себе этого не прощу!"
-		role="NPC"
-		nextReplies="Dlg_pl_002110" />
-
-	<Reply
-		name="Dlg_pl_002110"
-		text="Не переживай, я клянусь тебе, что только заберу диск и всё. Ещё раз спасибо! Когда-нибудь, когда всё это закончится, я заеду к тебе и расскажу обо всём, что я пережил за это время."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002111" />
-
-	<Reply
-		name="Dlg_npc_002111"
-		text="Надеюсь на это. И буду надеяться, что ты будешь с Айвеном. "
-		role="NPC"
-		nextReplies="Dlg_pl_002112" />
-
-	<Reply
-		name="Dlg_pl_002112"
-		text="И я тоже. Ну, я поехал! "
-		role="PLAYER"
-		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Финальный выбор-->
 	<Reply
 		name="Dlg_npc_002425"
@@ -14671,56 +14525,6 @@
 		nextReplies="Dlg_pl_xyz290" />
 
 	<Reply
-		name="Citizen_hellodlg1"
-		text="Наш город бесконечно благодарен тебе за помощь. Вот твои деньги. И мне удалось выяснить, где сейчас живёт Бен. Давай помечу на твоей карте."
-		role="NPC"
-		scriptCondition="(IsQuestTaken('d_CaravanToMidgardBen_Quest'))  and  not(IsQuestComplete('d_CaravanToMidgardBen_Quest'))  and  (GetVar('globalCaravanToMidgard').AsInt == 1)"
-		nextReplies="Dlg_pl_xyz318" />
-
-	<Reply
-		name="Dlg_pl_xyz318"
-		text="Огромное Вам спасибо."
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz317" />
-
-	<Reply
-		name="Dlg_npc_xyz317"
-		text="Надеюсь, ты найдёшь то, что ищешь. И если вдруг тебе понадобится что-нибудь эдакое, то знай, что самые развитые технологии только в нашем городе. Ну всё, иди."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz319" />
-
-	<Reply
-		name="Dlg_pl_xyz319"
-		text="До свидания. "
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_CaravanToMidgardBen_Quest'); TakeQuest('d_FindHouseOfBen_Quest');  AddHistory(  'r1_Before_Ben_00'  );  AddFadingMsgId( 'fm_history_got' );  TActivate ('trCaravanToMidgardRemove'); SetVar('FindBen',0); TActivate('tr_THEBEN'); SetTolerance(1100,1009,RS_NEUTRAL);  EndConversation()" />
-
-	<Reply
-		name="Citizen_hellodlg2"
-		text="Что тебе?"
-		role="NPC"
-		scriptCondition="(IsQuestTaken('d_FindLisaInMidragd_Quest'))  and  not(IsQuestComplete('d_FindLisaInMidragd_Quest'))"
-		nextReplies="Dlg_pl_xyz460" />
-
-	<Reply
-		name="Dlg_pl_xyz460"
-		text="Я ищу женщину, зовут ее Лиса."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001287" />
-
-	<Reply
-		name="Dlg_npc_001287"
-		text="Лиса была здесь недавно, а потом уехала в Порто."
-		role="NPC"
-		nextReplies="Dlg_pl_001288" />
-
-	<Reply
-		name="Dlg_pl_001288"
-		text="Будем искать дальше."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindLisaInMidragd_Quest');  EndConversation()" />
-
-	<Reply
 		name="Dlg_pl_xyz290"
 		text="А?"
 		role="PLAYER"
@@ -14815,517 +14619,32 @@
 		text="Счастливо!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_FindBenInMidgard_Quest');  EndConversation()" />
-<!--Root/r1m2/Сюжетные/Бен-->
+<!--Root/r1m2/Сюжетные/Бен и Лиса--><!--Root/r1m2/Сюжетные/Завхоз в Мидгарде-->
 	<Reply
-		name="Ben_hellodlg0"
-		text="Чем могу помочь?"
+		name="Citizen_hellodlg1"
+		text="Наш город бесконечно благодарен тебе за помощь. Вот твои деньги. И мне удалось выяснить, где сейчас живёт Бен. Давай помечу на твоей карте."
 		role="NPC"
-		scriptCondition="(GetVar('FindBen').AsInt==2 or QuestStatus('d_FindHouseOfBen_Quest')==Q_COMPLETED) and GetCurNpc():GetSpokenCount() == 0"
-		scriptResult="getObj('MrShlyapa'):SetSpokenCount(1); SetTolerance(1100,1009,RS_NEUTRAL);"
-		nextReplies="Dlg_pl_xyz322 Dlg_pl_002622" />
+		scriptCondition="(IsQuestTaken('d_CaravanToMidgardBen_Quest'))  and  not(IsQuestComplete('d_CaravanToMidgardBen_Quest'))  and  (GetVar('globalCaravanToMidgard').AsInt == 1)"
+		nextReplies="Dlg_pl_xyz318" />
 
 	<Reply
-		name="Dlg_pl_002622"
-		text="Простите, что побеспокоил, но я ищу одного человека... Бена... Бена Дросселя. Он исследователь и, как говорят, живёт тут где-то неподалёку..."
+		name="Dlg_pl_xyz318"
+		text="Огромное Вам спасибо."
 		role="PLAYER"
-		scriptCondition="not(IsQuestComplete('d_FindHouseOfBen_Quest'))"
-		nextReplies="Dlg_npc_xyz324" />
+		nextReplies="Dlg_npc_xyz317" />
 
 	<Reply
-		name="Dlg_pl_xyz322"
-		text="Вы Бен Дроссель?"
-		role="PLAYER"
-		scriptCondition="IsQuestComplete('d_FindHouseOfBen_Quest')"
-		nextReplies="Dlg_npc_xyz324" />
-
-	<Reply
-		name="Dlg_npc_xyz324"
-		text="Да, Бен Дроссель это я… У вас очень знакомый голос… Нет, не может этого быть! Айвен?! Ты?!"
+		name="Dlg_npc_xyz317"
+		text="Надеюсь, ты найдёшь то, что ищешь. И если вдруг тебе понадобится что-нибудь эдакое, то знай, что самые развитые технологии только в нашем городе. Ну всё, иди."
 		role="NPC"
-		nextReplies="Dlg_pl_xyz325" />
+		nextReplies="Dlg_pl_xyz319" />
 
 	<Reply
-		name="Dlg_pl_xyz325"
-		text="Простите, но я не знаю, о ком вы говорите. Моего отца… неродного отца… его убили. Перед смертью он передал мне этот диск и это письмо и наказал найти Вас. И вот теперь я стою перед Вами и не знаю, что мне делать дальше."
+		name="Dlg_pl_xyz319"
+		text="До свидания. "
 		role="PLAYER"
-		nextReplies="Dlg_npc_xyz326" />
+		scriptResult="CompleteQuest('d_CaravanToMidgardBen_Quest'); TakeQuest('d_FindHouseOfBen_Quest');  AddHistory(  'r1_Before_Ben_00'  );  AddFadingMsgId( 'fm_history_got' );  TActivate ('trCaravanToMidgardRemove'); SetVar('FindBen',0); TActivate('tr_THEBEN'); SetTolerance(1100,1009,RS_NEUTRAL);  EndConversation()" />
 
-	<Reply
-		name="Dlg_npc_xyz326"
-		text="Быть этого не может… Ты проходи, не стесняйся. А я сейчас подойду. Такие дела творятся! Мне нужно выпить. Будешь?"
-		role="NPC"
-		nextReplies="Dlg_pl_xyz327" />
-
-	<Reply
-		name="Dlg_pl_xyz327"
-		text="Отчего бы и нет. Ты упоминал какого-то Айвена. Кто это?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz328" />
-
-	<Reply
-		name="Dlg_npc_xyz328"
-		text="Сперва допей. Вот, так лучше. Айвен - это твой настоящий отец."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz329" />
-
-	<Reply
-		name="Dlg_pl_xyz329"
-		text="Значит, это письмо написано им?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz330" />
-
-	<Reply
-		name="Dlg_npc_xyz330"
-		text="Да, это его почерк. "
-		role="NPC"
-		nextReplies="Dlg_pl_xyz331" />
-
-	<Reply
-		name="Dlg_pl_xyz331"
-		text="Подожди, а ты откуда знаешь всё это?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz332" />
-
-	<Reply
-		name="Dlg_npc_xyz332"
-		text="Мы с твоим отцом очень старые друзья. Когда-то давно мы с ним работали вместе в Мидгарде. Мы оба были исследователями, но Айвен достиг в этом деле куда больших высот, чем я. Понятное дело, у него же это в крови. И его отец, и его дед - они все работали не покладая рук, чтобы сделать этот мир лучше."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz333" />
-
-	<Reply
-		name="Dlg_pl_xyz333"
-		text="Если они все были исследователями, то почему Айвен не оставил меня в Мидгарде? Почему он оставил меня у Петра в забытом богом селе на краю мира? Я хочу с ним поговорить. Ты знаешь, где он?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz334" />
-
-	<Reply
-		name="Dlg_npc_xyz334"
-		text="Нет. И никто не знает. Он пропал. Двадцать лет назад. "
-		role="NPC"
-		nextReplies="Dlg_pl_xyz335" />
-
-	<Reply
-		name="Dlg_pl_xyz335"
-		text="Двадцать лет назад… Немногим после моего рождения… Он тебе рассказывал что-нибудь перед тем, как исчезнуть?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz336" />
-
-	<Reply
-		name="Dlg_npc_xyz336"
-		text="Он говорил о своих исследованиях. О том, что наткнулся на что-то очень важное. Настолько важное, что это может в корне изменить наш мир. "
-		role="NPC"
-		nextReplies="Dlg_pl_xyz337" />
-
-	<Reply
-		name="Dlg_pl_xyz337"
-		text="Он не рассказывал, что конкретно он обнаружил?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz338" />
-
-	<Reply
-		name="Dlg_npc_xyz338"
-		text="Нет. Но именно это и повлияло на то, что он отвёз тебя на край света. Он сделал всё для того, чтобы ты никогда не узнал, куда он отправился. И поверь мне, не просто так. То, что он узнал, изменило его. Он буквально стал этим одержим. Он оставил тебя у Петра, после этого попрощался со мной, и больше никто его не видел."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz339" />
-
-	<Reply
-		name="Dlg_pl_xyz339"
-		text="То есть ты не знаешь, куда он направился?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz340" />
-
-	<Reply
-		name="Dlg_npc_xyz340"
-		text="Нет. И я очень не хочу, чтобы ты пытался это выяснить. Если Айвен решил тебя огородить от всего этого, значит, на то была очень и очень веская причина. Готов ли ты, чтобы эта истина тебе открылась?"
-		role="NPC"
-		nextReplies="Dlg_pl_xyz341" />
-
-	<Reply
-		name="Dlg_pl_xyz341"
-		text="Бен, у меня теперь ничего нет. Буквально пару дней назад у меня были дом, занятие, друзья, девушка, которая мне нравится. И я в один момент потерял всё. Мне нужна цель. Смысл. То, ради чего мне стоит дальше жить. И ты сейчас мне говоришь, что нужно всё бросить и оставаться в стороне. Нет, так не пойдёт!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001740" />
-
-	<Reply
-		name="Dlg_npc_001740"
-		text="Другого ответа я и не ждал. Но я мало чем могу тебе помочь. Я ничего не знаю ни об исследованиях Айвена, ни о том, куда он мог отправиться."
-		role="NPC"
-		nextReplies="Dlg_pl_001741" />
-
-	<Reply
-		name="Dlg_pl_001741"
-		text="А в Мидгарде могут об этом знать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001742" />
-
-	<Reply
-		name="Dlg_npc_001742"
-		text="Вряд ли. Насколько я знаю, все свои поздние исследования Айвен проводил в своём доме, в Фатерлянде. Логичнее всего будет начать поиски оттуда."
-		role="NPC"
-		nextReplies="Dlg_pl_001743" />
-
-	<Reply
-		name="Dlg_pl_001743"
-		text="Спасибо огромное. И ещё: сначала я не принял это во внимание, но до того, как напали на мою деревню, я повстречал загадочную девушку на быстрой машине. Она искала предмет, по описанию очень похожий вот на этот диск. Говорила, что он поможет ей в поисках какого-то исследователя. Может ли такое быть, чтобы она говорила об Айвене? "
-		role="PLAYER"
-		nextReplies="Dlg_npc_001744" />
-
-	<Reply
-		name="Dlg_npc_001744"
-		text="Её звали Лиса?"
-		role="NPC"
-		nextReplies="Dlg_pl_001745" />
-
-	<Reply
-		name="Dlg_pl_001745"
-		text="Да, а ты откуда знаешь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001746" />
-
-	<Reply
-		name="Dlg_npc_001746"
-		text="Она моя дочь. Дочь, которая продолжает моё дело. Только я веду осёдлый образ жизни и восстанавливаю механизмы старого мира по книгам и документам, а она открывает новые технологии, путешествуя по миру. "
-		role="NPC"
-		nextReplies="Dlg_pl_001747" />
-
-	<Reply
-		name="Dlg_pl_001747"
-		text="Откуда она узнала об Айвене?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001748" />
-
-	<Reply
-		name="Dlg_npc_001748"
-		text="Когда она была ребёнком, я много ей про него рассказывал. Пару раз она даже видела его за работой и была очень этим восхищена. Не знаю, что конкретно послужило спусковым механизмом для того, чтобы она начала его поиски, но основа для этого была заложена ещё в детстве."
-		role="NPC"
-		nextReplies="Dlg_pl_001749" />
-
-	<Reply
-		name="Dlg_pl_001749"
-		text="Понятно. Если она с тобой свяжется, то расскажи ей, куда я отправился. Мне бы пригодился союзник в моих поисках."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001750" />
-
-	<Reply
-		name="Dlg_npc_001750"
-		text="Так и сделаю. А теперь давай сюда карту, я тебе покажу, где жил отец.|Вот. Спроси в этом городе. Там ещё должны его помнить."
-		role="NPC"
-		nextReplies="Dlg_pl_001751" />
-
-	<Reply
-		name="Dlg_pl_001751"
-		text="Отправляюсь немедленно. Теперь у меня появилась надежда."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TakeQuest('d_FindRealFatherRoom_Quest');  AddHistory(  'r1_After_Ben_00'  );  AddFadingMsgId( 'fm_history_got' );  StopPlayingCustomMusic();  EndConversation()" />
-
-	<Reply
-		name="Ben_hellodlg2"
-		text="Наконец-то вы вернулись!"
-		role="NPC"
-		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 1  "
-		nextReplies="Dlg_pl_000621" />
-
-	<Reply
-		name="Dlg_pl_000621"
-		text="Рад тебя видеть, Бен! Приключения выдались, конечно, те ещё, но они пока не закончены. Следующая цель - пересечь Пустыню Смерти."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000620" />
-
-	<Reply
-		name="Dlg_npc_000620"
-		text="Да, насчёт пустыни...|Может быть, не стоит? Я понимаю, что сейчас впервые за долгое время появились зацепки о местонахождении Айвена, но ведь вы собираетесь отправиться в земли, о которых абсолютно никто ничего не знает!"
-		role="NPC"
-		nextReplies="Dlg_pl_000622" />
-
-	<Reply
-		name="Dlg_pl_000622"
-		text="Мы? То есть Лиса тоже едет со мной?"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 2 ); StartConversation('Lisa');" />
-
-	<Reply
-		name="Ben_hellodlg3"
-		text="А что случилось в Воложе?"
-		role="NPC"
-		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 2 "
-		nextReplies="Dlg_pl_000653" />
-
-	<Reply
-		name="Dlg_pl_000653"
-		text="Да так, не обращай внимания. Наверное, это я всё излишне драматизирую."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000654" />
-
-	<Reply
-		name="Dlg_npc_000654"
-		text="Нет, я так просто не отстану! В конце концов, Лиса моя единственная дочь! Расскажи, что случилось."
-		role="NPC"
-		nextReplies="Dlg_pl_000655" />
-
-	<Reply
-		name="Dlg_pl_000655"
-		text="Бен, честно говоря, я сам не понял, что именно произошло. Пусть Лиса тебе обо всём расскажет, а я пока пойду отдохну перед поездкой."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 3 ); StartConversation('Lisa')" />
-
-	<Reply
-		name="Dlg_npc_002203"
-		text="Да, ещё как еду! А тебя что-то смущает?"
-		role="NPC"
-		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 0   "
-		nextReplies="Dlg_pl_002210" />
-
-	<Reply
-		name="Dlg_pl_002210"
-		text="Ну, я думал, что после того, что ты тогда ощутила в Воложе, ты захочешь немного отдохнуть."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002992" />
-
-	<Reply
-		name="Dlg_npc_002992"
-		text="Чушь! Я в полном порядке!"
-		role="NPC"
-		nextReplies="Dlg_pl_002993" />
-
-	<Reply
-		name="Dlg_pl_002993"
-		text="Ладно-ладно, как скажешь..."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); StartConversation('Ben')" />
-
-	<Reply
-		name="Dlg_npc_002211"
-		text="Эх, ну так уж и быть. Хоть я и сама до конца понятия не имею, что это было. Так вот, как только мы пересекли горы..."
-		role="NPC"
-		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 1 "
-		nextReplies="Dlg_pl_002212" />
-
-	<Reply
-		name="Dlg_pl_002212"
-		text="[Уйти отдыхать]."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('ZashitaGotova'); TActivate('trToMidgardForComposite'); EndConversation()" />
-
-	<Reply
-		name="BadEndingDlg"
-		text="..."
-		role="NPC"
-		scriptCondition="IsQuestComplete('BenBadEnd') and GetCurNpc():GetSpokenCount() == 4 "
-		nextReplies="Dlg_pl_002428" />
-
-	<Reply
-		name="Dlg_pl_002428"
-		text="Я купил необходимые лекарства."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002437" />
-
-	<Reply
-		name="Dlg_npc_002437"
-		text="..."
-		role="NPC"
-		nextReplies="Dlg_pl_002438" />
-
-	<Reply
-		name="Dlg_pl_002438"
-		text="Всё в порядке? Почему ты один? Где Лиса?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002439" />
-
-	<Reply
-		name="Dlg_npc_002439"
-		text="..."
-		role="NPC"
-		nextReplies="Dlg_pl_002440" />
-
-	<Reply
-		name="Dlg_pl_002440"
-		text="Бен, скажи что-нибудь."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002441" />
-
-	<Reply
-		name="Dlg_npc_002441"
-		text="Лиса... Моя доченька..."
-		role="NPC"
-		nextReplies="Dlg_pl_002442" />
-
-	<Reply
-		name="Dlg_pl_002442"
-		text="Что случилось?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002443" />
-
-	<Reply
-		name="Dlg_npc_002443"
-		text="Моя дочурка... Она умерла... Понимаешь?! Умерла!"
-		role="NPC"
-		nextReplies="Dlg_pl_002444" />
-
-	<Reply
-		name="Dlg_pl_002444"
-		text="Нет... Нет! Не может этого быть! Я же увёз её из пустыни! Я купил лекарства! Она должна была очнуться!!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002445" />
-
-	<Reply
-		name="Dlg_npc_002445"
-		text="..."
-		role="NPC"
-		nextReplies="Dlg_pl_002446" />
-
-	<Reply
-		name="Dlg_pl_002446"
-		text="Как это произошло?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002447" />
-
-	<Reply
-		name="Dlg_npc_002447"
-		text="Она просто перестала дышать, так и не приходя в сознание. Вряд ли тут помогли бы хоть какие-то средства..."
-		role="NPC"
-		nextReplies="Dlg_pl_002448" />
-
-	<Reply
-		name="Dlg_pl_002448"
-		text="Нет... Это не может быть правдой! Почему она?!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002449" />
-
-	<Reply
-		name="Dlg_npc_002449"
-		text='Я долго думал над всем этим. Это не твоя вина. Это я с детства заразил её этим "исследовательским духом". И не сказал ей, что нужно уметь вовремя остановиться. Двадцать лет назад это качество погубило Айвена. А сейчас оно погубило и мою дочь.'
-		role="NPC"
-		nextReplies="Dlg_pl_002450" />
-
-	<Reply
-		name="Dlg_pl_002450"
-		text="Бен, это не твоя вина, ты не мог это предвидеть!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002451" />
-
-	<Reply
-		name="Dlg_npc_002451"
-		text="Я уже всё решил, тебе не убедить меня в обратном."
-		role="NPC"
-		nextReplies="Dlg_pl_002452" />
-
-	<Reply
-		name="Dlg_pl_002452"
-		text="Что решил? Бен, о чём ты? Неужели ты..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002453" />
-
-	<Reply
-		name="Dlg_npc_002453"
-		text="Я потерял всё, чем я когда-либо дорожил. Во мне нет ни желания, ни сил жить дальше."
-		role="NPC"
-		nextReplies="Dlg_pl_002454" />
-
-	<Reply
-		name="Dlg_pl_002454"
-		text="Но..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002455" />
-
-	<Reply
-		name="Dlg_npc_002455"
-		text="Видишь это устройство? Это детонатор. Как только я отпущу кнопку, эта хижина взлетит на воздух. Я не хочу стать виновником ещё и твоей смерти, так что лучше уходи."
-		role="NPC"
-		nextReplies="Dlg_pl_002456" />
-
-	<Reply
-		name="Dlg_pl_002456"
-		text="Бен, ты же понимаешь, что это не выход! Одумайся!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002457" />
-
-	<Reply
-		name="Dlg_npc_002457"
-		text="Мне нечего сказать тебе больше. Прости меня. И прощай."
-		role="NPC"
-		nextReplies="Dlg_pl_002458" />
-
-	<Reply
-		name="Dlg_pl_002458"
-		text="Прощай, Бен."
-		role="PLAYER"
-		scriptResult="TActivate('BadEndingBegin'); GetCurNpc():SetSpokenCount(5); EndConversation()" />
-
-	<Reply
-		name="NormalEndingDlg"
-		text="Ты вернулся! Ну, давай, рассказывай, чего там с тобой произошло."
-		role="NPC"
-		scriptCondition="IsQuestComplete('BenNormalEnd') and GetCurNpc():GetSpokenCount() == 2 "
-		nextReplies="Dlg_pl_002429" />
-
-	<Reply
-		name="Dlg_pl_002429"
-		text="Лиса, рад тебя видеть в добром здравии! Ты не поверишь, сколько всего произошло за последние несколько дней. Начать хотя бы с того, что я увидел на востоке пустыни…"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 3 ); TActivate('NextHoursTr'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002431"
-		text="Что произошло?"
-		role="NPC"
-		scriptCondition="IsQuestComplete('r4m2_LisaDieBen') and GetCurNpc():GetSpokenCount() == 3"
-		nextReplies="Dlg_pl_002432" />
-
-	<Reply
-		name="Dlg_pl_002432"
-		text="Я... Я не знаю. Всё было хорошо, мы пытались найти зацепки о судьбе Айвена, а потом вдруг она просто потеряла сознание."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002433" />
-
-	<Reply
-		name="Dlg_npc_002433"
-		text="Ох, говорил же я, не стоило ей ехать в эту проклятую пустыню."
-		role="NPC"
-		nextReplies="Dlg_pl_002434" />
-
-	<Reply
-		name="Dlg_pl_002434"
-		text="Я могу как-нибудь помочь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002435" />
-
-	<Reply
-		name="Dlg_npc_002435"
-		text="Да. Поезжай в Мидгард и купи вот эти лекарства. Они должны ей помочь. Только поторопись!"
-		role="NPC"
-		nextReplies="Dlg_pl_002436" />
-
-	<Reply
-		name="Dlg_pl_002436"
-		text="Постараюсь как можно быстрее!"
-		role="PLAYER"
-		scriptResult="CompleteQuest('r4m2_LisaDieBen');  StopPlayingCustomMusic(); RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Lisa_P'); GetCurNpc():SetSpokenCount(4); EndConversation()" />
-<!--Root/r1m2/Сюжетные/Гражданин Порто-->
-	<Reply
-		name="PortoCitizen0"
-		text="Если вы ко мне обращаетесь, то я вас внимательно слушаю?!"
-		role="NPC"
-		scriptCondition="(IsQuestTaken('d_FindLisaInPorto_Quest'))  and  not(IsQuestComplete('d_FindLisaInPorto_Quest'))"
-		nextReplies="Dlg_pl_xyz462" />
-
-	<Reply
-		name="Dlg_pl_xyz462"
-		text="Я ищу женщину, зовут ее Лиса."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001289" />
-
-	<Reply
-		name="Dlg_npc_001289"
-		text="Лисы здесь не было уже давно. Может быть, ее что-то задержало на полпути? Бандиты буйствуют на наших дорогах... "
-		role="NPC"
-		nextReplies="Dlg_pl_001290" />
-
-	<Reply
-		name="Dlg_pl_001290"
-		text="Сейчас проверим."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindLisaInPorto_Quest');  TActivate('PLENLISA');  EndConversation()" />
-<!--Root/r1m2/Сюжетные/Завхоз в Мидгарде-->
 	<Reply
 		name="Zavhoz_hellodlg0"
 		text="По какому Вы вопросу, молодой человек?"
@@ -15908,7 +15227,7 @@
 
 	<Reply
 		name="Dlg_pl_000607"
-		text="Да, я не против, вот только меня интересует выигрыш. У тебя есть композит? Я готов драться за него!!!"
+		text="Да, я не против, вот только меня интересует выигрыш. У тебя есть композит? Я готов драться за него!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000608" />
 
@@ -15923,31 +15242,6 @@
 		text="Спасибо."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-<!--Root/r1m2/Сюжетные/Диалог о хмыре в Мидгарде-->
-	<Reply
-		name="Zavhoz_hellodlg2"
-		text="Тебе чего? Вообще-то я занят."
-		role="NPC"
-		scriptCondition="IsQuestTaken('r1m2_FindHmirInMidgard')  and  not(IsQuestComplete('r1m2_FindHmirInMidgard'))"
-		nextReplies="Dlg_pl_000636" />
-
-	<Reply
-		name="Dlg_pl_000636"
-		text="Не заезжал ли к вам человек, желающий продать странный предмет дискообразной формы?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000637" />
-
-	<Reply
-		name="Dlg_npc_000637"
-		text="Да, приезжал. Но покупателей он здесь не нашел и поехал на Север."
-		role="NPC"
-		nextReplies="Dlg_pl_000638" />
-
-	<Reply
-		name="Dlg_pl_000638"
-		text="На Север? А деревня все дальше и дальше... Спасибо за информацию."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r1m2_FindHmirInMidgard');  EndConversation()" />
 <!--Root/r1m2/Сюжетные/Помириться с бабкой-->
 	<Reply
 		name="Dlg_npc_001565"
@@ -16634,6 +15928,19 @@
 		scriptResult="CompleteQuest('BenRim2_Quest');  TActivate('PLENLISA'); EndConversation()" />
 <!--Root/r1m2/Сюжетные/Нормальная концовка-->
 	<Reply
+		name="NormalEndingDlg"
+		text="Ты вернулся! Ну, давай, рассказывай, чего там с тобой произошло."
+		role="NPC"
+		scriptCondition="IsQuestComplete('BenNormalEnd') and GetCurNpc():GetSpokenCount() == 2 "
+		nextReplies="Dlg_pl_002429" />
+
+	<Reply
+		name="Dlg_pl_002429"
+		text="Лиса, рад тебя видеть в добром здравии! Ты не поверишь, сколько всего произошло за последние несколько дней. Начать хотя бы с того, что я увидел на востоке пустыни…"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 3 ); TActivate('NextHoursTr'); EndConversation()" />
+
+	<Reply
 		name="Dlg_npc_002459"
 		text="Это уму непостижимо! Летающий оракул, два инопланетных корабля… "
 		role="NPC"
@@ -17171,7 +16478,524 @@
 		text="Эй, стой!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('FollowMrShlyapa'); TActivate('cinAfterChifir2'); EndConversation()" />
-<!--Root/r1m2/Сюжетные/Перед поездкой-->
+<!--Root/r1m2/Сюжетные/Плохая концовка-->
+	<Reply
+		name="BadEndingDlg"
+		text="..."
+		role="NPC"
+		scriptCondition="IsQuestComplete('BenBadEnd') and GetCurNpc():GetSpokenCount() == 4 "
+		nextReplies="Dlg_pl_002428" />
+
+	<Reply
+		name="Dlg_pl_002428"
+		text="Я купил необходимые лекарства."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002437" />
+
+	<Reply
+		name="Dlg_npc_002437"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_002438" />
+
+	<Reply
+		name="Dlg_pl_002438"
+		text="Всё в порядке? Почему ты один? Где Лиса?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002439" />
+
+	<Reply
+		name="Dlg_npc_002439"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_002440" />
+
+	<Reply
+		name="Dlg_pl_002440"
+		text="Бен, скажи что-нибудь."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002441" />
+
+	<Reply
+		name="Dlg_npc_002441"
+		text="Лиса... Моя доченька..."
+		role="NPC"
+		nextReplies="Dlg_pl_002442" />
+
+	<Reply
+		name="Dlg_pl_002442"
+		text="Что случилось?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002443" />
+
+	<Reply
+		name="Dlg_npc_002443"
+		text="Моя дочурка... Она умерла... Понимаешь?! Умерла!"
+		role="NPC"
+		nextReplies="Dlg_pl_002444" />
+
+	<Reply
+		name="Dlg_pl_002444"
+		text="Нет... Нет! Не может этого быть! Я же увёз её из пустыни! Я купил лекарства! Она должна была очнуться!!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002445" />
+
+	<Reply
+		name="Dlg_npc_002445"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_002446" />
+
+	<Reply
+		name="Dlg_pl_002446"
+		text="Как это произошло?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002447" />
+
+	<Reply
+		name="Dlg_npc_002447"
+		text="Она просто перестала дышать, так и не приходя в сознание. Вряд ли тут помогли бы хоть какие-то средства..."
+		role="NPC"
+		nextReplies="Dlg_pl_002448" />
+
+	<Reply
+		name="Dlg_pl_002448"
+		text="Нет... Это не может быть правдой! Почему она?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002449" />
+
+	<Reply
+		name="Dlg_npc_002449"
+		text='Я долго думал над всем этим. Это не твоя вина. Это я с детства заразил её этим "исследовательским духом". И не сказал ей, что нужно уметь вовремя остановиться. Двадцать лет назад это качество погубило Айвена. А сейчас оно погубило и мою дочь.'
+		role="NPC"
+		nextReplies="Dlg_pl_002450" />
+
+	<Reply
+		name="Dlg_pl_002450"
+		text="Бен, это не твоя вина, ты не мог это предвидеть!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002451" />
+
+	<Reply
+		name="Dlg_npc_002451"
+		text="Я уже всё решил, тебе не убедить меня в обратном."
+		role="NPC"
+		nextReplies="Dlg_pl_002452" />
+
+	<Reply
+		name="Dlg_pl_002452"
+		text="Что решил? Бен, о чём ты? Неужели ты..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002453" />
+
+	<Reply
+		name="Dlg_npc_002453"
+		text="Я потерял всё, чем я когда-либо дорожил. Во мне нет ни желания, ни сил жить дальше."
+		role="NPC"
+		nextReplies="Dlg_pl_002454" />
+
+	<Reply
+		name="Dlg_pl_002454"
+		text="Но..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002455" />
+
+	<Reply
+		name="Dlg_npc_002455"
+		text="Видишь это устройство? Это детонатор. Как только я отпущу кнопку, эта хижина взлетит на воздух. Я не хочу стать виновником ещё и твоей смерти, так что лучше уходи."
+		role="NPC"
+		nextReplies="Dlg_pl_002456" />
+
+	<Reply
+		name="Dlg_pl_002456"
+		text="Бен, ты же понимаешь, что это не выход! Одумайся!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002457" />
+
+	<Reply
+		name="Dlg_npc_002457"
+		text="Мне нечего сказать тебе больше. Прости меня. И прощай."
+		role="NPC"
+		nextReplies="Dlg_pl_002458" />
+
+	<Reply
+		name="Dlg_pl_002458"
+		text="Прощай, Бен."
+		role="PLAYER"
+		scriptResult="TActivate('BadEndingBegin'); GetCurNpc():SetSpokenCount(5); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002431"
+		text="Что произошло?"
+		role="NPC"
+		scriptCondition="IsQuestComplete('r4m2_LisaDieBen') and GetCurNpc():GetSpokenCount() == 3"
+		nextReplies="Dlg_pl_002432" />
+
+	<Reply
+		name="Dlg_pl_002432"
+		text="Я... Я не знаю. Всё было хорошо, мы пытались найти зацепки о судьбе Айвена, а потом вдруг она просто потеряла сознание."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002433" />
+
+	<Reply
+		name="Dlg_npc_002433"
+		text="Ох, говорил же я, не стоило ей ехать в эту проклятую пустыню."
+		role="NPC"
+		nextReplies="Dlg_pl_002434" />
+
+	<Reply
+		name="Dlg_pl_002434"
+		text="Я могу как-нибудь помочь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002435" />
+
+	<Reply
+		name="Dlg_npc_002435"
+		text="Да. Поезжай в Мидгард и купи вот эти лекарства. Они должны ей помочь. Только поторопись!"
+		role="NPC"
+		nextReplies="Dlg_pl_002436" />
+
+	<Reply
+		name="Dlg_pl_002436"
+		text="Постараюсь как можно быстрее!"
+		role="PLAYER"
+		scriptResult="CompleteQuest('r4m2_LisaDieBen');  StopPlayingCustomMusic(); RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Lisa_P'); GetCurNpc():SetSpokenCount(4); EndConversation()" />
+<!--Root/r1m2/Сюжетные/Бен и Лиса/Первый приезд-->
+	<Reply
+		name="Ben_hellodlg0"
+		text="Чем могу помочь?"
+		role="NPC"
+		scriptCondition="(GetVar('FindBen').AsInt==2 or QuestStatus('d_FindHouseOfBen_Quest')==Q_COMPLETED) and GetCurNpc():GetSpokenCount() == 0"
+		scriptResult="getObj('MrShlyapa'):SetSpokenCount(1); SetTolerance(1100,1009,RS_NEUTRAL);"
+		nextReplies="Dlg_pl_xyz322 Dlg_pl_002622" />
+
+	<Reply
+		name="Dlg_pl_002622"
+		text="Простите, что побеспокоил, но я ищу одного человека... Бена... Бена Дросселя. Он исследователь и, как говорят, живёт тут где-то неподалёку..."
+		role="PLAYER"
+		scriptCondition="not(IsQuestComplete('d_FindHouseOfBen_Quest'))"
+		nextReplies="Dlg_npc_xyz324" />
+
+	<Reply
+		name="Dlg_pl_xyz322"
+		text="Вы Бен Дроссель?"
+		role="PLAYER"
+		scriptCondition="IsQuestComplete('d_FindHouseOfBen_Quest')"
+		nextReplies="Dlg_npc_xyz324" />
+
+	<Reply
+		name="Dlg_npc_xyz324"
+		text="Да, Бен Дроссель это я… У вас очень знакомый голос… Нет, не может этого быть! Айвен?! Ты?!"
+		role="NPC"
+		nextReplies="Dlg_pl_xyz325" />
+
+	<Reply
+		name="Dlg_pl_xyz325"
+		text="Простите, но я не знаю, о ком вы говорите. Моего отца… неродного отца… его убили. Перед смертью он передал мне этот диск и это письмо и наказал найти Вас. И вот теперь я стою перед Вами и не знаю, что мне делать дальше."
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz326" />
+
+	<Reply
+		name="Dlg_npc_xyz326"
+		text="Быть этого не может… Ты проходи, не стесняйся. А я сейчас подойду. Такие дела творятся! Мне нужно выпить. Будешь?"
+		role="NPC"
+		nextReplies="Dlg_pl_xyz327" />
+
+	<Reply
+		name="Dlg_pl_xyz327"
+		text="Отчего бы и нет. Ты упоминал какого-то Айвена. Кто это?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz328" />
+
+	<Reply
+		name="Dlg_npc_xyz328"
+		text="Сперва допей. Вот, так лучше. Айвен - это твой настоящий отец."
+		role="NPC"
+		nextReplies="Dlg_pl_xyz329" />
+
+	<Reply
+		name="Dlg_pl_xyz329"
+		text="Значит, это письмо написано им?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz330" />
+
+	<Reply
+		name="Dlg_npc_xyz330"
+		text="Да, это его почерк. "
+		role="NPC"
+		nextReplies="Dlg_pl_xyz331" />
+
+	<Reply
+		name="Dlg_pl_xyz331"
+		text="Подожди, а ты откуда знаешь всё это?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz332" />
+
+	<Reply
+		name="Dlg_npc_xyz332"
+		text="Мы с твоим отцом очень старые друзья. Когда-то давно мы с ним работали вместе в Мидгарде. Мы оба были исследователями, но Айвен достиг в этом деле куда больших высот, чем я. Понятное дело, у него же это в крови. И его отец, и его дед - они все работали не покладая рук, чтобы сделать этот мир лучше."
+		role="NPC"
+		nextReplies="Dlg_pl_xyz333" />
+
+	<Reply
+		name="Dlg_pl_xyz333"
+		text="Если они все были исследователями, то почему Айвен не оставил меня в Мидгарде? Почему он оставил меня у Петра в забытом богом селе на краю мира? Я хочу с ним поговорить. Ты знаешь, где он?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz334" />
+
+	<Reply
+		name="Dlg_npc_xyz334"
+		text="Нет. И никто не знает. Он пропал. Двадцать лет назад. "
+		role="NPC"
+		nextReplies="Dlg_pl_xyz335" />
+
+	<Reply
+		name="Dlg_pl_xyz335"
+		text="Двадцать лет назад… Немногим после моего рождения… Он тебе рассказывал что-нибудь перед тем, как исчезнуть?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz336" />
+
+	<Reply
+		name="Dlg_npc_xyz336"
+		text="Он говорил о своих исследованиях. О том, что наткнулся на что-то очень важное. Настолько важное, что это может в корне изменить наш мир. "
+		role="NPC"
+		nextReplies="Dlg_pl_xyz337" />
+
+	<Reply
+		name="Dlg_pl_xyz337"
+		text="Он не рассказывал, что конкретно он обнаружил?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz338" />
+
+	<Reply
+		name="Dlg_npc_xyz338"
+		text="Нет. Но именно это и повлияло на то, что он отвёз тебя на край света. Он сделал всё для того, чтобы ты никогда не узнал, куда он отправился. И поверь мне, не просто так. То, что он узнал, изменило его. Он буквально стал этим одержим. Он оставил тебя у Петра, после этого попрощался со мной, и больше никто его не видел."
+		role="NPC"
+		nextReplies="Dlg_pl_xyz339" />
+
+	<Reply
+		name="Dlg_pl_xyz339"
+		text="То есть ты не знаешь, куда он направился?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz340" />
+
+	<Reply
+		name="Dlg_npc_xyz340"
+		text="Нет. И я очень не хочу, чтобы ты пытался это выяснить. Если Айвен решил тебя огородить от всего этого, значит, на то была очень и очень веская причина. Готов ли ты, чтобы эта истина тебе открылась?"
+		role="NPC"
+		nextReplies="Dlg_pl_xyz341" />
+
+	<Reply
+		name="Dlg_pl_xyz341"
+		text="Бен, у меня теперь ничего нет. Буквально пару дней назад у меня были дом, занятие, друзья, девушка, которая мне нравится. И я в один момент потерял всё. Мне нужна цель. Смысл. То, ради чего мне стоит дальше жить. И ты сейчас мне говоришь, что нужно всё бросить и оставаться в стороне. Нет, так не пойдёт!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001740" />
+
+	<Reply
+		name="Dlg_npc_001740"
+		text="Другого ответа я и не ждал. Но я мало чем могу тебе помочь. Я ничего не знаю ни об исследованиях Айвена, ни о том, куда он мог отправиться."
+		role="NPC"
+		nextReplies="Dlg_pl_001741" />
+
+	<Reply
+		name="Dlg_pl_001741"
+		text="А в Мидгарде могут об этом знать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001742" />
+
+	<Reply
+		name="Dlg_npc_001742"
+		text="Вряд ли. Насколько я знаю, все свои поздние исследования Айвен проводил в своём доме, в Фатерлянде. Логичнее всего будет начать поиски оттуда."
+		role="NPC"
+		nextReplies="Dlg_pl_001743" />
+
+	<Reply
+		name="Dlg_pl_001743"
+		text="Спасибо огромное. И ещё: сначала я не принял это во внимание, но до того, как напали на мою деревню, я повстречал загадочную девушку на быстрой машине. Она искала предмет, по описанию очень похожий вот на этот диск. Говорила, что он поможет ей в поисках какого-то исследователя. Может ли такое быть, чтобы она говорила об Айвене? "
+		role="PLAYER"
+		nextReplies="Dlg_npc_001744" />
+
+	<Reply
+		name="Dlg_npc_001744"
+		text="Её звали Лиса?"
+		role="NPC"
+		nextReplies="Dlg_pl_001745" />
+
+	<Reply
+		name="Dlg_pl_001745"
+		text="Да, а ты откуда знаешь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001746" />
+
+	<Reply
+		name="Dlg_npc_001746"
+		text="Она моя дочь. Дочь, которая продолжает моё дело. Только я веду осёдлый образ жизни и восстанавливаю механизмы старого мира по книгам и документам, а она открывает новые технологии, путешествуя по миру. "
+		role="NPC"
+		nextReplies="Dlg_pl_001747" />
+
+	<Reply
+		name="Dlg_pl_001747"
+		text="Откуда она узнала об Айвене?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001748" />
+
+	<Reply
+		name="Dlg_npc_001748"
+		text="Когда она была ребёнком, я много ей про него рассказывал. Пару раз она даже видела его за работой и была очень этим восхищена. Не знаю, что конкретно послужило спусковым механизмом для того, чтобы она начала его поиски, но основа для этого была заложена ещё в детстве."
+		role="NPC"
+		nextReplies="Dlg_pl_001749" />
+
+	<Reply
+		name="Dlg_pl_001749"
+		text="Понятно. Если она с тобой свяжется, то расскажи ей, куда я отправился. Мне бы пригодился союзник в моих поисках."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001750" />
+
+	<Reply
+		name="Dlg_npc_001750"
+		text="Так и сделаю. А теперь давай сюда карту, я тебе покажу, где жил отец.|Вот. Спроси в этом городе. Там ещё должны его помнить."
+		role="NPC"
+		nextReplies="Dlg_pl_001751" />
+
+	<Reply
+		name="Dlg_pl_001751"
+		text="Отправляюсь немедленно. Теперь у меня появилась надежда."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TakeQuest('d_FindRealFatherRoom_Quest');  AddHistory(  'r1_After_Ben_00'  );  AddFadingMsgId( 'fm_history_got' );  StopPlayingCustomMusic();  EndConversation()" />
+<!--Root/r1m2/Сюжетные/Бен и Лиса/Когда Лиса украла диск-->
+	<Reply
+		name="Dlg_npc_002081"
+		text="О, ты уже вернулся? Тебе удалось найти Оракула? Он тебе рассказал, где следует искать Айвена?"
+		role="NPC"
+		scriptCondition="IsQuestComplete('LisaUBena') and not(IsQuestTaken('r1m3_ToLisaToAsgard')) and not(IsQuestComplete('r1m3_ToLisaToAsgard'))"
+		nextReplies="Dlg_pl_002082" />
+
+	<Reply
+		name="Dlg_pl_002082"
+		text="Бен, я бы очень рад поболтать и обсудить всё то, что со мной случилось, но сейчас я очень-очень спешу!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002093" />
+
+	<Reply
+		name="Dlg_npc_002093"
+		text="Хорошо, как я могу тебе помочь?"
+		role="NPC"
+		nextReplies="Dlg_pl_002094" />
+
+	<Reply
+		name="Dlg_pl_002094"
+		text="Лиса у тебя? Бен, если она у тебя, то скажи ей, что я не злюсь, мне просто нужен чёртов диск!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002095" />
+
+	<Reply
+		name="Dlg_npc_002095"
+		text="О, господи, что она натворила?!"
+		role="NPC"
+		nextReplies="Dlg_pl_002096" />
+
+	<Reply
+		name="Dlg_pl_002096"
+		text="Я нашёл второй диск Айвена и ехал с ним к Оракулу, но на полпути она украла его у меня!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002097" />
+
+	<Reply
+		name="Dlg_npc_002097"
+		text="Я так и знал, что она что-то задумала! Не стоило ей рассказывать про то, что ты отправился на поиски Айвена!"
+		role="NPC"
+		nextReplies="Dlg_pl_002098" />
+
+	<Reply
+		name="Dlg_pl_002098"
+		text="Не вини себя, я же сам попросил рассказать ей об этом. Но ты бы мог мне очень помочь. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_002099" />
+
+	<Reply
+		name="Dlg_npc_002099"
+		text="И как же?"
+		role="NPC"
+		nextReplies="Dlg_pl_002100" />
+
+	<Reply
+		name="Dlg_pl_002100"
+		text="Если Лиса не у тебя, то она где-то прячется. Я точно знаю, что она проехала через Пешт, но дальше её следы теряются."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002101" />
+
+	<Reply
+		name="Dlg_npc_002101"
+		text="Она могла отправиться в Либриум."
+		role="NPC"
+		nextReplies="Dlg_pl_002102" />
+
+	<Reply
+		name="Dlg_pl_002102"
+		text="Куда-куда?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002103" />
+
+	<Reply
+		name="Dlg_npc_002103"
+		text="В Либриум. Севернее Пешта есть город Асгард. Где-то рядом с ним есть тоннель через горы, который как раз ведёт в Либриум. Если она и могла куда-либо поехать, то только туда."
+		role="NPC"
+		nextReplies="Dlg_pl_002104" />
+
+	<Reply
+		name="Dlg_pl_002104"
+		text="Почему ты в этом так уверен?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002105" />
+
+	<Reply
+		name="Dlg_npc_002105"
+		text="Она провела там несколько лет, заимела много знакомств. Она даже рассказывала, что в неё влюбился какой-то местный диктатор."
+		role="NPC"
+		nextReplies="Dlg_pl_002106" />
+
+	<Reply
+		name="Dlg_pl_002106"
+		text="Как-то сомнительно всё это… |А есть другие места, где она может прятаться?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002107" />
+
+	<Reply
+		name="Dlg_npc_002107"
+		text="Если и есть, то я про них не знаю."
+		role="NPC"
+		nextReplies="Dlg_pl_002108" />
+
+	<Reply
+		name="Dlg_pl_002108"
+		text="В таком случае придётся искать этот тоннель…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002109" />
+
+	<Reply
+		name="Dlg_npc_002109"
+		text="Если я прав и ты действительно найдёшь её там, то, умоляю, не причиняй ей вреда. Просто забери диски! Если из-за того, что я тебе сейчас помог, моя девочка пострадает, то я себе этого не прощу!"
+		role="NPC"
+		nextReplies="Dlg_pl_002110" />
+
+	<Reply
+		name="Dlg_pl_002110"
+		text="Не переживай, я клянусь тебе, что только заберу диск и всё. Ещё раз спасибо! Когда-нибудь, когда всё это закончится, я заеду к тебе и расскажу обо всём, что я пережил за это время."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002111" />
+
+	<Reply
+		name="Dlg_npc_002111"
+		text="Надеюсь на это. И буду надеяться, что ты будешь с Айвеном. "
+		role="NPC"
+		nextReplies="Dlg_pl_002112" />
+
+	<Reply
+		name="Dlg_pl_002112"
+		text="И я тоже. Ну, я поехал! "
+		role="PLAYER"
+		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+<!--Root/r1m2/Сюжетные/Бен и Лиса/Перед зимой-->
 	<Reply
 		name="Dlg_npc_002604"
 		text="Как-то ты быстро управился. Мастер из Мидгарда принял заказ?"
@@ -17384,6 +17208,94 @@
 		text="Да, надо бы. Завтра начнётся новое приключение."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(3); StopPlayingCustomMusic(); TActivate('NextDayTr'); EndConversation()" />
+<!--Root/r1m2/Сюжетные/Бен и Лиса/После зимы-->
+	<Reply
+		name="Ben_hellodlg2"
+		text="Наконец-то вы вернулись!"
+		role="NPC"
+		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 1  "
+		nextReplies="Dlg_pl_000621" />
+
+	<Reply
+		name="Dlg_pl_000621"
+		text="Рад тебя видеть, Бен! Приключения выдались, конечно, те ещё, но они пока не закончены. Следующая цель - пересечь Пустыню Смерти."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000620" />
+
+	<Reply
+		name="Dlg_npc_000620"
+		text="Да, насчёт пустыни...|Может быть, не стоит? Я понимаю, что сейчас впервые за долгое время появились зацепки о местонахождении Айвена, но ведь вы собираетесь отправиться в земли, о которых абсолютно никто ничего не знает!"
+		role="NPC"
+		nextReplies="Dlg_pl_000622" />
+
+	<Reply
+		name="Dlg_pl_000622"
+		text="Мы? То есть Лиса тоже едет со мной?"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 2 ); StartConversation('Lisa');" />
+
+	<Reply
+		name="Ben_hellodlg3"
+		text="А что случилось в Воложе?"
+		role="NPC"
+		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 2 "
+		nextReplies="Dlg_pl_000653" />
+
+	<Reply
+		name="Dlg_pl_000653"
+		text="Да так, не обращай внимания. Наверное, это я всё излишне драматизирую."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000654" />
+
+	<Reply
+		name="Dlg_npc_000654"
+		text="Нет, я так просто не отстану! В конце концов, Лиса моя единственная дочь! Расскажи, что случилось."
+		role="NPC"
+		nextReplies="Dlg_pl_000655" />
+
+	<Reply
+		name="Dlg_pl_000655"
+		text="Бен, честно говоря, я сам не понял, что именно произошло. Пусть Лиса тебе обо всём расскажет, а я пока пойду отдохну перед поездкой."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 3 ); StartConversation('Lisa')" />
+
+	<Reply
+		name="Dlg_npc_002203"
+		text="Да, ещё как еду! А тебя что-то смущает?"
+		role="NPC"
+		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 0   "
+		nextReplies="Dlg_pl_002210" />
+
+	<Reply
+		name="Dlg_pl_002210"
+		text="Ну, я думал, что после того, что ты тогда ощутила в Воложе, ты захочешь немного отдохнуть."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002992" />
+
+	<Reply
+		name="Dlg_npc_002992"
+		text="Чушь! Я в полном порядке!"
+		role="NPC"
+		nextReplies="Dlg_pl_002993" />
+
+	<Reply
+		name="Dlg_pl_002993"
+		text="Ладно-ладно, как скажешь..."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); StartConversation('Ben')" />
+
+	<Reply
+		name="Dlg_npc_002211"
+		text="Эх, ну так уж и быть. Хоть я и сама до конца понятия не имею, что это было. Так вот, как только мы пересекли горы..."
+		role="NPC"
+		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 1 "
+		nextReplies="Dlg_pl_002212" />
+
+	<Reply
+		name="Dlg_pl_002212"
+		text="[Уйти отдыхать]."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('ZashitaGotova'); TActivate('trToMidgardForComposite'); EndConversation()" />
 <!--Root/r1m1/Сюжетные--><!--Root/r1m1/Опциональные--><!--Root/r1m1/Опциональные/Революционер-->
 	<Reply
 		name="CS_hellodlg0"
@@ -17833,7 +17745,7 @@
 
 	<Reply
 		name="Dlg_pl_001442"
-		text="Понял. И лучше бы это было правдой, потому что если ты меня обманул, то я вернусь."
+		text="Понял. И лучше бы это было правдой."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001445" />
 
@@ -17845,7 +17757,7 @@
 
 	<Reply
 		name="Dlg_pl_001446"
-		text="Клятвы меня не интересуют. Я тебя предупредил. Бывай!"
+		text="Ладно, бывай!"
 		role="PLAYER"
 		scriptResult="AddPlayerMoney( -250 );  GetCurNpc():SetSpokenCount(1);  TakeQuest( 'r1m1_Hospital_Quest' ); TakeQuest('r1m1_Botanik_Quest'); EndConversation()" />
 <!--Root/r1m1/Опциональные/Старый солдат-->
@@ -18715,125 +18627,6 @@
 		text="Прощай! Не знаю, увидимся ли мы когда-нибудь снова, но я всегда буду помнить родные места."
 		role="PLAYER"
 		scriptResult="CompleteQuest('BackToSouth_Quest'); TakeQuest('BenEast_Quest'); GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002546"
-		text="Парень, ты появился здесь как нельзя вовремя!"
-		role="NPC"
-		scriptCondition="IsQuestTaken('TalkToBarmenBeforeDesert') and not(IsQuestComplete('TalkToBarmenBeforeDesert'))"
-		scriptResult="TActivate('trZapretGluhoeStart')"
-		nextReplies="Dlg_pl_002547" />
-
-	<Reply
-		name="Dlg_pl_002547"
-		text="Что случилось? Почему все носятся как угорелые?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002568" />
-
-	<Reply
-		name="Dlg_npc_002568"
-		text="Поступили сведения от разведки, что бандиты собрали очень мощное вооружение и вот-вот собираются атаковать наш город."
-		role="NPC"
-		nextReplies="Dlg_pl_002569" />
-
-	<Reply
-		name="Dlg_pl_002569"
-		text="А разве доты не в состоянии защитить город в случае нападения?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002570" />
-
-	<Reply
-		name="Dlg_npc_002570"
-		text="Парень, ты не понимаешь, о вооружении какой мощности идёт речь. Если они смогут добраться до города, то собьют все доты за несколько минут."
-		role="NPC"
-		nextReplies="Dlg_pl_002571" />
-
-	<Reply
-		name="Dlg_pl_002571"
-		text="Да, тяжёлая ситуация. Но у тебя же есть план?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002572" />
-
-	<Reply
-		name="Dlg_npc_002572"
-		text="Да, есть. Нужен доброволец, который доставит материалы для постройки дотов две наши опорные точки, а после поможет нам отразить атаку бандитов. Пока что никто не осмеливается на такое - все боятся высунуть нос из города."
-		role="NPC"
-		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert');"
-		nextReplies="Dlg_pl_002574 Dlg_pl_002573" />
-
-	<Reply
-		name="Dlg_pl_002574"
-		text="Я готов сделать это. Я не могу допустить, чтобы на моих родных землях заправляли мерзкие бандиты!"
-		role="PLAYER"
-		scriptResult="TakeQuest('DefendSowth_Quest'); TActivate('Create_ConstructionPlace01'); SetWeather(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002573"
-		text="Что ж, надеюсь, кто-нибудь согласится. А мне пора. Удачи вам!"
-		role="PLAYER"
-		scriptResult="TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002549"
-		text="Воистину весь наш город благодарен тебе. После такой взбучки бандиты ещё очень долго не сунутся в наши края. Вот, прими это денежное вознаграждение, ты его заслужил!"
-		role="NPC"
-		scriptCondition="QuestStatus('DefendSowth_Quest5')==Q_TAKEN"
-		nextReplies="Dlg_pl_002550" />
-
-	<Reply
-		name="Dlg_pl_002550"
-		text="Спасибо, оно мне пригодится. Удачи вам."
-		role="PLAYER"
-		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); SetWeather(0); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003264"
-		text="О, а вот и ты! Помнишь меня?"
-		role="NPC"
-		scriptCondition="QuestStatus('FindBenMZ_Quest')==Q_COMPLETED and QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED and QuestStatus('TalkToBarmenBeforeDesert')~=Q_TAKEN and QuestStatus('DefendSowth_Quest')~=Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
-		nextReplies="Dlg_pl_003265" />
-
-	<Reply
-		name="Dlg_pl_003265"
-		text="Да, конечно помню. Вижу, ты решил последовать моему совету и податься в наши края."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003147" />
-
-	<Reply
-		name="Dlg_npc_003147"
-		text="Ну так а то! И ты не представляешь, какая это золотая жила! Я столько картошки никогда не видел, чуть ли не каждый день мотаюсь туда-сюда. И это всё твоя заслуга!"
-		role="NPC"
-		nextReplies="Dlg_pl_003148" />
-
-	<Reply
-		name="Dlg_pl_003148"
-		text="Главное, что ты сам доволен."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003149" />
-
-	<Reply
-		name="Dlg_npc_003149"
-		text="Доволен ещё как! Я столько денег за всю жизнь со Стрыгой не заработал, сколько здесь за пару поездок. Вот, держи, в качестве небольшой благодарности от меня."
-		role="NPC"
-		nextReplies="Dlg_pl_003150" />
-
-	<Reply
-		name="Dlg_pl_003150"
-		text="Право, не стоит."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003266" />
-
-	<Reply
-		name="Dlg_npc_003266"
-		text="Держи, говорю! Не стоит в дальний путь без оружия отправляться, а благодарить товарища за спасение жизни - дело чести."
-		role="NPC"
-		nextReplies="Dlg_pl_003267" />
-
-	<Reply
-		name="Dlg_pl_003267"
-		text="Спасибо. Ну, мне пора уже. Бывай!"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); AddPlayerMoney(5000); EndConversation()" />
 <!--Root/r1m1/Сюжетные/Лиса-->
 	<Reply
 		name="Lisa_hellodlg0"
@@ -19102,4 +18895,123 @@
 		text="Запрыгивай в машину. Сейчас проверим, что там за шум."
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'TalkToVasily' ); TDeactivate( 'triggerExitToMap41' ); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Vasily_P'); AddQuestItem('Vasily_P'); TActivate('SpawnAnalDestroyers'); EndConversation()" />
+<!--Root/r1m1/Сюжетные/Капитан Жуков-->
+	<Reply
+		name="Dlg_npc_002546"
+		text="Парень, ты появился здесь как нельзя вовремя!"
+		role="NPC"
+		scriptCondition="IsQuestTaken('TalkToBarmenBeforeDesert') and not(IsQuestComplete('TalkToBarmenBeforeDesert'))"
+		scriptResult="TActivate('trZapretGluhoeStart')"
+		nextReplies="Dlg_pl_002547" />
+
+	<Reply
+		name="Dlg_pl_002547"
+		text="Что случилось? Почему все носятся как угорелые?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002568" />
+
+	<Reply
+		name="Dlg_npc_002568"
+		text="Поступили сведения от разведки, что бандиты собрали очень мощное вооружение и вот-вот собираются атаковать наш город."
+		role="NPC"
+		nextReplies="Dlg_pl_002569" />
+
+	<Reply
+		name="Dlg_pl_002569"
+		text="А разве доты не в состоянии защитить город в случае нападения?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002570" />
+
+	<Reply
+		name="Dlg_npc_002570"
+		text="Парень, ты не понимаешь, о вооружении какой мощности идёт речь. Если они смогут добраться до города, то собьют все доты за несколько минут."
+		role="NPC"
+		nextReplies="Dlg_pl_002571" />
+
+	<Reply
+		name="Dlg_pl_002571"
+		text="Да, тяжёлая ситуация. Но у тебя же есть план?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002572" />
+
+	<Reply
+		name="Dlg_npc_002572"
+		text="Да, есть. Нужен доброволец, который доставит материалы для постройки дотов две наши опорные точки, а после поможет нам отразить атаку бандитов. Пока что никто не осмеливается на такое - все боятся высунуть нос из города."
+		role="NPC"
+		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert');"
+		nextReplies="Dlg_pl_002574 Dlg_pl_002573" />
+
+	<Reply
+		name="Dlg_pl_002574"
+		text="Я готов сделать это. Я не могу допустить, чтобы на моих родных землях заправляли мерзкие бандиты!"
+		role="PLAYER"
+		scriptResult="TakeQuest('DefendSowth_Quest'); TActivate('Create_ConstructionPlace01'); SetWeather(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_002573"
+		text="Что ж, надеюсь, кто-нибудь согласится. А мне пора. Удачи вам!"
+		role="PLAYER"
+		scriptResult="TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002549"
+		text="Воистину весь наш город благодарен тебе. После такой взбучки бандиты ещё очень долго не сунутся в наши края. Вот, прими это денежное вознаграждение, ты его заслужил!"
+		role="NPC"
+		scriptCondition="QuestStatus('DefendSowth_Quest5')==Q_TAKEN"
+		nextReplies="Dlg_pl_002550" />
+
+	<Reply
+		name="Dlg_pl_002550"
+		text="Спасибо, оно мне пригодится. Удачи вам."
+		role="PLAYER"
+		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); SetWeather(0); EndConversation()" />
+<!--Root/r1m1/Сюжетные/Караванщик Мадс-->
+	<Reply
+		name="Dlg_npc_003264"
+		text="О, а вот и ты! Помнишь меня?"
+		role="NPC"
+		scriptCondition="QuestStatus('FindBenMZ_Quest')==Q_COMPLETED and QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED and QuestStatus('TalkToBarmenBeforeDesert')~=Q_TAKEN and QuestStatus('DefendSowth_Quest')~=Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_003265" />
+
+	<Reply
+		name="Dlg_pl_003265"
+		text="Да, конечно помню. Вижу, ты решил последовать моему совету и податься в наши края."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003147" />
+
+	<Reply
+		name="Dlg_npc_003147"
+		text="Ну так а то! И ты не представляешь, какая это золотая жила! Я столько картошки никогда не видел, чуть ли не каждый день мотаюсь туда-сюда. И это всё твоя заслуга!"
+		role="NPC"
+		nextReplies="Dlg_pl_003148" />
+
+	<Reply
+		name="Dlg_pl_003148"
+		text="Главное, что ты сам доволен."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003149" />
+
+	<Reply
+		name="Dlg_npc_003149"
+		text="Доволен ещё как! Я столько денег за всю жизнь со Стрыгой не заработал, сколько здесь за пару поездок. Вот, держи, в качестве небольшой благодарности от меня."
+		role="NPC"
+		nextReplies="Dlg_pl_003150" />
+
+	<Reply
+		name="Dlg_pl_003150"
+		text="Право, не стоит."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003266" />
+
+	<Reply
+		name="Dlg_npc_003266"
+		text="Держи, говорю! Не стоит в дальний путь без оружия отправляться, а благодарить товарища за спасение жизни - дело чести."
+		role="NPC"
+		nextReplies="Dlg_pl_003267" />
+
+	<Reply
+		name="Dlg_pl_003267"
+		text="Спасибо. Ну, мне пора уже. Бывай!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); AddPlayerMoney(5000); EndConversation()" />
 </DialogsResource>

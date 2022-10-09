@@ -7,30 +7,6 @@
 	</Path>
 
 	<Path
-		Name="EnterToGaragePath">
-		<Point
-			coord="2756.700 2104.986" />
-
-		<Point
-			coord="2769.620 2089.551" />
-
-		<Point
-			coord="2785.260 2079.247" />
-	</Path>
-
-	<Path
-		Name="ExitTo31Ok">
-		<Point
-			coord="2938.372 201.092" />
-
-		<Point
-			coord="3017.991 227.605" />
-
-		<Point
-			coord="3073.802 249.268" />
-	</Path>
-
-	<Path
 		Name="ExitToGaragePath">
 		<Point
 			coord="2754.056 2112.963" />
@@ -859,15 +835,6 @@
 
 		<Point
 			coord="1278.767 2816.826" />
-	</Path>
-
-	<Path
-		Name="OracleDef_PlayerPath">
-		<Point
-			coord="1353.621 2808.379" />
-
-		<Point
-			coord="1317.303 2816.654" />
 	</Path>
 
 	<Path

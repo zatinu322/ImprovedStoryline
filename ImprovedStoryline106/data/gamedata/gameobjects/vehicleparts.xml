@@ -4003,41 +4003,6 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 					MaxAmount	= "3" />                
 			</GadgetDescription>
 		</Prototype>
-
-		<Prototype
-			Class				= "Cabin"
-			Name				= "arcadeBelazCab01"
-			ModelFile			= "belazCab05"
-			ResourceType		= "BELAZ_CABIN"
-			NodeScale			= "1 1 1"
-			CanBeUsedInAutogenerating  =  "0"
-			Mass				= "30.0"
-			Durability			= "200"
-			DurCoeffsForDamageTypes		= "20 20 20"
-			MaxPower					= "120"
-			MaxTorque					= "700"
-			MaxSpeed					= "2000.0"
-			Price						= "1500"
-			BlowEffect					= "ET_PS_VEH_PART_BLOW_BIG_CAB"
-
-			LoadPoints					= "LP_GIANT01 LP_BIG01"
-
-			VisibleInEncyclopedia		= "false">
-
-			<GadgetDescription>
-				<Slot
-					ResourceType	= "GADGET_COMMON"
-					MaxAmount	= "4" />
-
-				<Slot
-					ResourceType	= "GADGET_WEAPON"
-					MaxAmount	= "3" />         
-				<Slot
-					ResourceType	= "GADGET_ENGINE" 
-					MaxAmount	= "2" />         
-			</GadgetDescription>
-		</Prototype>
-		
 		
 		<Prototype
 			Class			= "Wheel"

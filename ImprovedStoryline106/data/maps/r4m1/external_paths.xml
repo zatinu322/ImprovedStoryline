@@ -4312,36 +4312,6 @@
 	</Path>
 
 	<Path
-		Name="ZalozhPath">
-		<Point
-			coord="3700.668 5358.087" />
-
-		<Point
-			coord="3664.791 5414.654" />
-	</Path>
-
-	<Path
-		Name="ZalozhPath2">
-		<Point
-			coord="3700.668 5358.087" />
-
-		<Point
-			coord="3664.791 5414.654" />
-	</Path>
-
-	<Path
-		Name="ZalozhPath3">
-		<Point
-			coord="1994.005 6256.135" />
-	</Path>
-
-	<Path
-		Name="ZalozhPath4">
-		<Point
-			coord="1881.169 6166.396" />
-	</Path>
-
-	<Path
 		Name="ZapravkaIn">
 		<Point
 			coord="6572.536 3544.081" />
@@ -4387,21 +4357,6 @@
 
 		<Point
 			coord="4155.821 6110.994" />
-	</Path>
-
-	<Path
-		Name="molokovozPath1">
-		<Point
-			coord="6434.140 5082.754" />
-
-		<Point
-			coord="6394.332 5082.270" />
-
-		<Point
-			coord="6320.844 5084.410" />
-
-		<Point
-			coord="6286.518 5069.552" />
 	</Path>
 
 	<Path

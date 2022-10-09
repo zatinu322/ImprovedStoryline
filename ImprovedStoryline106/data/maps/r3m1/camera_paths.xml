@@ -1,33 +1,8 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
-	<Path	Name="trtestPath">
-
-		<Point  coord="2 2 -33"
-				zoom="1.000"/>
-
-		<Point  coord="50 17 -7"
-				zoom="1.000"/>
-	</Path>
-
-	<Path	Name="factoryGoAway">
-		<Point
-			coord="0 10 -50"
-			rotation="0.0 0.0 0.0 0.0"
-			zoom="1.000" />
-		<Point
-			coord="0 10 -50"
-			rotation="0.0 0.0 0.0 0.0"
-			zoom="1.000" />
-	</Path>
-
 	<Path	Name="PostFist_cam01">
 		<Point  coord="3501.405 253.261 1501.223" rotation="-0.006 0.937 -0.017 0.349"/>
 		<Point  coord="3494.718 252.844 1491.214" rotation="-0.010 0.930 -0.025 0.365"/>
-	</Path>
-
-	<Path	Name="PostFist_cam02">
-		<Point
-			coord="0 2 -30" />
 	</Path>
 
 	<Path Name = "linkedcam">
@@ -97,14 +72,7 @@
 			<Point  coord="1784.917 263.560 960.931" rotation="0.005 0.939 0.013 0.343"/>
 			<Point  coord="1745.402 261.809 933.815" rotation="0.021 0.815 0.030 0.578"/>
 			<Point  coord="1656.767 265.484 908.503" rotation="-0.023 0.760 -0.027 0.649"/>
-			<!-- <Point  coord="1497.361 265.454 888.848" rotation="-0.038 0.761 -0.045 0.646"/> -->
-			<!-- <Point  coord="1523.213 266.821 867.022" rotation="0.005 0.698 0.005 0.716"/> -->
 			<Point  coord="1523.213 266.821 867.022" rotation="0.005 0.704 0.005 0.710"/>
-	</Path>
-
-	<Path	Name="RescuePeople_cam03">
-			<Point  coord="1497.361 265.454 888.848" rotation="-0.038 0.761 -0.045 0.646"/>
-			<Point  coord="1498.172 265.454 872.658" rotation="-0.055 0.610 -0.043 0.789"/>
 	</Path>
 
 	<Path	Name="ToGoInSet_cam01">
@@ -142,11 +110,6 @@
 			<Point  coord="3899.755 252.776 1957.452" rotation="0.008 0.951 -0.025 -0.308"/>
 	</Path>
 
-	<Path	Name="ToSailSubmarine_cam03">
-			<Point  coord="3931.248 261.658 1919.003" rotation="-0.511 0.453 -0.367 0.632" speed="1"/>
-			<Point  coord="3930.487 257.159 1919.232" rotation="0.009 0.576 0.007 0.818" speed="2"/>
-	</Path>
-
 	<Path	Name="SubmMove1">
 			<Point  coord="4010.692 200.000 1890.384" rotation="-0.006 -0.592 -0.001 0.806"/>
 			<Point  coord="4013.202 245.000 1890.942" rotation="-0.006 -0.592 -0.001 0.806"/>
@@ -173,24 +136,8 @@
 			<Point  coord="897.819 290.398 1015.211" rotation="-0.007 0.955 -0.024 0.295"/>
 	</Path>
 
-	<Path	Name="MoveFromR2M1_cam05">
-			<Point  coord="895.711 290.218 1007.042" rotation="-0.013 0.038 -0.000 0.999"/>
-			<Point  coord="897.035 290.218 1007.341" rotation="-0.013 0.230 -0.003 0.973"/>
-	</Path>
-
 	<Path	Name="MoveFromR2M1_cam06">
 			<Point  coord="915.205 295.426 1007.212" rotation="-0.096 0.638 -0.081 0.760"/>
 			<Point  coord="912.372 294.685 1007.712" rotation="-0.096 0.638 -0.081 0.760"/>
 	</Path>
-
-	<Path	Name="Ending4">
-			<Point  coord="1351.987 267.334 499.424" rotation="-0.003 -0.270 0.001 0.963"/>
-			<Point  coord="1351.987 267.334 499.424" rotation="-0.000 -0.419 0.000 0.908"/>
-	</Path>
-
-	<Path	Name="SkripRob_cam">
-			<Point  coord="2896.876 334.373 2679.506" rotation="-0.053 -0.365 0.021 0.929"/>
-			<Point  coord="2968.250 331.105 2662.551" rotation="-0.054 -0.197 0.011 0.979"/>
-	</Path>
-
 </Paths>

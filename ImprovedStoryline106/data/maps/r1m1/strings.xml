@@ -191,34 +191,6 @@
 		time="8" />
 
 	<string
-		id="1141"
-		modelName="mask_hero"
-		value="О нет! Отец! Что за чудовище могло сотворить такое... Все, кого я любил и знал, мертвы ... "
-		sound="data\sounds\Speech\r1m1\r1m1_1141_hero.ogg"
-		time="11" />
-
-	<string
-		id="1142"
-		modelName="mask_hero"
-		value="..."
-		sound="data\sounds\Speech\r1m1\r1m1_1142_hero.ogg"
-		time="1" />
-
-	<string
-		id="1143"
-		modelName="mask_hero"
-		value="Я могу сделать для них только одно: отомстить! Как бы далеко ни прятался убийца, я найду его даже на краю земли! И уничтожу! Слышишь, я найду тебя!"
-		sound="data\sounds\Speech\r1m1\r1m1_1143_hero.ogg"
-		time="13" />
-
-	<string
-		id="1144"
-		modelName="mask_hero"
-		value="А вдруг это Феликс собрал дружков и напал на беззащитную деревню? Если это так, ему не жить! Он бывает в баре Южного. Там и начну поиски."
-		sound="data\sounds\Speech\r1m1\r1m1_1144_hero.ogg"
-		time="11" />
-
-	<string
 		id="1151"
 		modelName="mask_hero"
 		value="Я отомщу за смерть отца! "
@@ -419,11 +391,6 @@
 		time="22" />
 
 	<string
-		id="8800"
-		value="Вы играете в первый раз. Хотите ли вы, чтобы обучающие сообщения объяснили вам, как играть?"
-		numButtons="2" />
-
-	<string
 		id="8801"
 		value="Вы желаете покинуть эту область?"
 		numButtons="2" />
@@ -564,13 +531,6 @@
 	<string
 		id="13"
 		value="|@FF000000АААААААААААА@FFFFA600Ex Machina / Hard Truck Apocalypse@FF000000АААААААААААА||@FF000000АААААIАААААAIАААА@FFFFFFFFImproved Storyline v1.0.6"
-		sound=""
-		fontSize="12"
-		time="6" />
-
-	<string
-		id="14"
-		value="||@FF000000ААААААААААААААААААААА@FFFFFFFFНа следующий день@FF000000ААААААААААААААААААААА"
 		sound=""
 		fontSize="12"
 		time="6" />

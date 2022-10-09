@@ -1042,11 +1042,6 @@
 		value="Расхититель" />
 
 	<Item
-		id="CruiserTest02"
-		locForm="0"
-		value="Крейсер" />
-
-	<Item
 		id="DozerEnemySpawn"
 		locForm="0"
 		value="Бульдозер" />
@@ -1132,16 +1127,6 @@
 		value="Бандит" />
 
 	<Item
-		id="Mirotvorec01"
-		locForm="0"
-		value="Миротворец" />
-
-	<Item
-		id="ArcadeBelaz"
-		locForm="0"
-		value="Белаз Спринт" />
-
-	<Item
 		id="DemoBandit"
 		locForm="0"
 		value="Скаут" />
@@ -1152,42 +1137,12 @@
 		value="Лиса" />
 
 	<Item
-		id="DemoFighter1"
-		locForm="0"
-		value="Боец" />
-
-	<Item
 		id="DemoHunter1"
 		locForm="0"
 		value="Охотник" />
 
 	<Item
-		id="DemoHunter2"
-		locForm="0"
-		value="Охотник" />
-
-	<Item
-		id="DemoBug1"
-		locForm="0"
-		value="Вэн" />
-
-	<Item
-		id="DemoBug2"
-		locForm="0"
-		value="Вэн" />
-
-	<Item
-		id="DemoBug3"
-		locForm="0"
-		value="Вэн" />
-
-	<Item
 		id="DemoMolokovoz1"
-		locForm="0"
-		value="Молоковоз" />
-
-	<Item
-		id="DemoMolokovoz2"
 		locForm="0"
 		value="Молоковоз" />
 
@@ -1200,41 +1155,6 @@
 		id="DemoUral1"
 		locForm="0"
 		value="Урал" />
-
-	<Item
-		id="DemoUral2"
-		locForm="0"
-		value="Урал" />
-
-	<Item
-		id="DemoUral3"
-		locForm="0"
-		value="Урал" />
-
-	<Item
-		id="DemoBelaz1"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="DemoBelaz2"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="DemoBelaz3"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="DemoMirotvorec1"
-		locForm="0"
-		value="Миротворец" />
-
-	<Item
-		id="DemoMirotvorec2"
-		locForm="0"
-		value="Миротворец" />
 
 	<Item
 		id="DemoMirotvorec3"
@@ -1255,11 +1175,6 @@
 		id="BelazTest"
 		locForm="0"
 		value="Белаз" />
-
-	<Item
-		id="MolokovozTest"
-		locForm="0"
-		value="Молоковоз" />
 
 	<Item
 		id="Sml101"
@@ -1307,41 +1222,6 @@
 		value="Миротворец" />
 
 	<Item
-		id="mirotvorecTest1"
-		locForm="0"
-		value="Миротворец" />
-
-	<Item
-		id="BugTest1"
-		locForm="0"
-		value="Вэн" />
-
-	<Item
-		id="BelazTest01"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="BelazTest02"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="BelazTest03"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="BelazTest04"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
-		id="BelazTest05"
-		locForm="0"
-		value="Белаз" />
-
-	<Item
 		id="BelazShot"
 		locForm="0"
 		value="Белаз" />
@@ -1381,11 +1261,6 @@
 		id="r1m3_Fighter02"
 		locForm="0"
 		value="Боец" />
-
-	<Item
-		id="r1m3_Sml101"
-		locForm="0"
-		value="Клоп" />
 
 	<Item
 		id="r1m3_molokovoz03"
@@ -1491,46 +1366,6 @@
 		id="heavy_dot4_rapier"
 		locForm="0"
 		value="Дот" />
-
-	<Item
-		id="PublicDemoBug01"
-		locForm="0"
-		value="Машина Старика" />
-
-	<Item
-		id="PublicDemoSinks"
-		locForm="0"
-		value="Бродяга Синкс" />
-
-	<Item
-		id="PublicDemoBandit1"
-		locForm="0"
-		value="Убийца" />
-
-	<Item
-		id="PublicDemoBandit2"
-		locForm="0"
-		value="Мародер" />
-
-	<Item
-		id="PublicDemoFighter"
-		locForm="0"
-		value="Главарь банды" />
-
-	<Item
-		id="PublicDemoIeriBand1"
-		locForm="0"
-		value="Защитник Иери" />
-
-	<Item
-		id="PublicDemoIeriBand2"
-		locForm="0"
-		value="Защитник Иери" />
-
-	<Item
-		id="PublicDemoIeriCar"
-		locForm="0"
-		value="Иери" />
 
 	<Item
 		id="r1m2_CaravanBug01"
@@ -1663,11 +1498,6 @@
 		value="Транспорт" />
 
 	<Item
-		id="r2m2_ShamanHunter02"
-		locForm="0"
-		value="Сектант" />
-
-	<Item
 		id="r2m2_ShamanHunter01"
 		locForm="0"
 		value="Сектант" />
@@ -1763,21 +1593,6 @@
 		value="Дрон" />
 
 	<Item
-		id="r2m1_HunterNarcBoss"
-		locForm="0"
-		value="Босс мафии" />
-
-	<Item
-		id="r2m1_HunterNarcCaravan"
-		locForm="0"
-		value="Курьер" />
-
-	<Item
-		id="r2m1_FighterNarcCaravan"
-		locForm="0"
-		value="Курьер" />
-
-	<Item
 		id="r2m1_Hunter02"
 		locForm="0"
 		value="Охотник" />
@@ -1786,16 +1601,6 @@
 		id="r2m1_Hunter01"
 		locForm="0"
 		value="Охотник" />
-
-	<Item
-		id="r2m1_FighterGulik"
-		locForm="0"
-		value="Жулик" />
-
-	<Item
-		id="r2m1_Fighter02"
-		locForm="0"
-		value="Боец" />
 
 	<Item
 		id="r2m1_Fighter01"
@@ -1851,11 +1656,6 @@
 		id="Cruiser02"
 		locForm="0"
 		value="Крейсер" />
-
-	<Item
-		id="Fighter03"
-		locForm="0"
-		value="Боец" />
 
 	<Item
 		id="r1m3_hunter02"
@@ -1974,11 +1774,6 @@
 
 	<Item
 		id="Bug"
-		locForm="0"
-		value="Транспорт" />
-
-	<Item
-		id="Bug_02"
 		locForm="0"
 		value="Транспорт" />
 

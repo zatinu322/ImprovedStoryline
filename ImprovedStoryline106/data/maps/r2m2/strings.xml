@@ -99,40 +99,11 @@
 		time="8" />
 
 	<string
-		id="24"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m2\r2m2_24_hero.ogg"
-		value="Вот он - момент истины! "
-		time="4" />
-
-	<string
 		id="11"
 		modelName="mask_axel"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_11_axel.ogg"
 		value="АКСЕЛЬ|Стой, не стреляй! Что тебе нужно от меня? Ты даже не местный."
-		time="4" />
-
-	<string
-		id="12"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m2\r2m2_12_hero.ogg"
-		value="Помнишь, как ты отправил людей совершить рейд на соседний регион? Тогда вы сожгли дотла мое родное село и убили моего отца!"
-		time="8" />
-
-	<string
-		id="13"
-		modelName="mask_axel"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m2\r2m2_13_axel.ogg"
-		value="АКСЕЛЬ|И ты поверил досужим россказням? Кто тебе наплел эту чушь? "
-		time="4" />
-
-	<string
-		id="14"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m2\r2m2_14_hero.ogg"
-		value="Та, кто видела все своими глазами."
 		time="4" />
 
 	<string
@@ -147,61 +118,8 @@
 		id="16"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m2\r2m2_16_hero.ogg"
-		value="Да. Ты ее весьма точно описал."
+		value="Да. Ты её весьма точно описал."
 		time="3" />
-
-	<string
-		id="17"
-		modelName="mask_axel"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m2\r2m2_17_axel.ogg"
-		value="АКСЕЛЬ|Это была Лиса, я знаю. У нее вместо языка змеиное жало. Своей ложью она уже отравила жизнь мне и многим другим. А вот теперь и ты попался на удочку."
-		time="8" />
-
-	<string
-		id="18"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m2\r2m2_18_hero.ogg"
-		value="Ты готов сейчас сказать что угодно, чтобы спасти свою шкуру!"
-		time="4" />
-
-	<string
-		id="19"
-		modelName="mask_axel"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m2\r2m2_19_axel.ogg"
-		value="АКСЕЛЬ|Она пришла ко мне в поисках защиты от врагов, так она сказала. Я принял ее в свой дом, а она обокрала меня и сбежала. Я доверял ей... Я..."
-		time="8" />
-
-	<string
-		id="20"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m2\r2m2_20_hero.ogg"
-		value="Ты хочешь сказать, что невиновен? "
-		time="4" />
-
-	<string
-		id="21"
-		modelName="mask_axel"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m2\r2m2_21_axel.ogg"
-		value="АКСЕЛЬ|Поверь, мне хватает проблем и в своей стране, чтобы конфликтовать еще и с восточными соседями. Уже много месяцев мои люди не покидали своих позиций и никогда не атаковали твоих деревень."
-		time="8" />
-
-	<string
-		id="22"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m2\r2m2_22_hero.ogg"
-		value="Не могу поверить, что попался на ее удочку! Но это не извиняет тебя. Пусть ты и невиновен в одном преступлении, но зато совершил множество других. Что скажешь ты замученным тобою людям, сможешь ли вернуть им их близких? От твоих слов зависит твоя жизнь."
-		time="12" />
-
-	<string
-		id="23"
-		modelName="mask_axel"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m2\r2m2_23_axel.ogg"
-		value="АКСЕЛЬ|Я скажу, что спас свой народ от голодной смерти! Скажу, что крепкая власть - вот что спасет мир от полной деградации. Я взял на себя грехи целой страны и готов за них ответить. Я помню имена всех павших воинов и скорблю о них. Жалею только об одном: что теперь их смерть станет бессмысленной."
-		time="12" />
 
 	<string
 		id="25"
@@ -475,13 +393,6 @@
 		id="8801"
 		value="Вы желаете покинуть эту область?"
 		numButtons="2" />
-
-	<string
-		id="8802"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
-		value="Я не знаю, куда ведет эта дорога, поэтому останусь здесь."
-		time="3" />
 
 	<string
 		id="8803"

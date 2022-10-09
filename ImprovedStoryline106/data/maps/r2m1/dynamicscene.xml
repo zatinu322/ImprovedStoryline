@@ -139,14 +139,6 @@
 
 	<Object
 		Flags="21"
-		Name="RIP"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="4480.774 233.254 4863.758"
-		Radius="31.706" />
-
-	<Object
-		Flags="21"
 		Name="ALIENSLoc"
 		Belong="1100"
 		Prototype="genericLocation"

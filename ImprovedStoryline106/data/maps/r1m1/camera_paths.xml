@@ -28,10 +28,6 @@
 		<Point  coord="3344.738 370.324 3303.042" rotation="-0.113 0.285 -0.034 0.951"/>   
 		<Point  coord="3344.638 370.324 3302.942" rotation="-0.113 0.286 -0.035 0.952"/>   
 	</Path>
-	<Path Name = "start_rolik7">
-		<Point  coord="3344.738 370.324 3303.042" rotation="-0.113 0.285 -0.034 0.951"/>   
-		<Point  coord="3344.750 369.521 3303.303" rotation="0.080 0.657 0.070 0.746"/>   
-	</Path>
 	<Path Name = "start_rolik8">
 		<Point  coord="3344.628 369.596 3305.261" rotation="0.030 0.924 0.074 0.375"/>  
 		<Point  coord="3348.161 369.948 3308.872" rotation="-0.006 0.925 -0.015 0.378"/> 
@@ -43,76 +39,9 @@
 		zoom ="1" />
 	</Path>
 
-
-
-	<Path Name = "begin">
-		<Point  coord="3368 387 3008" rotation="-0.265 -0.146 0.041 0.952"/>   
-		<Point  coord="3391 383 3036" rotation="-0.034 0.162 -0.006 0.986"/>   
-		<Point  coord="3373 381 3077" rotation="-0.028 0.188 -0.005 0.982"/>
-		<Point  coord="3327 376 3250" rotation="-0.098 -0.124 0.012 0.987"/>   
-		<Point  coord="3303 385 3328" rotation="0.094 0.879 -0.195 -0.425"/>   
-		<Point  coord="3389 389 3285" rotation="-0.207 0.583 -0.157 0.770"/>
-		<Point  coord="3389 389 3285" rotation="-0.207 0.583 -0.157 0.770"/>   
-	</Path>
-
-	<Path Name = "flylisa1">
-		<Point  coord="2084 308 3582" rotation="1.3  0.3 0 0"/> 
-	</Path>
-
-	<Path Name = "flylisa2">
-		<Point  coord="970 322 3664" rotation="0.5 0.1 0 0"/>   
-	</Path>
-
-	<Path Name = "flylisa3">
-		<Point  coord="654 308 2747" rotation="2.7 0.1 0 0"/>   
-	</Path>
-
-	<Path Name = "flyfelix1">
-		<Point  coord="2910 359 740" rotation="2.4 0.2 0 0"/>   
-	</Path>
-
-	<Path Name = "flyfelix2">
-		<Point  coord="1192 322 2351" rotation="2.6 0.2 0 0"/>   
-	</Path>
-
-	<Path Name = "flyfather">
-		<Point  coord="653 320 809" rotation="2.5 0.05 0 0"/>  
-	</Path>
-
-
-	<Path Name = "waterbeautyfull">
-		<Point  coord="1294.880 331.017 1618.440" rotation="-0.126 0.636 -0.106 0.754"/> 
- 		<Point  coord="1269.359 331.017 1452.288" rotation="-0.120 0.636 -0.101 0.755"/> 
-	</Path>
-
 	<Path Name = "cam01">
 		<Point  coord="2944.139 333.339 2370.245" rotation="0.073 0.832 0.113 0.538"/>
 		<Point  coord="2950.096 334.628 2381.249" rotation="0.007 0.932 0.018 0.363"/>
-	</Path>
-
-
-	<Path Name = "cam011">
-		<Point  coord="-12.000 2.000 -15.000"	 rotation="-0.023 -0.433 0.011 0.901"/>
-		<Point  coord="-32.000 5.000 -35.000"	 rotation="-0.023 -0.433 0.011 0.901"/>
-	</Path>
-
-	<Path Name = "Lisassscam011">
-		<Point  coord="1296.969 306.799 2823.738" rotation="-0.061 0.478 -0.033 0.875"/>
-		<Point  coord="1248.526 308.580 2847.534" rotation="-0.128 0.361 -0.050 0.923"/>
-		<Point  coord="1179.376 311.301 2877.967" rotation="-0.049 -0.158 0.008 0.986"/>
-		<Point  coord="1182.600 311.019 2918.999" rotation="-0.066 -0.083 0.005 0.994"/>
-	</Path>
-
-	<Path Name = "Sity_cam01">
-		<Point  coord="25.000 1.000 30.000"	 rotation="0.005 0.916 0.012 0.401"/>
-		<Point  coord="14.000 6.000 -7.000"	 rotation="-0.049 0.540 -0.032 0.839"/>
-		<Point  coord="35.000 15.000 -27.000"	 rotation="-0.049 0.540 -0.032 0.839"/>
-		<Point  coord="55.000 25.000 -47.000"	 rotation="-0.018 0.509 -0.011 0.860"/>
-	</Path>
-
-	<Path Name = "Sity_cam02">
-		<Point  coord="1230.821 333.356 3100.142" rotation="0.013 0.930 -0.033 -0.366"/>
-		<Point  coord="1372.290 344.591 3044.915" rotation="-0.044 0.889 -0.088 0.447"/>
 	</Path>
 
 	<Path Name = "lisa_cam01">
@@ -123,10 +52,6 @@
 	<Path Name = "lisa_cam02">
 		<Point  coord="-9.757 4.154 0.000"/>
 		<Point  coord="-15.00 6.000 0.000"/>
-	</Path>
-
-	<Path Name = "lisa_cam03">
-		<Point  coord="-15.00 6.000 0.000"	  rotation="-0.059 -0.216 0.013 0.974"/>
 	</Path>
 
 	<Path Name = "lisa1_cam01">
@@ -172,7 +97,6 @@
 	<Path Name = "lisa5_cam01">
 		<Point  coord="1989.807 302.758 842.544" rotation="0.008 0.696 0.008 0.718"/>
 		<Point  coord="1989.761 302.758 841.095" rotation="0.008 0.692 0.008 0.722"/>
-<!--		<Point  coord="10.054 3.223 10.540"/>  -->
 	</Path>
 
 	<Path Name = "lisa5_cam02">
@@ -444,20 +368,6 @@
 		<Point  coord="1198.445 316.301 2707.351" rotation="-0.133 -0.399 0.058 0.905"/>
 		<Point  coord="1145.808 316.301 2800.191" rotation="-0.053 -0.684 0.050 0.726"/>
 		<Point  coord="1160.251 316.301 2892.039" rotation="-0.042 -0.848 0.068 0.525"/>
-	</Path>
-
-	<Path Name = "NewDay">
-		<Point  coord="1167.189 342.915 3003.012" rotation="-0.102 -0.823 0.156 0.536"/>
-		<Point  coord="1154.792 342.915 2939.576" rotation="-0.150 -0.557 0.103 0.811"/>
-	</Path>
-
-	<Path Name = "Narrators">
-		<Point  coord="3082.304 354.818 1179.762" rotation="-0.083 -0.502 0.049 0.859"/>
-		<Point  coord="3118.518 354.818 1120.358" rotation="-0.103 -0.232 0.025 0.967"/>
-		<Point  coord="3212.896 354.818 1108.726" rotation="-0.092 0.075 -0.007 0.993"/>
-		<Point  coord="3290.750 379.212 1103.150" rotation="-0.139 0.291 -0.043 0.946"/>
-		<Point  coord="3373.255 418.518 1212.333" rotation="-0.167 0.611 -0.134 0.762"/>
-		<Point  coord="3345.694 418.518 1375.326" rotation="-0.101 0.874 -0.205 0.430"/>
 	</Path>
 
 	<Path Name = "AivenRolik_linkedcam">

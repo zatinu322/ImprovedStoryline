@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
-		Name="ArmiaPath1">
-		<Point
-			coord="5991.917 1844.081" />
-
-		<Point
-			coord="5891.651 1687.373" />
-
-		<Point
-			coord="5838.706 1433.858" />
-	</Path>
-
-	<Path
-		Name="ArmiaPath2">
-		<Point
-			coord="5986.338 1358.127" />
-
-		<Point
-			coord="6094.208 1281.166" />
-
-		<Point
-			coord="6135.823 1127.228" />
-
-		<Point
-			coord="6373.390 1104.185" />
-
-		<Point
-			coord="6564.579 1204.707" />
-
-		<Point
-			coord="6819.360 1165.996" />
-
-		<Point
-			coord="6925.244 1121.188" />
-	</Path>
-
-	<Path
 		Name="BrigadaBridgePath">
 		<Point
 			coord="5456.823 1423.743" />
@@ -1345,12 +1309,6 @@
 		Name="player_path02">
 		<Point
 			coord="6145.027 7690.015" />
-	</Path>
-
-	<Path
-		Name="player_path03">
-		<Point
-			coord="2911.810 952.971" />
 	</Path>
 
 	<Path

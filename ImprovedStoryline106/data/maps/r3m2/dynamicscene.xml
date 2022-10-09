@@ -1217,14 +1217,6 @@
 
 	<Object
 		Flags="21"
-		Name="PointOracleDef1_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="1290.339 292.282 2826.358"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
 		Name="PointPlayer1_loc"
 		Belong="1001"
 		Prototype="genericLocation"
@@ -1238,55 +1230,6 @@
 		Prototype="genericLocation"
 		Pos="1353.576 281.315 2804.104"
 		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="839.000 291.112 2156.000"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="1170.000 264.000 1828.000"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="1709.000 263.941 1612.000"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="2406.000 273.993 1087.000"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="815.000 327.637 904.000"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="2505.000 304.055 226.000"
-		Radius="30.000" />
-
-	<Object
-		Flags="21"
-		Belong="-1"
-		Prototype="genericLocation"
-		Pos="3134.000 248.329 265.000"
-		Radius="30.000" />
 
 	<Object
 		Flags="21"
@@ -1402,14 +1345,6 @@
 
 	<Object
 		Flags="21"
-		Name="MegaSecretPlace1_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="2214.009 274.000 2511.314"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
 		Name="SecretPlace14_loc"
 		Belong="1001"
 		Prototype="genericLocation"
@@ -1454,14 +1389,6 @@
 		Belong="1001"
 		Prototype="genericLocation"
 		Pos="1270.554 301.025 2999.129"
-		Radius="10.000" />
-
-	<Object
-		Flags="21"
-		Name="MegaSecretPlace2_loc"
-		Belong="1001"
-		Prototype="genericLocation"
-		Pos="3764.655 394.376 2050.521"
 		Radius="10.000" />
 
 	<Object

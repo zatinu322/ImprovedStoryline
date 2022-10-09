@@ -41,10 +41,6 @@
 		FullName="Танкист" />
 
 	<Object
-		Name="Zalozh"
-		FullName="Заложник" />
-
-	<Object
 		Name="r4m1_FindPereg"
 		FullName="Фарарат" />
 

@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <resource>
 	<string
-		id="0"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_0_hero.ogg"
-		value="Далеко же я забрался... Не время любоваться красотами! Надо скорее связаться с местными. А вот и они."
-		time="8" />
-
-	<string
 		id="1"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_1_hero.ogg"
@@ -238,13 +231,6 @@
 		time="8" />
 
 	<string
-		id="28"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_28_hero.ogg"
-		value="Это мы еще посмотрим."
-		time="4" />
-
-	<string
 		id="29"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_29_hero.ogg"
@@ -258,67 +244,6 @@
 		sound="data\sounds\Speech\r2m1\r2m1_30_alice.ogg"
 		value="ЛИСА|Какой ты настырный. Похоже, придется тебя проучить, как следует, чтобы ты отстал от меня."
 		time="4" />
-
-	<string
-		id="31"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_31_alice.ogg"
-		value="ЛИСА|Стой! Я расскажу всю правду..."
-		time="4" />
-
-	<string
-		id="32"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_32_hero.ogg"
-		value="Если ты меня обманешь еще раз – пожалеешь! Говори, кто на самом деле убил моего отца?"
-		time="4" />
-
-	<string
-		id="33"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_33_alice.ogg"
-		value="ЛИСА|Это были странные люди на очень необычной технике. Я видела, как они уезжали на восток."
-		time="4" />
-
-	<string
-		id="34"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_34_hero.ogg"
-		value="Да? Прямо в пустыню смерти? Сначала ты отправила меня на запад, теперь - на восток. Куда в следующий раз? Хотя, нет...  следующего раза не будет!"
-		time="8" />
-
-	<string
-		id="35"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_35_alice.ogg"
-		value="ЛИСА|Не стреляй, я говорю правду! Выслушай, как все было, а потом можешь делать что хочешь."
-		time="4" />
-
-	<string
-		id="36"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_36_hero.ogg"
-		value="Ты испытываешь мое терпение. Говори..."
-		time="4" />
-
-	<string
-		id="37"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_37_alice.ogg"
-		value="ЛИСА|Я посвятила свою жизнь решению одной загадки. Был такой человек, Айвен. Он объехал весь мир, совершил множество удивительных открытий, а потом бесследно пропал в зените славы. "
-		time="8" />
-
-	<string
-		id="38"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_38_alice.ogg"
-		value="ЛИСА| Многие пытались найти его, но никому это не удалось. Я изучила всю жизнь Айвена, я выяснила, что у него были жена и сын, но они трагически погибли... Возможно, поэтому он и решил уйти. "
-		time="8" />
 
 	<string
 		id="39"
@@ -351,42 +276,12 @@
 		time="23" />
 
 	<string
-		id="43"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_43_alice.ogg"
-		value="ЛИСА|Все сходится! Вот почему так трудно было найти малейшую зацепку. Возможно, он даже был захвачен живым и..."
-		time="8" />
-
-	<string
-		id="44"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_44_hero.ogg"
-		value="Я должен выяснить, кто стоит за всем этим!"
-		time="4" />
-
-	<string
 		id="45"
 		modelName="mask_lisa"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_45_alice.ogg"
 		value="ЛИСА|Мы должны. Я вижу, что ты близок к цели как никто. Пожалуйста, позволь мне отправиться с тобой чтобы увидеть завершение моих трудов."
 		time="9" />
-
-	<string
-		id="46"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_46_hero.ogg"
-		value="О чем ты говоришь?"
-		time="4" />
-
-	<string
-		id="47"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_47_alice.ogg"
-		value="ЛИСА|Около свидетеля я нашла диск. Я проконсультировалась с лучшими учеными и выяснила, что это что-то вроде книги, прочитать которую может только всезнающий Оракул."
-		time="8" />
 
 	<string
 		id="48"
@@ -396,34 +291,12 @@
 		time="4" />
 
 	<string
-		id="49"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_49_hero.ogg"
-		value="И какие у нас планы? Где искать твоего Оракула?"
-		time="4" />
-
-	<string
 		id="50"
 		modelName="mask_lisa"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_50_alice.ogg"
 		value="ЛИСА|Здесь поблизости начинается подземный ход, ведущий на остров Оракула. Только, похоже, что он охраняется."
 		time="6" />
-
-	<string
-		id="51"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_51_hero.ogg"
-		value="Это не проблема. После победы над Акселем я национальный герой и никто не посмеет мне перечить."
-		time="8" />
-
-	<string
-		id="52"
-		modelName="mask_lisa"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_52_alice.ogg"
-		value="ЛИСА|Проблема в том, что охранники не совсем люди... Посмотри сам."
-		time="4" />
 
 	<string
 		id="53"
@@ -614,71 +487,11 @@
 		time="8" />
 
 	<string
-		id="120"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_120_hero.ogg"
-		value="... Ошибка в .... расчетах. Источник помех это ... вторая база..."
-		time="4" />
-
-	<string
-		id="121"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_121_hero.ogg"
-		value="Вот это размер!"
-		time="4" />
-
-	<string
-		id="122"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_122_hero.ogg"
-		value="Пришельцы прятались, используя энергию Селя."
-		time="4" />
-
-	<string
-		id="123"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_123_hero.ogg"
-		value="Теперь, когда они раскрыли себя, я нарушу их планы!"
-		time="4" />
-
-	<string
-		id="130"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_130_hero.ogg"
-		value="Эти неполадки вызвали странный эффект... Мне туда! Я больше ничему не удивляюсь."
-		time="4" />
-
-	<string
 		id="131"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_131_hero.ogg"
 		value="Скоро мир будет очищен от скверны, и люди смогут снова дышать воздухом!"
 		time="4" />
-
-	<string
-		id="132"
-		modelAutosized="true"
-		modelName="gadget_12"
-		modelSlot="1"
-		sound=""
-		value="РАДИО|Приём. Это штаб. Как твои успехи?"
-		time="4" />
-	
-	<string
-		id="133"
-		modelName="mask_hero"
-		sound=""
-		value="Полный провал. Ни одна из сторон не заинтересована в мирном урегулировании проблемы. В Марецции меня и слушать не стали."
-		time="8" />
-
-	<string
-		id="134"
-		modelAutosized="true"
-		modelName="gadget_12"
-		modelSlot="1"
-		sound=""
-		value="РАДИО|Всё произошло так, как мы и предполагали. Хорошо, тогда мы переходим к другой фазе нашей операции. Возвращайся на базу, там мы тебе всё объясним. Конец связи."
-		time="10" />
 
 	<string
 		id="135"
@@ -764,15 +577,6 @@
 		sound=""
 		value="Пора положить войне конец."
 		time="4" />
-
-	<string
-		id="145"
-		modelAutosized="true"
-		modelName="gadget_12"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r1m2_10_cd_officer_radio.ogg"
-		value="ЛИДЕР|Враги повержены! Без своих правителей они больше не смогут противостоять нам. Ты приблизил славный час победы и будешь щедро вознаграждён!"
-		time="10" />
 
 	<string
 		id="147"
@@ -888,11 +692,6 @@
 		sound="data\sounds\speech\r2m1\r2m1_70_hero.ogg"
 		value="Шкатулка теперь у меня."
 		time="4" />
-
-	<string
-		id="777"
-		value="Караван уничтожен. Вы не смогли обеспечить его безопасность."
-		numButtons="1" />
 
 	<string
 		id="8801"

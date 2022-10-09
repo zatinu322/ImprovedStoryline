@@ -215,15 +215,6 @@
 		time="5" />
 
 	<string
-		id="25"
-		modelName="mask_father"
-		modelSkin="1"
-		modelSlot="1"
-		value="Интересно... Очень интересно..."
-		sound=""
-		time="5" />
-
-	<string
 		id="26"
 		modelName="mask_hero"
 		modelSkin="1"

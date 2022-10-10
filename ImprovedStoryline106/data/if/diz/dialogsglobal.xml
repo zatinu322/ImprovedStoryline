@@ -954,453 +954,7 @@
 		text="[Вот ведь ублюдок...]"
 		role="PLAYER"
 		scriptResult="TActivate('FSSRolikStart'); EndConversation()" />
-<!--Root/r5m2--><!--Root/Выборы-->
-	<Reply
-		name="Dlg_npc_002592"
-		text="Отдать деньги Феликсу?"
-		role="NPC"
-		scriptCondition="GetVar('FelixChoise').AsInt==2"
-		nextReplies="Dlg_pl_002593 Dlg_pl_002594" />
-
-	<Reply
-		name="Dlg_pl_002594"
-		text="Нет."
-		role="PLAYER"
-		scriptResult="SetVar('FelixChoise',0); TActivate('trFelix1_cam02'); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002593"
-		text="Да."
-		role="PLAYER"
-		scriptResult="SetVar('FelixChoise',3); TActivate('FelixPayRolik1'); AddPlayerMoney( -1000 ); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003253"
-		text="Как поступить?"
-		role="NPC"
-		scriptCondition="QuestStatus('FindDaughter_Quest6')==Q_COMPLETED and GetVar('Tikhomir').AsInt == 0"
-		nextReplies="Dlg_pl_003254 Dlg_pl_003255" />
-
-	<Reply
-		name="Dlg_pl_003255"
-		text="Убить Тихомира и вернуть Доброславу домой."
-		role="PLAYER"
-		scriptResult="SetVar('Tikhomir', 2); TActivate('trVRRolikContinue'); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003254"
-		text="Отпустить Тихомира и Доброславу."
-		role="PLAYER"
-		scriptResult="SetVar('Tikhomir', 1); TActivate('trVRRolikContinue'); EndConversation()" />
-<!--Root/Финалы-->
-	<Reply
-		name="Dlg_npc_003103"
-		text="Я очень рад нашей встрече. Правда рад. Хотелось бы мне, чтобы она произошла в других обстоятельствах, но это, увы, невозможно. Я очень горжусь тем, что ты сделал правильный выбор."
-		role="NPC"
-		scriptCondition="QuestStatus('ToAivenToHel_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
-		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('AivenTravels_Quest')"
-		nextReplies="Dlg_pl_003107" />
-
-	<Reply
-		name="Dlg_pl_003107"
-		text="То, что написано в твоём журнале… Это правда?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003108" />
-
-	<Reply
-		name="Dlg_npc_003108"
-		text="Да, это полная правда."
-		role="NPC"
-		nextReplies="Dlg_pl_003109" />
-
-	<Reply
-		name="Dlg_pl_003109"
-		text="Я не верю в это! Я же сам лично видел, как другие люди спокойно живут, едят, пьют, умирают… сам много раз был на волосок от смерти, сам напивался… И тут мне говорят, что этого всего не может быть!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003110" />
-
-	<Reply
-		name="Dlg_npc_003110"
-		text="Видел или хотел видеть? Испытывал сами чувства или же их подобие, которое рисовал тебе мозг, основываясь на давно им забытых состояниях?"
-		role="NPC"
-		nextReplies="Dlg_pl_003111" />
-
-	<Reply
-		name="Dlg_pl_003111"
-		text="Я не знаю…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003112" />
-
-	<Reply
-		name="Dlg_npc_003112"
-		text="Как по-твоему, сколько тебе лет?"
-		role="NPC"
-		nextReplies="Dlg_pl_003113" />
-
-	<Reply
-		name="Dlg_pl_003113"
-		text="Двадцать три."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003114" />
-
-	<Reply
-		name="Dlg_npc_003114"
-		text="Двадцать три года тебе было в 2011 году. А сейчас, если что, 2234. Хотя мало кто из ныне живущих об этом догадывается."
-		role="NPC"
-		nextReplies="Dlg_pl_003115" />
-
-	<Reply
-		name="Dlg_pl_003115"
-		text="Что ты такое говоришь?! Ты хочешь сказать, что я жил ещё в старом мире?!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003116" />
-
-	<Reply
-		name="Dlg_npc_003116"
-		text="Да, и более того: все, кого ты встречал, жили в старом мире. После катастрофы увеличение популяции человеческого рода остановилось. Те, кто выжил и приспособился, просто забыли о старом мире и стали жить так, будто ничего не случилось."
-		role="NPC"
-		nextReplies="Dlg_pl_003117" />
-
-	<Reply
-		name="Dlg_pl_003117"
-		text="Я не могу в это поверить…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003118" />
-
-	<Reply
-		name="Dlg_npc_003118"
-		text="Я понимаю. Ты всегда в детстве отказывался верить моим словам и требовал доказательств существования Трёхглавого змея и Скатерти-самобранки… Пока ты это не увидишь сам, ты не поверишь. Что ж, я покажу тебе подтверждение моих слов. Надеюсь, это получится."
-		role="NPC"
-		nextReplies="Dlg_pl_003119" />
-
-	<Reply
-		name="Dlg_pl_003119"
-		text="Что ты задумал?"
-		role="PLAYER"
-		scriptResult="StopPlayingCustomMusic()"
-		nextReplies="Dlg_npc_003120" />
-
-	<Reply
-		name="Dlg_npc_003120"
-		text="Поехали в Кордан. Я хочу, чтобы ты выпил в местном баре."
-		role="NPC"
-		nextReplies="Dlg_pl_003121 Dlg_pl_003122" />
-
-	<Reply
-		name="Dlg_pl_003122"
-		text="А вот с этим есть небольшая проблема: я тут серьёзно испортил отношения с этой группировкой…"
-		role="PLAYER"
-		scriptCondition="QuestStatus('WaitTillEnd')==Q_COMPLETED"
-		nextReplies="Dlg_npc_003123" />
-
-	<Reply
-		name="Dlg_npc_003123"
-		text="А, ты об этом недоразумении? Не переживай, они уже давно обо всем забыли."
-		role="NPC"
-		nextReplies="Dlg_pl_003124" />
-
-	<Reply
-		name="Dlg_pl_003124"
-		text="Как это забыли? После всего, что я натворил?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003125" />
-
-	<Reply
-		name="Dlg_npc_003125"
-		text="Просто поверь мне. Представь, что ты ни в чем не виноват и спокойно к ним проезжай."
-		role="NPC"
-		nextReplies="Dlg_pl_003126" />
-
-	<Reply
-		name="Dlg_pl_003126"
-		text="Ну, раз уж ты в этом так уверен."
-		role="PLAYER"
-		scriptResult="SaveAllToleranceStatus(RS_ALLY); TDeactivate('trMorassTeleportBefore'); TActivate('RolikBegin_PlaneOut'); AddQuestItem('AivenGo_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'AivenGo_P');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003121"
-		text="После всего, что я услышал, да, пожалуй, стоит выпить."
-		role="PLAYER"
-		scriptCondition="QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
-		scriptResult="TDeactivate('trMorassTeleportBefore'); TActivate('RolikBegin_PlaneOut'); TActivate('trConv'); AddQuestItem('AivenGo_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'AivenGo_P');  EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003104"
-		text="Вот мы и на месте. Давай же, закажи себе что-нибудь."
-		role="NPC"
-		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN and QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
-		nextReplies="Dlg_pl_003127" />
-
-	<Reply
-		name="Dlg_pl_003127"
-		text="Бармен, ананаги! Ты будешь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003128" />
-
-	<Reply
-		name="Dlg_npc_003128"
-		text="Пожалуй, нет, зачем зря переводить выпивку. Итак, теперь ты знаешь правду о масках. Пей."
-		role="NPC"
-		nextReplies="Dlg_pl_003129" />
-
-	<Reply
-		name="Dlg_pl_003129"
-		text="С удовольств… Что за чертовщина?! Но ведь конструкция моей маски не подразумевает употребления пищи и напитков! Но как я тогда всё это время ел и пил?!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003130" />
-
-	<Reply
-		name="Dlg_npc_003130"
-		text="Очень и очень просто. Посмотри вокруг."
-		role="NPC"
-		nextReplies="Dlg_pl_003131" />
-
-	<Reply
-		name="Dlg_pl_003131"
-		text="Они просто берут кружки и выливают содержимое на пол? Серьёзно?! И так делают все! И с едой… Но почему я не заметил этот беспорядок на полу, когда сюда заходил?! Почему я вообще никогда этого не замечал?!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003132" />
-
-	<Reply
-		name="Dlg_npc_003132"
-		text="Теперь ты веришь в правдивость моих слов?"
-		role="NPC"
-		nextReplies="Dlg_pl_003133" />
-
-	<Reply
-		name="Dlg_pl_003133"
-		text="У меня это всё в голове не укладывается…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003134" />
-
-	<Reply
-		name="Dlg_npc_003134"
-		text="Ладно, мы никуда не спешим. Давай-ка проедемся до Минина."
-		role="NPC"
-		nextReplies="Dlg_pl_003135 Dlg_pl_003136" />
-
-	<Reply
-		name="Dlg_pl_003136"
-		text="А вот с этим есть небольшая проблема: я тут серьёзно испортил отношения с этой группировкой…"
-		role="PLAYER"
-		scriptCondition="QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
-		nextReplies="Dlg_npc_003137" />
-
-	<Reply
-		name="Dlg_npc_003137"
-		text="А, ты об этом недоразумении? Не переживай, они уже давно обо всем забыли."
-		role="NPC"
-		nextReplies="Dlg_pl_003138" />
-
-	<Reply
-		name="Dlg_pl_003138"
-		text="Как это забыли? После всего, что я натворил?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003139" />
-
-	<Reply
-		name="Dlg_npc_003139"
-		text="Просто поверь мне. Представь, что ты ни в чем не виноват и спокойно к ним проезжай."
-		role="NPC"
-		nextReplies="Dlg_pl_003140" />
-
-	<Reply
-		name="Dlg_pl_003140"
-		text="Ну, раз уж ты в этом так уверен."
-		role="PLAYER"
-		scriptResult="CompleteQuest('ATKordan_Quest'); SaveAllToleranceStatus(RS_ALLY); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003135"
-		text="Давай проедемся."
-		role="PLAYER"
-		scriptCondition="QuestStatus('WaitTillEnd')==Q_COMPLETED"
-		scriptResult="CompleteQuest('ATKordan_Quest'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003105"
-		text="Удивлён?"
-		role="NPC"
-		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN and QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
-		scriptResult="TActivate('triggerExitToMap14')"
-		nextReplies="Dlg_pl_003142" />
-
-	<Reply
-		name="Dlg_pl_003142"
-		text="Поразительно! Они и вправду забыли о моём поступке и не открывают по мне огонь… Но как такое возможно?!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003143" />
-
-	<Reply
-		name="Dlg_npc_003143"
-		text="Их обида на тебя существовала только в твоей голове. Ты сам понимал, что за твой поступок они объявят тебя своим врагом, и твои мысли каким-то образом передались и им. Я бы очень хотел рассказать тебе об этом подробнее, но, увы, я и сам не понимаю, как это работает."
-		role="NPC"
-		nextReplies="Dlg_pl_003144" />
-
-	<Reply
-		name="Dlg_pl_003144"
-		text="Передача мыслей? Ничего более бредового в своей жизни не слышал!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003145" />
-
-	<Reply
-		name="Dlg_npc_003145"
-		text="А у тебя есть какое-нибудь другое объяснение того, что они забыли о твоём поступке сразу после того, как я тебя убедил, что бояться нечего?"
-		role="NPC"
-		nextReplies="Dlg_pl_003146" />
-
-	<Reply
-		name="Dlg_pl_003146"
-		text="Нет, нету. Но всё равно это всё звучит как бред!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003151 Dlg_npc_003168" />
-
-	<Reply
-		name="Dlg_npc_003151"
-		text="Тогда тебе придётся просто мне поверить. Надеюсь, ты вскоре осознаешь это. А теперь давай осмотримся здесь. Видишь объявление?"
-		role="NPC"
-		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_003152" />
-
-	<Reply
-		name="Dlg_pl_003152"
-		text='Вижу. "Из-за дефицита пищевых продуктов суточная норма для всех жителей города снижена до половины порции в день". Приезжие не обслуживаются.'
-		role="PLAYER"
-		nextReplies="Dlg_npc_003153" />
-
-	<Reply
-		name="Dlg_npc_003153"
-		text="А теперь подождём, пока не приедет караван из Забытого. Именно из этого села Минин получает продукты питания."
-		role="NPC"
-		nextReplies="Dlg_pl_003154" />
-
-	<Reply
-		name="Dlg_pl_003154"
-		text="Ну, давай подождём."
-		role="PLAYER"
-		scriptResult="CompleteQuest('ATMinin_Quest'); TActivate('LOPRolikBegin'); LeaveTown()" />
-
-	<Reply
-		name="Dlg_npc_003106"
-		text="Теперь ты видел всё. У тебя остались какие-нибудь сомнения?"
-		role="NPC"
-		scriptCondition="QuestStatus('ATGloohoe_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
-		scriptResult="GetCurNpc():SetSpokenCount(1)"
-		nextReplies="Dlg_pl_003155" />
-
-	<Reply
-		name="Dlg_pl_003155"
-		text="Серго... Он ведь солгал, что пришёл к Повелителю уже после катастрофы… Он был там, когда всё случилось, да?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003156" />
-
-	<Reply
-		name="Dlg_npc_003156"
-		text="Да. Именно поэтому он не может пройти последнюю стадию духовной трансформации: влияние Повелителя слишком сильно окутало его."
-		role="NPC"
-		nextReplies="Dlg_pl_003157" />
-
-	<Reply
-		name="Dlg_pl_003157"
-		text='Что значит "последняя стадия духовной трансформации"?'
-		role="PLAYER"
-		nextReplies="Dlg_npc_003158" />
-
-	<Reply
-		name="Dlg_npc_003158"
-		text="Нужно отринуть последнюю вещь, связывающую тебя с этим миром. Отринуть символ нового человечества."
-		role="NPC"
-		nextReplies="Dlg_pl_003159" />
-
-	<Reply
-		name="Dlg_pl_003159"
-		text="Снять маску…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003160" />
-
-	<Reply
-		name="Dlg_npc_003160"
-		text="Именно. Сам я не могу этого сделать: я слишком стар и память о традициях прежней жизни слишком во мне сильна. Даже если я сниму маску, для меня это ничего не изменит."
-		role="NPC"
-		nextReplies="Dlg_pl_003161" />
-
-	<Reply
-		name="Dlg_pl_003161"
-		text="Понимаю. Кажется, я чувствую, что готов. Но перед этим…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003162" />
-
-	<Reply
-		name="Dlg_npc_003162"
-		text="Конечно же, не спеши. Что ты хочешь сделать?"
-		role="NPC"
-		nextReplies="Dlg_pl_003163" />
-
-	<Reply
-		name="Dlg_pl_003163"
-		text="Есть в Хеле одно живописное место. Я хочу посмотреть на него. В последний раз."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003164" />
-
-	<Reply
-		name="Dlg_npc_003164"
-		text="Как пожелаешь. Отправимся, когда ты будешь готов."
-		role="NPC"
-		nextReplies="Dlg_pl_003165" />
-
-	<Reply
-		name="Dlg_pl_003165"
-		text="Хорошо."
-		role="PLAYER"
-		scriptResult="TActivate('TeleportToR1M4'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003141"
-		text="Удивлён?"
-		role="NPC"
-		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN and QuestStatus('WaitTillEnd')==Q_COMPLETED"
-		nextReplies="Dlg_pl_003142" />
-
-	<Reply
-		name="Dlg_npc_003168"
-		text="Тогда тебе придётся просто мне поверить. Надеюсь, ты вскоре осознаешь это. А теперь давай же, закажи себе что-нибудь."
-		role="NPC"
-		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_003127" />
-
-	<Reply
-		name="Dlg_npc_003166"
-		text="Ну что ж, а теперь давай осмотримся здесь. Видишь объявление?"
-		role="NPC"
-		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN and QuestStatus('WaitTillEnd')==Q_COMPLETED"
-		nextReplies="Dlg_pl_003152" />
-
-	<Reply
-		name="Dlg_npc_003170"
-		text="Чего желаете?"
-		role="NPC"
-		scriptCondition="QuestStatus('CureForLisa_Quest')==Q_TAKEN"
-		scriptResult="CompleteQuest('CureForLisa_Quest')"
-		nextReplies="Dlg_pl_003171" />
-
-	<Reply
-		name="Dlg_pl_003171"
-		text="Мне срочно вот эти лекарства!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003172" />
-
-	<Reply
-		name="Dlg_npc_003172"
-		text="Да, такие у нас есть. Минутку...|С вас 11000 монет."
-		role="NPC"
-		nextReplies="Dlg_pl_003173" />
-
-	<Reply
-		name="Dlg_pl_003173"
-		text="Вот, держите.| А теперь скорее к Бену!"
-		role="PLAYER"
-		scriptResult="AddPlayerMoney(-11000); AddQuestItem('quest_lisa_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_lisa_narcotik'); EndConversation()" />
-<!--Root/r5m2/При въезде-->
+<!--Root/r5m2--><!--Root/r5m2/При въезде-->
 	<Reply
 		name="Dlg_npc_002883"
 		text="Приветствую тебя, добрый путник! Заходи, располагайся как дома!"
@@ -2586,51 +2140,26 @@
 		text="Нет проблем. Не люблю, когда меня держат за дурака."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m5_AnanagaBetrayal_Quest'); EndConversation()" />
-<!--Root/r4m2/Сюжетные--><!--Root/r4m2/Сюжетные/Битва у базы-->
+<!--Root/r5m2/Решаем судьбу Тихомира-->
 	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N01"
-		text="Здесь очень опасно. Поехали, мы выведем тебя отсюда."
+		name="Dlg_npc_003253"
+		text="Как поступить?"
 		role="NPC"
-		scriptCondition="QuestStatus('r4m2_FightWithCrazy')==Q_TAKEN"
-		scriptResult="CompleteQuest('r4m2_FightWithCrazy');"
-		nextReplies="r4m2_MilitaryBase_Man1_1_N02" />
+		scriptCondition="QuestStatus('FindDaughter_Quest6')==Q_COMPLETED and GetVar('Tikhomir').AsInt == 0"
+		nextReplies="Dlg_pl_003254 Dlg_pl_003255" />
 
 	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N02"
-		text="Кто вы такие? Черт, сколько же здесь этих бандитов! И их все больше и больше! "
+		name="Dlg_pl_003255"
+		text="Убить Тихомира и вернуть Доброславу домой."
 		role="PLAYER"
-		nextReplies="r4m2_MilitaryBase_Man1_1_N03" />
+		scriptResult="SetVar('Tikhomir', 2); TActivate('trVRRolikContinue'); EndConversation()" />
 
 	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N03"
-		text="Время не ждет! Ты с нами?"
-		role="NPC"
-		nextReplies="r4m2_MilitaryBase_Man1_1_N04a r4m2_MilitaryBase_Man1_1_N04b" />
-
-	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N04b"
-		text="Да! Один я погибну..."
+		name="Dlg_pl_003254"
+		text="Отпустить Тихомира и Доброславу."
 		role="PLAYER"
-		scriptResult="EndCoversation();" />
-
-	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N04a"
-		text="Я никуда не поеду! Они - убийцы! Мы должны вместе сразиться с ними!"
-		role="PLAYER"
-		nextReplies="r4m2_MilitaryBase_Man1_1_N05a" />
-
-	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N05a"
-		text="Ты не сможешь победить их, ни один, ни с нашей помощью. Следуй за нами, если хочешь жить."
-		role="NPC"
-		nextReplies="r4m2_MilitaryBase_Man1_1_N06a" />
-
-	<Reply
-		name="r4m2_MilitaryBase_Man1_1_N06a"
-		text="Хр-р-р. Я еще вернусь!"
-		role="PLAYER"
-		scriptResult="EndCoversation();" />
-<!--Root/r4m2/Сюжетные/У ученого-->
+		scriptResult="SetVar('Tikhomir', 1); TActivate('trVRRolikContinue'); EndConversation()" />
+<!--Root/r4m2/Сюжетные--><!--Root/r4m2/Сюжетные/У ученого-->
 	<Reply
 		name="r4m2_Bar_Scientist_1_N01"
 		text="Проходи, располагайся. Нам предстоит очень долгий разговор."
@@ -3067,159 +2596,6 @@
 		text="Все понятно. ПОЕХАЛИ!"
 		role="PLAYER"
 		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi');  EndConversation()" />
-
-	<Reply
-		name="r4_Dlg_npc_000153"
-		text="Каждую неделю каждый желающий может испытать свою удачу и ловкость"
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000154" />
-
-	<Reply
-		name="r4_Dlg_pl_000154"
-		text="Каким образом?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000155" />
-
-	<Reply
-		name="r4_Dlg_npc_000155"
-		text="Проехать лабиринт, кишащий опасностями. Это ужасающее и захватывающее зрелище."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000159 r4_Dlg_pl_000160" />
-
-	<Reply
-		name="r4_Dlg_pl_000160"
-		text="Я думаю, что это не для меня."
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000159"
-		text="Мне бы хотелось попробовать это сделать!"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000161" />
-
-	<Reply
-		name="r4_Dlg_npc_000161"
-		text="Отлично. Участие стоит 1000 монет. Проедешь до конца - приз твой, нет - извиняй."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000162 r4_Dlg_pl_000167" />
-
-	<Reply
-		name="r4_Dlg_pl_000167"
-		text="У меня нет денег"
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000162"
-		text="Я согласен"
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_npc_000168"
-		text="Ты пришел к нам застраховаться?"
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000169" />
-
-	<Reply
-		name="r4_Dlg_pl_000169"
-		text="А от чего у вас можно застраховаться?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000170" />
-
-	<Reply
-		name="r4_Dlg_npc_000170"
-		text="Мы страхуем твое участие в гонках. Если ты повредишь выданную тебе гоночную машину, то мы компенсируем все убытки по восстановлению."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000171 r4_Dlg_pl_000173" />
-
-	<Reply
-		name="r4_Dlg_pl_000173"
-		text="Понятно, я пойду лучше отсюда."
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000171"
-		text="Сколько стоит страховка?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000172" />
-
-	<Reply
-		name="r4_Dlg_npc_000172"
-		text="Страховка стоит 1000 монет. Если в гонке ты немного повредил машину, мы возвращаем тебе почти половину суммы, если сильно повредил, мы удерживаем всю сумму."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000174" />
-
-	<Reply
-		name="r4_Dlg_pl_000174"
-		text="Это все условия страховки?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000175" />
-
-	<Reply
-		name="r4_Dlg_npc_000175"
-		text="Нет. В случает твоей победы, мы удержим 25% от выигрыша, как твой спонсор."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000176 r4_Dlg_pl_000177 r4_Dlg_pl_000178" />
-
-	<Reply
-		name="r4_Dlg_pl_000178"
-		text="Нет у меня денег"
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000177"
-		text="Чувствую подвох. Не желаю я лезть в это дело."
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000176"
-		text="Меня устраивают такие условия, я согласен застраховаться."
-		role="PLAYER" />
-<!--Root/r4m1/Опциональные/Охота-->
-	<Reply
-		name="r4_Dlg_npc_000187"
-		text="Ты попал в мир развлечений для настоящих мужчин."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000188" />
-
-	<Reply
-		name="r4_Dlg_pl_000188"
-		text="Чем же ваши развлечения отличаются о других?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000189" />
-
-	<Reply
-		name="r4_Dlg_npc_000189"
-		text="Наши развлечения открывают истинную сущность человека, и он получает настоящее платоническое удовольствие."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000190" />
-
-	<Reply
-		name="r4_Dlg_pl_000190"
-		text="Массаракш, в чем же они лучше других?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000191" />
-
-	<Reply
-		name="r4_Dlg_npc_000191"
-		text="В них человек убивает, причем убивает не каких-то тупых разбойников, а равного себе противника."
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000192 r4_Dlg_pl_000194" />
-
-	<Reply
-		name="r4_Dlg_pl_000194"
-		text="Нет, мне дорога моя задница."
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000192"
-		text="Это интересно, я бы хотел попробовать"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000193" />
-
-	<Reply
-		name="r4_Dlg_npc_000193"
-		text="Отлично. Я тебя немного ознакомлю с правилами. Тебе предстоит "
-		role="NPC" />
 <!--Root/r4m1/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_002580"
@@ -3302,46 +2678,6 @@
 		scriptCondition="GetPlayerMoney() >= 30000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-30000); EndConversation()" />
 <!--Root/r4m1/Сюжетные/Танкисты-->
-	<Reply
-		name="r4_Dlg_npc_000000"
-		text="Смотри! Это они!"
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000001" />
-
-	<Reply
-		name="r4_Dlg_pl_000001"
-		text="Кто?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000002" />
-
-	<Reply
-		name="r4_Dlg_npc_000002"
-		text="Те, кто напал на твою деревню!"
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000003" />
-
-	<Reply
-		name="r4_Dlg_pl_000003"
-		text="Ты уверена? Неужели моя месть свершится прямо сейчас?"
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000004" />
-
-	<Reply
-		name="r4_Dlg_npc_000004"
-		text="Абсолютно. Я видела именно эту машину на месте преступления!"
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000005 r4_Dlg_pl_000006" />
-
-	<Reply
-		name="r4_Dlg_pl_000006"
-		text="Значит, им не жить! Кровь за кровь!"
-		role="PLAYER" />
-
-	<Reply
-		name="r4_Dlg_pl_000005"
-		text="Я думаю, что это были лишь исполнители чьей-то злой воли. Давай лучше проследим за ними и узнаем настоящих преступников."
-		role="PLAYER" />
-
 	<Reply
 		name="r4_Dlg_npc_000007"
 		text="Что мы сделали тебе, чужеземец? Почему ты следишь за нами?"
@@ -5593,7 +4929,7 @@
 		text="Следуйте за мной."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-<!--Root/r3m1/Всякое разное--><!--Root/r3m1/Узнать что случилось с Улуком-->
+<!--Root/r3m1/Узнать что случилось с Улуком-->
 	<Reply
 		name="Set_Bar_Customer1_1_N01"
 		text="Странник, не окажешь ли помощь друидской коммуне? "
@@ -5858,72 +5194,6 @@
 		text="Хорошо. Ну, я поехал!"
 		role="PLAYER"
 		scriptResult="TakeQuest('r3m2_ReadyToTravel'); EndConversation()" />
-<!--Root/r3m1/У разбойников-->
-	<Reply
-		name="RazVill_Razboynik1_1_N01"
-		text="Чужеземец, не проходи мимо! Для таких, как ты, у меня есть специальное предложение!"
-		role="NPC"
-		nextReplies="RazVill_Razboynik1_1_N02" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N02"
-		text="Считай, что ты меня заинтересовал. Что же ты можешь мне предложить?"
-		role="PLAYER"
-		nextReplies="RazVill_Razboynik1_1_N03" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N03"
-		text="Только сегодня! Карта близлежащих земель! Почти даром! "
-		role="NPC"
-		nextReplies="RazVill_Razboynik1_1_N04" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N04"
-		text='И сколько же стоит это "даром"?'
-		role="PLAYER"
-		nextReplies="RazVill_Razboynik1_1_N05" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N05"
-		text="Всего лишь 50 монет. Торг неуместен."
-		role="NPC"
-		nextReplies="RazVill_Razboynik1_1_N06a RazVill_Razboynik1_1_N06b RazVill_Razboynik1_1_N06c" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N06c"
-		text="Спасибо, как-нибудь перебьюсь и без карты."
-		role="PLAYER"
-		scriptResult="EndConversation();" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N06b"
-		text="Согласен на 30 монет, и расстанемся друзьями."
-		role="PLAYER"
-		nextReplies="RazVill_Razboynik1_1_N07b" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N07b"
-		text="Я же сказал, цена окончательная! 50 монет и баста."
-		role="NPC"
-		nextReplies="RazVill_Razboynik1_1_N08ba RazVill_Razboynik1_1_N08bb" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N08bb"
-		text="Хозяин – барин. Ищи других покупателей на свой гнилой товар. "
-		role="PLAYER"
-		scriptResult="EndConversation();" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N08ba"
-		text="Уболтал, черт говорливый. Вот твои 50 монет."
-		role="PLAYER"
-		scriptResult="EndConversation();" />
-
-	<Reply
-		name="RazVill_Razboynik1_1_N06a"
-		text="Карта мне пригодится. По рукам."
-		role="PLAYER"
-		scriptResult="EndConversation();" />
 <!--Root/r3m1/Проведать друида-->
 	<Reply
 		name="Set_Bar_Druid3_1_N01"
@@ -8750,7 +8020,173 @@
 		text="Понял. Приступаю."
 		role="PLAYER"
 		scriptResult="CompleteQuest('ReturnQuest'); TActivate('TUNELFIGHT'); EndConversation()" />
-<!--Root/r1m4/Разговоры с Гомером-->
+<!--Root/r1m4/Случайные-->
+	<Reply
+		name="r1m4_UnknownBar_Customer1_1_N01"
+		text="Чего надо?"
+		role="NPC"
+		scriptCondition="QuestStatus('FindGomerA_Quest1')==Q_TAKEN and GetCurNpc():GetSpokenCount()==0"
+		nextReplies="r1m4_UnknownBar_Customer1_1_P02" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer1_1_P02"
+		text="Ты не мог бы мне помочь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001935" />
+
+	<Reply
+		name="Dlg_npc_001935"
+		text="Нет!"
+		role="NPC"
+		nextReplies="Dlg_pl_001936" />
+
+	<Reply
+		name="Dlg_pl_001936"
+		text="Ну на нет и суда нет."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer2_1_N01"
+		text="Ты когда-нибудь слышал про рыбалку на бубенчиках?"
+		role="NPC"
+		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		nextReplies="r1m4_UnknownBar_Customer2_1_P02" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer2_1_P02"
+		text="Чего?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001931" />
+
+	<Reply
+		name="Dlg_npc_001931"
+		text="Рыбалка на бубенчиках. Один из способов речной рыбалки."
+		role="NPC"
+		nextReplies="Dlg_pl_001932" />
+
+	<Reply
+		name="Dlg_pl_001932"
+		text="Ладно…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001933" />
+
+	<Reply
+		name="Dlg_npc_001933"
+		text="Вот вцепишься в удочку и ждёшь как дурак часов восемь, следишь за бубенчиком, и вдруг ТИНЬ-ДИЛИНЬ, и тянешь что есть мочи!"
+		role="NPC"
+		nextReplies="Dlg_pl_001934" />
+
+	<Reply
+		name="Dlg_pl_001934"
+		text="Замечательно. Ну, я пошёл."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer4_1_N01"
+		text="Эй, чужеземец, присядь ко мне."
+		role="NPC"
+		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		nextReplies="r1m4_UnknownBar_Customer4_1_N02" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer4_1_N02"
+		text="Я весь внимание. "
+		role="PLAYER"
+		nextReplies="r1m4_UnknownBar_Customer4_1_N03" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer4_1_N03"
+		text="Я хочу тебе рассказать одну историю. Очень важную и очень интересную."
+		role="NPC"
+		nextReplies="Dlg_pl_001939 r1m4_UnknownBar_Customer4_1_N04" />
+
+	<Reply
+		name="Dlg_pl_001939"
+		text="Хорошо, я слушаю."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001940" />
+
+	<Reply
+		name="Dlg_npc_001940"
+		text="Было это очень давно… И случилось это где-то там… Нет, не там… Хотя, подожди, это точно случилось там! И было это очень давно, да… |Ты меня запутал!"
+		role="NPC"
+		nextReplies="Dlg_pl_001941" />
+
+	<Reply
+		name="Dlg_pl_001941"
+		text="Я же молчал."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001942" />
+
+	<Reply
+		name="Dlg_npc_001942"
+		text="Всё, иди отсюда, ты меня с мысли сбиваешь!"
+		role="NPC"
+		nextReplies="Dlg_pl_001943" />
+
+	<Reply
+		name="Dlg_pl_001943"
+		text="Женщины…"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer4_1_N04"
+		text="Некогда мне твои истории слушать."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001929"
+		text="Хочешь купить у меня рыбы?"
+		role="NPC"
+		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		nextReplies="Dlg_pl_001930" />
+
+	<Reply
+		name="Dlg_pl_001930"
+		text="Нет."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001937" />
+
+	<Reply
+		name="Dlg_npc_001937"
+		text="Тогда не стой тут, только место занимаешь!"
+		role="NPC"
+		nextReplies="Dlg_pl_001938" />
+
+	<Reply
+		name="Dlg_pl_001938"
+		text="Ты продаёшь рыбу в посёлке возле самого океана? Зачем? Да тут каждый второй житель - рыбак."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003276" />
+
+	<Reply
+		name="Dlg_npc_003276"
+		text="Но-но! Я бы попросил! Не каждый второй, а каждый первый. И почему ты всё ещё здесь? Покупателей мне только распугиваешь!"
+		role="NPC"
+		nextReplies="Dlg_pl_003277" />
+
+	<Reply
+		name="Dlg_pl_003277"
+		text="Каких покупателей? Здесь нет никого. Зачем вообще другим рыбакам твоя рыба, если они могут наловить себе сами?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003285" />
+
+	<Reply
+		name="Dlg_npc_003285"
+		text="Так ты всех распугал, потому и нет никого. Всё, надоел мне этот трёп, иди доставай кого-нибудь другого!"
+		role="NPC"
+		nextReplies="Dlg_pl_003287" />
+
+	<Reply
+		name="Dlg_pl_003287"
+		text="Ладно-ладно..."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+<!--Root/r1m4/Опциональные--><!--Root/r1m4/Сюжетные--><!--Root/r1m4/Сюжетные/Разговоры с Гомером-->
 	<Reply
 		name="r1m4Random_Bar_Gomer1_N03"
 		text="В таком случае ты его нашёл. "
@@ -8981,224 +8417,6 @@
 		nextReplies="r1m4Random_Bar_Gomer1_P02" />
 
 	<Reply
-		name="Dlg_npc_002623"
-		text="Опять ты! Надеюсь, ты не для того весь этот долгий путь проделал, чтобы те деньги из меня выбить?"
-		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and IsQuestComplete('WorkGiver_Quest1') and GetCurNpc():GetSpokenCount() == 0 and GetVar('FarmerDickRejection').AsInt==0    "
-		nextReplies="Dlg_pl_002624" />
-
-	<Reply
-		name="Dlg_pl_002624"
-		text="Деньги? Какие ещё деньги?|А-а-а, всё, вспомнил тебя. Нет, запихни эти гроши себе... под маску, я тут по другому поводу. Не знаешь, где Филимон?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002628" />
-
-	<Reply
-		name="Dlg_npc_002625"
-		text="Тебе чего надо?"
-		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and not(IsQuestComplete('WorkGiver_Quest1')) and GetCurNpc():GetSpokenCount() == 0 and GetVar('FarmerDickRejection').AsInt==0"
-		nextReplies="Dlg_pl_002626" />
-
-	<Reply
-		name="Dlg_pl_002626"
-		text="Я ищу Филимона."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002628" />
-
-	<Reply
-		name="Dlg_npc_002628"
-		text="А на кой ляд он тебе сдался?"
-		role="NPC"
-		nextReplies="Dlg_pl_002629" />
-
-	<Reply
-		name="Dlg_pl_002629"
-		text="Не твоего ума это дело."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002630" />
-
-	<Reply
-		name="Dlg_npc_002630"
-		text="Аллушка тебя наняла, нутром чую! Ничего тебе не скажу, не стану друга подставлять! Разве что..."
-		role="NPC"
-		nextReplies="Dlg_pl_002631" />
-
-	<Reply
-		name="Dlg_pl_002631"
-		text="Что?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002627" />
-
-	<Reply
-		name="Dlg_npc_002627"
-		text="Разве что ты проставишься! Но учти, что пью я не сивуху всякую, а качественные напитки, а такие стоят недёшево. 700 монет бутылка."
-		role="NPC"
-		nextReplies="Dlg_pl_002632 Dlg_pl_002673 Dlg_pl_002674" />
-
-	<Reply
-		name="Dlg_pl_002674"
-		text="Ну уж нет, ни монеты ты от меня не получишь."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002675" />
-
-	<Reply
-		name="Dlg_npc_002675"
-		text="Эвон оно как! Ну, значит, Аллушка сегодня своего муженька не увидит."
-		role="NPC"
-		nextReplies="Dlg_pl_002676" />
-
-	<Reply
-		name="Dlg_pl_002676"
-		text="Это мы ещё посмотрим."
-		role="PLAYER"
-		scriptResult="SetVar('FarmerDickRejection',1) EndConversation();" />
-
-	<Reply
-		name="Dlg_pl_002673"
-		text="Дороговато выходит, у меня пока столько нет."
-		role="PLAYER"
-		scriptCondition="700 >= GetPlayerMoney()"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002632"
-		text="Вот, держи. Говори теперь, где Филимон!"
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 700"
-		nextReplies="Dlg_npc_002683" />
-
-	<Reply
-		name="Dlg_npc_002683"
-		text="Филимон действительно был тут, выпил бутыль местной ананаги, а после уехал на священный холм водить хоровод вокруг ели. "
-		role="NPC"
-		nextReplies="Dlg_pl_002684" />
-
-	<Reply
-		name="Dlg_pl_002684"
-		text="Ты сейчас серьёзно?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002685" />
-
-	<Reply
-		name="Dlg_npc_002685"
-		text="Так точно! Хороводы - это очень давняя традиция этих мест, и каждый рыбак сочтёт за честь съездить на Священный холм и обойти пару кругов вокруг ели.  "
-		role="NPC"
-		nextReplies="Dlg_pl_002686" />
-
-	<Reply
-		name="Dlg_pl_002686"
-		text="Где находится этот священный холм?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002687" />
-
-	<Reply
-		name="Dlg_npc_002687"
-		text="Дальше по дороге. Развилок там нет, так что не заблудишься."
-		role="NPC"
-		nextReplies="Dlg_pl_002688" />
-
-	<Reply
-		name="Dlg_pl_002688"
-		text="Поеду посмотрю на эти ваши хороводы."
-		role="PLAYER"
-		scriptResult="CompleteQuest('q_FH1'); TakeQuest('q_FH3'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002677"
-		text="Вижу, ты кого-то ищешь."
-		role="NPC"
-		scriptCondition="QuestStatus('FindGomerA_Quest1')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0  "
-		nextReplies="Dlg_pl_002678" />
-
-	<Reply
-		name="Dlg_pl_002678"
-		text="Да, Гомер здесь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002679" />
-
-	<Reply
-		name="Dlg_npc_002679"
-		text="Он был тут, но час назад отправился на рыбалку."
-		role="NPC"
-		nextReplies="Dlg_pl_002680" />
-
-	<Reply
-		name="Dlg_pl_002680"
-		text="Ты знаешь куда?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002681" />
-
-	<Reply
-		name="Dlg_npc_002681"
-		text="Да. Видишь вон те скалы? Объедь их с правой стороны по бездорожью и поезжай вдоль берега до моста. Обычно он рыбачит там."
-		role="NPC"
-		nextReplies="Dlg_pl_002682" />
-
-	<Reply
-		name="Dlg_pl_002682"
-		text="Спасибо за помощь."
-		role="PLAYER"
-		scriptResult="CompleteQuest('FindGomerA_Quest1'); TActivate('CreateHomerRybak'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002689"
-		text="Ну что, теперь готов меня угостить?"
-		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetCurNpc():GetSpokenCount() > 0"
-		nextReplies="Dlg_pl_002690 Dlg_pl_002691" />
-
-	<Reply
-		name="Dlg_pl_002691"
-		text="У меня пока нет денег."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002690"
-		text="Вот, держи. Надеюсь, оно того стоит."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 700"
-		nextReplies="Dlg_npc_002683" />
-
-	<Reply
-		name="Dlg_npc_002692"
-		text="И вот ты снова здесь. И снова кого-то ищешь."
-		role="NPC"
-		scriptCondition="IsQuestTaken('GomerSaliniom') and not(IsQuestComplete('GomerSaliniom'))"
-		nextReplies="Dlg_pl_002693" />
-
-	<Reply
-		name="Dlg_pl_002693"
-		text="И снова ищу Гомера. Он опять рыбу ловит?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002694" />
-
-	<Reply
-		name="Dlg_npc_002694"
-		text="Нет, в этот раз он куда-то поехал."
-		role="NPC"
-		nextReplies="Dlg_pl_002695" />
-
-	<Reply
-		name="Dlg_pl_002695"
-		text="И ты, конечно же, не знаешь куда?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002696" />
-
-	<Reply
-		name="Dlg_npc_002696"
-		text="Не-а. Но он что-то говорил про столицу северных торговцев, а под такое описание подходит только одно поселение в этих краях."
-		role="NPC"
-		nextReplies="Dlg_pl_002697" />
-
-	<Reply
-		name="Dlg_pl_002697"
-		text="Кажется, я тебя понял. Спасибо, бывай."
-		role="PLAYER"
-		scriptResult="CompleteQuest('GomerSaliniom'); EndConversation()" />
-
-	<Reply
 		name="Dlg_npc_003225"
 		text="Спасибо, что подбросил! Аккуратней на болоте! Ну и с самим монстром начеку будь!"
 		role="NPC"
@@ -9212,56 +8430,135 @@
 		scriptResult="if CanQuestBeGiven('r1m4_OvercomeMirras') then TakeQuest('r1m4_OvercomeMirras') end; CompleteQuest('r1m3_FindVrata_KnowPlace'); TDeactivate('BolotoChoice'); TActivate('trMorassTeleportBefore'); CompleteQuest('FindGomerNearBereg_Quest2'); RemoveQuestItem('Homer_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'Homer_P') EndConversation()" />
 
 	<Reply
-		name="Dlg_npc_003288"
-		text="Ну что там с Филимоном? Ха-ха-ха!"
+		name="Dlg_npc_002652"
+		text="Эй, а я тебя помню! Вижу, тебе удалось победить этого механического монстра! Если не секрет, как ты это сделал?"
 		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetVar('FarmerDickRejection').AsInt==1"
-		nextReplies="Dlg_pl_003289 Dlg_pl_003290" />
+		scriptCondition="QuestStatus('GomerOlme')==Q_TAKEN or QuestStatus('GomerSaliniom')==Q_TAKEN"
+		nextReplies="Dlg_pl_002653" />
 
 	<Reply
-		name="Dlg_pl_003290"
-		text="Тебя не касается!"
+		name="Dlg_pl_002653"
+		text="Скажем так, взрывная волна действует на такие штуковины куда эффективнее пуль."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002654" />
+
+	<Reply
+		name="Dlg_npc_002654"
+		text="Вот оно как, оказывается. Ну да ладно, я всё равно не стал бы к этой махине и близко приближаться. Кстати, а что снова привело тебя в наши края?"
+		role="NPC"
+		nextReplies="Dlg_pl_002655" />
+
+	<Reply
+		name="Dlg_pl_002655"
+		text="Желание вновь тебя послушать. Не в курсе ли ты, есть ли из этих мест дорога дальше на север? Туда, где всегда идёт снег и где очень-очень холодно."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002656" />
+
+	<Reply
+		name="Dlg_npc_002656"
+		text='Есть одна такая дорога. Но, поверь мне, твоя фраза "очень-очень холодно" описывает лишь ничтожно малую часть того холода, с которым тебе предстоит столкнуться в Лиденклауде. Но, к счастью, ты туда не попадёшь.'
+		role="NPC"
+		nextReplies="Dlg_pl_002657" />
+
+	<Reply
+		name="Dlg_pl_002657"
+		text="Это ещё почему?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002658" />
+
+	<Reply
+		name="Dlg_npc_002658"
+		text="Дорога в те края начинается тоннелем в горе. Двадцать лет назад его завалило камнями."
+		role="NPC"
+		nextReplies="Dlg_pl_002659" />
+
+	<Reply
+		name="Dlg_pl_002659"
+		text="Других путей нету?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002660" />
+
+	<Reply
+		name="Dlg_npc_002660"
+		text="Нет. Завалил проезд, кстати, твой друг Айвен, если тебе это интересно. Он сказал, что ни один местный житель не должен туда соваться, заложил заряд на вершине ближайшей скалы и бахнул."
+		role="NPC"
+		nextReplies="Dlg_pl_002661" />
+
+	<Reply
+		name="Dlg_pl_002661"
+		text="То есть ты знал, что Айвен, кроме Морских врат, ещё и по тому тоннелю ездил?! Почему ты мне сразу не сказал об этом?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002662" />
+
+	<Reply
+		name="Dlg_npc_002662"
+		text="Так ты и не спрашивал."
+		role="NPC"
+		nextReplies="Dlg_pl_002663" />
+
+	<Reply
+		name="Dlg_pl_002663"
+		text="Ну ты же мог мне... Хотя ладно, проехали. |Завал всегда можно расчистить, а вот что делать с холодом - большой вопрос. Есть какие-нибудь идеи?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002664" />
+
+	<Reply
+		name="Dlg_npc_002664"
+		text="Не совсем понимаю, как ты собрался тягать эти валуны, но уверен, у тебя уже есть план. А что насчёт холода - думаю, тебе могла бы помочь тёплая одежда со склада."
+		role="NPC"
+		nextReplies="Dlg_pl_002665" />
+
+	<Reply
+		name="Dlg_pl_002665"
+		text="Но? Наверняка же мне что-то помешает эту одежду забрать."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002666" />
+
+	<Reply
+		name="Dlg_npc_002666"
+		text="В корень зришь. Склад захватили местные и отказываются его освобождать, пока торговцы не выполнят их требования. Вроде бы последние как раз искали переговорщика. Раз уж тебе сильнее всех надо, можешь попытать счастья. Поговори вон с тем мужиком, он тебе расскажет, что да как."
+		role="NPC"
+		scriptResult="if QuestStatus('GomerSaliniom')==Q_TAKEN then CompleteQuest('GomerSaliniom') end CompleteQuestIfTaken('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' );"
+		nextReplies="Dlg_pl_002667 Dlg_pl_003270" />
+
+	<Reply
+		name="Dlg_pl_003270"
+		text="Спасибо огромное, второй раз выручаешь."
+		role="PLAYER"
+		scriptCondition="2500 > GetPlayerMoney()"
+		nextReplies="Dlg_npc_003271" />
+
+	<Reply
+		name="Dlg_npc_003271"
+		text="Да чего уж там, пожалуйста. Но мог бы и на ананагу мне подкинуть мелочишки, раз уж так благодарен."
+		role="NPC"
+		nextReplies="Dlg_pl_003272" />
+
+	<Reply
+		name="Dlg_pl_003272"
+		text="Прости, сам на мели. Ну, я пошёл."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
 
 	<Reply
-		name="Dlg_pl_003289"
-		text="Я в тупике..."
+		name="Dlg_pl_002667"
+		text="Спасибо огромное. Вот, держи на ананагу. Постарайся не пропить всё разом."
 		role="PLAYER"
-		nextReplies="Dlg_npc_003291" />
+		scriptCondition="GetPlayerMoney() >= 2500"
+		nextReplies="Dlg_npc_002668" />
 
 	<Reply
-		name="Dlg_npc_003291"
-		text="А я говорил, что сам не найдёшь! Сколько я там просил, кажется, 700 монет? Забудь. Новая цена - 1500."
+		name="Dlg_npc_002668"
+		text="А вот этого я обещать не могу, ха-ха-ха!"
 		role="NPC"
-		nextReplies="Dlg_pl_003292" />
+		nextReplies="Dlg_pl_002669" />
 
 	<Reply
-		name="Dlg_pl_003292"
-		text="Сколько?!"
+		name="Dlg_pl_002669"
+		text="Ладно, всего хорошего."
 		role="PLAYER"
-		nextReplies="Dlg_npc_003293" />
-
-	<Reply
-		name="Dlg_npc_003293"
-		text="А это чтобы не выпендривался лишний раз. Хочешь найти Филимона - плати. Нет - знаешь, где выход."
-		role="NPC"
-		nextReplies="Dlg_pl_003294 Dlg_pl_003295" />
-
-	<Reply
-		name="Dlg_pl_003295"
-		text="Ну уж нет, счастливо оставаться! С такими-то ценами."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003294"
-		text="Эх, что ещё остаётся... Вот, держи."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() > 1500"
-		scriptResult="AddPlayerMoney(-1500)"
-		nextReplies="Dlg_npc_002683" />
-<!--Root/r1m4/В Ольме-->
+		scriptResult="AddPlayerMoney(-2500); EndConversation()" />
+<!--Root/r1m4/Сюжетные/В Ольме-->
 	<Reply
 		name="Olme_Bar_Customer1_1_N01"
 		text="Что привело тебя в это болото?"
@@ -9335,247 +8632,7 @@
 		text="Спасибо, так и сделаю."
 		role="PLAYER"
 		scriptResult="CompleteQuest('MorskieVrata2_Quest'); EndConversation()" />
-<!--Root/r1m4/Случайные-->
-	<Reply
-		name="r1m4_UnknownBar_Customer1_1_N01"
-		text="Чего надо?"
-		role="NPC"
-		scriptCondition="QuestStatus('FindGomerA_Quest1')==Q_TAKEN and GetCurNpc():GetSpokenCount()==0"
-		nextReplies="r1m4_UnknownBar_Customer1_1_P02" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer1_1_P02"
-		text="Ты не мог бы мне помочь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001935" />
-
-	<Reply
-		name="Dlg_npc_001935"
-		text="Нет!"
-		role="NPC"
-		nextReplies="Dlg_pl_001936" />
-
-	<Reply
-		name="Dlg_pl_001936"
-		text="Ну на нет и суда нет."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer2_1_N01"
-		text="Ты когда-нибудь слышал про рыбалку на бубенчиках?"
-		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
-		nextReplies="r1m4_UnknownBar_Customer2_1_P02" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer2_1_P02"
-		text="Чего?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001931" />
-
-	<Reply
-		name="Dlg_npc_001931"
-		text="Рыбалка на бубенчиках. Один из способов речной рыбалки."
-		role="NPC"
-		nextReplies="Dlg_pl_001932" />
-
-	<Reply
-		name="Dlg_pl_001932"
-		text="Ладно…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001933" />
-
-	<Reply
-		name="Dlg_npc_001933"
-		text="Вот вцепишься в удочку и ждёшь как дурак часов восемь, следишь за бубенчиком, и вдруг ТИНЬ-ДИЛИНЬ, и тянешь что есть мочи!"
-		role="NPC"
-		nextReplies="Dlg_pl_001934" />
-
-	<Reply
-		name="Dlg_pl_001934"
-		text="Замечательно. Ну, я пошёл."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer3_1_N01"
-		text="Привет. Садись и выпей со мной рюмочку ананаги."
-		role="NPC"
-		scriptCondition="not(IsQuestComplete('AnanagaTech_Quest')) and GetCurNpc():GetSpokenCount()==0"
-		nextReplies="r1m4_UnknownBar_Customer3_1_N02a r1m4_UnknownBar_Customer3_1_N02b" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer3_1_N02b"
-		text="Спасибо, но у меня дела."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer3_1_N02a"
-		text="А почему бы и нет. "
-		role="PLAYER"
-		nextReplies="r1m4_UnknownBar_Customer3_1_N03a" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer3_1_N03a"
-		text="Ну, как тебе?"
-		role="NPC"
-		nextReplies="r1m4_UnknownBar_Customer3_1_N04a" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer3_1_N04a"
-		text="Кхе-кхе. Неплоха, вполне неплоха…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001955" />
-
-	<Reply
-		name="Dlg_npc_001955"
-		text="А то! Лучшая!"
-		role="NPC"
-		nextReplies="Dlg_pl_001956 Dlg_pl_001963" />
-
-	<Reply
-		name="Dlg_pl_001963"
-		text="И не говори. Ну всё, ананаги бахнул, а теперь и по делам пора. Бывай!"
-		role="PLAYER"
-		scriptCondition="not(IsQuestComplete('BackToTroickoe'))"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001956"
-		text="А вот с этим я бы поспорил!"
-		role="PLAYER"
-		scriptCondition="IsQuestComplete('BackToTroickoe')"
-		nextReplies="Dlg_npc_001957" />
-
-	<Reply
-		name="Dlg_npc_001957"
-		text="Погоди, ты хочешь сказать, что пробовал ананагу лучше моей?"
-		role="NPC"
-		nextReplies="Dlg_pl_001958" />
-
-	<Reply
-		name="Dlg_pl_001958"
-		text="Ещё как пробовал! В далёких южных краях, откуда я родом, местный забулдыга Петро гонит такую, что тебе и не снилось!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001959" />
-
-	<Reply
-		name="Dlg_npc_001959"
-		text="Врёшь!"
-		role="NPC"
-		nextReplies="Dlg_pl_001960" />
-
-	<Reply
-		name="Dlg_pl_001960"
-		text="Да чтоб мне провалиться прямо на этом месте, если вру! Мягкий аромат, приятный вкус, но действие просто убойное. Три кружки - и ты уже готов."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001961" />
-
-	<Reply
-		name="Dlg_npc_001961"
-		text="Может, у тебя и рецептик этого чудо-пойла имеется?"
-		role="NPC"
-		nextReplies="Dlg_pl_001962" />
-
-	<Reply
-		name="Dlg_pl_001962"
-		text="Имеется, но с какой стати я должен показывать его тебе?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001964" />
-
-	<Reply
-		name="Dlg_npc_001964"
-		text="Ни с какой. Но если покажешь и эта штука меня впечатлит, то я поделюсь с тобой описанием одной очень интересной технологии."
-		role="NPC"
-		nextReplies="Dlg_pl_001965" />
-
-	<Reply
-		name="Dlg_pl_001965"
-		text="Что за технология?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001966" />
-
-	<Reply
-		name="Dlg_npc_001966"
-		text="Технология выдержки спиртного. Понимаешь ли, ананагу мало приготовить - её ещё необходимо выдержать. Только тогда она обретёт поистине великолепный вкус."
-		role="NPC"
-		nextReplies="Dlg_pl_001967" />
-
-	<Reply
-		name="Dlg_pl_001967"
-		text="Считай, что ты меня убедил. Вот, держи рецепт. "
-		role="PLAYER"
-		nextReplies="Dlg_npc_001968" />
-
-	<Reply
-		name="Dlg_npc_001968"
-		text="Действительно, впечатляет. Вот, держи. Соединишь свой рецепт и эту технологию - получишь поистине напиток, достойный богов. Всего тебе хорошего!"
-		role="NPC"
-		nextReplies="Dlg_pl_001969" />
-
-	<Reply
-		name="Dlg_pl_001969"
-		text="И тебе не хворать!"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('AnanagaTech_Quest'); CompleteQuest('AnanagaTech_Quest'); AddBook('r1_ananaga_technology'); EndConversation()" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer4_1_N01"
-		text="Эй, чужеземец, присядь ко мне."
-		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
-		nextReplies="r1m4_UnknownBar_Customer4_1_N02" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer4_1_N02"
-		text="Я весь внимание. "
-		role="PLAYER"
-		nextReplies="r1m4_UnknownBar_Customer4_1_N03" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer4_1_N03"
-		text="Я хочу тебе рассказать одну историю. Очень важную и очень интересную."
-		role="NPC"
-		nextReplies="Dlg_pl_001939 r1m4_UnknownBar_Customer4_1_N04" />
-
-	<Reply
-		name="Dlg_pl_001939"
-		text="Хорошо, я слушаю."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001940" />
-
-	<Reply
-		name="Dlg_npc_001940"
-		text="Было это очень давно… И случилось это где-то там… Нет, не там… Хотя, подожди, это точно случилось там! И было это очень давно, да… |Ты меня запутал!"
-		role="NPC"
-		nextReplies="Dlg_pl_001941" />
-
-	<Reply
-		name="Dlg_pl_001941"
-		text="Я же молчал."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001942" />
-
-	<Reply
-		name="Dlg_npc_001942"
-		text="Всё, иди отсюда, ты меня с мысли сбиваешь!"
-		role="NPC"
-		nextReplies="Dlg_pl_001943" />
-
-	<Reply
-		name="Dlg_pl_001943"
-		text="Женщины…"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="r1m4_UnknownBar_Customer4_1_N04"
-		text="Некогда мне твои истории слушать."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/Поиски гомера-->
 	<Reply
 		name="r1m4_UnknownBar_Customer5_1_N01"
 		text="Каким макаром в наших краях?"
@@ -9613,179 +8670,6 @@
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
-	<Reply
-		name="Dlg_npc_001927"
-		text="Грустно тут."
-		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) and not(QuestStatus('r3m2_OracleMemory')==Q_COMPLETED)"
-		nextReplies="Dlg_pl_001928" />
-
-	<Reply
-		name="Dlg_pl_001928"
-		text="Надоело рыбу ловить?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001944" />
-
-	<Reply
-		name="Dlg_npc_001944"
-		text="Жить мне надоело!"
-		role="NPC"
-		nextReplies="Dlg_pl_001945 Dlg_pl_001946" />
-
-	<Reply
-		name="Dlg_pl_001946"
-		text="Прости, но мне нечем тебе помочь."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001945"
-		text="Перестань ныть и займись чем-нибудь полезным. Наверняка в Ольме нужны люди, чтобы охранять их торговые караваны. Раз уж так сильно жизнь надоела, то ежедневные стычки с бандитами - это лучшее решение для тебя."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001947" />
-
-	<Reply
-		name="Dlg_npc_001947"
-		text="А ты ведь прав! Замечательная идея, прямо сейчас туда и поеду. Осталось только найти кого-нибудь, кто согласится меня подвезти."
-		role="NPC"
-		nextReplies="Dlg_pl_001949 Dlg_pl_001948" />
-
-	<Reply
-		name="Dlg_pl_001949"
-		text="Я могу подвезти, если заплатишь."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001950" />
-
-	<Reply
-		name="Dlg_npc_001950"
-		text="Спасибо огромное!"
-		role="NPC"
-		nextReplies="Dlg_pl_001951" />
-
-	<Reply
-		name="Dlg_pl_001951"
-		text="Пока не за что. Полезай в кабину!"
-		role="PLAYER"
-		scriptResult="TakeQuest('RybakToOlm_Quest'); TActivate('RybakToOlm'); GetCurNpc():SetSpokenCount(1); AddQuestItem('Rybak_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Rybak_P'); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001948"
-		text="Удачи!"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_001929"
-		text="Хочешь купить у меня рыбы?"
-		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
-		nextReplies="Dlg_pl_001930" />
-
-	<Reply
-		name="Dlg_pl_001930"
-		text="Нет."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001937" />
-
-	<Reply
-		name="Dlg_npc_001937"
-		text="Тогда не стой тут, только место занимаешь!"
-		role="NPC"
-		nextReplies="Dlg_pl_001938" />
-
-	<Reply
-		name="Dlg_pl_001938"
-		text="Ты продаёшь рыбу в посёлке возле самого океана? Зачем? Да тут каждый второй житель - рыбак."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003276" />
-
-	<Reply
-		name="Dlg_npc_003276"
-		text="Но-но! Я бы попросил! Не каждый второй, а каждый первый. И почему ты всё ещё здесь? Покупателей мне только распугиваешь!"
-		role="NPC"
-		nextReplies="Dlg_pl_003277" />
-
-	<Reply
-		name="Dlg_pl_003277"
-		text="Каких покупателей? Здесь нет никого. Зачем вообще другим рыбакам твоя рыба, если они могут наловить себе сами?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003285" />
-
-	<Reply
-		name="Dlg_npc_003285"
-		text="Так ты всех распугал, потому и нет никого. Всё, надоел мне этот трёп, иди доставай кого-нибудь другого!"
-		role="NPC"
-		nextReplies="Dlg_pl_003287" />
-
-	<Reply
-		name="Dlg_pl_003287"
-		text="Ладно-ладно..."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002873"
-		text="Стой, не стреляй! Ты, наверное, не помнишь меня? Я тот рыбак из Салиниома, которого ты подбросил до Ольма."
-		role="NPC"
-		scriptCondition="GetVar('Ryba').AsInt==1"
-		scriptResult="SetVar('Ryba',0)"
-		nextReplies="Dlg_pl_002874" />
-
-	<Reply
-		name="Dlg_pl_002874"
-		text="Почему же, прекрасно помню! Рад, что ты нашёл себя на этом поприще."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002875" />
-
-	<Reply
-		name="Dlg_npc_002875"
-		text="Да, мне тут очень нравится. И тем тяжелее мне дался этот выбор."
-		role="NPC"
-		nextReplies="Dlg_pl_002876" />
-
-	<Reply
-		name="Dlg_pl_002876"
-		text="Какой выбор, ты о чём?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002877" />
-
-	<Reply
-		name="Dlg_npc_002877"
-		text="В общем, ситуация такая: после того, как ты поднагадил торговцам со складом, они объявили тебя врагом и назначили круглую сумму за твою голову."
-		role="NPC"
-		nextReplies="Dlg_pl_002878" />
-
-	<Reply
-		name="Dlg_pl_002878"
-		text="Мда, нехорошая ситуация... Но я знал, на что шёл."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002879" />
-
-	<Reply
-		name="Dlg_npc_002879"
-		text="Ты поступил правильно. Хоть я сейчас и работаю на ТСП, я очень благодарен тебе за то, что ты не стал штурмовать склад вместе с ними и освободил нашего лидера. Денег у меня нет, ценных вещей тоже, поэтому просто прими мою благодарность и предупреждение. Даже и не пытайся сунуться в Ольм или Минин, тебя там сразу же арестуют, или даже чего хуже... Ну всё, мне пора, а то слишком длительное отсутствие на рабочем месте может вызвать ненужные подозрения! Всего тебе хорошего!"
-		role="NPC"
-		nextReplies="Dlg_pl_002880" />
-
-	<Reply
-		name="Dlg_pl_002880"
-		text="Спасибо огромное тебе за информацию! Удачи!"
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002971"
-		text="Вот мы и на месте. Спасибо, что подбросил, с меня причитается. "
-		role="NPC"
-		scriptCondition="QuestStatus('RybakToOlm_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
-		nextReplies="Dlg_pl_002972" />
-
-	<Reply
-		name="Dlg_pl_002972"
-		text="Удачи в поисках работы!"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-<!--Root/r1m4/Поиски гомера-->
 	<Reply
 		name="r1m4_RandomBar_Customer1_1_N01"
 		text="Кого только не приносит море... С чем пожаловал?"
@@ -9861,46 +8745,81 @@
 		text="Спасибо за помощь."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-<!--Root/r1m4/Торговец-->
+<!--Root/r1m4/Сюжетные/Маркизыч-->
 	<Reply
-		name="Olme_Bar_Traider_1_N01"
-		text="Что ты хочешь от меня?"
+		name="Dlg_npc_002677"
+		text="Вижу, ты кого-то ищешь."
 		role="NPC"
-		scriptCondition="QuestStatus('r1m4_TalkWithOldTraderAboutSecondDisk')==Q_TAKEN"
-		nextReplies="Olme_Bar_Traider_1_N02" />
+		scriptCondition="QuestStatus('FindGomerA_Quest1')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0  "
+		nextReplies="Dlg_pl_002678" />
 
 	<Reply
-		name="Olme_Bar_Traider_1_N02"
-		text="Мне нужна особая штука, похожая на эту."
+		name="Dlg_pl_002678"
+		text="Да, Гомер здесь?"
 		role="PLAYER"
-		nextReplies="Olme_Bar_Traider_1_N03" />
+		nextReplies="Dlg_npc_002679" />
 
 	<Reply
-		name="Olme_Bar_Traider_1_N03"
-		text="Да, у меня есть такая, отдам недорого... 10000 монет меня вполне устроит."
+		name="Dlg_npc_002679"
+		text="Он был тут, но час назад отправился на рыбалку."
 		role="NPC"
-		nextReplies="Olme_Bar_Traider_1_N04a Olme_Bar_Traider_1_N04b Olme_Bar_Traider_1_N0c" />
+		nextReplies="Dlg_pl_002680" />
 
 	<Reply
-		name="Olme_Bar_Traider_1_N0c"
-		text="Я подумаю."
+		name="Dlg_pl_002680"
+		text="Ты знаешь куда?"
 		role="PLAYER"
-		scriptResult="EndConversation();" />
+		nextReplies="Dlg_npc_002681" />
 
 	<Reply
-		name="Olme_Bar_Traider_1_N04b"
-		text="У меня не хватает денег."
-		role="PLAYER"
-		scriptCondition="10000>GetPlayerMoney()"
-		scriptResult="EndConversation();" />
+		name="Dlg_npc_002681"
+		text="Да. Видишь вон те скалы? Объедь их с правой стороны по бездорожью и поезжай вдоль берега до моста. Обычно он рыбачит там."
+		role="NPC"
+		nextReplies="Dlg_pl_002682" />
 
 	<Reply
-		name="Olme_Bar_Traider_1_N04a"
-		text="Я согласен."
+		name="Dlg_pl_002682"
+		text="Спасибо за помощь."
 		role="PLAYER"
-		scriptCondition="GetPlayerMoney()>=10000 "
-		scriptResult="CompleteQuest('r1m4_TalkWithOldTraderAboutSecondDisk'); AddQuestItem('quest_disk_2'); AddPlayerMoney(-10000); EndConversation();" />
-<!--Root/r1m4/Опциональные--><!--Root/r1m4/Опциональные/Освобождение склада-->
+		scriptResult="CompleteQuest('FindGomerA_Quest1'); TActivate('CreateHomerRybak'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002692"
+		text="И вот ты снова здесь. И снова кого-то ищешь."
+		role="NPC"
+		scriptCondition="IsQuestTaken('GomerSaliniom') and not(IsQuestComplete('GomerSaliniom'))"
+		nextReplies="Dlg_pl_002693" />
+
+	<Reply
+		name="Dlg_pl_002693"
+		text="И снова ищу Гомера. Он опять рыбу ловит?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002694" />
+
+	<Reply
+		name="Dlg_npc_002694"
+		text="Нет, в этот раз он куда-то поехал."
+		role="NPC"
+		nextReplies="Dlg_pl_002695" />
+
+	<Reply
+		name="Dlg_pl_002695"
+		text="И ты, конечно же, не знаешь куда?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002696" />
+
+	<Reply
+		name="Dlg_npc_002696"
+		text="Не-а. Но он что-то говорил про столицу северных торговцев, а под такое описание подходит только одно поселение в этих краях."
+		role="NPC"
+		nextReplies="Dlg_pl_002697" />
+
+	<Reply
+		name="Dlg_pl_002697"
+		text="Кажется, я тебя понял. Спасибо, бывай."
+		role="PLAYER"
+		scriptResult="CompleteQuest('GomerSaliniom'); EndConversation()" />
+<!--Root/r1m4/Сюжетные/Освобождение склада-->
 	<Reply
 		name="Olme_Bar_Customer2_1_N01"
 		text="Нужно что-нибудь?"
@@ -10209,321 +9128,152 @@
 		text="Обязательно. Ну, я пошёл."
 		role="PLAYER"
 		scriptResult="TActivate('RolikOdezhdaBegin'); RemoveQuestItem('ExtLeader_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ExtLeader_P'); SetTolerance(1100,1014,RS_ALLY); SetTolerance(1100,1084,RS_ALLY); SetTolerance(1100,1010,RS_ENEMY); AddHistory( 'r5_SkladRybaki' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/Айвен Го-->
 	<Reply
-		name="Dlg_npc_002652"
-		text="Эй, а я тебя помню! Вижу, тебе удалось победить этого механического монстра! Если не секрет, как ты это сделал?"
+		name="Dlg_npc_003103"
+		text="Я очень рад нашей встрече. Правда рад. Хотелось бы мне, чтобы она произошла в других обстоятельствах, но это, увы, невозможно. Я очень горжусь тем, что ты сделал правильный выбор."
 		role="NPC"
-		scriptCondition="QuestStatus('GomerOlme')==Q_TAKEN or QuestStatus('GomerSaliniom')==Q_TAKEN"
-		nextReplies="Dlg_pl_002653" />
+		scriptCondition="QuestStatus('ToAivenToHel_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
+		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('AivenTravels_Quest')"
+		nextReplies="Dlg_pl_003107" />
 
 	<Reply
-		name="Dlg_pl_002653"
-		text="Скажем так, взрывная волна действует на такие штуковины куда эффективнее пуль."
+		name="Dlg_pl_003107"
+		text="То, что написано в твоём журнале… Это правда?"
 		role="PLAYER"
-		nextReplies="Dlg_npc_002654" />
+		nextReplies="Dlg_npc_003108" />
 
 	<Reply
-		name="Dlg_npc_002654"
-		text="Вот оно как, оказывается. Ну да ладно, я всё равно не стал бы к этой махине и близко приближаться. Кстати, а что снова привело тебя в наши края?"
+		name="Dlg_npc_003108"
+		text="Да, это полная правда."
 		role="NPC"
-		nextReplies="Dlg_pl_002655" />
+		nextReplies="Dlg_pl_003109" />
 
 	<Reply
-		name="Dlg_pl_002655"
-		text="Желание вновь тебя послушать. Не в курсе ли ты, есть ли из этих мест дорога дальше на север? Туда, где всегда идёт снег и где очень-очень холодно."
+		name="Dlg_pl_003109"
+		text="Я не верю в это! Я же сам лично видел, как другие люди спокойно живут, едят, пьют, умирают… сам много раз был на волосок от смерти, сам напивался… И тут мне говорят, что этого всего не может быть!"
 		role="PLAYER"
-		nextReplies="Dlg_npc_002656" />
+		nextReplies="Dlg_npc_003110" />
 
 	<Reply
-		name="Dlg_npc_002656"
-		text='Есть одна такая дорога. Но, поверь мне, твоя фраза "очень-очень холодно" описывает лишь ничтожно малую часть того холода, с которым тебе предстоит столкнуться в Лиденклауде. Но, к счастью, ты туда не попадёшь.'
+		name="Dlg_npc_003110"
+		text="Видел или хотел видеть? Испытывал сами чувства или же их подобие, которое рисовал тебе мозг, основываясь на давно им забытых состояниях?"
 		role="NPC"
-		nextReplies="Dlg_pl_002657" />
+		nextReplies="Dlg_pl_003111" />
 
 	<Reply
-		name="Dlg_pl_002657"
-		text="Это ещё почему?"
+		name="Dlg_pl_003111"
+		text="Я не знаю…"
 		role="PLAYER"
-		nextReplies="Dlg_npc_002658" />
+		nextReplies="Dlg_npc_003112" />
 
 	<Reply
-		name="Dlg_npc_002658"
-		text="Дорога в те края начинается тоннелем в горе. Двадцать лет назад его завалило камнями."
+		name="Dlg_npc_003112"
+		text="Как по-твоему, сколько тебе лет?"
 		role="NPC"
-		nextReplies="Dlg_pl_002659" />
+		nextReplies="Dlg_pl_003113" />
 
 	<Reply
-		name="Dlg_pl_002659"
-		text="Других путей нету?"
+		name="Dlg_pl_003113"
+		text="Двадцать три."
 		role="PLAYER"
-		nextReplies="Dlg_npc_002660" />
+		nextReplies="Dlg_npc_003114" />
 
 	<Reply
-		name="Dlg_npc_002660"
-		text="Нет. Завалил проезд, кстати, твой друг Айвен, если тебе это интересно. Он сказал, что ни один местный житель не должен туда соваться, заложил заряд на вершине ближайшей скалы и бахнул."
+		name="Dlg_npc_003114"
+		text="Двадцать три года тебе было в 2011 году. А сейчас, если что, 2234. Хотя мало кто из ныне живущих об этом догадывается."
 		role="NPC"
-		nextReplies="Dlg_pl_002661" />
+		nextReplies="Dlg_pl_003115" />
 
 	<Reply
-		name="Dlg_pl_002661"
-		text="То есть ты знал, что Айвен, кроме Морских врат, ещё и по тому тоннелю ездил?! Почему ты мне сразу не сказал об этом?"
+		name="Dlg_pl_003115"
+		text="Что ты такое говоришь?! Ты хочешь сказать, что я жил ещё в старом мире?!"
 		role="PLAYER"
-		nextReplies="Dlg_npc_002662" />
+		nextReplies="Dlg_npc_003116" />
 
 	<Reply
-		name="Dlg_npc_002662"
-		text="Так ты и не спрашивал."
+		name="Dlg_npc_003116"
+		text="Да, и более того: все, кого ты встречал, жили в старом мире. После катастрофы увеличение популяции человеческого рода остановилось. Те, кто выжил и приспособился, просто забыли о старом мире и стали жить так, будто ничего не случилось."
 		role="NPC"
-		nextReplies="Dlg_pl_002663" />
+		nextReplies="Dlg_pl_003117" />
 
 	<Reply
-		name="Dlg_pl_002663"
-		text="Ну ты же мог мне... Хотя ладно, проехали. |Завал всегда можно расчистить, а вот что делать с холодом - большой вопрос. Есть какие-нибудь идеи?"
+		name="Dlg_pl_003117"
+		text="Я не могу в это поверить…"
 		role="PLAYER"
-		nextReplies="Dlg_npc_002664" />
+		nextReplies="Dlg_npc_003118" />
 
 	<Reply
-		name="Dlg_npc_002664"
-		text="Не совсем понимаю, как ты собрался тягать эти валуны, но уверен, у тебя уже есть план. А что насчёт холода - думаю, тебе могла бы помочь тёплая одежда со склада."
+		name="Dlg_npc_003118"
+		text="Я понимаю. Ты всегда в детстве отказывался верить моим словам и требовал доказательств существования Трёхглавого змея и Скатерти-самобранки… Пока ты это не увидишь сам, ты не поверишь. Что ж, я покажу тебе подтверждение моих слов. Надеюсь, это получится."
 		role="NPC"
-		nextReplies="Dlg_pl_002665" />
+		nextReplies="Dlg_pl_003119" />
 
 	<Reply
-		name="Dlg_pl_002665"
-		text="Но? Наверняка же мне что-то помешает эту одежду забрать."
+		name="Dlg_pl_003119"
+		text="Что ты задумал?"
 		role="PLAYER"
-		nextReplies="Dlg_npc_002666" />
+		scriptResult="StopPlayingCustomMusic()"
+		nextReplies="Dlg_npc_003120" />
 
 	<Reply
-		name="Dlg_npc_002666"
-		text="В корень зришь. Склад захватили местные и отказываются его освобождать, пока торговцы не выполнят их требования. Вроде бы последние как раз искали переговорщика. Раз уж тебе сильнее всех надо, можешь попытать счастья. Поговори вон с тем мужиком, он тебе расскажет, что да как."
+		name="Dlg_npc_003120"
+		text="Поехали в Кордан. Я хочу, чтобы ты выпил в местном баре."
 		role="NPC"
-		scriptResult="if QuestStatus('GomerSaliniom')==Q_TAKEN then CompleteQuest('GomerSaliniom') end CompleteQuestIfTaken('GomerOlme'); AddHistory( 'r5_Sklad' ); AddFadingMsgId( 'fm_history_got' );"
-		nextReplies="Dlg_pl_002667 Dlg_pl_003270" />
+		nextReplies="Dlg_pl_003121 Dlg_pl_003122" />
 
 	<Reply
-		name="Dlg_pl_003270"
-		text="Спасибо огромное, второй раз выручаешь."
+		name="Dlg_pl_003122"
+		text="А вот с этим есть небольшая проблема: я тут серьёзно испортил отношения с этой группировкой…"
 		role="PLAYER"
-		scriptCondition="2500 > GetPlayerMoney()"
-		nextReplies="Dlg_npc_003271" />
+		scriptCondition="QuestStatus('WaitTillEnd')==Q_COMPLETED"
+		nextReplies="Dlg_npc_003123" />
 
 	<Reply
-		name="Dlg_npc_003271"
-		text="Да чего уж там, пожалуйста. Но мог бы и на ананагу мне подкинуть мелочишки, раз уж так благодарен."
+		name="Dlg_npc_003123"
+		text="А, ты об этом недоразумении? Не переживай, они уже давно обо всем забыли."
 		role="NPC"
-		nextReplies="Dlg_pl_003272" />
+		nextReplies="Dlg_pl_003124" />
 
 	<Reply
-		name="Dlg_pl_003272"
-		text="Прости, сам на мели. Ну, я пошёл."
+		name="Dlg_pl_003124"
+		text="Как это забыли? После всего, что я натворил?"
 		role="PLAYER"
-		scriptResult="EndConversation()" />
+		nextReplies="Dlg_npc_003125" />
 
 	<Reply
-		name="Dlg_pl_002667"
-		text="Спасибо огромное. Вот, держи на ананагу. Постарайся не пропить всё разом."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 2500"
-		nextReplies="Dlg_npc_002668" />
-
-	<Reply
-		name="Dlg_npc_002668"
-		text="А вот этого я обещать не могу, ха-ха-ха!"
+		name="Dlg_npc_003125"
+		text="Просто поверь мне. Представь, что ты ни в чем не виноват и спокойно к ним проезжай."
 		role="NPC"
-		nextReplies="Dlg_pl_002669" />
+		nextReplies="Dlg_pl_003126" />
 
 	<Reply
-		name="Dlg_pl_002669"
-		text="Ладно, всего хорошего."
+		name="Dlg_pl_003126"
+		text="Ну, раз уж ты в этом так уверен."
 		role="PLAYER"
-		scriptResult="AddPlayerMoney(-2500); EndConversation()" />
-<!--Root/r1m4/Опциональные/Поиски муженька-->
+		scriptResult="SaveAllToleranceStatus(RS_ALLY); TDeactivate('trMorassTeleportBefore'); TActivate('RolikBegin_PlaneOut'); AddQuestItem('AivenGo_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'AivenGo_P');  EndConversation()" />
+
 	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N01"
-		text="Ох, молодой человек, беда у меня."
+		name="Dlg_pl_003121"
+		text="После всего, что я услышал, да, пожалуй, стоит выпить."
+		role="PLAYER"
+		scriptCondition="QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
+		scriptResult="TDeactivate('trMorassTeleportBefore'); TActivate('RolikBegin_PlaneOut'); TActivate('trConv'); AddQuestItem('AivenGo_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'AivenGo_P');  EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003104"
+		text="Вот мы и на месте. Давай же, закажи себе что-нибудь."
 		role="NPC"
-		scriptCondition="QuestStatus('q_FindHusbent')==Q_CANBEGIVEN and GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('r3m2_OracleMemory')==Q_COMPLETED)"
-		scriptResult="GetCurNpc():SetSpokenCount(1);"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N02" />
+		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN and QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
+		nextReplies="Dlg_pl_003127" />
 
 	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N02"
-		text="Что у вас случилось?"
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N03" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N03"
-		text="Муж мой поехал на рынок и пропал. Наверное, продал товар и запил. Вот я и пошла на его поиски. "
+		name="Dlg_npc_003141"
+		text="Удивлён?"
 		role="NPC"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N04a r1m4_SomeWhere_OldWomen1_1_N04b" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N04b"
-		text="Это твои проблемы, решай их сама."
-		role="PLAYER"
-		scriptResult=" EndConversation();" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N04a"
-		text="Я могу тебе помочь в его поисках."
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N05a" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N05a"
-		text="Спасибо тебе, молодой человек. Если найдёшь - привези его ко мне. На награду не поскуплюсь."
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N06a" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N06a"
-		text="Скажи хоть, как зовут твоего мужа? И опиши внешность."
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N07a" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N07a"
-		text='Ох, конечно! Зовут его Филимон. Кудрявый, с повязкой на лбу. Любит говорить "встала и пошла", а также неравнодушен к розовым кофточкам.'
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_OldWomen1_1_N09a" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_1_N09a"
-		text="Я все понял. Проедусь по местным барам, поищу."
-		role="PLAYER"
-		scriptResult="TakeQuest('q_FindHusbent'); EndConversation();" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N01"
-		text="Что ты хочешь от меня, мил человек?"
-		role="NPC"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN or QuestStatus('q_FH3')==Q_TAKEN"
-		scriptResult="CompleteQuestIfTaken('q_FH1'); if QuestStatus('q_FH3')~=Q_TAKEN then TakeQuest('q_FH3') end"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N02" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N02"
-		text="Филимон, твоя жена совсем с ног сбилась тебя искать, а ты тут хороводы водишь!"
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N03" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N03"
-		text="Устал я от нее! Дай отдохнуть, вокруг ёлки походить!"
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N04" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N04"
-		text="Давай-ка я тебя провожу до дому."
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N05" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N05"
-		text="Не хочу домой! И вообще ты мне надоел, встал и пошел отсюда."
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N06" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N06"
-		text="Лучше соглашайся по хорошему!"
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N07" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N07"
-		text="Слушай, давай я тебе денег дам, и ты от меня отстанешь?"
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N08a r1m4_SomeWhere_Husbent1_1_N08b" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N08b"
-		text="Нет, я пообещал, что верну тебя домой!"
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N09b" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N09b"
-		text="Делать нечего, поехали. Надоел ты мне уже."
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N10b" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N10b"
-		text="Вот и ладненько."
-		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken('q_FH3'); TakeQuest('q_FH2'); AddQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Filimon_P'); EndConversation()" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N08a"
-		text="Ладно, пожалею тебя. Сколько?"
-		role="PLAYER"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N09a" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N09a"
-		text="500 монет тебя устроит?"
-		role="NPC"
-		nextReplies="r1m4_SomeWhere_Husbent1_1_N10a" />
-
-	<Reply
-		name="r1m4_SomeWhere_Husbent1_1_N10a"
-		text="Я большего от тебя и не ждал. Давай сюда."
-		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken('q_FH3'); AddPlayerMoney(500); FailQuest('q_FindHusbent'); EndConversation()" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N01"
-		text="Ты привез мне моего мужа?"
-		role="NPC"
-		scriptCondition="QuestStatus('q_FindHusbent')==Q_TAKEN "
-		nextReplies="r1m4_SomeWhere_OldWomen1_2_N02a r1m4_SomeWhere_OldWomen1_2_N02b r1m4_SomeWhere_OldWomen1_2_N02c r1m4_SomeWhere_OldWomen1_2_N02d" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N02d"
-		text="Нет. Ищи его сама."
-		role="PLAYER"
-		scriptCondition="not(IsQuestComplete('q_FH3'))"
-		scriptResult="FailQuest('q_FindHusbent'); EndConversation();" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N02c"
-		text="Еще разыскиваю."
-		role="PLAYER"
-		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN or QuestStatus('q_FH3')==Q_TAKEN"
-		scriptResult="EndConversation();" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N02b"
-		text="Я его нашел. Он в деревне..."
-		role="PLAYER"
-		scriptCondition="QuestStatus('q_FH2')==Q_FAILED"
-		scriptResult="CompleteQuest('q_FindHusbent'); EndConversation();" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N02a"
-		text="Вон он, жив и здрав"
-		role="PLAYER"
-		scriptCondition="QuestStatus('q_FH2')==Q_TAKEN"
-		nextReplies="r1m4_SomeWhere_OldWomen1_2_N03a" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N03a"
-		text="Ох, даже не знаю, как тебя отблагодарить. У меня тут есть вещи на продажу, вот я тебе их и отдам."
-		role="NPC"
-		scriptResult="GetPlayerVehicle():AddItemsToRepository('tobacco', 1); GetPlayerVehicle():AddItemsToRepository('book', 1)  "
-		nextReplies="r1m4_SomeWhere_OldWomen1_2_N04a" />
-
-	<Reply
-		name="r1m4_SomeWhere_OldWomen1_2_N04a"
-		text="Спасибо. До свидания"
-		role="PLAYER"
-		scriptResult="CompleteQuest('q_FH2'); RemoveQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'Filimon_P'); EndConversation();" />
-<!--Root/r1m4/Опциональные/Мистер Шляпа 2-->
+		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN and QuestStatus('WaitTillEnd')==Q_COMPLETED"
+		nextReplies="Dlg_pl_003142" />
+<!--Root/r1m4/Опциональные/Поиски муженька--><!--Root/r1m4/Опциональные/Мистер Шляпа 2-->
 	<Reply
 		name="Dlg_npc_001952"
 		text="Рад тебя видеть. Снова."
@@ -10677,6 +9427,632 @@
 		text="Прощай."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); CompleteQuest('ToCordanToTikhomir_Quest'); EndConversation()" />
+<!--Root/r1m4/Опциональные/Неил-->
+	<Reply
+		name="Dlg_npc_001927"
+		text="Грустно тут."
+		role="NPC"
+		scriptCondition="(GetCurNpc():GetSpokenCount()==0) and not(QuestStatus('r3m2_OracleMemory')==Q_COMPLETED)"
+		nextReplies="Dlg_pl_001928" />
+
+	<Reply
+		name="Dlg_pl_001928"
+		text="Надоело рыбу ловить?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001944" />
+
+	<Reply
+		name="Dlg_npc_001944"
+		text="Жить мне надоело!"
+		role="NPC"
+		nextReplies="Dlg_pl_001945 Dlg_pl_001946" />
+
+	<Reply
+		name="Dlg_pl_001946"
+		text="Прости, но мне нечем тебе помочь."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001945"
+		text="Перестань ныть и займись чем-нибудь полезным. Наверняка в Ольме нужны люди, чтобы охранять их торговые караваны. Раз уж так сильно жизнь надоела, то ежедневные стычки с бандитами - это лучшее решение для тебя."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001947" />
+
+	<Reply
+		name="Dlg_npc_001947"
+		text="А ты ведь прав! Замечательная идея, прямо сейчас туда и поеду. Осталось только найти кого-нибудь, кто согласится меня подвезти."
+		role="NPC"
+		nextReplies="Dlg_pl_001949 Dlg_pl_001948" />
+
+	<Reply
+		name="Dlg_pl_001949"
+		text="Я могу подвезти, если заплатишь."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001950" />
+
+	<Reply
+		name="Dlg_npc_001950"
+		text="Спасибо огромное!"
+		role="NPC"
+		nextReplies="Dlg_pl_001951" />
+
+	<Reply
+		name="Dlg_pl_001951"
+		text="Пока не за что. Полезай в кабину!"
+		role="PLAYER"
+		scriptResult="TakeQuest('RybakToOlm_Quest'); TActivate('RybakToOlm'); GetCurNpc():SetSpokenCount(1); AddQuestItem('Rybak_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Rybak_P'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001948"
+		text="Удачи!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002873"
+		text="Стой, не стреляй! Ты, наверное, не помнишь меня? Я тот рыбак из Салиниома, которого ты подбросил до Ольма."
+		role="NPC"
+		scriptCondition="GetVar('Ryba').AsInt==1"
+		scriptResult="SetVar('Ryba',0)"
+		nextReplies="Dlg_pl_002874" />
+
+	<Reply
+		name="Dlg_pl_002874"
+		text="Почему же, прекрасно помню! Рад, что ты нашёл себя на этом поприще."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002875" />
+
+	<Reply
+		name="Dlg_npc_002875"
+		text="Да, мне тут очень нравится. И тем тяжелее мне дался этот выбор."
+		role="NPC"
+		nextReplies="Dlg_pl_002876" />
+
+	<Reply
+		name="Dlg_pl_002876"
+		text="Какой выбор, ты о чём?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002877" />
+
+	<Reply
+		name="Dlg_npc_002877"
+		text="В общем, ситуация такая: после того, как ты поднагадил торговцам со складом, они объявили тебя врагом и назначили круглую сумму за твою голову."
+		role="NPC"
+		nextReplies="Dlg_pl_002878" />
+
+	<Reply
+		name="Dlg_pl_002878"
+		text="Мда, нехорошая ситуация... Но я знал, на что шёл."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002879" />
+
+	<Reply
+		name="Dlg_npc_002879"
+		text="Ты поступил правильно. Хоть я сейчас и работаю на ТСП, я очень благодарен тебе за то, что ты не стал штурмовать склад вместе с ними и освободил нашего лидера. Денег у меня нет, ценных вещей тоже, поэтому просто прими мою благодарность и предупреждение. Даже и не пытайся сунуться в Ольм или Минин, тебя там сразу же арестуют, или даже чего хуже... Ну всё, мне пора, а то слишком длительное отсутствие на рабочем месте может вызвать ненужные подозрения! Всего тебе хорошего!"
+		role="NPC"
+		nextReplies="Dlg_pl_002880" />
+
+	<Reply
+		name="Dlg_pl_002880"
+		text="Спасибо огромное тебе за информацию! Удачи!"
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002971"
+		text="Вот мы и на месте. Спасибо, что подбросил, с меня причитается. "
+		role="NPC"
+		scriptCondition="QuestStatus('RybakToOlm_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_002972" />
+
+	<Reply
+		name="Dlg_pl_002972"
+		text="Удачи в поисках работы!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+<!--Root/r1m4/Опциональные/Ананага-->
+	<Reply
+		name="r1m4_UnknownBar_Customer3_1_N01"
+		text="Привет. Садись и выпей со мной рюмочку ананаги."
+		role="NPC"
+		scriptCondition="not(IsQuestComplete('AnanagaTech_Quest')) and GetCurNpc():GetSpokenCount()==0"
+		nextReplies="r1m4_UnknownBar_Customer3_1_N02a r1m4_UnknownBar_Customer3_1_N02b" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer3_1_N02b"
+		text="Спасибо, но у меня дела."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer3_1_N02a"
+		text="А почему бы и нет. "
+		role="PLAYER"
+		nextReplies="r1m4_UnknownBar_Customer3_1_N03a" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer3_1_N03a"
+		text="Ну, как тебе?"
+		role="NPC"
+		nextReplies="r1m4_UnknownBar_Customer3_1_N04a" />
+
+	<Reply
+		name="r1m4_UnknownBar_Customer3_1_N04a"
+		text="Кхе-кхе. Неплоха, вполне неплоха…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001955" />
+
+	<Reply
+		name="Dlg_npc_001955"
+		text="А то! Лучшая!"
+		role="NPC"
+		nextReplies="Dlg_pl_001956 Dlg_pl_001963" />
+
+	<Reply
+		name="Dlg_pl_001963"
+		text="И не говори. Ну всё, ананаги бахнул, а теперь и по делам пора. Бывай!"
+		role="PLAYER"
+		scriptCondition="not(IsQuestComplete('BackToTroickoe'))"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001956"
+		text="А вот с этим я бы поспорил!"
+		role="PLAYER"
+		scriptCondition="IsQuestComplete('BackToTroickoe')"
+		nextReplies="Dlg_npc_001957" />
+
+	<Reply
+		name="Dlg_npc_001957"
+		text="Погоди, ты хочешь сказать, что пробовал ананагу лучше моей?"
+		role="NPC"
+		nextReplies="Dlg_pl_001958" />
+
+	<Reply
+		name="Dlg_pl_001958"
+		text="Ещё как пробовал! В далёких южных краях, откуда я родом, местный забулдыга Петро гонит такую, что тебе и не снилось!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001959" />
+
+	<Reply
+		name="Dlg_npc_001959"
+		text="Врёшь!"
+		role="NPC"
+		nextReplies="Dlg_pl_001960" />
+
+	<Reply
+		name="Dlg_pl_001960"
+		text="Да чтоб мне провалиться прямо на этом месте, если вру! Мягкий аромат, приятный вкус, но действие просто убойное. Три кружки - и ты уже готов."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001961" />
+
+	<Reply
+		name="Dlg_npc_001961"
+		text="Может, у тебя и рецептик этого чудо-пойла имеется?"
+		role="NPC"
+		nextReplies="Dlg_pl_001962" />
+
+	<Reply
+		name="Dlg_pl_001962"
+		text="Имеется, но с какой стати я должен показывать его тебе?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001964" />
+
+	<Reply
+		name="Dlg_npc_001964"
+		text="Ни с какой. Но если покажешь и эта штука меня впечатлит, то я поделюсь с тобой описанием одной очень интересной технологии."
+		role="NPC"
+		nextReplies="Dlg_pl_001965" />
+
+	<Reply
+		name="Dlg_pl_001965"
+		text="Что за технология?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001966" />
+
+	<Reply
+		name="Dlg_npc_001966"
+		text="Технология выдержки спиртного. Понимаешь ли, ананагу мало приготовить - её ещё необходимо выдержать. Только тогда она обретёт поистине великолепный вкус."
+		role="NPC"
+		nextReplies="Dlg_pl_001967" />
+
+	<Reply
+		name="Dlg_pl_001967"
+		text="Считай, что ты меня убедил. Вот, держи рецепт. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_001968" />
+
+	<Reply
+		name="Dlg_npc_001968"
+		text="Действительно, впечатляет. Вот, держи. Соединишь свой рецепт и эту технологию - получишь поистине напиток, достойный богов. Всего тебе хорошего!"
+		role="NPC"
+		nextReplies="Dlg_pl_001969" />
+
+	<Reply
+		name="Dlg_pl_001969"
+		text="И тебе не хворать!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('AnanagaTech_Quest'); CompleteQuest('AnanagaTech_Quest'); AddBook('r1_ananaga_technology'); EndConversation()" />
+<!--Root/r1m4/Опциональные/Поиски муженька/Аллушка-->
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N01"
+		text="Ох, молодой человек, беда у меня."
+		role="NPC"
+		scriptCondition="QuestStatus('q_FindHusbent')==Q_CANBEGIVEN and GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('r3m2_OracleMemory')==Q_COMPLETED)"
+		scriptResult="GetCurNpc():SetSpokenCount(1);"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N02" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N02"
+		text="Что у вас случилось?"
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N03" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N03"
+		text="Муж мой поехал на рынок и пропал. Наверное, продал товар и запил. Вот я и пошла на его поиски. "
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N04a r1m4_SomeWhere_OldWomen1_1_N04b" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N04b"
+		text="Это твои проблемы, решай их сама."
+		role="PLAYER"
+		scriptResult=" EndConversation();" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N04a"
+		text="Я могу тебе помочь в его поисках."
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N05a" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N05a"
+		text="Спасибо тебе, молодой человек. Если найдёшь - привези его ко мне. На награду не поскуплюсь."
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N06a" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N06a"
+		text="Скажи хоть, как зовут твоего мужа? И опиши внешность."
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N07a" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N07a"
+		text='Ох, конечно! Зовут его Филимон. Кудрявый, с повязкой на лбу. Любит говорить "встала и пошла", а также неравнодушен к розовым кофточкам.'
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_OldWomen1_1_N09a" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_1_N09a"
+		text="Я все понял. Проедусь по местным барам, поищу."
+		role="PLAYER"
+		scriptResult="TakeQuest('q_FindHusbent'); EndConversation();" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N01"
+		text="Ты привез мне моего мужа?"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FindHusbent')==Q_TAKEN "
+		nextReplies="r1m4_SomeWhere_OldWomen1_2_N02a r1m4_SomeWhere_OldWomen1_2_N02b r1m4_SomeWhere_OldWomen1_2_N02c r1m4_SomeWhere_OldWomen1_2_N02d" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N02d"
+		text="Нет. Ищи его сама."
+		role="PLAYER"
+		scriptCondition="not(IsQuestComplete('q_FH3'))"
+		scriptResult="FailQuest('q_FindHusbent'); EndConversation();" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N02c"
+		text="Еще разыскиваю."
+		role="PLAYER"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN or QuestStatus('q_FH3')==Q_TAKEN"
+		scriptResult="EndConversation();" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N02b"
+		text="Я его нашел. Он в деревне..."
+		role="PLAYER"
+		scriptCondition="QuestStatus('q_FH2')==Q_FAILED"
+		scriptResult="CompleteQuest('q_FindHusbent'); EndConversation();" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N02a"
+		text="Вон он, жив и здрав"
+		role="PLAYER"
+		scriptCondition="QuestStatus('q_FH2')==Q_TAKEN"
+		nextReplies="r1m4_SomeWhere_OldWomen1_2_N03a" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N03a"
+		text="Ох, даже не знаю, как тебя отблагодарить. У меня тут есть вещи на продажу, вот я тебе их и отдам."
+		role="NPC"
+		scriptResult="GetPlayerVehicle():AddItemsToRepository('tobacco', 1); GetPlayerVehicle():AddItemsToRepository('book', 1)  "
+		nextReplies="r1m4_SomeWhere_OldWomen1_2_N04a" />
+
+	<Reply
+		name="r1m4_SomeWhere_OldWomen1_2_N04a"
+		text="Спасибо. До свидания"
+		role="PLAYER"
+		scriptResult="CompleteQuest('q_FH2'); RemoveQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'Filimon_P'); EndConversation();" />
+<!--Root/r1m4/Опциональные/Поиски муженька/Фермер Дик-->
+	<Reply
+		name="Dlg_npc_002623"
+		text="Опять ты! Надеюсь, ты не для того весь этот долгий путь проделал, чтобы те деньги из меня выбить?"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and IsQuestComplete('WorkGiver_Quest1') and GetCurNpc():GetSpokenCount() == 0 and GetVar('FarmerDickRejection').AsInt==0    "
+		nextReplies="Dlg_pl_002624" />
+
+	<Reply
+		name="Dlg_pl_002624"
+		text="Деньги? Какие ещё деньги?|А-а-а, всё, вспомнил тебя. Нет, запихни эти гроши себе... под маску, я тут по другому поводу. Не знаешь, где Филимон?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002628" />
+
+	<Reply
+		name="Dlg_npc_002625"
+		text="Тебе чего надо?"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and not(IsQuestComplete('WorkGiver_Quest1')) and GetCurNpc():GetSpokenCount() == 0 and GetVar('FarmerDickRejection').AsInt==0"
+		nextReplies="Dlg_pl_002626" />
+
+	<Reply
+		name="Dlg_pl_002626"
+		text="Я ищу Филимона."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002628" />
+
+	<Reply
+		name="Dlg_npc_002628"
+		text="А на кой ляд он тебе сдался?"
+		role="NPC"
+		nextReplies="Dlg_pl_002629" />
+
+	<Reply
+		name="Dlg_pl_002629"
+		text="Не твоего ума это дело."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002630" />
+
+	<Reply
+		name="Dlg_npc_002630"
+		text="Аллушка тебя наняла, нутром чую! Ничего тебе не скажу, не стану друга подставлять! Разве что..."
+		role="NPC"
+		nextReplies="Dlg_pl_002631" />
+
+	<Reply
+		name="Dlg_pl_002631"
+		text="Что?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002627" />
+
+	<Reply
+		name="Dlg_npc_002627"
+		text="Разве что ты проставишься! Но учти, что пью я не сивуху всякую, а качественные напитки, а такие стоят недёшево. 700 монет бутылка."
+		role="NPC"
+		nextReplies="Dlg_pl_002632 Dlg_pl_002673 Dlg_pl_002674" />
+
+	<Reply
+		name="Dlg_pl_002674"
+		text="Ну уж нет, ни монеты ты от меня не получишь."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002675" />
+
+	<Reply
+		name="Dlg_npc_002675"
+		text="Эвон оно как! Ну, значит, Аллушка сегодня своего муженька не увидит."
+		role="NPC"
+		nextReplies="Dlg_pl_002676" />
+
+	<Reply
+		name="Dlg_pl_002676"
+		text="Это мы ещё посмотрим."
+		role="PLAYER"
+		scriptResult="SetVar('FarmerDickRejection',1) EndConversation();" />
+
+	<Reply
+		name="Dlg_pl_002673"
+		text="Дороговато выходит, у меня пока столько нет."
+		role="PLAYER"
+		scriptCondition="700 >= GetPlayerMoney()"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_002632"
+		text="Вот, держи. Говори теперь, где Филимон!"
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 700"
+		nextReplies="Dlg_npc_002683" />
+
+	<Reply
+		name="Dlg_npc_002683"
+		text="Филимон действительно был тут, выпил бутыль местной ананаги, а после уехал на священный холм водить хоровод вокруг ели. "
+		role="NPC"
+		nextReplies="Dlg_pl_002684" />
+
+	<Reply
+		name="Dlg_pl_002684"
+		text="Ты сейчас серьёзно?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002685" />
+
+	<Reply
+		name="Dlg_npc_002685"
+		text="Так точно! Хороводы - это очень давняя традиция этих мест, и каждый рыбак сочтёт за честь съездить на Священный холм и обойти пару кругов вокруг ели.  "
+		role="NPC"
+		nextReplies="Dlg_pl_002686" />
+
+	<Reply
+		name="Dlg_pl_002686"
+		text="Где находится этот священный холм?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002687" />
+
+	<Reply
+		name="Dlg_npc_002687"
+		text="Дальше по дороге. Развилок там нет, так что не заблудишься."
+		role="NPC"
+		nextReplies="Dlg_pl_002688" />
+
+	<Reply
+		name="Dlg_pl_002688"
+		text="Поеду посмотрю на эти ваши хороводы."
+		role="PLAYER"
+		scriptResult="CompleteQuest('q_FH1'); TakeQuest('q_FH3'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002689"
+		text="Ну что, теперь готов меня угостить?"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetCurNpc():GetSpokenCount() > 0"
+		nextReplies="Dlg_pl_002690 Dlg_pl_002691" />
+
+	<Reply
+		name="Dlg_pl_002691"
+		text="У меня пока нет денег."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_002690"
+		text="Вот, держи. Надеюсь, оно того стоит."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 700"
+		nextReplies="Dlg_npc_002683" />
+
+	<Reply
+		name="Dlg_npc_003288"
+		text="Ну что там с Филимоном? Ха-ха-ха!"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetVar('FarmerDickRejection').AsInt==1"
+		nextReplies="Dlg_pl_003289 Dlg_pl_003290" />
+
+	<Reply
+		name="Dlg_pl_003290"
+		text="Тебя не касается!"
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003289"
+		text="Я в тупике..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003291" />
+
+	<Reply
+		name="Dlg_npc_003291"
+		text="А я говорил, что сам не найдёшь! Сколько я там просил, кажется, 700 монет? Забудь. Новая цена - 1500."
+		role="NPC"
+		nextReplies="Dlg_pl_003292" />
+
+	<Reply
+		name="Dlg_pl_003292"
+		text="Сколько?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003293" />
+
+	<Reply
+		name="Dlg_npc_003293"
+		text="А это чтобы не выпендривался лишний раз. Хочешь найти Филимона - плати. Нет - знаешь, где выход."
+		role="NPC"
+		nextReplies="Dlg_pl_003294 Dlg_pl_003295" />
+
+	<Reply
+		name="Dlg_pl_003295"
+		text="Ну уж нет, счастливо оставаться! С такими-то ценами."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003294"
+		text="Эх, что ещё остаётся... Вот, держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() > 1500"
+		scriptResult="AddPlayerMoney(-1500)"
+		nextReplies="Dlg_npc_002683" />
+<!--Root/r1m4/Опциональные/Поиски муженька/Филимон-->
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N01"
+		text="Что ты хочешь от меня, мил человек?"
+		role="NPC"
+		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN or QuestStatus('q_FH3')==Q_TAKEN"
+		scriptResult="CompleteQuestIfTaken('q_FH1'); if QuestStatus('q_FH3')~=Q_TAKEN then TakeQuest('q_FH3') end"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N02" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N02"
+		text="Филимон, твоя жена совсем с ног сбилась тебя искать, а ты тут хороводы водишь!"
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N03" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N03"
+		text="Устал я от нее! Дай отдохнуть, вокруг ёлки походить!"
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N04" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N04"
+		text="Давай-ка я тебя провожу до дому."
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N05" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N05"
+		text="Не хочу домой! И вообще ты мне надоел, встал и пошел отсюда."
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N06" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N06"
+		text="Лучше соглашайся по хорошему!"
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N07" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N07"
+		text="Слушай, давай я тебе денег дам, и ты от меня отстанешь?"
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N08a r1m4_SomeWhere_Husbent1_1_N08b" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N08b"
+		text="Нет, я пообещал, что верну тебя домой!"
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N09b" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N09b"
+		text="Делать нечего, поехали. Надоел ты мне уже."
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N10b" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N10b"
+		text="Вот и ладненько."
+		role="PLAYER"
+		scriptResult="CompleteQuestIfTaken('q_FH3'); TakeQuest('q_FH2'); AddQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Filimon_P'); EndConversation()" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N08a"
+		text="Ладно, пожалею тебя. Сколько?"
+		role="PLAYER"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N09a" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N09a"
+		text="500 монет тебя устроит?"
+		role="NPC"
+		nextReplies="r1m4_SomeWhere_Husbent1_1_N10a" />
+
+	<Reply
+		name="r1m4_SomeWhere_Husbent1_1_N10a"
+		text="Я большего от тебя и не ждал. Давай сюда."
+		role="PLAYER"
+		scriptResult="CompleteQuestIfTaken('q_FH3'); AddPlayerMoney(500); FailQuest('q_FindHusbent'); EndConversation()" />
 <!--Root/r1m3/Сюжетные--><!--Root/r1m3/Опциональные--><!--Root/r1m3/Опциональные/Кони и Блайд-->
 	<Reply
 		name="KonnyBlide_hellodlg0"
@@ -11179,7 +10555,111 @@
 		text="Ничего страшного, я, пожалуй, поеду."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-<!--Root/r1m3/Опциональные/Отбить Пешт--><!--Root/r1m3/Опциональные/Торговец картой-->
+<!--Root/r1m3/Опциональные/Отбить Пешт-->
+	<Reply
+		name="Dlg_npc_003193"
+		text="И снова привет. Ну как, нашёл на севере то, что искал?"
+		role="NPC"
+		scriptCondition="(IsQuestComplete('d_GiveMoneyToBase_Quest') or GetVar('QuickWayAlt').AsInt==1) and IsQuestComplete('r1m3_FindThiefFromFatherHouse') and not(QuestStatus('Disk2OrakulLisa')==Q_COMPLETED) and GetCurNpc():GetSpokenCount() == 0"
+		scriptResult="SetVar('QuickWayAlt',2); GetCurNpc():SetSpokenCount(1)"
+		nextReplies="Dlg_pl_003194" />
+
+	<Reply
+		name="Dlg_pl_003194"
+		text="Можно и так сказать."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003195" />
+
+	<Reply
+		name="Dlg_npc_003195"
+		text="Кстати, я тут поспрашивал людей насчёт этого твоего Серго, и, что вполне ожидаемо, никто не смог его вспомнить."
+		role="NPC"
+		nextReplies="Dlg_pl_003196" />
+
+	<Reply
+		name="Dlg_pl_003196"
+		text="Очень странно."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003197" />
+
+	<Reply
+		name="Dlg_npc_003197"
+		text="Я тоже так подумал, и потом решил поспрашивать не конкретно про Серго, а просто про необычно одетых чужестранцев, говорящих с заметным акцентом. И тут один работяга кое-что припомнил."
+		role="NPC"
+		nextReplies="Dlg_pl_003198" />
+
+	<Reply
+		name="Dlg_pl_003198"
+		text="Я весь внимание."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003199" />
+
+	<Reply
+		name="Dlg_npc_003199"
+		text='Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий "злобно выглядящий тип в просторном балахоне и тряпьём на голове". '
+		role="NPC"
+		nextReplies="Dlg_pl_003200" />
+
+	<Reply
+		name="Dlg_pl_003200"
+		text="Быть этого не может..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003201" />
+
+	<Reply
+		name="Dlg_npc_003201"
+		text="Дальше интересней. Когда этот работяга рассказал обо всём Айвену, тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
+		role="NPC"
+		nextReplies="Dlg_pl_003202" />
+
+	<Reply
+		name="Dlg_pl_003202"
+		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003203" />
+
+	<Reply
+		name="Dlg_npc_003203"
+		text="Постой! Я вижу, ты в состоянии за себя постоять. Да и вооружение твоего грузовика довольно на уровне."
+		role="NPC"
+		nextReplies="Dlg_pl_003204" />
+
+	<Reply
+		name="Dlg_pl_003204"
+		text="Ближе к делу, чего ты хочешь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003205" />
+
+	<Reply
+		name="Dlg_npc_003205"
+		text="Мы тут формируем тяжело вооружённый отряд, чтобы помочь другой торговой коалиции разгромить бандитов, завахтивших Пешт, и вернуть город под их управление. И ты бы там очень приходился."
+		role="NPC"
+		nextReplies="Dlg_pl_003207 Dlg_pl_003206" />
+
+	<Reply
+		name="Dlg_pl_003207"
+		text="Звучит здорово, я в деле. Но только вот..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003208" />
+
+	<Reply
+		name="Dlg_npc_003208"
+		text="Не переживай, тебе заплатят. 25000 монет за успех операции. Встреться с командиром армии вот здесь, он тебе всё расскажет."
+		role="NPC"
+		nextReplies="Dlg_pl_003209" />
+
+	<Reply
+		name="Dlg_pl_003209"
+		text="Выдвигаюсь."
+		role="PLAYER"
+		scriptResult="TakeQuest('FightForPesht'); TActivate('cinFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003206"
+		text="Нет, спасибо. Сами решайте свои проблемы."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+<!--Root/r1m3/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003011"
 		text="Здравствуй, путешественник. Не желаешь приобрести у меня подробную карту окрестных земель? Всего 7000 монет."
@@ -11353,13 +10833,6 @@
 		scriptResult="TakeQuest( 'd_RideAcrossBase_Quest' ); TakeQuest( 'd_GetBomb_Quest' ); EndConversation()" />
 
 	<Reply
-		name="out2"
-		text="Не видишь?! Проезд закрыт!"
-		role="NPC"
-		scriptCondition="IsQuestTaken( 'd_GiveMoneyToBase_Quest' )  and  not(IsQuestComplete( 'd_GiveMoneyToBase_Quest' ))  and  not(IsQuestComplete( 'd_GetBomb_Quest' ))  and  not(IsQuestTaken( 'd_GetBomb_Quest' ))"
-		nextReplies="Dlg_pl_dd2148" />
-
-	<Reply
 		name="PeshtGuardian_hellodlg2"
 		text="Я слышал взрыв даже отсюда! А когда по реке пошли волны, то я сразу понял, что ты выполнил обещание."
 		role="NPC"
@@ -11367,11 +10840,10 @@
 		nextReplies="Dlg_pl_d3d174" />
 
 	<Reply
-		name="out3"
-		text="Вижу, тебя заботит вопрос?"
-		role="NPC"
-		scriptCondition="(IsQuestTaken('d_FindLisaInPesht_Quest'))  and  not(IsQuestComplete('d_FindLisaInPesht_Quest'))"
-		nextReplies="Dlg_pl_d3d266" />
+		name="Dlg_pl_d3d174"
+		text="Моста больше нет, значит, угрозы безопасности тоже. Пропустишь через город?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001771" />
 
 	<Reply
 		name="Dlg_npc_001771"
@@ -11393,18 +10865,34 @@
 		nextReplies="Dlg_pl_den191" />
 
 	<Reply
-		name="BaseGuardian_hellodlg1"
-		text="Смотрите! Вот и наш весельчак. Снова захотелось нервишки пощекотать? На этот раз мы тебя так просто не отпустим!"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_GiveMoneyToBase_Quest')  and  (GetCurNpc():GetSpokenCount() > 0)  and  not(IsQuestComplete('d_GetBomb_Quest'))  and  not(IsQuestComplete('d_GiveMoneyToBase_Quest')) and not(IsQuestFailed('d_GiveMoneyToBase_Quest')) and not(IsQuestFailed('d_GetBomb_Quest'))"
-		nextReplies="Dlg_pl_den1198 Dlg_pl_den1199" />
+		name="Dlg_pl_den191"
+		text="Э-э-э… Ребят, мне б проехать…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_den192" />
 
 	<Reply
-		name="BaseGuardian_hellodlg2"
-		text="Плати! Цена проезда через мост – 1500!"
+		name="Dlg_npc_den192"
+		text="Ха-ха-ха, ну насмешил! Что, в Пеште развернули, что ли? Боятся, значит! Правильно делают, что боятся. Скоро Пешт будет принадлежать нам!"
 		role="NPC"
-		scriptCondition="QuestStatus('d_MoveToPesht_Quest')==Q_COMPLETED"
-		nextReplies="Dlg_pl_d3d180 Dlg_pl_d3d181" />
+		nextReplies="Dlg_pl_den193" />
+
+	<Reply
+		name="Dlg_pl_den193"
+		text="Искренне желаю вам удачи, но можно мне всё-таки проехать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_den195" />
+
+	<Reply
+		name="Dlg_npc_den195"
+		text="Знаешь, как только ты сюда приехал, я хотел тебя убить. Но теперь не хочу."
+		role="NPC"
+		nextReplies="Dlg_pl_den196" />
+
+	<Reply
+		name="Dlg_pl_den196"
+		text="Это значит, что вы меня пропустите?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001773" />
 
 	<Reply
 		name="Dlg_npc_001773"
@@ -11424,6 +10912,70 @@
 		text="Может, мне удастся найти другой путь."
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
+
+	<Reply
+		name="BaseGuardian_hellodlg1"
+		text="Смотрите! Вот и наш весельчак. Снова захотелось нервишки пощекотать? На этот раз мы тебя так просто не отпустим!"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_GiveMoneyToBase_Quest')  and  (GetCurNpc():GetSpokenCount() > 0)  and  not(IsQuestComplete('d_GetBomb_Quest'))  and  not(IsQuestComplete('d_GiveMoneyToBase_Quest')) and not(IsQuestFailed('d_GiveMoneyToBase_Quest')) and not(IsQuestFailed('d_GetBomb_Quest'))"
+		nextReplies="Dlg_pl_den1198 Dlg_pl_den1199" />
+
+	<Reply
+		name="Dlg_pl_den1198"
+		text="Постойте! Я готов заплатить за проезд."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 10000"
+		nextReplies="Dlg_npc_dd2200" />
+
+	<Reply
+		name="Dlg_pl_den1199"
+		text="Спокойно, я уже почти заработал деньги..."
+		role="PLAYER"
+		scriptResult=" EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_dd2200"
+		text="А что нам мешает просто отнять у тебя деньги, а труп зарыть?"
+		role="NPC"
+		nextReplies="Dlg_pl_dd2201" />
+
+	<Reply
+		name="Dlg_pl_dd2201"
+		text="Э-э-э... ум, честь и совесть?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_dd2202" />
+
+	<Reply
+		name="Dlg_npc_dd2202"
+		text="Вот за что люблю парня, так за чувство юмора! Ладно, плати и проезжай. Но знай, еще раз покажешься поблизости - лично задавлю, шляпа!"
+		role="NPC"
+		nextReplies="Dlg_pl_dd2203" />
+
+	<Reply
+		name="Dlg_pl_dd2203"
+		text="Фу-у-у... Обошлось."
+		role="PLAYER"
+		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  TActivate('BASEATTACK');  AddPlayerMoney( -10000 ); TDeactivate('trQuickWay'); getObj('Pesht'):SetBelong(1012);  EndConversation()" />
+
+	<Reply
+		name="BaseGuardian_hellodlg2"
+		text="Плати! Цена проезда через мост – 1500!"
+		role="NPC"
+		scriptCondition="QuestStatus('d_MoveToPesht_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_pl_d3d180 Dlg_pl_d3d181" />
+
+	<Reply
+		name="Dlg_pl_d3d180"
+		text="Берите деньги."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 1500"
+		scriptResult="AddPlayerMoney( -1500 );  TActivate('BASEATTACK');  EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_d3d181"
+		text="Слишком высокая цена для меня."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 <!--Root/r1m3/Сюжетные/Бандит в Пеште-->
 	<Reply
 		name="BanditPeshtGuardian_hellodlg0"
@@ -11431,6 +10983,12 @@
 		role="NPC"
 		scriptCondition="IsQuestComplete('d_GiveMoneyToBase_Quest')     and     (GetCurNpc():GetSpokenCount() == 0) and not(QuestStatus('FightForPesht')==Q_TAKEN) and not(QuestStatus('FightForPesht')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_d3d184" />
+
+	<Reply
+		name="Dlg_pl_d3d184"
+		text="Как нехорошо получилось."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001776" />
 
 	<Reply
 		name="Dlg_npc_001776"
@@ -11450,6 +11008,48 @@
 		role="NPC"
 		scriptCondition="(IsQuestTaken('d_BombInAsgard_Quest'))  and not(IsQuestComplete('d_BombInAsgard_Quest')) and not(IsQuestFailed('d_BombInAsgard_Quest')) "
 		nextReplies="Dlg_pl_dd2156" />
+
+	<Reply
+		name="Dlg_pl_dd2156"
+		text="Мне нужна взрывчатка."
+		role="PLAYER"
+		nextReplies="Dlg_npc_dd2157" />
+
+	<Reply
+		name="Dlg_npc_dd2157"
+		text="Сколько именно Вам нужно?"
+		role="NPC"
+		nextReplies="Dlg_pl_dd2158" />
+
+	<Reply
+		name="Dlg_pl_dd2158"
+		text="Ну-у, я даже и не знаю как-то..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_dd2159" />
+
+	<Reply
+		name="Dlg_npc_dd2159"
+		text="Так, давайте начнём с того, для чего вам вообще нужна взрывчатка?"
+		role="NPC"
+		nextReplies="Dlg_pl_dd2160" />
+
+	<Reply
+		name="Dlg_pl_dd2160"
+		text="Эм, ну... Мне проезд надо в одном месте рассчистить, и там преграда выглядит крайне прочно... и... вот поэтому я и не знаю, сколько мне может понадобиться."
+		role="PLAYER"
+		nextReplies="Dlg_npc_dd2161" />
+
+	<Reply
+		name="Dlg_npc_dd2161"
+		text="Так-с, проезд, значит, рассчистить. Могу я узнать, по поручению руководителя какого города вы это делаете?"
+		role="NPC"
+		nextReplies="Dlg_pl_dd2162" />
+
+	<Reply
+		name="Dlg_pl_dd2162"
+		text="Р-руководителя? Ну... эм... Пешта! Да. Меня послал руководитель Пешта."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001778" />
 
 	<Reply
 		name="Dlg_npc_001778"
@@ -11473,8 +11073,7 @@
 		name="Dlg_pl_003240"
 		text="Ладно, ладно, сам выйду."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_BombInAsgard_Quest' ); 
- EndConversation()" />
+		scriptResult="CompleteQuest( 'd_BombInAsgard_Quest' ); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Шахтер со взрывчаткой для моста -->
 	<Reply
 		name="Bomber_hellodlg0"
@@ -11484,11 +11083,34 @@
 		nextReplies="Dlg_pl_dd2164" />
 
 	<Reply
-		name="Bomber_hellodlg1"
-		text="Ну и ну, это было просто потрясающе! Где ты научился так сражаться?"
+		name="Dlg_pl_dd2164"
+		text="Я не устраиваться к вам пришёл. Мне нужна взрывчатка."
+		role="PLAYER"
+		nextReplies="Dlg_npc_dd2165" />
+
+	<Reply
+		name="Dlg_npc_dd2165"
+		text='Вот так так! Очередной нуждающийся, которому отказали в Асгарде! Не зря мы отстёгиваем долю ихнему бармену, чтобы он всех "одиночек" к нам заворачивал. Сколько тебе нужно? Только честно говори, самому мне без разницы, для чего она тебе.'
 		role="NPC"
-		scriptCondition="QuestStatus('d_BombShahtsReturn_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_dd2170" />
+		nextReplies="Dlg_pl_dd2166" />
+
+	<Reply
+		name="Dlg_pl_dd2166"
+		text="Столько, чтобы взорвать мост."
+		role="PLAYER"
+		nextReplies="Dlg_npc_dd2167" />
+
+	<Reply
+		name="Dlg_npc_dd2167"
+		text="Так, дай смекнуть… |Ну, это тебе немного надо. Просто заложи у самых опор, и весь мост сложится как карточный домик! Ха-ха-ха!"
+		role="NPC"
+		nextReplies="Dlg_pl_dd2168" />
+
+	<Reply
+		name="Dlg_pl_dd2168"
+		text="Сколько с меня?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001791" />
 
 	<Reply
 		name="Dlg_npc_001791"
@@ -11513,6 +11135,19 @@
 		text="Звучит как выгодное предложение! Сейчас я им покажу!"
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken( 'd_BombInAsgard2_Quest'); CompleteQuestIfTaken( 'd_BombInShahts_Quest' );  TActivate('SHAHTSBANDIT');  GetCurNpc():SetSpokenCount( 1 );  LeaveTown(true)" />
+
+	<Reply
+		name="Bomber_hellodlg1"
+		text="Ну и ну, это было просто потрясающе! Где ты научился так сражаться?"
+		role="NPC"
+		scriptCondition="QuestStatus('d_BombShahtsReturn_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_dd2170" />
+
+	<Reply
+		name="Dlg_pl_dd2170"
+		text="Да нигде особо. То тут, то там."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001795" />
 
 	<Reply
 		name="Dlg_npc_001795"
@@ -11546,308 +11181,59 @@
 		nextReplies="Dlg_pl_d3d215" />
 
 	<Reply
-		name="MininMer_hellodlg1thdgfh"
-		text="Огромное спасибо. Просо нечеловеческое! Мы наконец можем вздохнуть свободно, не опасаясь за свои жизни"
-		role="NPC"
-		scriptCondition="(IsQuestTaken('d_ReturntoMerOfMinin_Quest'))  and  not(IsQuestComplete('d_ReturntoMerOfMinin_Quest'))"
-		nextReplies="Dlg_pl_d3d229" />
-<!--Root/r1m3/Сюжетные/Рабочий Минина 1-->
-	<Reply
-		name="MininWorker_hellodlg0"
-		text="Издалека, видать, приехал! По делам иль приключений ищешь?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_MoveToMinin_Quest')    and   not(IsQuestComplete( 'd_MoveToMinin_Quest' )) and GetCurNpc():GetSpokenCount() == 0  "
-		nextReplies="Dlg_pl_d3d176" />
-
-	<Reply
-		name="MininWorker_hellodlg1"
-		text="Ну что, как тебе лачуга Айвена? Кстати, зачем она тебе нужна? После стольких лет?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_TalkAboutVrataInMinin_Quest')  and  not(IsQuestComplete('d_TalkAboutVrataInMinin_Quest'))"
-		nextReplies="Dlg_pl_d3d191" />
-
-	<Reply
-		name="MininWorker_hellodlg15"
-		text="Ну, как там моя мотивация? Почему-то я не вижу у нее двух нулей?!"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_MoveToMinin_Quest')    and   not(IsQuestComplete( 'd_MoveToMinin_Quest' ))  and  (GetCurNpc():GetSpokenCount() > 0)"
-		nextReplies="Dlg_pl_d3d206 Dlg_pl_d3d207" />
-
-	<Reply
-		name="MininWorker_hellodlg2"
-		text="Ну как, справился?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_ReturntoMerOfMinin_Quest')   and   not(IsQuestComplete('d_ReturntoMerOfMinin_Quest'))   and   not(IsQuestTaken('d_MoveFreelancersToOilMine_Quest'))   and   not(IsQuestComplete('d_MoveFreelancersToOilMine_Quest'))   and   not(IsQuestTaken('d_IntrigaOfMerMinin_Quest'))  and   not(IsQuestComplete('d_IntrigaOfMerMinin_Quest'))"
-		nextReplies="Dlg_pl_d3d232 Dlg_pl_001839" />
-
-	<Reply
-		name="Dlg_pl_001839"
-		text="Вышка освобождена."
+		name="Dlg_pl_d3d215"
+		text="Шарки послал помочь с проблемой."
 		role="PLAYER"
-		scriptCondition="not(IsQuestComplete('d_FindBanditBaseOfOilMine_Quest'))"
-		nextReplies="Dlg_npc_001840" />
+		nextReplies="Dlg_npc_d3d217" />
 
 	<Reply
-		name="Dlg_npc_001840"
-		text="Хорошая новость. Но не для тебя. Работать там моя бригада не будет!"
+		name="Dlg_npc_d3d217"
+		text="В нашем городе нет никаких проблем."
 		role="NPC"
-		nextReplies="Dlg_pl_001841" />
+		nextReplies="Dlg_pl_d3d218" />
 
 	<Reply
-		name="Dlg_pl_001841"
-		text="Да и не надо. Вышка теперь свободна от бандитов, и, я уверен, найдётся много желающих там поработать. А ты сиди тут со своей забастовкой. Но только имей в виду, что работать скоро будет негде. "
+		name="Dlg_pl_d3d218"
+		text="Разве? А вот рабочие утверждают совсем обратное. Почему приостановлены все поставки на север?"
 		role="PLAYER"
-		scriptResult="FailQuestIfTaken('d_MoveToMer_Quest'); CompleteQuest('d_ReturntoMerOfMinin_Quest'); FailQuestIfTaken('d_FindWorkersToOilMine_Quest'); TakeQuest('d_PayWorkersMoney_Quest'); EndConversation()" />
+		nextReplies="Dlg_npc_d3d219" />
 
 	<Reply
-		name="MininWorker_hellodlg3"
-		text="Узнал что-нибудь?"
+		name="Dlg_npc_d3d219"
+		text="Мы закончили."
 		role="NPC"
-		scriptCondition="IsQuestTaken('d_TrueAboutMer_Quest')  and  not(IsQuestComplete('d_TrueAboutMer_Quest'))"
-		nextReplies="Dlg_pl_d3d242" />
+		nextReplies="Dlg_pl_d3d220" />
 
 	<Reply
-		name="Dlg_npc_000640"
-		text="Видишь ли, встает еще одна проблема. Как ты уже заметил, у нас в городе напряг с бензином. Точнее, совсем его нет. Наши караваны не могут ехать на север. А путь до Ольма не самый простой! Один ты его не найдешь. Если поможешь, то сможешь вместе с нашим караваном поехать на север. Они покажут дорогу в Ольм. А сейчас обратись к мэру. Скажи, что Шарки послал помочь с проблемой. "
+		name="Dlg_pl_d3d220"
+		text="Я могу помочь с проблемами!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d222" />
+
+	<Reply
+		name="Dlg_npc_d3d222"
+		text="Так, или ты добровольно выметаешься, или я зову охрану!"
 		role="NPC"
-		nextReplies="Dlg_pl_000641" />
+		nextReplies="Dlg_pl_d3d223" />
 
 	<Reply
-		name="Dlg_pl_000641"
-		text="Хорошо, сейчас к нему и пойду"
+		name="Dlg_pl_d3d223"
+		text="Всё, не горячись! Считай, меня уже нет."
 		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001813"
-		text="Денег не дам."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001814" />
-
-	<Reply
-		name="Dlg_npc_001814"
-		text="Нет денег - нет информации."
-		role="NPC"
-		nextReplies="Dlg_pl_001815" />
-
-	<Reply
-		name="Dlg_pl_001815"
-		text="Никуда не уходи, сейчас добуду пару золотых."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); 
- EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_001816"
-		text="Как только Айвен узнал об этом, он забрал своего сына и уехал. Больше я его не видел. Я ещё тогда здорово расстроился. Мне так нравилось слушать его истории: про механических гигантов, про огни в небе, про царство вечного холода."
-		role="NPC"
-		nextReplies="Dlg_pl_001817" />
-
-	<Reply
-		name="Dlg_pl_001817"
-		text='Ты хотел сказать "сказки"?'
-		role="PLAYER"
-		nextReplies="Dlg_npc_001818" />
-
-	<Reply
-		name="Dlg_npc_001818"
-		text='Он упорно называл их "историями". Я ему верил. В конце концов, он был исследователем, а я сыном работяги.'
-		role="NPC"
-		nextReplies="Dlg_pl_001819" />
-
-	<Reply
-		name="Dlg_pl_001819"
-		text="Можно мне осмотреть его жилище?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001820" />
-
-	<Reply
-		name="Dlg_npc_001820"
-		text="Можно, но только ничего оттуда не бери. Сам потом лично проверю!"
-		role="NPC"
-		nextReplies="Dlg_pl_001821" />
-
-	<Reply
-		name="Dlg_pl_001821"
-		text="Обещаю, что ничего не возьму. Спасибо за рассказ."
-		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_MoveToMinin_Quest' );  TActivate('FATHERHOUSE');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001822"
-		text="Ладно, посмотрим, что у вас тут за мэр."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_TalkAboutVrataInMinin_Quest');  EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_001823"
-		text="Как прошло?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_TalkSharkiAfterMer_Quest') and not(IsQuestComplete('d_TalkSharkiAfterMer_Quest'))"
-		nextReplies="Dlg_pl_001824" />
-
-	<Reply
-		name="Dlg_pl_001824"
-		text="Он выгнал меня, едва я начал спрашивать про проблемы города."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001825" />
-
-	<Reply
-		name="Dlg_npc_001825"
-		text="Это в его стиле. Как только начнёшь ему рассказывать про проблемы, он либо сразу же злится, либо находит сотню-другую поводов закончить беседу."
-		role="NPC"
-		nextReplies="Dlg_pl_001826" />
-
-	<Reply
-		name="Dlg_pl_001826"
-		text="Значит, придётся решать проблемы без него. Что мне нужно сделать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001827" />
-
-	<Reply
-		name="Dlg_npc_001827"
-		text="Во-первых, нефтяную вышку захватили бандиты и требуют огромные деньги за освобождение. Мэр им платить не собирается, однако вышибать их оттуда силой тоже не спешит."
-		role="NPC"
-		nextReplies="Dlg_pl_001828" />
-
-	<Reply
-		name="Dlg_pl_001828"
-		text="Перебить бандитов на скважине. Звучит несложно. А во-вторых?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001829" />
-
-	<Reply
-		name="Dlg_npc_001829"
-		text="А во-вторых, у нас тут забастовка!"
-		role="NPC"
-		nextReplies="Dlg_pl_001830" />
-
-	<Reply
-		name="Dlg_pl_001830"
-		text="Забастовка? Против чего?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001831" />
-
-	<Reply
-		name="Dlg_npc_001831"
-		text="Против рабских условий труда! Работа тяжёлая, платят гроши. Вот мы и отказываемся батрачить! Вернее, отказывались, пока вышку не захватили. Теперь забастовка потеряла смысл."
-		role="NPC"
-		nextReplies="Dlg_pl_001832" />
-
-	<Reply
-		name="Dlg_pl_001832"
-		text="Ладно, начнём с бандитов, а там посмотрим, что делать."
-		role="PLAYER"
-		scriptResult=" TActivate('ATTACKOILMINE'); CompleteQuest('d_TalkSharkiAfterMer_Quest');  EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003039"
-		text="Снова ты. С чем на этот раз пожаловал?"
-		role="NPC"
-		scriptCondition="QuestStatus('SharkyVyshka')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
-		nextReplies="Dlg_pl_003040 Dlg_pl_003229" />
-
-	<Reply
-		name="Dlg_pl_003229"
-		text="Вижу, ты больше не бастуешь. Удалось-таки заставить мэра улучшить условия труда?"
-		role="PLAYER"
-		scriptCondition="QuestStatus('d_PayWorkersMoney_Quest')==Q_COMPLETED"
-		nextReplies="Dlg_npc_003230" />
-
-	<Reply
-		name="Dlg_npc_003230"
-		text="Ага, как же, удалось... С тех пор, как ты выбил бандитов, а потом ещё и любезно нанял другую бригаду, наша забастовка совсем потеряла свою суть. Ты не представляешь, на какие ухищрения мне пришлось пойти, чтобы мэр снова нас нанял! Ну да ладно, кто старое помянет... |Ты то здесь какими судьбами?"
-		role="NPC"
-		nextReplies="Dlg_pl_003231" />
-
-	<Reply
-		name="Dlg_pl_003231"
-		text="В нашем с тобой первом разговоре ты как-то вскользь упомянул о царстве вечного холода, про которое тебе рассказывал Айвен. Я бы хотел узнать побольше об этом."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003041" />
-
-	<Reply
-		name="Dlg_pl_003040"
-		text="В нашем первом разговоре ты как-то вскользь упомянул о царстве вечного холода, про которое тебе рассказывал Айвен. Я бы хотел узнать побольше об этом."
-		role="PLAYER"
-		scriptCondition="QuestStatus('d_IntrigaOfMerMinin_Quest')==Q_COMPLETED"
-		nextReplies="Dlg_npc_003041" />
-
-	<Reply
-		name="Dlg_npc_003041"
-		text="А я бы хотел сегодня хорошенечко выпить в баре. Понимаешь, к чему я клоню?"
-		role="NPC"
-		nextReplies="Dlg_pl_003042 Dlg_pl_003043" />
-
-	<Reply
-		name="Dlg_pl_003043"
-		text="У меня пока нет денег."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003042"
-		text='Да. Вот, держи 1000 монет, должно хватить на "хорошенечко выпить".'
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 1000"
-		scriptResult="CompleteQuest('SharkyVyshka')"
-		nextReplies="Dlg_npc_003044" />
-
-	<Reply
-		name="Dlg_npc_003044"
-		text="Что ты хочешь узнать?"
-		role="NPC"
-		nextReplies="Dlg_pl_003048" />
-
-	<Reply
-		name="Dlg_pl_003048"
-		text="Что именно тебе рассказывал Айвен? Расскажи во всех, даже мельчайших подробностях."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003049" />
-
-	<Reply
-		name="Dlg_npc_003049"
-		text="Он рассказывал, что есть на свете такое место, где круглый год и круглые сутки небо покрыто густыми свинцовыми облаками, а земля всегда прикрыта толстым слоем странных хлопьев, почти постоянно идущих с неба."
-		role="NPC"
-		nextReplies="Dlg_pl_003050" />
-
-	<Reply
-		name="Dlg_pl_003050"
-		text="Бессмыслица какая-то... Свинцовые тучи, хлопья идущие с неба... Неужели эта территория реальна?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003051" />
-
-	<Reply
-		name="Dlg_npc_003051"
-		text="Конечно же, нет! Хоть он и говорил, что попасть туда можно через какой-то проезд в Хеле, но я вообще в это не поверил, даже тогда! Это ж надо было придумать - хлопья, идущие с неба! Бред же! Все знают, что с неба может идти только вода!"
-		role="NPC"
-		nextReplies="Dlg_pl_003052" />
-
-	<Reply
-		name="Dlg_pl_003052"
-		text="Я тебя понял, спасибо за информацию.|А теперь пора навестить Гомера. Надеюсь, он всё ещё в Салиниоме."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(2); AddPlayerMoney(-1000); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003045"
-		text="Раздобыл деньги?"
-		role="NPC"
-		scriptCondition="QuestStatus('SharkyVyshka')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 1"
-		nextReplies="Dlg_pl_003042 Dlg_pl_003047" />
-
-	<Reply
-		name="Dlg_pl_003047"
-		text="Пока ещё нет."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-<!--Root/r1m3/Сюжетные/Рабочий Минина 2-->
+		scriptResult="CompleteQuest('d_TalkMerAboutOilMineAttack_Quest');  EndConversation()" />
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1--><!--Root/r1m3/Сюжетные/Рабочий Минина 2-->
 	<Reply
 		name="MininWorker2_hellodlg0"
 		text="А вот и ты! Мы уже подготовили машину, осталось только погрузить в неё бочки с нефтью. Отправляемся сразу, как закончим погрузку. Следуй за караваном - не заплутаешь."
 		role="NPC"
 		scriptCondition="IsQuestTaken('d_MoveCanistraToMinin_Quest')   and   not(IsQuestComplete('d_MoveCanistraToMinin_Quest'))"
 		nextReplies="Dlg_pl_d3d249" />
+
+	<Reply
+		name="Dlg_pl_d3d249"
+		text="Надеюсь, у вас получится решить все проблемы в вашем городе."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001095" />
 
 	<Reply
 		name="Dlg_npc_001095"
@@ -11932,6 +11318,68 @@
 		text="До скорого!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_MoveCanistraToMinin_Quest');  if IsQuestComplete('d_TalkAboutVrataInMinin_Quest') then TakeQuest('MorskieVrata2_Quest');  TakeQuest('d_FindVrata_Quest') end;  AddBook('r1_book_travel_kupchina2');  TActivate ('CARAVANTOR1M4');  EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_002077"
+		text="И снова привет. Ну как, нашёл на севере то, что искал?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('Zachisti4_Quest') and not(IsQuestComplete('Zachisti4_Quest')) "
+		nextReplies="Dlg_pl_002078" />
+
+	<Reply
+		name="Dlg_pl_002078"
+		text="Можно и так сказать. Мне сказали, что ты хотел меня видеть?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002430" />
+
+	<Reply
+		name="Dlg_npc_002430"
+		text="Да, хотел. Я тут поспрашивал людей насчёт этого твоего Серго, и, что вполне ожидаемо, никто не смог его вспомнить."
+		role="NPC"
+		nextReplies="Dlg_pl_002474" />
+
+	<Reply
+		name="Dlg_pl_002474"
+		text="Очень странно."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002531" />
+
+	<Reply
+		name="Dlg_npc_002531"
+		text="Я тоже так подумал, и потом решил поспрашивать не конкретно про Серго, а просто про необычно одетых чужестранцев, говорящих с заметным акцентом. И тут один работяга кое-что припомнил."
+		role="NPC"
+		nextReplies="Dlg_pl_002532" />
+
+	<Reply
+		name="Dlg_pl_002532"
+		text="Я весь внимание."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002533" />
+
+	<Reply
+		name="Dlg_npc_002533"
+		text='Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий "злобно выглядящий тип в просторном балахоне и тряпьём на голове". '
+		role="NPC"
+		nextReplies="Dlg_pl_002534" />
+
+	<Reply
+		name="Dlg_pl_002534"
+		text="Быть этого не может..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_002535" />
+
+	<Reply
+		name="Dlg_npc_002535"
+		text="Дальше интересней. Этот работяга поделился этой информацией с Айвеном, и тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
+		role="NPC"
+		nextReplies="Dlg_pl_002536 Dlg_pl_002536_extra Dlg_pl_002881" />
+
+	<Reply
+		name="Dlg_pl_002536"
+		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
+		role="PLAYER"
+		scriptCondition="IsQuestTaken('Zachisti4_Quest') and not(IsQuestComplete('Zachisti4_Quest')) "
+		scriptResult="CompleteQuest('Zachisti4_Quest'); TakeQuest('r1m3_MoveToOraculAfterThief'); TActivate('TRIGGER_LISAAFTERTHIEF'); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Наемный рабочий-->
 	<Reply
 		name="WorkerForMoney_hellodlg0"
@@ -11941,11 +11389,42 @@
 		nextReplies="Dlg_pl_d3d251" />
 
 	<Reply
+		name="Dlg_pl_d3d251"
+		text="Да. Нужны рабочие на нефтяную вышку возле Минина."
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d252" />
+
+	<Reply
+		name="Dlg_npc_d3d252"
+		text="Ты что, сдурел? Она уже несколько месяцев захвачена бандитами! Угробить нас решил?"
+		role="NPC"
+		nextReplies="Dlg_pl_d3d253" />
+
+	<Reply
+		name="Dlg_pl_d3d253"
+		text="Бандитов там больше нет. Могу прямо сейчас тебя туда отвезти, чтобы ты убедился, что там безопасно. Не хочешь там работать - уговаривать не буду, желающих и так много."
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d254" />
+
+	<Reply
+		name="Dlg_npc_d3d254"
+		text="Подожди. Если ты говоришь правду, то считай, что у тебя есть моя лучшая бригада. Но потребуются подъёмные. 2500 монет вполне хватит."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d255 Dlg_pl_001835" />
+
+	<Reply
 		name="Dlg_pl_001835"
 		text="Мне нужно время, чтобы достать деньги."
 		role="PLAYER"
 		scriptCondition="2500 > GetPlayerMoney()"
 		scriptResult="TakeQuest('d_PayWorkersMoney_Quest'); GetCurNpc():SetSpokenCount(1);  EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_d3d255"
+		text="Хорошо, держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 2500"
+		scriptResult="AddPlayerMoney( -2500 );  TakeQuest('d_PayWorkersMoney_Quest');  CompleteQuest('d_PayWorkersMoney_Quest');  FailQuest('d_FindWorkersToOilMine_Quest');  TakeQuest('d_MoveFreelancersToOilMine_Quest'); AddQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Brigada_P');  EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_001836"
@@ -11976,6 +11455,12 @@
 		nextReplies="Dlg_pl_d3d247" />
 
 	<Reply
+		name="Dlg_pl_d3d247"
+		text="Получается, что да."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001833" />
+
+	<Reply
 		name="Dlg_npc_001833"
 		text="Тебе повезло, по какой-то причине бандиты не стали разворовывать склады, и здесь бочек нефти на три каравана минимум. При удачном раскладе можно отправлять машину уже сегодня."
 		role="NPC"
@@ -11998,337 +11483,7 @@
 		text="Ну, добро, тогда я поехал."
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken('d_MoveWorkersToOilMine_Quest');  CompleteQuestIfTaken('d_MoveFreelancersToOilMine_Quest');  TakeQuest('d_MoveCanistraToMinin_Quest'); RemoveQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Brigada_P');  EndConversation()" />
-<!--Root/r1m3/Сюжетные/Бармен Асгарда-->
-	<Reply
-		name="AsgardBarman_hellodlg0"
-		text="Вас что-нибудь интересует?"
-		role="NPC"
-		scriptCondition="QuestStatus('d_BombInAsgard2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
-		nextReplies="Dlg_pl_xyz447" />
-
-	<Reply
-		name="Dlg_pl_xyz447"
-		text="Кроме вашего города, где я ещё могу купить взрывчатку?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz450" />
-
-	<Reply
-		name="Dlg_npc_xyz450"
-		text="Дайте подумать. |Да, есть ещё одно место. "
-		role="NPC"
-		nextReplies="Dlg_pl_xyz451" />
-
-	<Reply
-		name="Dlg_pl_xyz451"
-		text="Тоже магазин?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz452" />
-
-	<Reply
-		name="Dlg_npc_xyz452"
-		text="Не совсем. Это шахтёрский посёлок, который закупает взрывчатку отсюда. Среди них много проходимцев, которые с радостью поделятся своими запасами за отнюдь не большие деньги."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz453" />
-
-	<Reply
-		name="Dlg_pl_xyz453"
-		text="И как туда проехать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz454" />
-
-	<Reply
-		name="Dlg_npc_xyz454"
-		text="Ну-у, тут есть два варианта: либо заплатить мне и спокойно доехать до этого города, либо попытаться найти его самому, что будет крайне затруднительно. Выбор за Вами."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz455" />
-
-	<Reply
-		name="Dlg_pl_xyz455"
-		text="Так и знал, что будешь пытаться денег выкачать! Сколько?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001780" />
-
-	<Reply
-		name="Dlg_npc_001780"
-		text="7000 монет."
-		role="NPC"
-		nextReplies="Dlg_pl_001781 Dlg_pl_001782 Dlg_pl_001785" />
-
-	<Reply
-		name="Dlg_pl_001785"
-		text="У меня нет таких денег."
-		role="PLAYER"
-		scriptCondition="7000 > GetPlayerMoney()"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001782"
-		text="Вот уж нет! Сам найду и без твоей помощи!"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001781"
-		text="Держи."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 7000"
-		nextReplies="Dlg_npc_001783" />
-
-	<Reply
-		name="Dlg_npc_001783"
-		text="Приятно иметь дело с разумным человеком. Посёлок находится здесь."
-		role="NPC"
-		nextReplies="Dlg_pl_001784" />
-
-	<Reply
-		name="Dlg_pl_001784"
-		text="Так близко?! Эх, надо было искать самому!"
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_BombInAsgard2_Quest');  AddPlayerMoney( -7000 );  EndConversation()" />
-
-	<Reply
-		name="AsgardBarman_hellodlg1out"
-		text="Снова ты."
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 0"
-		nextReplies="Dlg_pl_xyz449" />
-
-	<Reply
-		name="Dlg_pl_xyz449"
-		text="Мне кажется, я понял, о чем ты говорил во время нашей последней встречи. Может, у тебя еще и ключик от тоннеля имеется?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz456" />
-
-	<Reply
-		name="Dlg_npc_xyz456"
-		text="Если хорошенько поискать... Это, конечно, потребует некоторых усилий, да еще потерянное время, упущенная выгода. Думаю, 10000 монет будет достаточно."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz457 Dlg_pl_xyz465" />
-
-	<Reply
-		name="Dlg_pl_xyz465"
-		text="Нет уж, увольте. С такими покупками я совсем разорюсь."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_xyz457"
-		text="Уговорил, вот, держи."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 15000"
-		nextReplies="Dlg_npc_xyz458" />
-
-	<Reply
-		name="Dlg_npc_xyz458"
-		text="Приятно иметь дело с разумным человеком. Вот ключ. Думаю, разберёшься, как им пользоваться."
-		role="NPC"
-		nextReplies="Dlg_pl_xyz459" />
-
-	<Reply
-		name="Dlg_pl_xyz459"
-		text="Надеюсь, оно того стоило."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindKeyInTunel_Quest'); FailQuestIfTaken('d_FindZasadaInTunel_Quest');  TakeQuest('d_OpenTunel_Quest');  TDeactivate ('ZASADATUNEL');  AddPlayerMoney( -15000 );  AddQuestItem('quest_key_for_tunnel'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_tunnel');  EndConversation()" />
-
-	<Reply
-		name="AsgardBarman_hellodlg2"
-		text="Передумал? Если забыл, то цена за ключ 15000."
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 3"
-		nextReplies="Dlg_pl_xyz457 Dlg_pl_xyz465" />
-
-	<Reply
-		name="AsgardBarman_hellodlg76785657"
-		text="Я бармен. Я могу вам помочь?"
-		role="NPC"
-		nextReplies="Dlg_pl_000632" />
-
-	<Reply
-		name="Dlg_pl_000632"
-		text="Да, я ехал за девушкой. Она должна была остановиться в этом городе или хотя бы проехать рядом."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000633" />
-
-	<Reply
-		name="Dlg_npc_000633"
-		text="Дай подумать... М-м-м... Э-э-э-э-э... Ах, да! Она была здесь. Думаю, она уехала через тоннель!"
-		role="NPC"
-		nextReplies="Dlg_pl_000634" />
-
-	<Reply
-		name="Dlg_pl_000634"
-		text="Тоннель?! Какой тоннель?! Ты мне можешь показать, где он находится?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_xyz452" />
-
-	<Reply
-		name="Dlg_npc_001786"
-		text="Снова ты? Скидки не сделаю. Хочешь узнать, куда ехать, - плати 7000 монет."
-		role="NPC"
-		scriptCondition="QuestStatus('d_BombInAsgard2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() > 0"
-		nextReplies="Dlg_pl_001787 Dlg_pl_001788" />
-
-	<Reply
-		name="Dlg_pl_001788"
-		text="Я ещё не собрал деньги."
-		role="PLAYER"
-		scriptResult=" EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_001787"
-		text="Вот, держи!"
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 7000"
-		nextReplies="Dlg_npc_001789" />
-
-	<Reply
-		name="Dlg_npc_001789"
-		text="Приятно иметь дело с разумным человеком. Посёлок находится вот здесь."
-		role="NPC"
-		nextReplies="Dlg_pl_001790" />
-
-	<Reply
-		name="Dlg_pl_001790"
-		text="Так близко?! Эх, надо было искать самому!"
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_BombInAsgard2_Quest');  AddPlayerMoney( -7000 );  EndConversation()" />
-
-	<Reply
-		name="AsgardBarman_hellodlg3"
-		text="Приветствую! Чего налить?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('r1m3_ToLisaToAsgard')     and     not(IsQuestComplete('r1m3_ToLisaToAsgard')) "
-		nextReplies="Dlg_pl_001800" />
-
-	<Reply
-		name="Dlg_pl_001800"
-		text="Водки, грамм сто."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001799" />
-
-	<Reply
-		name="Dlg_npc_001799"
-		text="Прошу. Первую за счёт заведения."
-		role="NPC"
-		nextReplies="Dlg_pl_001801" />
-
-	<Reply
-		name="Dlg_pl_001801"
-		text="Благодарю. Я тут хотел спросить…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001802" />
-
-	<Reply
-		name="Dlg_npc_001802"
-		text="Для этого я здесь и нахожусь! О чём ты хочешь узнать?"
-		role="NPC"
-		nextReplies="Dlg_pl_001803" />
-
-	<Reply
-		name="Dlg_pl_001803"
-		text="Я слышал, что тут неподалёку от города есть тоннель, ведущий далеко за горы."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001804" />
-
-	<Reply
-		name="Dlg_npc_001804"
-		text="Да, есть такой. Как выедешь из города, первый поворот направо."
-		role="NPC"
-		nextReplies="Dlg_pl_001805" />
-
-	<Reply
-		name="Dlg_pl_001805"
-		text='И всё? И водка у тебя бесплатная, и информацией делишься за "так"...'
-		role="PLAYER"
-		nextReplies="Dlg_npc_002113" />
-
-	<Reply
-		name="Dlg_npc_002113"
-		text="Молодой человек, не нужно учить меня коммерции."
-		role="NPC"
-		nextReplies="Dlg_pl_002114" />
-
-	<Reply
-		name="Dlg_pl_002114"
-		text="Да что ты, я и не думал даже! И кстати, спасибо за выпивку."
-		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken('r1m3_ToLisaToAsgard');   GetCurNpc():SetSpokenCount( 2 ); TActivate('TUNNELLOCATION');   EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_001806"
-		text="Снова ты."
-		role="NPC"
-		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 2"
-		nextReplies="Dlg_pl_001807" />
-
-	<Reply
-		name="Dlg_pl_001807"
-		text="За тоннель, конечно, спасибо, но я немного не уразумел, как его открыть."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001808" />
-
-	<Reply
-		name="Dlg_npc_001808"
-		text="Ключом. "
-		role="NPC"
-		nextReplies="Dlg_pl_001810" />
-
-	<Reply
-		name="Dlg_pl_001810"
-		text="Об этом я догадался, но где мне его достать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001811" />
-
-	<Reply
-		name="Dlg_npc_001811"
-		text="С этим уже помочь не могу. Разве что я могу поделиться с тобой дубликатом…"
-		role="NPC"
-		nextReplies="Dlg_pl_001812" />
-
-	<Reply
-		name="Dlg_pl_001812"
-		text="Эх, ничего нового... |Сколько?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002115" />
-
-	<Reply
-		name="Dlg_npc_002115"
-		text="Пятнадцать тысяч."
-		role="NPC"
-		nextReplies="Dlg_pl_002116" />
-
-	<Reply
-		name="Dlg_pl_002116"
-		text="Сколько?!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002117" />
-
-	<Reply
-		name="Dlg_npc_002117"
-		text="Если бы ты знал, какие перспективы перед тобой откроет этот ключ, ты бы не удивлялся его цене. В любом случае торговаться с тобой я не собираюсь. Итак, твой выбор?"
-		role="NPC"
-		nextReplies="Dlg_pl_002118 Dlg_pl_002119 Dlg_pl_002120" />
-
-	<Reply
-		name="Dlg_pl_002120"
-		text="Мне нужно время, чтобы собрать деньги."
-		role="PLAYER"
-		scriptCondition="15000 >= GetPlayerMoney()"
-		scriptResult="GetCurNpc():SetSpokenCount( 3 )  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002119"
-		text="Сомнительная сделка. Может, мне удастся достать ключ где-нибудь ещё…"
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 3 )  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_002118"
-		text="Надеюсь, перспективы и правда того стоят. Вот, держи."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 15000"
-		scriptResult="CompleteQuest('d_FindKeyInTunel_Quest'); FailQuestIfTaken('d_FindZasadaInTunel_Quest');  TakeQuest('d_OpenTunel_Quest');  TDeactivate ('ZASADATUNEL');  AddPlayerMoney( -15000 );  AddQuestItem('quest_key_for_tunnel'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_tunnel');  EndConversation()" />
-<!--Root/r1m3/Сюжетные/Незнакомец из Тоннеля-->
+<!--Root/r1m3/Сюжетные/Бармен Асгарда--><!--Root/r1m3/Сюжетные/Незнакомец из Тоннеля-->
 	<Reply
 		name="UnknownFromTunel_hellodlg0"
 		text="Чего надо? А впрочем, это и неважно. Закажи мне выпить, тогда поговорим!"
@@ -12413,648 +11568,6 @@
 		text="[Да он уже изрядно пьян! И куртку свою забыл здесь. Проверим-ка карманы.|А вот и ключик, и никто не пострадал! А теперь, пока он не вернулся, скорей к тоннелю!]"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_BarForTunel_Quest');  TakeQuest('d_OpenTunel_Quest');  TActivate( 'TRIGGER_TUNNELOPEN' );  AddQuestItem('quest_key_for_tunnel'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_tunnel'); SetVar('ZasadaAR',1); TActivate('trZasadaAR');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d174"
-		text="Моста больше нет, значит, угрозы безопасности тоже. Пропустишь через город?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001771" />
-
-	<Reply
-		name="Dlg_pl_d3d176"
-		text="Мне рассказали, что когда-то давно в этом городе жил исследователь Айвен Го. Я бы хотел побывать в его жилище."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d177" />
-
-	<Reply
-		name="Dlg_npc_d3d177"
-		text="Айвен… Знакомое имя. Очень знакомое. Не могу вспомнить."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d178 Dlg_pl_001813" />
-
-	<Reply
-		name="Dlg_npc_d3d192"
-		text="Найти?! Спустя двадцать лет?! Дело твоё, конечно, но ничего из твоей затеи путного не выйдет."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d193" />
-
-	<Reply
-		name="Dlg_npc_d3d194"
-		text="Спрашивай."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d195" />
-
-	<Reply
-		name="Dlg_npc_d3d196"
-		text="Прекрасно знаю! Только вот путь на север длинный и очень запутанный, один ты точно не доедешь до обитаемых земель."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d197" />
-
-	<Reply
-		name="Dlg_npc_d3d198"
-		text="Единственный вариант для тебя - поехать на север вместе с нашим караваном. Тогда точно не заплутаешь."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d199" />
-
-	<Reply
-		name="Dlg_npc_d3d200"
-		text="А вот тут и начинаются проблемы. В настоящее время все поставки на север остановлены, так как город испытывает затруднения в производственной сфере."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d201" />
-
-	<Reply
-		name="Dlg_npc_d3d202"
-		text="Знаешь что, обратись-ка лучше к нашему мэру. Скажи, что Шарки послал помочь с проблемой."
-		role="NPC"
-		nextReplies="Dlg_pl_001822" />
-
-	<Reply
-		name="Dlg_npc_d3d208"
-		text="А, ну конечно же! Айвен! Кто же не знает Айвена! "
-		role="NPC"
-		nextReplies="Dlg_pl_d3d209" />
-
-	<Reply
-		name="Dlg_npc_d3d210"
-		text="Он жил тут неподалёку вместе со своей семьёй. Вернее сказать, его семья жила. Он редко сюда приезжал, почти всё свободное время проводил в разъездах, собирал данные для своих исследований. "
-		role="NPC"
-		nextReplies="Dlg_pl_d3d211" />
-
-	<Reply
-		name="Dlg_npc_d3d212"
-		text="Как-то раз ночью на город напали бандиты. Я плохо помню само нападение, маленький тогда был, но мне отец рассказывал, что много тогда народу полегло. Жену его тоже убили. Радует только одно - ни один из подонков не ушёл живым."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d213" />
-
-	<Reply
-		name="Dlg_npc_d3d217"
-		text="В нашем городе нет никаких проблем."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d218" />
-
-	<Reply
-		name="Dlg_npc_d3d219"
-		text="Мы закончили."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d220" />
-
-	<Reply
-		name="Dlg_npc_d3d222"
-		text="Так, или ты добровольно выметаешься, или я зову охрану!"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d223" />
-
-	<Reply
-		name="Dlg_npc_d3d228"
-		text="Но ведь сама по себе нефть не потечет. Эти мерзавцы сейчас протирают штаны в баре вместо того, чтобы работать для общего блага!"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d230" />
-
-	<Reply
-		name="Dlg_npc_d3d233"
-		text="Я так понимаю, ты обнаружил там нечто интересное?"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d234" />
-
-	<Reply
-		name="Dlg_npc_d3d235"
-		text="Вот сукин сын! Теперь всё сходится! Как я раньше этого не замечал! Его внезапные исчезновения, нелепые отмазки, нежелание решать проблемы… Он сам в этом по уши замешан!"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d236" />
-
-	<Reply
-		name="Dlg_npc_d3d237"
-		text="Расскажу об этом всем, тогда этому подонку точно несдобровать!"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d238" />
-
-	<Reply
-		name="Dlg_npc_d3d239"
-		text="Да, ты прав. Я тут вспомнил, он чуть ли не каждый день прямо посереди рабочего дня куда-то уезжает. Подозрительно, да?"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d240" />
-
-	<Reply
-		name="Dlg_npc_d3d243"
-		text="Мы все очень благодарны тебе за помощь. Теперь мы тут сами себе хозяева, а это значит, что забастовке конец. Эй, парни! Полезайте к нему в кузов! Мы возвращаемся к работе! "
-		role="NPC"
-		nextReplies="Dlg_pl_d3d244" />
-
-	<Reply
-		name="Dlg_npc_d3d252"
-		text="Ты что, сдурел? Она уже несколько месяцев захвачена бандитами! Угробить нас решил?"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d253" />
-
-	<Reply
-		name="Dlg_npc_d3d254"
-		text="Подожди. Если ты говоришь правду, то считай, что у тебя есть моя лучшая бригада. Но потребуются подъёмные. 2500 монет вполне хватит."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d255 Dlg_pl_001835" />
-
-	<Reply
-		name="Dlg_npc_d3d261"
-		text="Всем нужна Лиса. Да только она никому не дается. Ха-ха-ха!"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d262" />
-
-	<Reply
-		name="Dlg_npc_d3d263"
-		text="А кто тебе сказал, что ты отсюда вообще уедешь? Мы вообще-то страшные бандиты, если ты не заметил! Ну что, ребята, научим этого наглеца манерам?"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d264" />
-
-	<Reply
-		name="Dlg_npc_d3d267"
-		text="Твоя подруга?"
-		role="NPC"
-		nextReplies="Dlg_pl_d3d268" />
-
-	<Reply
-		name="Dlg_npc_d3d269"
-		text="Знаю я эту девицу. Вообще-то я бы не советовал никому с ней связываться."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d270" />
-
-	<Reply
-		name="Dlg_npc_d3d271"
-		text="Большие люди за ней стоят. И опасные."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d272" />
-
-	<Reply
-		name="Dlg_npc_d3d273"
-		text="Она часто здесь бывает по своим делам. В основном, проезжает мимо. Последний раз, совсем недавно, она направлялась на восток. И опять-таки я бы не советовал ее преследовать в этом направлении."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d274" />
-
-	<Reply
-		name="Dlg_npc_d3d275"
-		text="Там находится база бандитов. Довольно крупная и хорошо укрепленная. А бандиты понимают только язык оружия. Хватит ли у тебя сил потягаться с ними? Не уверен."
-		role="NPC"
-		nextReplies="Dlg_pl_d3d276" />
-
-	<Reply
-		name="Dlg_npc_dd2149"
-		text="Взорви мост."
-		role="NPC"
-		nextReplies="Dlg_pl_dd2150" />
-
-	<Reply
-		name="Dlg_npc_dd2151"
-		text="Тот, через который идет дорога на военную базу. Если мост взорвать, то до нашего города врагу не добраться."
-		role="NPC"
-		nextReplies="Dlg_pl_dd2152" />
-
-	<Reply
-		name="Dlg_npc_dd2153"
-		text="Прежде всего, нужно найти взрывчатку. В Асгарде должно быть что-то похожее. Они же все-таки горняки. А потом придется заложить заряд на мосту.  Он, конечно, охраняется... Но ты справишься!"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2154" />
-
-	<Reply
-		name="Dlg_npc_dd2157"
-		text="Сколько именно Вам нужно?"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2158" />
-
-	<Reply
-		name="Dlg_npc_dd2159"
-		text="Так, давайте начнём с того, для чего вам вообще нужна взрывчатка?"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2160" />
-
-	<Reply
-		name="Dlg_npc_dd2161"
-		text="Так-с, проезд, значит, рассчистить. Могу я узнать, по поручению руководителя какого города вы это делаете?"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2162" />
-
-	<Reply
-		name="Dlg_npc_dd2165"
-		text='Вот так так! Очередной нуждающийся, которому отказали в Асгарде! Не зря мы отстёгиваем долю ихнему бармену, чтобы он всех "одиночек" к нам заворачивал. Сколько тебе нужно? Только честно говори, самому мне без разницы, для чего она тебе.'
-		role="NPC"
-		nextReplies="Dlg_pl_dd2166" />
-
-	<Reply
-		name="Dlg_npc_dd2167"
-		text="Так, дай смекнуть… |Ну, это тебе немного надо. Просто заложи у самых опор, и весь мост сложится как карточный домик! Ха-ха-ха!"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2168" />
-
-	<Reply
-		name="Dlg_npc_dd2200"
-		text="А что нам мешает просто отнять у тебя деньги, а труп зарыть?"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2201" />
-
-	<Reply
-		name="Dlg_npc_dd2202"
-		text="Вот за что люблю парня, так за чувство юмора! Ладно, плати и проезжай. Но знай, еще раз покажешься поблизости - лично задавлю, шляпа!"
-		role="NPC"
-		nextReplies="Dlg_pl_dd2203" />
-
-	<Reply
-		name="Dlg_npc_den192"
-		text="Ха-ха-ха, ну насмешил! Что, в Пеште развернули, что ли? Боятся, значит! Правильно делают, что боятся. Скоро Пешт будет принадлежать нам!"
-		role="NPC"
-		nextReplies="Dlg_pl_den193" />
-
-	<Reply
-		name="Dlg_npc_den195"
-		text="Знаешь, как только ты сюда приехал, я хотел тебя убить. Но теперь не хочу."
-		role="NPC"
-		nextReplies="Dlg_pl_den196" />
-
-	<Reply
-		name="Dlg_pl_d3d178"
-		text="Может, пару монет стимулируют твою память?"
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 100"
-		nextReplies="Dlg_npc_d3d208" />
-
-	<Reply
-		name="Dlg_pl_d3d180"
-		text="Берите деньги."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 1500"
-		scriptResult="AddPlayerMoney( -1500 );  TActivate('BASEATTACK');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d181"
-		text="Слишком высокая цена для меня."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d184"
-		text="Как нехорошо получилось."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001776" />
-
-	<Reply
-		name="Dlg_pl_d3d191"
-		text="Я хочу его найти и получить ответы."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d192" />
-
-	<Reply
-		name="Dlg_pl_d3d193"
-		text="Это уже я сам разберусь. А пока не мог бы ты подсказать мне кое-что?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d194" />
-
-	<Reply
-		name="Dlg_pl_d3d195"
-		text="Не знаешь, где здесь начинается дорога на север?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d196" />
-
-	<Reply
-		name="Dlg_pl_d3d197"
-		text="И что ты предлагаешь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d198" />
-
-	<Reply
-		name="Dlg_pl_d3d199"
-		text="Отличная идея. Когда отправляется следующая машина?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d200" />
-
-	<Reply
-		name="Dlg_pl_d3d201"
-		text="А поконкретнее?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d202" />
-
-	<Reply
-		name="Dlg_pl_d3d203"
-		text="Вот тебе 100 монет."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 100"
-		nextReplies="Dlg_npc_d3d208" />
-
-	<Reply
-		name="Dlg_pl_d3d204"
-		text="В данный момент мне нечем мотивировать твои умственные способности..."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); 
- EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d206"
-		text="Вот 100 монет"
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 100"
-		scriptResult="AddPlayerMoney( -100 );  "
-		nextReplies="Dlg_npc_d3d208" />
-
-	<Reply
-		name="Dlg_pl_d3d207"
-		text="Деньги скоро будут."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d209"
-		text="Расскажи мне о нём всё, что знаешь. "
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d210" />
-
-	<Reply
-		name="Dlg_pl_d3d211"
-		text="Что же произошло?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d212" />
-
-	<Reply
-		name="Dlg_pl_d3d213"
-		text="А что случилось с Айвеном?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001816" />
-
-	<Reply
-		name="Dlg_pl_d3d215"
-		text="Шарки послал помочь с проблемой."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d217" />
-
-	<Reply
-		name="Dlg_pl_d3d218"
-		text="Разве? А вот рабочие утверждают совсем обратное. Почему приостановлены все поставки на север?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d219" />
-
-	<Reply
-		name="Dlg_pl_d3d220"
-		text="Я могу помочь с проблемами!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d222" />
-
-	<Reply
-		name="Dlg_pl_d3d223"
-		text="Всё, не горячись! Считай, меня уже нет."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_TalkMerAboutOilMineAttack_Quest');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d229"
-		text="[про себя] И кошельки."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d228" />
-
-	<Reply
-		name="Dlg_pl_d3d230"
-		text="Посмотрю, что я смогу сделать с работниками. Попытаюсь их уговорить."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest'); 
- EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d232"
-		text="Вышка освобождена. Более того, я проследил за одним из бандитов и обнаружил их базу."
-		role="PLAYER"
-		scriptCondition="IsQuestComplete('d_FindBanditBaseOfOilMine_Quest')"
-		nextReplies="Dlg_npc_d3d233" />
-
-	<Reply
-		name="Dlg_pl_d3d234"
-		text="В точку. Один из бандитов рассказал мне о заказчике захвата вышки. Это был ваш мэр. "
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d235" />
-
-	<Reply
-		name="Dlg_pl_d3d236"
-		text="Что будешь делать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d237" />
-
-	<Reply
-		name="Dlg_pl_d3d238"
-		text="Обожди. Думаешь, тебе кто-нибудь поверит? Это очень серьёзные обвинения, одним только словам бандита верить нельзя."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d239" />
-
-	<Reply
-		name="Dlg_pl_d3d240"
-		text="Есть такое. Сиди тут, никуда не уходи. Я скоро вернусь."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest'); TActivate('SPYMER'); RemoveQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'OilBandit_P'); LeaveTown()" />
-
-	<Reply
-		name="Dlg_pl_d3d242"
-		text="Хочешь организовать локальное народное ополчение и прогнать мэра с поста? Тогда тебе зелёный свет. Я нашёл его тайник. Краденое госимущество, мешки с деньгами, там всего в достатке."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d243" />
-
-	<Reply
-		name="Dlg_pl_d3d244"
-		text="Сюда, ребята! Забастовка закончилась!"
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_TrueAboutMer_Quest');  CompleteQuest('d_FindWorkersToOilMine_Quest'); AddQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Brigada_P');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d247"
-		text="Получается, что да."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001833" />
-
-	<Reply
-		name="Dlg_pl_d3d249"
-		text="Надеюсь, у вас получится решить все проблемы в вашем городе."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001095" />
-
-	<Reply
-		name="Dlg_pl_d3d251"
-		text="Да. Нужны рабочие на нефтяную вышку возле Минина."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d252" />
-
-	<Reply
-		name="Dlg_pl_d3d253"
-		text="Бандитов там больше нет. Могу прямо сейчас тебя туда отвезти, чтобы ты убедился, что там безопасно. Не хочешь там работать - уговаривать не буду, желающих и так много."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d254" />
-
-	<Reply
-		name="Dlg_pl_d3d255"
-		text="Хорошо, держи."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 2500"
-		scriptResult="AddPlayerMoney( -2500 );  TakeQuest('d_PayWorkersMoney_Quest');  CompleteQuest('d_PayWorkersMoney_Quest');  FailQuest('d_FindWorkersToOilMine_Quest');  TakeQuest('d_MoveFreelancersToOilMine_Quest'); AddQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Brigada_P');  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_d3d260"
-		text="Мне нужна Лиса!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d261" />
-
-	<Reply
-		name="Dlg_pl_d3d262"
-		text="Я знаю, что она у вас. И не уеду без нее!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d263" />
-
-	<Reply
-		name="Dlg_pl_d3d264"
-		text="Да будь ты хоть сам Сатана, мне плевать. Я получу, то за чем пришел!"
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindLisaInBase_Quest');  TActivate('BASEABOUTLISA');  LeaveTown(true)" />
-
-	<Reply
-		name="Dlg_pl_d3d266"
-		text="Я ищу девушку, вот такого примерно роста, красивая, на своей машине. Индивидуальный дизайн. Необычная расцветка. Назвалась Лисой."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d267" />
-
-	<Reply
-		name="Dlg_pl_d3d268"
-		text="Нет. Просто она знает кое-что, что мне бы очень хотелось услышать."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d269" />
-
-	<Reply
-		name="Dlg_pl_d3d270"
-		text="А что так?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d271" />
-
-	<Reply
-		name="Dlg_pl_d3d272"
-		text="Ты меня не пугай! Расскажи лучше, что знаешь."
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d273" />
-
-	<Reply
-		name="Dlg_pl_d3d274"
-		text="Что там еще?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_d3d275" />
-
-	<Reply
-		name="Dlg_pl_d3d276"
-		text="Раз другого пути нет, придется мне ехать. Так что не поминайте лихом."
-		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindLisaInPesht_Quest'); 
- EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_dd2148"
-		text="Я понял. И что ж мне сделать, чтобы вы меня пропустили?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2149" />
-
-	<Reply
-		name="Dlg_pl_dd2150"
-		text="Какой еще мост?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2151" />
-
-	<Reply
-		name="Dlg_pl_dd2152"
-		text="И как же я могу это сделать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2153" />
-
-	<Reply
-		name="Dlg_pl_dd2154"
-		text="[про себя] А у самих-то что, ноги отсохли? Трусы…"
-		role="PLAYER"
-		scriptResult="TakeQuest( 'd_GetBomb_Quest' ); 
- EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_dd2156"
-		text="Мне нужна взрывчатка."
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2157" />
-
-	<Reply
-		name="Dlg_pl_dd2158"
-		text="Ну-у, я даже и не знаю как-то..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2159" />
-
-	<Reply
-		name="Dlg_pl_dd2160"
-		text="Эм, ну... Мне проезд надо в одном месте рассчистить, и там преграда выглядит крайне прочно... и... вот поэтому я и не знаю, сколько мне может понадобиться."
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2161" />
-
-	<Reply
-		name="Dlg_pl_dd2162"
-		text="Р-руководителя? Ну... эм... Пешта! Да. Меня послал руководитель Пешта."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001778" />
-
-	<Reply
-		name="Dlg_pl_dd2164"
-		text="Я не устраиваться к вам пришёл. Мне нужна взрывчатка."
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2165" />
-
-	<Reply
-		name="Dlg_pl_dd2166"
-		text="Столько, чтобы взорвать мост."
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2167" />
-
-	<Reply
-		name="Dlg_pl_dd2168"
-		text="Сколько с меня?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001791" />
-
-	<Reply
-		name="Dlg_pl_dd2170"
-		text="Да нигде особо. То тут, то там."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001795" />
-
-	<Reply
-		name="Dlg_pl_dd2201"
-		text="Э-э-э... ум, честь и совесть?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_dd2202" />
-
-	<Reply
-		name="Dlg_pl_dd2203"
-		text="Фу-у-у... Обошлось."
-		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  TActivate('BASEATTACK');  AddPlayerMoney( -10000 ); TDeactivate('trQuickWay'); getObj('Pesht'):SetBelong(1012);  EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_den1198"
-		text="Постойте! Я готов заплатить за проезд."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 10000"
-		nextReplies="Dlg_npc_dd2200" />
-
-	<Reply
-		name="Dlg_pl_den1199"
-		text="Спокойно, я уже почти заработал деньги..."
-		role="PLAYER"
-		scriptResult=" EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_den191"
-		text="Э-э-э… Ребят, мне б проехать…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_den192" />
-
-	<Reply
-		name="Dlg_pl_den193"
-		text="Искренне желаю вам удачи, но можно мне всё-таки проехать?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_den195" />
-
-	<Reply
-		name="Dlg_pl_den196"
-		text="Это значит, что вы меня пропустите?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_001773" />
 
 	<Reply
 		name="Dlg_npc_002633"
@@ -13242,7 +11755,7 @@
 
 	<Reply
 		name="Dlg_pl_000627"
-		text="Сударь, вы оскорбили честь моей семьи! Вы украли мою фамильную драгоценность... Я имею неудовольствие говорить с вами и прошу вернуть эту вещь, которая вам не принадлежит!"
+		text="Сударь, вы оскорбили честь моей семьи! Вы украли мою фамильную драгоценность... Я имею неудовольствие говорить с вами и прошу вернуть эту вещь, которая вам не принадлежит."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000628" />
 
@@ -13254,19 +11767,19 @@
 
 	<Reply
 		name="Dlg_pl_000629"
-		text="Я возмущен. Сейчас я буду вас убивать!!!"
+		text="Я возмущен. Сейчас я буду вас убивать."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000630" />
 
 	<Reply
 		name="Dlg_npc_000630"
-		text="Сначала догони..."
+		text="Сначала догони!"
 		role="NPC"
 		nextReplies="Dlg_pl_000631" />
 
 	<Reply
 		name="Dlg_pl_000631"
-		text="Сударь, вы - труп!!!"
+		text="Сударь, вы - труп."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m3_TalkWithThiefFromFatherHouse');  TActivate('TRIGGER_THIEFWAR');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Бандит с вышки-->
@@ -13379,172 +11892,6 @@
 		text="Хорошо, я к нему зайду."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Zachisti3_Quest'); SetTolerance( 1100, 1012, RS_ALLY ); AddPlayerMoney(50000); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002077"
-		text="И снова привет. Ну как, нашёл на севере то, что искал?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('Zachisti4_Quest') and not(IsQuestComplete('Zachisti4_Quest')) "
-		nextReplies="Dlg_pl_002078" />
-
-	<Reply
-		name="Dlg_pl_002078"
-		text="Можно и так сказать. Мне сказали, что ты хотел меня видеть?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002430" />
-
-	<Reply
-		name="Dlg_npc_002430"
-		text="Да, хотел. Я тут поспрашивал людей насчёт этого твоего Серго, и, что вполне ожидаемо, никто не смог его вспомнить."
-		role="NPC"
-		nextReplies="Dlg_pl_002474" />
-
-	<Reply
-		name="Dlg_pl_002474"
-		text="Очень странно."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002531" />
-
-	<Reply
-		name="Dlg_npc_002531"
-		text="Я тоже так подумал, и потом решил поспрашивать не конкретно про Серго, а просто про необычно одетых чужестранцев, говорящих с заметным акцентом. И тут один работяга кое-что припомнил."
-		role="NPC"
-		nextReplies="Dlg_pl_002532" />
-
-	<Reply
-		name="Dlg_pl_002532"
-		text="Я весь внимание."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002533" />
-
-	<Reply
-		name="Dlg_npc_002533"
-		text='Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий "злобно выглядящий тип в просторном балахоне и тряпьём на голове". '
-		role="NPC"
-		nextReplies="Dlg_pl_002534" />
-
-	<Reply
-		name="Dlg_pl_002534"
-		text="Быть этого не может..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002535" />
-
-	<Reply
-		name="Dlg_npc_002535"
-		text="Дальше интересней. Этот работяга поделился этой информацией с Айвеном, и тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
-		role="NPC"
-		nextReplies="Dlg_pl_002536 Dlg_pl_002536_extra Dlg_pl_002881" />
-
-	<Reply
-		name="Dlg_pl_002536"
-		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
-		role="PLAYER"
-		scriptCondition="IsQuestTaken('Zachisti4_Quest') and not(IsQuestComplete('Zachisti4_Quest')) "
-		scriptResult="CompleteQuest('Zachisti4_Quest'); TakeQuest('r1m3_MoveToOraculAfterThief'); TActivate('TRIGGER_LISAAFTERTHIEF'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_003193"
-		text="И снова привет. Ну как, нашёл на севере то, что искал?"
-		role="NPC"
-		scriptCondition="(IsQuestComplete('d_GiveMoneyToBase_Quest') or GetVar('QuickWayAlt').AsInt==1) and IsQuestComplete('r1m3_FindThiefFromFatherHouse') and not(QuestStatus('Disk2OrakulLisa')==Q_COMPLETED) and GetCurNpc():GetSpokenCount() == 0"
-		scriptResult="SetVar('QuickWayAlt',2); GetCurNpc():SetSpokenCount(1)"
-		nextReplies="Dlg_pl_003194" />
-
-	<Reply
-		name="Dlg_pl_003194"
-		text="Можно и так сказать."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003195" />
-
-	<Reply
-		name="Dlg_npc_003195"
-		text="Кстати, я тут поспрашивал людей насчёт этого твоего Серго, и, что вполне ожидаемо, никто не смог его вспомнить."
-		role="NPC"
-		nextReplies="Dlg_pl_003196" />
-
-	<Reply
-		name="Dlg_pl_003196"
-		text="Очень странно."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003197" />
-
-	<Reply
-		name="Dlg_npc_003197"
-		text="Я тоже так подумал, и потом решил поспрашивать не конкретно про Серго, а просто про необычно одетых чужестранцев, говорящих с заметным акцентом. И тут один работяга кое-что припомнил."
-		role="NPC"
-		nextReplies="Dlg_pl_003198" />
-
-	<Reply
-		name="Dlg_pl_003198"
-		text="Я весь внимание."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003199" />
-
-	<Reply
-		name="Dlg_npc_003199"
-		text='Примерно двадцать лет назад произошло самое успешное нападение на наш город. Тогда погибло много гражданских, в том числе и жена Айвена Го. И командовал этим нападением некий "злобно выглядящий тип в просторном балахоне и тряпьём на голове". '
-		role="NPC"
-		nextReplies="Dlg_pl_003200" />
-
-	<Reply
-		name="Dlg_pl_003200"
-		text="Быть этого не может..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003201" />
-
-	<Reply
-		name="Dlg_npc_003201"
-		text="Дальше интересней. Когда этот работяга рассказал обо всём Айвену, тот очень перепугался и буквально за день вместе со своим сыном покинул наш город. С тех пор никто его больше не видел."
-		role="NPC"
-		nextReplies="Dlg_pl_003202" />
-
-	<Reply
-		name="Dlg_pl_003202"
-		text="Что ж, это объясняет его спешку. Спасибо, за информацию!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003203" />
-
-	<Reply
-		name="Dlg_npc_003203"
-		text="Постой! Я вижу, ты в состоянии за себя постоять. Да и вооружение твоего грузовика довольно на уровне."
-		role="NPC"
-		nextReplies="Dlg_pl_003204" />
-
-	<Reply
-		name="Dlg_pl_003204"
-		text="Ближе к делу, чего ты хочешь?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_003205" />
-
-	<Reply
-		name="Dlg_npc_003205"
-		text="Мы тут формируем тяжело вооружённый отряд, чтобы помочь другой торговой коалиции разгромить бандитов, завахтивших Пешт, и вернуть город под их управление. И ты бы там очень приходился."
-		role="NPC"
-		nextReplies="Dlg_pl_003207 Dlg_pl_003206" />
-
-	<Reply
-		name="Dlg_pl_003207"
-		text="Звучит здорово, я в деле. Но только вот..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_003208" />
-
-	<Reply
-		name="Dlg_npc_003208"
-		text="Не переживай, тебе заплатят. 25000 монет за успех операции. Встреться с командиром армии вот здесь, он тебе всё расскажет."
-		role="NPC"
-		nextReplies="Dlg_pl_003209" />
-
-	<Reply
-		name="Dlg_pl_003209"
-		text="Выдвигаюсь."
-		role="PLAYER"
-		scriptResult="TakeQuest('FightForPesht'); TActivate('cinFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_003206"
-		text="Нет, спасибо. Сами решайте свои проблемы."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
 <!--Root/r1m3/Сюжетные/Искать Лису в Пеште-->
 	<Reply
 		name="Dlg_npc_002079"
@@ -13567,7 +11914,7 @@
 
 	<Reply
 		name="Dlg_pl_002084"
-		text="Примерно метр семьдесят, плащ с капюшоном, быстрая машина голубого цвета. Должна была проезжать тут несколько минут назад."
+		text="Вот такого роста, плащ с капюшоном, быстрая машина голубого цвета. Должна была проезжать тут несколько минут назад."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002085" />
 
@@ -13644,6 +11991,935 @@
 		text="Встать на сторону Ньери."
 		role="PLAYER"
 		scriptResult="TActivate('trORACLEAGRESSOR_cam03'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
+<!--Root/r1m3/Сюжетные/Айвен Го-->
+	<Reply
+		name="Dlg_pl_003127"
+		text="Бармен, ананаги! Ты будешь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003128" />
+
+	<Reply
+		name="Dlg_npc_003128"
+		text="Пожалуй, нет, зачем зря переводить выпивку. Итак, теперь ты знаешь правду о масках. Пей."
+		role="NPC"
+		nextReplies="Dlg_pl_003129" />
+
+	<Reply
+		name="Dlg_pl_003129"
+		text="С удовольств… Что за чертовщина?! Но ведь конструкция моей маски не подразумевает употребления пищи и напитков! Но как я тогда всё это время ел и пил?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003130" />
+
+	<Reply
+		name="Dlg_npc_003130"
+		text="Очень и очень просто. Посмотри вокруг."
+		role="NPC"
+		nextReplies="Dlg_pl_003131" />
+
+	<Reply
+		name="Dlg_pl_003131"
+		text="Они просто берут кружки и выливают содержимое на пол? Серьёзно?! И так делают все! И с едой… Но почему я не заметил этот беспорядок на полу, когда сюда заходил?! Почему я вообще никогда этого не замечал?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003132" />
+
+	<Reply
+		name="Dlg_npc_003132"
+		text="Теперь ты веришь в правдивость моих слов?"
+		role="NPC"
+		nextReplies="Dlg_pl_003133" />
+
+	<Reply
+		name="Dlg_pl_003133"
+		text="У меня это всё в голове не укладывается…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003134" />
+
+	<Reply
+		name="Dlg_npc_003134"
+		text="Ладно, мы никуда не спешим. Давай-ка проедемся до Минина."
+		role="NPC"
+		nextReplies="Dlg_pl_003135 Dlg_pl_003136" />
+
+	<Reply
+		name="Dlg_pl_003136"
+		text="А вот с этим есть небольшая проблема: я тут серьёзно испортил отношения с этой группировкой…"
+		role="PLAYER"
+		scriptCondition="QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
+		nextReplies="Dlg_npc_003137" />
+
+	<Reply
+		name="Dlg_npc_003137"
+		text="А, ты об этом недоразумении? Не переживай, они уже давно обо всем забыли."
+		role="NPC"
+		nextReplies="Dlg_pl_003138" />
+
+	<Reply
+		name="Dlg_pl_003138"
+		text="Как это забыли? После всего, что я натворил?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003139" />
+
+	<Reply
+		name="Dlg_npc_003139"
+		text="Просто поверь мне. Представь, что ты ни в чем не виноват и спокойно к ним проезжай."
+		role="NPC"
+		nextReplies="Dlg_pl_003140" />
+
+	<Reply
+		name="Dlg_pl_003140"
+		text="Ну, раз уж ты в этом так уверен."
+		role="PLAYER"
+		scriptResult="CompleteQuest('ATKordan_Quest'); SaveAllToleranceStatus(RS_ALLY); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003135"
+		text="Давай проедемся."
+		role="PLAYER"
+		scriptCondition="QuestStatus('WaitTillEnd')==Q_COMPLETED"
+		scriptResult="CompleteQuest('ATKordan_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003105"
+		text="Удивлён?"
+		role="NPC"
+		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN and QuestStatus('FreeExtremistLeader_Quest1')==Q_COMPLETED"
+		scriptResult="TActivate('triggerExitToMap14')"
+		nextReplies="Dlg_pl_003142" />
+
+	<Reply
+		name="Dlg_pl_003142"
+		text="Поразительно! Они и вправду забыли о моём поступке и не открывают по мне огонь… Но как такое возможно?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003143" />
+
+	<Reply
+		name="Dlg_npc_003143"
+		text="Их обида на тебя существовала только в твоей голове. Ты сам понимал, что за твой поступок они объявят тебя своим врагом, и твои мысли каким-то образом передались и им. Я бы очень хотел рассказать тебе об этом подробнее, но, увы, я и сам не понимаю, как это работает."
+		role="NPC"
+		nextReplies="Dlg_pl_003144" />
+
+	<Reply
+		name="Dlg_pl_003144"
+		text="Передача мыслей? Ничего более бредового в своей жизни не слышал!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003145" />
+
+	<Reply
+		name="Dlg_npc_003145"
+		text="А у тебя есть какое-нибудь другое объяснение того, что они забыли о твоём поступке сразу после того, как я тебя убедил, что бояться нечего?"
+		role="NPC"
+		nextReplies="Dlg_pl_003146" />
+
+	<Reply
+		name="Dlg_pl_003146"
+		text="Нет, нету. Но всё равно это всё звучит как бред!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003151 Dlg_npc_003168" />
+
+	<Reply
+		name="Dlg_npc_003151"
+		text="Тогда тебе придётся просто мне поверить. Надеюсь, ты вскоре осознаешь это. А теперь давай осмотримся здесь. Видишь объявление?"
+		role="NPC"
+		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_003152" />
+
+	<Reply
+		name="Dlg_pl_003152"
+		text='Вижу. "Из-за дефицита пищевых продуктов суточная норма для всех жителей города снижена до половины порции в день". Приезжие не обслуживаются.'
+		role="PLAYER"
+		nextReplies="Dlg_npc_003153" />
+
+	<Reply
+		name="Dlg_npc_003153"
+		text="А теперь подождём, пока не приедет караван из Забытого. Именно из этого села Минин получает продукты питания."
+		role="NPC"
+		nextReplies="Dlg_pl_003154" />
+
+	<Reply
+		name="Dlg_pl_003154"
+		text="Ну, давай подождём."
+		role="PLAYER"
+		scriptResult="CompleteQuest('ATMinin_Quest'); TActivate('LOPRolikBegin'); LeaveTown()" />
+
+	<Reply
+		name="Dlg_npc_003168"
+		text="Тогда тебе придётся просто мне поверить. Надеюсь, ты вскоре осознаешь это. А теперь давай же, закажи себе что-нибудь."
+		role="NPC"
+		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_003127" />
+
+	<Reply
+		name="Dlg_npc_003166"
+		text="Ну что ж, а теперь давай осмотримся здесь. Видишь объявление?"
+		role="NPC"
+		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN and QuestStatus('WaitTillEnd')==Q_COMPLETED"
+		nextReplies="Dlg_pl_003152" />
+<!--Root/r1m3/Сюжетные/Бармен Асгарда/Про шахтёрский посёлок-->
+	<Reply
+		name="AsgardBarman_hellodlg0"
+		text="Вас что-нибудь интересует?"
+		role="NPC"
+		scriptCondition="QuestStatus('d_BombInAsgard2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_xyz447" />
+
+	<Reply
+		name="Dlg_pl_xyz447"
+		text="Кроме вашего города, где я ещё могу купить взрывчатку?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz450" />
+
+	<Reply
+		name="Dlg_npc_xyz450"
+		text="Дайте подумать. |Да, есть ещё одно место. "
+		role="NPC"
+		nextReplies="Dlg_pl_xyz451" />
+
+	<Reply
+		name="Dlg_pl_xyz451"
+		text="Тоже магазин?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz452" />
+
+	<Reply
+		name="Dlg_npc_xyz452"
+		text="Не совсем. Это шахтёрский посёлок, который закупает взрывчатку отсюда. Среди них много проходимцев, которые с радостью поделятся своими запасами за отнюдь не большие деньги."
+		role="NPC"
+		nextReplies="Dlg_pl_xyz453" />
+
+	<Reply
+		name="Dlg_pl_xyz453"
+		text="И как туда проехать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_xyz454" />
+
+	<Reply
+		name="Dlg_npc_xyz454"
+		text="Ну-у, тут есть два варианта: либо заплатить мне и спокойно доехать до этого города, либо попытаться найти его самому, что будет крайне затруднительно. Выбор за Вами."
+		role="NPC"
+		nextReplies="Dlg_pl_xyz455" />
+
+	<Reply
+		name="Dlg_pl_xyz455"
+		text="Так и знал, что будешь пытаться денег выкачать! Сколько?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001780" />
+
+	<Reply
+		name="Dlg_npc_001780"
+		text="7000 монет."
+		role="NPC"
+		nextReplies="Dlg_pl_001781 Dlg_pl_001782 Dlg_pl_001785" />
+
+	<Reply
+		name="Dlg_pl_001785"
+		text="У меня нет таких денег."
+		role="PLAYER"
+		scriptCondition="7000 > GetPlayerMoney()"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001782"
+		text="Вот уж нет! Сам найду и без твоей помощи!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001781"
+		text="Держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 7000"
+		nextReplies="Dlg_npc_001783" />
+
+	<Reply
+		name="Dlg_npc_001783"
+		text="Приятно иметь дело с разумным человеком. Посёлок находится здесь."
+		role="NPC"
+		nextReplies="Dlg_pl_001784" />
+
+	<Reply
+		name="Dlg_pl_001784"
+		text="Так близко?! Эх, надо было искать самому!"
+		role="PLAYER"
+		scriptResult="CompleteQuest('d_BombInAsgard2_Quest');  AddPlayerMoney( -7000 );  EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001786"
+		text="Снова ты? Скидки не сделаю. Хочешь узнать, куда ехать, - плати 7000 монет."
+		role="NPC"
+		scriptCondition="QuestStatus('d_BombInAsgard2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() > 0"
+		nextReplies="Dlg_pl_001787 Dlg_pl_001788" />
+
+	<Reply
+		name="Dlg_pl_001788"
+		text="Я ещё не собрал деньги."
+		role="PLAYER"
+		scriptResult=" EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001787"
+		text="Вот, держи!"
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 7000"
+		nextReplies="Dlg_npc_001789" />
+
+	<Reply
+		name="Dlg_npc_001789"
+		text="Приятно иметь дело с разумным человеком. Посёлок находится вот здесь."
+		role="NPC"
+		nextReplies="Dlg_pl_001790" />
+
+	<Reply
+		name="Dlg_pl_001790"
+		text="Так близко?! Эх, надо было искать самому!"
+		role="PLAYER"
+		scriptResult="CompleteQuest('d_BombInAsgard2_Quest');  AddPlayerMoney( -7000 );  EndConversation()" />
+<!--Root/r1m3/Сюжетные/Бармен Асгарда/Про ключ к тоннелю-->
+	<Reply
+		name="AsgardBarman_hellodlg2"
+		text="Передумал? Если забыл, то цена за ключ 15000."
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 3"
+		nextReplies="Dlg_pl_xyz457 Dlg_pl_xyz465" />
+
+	<Reply
+		name="Dlg_pl_xyz457"
+		text="Уговорил, вот, держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 15000"
+		nextReplies="Dlg_npc_xyz458" />
+
+	<Reply
+		name="Dlg_pl_xyz465"
+		text="Нет уж, увольте. С такими покупками я совсем разорюсь."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="AsgardBarman_hellodlg3"
+		text="Приветствую! Чего налить?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('r1m3_ToLisaToAsgard')     and     not(IsQuestComplete('r1m3_ToLisaToAsgard')) "
+		nextReplies="Dlg_pl_001800" />
+
+	<Reply
+		name="Dlg_pl_001800"
+		text="Водки, грамм сто."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001799" />
+
+	<Reply
+		name="Dlg_npc_001799"
+		text="Прошу. Первую за счёт заведения."
+		role="NPC"
+		nextReplies="Dlg_pl_001801" />
+
+	<Reply
+		name="Dlg_pl_001801"
+		text="Благодарю. Я тут хотел спросить…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001802" />
+
+	<Reply
+		name="Dlg_npc_001802"
+		text="Для этого я здесь и нахожусь! О чём ты хочешь узнать?"
+		role="NPC"
+		nextReplies="Dlg_pl_001803" />
+
+	<Reply
+		name="Dlg_pl_001803"
+		text="Я слышал, что тут неподалёку от города есть тоннель, ведущий далеко за горы."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001804" />
+
+	<Reply
+		name="Dlg_npc_001804"
+		text="Да, есть такой. Как выедешь из города, первый поворот направо."
+		role="NPC"
+		nextReplies="Dlg_pl_001805" />
+
+	<Reply
+		name="Dlg_pl_001805"
+		text='И всё? И водка у тебя бесплатная, и информацией делишься за "так"...'
+		role="PLAYER"
+		nextReplies="Dlg_npc_002113" />
+
+	<Reply
+		name="Dlg_npc_002113"
+		text="Молодой человек, не нужно учить меня коммерции."
+		role="NPC"
+		nextReplies="Dlg_pl_002114" />
+
+	<Reply
+		name="Dlg_pl_002114"
+		text="Да что ты, я и не думал даже! И кстати, спасибо за выпивку."
+		role="PLAYER"
+		scriptResult="CompleteQuestIfTaken('r1m3_ToLisaToAsgard');   GetCurNpc():SetSpokenCount( 2 ); TActivate('TUNNELLOCATION');   EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001806"
+		text="Снова ты."
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 2"
+		nextReplies="Dlg_pl_001807" />
+
+	<Reply
+		name="Dlg_pl_001807"
+		text="За тоннель, конечно, спасибо, но я немного не уразумел, как его открыть."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001808" />
+
+	<Reply
+		name="Dlg_npc_001808"
+		text="Ключом. "
+		role="NPC"
+		nextReplies="Dlg_pl_001810" />
+
+	<Reply
+		name="Dlg_pl_001810"
+		text="Об этом я догадался, но где мне его достать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001811" />
+
+	<Reply
+		name="Dlg_npc_001811"
+		text="С этим уже помочь не могу. Разве что я могу поделиться с тобой дубликатом…"
+		role="NPC"
+		nextReplies="Dlg_pl_001812" />
+
+	<Reply
+		name="Dlg_pl_001812"
+		text="Эх, ничего нового... |Сколько?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002115" />
+
+	<Reply
+		name="Dlg_npc_002115"
+		text="Пятнадцать тысяч."
+		role="NPC"
+		nextReplies="Dlg_pl_002116" />
+
+	<Reply
+		name="Dlg_pl_002116"
+		text="Сколько?!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002117" />
+
+	<Reply
+		name="Dlg_npc_002117"
+		text="Если бы ты знал, какие перспективы перед тобой откроет этот ключ, ты бы не удивлялся его цене. В любом случае торговаться с тобой я не собираюсь. Итак, твой выбор?"
+		role="NPC"
+		nextReplies="Dlg_pl_002118 Dlg_pl_002119 Dlg_pl_002120" />
+
+	<Reply
+		name="Dlg_pl_002120"
+		text="Мне нужно время, чтобы собрать деньги."
+		role="PLAYER"
+		scriptCondition="15000 >= GetPlayerMoney()"
+		scriptResult="GetCurNpc():SetSpokenCount( 3 )  EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_002119"
+		text="Сомнительная сделка. Может, мне удастся достать ключ где-нибудь ещё…"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 3 )  EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_002118"
+		text="Надеюсь, перспективы и правда того стоят. Вот, держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 15000"
+		scriptResult="CompleteQuest('d_FindKeyInTunel_Quest'); FailQuestIfTaken('d_FindZasadaInTunel_Quest');  TakeQuest('d_OpenTunel_Quest');  TDeactivate ('ZASADATUNEL');  AddPlayerMoney( -15000 );  AddQuestItem('quest_key_for_tunnel'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_tunnel');  EndConversation()" />
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1/Про дом Айвена-->
+	<Reply
+		name="MininWorker_hellodlg0"
+		text="Издалека, видать, приехал! По делам иль приключений ищешь?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_MoveToMinin_Quest')    and   not(IsQuestComplete( 'd_MoveToMinin_Quest' )) and GetCurNpc():GetSpokenCount() == 0  "
+		nextReplies="Dlg_pl_d3d176" />
+
+	<Reply
+		name="Dlg_pl_d3d176"
+		text="Мне рассказали, что когда-то давно в этом городе жил исследователь Айвен Го. Я бы хотел побывать в его жилище."
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d177" />
+
+	<Reply
+		name="Dlg_npc_d3d177"
+		text="Айвен… Знакомое имя. Очень знакомое. Не могу вспомнить."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d178 Dlg_pl_001813" />
+
+	<Reply
+		name="Dlg_pl_d3d178"
+		text="Может, пару монет стимулируют твою память?"
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 100"
+		nextReplies="Dlg_npc_d3d208" />
+
+	<Reply
+		name="Dlg_npc_d3d208"
+		text="А, ну конечно же! Айвен! Кто же не знает Айвена! "
+		role="NPC"
+		nextReplies="Dlg_pl_d3d209" />
+
+	<Reply
+		name="Dlg_pl_d3d209"
+		text="Расскажи мне о нём всё, что знаешь. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d210" />
+
+	<Reply
+		name="Dlg_npc_d3d210"
+		text="Он жил тут неподалёку вместе со своей семьёй. Вернее сказать, его семья жила. Он редко сюда приезжал, почти всё свободное время проводил в разъездах, собирал данные для своих исследований. "
+		role="NPC"
+		nextReplies="Dlg_pl_d3d211" />
+
+	<Reply
+		name="Dlg_pl_d3d211"
+		text="Что же произошло?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d212" />
+
+	<Reply
+		name="Dlg_npc_d3d212"
+		text="Как-то раз ночью на город напали бандиты. Я плохо помню само нападение, маленький тогда был, но мне отец рассказывал, что много тогда народу полегло. Жену его тоже убили. Радует только одно - ни один из подонков не ушёл живым."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d213" />
+
+	<Reply
+		name="Dlg_pl_d3d213"
+		text="А что случилось с Айвеном?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001816" />
+
+	<Reply
+		name="Dlg_npc_001816"
+		text="Как только Айвен узнал об этом, он забрал своего сына и уехал. Больше я его не видел. Я ещё тогда здорово расстроился. Мне так нравилось слушать его истории: про механических гигантов, про огни в небе, про царство вечного холода."
+		role="NPC"
+		nextReplies="Dlg_pl_001817" />
+
+	<Reply
+		name="Dlg_pl_001817"
+		text='Ты хотел сказать "сказки"?'
+		role="PLAYER"
+		nextReplies="Dlg_npc_001818" />
+
+	<Reply
+		name="Dlg_npc_001818"
+		text='Он упорно называл их "историями". Я ему верил. В конце концов, он был исследователем, а я сыном работяги.'
+		role="NPC"
+		nextReplies="Dlg_pl_001819" />
+
+	<Reply
+		name="Dlg_pl_001819"
+		text="Можно мне осмотреть его жилище?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001820" />
+
+	<Reply
+		name="Dlg_npc_001820"
+		text="Можно, но только ничего оттуда не бери. Сам потом лично проверю!"
+		role="NPC"
+		nextReplies="Dlg_pl_001821" />
+
+	<Reply
+		name="Dlg_pl_001821"
+		text="Обещаю, что ничего не возьму. Спасибо за рассказ."
+		role="PLAYER"
+		scriptResult="CompleteQuest( 'd_MoveToMinin_Quest' );  TActivate('FATHERHOUSE');  EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001813"
+		text="Денег не дам."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001814" />
+
+	<Reply
+		name="Dlg_npc_001814"
+		text="Нет денег - нет информации."
+		role="NPC"
+		nextReplies="Dlg_pl_001815" />
+
+	<Reply
+		name="Dlg_pl_001815"
+		text="Никуда не уходи, сейчас добуду пару золотых."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="MininWorker_hellodlg15"
+		text="Ну, как там моя мотивация? Почему-то я не вижу у нее двух нулей?!"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_MoveToMinin_Quest')    and   not(IsQuestComplete( 'd_MoveToMinin_Quest' ))  and  (GetCurNpc():GetSpokenCount() > 0)"
+		nextReplies="Dlg_pl_d3d206 Dlg_pl_d3d207" />
+
+	<Reply
+		name="Dlg_pl_d3d206"
+		text="Вот 100 монет"
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 100"
+		scriptResult="AddPlayerMoney( -100 );  "
+		nextReplies="Dlg_npc_d3d208" />
+
+	<Reply
+		name="Dlg_pl_d3d207"
+		text="Деньги скоро будут."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1/Интрига с мэром-->
+	<Reply
+		name="MininWorker_hellodlg1"
+		text="Ну что, как тебе лачуга Айвена? Кстати, зачем она тебе нужна? После стольких лет?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_TalkAboutVrataInMinin_Quest')  and  not(IsQuestComplete('d_TalkAboutVrataInMinin_Quest'))"
+		nextReplies="Dlg_pl_d3d191" />
+
+	<Reply
+		name="Dlg_pl_d3d191"
+		text="Я хочу его найти и получить ответы."
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d192" />
+
+	<Reply
+		name="Dlg_npc_d3d192"
+		text="Найти?! Спустя двадцать лет?! Дело твоё, конечно, но ничего из твоей затеи путного не выйдет."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d193" />
+
+	<Reply
+		name="Dlg_pl_d3d193"
+		text="Это уже я сам разберусь. А пока не мог бы ты подсказать мне кое-что?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d194" />
+
+	<Reply
+		name="Dlg_npc_d3d194"
+		text="Спрашивай."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d195" />
+
+	<Reply
+		name="Dlg_pl_d3d195"
+		text="Не знаешь, где здесь начинается дорога на север?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d196" />
+
+	<Reply
+		name="Dlg_npc_d3d196"
+		text="Прекрасно знаю! Только вот путь на север длинный и очень запутанный, один ты точно не доедешь до обитаемых земель."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d197" />
+
+	<Reply
+		name="Dlg_pl_d3d197"
+		text="И что ты предлагаешь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d198" />
+
+	<Reply
+		name="Dlg_npc_d3d198"
+		text="Единственный вариант для тебя - поехать на север вместе с нашим караваном. Тогда точно не заплутаешь."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d199" />
+
+	<Reply
+		name="Dlg_pl_d3d199"
+		text="Отличная идея. Когда отправляется следующая машина?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d200" />
+
+	<Reply
+		name="Dlg_npc_d3d200"
+		text="А вот тут и начинаются проблемы. В настоящее время все поставки на север остановлены, так как город испытывает затруднения в производственной сфере."
+		role="NPC"
+		nextReplies="Dlg_pl_d3d201" />
+
+	<Reply
+		name="Dlg_pl_d3d201"
+		text="А поконкретнее?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d202" />
+
+	<Reply
+		name="Dlg_npc_d3d202"
+		text="Знаешь что, обратись-ка лучше к нашему мэру. Скажи, что Шарки послал помочь с проблемой."
+		role="NPC"
+		nextReplies="Dlg_pl_001822" />
+
+	<Reply
+		name="Dlg_pl_001822"
+		text="Ладно, посмотрим, что у вас тут за мэр."
+		role="PLAYER"
+		scriptResult="CompleteQuest('d_TalkAboutVrataInMinin_Quest');  EndConversation()" />
+
+	<Reply
+		name="MininWorker_hellodlg2"
+		text="Ну как, справился?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_ReturntoMerOfMinin_Quest')   and   not(IsQuestComplete('d_ReturntoMerOfMinin_Quest'))   and   not(IsQuestTaken('d_MoveFreelancersToOilMine_Quest'))   and   not(IsQuestComplete('d_MoveFreelancersToOilMine_Quest'))   and   not(IsQuestTaken('d_IntrigaOfMerMinin_Quest'))  and   not(IsQuestComplete('d_IntrigaOfMerMinin_Quest'))"
+		nextReplies="Dlg_pl_d3d232 Dlg_pl_001839" />
+
+	<Reply
+		name="Dlg_pl_d3d232"
+		text="Вышка освобождена. Более того, я проследил за одним из бандитов и обнаружил их базу."
+		role="PLAYER"
+		scriptCondition="IsQuestComplete('d_FindBanditBaseOfOilMine_Quest')"
+		nextReplies="Dlg_npc_d3d233" />
+
+	<Reply
+		name="Dlg_npc_d3d233"
+		text="Я так понимаю, ты обнаружил там нечто интересное?"
+		role="NPC"
+		nextReplies="Dlg_pl_d3d234" />
+
+	<Reply
+		name="Dlg_pl_d3d234"
+		text="В точку. Один из бандитов рассказал мне о заказчике захвата вышки. Это был ваш мэр. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d235" />
+
+	<Reply
+		name="Dlg_npc_d3d235"
+		text="Вот сукин сын! Теперь всё сходится! Как я раньше этого не замечал! Его внезапные исчезновения, нелепые отмазки, нежелание решать проблемы… Он сам в этом по уши замешан!"
+		role="NPC"
+		nextReplies="Dlg_pl_d3d236" />
+
+	<Reply
+		name="Dlg_pl_d3d236"
+		text="Что будешь делать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d237" />
+
+	<Reply
+		name="Dlg_npc_d3d237"
+		text="Расскажу об этом всем, тогда этому подонку точно несдобровать!"
+		role="NPC"
+		nextReplies="Dlg_pl_d3d238" />
+
+	<Reply
+		name="Dlg_pl_d3d238"
+		text="Обожди. Думаешь, тебе кто-нибудь поверит? Это очень серьёзные обвинения, одним только словам бандита верить нельзя."
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d239" />
+
+	<Reply
+		name="Dlg_npc_d3d239"
+		text="Да, ты прав. Я тут вспомнил, он чуть ли не каждый день прямо посереди рабочего дня куда-то уезжает. Подозрительно, да?"
+		role="NPC"
+		nextReplies="Dlg_pl_d3d240" />
+
+	<Reply
+		name="Dlg_pl_d3d240"
+		text="Есть такое. Сиди тут, никуда не уходи. Я скоро вернусь."
+		role="PLAYER"
+		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest'); TActivate('SPYMER'); RemoveQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'OilBandit_P'); LeaveTown()" />
+
+	<Reply
+		name="Dlg_pl_001839"
+		text="Вышка освобождена."
+		role="PLAYER"
+		scriptCondition="not(IsQuestComplete('d_FindBanditBaseOfOilMine_Quest'))"
+		nextReplies="Dlg_npc_001840" />
+
+	<Reply
+		name="Dlg_npc_001840"
+		text="Хорошая новость. Но не для тебя. Работать там моя бригада не будет!"
+		role="NPC"
+		nextReplies="Dlg_pl_001841" />
+
+	<Reply
+		name="Dlg_pl_001841"
+		text="Да и не надо. Вышка теперь свободна от бандитов, и, я уверен, найдётся много желающих там поработать. А ты сиди тут со своей забастовкой. Но только имей в виду, что работать скоро будет негде. "
+		role="PLAYER"
+		scriptResult="FailQuestIfTaken('d_MoveToMer_Quest'); CompleteQuest('d_ReturntoMerOfMinin_Quest'); FailQuestIfTaken('d_FindWorkersToOilMine_Quest'); TakeQuest('d_PayWorkersMoney_Quest'); EndConversation()" />
+
+	<Reply
+		name="MininWorker_hellodlg3"
+		text="Узнал что-нибудь?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_TrueAboutMer_Quest')  and  not(IsQuestComplete('d_TrueAboutMer_Quest'))"
+		nextReplies="Dlg_pl_d3d242" />
+
+	<Reply
+		name="Dlg_pl_d3d242"
+		text="Хочешь организовать локальное народное ополчение и прогнать мэра с поста? Тогда тебе зелёный свет. Я нашёл его тайник. Краденое госимущество, мешки с деньгами, там всего в достатке."
+		role="PLAYER"
+		nextReplies="Dlg_npc_d3d243" />
+
+	<Reply
+		name="Dlg_npc_d3d243"
+		text="Мы все очень благодарны тебе за помощь. Теперь мы тут сами себе хозяева, а это значит, что забастовке конец. Эй, парни! Полезайте к нему в кузов! Мы возвращаемся к работе! "
+		role="NPC"
+		nextReplies="Dlg_pl_d3d244" />
+
+	<Reply
+		name="Dlg_pl_d3d244"
+		text="Сюда, ребята! Забастовка закончилась!"
+		role="PLAYER"
+		scriptResult="CompleteQuest('d_TrueAboutMer_Quest');  CompleteQuest('d_FindWorkersToOilMine_Quest'); AddQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Brigada_P');  EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001823"
+		text="Как прошло?"
+		role="NPC"
+		scriptCondition="IsQuestTaken('d_TalkSharkiAfterMer_Quest') and not(IsQuestComplete('d_TalkSharkiAfterMer_Quest'))"
+		nextReplies="Dlg_pl_001824" />
+
+	<Reply
+		name="Dlg_pl_001824"
+		text="Он выгнал меня, едва я начал спрашивать про проблемы города."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001825" />
+
+	<Reply
+		name="Dlg_npc_001825"
+		text="Это в его стиле. Как только начнёшь ему рассказывать про проблемы, он либо сразу же злится, либо находит сотню-другую поводов закончить беседу."
+		role="NPC"
+		nextReplies="Dlg_pl_001826" />
+
+	<Reply
+		name="Dlg_pl_001826"
+		text="Значит, придётся решать проблемы без него. Что мне нужно сделать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001827" />
+
+	<Reply
+		name="Dlg_npc_001827"
+		text="Во-первых, нефтяную вышку захватили бандиты и требуют огромные деньги за освобождение. Мэр им платить не собирается, однако вышибать их оттуда силой тоже не спешит."
+		role="NPC"
+		nextReplies="Dlg_pl_001828" />
+
+	<Reply
+		name="Dlg_pl_001828"
+		text="Перебить бандитов на скважине. Звучит несложно. А во-вторых?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001829" />
+
+	<Reply
+		name="Dlg_npc_001829"
+		text="А во-вторых, у нас тут забастовка!"
+		role="NPC"
+		nextReplies="Dlg_pl_001830" />
+
+	<Reply
+		name="Dlg_pl_001830"
+		text="Забастовка? Против чего?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001831" />
+
+	<Reply
+		name="Dlg_npc_001831"
+		text="Против рабских условий труда! Работа тяжёлая, платят гроши. Вот мы и отказываемся батрачить! Вернее, отказывались, пока вышку не захватили. Теперь забастовка потеряла смысл."
+		role="NPC"
+		nextReplies="Dlg_pl_001832" />
+
+	<Reply
+		name="Dlg_pl_001832"
+		text="Ладно, начнём с бандитов, а там посмотрим, что делать."
+		role="PLAYER"
+		scriptResult=" TActivate('ATTACKOILMINE'); CompleteQuest('d_TalkSharkiAfterMer_Quest');  EndConversation()" />
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1/Про Лиденклауд-->
+	<Reply
+		name="Dlg_npc_003039"
+		text="Снова ты. С чем на этот раз пожаловал?"
+		role="NPC"
+		scriptCondition="QuestStatus('SharkyVyshka')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_003040 Dlg_pl_003229" />
+
+	<Reply
+		name="Dlg_pl_003229"
+		text="Вижу, ты больше не бастуешь. Удалось-таки заставить мэра улучшить условия труда?"
+		role="PLAYER"
+		scriptCondition="QuestStatus('d_PayWorkersMoney_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_npc_003230" />
+
+	<Reply
+		name="Dlg_npc_003230"
+		text="Ага, как же, удалось... С тех пор, как ты выбил бандитов, а потом ещё и любезно нанял другую бригаду, наша забастовка совсем потеряла свою суть. Ты не представляешь, на какие ухищрения мне пришлось пойти, чтобы мэр снова нас нанял! Ну да ладно, кто старое помянет... |Ты то здесь какими судьбами?"
+		role="NPC"
+		nextReplies="Dlg_pl_003231" />
+
+	<Reply
+		name="Dlg_pl_003231"
+		text="В нашем с тобой первом разговоре ты как-то вскользь упомянул о царстве вечного холода, про которое тебе рассказывал Айвен. Я бы хотел узнать побольше об этом."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003041" />
+
+	<Reply
+		name="Dlg_pl_003040"
+		text="В нашем первом разговоре ты как-то вскользь упомянул о царстве вечного холода, про которое тебе рассказывал Айвен. Я бы хотел узнать побольше об этом."
+		role="PLAYER"
+		scriptCondition="QuestStatus('d_IntrigaOfMerMinin_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_npc_003041" />
+
+	<Reply
+		name="Dlg_npc_003041"
+		text="А я бы хотел сегодня хорошенечко выпить в баре. Понимаешь, к чему я клоню?"
+		role="NPC"
+		nextReplies="Dlg_pl_003042 Dlg_pl_003043" />
+
+	<Reply
+		name="Dlg_pl_003043"
+		text="У меня пока нет денег."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003042"
+		text='Да. Вот, держи 1000 монет, должно хватить на "хорошенечко выпить".'
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney() >= 1000"
+		scriptResult="CompleteQuest('SharkyVyshka')"
+		nextReplies="Dlg_npc_003044" />
+
+	<Reply
+		name="Dlg_npc_003044"
+		text="Что ты хочешь узнать?"
+		role="NPC"
+		nextReplies="Dlg_pl_003048" />
+
+	<Reply
+		name="Dlg_pl_003048"
+		text="Что именно тебе рассказывал Айвен? Расскажи во всех, даже мельчайших подробностях."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003049" />
+
+	<Reply
+		name="Dlg_npc_003049"
+		text="Он рассказывал, что есть на свете такое место, где круглый год и круглые сутки небо покрыто густыми свинцовыми облаками, а земля всегда прикрыта толстым слоем странных хлопьев, почти постоянно идущих с неба."
+		role="NPC"
+		nextReplies="Dlg_pl_003050" />
+
+	<Reply
+		name="Dlg_pl_003050"
+		text="Бессмыслица какая-то... Свинцовые тучи, хлопья идущие с неба... Неужели эта территория реальна?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003051" />
+
+	<Reply
+		name="Dlg_npc_003051"
+		text="Конечно же, нет! Хоть он и говорил, что попасть туда можно через какой-то проезд в Хеле, но я вообще в это не поверил, даже тогда! Это ж надо было придумать - хлопья, идущие с неба! Бред же! Все знают, что с неба может идти только вода!"
+		role="NPC"
+		nextReplies="Dlg_pl_003052" />
+
+	<Reply
+		name="Dlg_pl_003052"
+		text="Я тебя понял, спасибо за информацию.|А теперь пора навестить Гомера. Надеюсь, он всё ещё в Салиниоме."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(2); AddPlayerMoney(-1000); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003045"
+		text="Раздобыл деньги?"
+		role="NPC"
+		scriptCondition="QuestStatus('SharkyVyshka')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 1"
+		nextReplies="Dlg_pl_003042 Dlg_pl_003047" />
+
+	<Reply
+		name="Dlg_pl_003047"
+		text="Пока ещё нет."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 <!--Root/r1m2/Сюжетные--><!--Root/r1m2/Опциональные--><!--Root/r1m2/Опциональные/Археолог в Порто-->
 	<Reply
 		name="Anticwar_hellodlg0"
@@ -16480,6 +15756,32 @@
 		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('FollowMrShlyapa'); TActivate('cinAfterChifir2'); EndConversation()" />
 <!--Root/r1m2/Сюжетные/Плохая концовка-->
 	<Reply
+		name="Dlg_npc_003170"
+		text="Чего желаете?"
+		role="NPC"
+		scriptCondition="QuestStatus('CureForLisa_Quest')==Q_TAKEN"
+		scriptResult="CompleteQuest('CureForLisa_Quest')"
+		nextReplies="Dlg_pl_003171" />
+
+	<Reply
+		name="Dlg_pl_003171"
+		text="Мне срочно вот эти лекарства!"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003172" />
+
+	<Reply
+		name="Dlg_npc_003172"
+		text="Да, такие у нас есть. Минутку...|С вас 11000 монет."
+		role="NPC"
+		nextReplies="Dlg_pl_003173" />
+
+	<Reply
+		name="Dlg_pl_003173"
+		text="Вот, держите.| А теперь скорее к Бену!"
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(-11000); AddQuestItem('quest_lisa_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_lisa_narcotik'); EndConversation()" />
+
+	<Reply
 		name="BadEndingDlg"
 		text="..."
 		role="NPC"
@@ -19014,4 +18316,97 @@
 		text="Спасибо. Ну, мне пора уже. Бывай!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); AddPlayerMoney(5000); EndConversation()" />
+<!--Root/r1m1/Сюжетные/Деньги для Феликса-->
+	<Reply
+		name="Dlg_npc_002592"
+		text="Отдать деньги Феликсу?"
+		role="NPC"
+		scriptCondition="GetVar('FelixChoise').AsInt==2"
+		nextReplies="Dlg_pl_002593 Dlg_pl_002594" />
+
+	<Reply
+		name="Dlg_pl_002594"
+		text="Нет."
+		role="PLAYER"
+		scriptResult="SetVar('FelixChoise',0); TActivate('trFelix1_cam02'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_002593"
+		text="Да."
+		role="PLAYER"
+		scriptResult="SetVar('FelixChoise',3); TActivate('FelixPayRolik1'); AddPlayerMoney( -1000 ); EndConversation()" />
+<!--Root/r1m1/Сюжетные/Айвен Го-->
+	<Reply
+		name="Dlg_npc_003106"
+		text="Теперь ты видел всё. У тебя остались какие-нибудь сомнения?"
+		role="NPC"
+		scriptCondition="QuestStatus('ATGloohoe_Quest')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 0"
+		scriptResult="GetCurNpc():SetSpokenCount(1)"
+		nextReplies="Dlg_pl_003155" />
+
+	<Reply
+		name="Dlg_pl_003155"
+		text="Серго... Он ведь солгал, что пришёл к Повелителю уже после катастрофы… Он был там, когда всё случилось, да?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003156" />
+
+	<Reply
+		name="Dlg_npc_003156"
+		text="Да. Именно поэтому он не может пройти последнюю стадию духовной трансформации: влияние Повелителя слишком сильно окутало его."
+		role="NPC"
+		nextReplies="Dlg_pl_003157" />
+
+	<Reply
+		name="Dlg_pl_003157"
+		text='Что значит "последняя стадия духовной трансформации"?'
+		role="PLAYER"
+		nextReplies="Dlg_npc_003158" />
+
+	<Reply
+		name="Dlg_npc_003158"
+		text="Нужно отринуть последнюю вещь, связывающую тебя с этим миром. Отринуть символ нового человечества."
+		role="NPC"
+		nextReplies="Dlg_pl_003159" />
+
+	<Reply
+		name="Dlg_pl_003159"
+		text="Снять маску…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003160" />
+
+	<Reply
+		name="Dlg_npc_003160"
+		text="Именно. Сам я не могу этого сделать: я слишком стар и память о традициях прежней жизни слишком во мне сильна. Даже если я сниму маску, для меня это ничего не изменит."
+		role="NPC"
+		nextReplies="Dlg_pl_003161" />
+
+	<Reply
+		name="Dlg_pl_003161"
+		text="Понимаю. Кажется, я чувствую, что готов. Но перед этим…"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003162" />
+
+	<Reply
+		name="Dlg_npc_003162"
+		text="Конечно же, не спеши. Что ты хочешь сделать?"
+		role="NPC"
+		nextReplies="Dlg_pl_003163" />
+
+	<Reply
+		name="Dlg_pl_003163"
+		text="Есть в Хеле одно живописное место. Я хочу посмотреть на него. В последний раз."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003164" />
+
+	<Reply
+		name="Dlg_npc_003164"
+		text="Как пожелаешь. Отправимся, когда ты будешь готов."
+		role="NPC"
+		nextReplies="Dlg_pl_003165" />
+
+	<Reply
+		name="Dlg_pl_003165"
+		text="Хорошо."
+		role="PLAYER"
+		scriptResult="TActivate('TeleportToR1M4'); EndConversation()" />
 </DialogsResource>

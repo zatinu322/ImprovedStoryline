@@ -253,10 +253,6 @@
 		FullName="Житель Арнольд" />
 
 	<Object
-		Name="PeshtGuardian1"
-		FullName="Житель Арнольд" />
-
-	<Object
 		Name="BaseGuardian"
 		FullName="Охранник Дак" />
 

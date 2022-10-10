@@ -62,15 +62,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="Olme_Bar_Traider"
-				Belong="1010"
-				Prototype="NPC"
-				ModelName="r1_man"
-				cfg="76"
-				helloReplyNames="Olme_Bar_Traider_1_N01"
-				SpokenCount="0" />
-
-			<Object
 				Name="Bar_Gomer1"
 				Belong="1010"
 				Prototype="NPC"

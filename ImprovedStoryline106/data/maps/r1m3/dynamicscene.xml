@@ -604,15 +604,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="PeshtGuardian1"
-				Belong="1011"
-				Prototype="NPC"
-				ModelName="r1_man"
-				cfg="150"
-				helloReplyNames="PeshtGuardian_hellodlg3"
-				SpokenCount="0" />
-
-			<Object
 				Name="CrazyRoadRiders"
 				Belong="1011"
 				Prototype="NPC"

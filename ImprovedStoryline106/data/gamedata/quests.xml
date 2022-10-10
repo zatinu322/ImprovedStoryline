@@ -2855,14 +2855,6 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r1m3_FindVrata_KnowPlace" />
 	</quest>
-<!--Root/r1m4/Торговец дисками-->
-	<quest
-		Name="r1m4_TalkWithOldTraderAboutSecondDisk"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="TActivate('trGive2NavPoint');AddPlayerMoney(50000)" />
 <!--Root/r1m4/Найти муженька-->
 	<quest
 		Name="q_FindHusbent"

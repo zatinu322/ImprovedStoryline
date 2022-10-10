@@ -269,10 +269,6 @@
 		FullName="Тоннель в Лиденклауд" />
 
 	<Object
-		Name="Olme_Bar_Traider"
-		FullName="Торговец" />
-
-	<Object
 		Name="bigboss1"
 		FullName="Босс" />
 

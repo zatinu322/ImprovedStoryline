@@ -2598,22 +2598,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="d_FindLisaInPesht_Quest"
-		briefDiz="Проверить в Пеште"
-		isMainQuest="1">
-		<Map
-			name="r1m1"
-			targetObjName="ToR1M3" />
-
-		<Map
-			name="r1m2" />
-
-		<Map
-			name="r1m3"
-			targetObjName="Pesht" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="d_FindOracul_Quest"
 		briefDiz="Найти Оракула"
 		fullDiz="На далеком северном острове, по слухам, живёт Оракул. След, оставленный моим отцом, ведет туда."
@@ -3810,20 +3794,6 @@
 		<Map
 			name="r1m4"
 			targetObjName="MorassRoad_loc" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r1m4_TalkWithOldTraderAboutSecondDisk"
-		briefDiz="Найти торговца"
-		fullDiz="Человек, который предлагал Бену купить диск, подходящий под описание Оракула, живет где-то здесь. Надеюсь, это именно то, что я ищу."
-		isMainQuest="1">
-		<Map
-			name="r1m3"
-			targetObjName="ToR1M4" />
-
-		<Map
-			name="r1m4"
-			targetObjName="TheOlme_enter" />
 	</QuestInfo>
 
 	<QuestInfo

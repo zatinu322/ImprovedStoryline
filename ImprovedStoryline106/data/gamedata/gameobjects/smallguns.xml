@@ -110,7 +110,7 @@ $Id: SmallGuns.xml,v 1.57 2005/11/17 06:42:59 anton Exp $
 		ExplosionType	= "MACHINEGUN"
 		FiringEffect	= "none"
 		Damage			= "0"
-		FiringRate		= "4"
+		FiringRate		= "20"
 		GroupingAngle	= "0.5"
 		FiringRange		= "0"
 		RecoilForce		= "2"		
@@ -350,7 +350,7 @@ $Id: SmallGuns.xml,v 1.57 2005/11/17 06:42:59 anton Exp $
 		FiringRange		= "800"
 		RecoilForce		= "0"
                 FiringType		= "Laser"
-		Price			= "53200"
+		Price			= "26600"
 		
 		Decal				= "DC_LASER"
 
@@ -404,7 +404,7 @@ $Id: SmallGuns.xml,v 1.57 2005/11/17 06:42:59 anton Exp $
 		FiringRange		= "2000"
 		RecoilForce		= "1"
                 FiringType		= "Plasma"
-		Price			= "51000"
+		Price			= "25500"
 				
 		Decal				= "DC_LASER"
 

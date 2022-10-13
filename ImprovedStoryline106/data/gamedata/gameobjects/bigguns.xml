@@ -104,7 +104,7 @@ $Id: BigGuns.xml,v 1.42 2005/10/18 06:12:47 anton Exp $
 		NumBulletsInShot	= "10"
 		FiringRate		= "14"
 		GroupingAngle		= "3"
-		FiringRange		= "200"
+		FiringRange		= "300"
 		RecoilForce		= "1000"
 
 		Decal			= "DC_BIG_MACHINEGUN"
@@ -112,7 +112,7 @@ $Id: BigGuns.xml,v 1.42 2005/10/18 06:12:47 anton Exp $
 		ChargeSize     = "1"
 		RechargingTime = "4"
 
-		Price			= "8960"
+		Price			= "17860"
                 FiringType		= "ShotGun"
 		BlastWavePrototype      = "smallBlastWave"
 		Durability		= "200"/>
@@ -165,7 +165,7 @@ $Id: BigGuns.xml,v 1.42 2005/10/18 06:12:47 anton Exp $
 		ChargeSize     = "50"
 		RechargingTime = "5"
 
-		Price			= "12759"
+		Price			= "24580"
                 FiringType		= "Cannon"
 		BlastWavePrototype      = "smallBlastWave"
 		Durability		= "100" />
@@ -192,7 +192,7 @@ $Id: BigGuns.xml,v 1.42 2005/10/18 06:12:47 anton Exp $
 
 		Decal				= "DC_LASER"
                 FiringType		= "Plasma"
-		Price			= "90200"
+		Price			= "45100"
 
 		Durability		= "250"/>
 	
@@ -219,7 +219,7 @@ $Id: BigGuns.xml,v 1.42 2005/10/18 06:12:47 anton Exp $
 		ChargeSize     		= "20"
 		RechargingTime 		= "3.5"
                 FiringType		= "Laser"
-		Price			= "102500"
+		Price			= "51250"
 
 		Durability		= "250"/>
 
@@ -276,7 +276,6 @@ $Id: BigGuns.xml,v 1.42 2005/10/18 06:12:47 anton Exp $
 		GroupingAngle		= "1.1"
 		FiringRange		= "500"
 		RecoilForce		= "300"
-               	CanBeUsedInAutogenerating  =  "0"
 		ChargeSize     = "18"
 		RechargingTime = "8"
 

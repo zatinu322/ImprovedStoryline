@@ -1307,11 +1307,13 @@
 
 		<Item 
 			id="dozerChassis" 
-			file="data\models\AnimModels.xml"/>
+			file="data\models\AnimModels.xml"
+			params = "skins: 0 1 2 4 7 8;" />
 
 		<Item 
 			id="dozerCab01" 
-			file="data\models\AnimModels.xml"/>
+			file="data\models\AnimModels.xml"
+			params = "skins: 0 1 2 4 7 8;" />
 
 		<Item 
 			id="dozerSusp01" 
@@ -1332,7 +1334,7 @@
 		<Item 	
 			id="sml1Cab01" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="sml1Susp01" 
@@ -1357,12 +1359,12 @@
 		<Item 
 			id="sml2Cab01" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="sml2Cab01_formula" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="sml2Susp01" 
@@ -1387,7 +1389,7 @@
 		<Item 
 			id="sml3Cab01" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="sml3Susp01" 
@@ -1576,32 +1578,32 @@
 		<Item 
 			id="bugCab01" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="bugCab02" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="bugCab03" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="bugCargo01" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="bugCargo02" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="bugCargo03" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="bugSusp01" 
@@ -1704,48 +1706,52 @@
 		<Item 
 			id="molokovozCab01" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="molokovozCab02" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="molokovozCab03" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="molokovozCargo01" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="molokovozCargo02" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="molokovozCargo03" 
 			file="data\models\AnimModels.xml"   
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
 			id="molokovozCargo04" 
 			file="data\models\AnimModels.xml"    
-			params = "skins: 0 1 2 4 7 8;" />
+			params = "skins: 0 1 2 4 7 8 10 13 14 15 16;" />
 
 		<Item 
-			id="molokovozSusp01l" 
+			id="molokovozSus_f_r" 
 			file="data\models\AnimModels.xml"/>
 
 		<Item 
-			id="molokovozSusp01r" 
+			id="molokovozSus_f_l" 
 			file="data\models\AnimModels.xml"/>
 
 		<Item 
-			id="molokovozSusp02" 
+			id="molokovozSus_r_r" 
+			file="data\models\AnimModels.xml"/>
+		
+		<Item 
+			id="molokovozSus_r_l" 
 			file="data\models\AnimModels.xml"/>
 
 		<Item 

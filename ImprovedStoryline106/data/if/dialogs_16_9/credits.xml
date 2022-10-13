@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<!-- Seel's comments: -->
+<!-- Main menu credits slides of dev team -->
+<!-- Related to creditswnd.xml -->
 <Credits
 	breakTime="0.7"
 	breakSoundFile="data\sounds\Driving\shifter1.wav"

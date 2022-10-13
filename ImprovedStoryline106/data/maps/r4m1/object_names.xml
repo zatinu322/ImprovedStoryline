@@ -125,10 +125,6 @@
 		FullName="Нефтескважина" />
 
 	<Object
-		Name="Port_loc"
-		FullName="Морской Порт" />
-
-	<Object
 		Name="LostEngineer_loc"
 		FullName="Убежавший инженер" />
 

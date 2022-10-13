@@ -139,22 +139,6 @@
 
 	<Object
 		Flags="21"
-		Name="ALIENSLoc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1184.729 428.760 1479.850"
-		Radius="100.000" />
-
-	<Object
-		Flags="21"
-		Name="KINGPIN"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3838.786 227.205 6982.742"
-		Radius="25.000" />
-
-	<Object
-		Flags="21"
 		Name="SideLine"
 		Belong="1100"
 		Prototype="genericLocation"

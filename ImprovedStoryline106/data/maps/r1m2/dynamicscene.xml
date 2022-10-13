@@ -155,15 +155,6 @@
 
 	<Object
 		Flags="21"
-		Name="Ruins_location"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="7468.556 173.296 5213.779"
-		Radius="70.000"
-		LookingTimeOut="70.000" />
-
-	<Object
-		Flags="21"
 		Name="Kolizey_location"
 		Belong="1100"
 		Prototype="genericLocation"

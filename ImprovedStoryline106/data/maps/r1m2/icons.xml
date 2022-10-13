@@ -13,5 +13,6 @@
 	<Item id="Midragd_Museum"		file="data\if\ico\TalkWithNpcDlg\museumdialog1.dds"		file1=""/>
 	<Item id="Midragd_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 	<Item id="Esting_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="KidnapProrab"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
 
 </icons>

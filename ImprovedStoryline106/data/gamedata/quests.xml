@@ -103,7 +103,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="r2m1_DestroyAlienShip" />
 
 	<quest
 		Name="StartCalmLife"
@@ -524,7 +525,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="GoToMudr_Quest GoToMudrec_Quest"
 		OnFail='RemoveQuestItem("quest_bratislav_component1"); RemoveQuestItem("quest_bratislav_component2"); RemoveQuestItem("quest_bratislav_component3"); TDeactivate("trBarrelsExploded"); TDeactivate("tr1stComponentFound"); TDeactivate("tr2ndComponentFound"); TDeactivate("tr3rdComponentFound");'
 		Levels="r1m5">
 		<quest
@@ -1326,7 +1328,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(10000)"
 		Levels="r3m1 r3m2 r1m4 r1m3 r1m2 r2m1 r2m2">
 		<quest
@@ -1457,6 +1460,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r3m2_TwoMagicThing"
 		OnComplete="AddPlayerMoney(5000)">
 		<quest
 			Name="r3m2_OracleMemory_1"
@@ -1500,6 +1504,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Disk2OrakulLisa"
 		OnTake='ShowCircleOnMinimap( "r3m1", CVector(435.602, 323.701, 1778.469), 100 )' />
 
 	<quest
@@ -1571,7 +1576,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="1"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(3000)">
 		<quest
 			Name="r3m1_LureMainDriud_Talk"
@@ -1605,7 +1611,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="1"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(5000)">
 		<quest
 			Name="r3m1_ClearSanctuary_KillMonster"
@@ -1656,7 +1663,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(3000)"
 		Levels="r3m1">
 		<quest
@@ -1686,6 +1694,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
+		PrecedingQuests="r3m1_KnowAboutUluk_GotoUluk"
 		OnComplete="AddPlayerMoney(8000)"
 		OnFail='TDeactivate("trWentCivCamp"); TDeactivate("trUlukArmyDie"); TDeactivate("trRescArmyDie"); TDeactivate("trRescArmyDie2"); TDeactivate("tr_RescueCarsDist"); TDeactivate("RBezhenVeh1InPlace"); TDeactivate("RBezhenVeh2InPlace"); TDeactivate("RCarsInPlace"); TActivate("trRescueEnd")'
 		Levels="r3m1">
@@ -1724,6 +1733,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r3m1_ClearSanctuary"
 		OnComplete="AddPlayerMoney(5000)"
 		OnFail='RemoveQuestItem("quest_druid_package")'
 		Levels="r3m1 r3m2" />
@@ -1734,6 +1744,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
 		OnFail='TDeactivate("ZNAKIZNAKI")'
 		OnTake='ShowCircleOnMinimapByName("ZnakiLoc2")'
 		Levels="r2m2" />
@@ -1755,6 +1766,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
 		OnComplete="AddPlayerMoney(750)"
 		OnFail='RemoveQuestItem("quest_shaman_head1"); RemoveQuestItem("quest_shaman_head2"); TDeactivate("Shaman1TriggerDie"); TDeactivate("Shaman2TriggerDie")'
 		Levels="r2m2">
@@ -1792,6 +1804,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
 		OnComplete="AddPlayerMoney(750)"
 		OnFail='RemoveQuestItem("quest_old_digital");'
 		OnTake='ShowCircleOnMinimapByName("NewVillage")'
@@ -1803,6 +1816,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r2m2_OldDvigatel1_Quest"
 		OnComplete="AddPlayerMoney(750)"
 		OnFail='RemoveQuestItem("quest_old_digital");'
 		OnTake='ShowCircleOnMinimapByName("Marezzia")'
@@ -1826,7 +1840,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r2m2_GiveBardakToEnemy"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000, "storm01", 3, 3)'
-		OnTake='ShowCircleOnMinimapByName("VillDesLoc")'>
+		OnTake='ShowCircleOnMinimap( "r2m2", CVector(1316.448, 261.000, 3691.035), 100 )'>
 		<quest
 			Name="r2m2_GiveBardakToSideVillage1"
 			Automatic="0"
@@ -1904,7 +1918,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="r2m2_FindROMinCastle"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000,"storm01",3,4)'
 		OnTake='ShowCircleOnMinimapByName("Arena")'>
 		<quest
@@ -1930,6 +1945,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r2m2_FindROMinCastle"
 		OnComplete="AddPlayerMoney(1000)"
 		OnTake='ShowCircleOnMinimapByName("Marezzia")' />
 <!--Root/r2m2/Сюжетные/Уничтожить лагерь повстанцев-->
@@ -2211,7 +2227,7 @@
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(5000)"
 		OnFail='TDeactivate("Trigger_NarcotikBoss_Die")'
-		OnTake='ShowCircleOnMinimapByName("KINGPIN")'
+		OnTake='ShowCircleOnMinimap( "r2m1", CVector(3838.786, 227.205, 6982.742), 100 )'
 		Levels="r2m1" />
 <!--Root/r2m1/Опциональные/Мистер Шляпа Секретный-->
 	<quest
@@ -2481,7 +2497,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("ALIENSLoc")' />
+		OnTake='ShowCircleOnMinimap( "r2m1", CVector(1184.729, 428.760, 1479.850), 100 )' />
 <!--Root/r2m1/Сюжетные/Антимилитаристы-->
 	<quest
 		Name="Podderzhka_Quest"
@@ -2708,7 +2724,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="d_WinLisaInBattle_Quest" />
 <!--Root/r2m1/Сюжетные/Разобраться, что происходит-->
 	<quest
 		Name="FigureOutWhatsGoingOn_Quest"
@@ -3346,7 +3363,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("ALIENSLoc")' />
+		OnTake='ShowCircleOnMinimap( "r2m1", CVector(1184.729, 428.760, 1479.850), 100 )' />
 <!--Root/r1m3/Сюжетные/ Прознать про Врата в Минине -->
 	<quest
 		Name="d_TalkAboutVrataInMinin_Quest"
@@ -3588,7 +3605,7 @@
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(100)"
 		OnFail='TDeactivate("RUINSWAR1");'
-		OnTake='ShowCircleOnMinimapByName("Ruins_location")'
+		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
 		Levels="r1m2" />
 <!--Root/r1m2/Опциональные/ Разрушить руины -->
 	<quest
@@ -3599,7 +3616,7 @@
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(100)"
 		OnFail='TDeactivate("RUINSWAR2");'
-		OnTake='ShowCircleOnMinimapByName("Ruins_location")'
+		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
 		Levels="r1m2" />
 
 	<quest
@@ -4000,7 +4017,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnFail='RemoveQuestItem("FarmerDik_P");'
 		OnTake='ShowCircleOnMinimapByName("TheOilVillageQ2")'
 		Levels="r1m1" />
@@ -4013,7 +4031,6 @@
 		ConditionToGive="all complete"
 		OnComplete="AddPlayerMoney(100)"
 		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD"); TActivate("REVOLUTIONTIMEREMOVE"); TDeactivate("PlayerDrunkBehaviour"); TDeactivate("PlayerDrunkBehaviourInPlace")'
-		OnTake='ShowCircleOnMinimapByName("RevolutionTimeEndLoc")'
 		Levels="r1m1" />
 
 	<quest

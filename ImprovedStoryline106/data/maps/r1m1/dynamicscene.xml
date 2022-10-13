@@ -298,15 +298,6 @@
 		LookingTimeOut="100.000" />
 
 	<Object
-		Flags="21"
-		Name="RevolutionTimeEndLoc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="2845.318 336.366 1335.001"
-		Radius="50.000"
-		LookingTimeOut="50.000" />
-
-	<Object
 		Name="TheTown"
 		Belong="1008"
 		Prototype="TownSouth"

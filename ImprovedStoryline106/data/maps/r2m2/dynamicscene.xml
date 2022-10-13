@@ -2044,14 +2044,6 @@
 
 	<Object
 		Flags="21"
-		Name="VillDesLoc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1316.448 261.000 3691.035"
-		Radius="50.000" />
-
-	<Object
-		Flags="21"
 		Name="ZnakiLoc2"
 		Belong="1100"
 		Prototype="genericLocation"

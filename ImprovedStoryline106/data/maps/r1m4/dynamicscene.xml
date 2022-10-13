@@ -1466,15 +1466,6 @@
 		LookingTimeOut="100.000" />
 
 	<Object
-		Flags="21"
-		Name="Port_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="755.250 230.567 878.418"
-		Radius="83.656"
-		LookingTimeOut="137.000" />
-
-	<Object
 		Name="StorageVil"
 		Belong="1084"
 		Prototype="r1m4_StorageVillage"

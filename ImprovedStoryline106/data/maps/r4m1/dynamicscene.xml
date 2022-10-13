@@ -1654,14 +1654,6 @@
 
 	<Object
 		Flags="21"
-		Name="Port_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="1343.408 211.317 3100.713"
-		Radius="51.738" />
-
-	<Object
-		Flags="21"
 		Name="Oil_loc"
 		Belong="1100"
 		Prototype="genericLocation"

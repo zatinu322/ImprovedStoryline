@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<icons>
+   <Item id="Gadad_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog4.dds" file1=""/>
+   <Item id="Kef_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog4.dds" file1=""/>
+   <Item id="Kazif_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog4.dds" file1=""/>
+   <Item id="r4_Aliham_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog4.dds" file1=""/>
+   <Item id="LostEngineer_loc"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds" file1=""/>
+</icons>

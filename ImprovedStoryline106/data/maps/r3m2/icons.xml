@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<icons>
+   <Item id="OracleDefendersVil"			file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
+   <Item id="AloneDruid_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
+   <Item id="Oracle_loc"	file="data\if\ico\TalkWithNpcDlg\oracledialog.dds" file1=""/>
+   <Item id="OracleDefendersDialogs_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog2.dds" file1=""/>
+</icons>

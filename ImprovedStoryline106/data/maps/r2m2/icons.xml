@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<icons>
+
+	<Item id="Monastery_Cell"		file="data\if\ico\TalkWithNpcDlg\castledialog1.dds"		file1=""/>
+	<Item id="Marezzia_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="Zeon_CentralHouse"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="Toskana_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="GranicaVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="ZnakiVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="NewVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="Lager"				file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
+	<Item id="EretikMeet_loc"				file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
+	<Item id="EretikEnd_loc"				file="data\if\ico\TalkWithNpcDlg\castledialog1.dds"		file1=""/>
+
+</icons>

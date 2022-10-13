@@ -3944,7 +3944,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="ALIENSLoc" />
+			coordinate="1184.729 428.760 1479.850" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3982,7 +3982,7 @@
 		isMainQuest="1">
 		<Map
 			name="r2m1"
-			targetObjName="ALIENSLoc" />
+			coordinate="1184.729 428.760 1479.850" />
 	</QuestInfo>
 
 	<QuestInfo

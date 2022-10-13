@@ -249,10 +249,6 @@
 		FullName="Жена Аллушка" />
 
 	<Object
-		Name="Port_loc"
-		FullName="Морские врата" />
-
-	<Object
 		Name="FVPerch_Houses"
 		FullName="Зал ожидания" />
 

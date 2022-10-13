@@ -12,5 +12,7 @@
 
    <Item id="FVPerch_Houses"	file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds" file1=""/>
    <Item id="AfterWinterFisher_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog1.dds" file1=""/>
+   <Item id="HomerRyba_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog2.dds" file1=""/>
+   <Item id="FilimonLoc"	file="data\if\ico\TalkWithNpcDlg\cardialog1.dds" file1=""/>
 
 </icons>

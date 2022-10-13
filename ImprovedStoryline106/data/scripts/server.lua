@@ -12,9 +12,9 @@
 -- ----------------------------------------------------------------------------
 
 if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.0.6 BUILD 220927")
+	LOG("IMPROVED STORYLINE V1.0.6 HD BUILD 220927")
 
-	ISL_VERSION = "106-220927"
+	ISL_VERSION = "106-HD-220927"
 
 	-- only for development needs, should not be in release!
 	EXECUTE_SCRIPT "data\\scripts\\compatch.lua"

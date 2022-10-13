@@ -42,24 +42,6 @@
 	/>                       
 
 	<Item
-		file="data\maps\r1m4\icons.xml"
-		loadType="AT_LEVEL_START"
-		level="r1m5"
-	/>  
-
-	<Item
-		file="data\maps\r1m4\icons.xml"
-		loadType="AT_LEVEL_START"
-		level="r1m6"
-	/>  
-
-	<Item
-		file="data\maps\r1m4\icons.xml"
-		loadType="AT_LEVEL_START"
-		level="r1m7"
-	/>  
-
-	<Item
 		file="data\maps\r2m1\icons.xml"
 		loadType="AT_LEVEL_START"
 		level="r2m1"

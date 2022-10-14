@@ -5,7 +5,8 @@
 
 В данный момент эта версия мода не завершена и находится в разработке. **Устанавливайте и играйте на свой страх и риск**.
 
-Версия для Community Remaster - TBD
+Версия для Community Remaster - [здесь](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr).
+
 # Установка
 ~~Скачать мод можно через зелёную кнопку **Code - Download ZIP**.~~
 

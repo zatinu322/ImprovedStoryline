@@ -91,7 +91,7 @@
 				for i = 1,4 do
 					if getObj("MBArmy0"..i)==nil then
 						count = count + 1
-						local vehlist={"Tank01","Hunter01","Hunter02","Cruiser01","Cruiser02"}
+						local vehlist={"Tank01","Hunter01","Hunter02","Cruiser01","CruiserBased"}
 						local veh1=vehlist[random(getn(vehlist))]
 						local veh2=vehlist[random(getn(vehlist))]
 						CreateTeam("MBArmy0"..i, 1062, CVector(getPos("SpawnCrazy"..random(17).."_loc")),{veh1,veh2},CVector(getPos("MilitaryBase_loc")))

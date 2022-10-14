@@ -14,7 +14,7 @@ $Id: GlobalProperties.xml,v 1.58 2005/11/24 09:45:17 anton Exp $
 		MaxSize="13 12" />
 
 	<GroundRepository
-                        Size="13 10000" />
+                        Size="18 300" />
 	<Mult	
 		GameTimeMult 				= "60" 
 		VehicleAIFiringRangeMult	= "0.5"

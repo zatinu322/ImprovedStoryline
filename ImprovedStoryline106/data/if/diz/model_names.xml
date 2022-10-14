@@ -1658,6 +1658,11 @@
 		value="Крейсер" />
 
 	<Item
+		id="CruiserBased"
+		locForm="0"
+		value="Крейсер" />
+
+	<Item
 		id="r1m3_hunter02"
 		locForm="0"
 		value="Охотник" />

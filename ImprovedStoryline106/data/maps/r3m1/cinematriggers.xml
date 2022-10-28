@@ -102,7 +102,7 @@
 		</script>
 	</trigger>
 
-	<!-- 			Ролик у Стоунхенджа				 -->
+	<!-- 			Ролики у Стоунхенджа				 -->
 	<trigger Name="RolikBegin_LoggersMech" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1024,7 +1024,7 @@
 	</trigger>
 
 
-<!-- 		Спасли беженцев и едим в Сет		 -->
+<!-- 		Спасли беженцев и едем в Сет		 -->
 	<trigger Name="RolikBegin_ToGoInSet" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>

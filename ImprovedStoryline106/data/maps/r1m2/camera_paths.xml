@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
-	<Path Name = "start_game">
-		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
-	</Path>
-	
-	<Path Name = "signfly">
-		<Point  coord="962 110 3925" rotation="-0.2468 0.0328 -0.0219 0.9683"/>   
-		<Point  coord="855 110 4020" rotation="0.1909 -0.6915 0.1584 0.6785"/>   
+	<!-- После Бабы Поли, первый раз -->
+	<Path Name = "ShlyapaCam0_0">
+		<Point  coord="3532.765 108.281 5230.042" rotation="-0.096 0.537 -0.061 0.836"/>
+		<Point  coord="3539.631 108.281 5245.028" rotation="-0.096 0.537 -0.061 0.836"/>
 	</Path>
 
+	<Path Name = "ShlyapaCam0">
+		<Point  coord="4243.228 73.554 5111.499" rotation="-0.190 0.421 -0.090 0.883"/>
+		<Point  coord="4280.838 94.201 5081.589" rotation="-0.181 0.425 -0.087 0.882"/>
+	</Path>
+
+	<!-- Игрока выгоняют из Мидгарда -->
+	<Path Name = "MidragdOut1">
+		<Point  coord="4340.464 131.398 864.884" rotation="0.004 0.995 -0.051 -0.086"/>
+		<Point  coord="4339.914 131.757 868.324" rotation="0.004 0.995 -0.051 -0.086"/>
+	</Path>
+
+	<Path Name = "MidragdOut3">
+		<Point  coord="5062.225 110.014 1753.815" rotation="-0.110 -0.323 0.038 0.939"/>
+		<Point  coord="5082.107 102.304 1779.329" rotation="-0.110 -0.323 0.038 0.939"/>
+	</Path>
+
+	<!-- Показываем Караванщика в плену -->
 	<Path Name = "LisaPlen_cam01">
 		<Point  coord="5290.450 101.258 4657.374" rotation="-0.014 -0.850 0.023 0.525"/>   
 		<Point  coord="5289.759 101.300 4657.721" rotation="-0.014 -0.850 0.023 0.525"/>   
@@ -19,6 +33,7 @@
 		<Point  coord="5325.702 54.754 4677.042" rotation="-0.014 0.640 -0.011 0.768"/>
 	</Path>
 
+	<!-- Диалог с караванщиком после освобождения -->
 	<Path Name = "LisaPlenDie_cam01">
 		<Point  coord="-20 5 20" />   
 		<Point  coord="20 5 -20" />   
@@ -49,55 +64,19 @@
 		<Point  coord="-15 3 0" />   
 	</Path>
 
-	<Path Name = "Kol2_cam01">
-		<Point  coord="-2 5 -20" rotation="0.024 0.974 -0.191 -0.121"/>
-		<Point  coord="-50 29 57" rotation="0.004 0.991 -0.031 -0.129"/>
-	</Path>
-
-	<Path Name = "Kol2_cam02">
-		<Point  coord="7292.398 231.662 3243.924" rotation="-0.068 0.217 -0.015 0.974"/>
-		<Point  coord="7289.920 230.848 3249.194" rotation="-0.068 0.217 -0.015 0.974"/>
-	</Path>
-
-	<Path Name = "Kol2_cam03">
-		<Point  coord="-2.146 3.257 -0.745"/>
-	</Path>
-
-	<Path Name = "Kol2_cam21">
-		<Point  coord="-0.344 3.200 -7.696" rotation="0 0 0 1"/>
-		<Point  coord="-0.344 0.200 -7.696" rotation="0 0 0 1"/>
-	</Path>
-
-	<Path Name = "BefDesert">
-		<Point  coord="4154.308 135.414 950.932" rotation="0.027 0.968 -0.217 -0.121"/>
-		<Point  coord="4249.732 158.928 920.471" rotation="0.047 0.873 -0.087 -0.477"/>
-	</Path>
-
+	<!-- Перебивка "На следующий день" и "Спустя пару часов" у Бена -->
 	<Path Name = "NextDayCam">
 		<Point  coord="3749.487 137.608 1855.208" rotation="0.051 0.912 -0.119 -0.389"/>
 		<Point  coord="3744.043 135.456 1840.087" rotation="-0.054 -0.852 0.098 0.511"/>
 	</Path>
 
-	<Path Name = "MidragdOut1">
-		<Point  coord="4340.464 131.398 864.884" rotation="0.004 0.995 -0.051 -0.086"/>
-		<Point  coord="4339.914 131.757 868.324" rotation="0.004 0.995 -0.051 -0.086"/>
+	<!-- Едем в Мидгард за сплавом после Бена -->
+	<Path Name = "BefDesert">
+		<Point  coord="4154.308 135.414 950.932" rotation="0.027 0.968 -0.217 -0.121"/>
+		<Point  coord="4249.732 158.928 920.471" rotation="0.047 0.873 -0.087 -0.477"/>
 	</Path>
 
-	<Path Name = "MidragdOut3">
-		<Point  coord="5062.225 110.014 1753.815" rotation="-0.110 -0.323 0.038 0.939"/>
-		<Point  coord="5082.107 102.304 1779.329" rotation="-0.110 -0.323 0.038 0.939"/>
-	</Path>
-
-	<Path Name = "PreSuicCam">
-		<Point  coord="3255.637 41.661 7256.515" rotation="0.006 -0.623 -0.005 0.782"/>
-		<Point  coord="3259.616 41.853 7257.757" rotation="0.000 -0.592 -0.000 0.806"/>
-	</Path>
-
-	<Path Name = "SuicCam">
-		<Point  coord="3259.616 41.853 7257.757" rotation="0.000 -0.592 -0.000 0.806"/>
-		<Point  coord="3295.400 41.853 7268.972" rotation="0.005 -0.541 -0.003 0.841"/>
-	</Path>
-
+	<!-- Плохая концовка -->
 	<Path Name = "BenSamokillCam">
 		<Point  coord="3716.116 121.793 1623.779" rotation="0.019 -0.104 -0.002 0.994"/>
 		<Point  coord="3716.116 121.793 1623.779" rotation="0.015 -0.158 -0.002 0.987"/>
@@ -138,21 +117,21 @@
 		<Point  coord="2531.426 145.883 6972.929" rotation="-0.095 -0.510 0.057 0.853"/>
 	</Path>
 
-	<Path Name = "ShlyapaCam0_0">
-		<Point  coord="3532.765 108.281 5230.042" rotation="-0.096 0.537 -0.061 0.836"/>
-		<Point  coord="3539.631 108.281 5245.028" rotation="-0.096 0.537 -0.061 0.836"/>
+	<Path Name = "PreSuicCam">
+		<Point  coord="3255.637 41.661 7256.515" rotation="0.006 -0.623 -0.005 0.782"/>
+		<Point  coord="3259.616 41.853 7257.757" rotation="0.000 -0.592 -0.000 0.806"/>
 	</Path>
 
-	<Path Name = "ShlyapaCam0">
-		<Point  coord="4243.228 73.554 5111.499" rotation="-0.190 0.421 -0.090 0.883"/>
-		<Point  coord="4280.838 94.201 5081.589" rotation="-0.181 0.425 -0.087 0.882"/>
+	<Path Name = "SuicCam">
+		<Point  coord="3259.616 41.853 7257.757" rotation="0.000 -0.592 -0.000 0.806"/>
+		<Point  coord="3295.400 41.853 7268.972" rotation="0.005 -0.541 -0.003 0.841"/>
 	</Path>
 
-	<Path Name = "ShlyapaCam1">
-		<Point  coord="3431.378 100.466 5171.074" rotation="-0.055 -0.527 0.034 0.848"/>
-		<Point  coord="3406.604 103.955 5158.792" rotation="-0.053 -0.527 0.033 0.848"/>
+	<Path Name = "start_game">
+		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
 	</Path>
 
+	<!-- Нормальная концовка -->
 	<Path Name = "NormalEndCam1">
 		<Point  coord="3747.497 131.305 1887.091" rotation="0.027 0.969 -0.120 -0.215"/>
 		<Point  coord="3782.077 123.599 1821.450" rotation="0.015 0.969 -0.060 -0.240"/>
@@ -160,5 +139,37 @@
 
 	<Path Name = "EndingScreenCam1">
 		<Point  coord="4953.300 23.716 7925.755" rotation="0.007 -0.026 -0.000 1.000"/>
+	</Path>
+
+	<!-- После Бабы Поли, активация бонусной концовки -->
+	<Path Name = "ShlyapaCam1">
+		<Point  coord="3431.378 100.466 5171.074" rotation="-0.055 -0.527 0.034 0.848"/>
+		<Point  coord="3406.604 103.955 5158.792" rotation="-0.053 -0.527 0.033 0.848"/>
+	</Path>
+
+	<!-- Осмотр полей со знаками возле Яра -->
+	<Path Name = "signfly">
+		<Point  coord="962 110 3925" rotation="-0.2468 0.0328 -0.0219 0.9683"/>   
+		<Point  coord="855 110 4020" rotation="0.1909 -0.6915 0.1584 0.6785"/>   
+	</Path>
+
+	<!-- Первая и вторая битвы в Колизее -->
+	<Path Name = "Kol2_cam01">
+		<Point  coord="-2 5 -20" rotation="0.024 0.974 -0.191 -0.121"/>
+		<Point  coord="-50 29 57" rotation="0.004 0.991 -0.031 -0.129"/>
+	</Path>
+
+	<Path Name = "Kol2_cam02">
+		<Point  coord="7292.398 231.662 3243.924" rotation="-0.068 0.217 -0.015 0.974"/>
+		<Point  coord="7289.920 230.848 3249.194" rotation="-0.068 0.217 -0.015 0.974"/>
+	</Path>
+
+	<Path Name = "Kol2_cam21">
+		<Point  coord="-0.344 3.200 -7.696" rotation="0 0 0 1"/>
+		<Point  coord="-0.344 0.200 -7.696" rotation="0 0 0 1"/>
+	</Path>
+
+	<Path Name = "Kol2_cam03">
+		<Point  coord="-2.146 3.257 -0.745"/>
 	</Path>
 </Paths>

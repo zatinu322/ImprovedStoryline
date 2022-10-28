@@ -1156,7 +1156,7 @@
 		</script>
 	</trigger>
 
-<!-- Игрок натыкается на лису возле Гельвеции -->
+<!-- Игрок натыкается на Лису возле Гельвеции -->
 	<trigger Name="RolikBegin_Lisa" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1283,7 +1283,7 @@
 		</script>
 	</trigger>
 
-<!-- игрок побеждает лису. -->
+<!-- игрок побеждает Лису -->
 	<trigger Name="RolikBegin_LISADIED" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1762,9 +1762,8 @@
 			local CTochID = CToch:GetId()
 			local Cont = GetEntityByName("boss02cont")
 			local ContID = Cont:GetId()
+			
 			Fly("BOSSDIE_cam03", CINEMATIC_NO_AIM, 0, 21, 1, 1 )
-			--FlyLinked("BOSSDIE_cam02", CTochID, 21, 1, 1, ContID, nil, nil, nil, nil )
-
 			StartCinematic()
 
 			TActivate("RolikEnd_BOSSDIE")

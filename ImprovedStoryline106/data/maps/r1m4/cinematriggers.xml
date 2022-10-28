@@ -1594,6 +1594,8 @@
 
 			EnableGodMode()
 
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
 			Fly("PlaneOut_cam01", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 5, 0, 0 )
 			Fly("PlaneOut_cam02", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 5, 0, 1 )
 			StartCinematic()
@@ -1636,6 +1638,8 @@
 
 			DisableGodMode()
 
+			RestoreAllToleranceStatus()
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("player_path02")
@@ -1643,13 +1647,13 @@
 				vehPlayer:UnlimitMaxSpeed()
 			end
 
-
 			TDeactivate("RolikBegin_PlaneOut")
-			TDeactivate("trPlaneOut_cam01")
 			TDeactivate("trPlaneOut_cam02")
 			TActivate("trMorassTeleportBefore")
 			TActivate("trMorassTeleportAfter")
+
 			SetCameraBehindPlayerVehicle()
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

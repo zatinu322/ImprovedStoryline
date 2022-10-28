@@ -39,8 +39,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
-		PrecedingQuests="Disk2OrakulLisa"
-		OnTake="TActivate('trOracleDisk2Test')">
+		PrecedingQuests="Disk2OrakulLisa">
 		<quest
 			Name="r1m2_TalkAboutRedkiyMineral_Quest"
 			Automatic="1"
@@ -1513,7 +1512,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="r3m2_OracleMemory r3m1_FindNative_2"
+		PrecedingQuests="r3m2_OracleMemory"
 		OnComplete="AddPlayerMoney(5000)" />
 <!--Root/r3m2/Сюжетные/Нашли второй диск-->
 	<quest
@@ -2028,7 +2027,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="Eretik_Meet d_GetAkselBandit_Quest r2m2_MoveToZeonToAlex"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 1000,"pkt01",3,9)'
 		OnTake='ShowCircleOnMinimapByName("Arena")'>
 		<quest
@@ -2054,6 +2054,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r2m2_ToLisaToMonastir"
 		OnTake='ShowCircleOnMinimapByName("ToR2M1"); ShowCircleOnMinimap("r2m1",CVector(5997.535, 276.571, 4385.696))' />
 <!--Root/r2m2/Сюжетные/Лису прячется в Монастыре-->
 	<quest
@@ -2062,16 +2063,8 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r2m2_FightWithAxelInArena_Quest"
 		OnTake='ShowCircleOnMinimapByName("Monastery")' />
-<!--Root/r2m2/Сюжетные/Отвезти диск 2 к оракулу-->
-	<quest
-		Name="r2m2_GiveDisk2ToOrakul"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="any complete"
-		OnComplete="AddPlayerMoney(1000)"
-		Levels="r2m2 r2m1 r3m1 r3m2" />
 <!--Root/r2m2/Сюжетные/Сдать повстанцев в Маррецию-->
 	<quest
 		Name="r2m2_BetrateAMorSNG"
@@ -2135,6 +2128,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="MrShlyapa2_Quest"
 		OnFail='TDeactivate("Shlyapa3cin"); TDeactivate("Shlyapa3cin2"); TDeactivate("StoneUralZapret")'
 		OnTake='ShowCircleOnMinimapByName("Shlyapa3_loc")'
 		Levels="r2m2">
@@ -2164,6 +2158,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_OpenTunel_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheDoubtful")'
 		Levels="r2m1" />
 <!--Root/r2m1/Опциональные/Найти Жулика-->
@@ -2195,6 +2190,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_OpenTunel_Quest"
 		OnComplete="AddPlayerMoney(500)"
 		OnFail='RemoveQuestItem("quest_mafia_narcotik"); TDeactivate("Trigger_NarcotikCaravan_Die");'
 		Levels="r2m1">
@@ -2225,6 +2221,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r2m1_TakeNarcotics_Quest"
 		OnComplete="AddPlayerMoney(5000)"
 		OnFail='TDeactivate("Trigger_NarcotikBoss_Die")'
 		OnTake='ShowCircleOnMinimap( "r2m1", CVector(3838.786, 227.205, 6982.742), 100 )'
@@ -2235,21 +2232,16 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
-<!--Root/r2m1/Сюжетные/  Заручиться поддержкой одной из группировок (Аксель)-->
-	<quest
-		Name="d_GetSupportOneOfTheBands2_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="MrShlyapa2_Quest" />
 <!--Root/r2m1/Сюжетные/  Заручиться поддержкой одной из группировок (Лисе) -->
 	<quest
 		Name="d_GetSupportOneOfTheBands1_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest" />
 <!--Root/r2m1/Сюжетные/  Найти вербовщика в Мареции -->
 	<quest
 		Name="d_FindVerbInAR_Quest"
@@ -2257,6 +2249,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
 		OnTake='ShowCircleOnMinimapByName("ToR2M2"); ShowCircleOnMinimap("r2m2",CVector(1829.361, 316.000, 3300.456))' />
 <!--Root/r2m1/Сюжетные/  Найти вербовщика в Тузе -->
 	<quest
@@ -2265,6 +2258,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheTuzz")' />
 <!--Root/r2m1/Сюжетные/  Патрулировать границу -->
 	<quest
@@ -2273,6 +2267,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_FindVerbInSNG_Quest"
 		OnTake='ShowCircleOnMinimapByName("SideLine")' />
 <!--Root/r2m1/Сюжетные/  Помочь пограничной деревне -->
 	<quest
@@ -2425,7 +2420,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="d_MoveLeaderInGelvetcia_Quest r2m2_HelpAllSNGPeople"
 		OnTake='ShowCircleOnMinimapByName("BossARLocation")'>
 		<quest
 			Name="d_TakeGeneralOfBandits_Quest1"
@@ -2497,6 +2493,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r2m1_TW_SellsCivilian"
 		OnTake='ShowCircleOnMinimap( "r2m1", CVector(1184.729, 428.760, 1479.850), 100 )' />
 <!--Root/r2m1/Сюжетные/Антимилитаристы-->
 	<quest
@@ -2505,6 +2502,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_FindVerbInAM_Quest"
 		OnComplete="AddPlayerMoney(9000)">
 		<quest
 			Name="Podderzhka1_Quest"
@@ -2540,6 +2538,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Podderzhka_Quest"
 		OnComplete="AddPlayerMoney(11000)"
 		OnTake='ShowCircleOnMinimapByName("BeforeCaravan_loc")'>
 		<quest
@@ -2565,6 +2564,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Zashita_Quest"
 		OnComplete="AddPlayerMoney(13000)">
 		<quest
 			Name="Shpion1_Quest"
@@ -2654,7 +2654,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="r2m2_ToLisaToMonastir" />
 
 	<quest
 		Name="Tunnel_Quest"
@@ -2710,14 +2711,16 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest" />
 
 	<quest
 		Name="OdettIsDead_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="FinalBattle_Quest" />
 <!--Root/r2m1/Сюжетные/диск 2 оракулу-->
 	<quest
 		Name="Disk2OrakulLisa"
@@ -2751,6 +2754,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
+		PrecedingQuests="TraiderStorage_Quest1"
 		OnComplete="AddPlayerMoney(2000)"
 		Levels="r1m4">
 		<quest
@@ -2878,7 +2882,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(2000)"
 		Levels="r1m4">
 		<quest
@@ -2912,7 +2917,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(250)"
 		OnFail='RemoveQuestItem("Rybak_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "Rybak_P"); TDeactivate("RybakToOlm");'
 		OnTake='ShowCircleOnMinimapByName("RybakLoc")'
@@ -2924,6 +2930,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="BackToTroickoe"
 		Levels="r1m4" />
 <!--Root/r1m4/Мистер Шляпа-->
 	<quest
@@ -2932,6 +2939,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="MrShlyapa1_Quest"
 		OnFail='TDeactivate("MisterShlyapaTr");'
 		OnTake='ShowCircleOnMinimapByName("Mishlen_loc")'
 		Levels="r1m4" />
@@ -2942,6 +2950,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="LastIspytanie_Quest GoBackWithoutDobr_Quest"
 		Levels="r1m4" />
 <!--Root/r1m3/Сюжетные--><!--Root/r1m3/Опциональные--><!--Root/r1m3/Опциональные/Бонни и Клайд-->
 	<quest
@@ -2949,7 +2958,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnFail='RemoveQuestItem("KonniBlade_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "KonniBlade_P");'
 		OnTake='ShowCircleOnMinimapByName("TheTrap")'
 		Levels="r1m3" />
@@ -2959,7 +2969,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnComplete="AddPlayerMoney(350)"
 		OnFail='RemoveQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "StarDod_P");'
 		OnTake='ShowCircleOnMinimapByName("TheLibrary")'
@@ -2970,7 +2981,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheCircus")'
 		Levels="r1m3" />
 <!--Root/r1m3/Опциональные/Бандит в городе 2-->
@@ -2979,7 +2991,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnFail='TDeactivate("TriggerLabirintCarDie2")'
 		Levels="r1m3" />
 <!--Root/r1m3/Опциональные/Отбить Пешт-->
@@ -2989,8 +3002,8 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnComplete="SetTolerance(1100,1012,RS_NEUTRAL)"
-		OnFail='TDeactivate("cinFightForPesht"); TDeactivate("BrigadaIsDead"); SetTolerance(1100,1012,RS_NEUTRAL); TActivate ("tr_OpenTownAndShowButtonInPesht")'
+		PrecedingQuests="d_GiveMoneyToBase_Quest"
+		OnFail='TDeactivate("cinFightForPesht"); TDeactivate("BrigadaIsDead"); TActivate("tr_OpenTownAndShowButtonInPesht"); getObj("Pesht"):SetBelong(1012)'
 		Levels="r1m3">
 		<quest
 			Name="FightForPesht1"
@@ -3014,7 +3027,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnTake='ShowCircleOnMinimapByName("BaseGuardian_loc")' />
 <!--Root/r1m3/Сюжетные/ Заплатить бандитам деньги-->
 	<quest
@@ -3022,7 +3036,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnTake='ShowCircleOnMinimapByName("BaseGuardian_loc")' />
 <!--Root/r1m3/Сюжетные/ Достать взрывчатку-->
 	<quest
@@ -3030,7 +3045,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="1"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 300, "specter01", 3, 7)'>
 		<quest
 			Name="d_BombInAsgard_Quest"
@@ -3180,6 +3196,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_FindBanditBaseOfOilMine_Quest"
 		OnComplete="AddPlayerMoney(400)">
 		<quest
 			Name="d_MoveToMer_Quest"
@@ -3216,6 +3233,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_GetHelpWorkersInMinin_Quest"
 		OnComplete="AddPlayerMoney(350)"
 		OnTake='ShowCircleOnMinimapByName("TheBanditOilMine")' />
 <!--Root/r1m3/Сюжетные/ Первую канистру в Минин -->
@@ -3224,7 +3242,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="d_MoveFreelancersToOilMine_Quest d_MoveWorkersToOilMine_Quest"
 		OnComplete="AddPlayerMoney(200)"
 		OnTake='ShowCircleOnMinimapByName("Minin")' />
 <!--Root/r1m3/Сюжетные/  Найти вход в тоннель-->
@@ -3288,6 +3307,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r1m3_ToLisaToAsgard"
 		OnTake='ShowCircleOnMinimapByName("ToR2M1")' />
 <!--Root/r1m3/Сюжетные/Искать Вора с диском 2 в Минине-->
 	<quest
@@ -3305,6 +3325,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r1m3_FindThiefFromFatherHouse"
 		OnTake='ShowCircleOnMinimapByName("TheBase")' />
 <!--Root/r1m3/Сюжетные/Отобрать диск2 у вора-->
 	<quest
@@ -3322,7 +3343,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="Zachisti4_Quest r1m3_FightWithThief"
 		OnComplete="AddPlayerMoney(1000)"
 		OnTake='ShowCircleOnMinimapByName("ToR1M4")' />
 <!--Root/r1m3/Сюжетные/Догнать Лису в Асгарде-->
@@ -3332,6 +3354,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="LisaUBena"
 		OnTake='ShowCircleOnMinimapByName("Asgard")' />
 <!--Root/r1m3/Сюжетные/Лиса украла оберег и диск и убежала во второй регион-->
 	<quest
@@ -3347,14 +3370,16 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="r4m2_TalkWithScientific" />
 <!--Root/r1m3/Сюжетные/Устранить источник электропомех-->
 	<quest
 		Name="r1m3_DestroyRadiationSource"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="r2m1_DeployBloks"
 		OnTake='ShowCircleOnMinimapByName("ToR2M1"); ShowCircleOnMinimap("r2m1",CVector(5997.535, 276.571, 4385.696))' />
 <!--Root/r1m3/Сюжетные/Уничтожить боевой корабль пришелцев-->
 	<quest
@@ -3363,6 +3388,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r1m3_DestroyRadiationSource"
 		OnTake='ShowCircleOnMinimap( "r2m1", CVector(1184.729, 428.760, 1479.850), 100 )' />
 <!--Root/r1m3/Сюжетные/ Прознать про Врата в Минине -->
 	<quest
@@ -3379,8 +3405,8 @@
 		Automatic="1"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="any complete"
-		PrecedingQuests="d_MoveInParis_Quest d_FindRealFatherRoom_Quest"
+		ConditionToGive="all complete"
+		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnComplete="AddPlayerMoney(1000)"
 		OnTake='ShowCircleOnMinimap("r1m2", CVector(2535.255, 120.893, 315.064)); ShowCircleOnMinimap("r2m1", CVector(2114.268, 235.762, 5967.831))' />
 <!--Root/r1m3/Сюжетные/Найти рабочих на скважину В Минине-->
@@ -3399,6 +3425,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_ReturntoMerOfMinin_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheVozleMinin")' />
 <!--Root/r1m3/Сюжетные/Поговорить с жителями Селя-->
 	<quest
@@ -3407,6 +3434,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r1m3_TW_OralceAboutAlien"
 		OnTake='ShowCircleOnMinimapByName("ToR1M3");  ShowCircleOnMinimap("r1m3",CVector(1444.032, 290.169, 5539.769)); ShowCircleOnMinimap("r2m1",CVector(5997.535, 276.571, 4385.696))' />
 <!--Root/r1m3/Сюжетные/Спросить в Ольме про Морские врата-->
 	<quest
@@ -3415,6 +3443,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_MoveCanistraToMinin_Quest"
 		OnTake='ShowCircleOnMinimapByName("ToR1M4"); ShowCircleOnMinimapByName("TheOlme_enter")' />
 <!--Root/r1m3/Сюжетные/Зачистка базы-->
 	<quest
@@ -3423,6 +3452,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r3m2_RideToFatherRoomAfterOracul"
 		OnTake='ShowCircleOnMinimapByName("locArmiaTSP")' />
 
 	<quest
@@ -3457,7 +3487,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all failed"
+		PrecedingQuests="r1m3_MoveToOraculAfterThief"
 		OnTake='ShowCircleOnMinimapByName("Pesht")' />
 
 	<quest
@@ -3466,23 +3497,16 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="LisaVPeshte"
 		OnTake='ShowCircleOnMinimapByName("TheBen_House")' />
-<!--Root/r1m2/Сюжетные--><!--Root/r1m2/Опциональные--><!--Root/r1m2/Опциональные/В деревню, где знаки -->
-	<quest
-		Name="WhereSigns_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("TheSign")'
-		Levels="r1m2" />
-<!--Root/r1m2/Опциональные/ Коллизей -->
+<!--Root/r1m2/Сюжетные--><!--Root/r1m2/Опциональные--><!--Root/r1m2/Опциональные/ Коллизей -->
 	<quest
 		Name="CombatInKollizey_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Kollizey_Quest"
 		OnComplete="AddPlayerMoney(175)"
 		OnFail='TDeactivate("KOLIZEYFIGHTDIE"); TDeactivate("KOLIZEYFIGHT")'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
@@ -3521,6 +3545,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="CombatInKollizey_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheTickets")'
 		Levels="r1m2" />
 
@@ -3530,6 +3555,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkWithFather_Quest"
 		OnComplete="AddPlayerMoney(225)"
 		Levels="r1m2">
 		<quest
@@ -3603,6 +3629,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkWithFather_Quest"
 		OnComplete="AddPlayerMoney(100)"
 		OnFail='TDeactivate("RUINSWAR1");'
 		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
@@ -3614,28 +3641,36 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(100)"
-		OnFail='TDeactivate("RUINSWAR2");'
+		PrecedingQuests="TalkWithFather_Quest"
+		OnComplete="AddPlayerMoney(350)"
+		OnFail='TDeactivate("RUINSWAR2"); RemoveQuestItem("ArchProrab_P");'
 		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
-		Levels="r1m2" />
+		Levels="r1m2">
+		<quest
+			Name="DestroyRuins_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="DestroyRuins_Quest" />
 
-	<quest
-		Name="DestroyRuins2_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnComplete="AddPlayerMoney(250)"
-		OnFail='RemoveQuestItem("ArchProrab_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "ArchProrab_P");'
-		OnTake='ShowCircleOnMinimapByName("KidnapProrab")'
-		Levels="r1m2" />
+		<quest
+			Name="DestroyRuins_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="DestroyRuins_Quest1"
+			OnTake='ShowCircleOnMinimapByName("KidnapProrab")' />
+	</quest>
 <!--Root/r1m2/Опциональные/Разобраться со знаками -->
 	<quest
 		Name="Signs_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="1"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Chifir_Quest"
 		OnComplete="AddPlayerMoney(80)"
 		OnFail='TDeactivate("THESIGNONFIELD")'
 		Levels="r1m2">
@@ -3664,6 +3699,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkWithFather_Quest"
 		Levels="r1m2" />
 <!--Root/r1m2/Сюжетные/ Найти Жилище Настоящего отца -->
 	<quest
@@ -3708,6 +3744,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Chifir_Quest"
 		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 500, "pkt01", 3, 10)'>
 		<quest
 			Name="d_FindBenInMidgard_Quest"
@@ -3751,7 +3788,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="FindBenMZ_Quest d_CaravanToMidgardBen_Quest"
 		OnComplete="AddPlayerMoney(330)"
 		OnTake='ShowCircleOnMinimapByName("TheBen_House")' />
 <!--Root/r1m2/Сюжетные/Установить блокираторы-->
@@ -3785,7 +3823,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all taken"
+		PrecedingQuests="r2m1_DeployBloks" />
 <!--Root/r1m2/Сюжетные/Старуха-->
 	<quest
 		Name="Pomiritsa_Quest"
@@ -3793,6 +3832,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="BenStaruha_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheArtefact")' />
 
 	<quest
@@ -3810,6 +3850,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="Pomiritsa_Quest"
 		OnFail='RemoveQuestItem("quest_Valeriy_package")'
 		OnTake='ShowCircleOnMinimapByName("TheSign")' />
 <!--Root/r1m2/Сюжетные/Малая Земля-->
@@ -3826,7 +3867,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete">
+		ConditionToGive="all taken"
+		PrecedingQuests="d_FindBenInMidgard_Quest">
 		<quest
 			Name="BenMZ_Quest"
 			Automatic="1"
@@ -3890,7 +3932,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="TalkWithFather_Quest" />
 <!--Root/r1m2/Сюжетные/Открыть Мидгард-->
 	<quest
 		Name="OpenMid_Quest"
@@ -3898,6 +3941,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="r3m2_TalkWithLisa"
 		OnTake='ShowCircleOnMinimapByName("TheRace")'
 		Levels="r3m2 r3m1 r2m1 r2m2 r1m4 r1m3 r1m2" />
 
@@ -3923,7 +3967,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		PrecedingQuests="Chehly_Quest" />
 
 	<quest
 		Name="ZashitaGotova"
@@ -3931,6 +3976,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkBeforeDesert"
 		Levels="r1m2" />
 
 	<quest
@@ -3938,7 +3984,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete">
+		ConditionToGive="all complete"
+		PrecedingQuests="GoBackToHel_Quest">
 		<quest
 			Name="d_chehol1"
 			Automatic="1"
@@ -4028,7 +4075,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnComplete="AddPlayerMoney(100)"
 		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD"); TActivate("REVOLUTIONTIMEREMOVE"); TDeactivate("PlayerDrunkBehaviour"); TDeactivate("PlayerDrunkBehaviourInPlace")'
 		Levels="r1m1" />
@@ -4048,7 +4096,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnComplete="AddPlayerMoney(30)"
 		OnTake='ShowCircleOnMinimapByName("Hospital_Loc")'
 		Levels="r1m1" />
@@ -4058,7 +4107,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnComplete="AddPlayerMoney(50)"
 		OnTake='ShowCircleOnMinimapByName("BotanicHouse")'
 		Levels="r1m1" />
@@ -4068,7 +4118,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnComplete="AddPlayerMoney(30)"
 		OnTake='ShowCircleOnMinimapByName("BotanicHouse")'
 		Levels="r1m1" />
@@ -4149,7 +4200,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="any complete"
+		PrecedingQuests="d_Lisa_Quest d_Lisa_Quest_NoKC"
 		OnComplete="AddPlayerMoney(250)"
 		OnTake='ShowCircleOnMinimapByName("TheGloohoe")' />
 <!--Root/r1m1/Сюжетные/Лиса и контробанда -->
@@ -4239,7 +4291,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnTake='ShowCircleOnMinimapByName("TheTown")' />
 
 	<quest
@@ -4284,6 +4337,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all complete"
+		PrecedingQuests="BenSouth_Quest"
 		OnComplete="AddPlayerMoney(250)">
 		<quest
 			Name="d_GetBigBoom_Quest"
@@ -4334,7 +4388,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete"
+		ConditionToGive="all taken"
+		PrecedingQuests="Buyer_Quest1"
 		OnTake='ShowCircleOnMinimapByName("TheGloohoe")'
 		Levels="r1m1" />
 
@@ -4344,6 +4399,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkToVasily"
 		OnTake='ShowCircleOnMinimapByName("Ending3")'
 		Levels="r1m1" />
 <!--Root/r1m1/Сюжетные/Поиски Бена-->
@@ -4353,6 +4409,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="TalkWithFather_Quest"
 		OnComplete="AddPlayerMoney(250)"
 		OnTake='ShowCircleOnMinimapByName("TheTown")' />
 

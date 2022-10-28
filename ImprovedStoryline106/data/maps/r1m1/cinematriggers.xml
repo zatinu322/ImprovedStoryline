@@ -2395,7 +2395,7 @@
 			local vehFelix = GetEntityByName("FelixVehicle01")
 			if vehFelix then
 				vehFelix:SetExternalPathByName("felix_path02")
-				vehFelix:SetThrottle( 2 )
+				vehFelix:SetThrottle( 1 )
 				vehFelix:SetCustomLinearVelocity( 30 )
 			end
 
@@ -2423,8 +2423,6 @@
 
 			TDeactivate( "RolikBegin_Felix3" )
 			TDeactivate( "trFelix3" )
-			TDeactivate( "trFelix2_cam03" )
-			TDeactivate( "trFelix2_cam01" )
 
 			TActivate( "METALFELIXDIE3" )
 
@@ -2675,7 +2673,6 @@
 			StopPlayingCustomMusic()
 
 			TDeactivate( "trFelix4_Fade" )
-			TDeactivate( "trFelix4_cam01" )
 			TDeactivate( "trFelix4_cam02" )
 			TDeactivate( "trFelix4_cam03" )
 			TDeactivate( "trFelix4_cam04" )
@@ -2922,7 +2919,7 @@
 		<event msgid="5974" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
 		<script>
 			getObj("humFather"):SetNodeAction(AT_RESERVED1)
-			getObj("humFather"):SetNodeForAnimation(AT_RESERVED1, AT_STAND1)
+			getObj("humFather"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 
 			trigger:Deactivate()
 		</script>

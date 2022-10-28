@@ -570,35 +570,32 @@
 
 			TDeactivate("RolikBegin_BenHause_Fade")
 
-			CompleteQuestIfTaken("d_FindHouseOfBen_Quest")
-			CompleteQuestIfTaken("BenBadEnd")
-			CompleteQuestIfTaken("LisaUBena")
-			CompleteQuestIfTaken("r4m2_LisaDieBen")
-			CompleteQuestIfTaken("TalkBeforeDesert")
-			CompleteQuestIfTaken("BenGoodEnd")
-			CompleteQuestIfTaken("BenNormalEnd")
+			local quests_to_complete = {"d_FindHouseOfBen_Quest", "BenBadEnd", "LisaUBena", "r4m2_LisaDieBen", 
+										"TalkBeforeDesert", "BenGoodEnd", "BenNormalEnd"}
+			for quest = 1, 7 do
+				CompleteQuestIfTaken(quests_to_complete[quest])
+			end
 		
 			if GetVar("FindBen").AsInt==1 then
-				FailQuestIfTaken("BenEast_Quest")
-				FailQuestIfTaken("BenStaruha_Quest")
-				FailQuestIfTaken("FindBen2_Quest")
-				FailQuestIfTaken("Pomiritsa_Quest")
-				FailQuestIfTaken("Chifir_Quest")
-				FailQuestIfTaken("VYar_Quest")
-				FailQuestIfTaken("FindBenMZ_Quest")
-				FailQuestIfTaken("CaravDead_Quest")
+				local quests_to_fail = {"BenEast_Quest", "BenStaruha_Quest", "FindBen2_Quest", "Pomiritsa_Quest", 
+								"Chifir_Quest", "VYar_Quest", "FindBenMZ_Quest", "CaravDead_Quest"}
+				for quest = 1, 8 do
+					FailQuestIfTaken(quests_to_fail[quest])
+				end
+
+				local trigs = {"RaidersDie", "PLENLISA", "PLENLISADIE", "trCaravanToPortoDIE", 
+								  "trCaravanToPortoLength", "trCaravanToPortoINPLACE", 
+								  "trCaravanToMidgardINPLACE", "trCaravanToMidgardDIE", 
+								  "trCaravanToMidgardLength"}
+				for trig = 1, 9 do
+					TDeactivate(trigs[trig])
+				end
+
 				TakeQuest("QuickFindBen")
 				CompleteQuest("QuickFindBen")
+
 				SetVar("FindBen",2)
-				TDeactivate("RaidersDie")
-				TDeactivate("PLENLISA")
-				TDeactivate("PLENLISADIE")
-				TDeactivate( "trCaravanToPortoDIE" )
-				TDeactivate( "trCaravanToPortoLength" )
-				TDeactivate("trCaravanToPortoINPLACE")
-				TDeactivate("trCaravanToMidgardINPLACE")
-				TDeactivate( "trCaravanToMidgardDIE" )
-				TDeactivate( "trCaravanToMidgardLength" )
+
 				local carav = GetEntityByName("KARAVANPORTO_vehicle_0")
 				if carav then carav:Remove() end
 				local carav2 = GetEntityByName("KARAVANMIDGARD_vehicle_0")

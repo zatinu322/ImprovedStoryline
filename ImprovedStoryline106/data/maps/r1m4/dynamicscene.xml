@@ -33136,7 +33136,7 @@
 
 	<Object
 		Name="RTMRolik_loc"
-		Belong="1001"
+		Belong="1100"
 		Prototype="genericLocation"
 		Pos="3502.771 216.773 3621.281"
 		Radius="85.000" />

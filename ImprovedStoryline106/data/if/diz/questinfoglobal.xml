@@ -535,23 +535,27 @@
 		isMainQuest="1" />
 
 	<QuestInfo
-		questName="DestroyRuins2_Quest"
-		briefDiz="Привезти прораба в убежище"
-		fullDiz="Похищение прошло удачно, теперь осталось доставить прораба в убежище Дена и получить свою долю."
-		isMainQuest="0">
-		<Map
-			name="r1m2"
-			targetObjName="KidnapProrab" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="DestroyRuins_Quest"
 		briefDiz="Ограбить археологов"
-		fullDiz="Говорят, археологи выкопали что-то интересное. На охрану они поскупились, так что можно неплохо поживиться."
+		fullDiz="Говорят, археологи выкопали что-то интересное и достаточно дорогое. На охрану они поскупились, так что можно похитить их прораба и в качестве выкупа потребовать их находку."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="DestroyRuins_Quest1"
+		briefDiz="Захватить в плен главного археолога"
 		isMainQuest="0">
 		<Map
 			name="r1m2"
 			targetObjName="CarOfSiencer" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DestroyRuins_Quest2"
+		briefDiz="Привезти пленника в убежище"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="KidnapProrab" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2282,16 +2286,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="WhereSigns_Quest"
-		briefDiz="Проверить деревню"
-		fullDiz="Жители деревни напуганы. Возможно, происходит что-то серьезное."
-		isMainQuest="0">
-		<Map
-			name="r1m2"
-			targetObjName="TheSign" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="WorkGiver_Quest1"
 		briefDiz="Отвезти Богатого фермера"
 		fullDiz="Местный гоповатый предприниматель попросил меня доставить его на заправку. Скрепя сердце, я согласился."
@@ -2779,18 +2773,6 @@
 		questName="d_GetSupportOneOfTheBands1_Quest"
 		briefDiz="Заручиться поддержкой крупной группировки"
 		fullDiz="Плохие новости. Лиса - подружка какого-то местного авторитета. Вряд ли я смогу в одиночку подобраться к нему. Придется искать союзников."
-		isMainQuest="1">
-		<Map
-			name="r2m1" />
-
-		<Map
-			name="r2m2" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="d_GetSupportOneOfTheBands2_Quest"
-		briefDiz="Заручиться поддержкой крупной группировки"
-		fullDiz="Похоже, что одному мне до Акселя не добраться. Необходимо заручиться поддержкой крупной группировки."
 		isMainQuest="1">
 		<Map
 			name="r2m1" />
@@ -4167,28 +4149,6 @@
 		<Map
 			name="r2m2"
 			targetObjName="SNGInVill2" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r2m2_GiveDisk2ToOrakul"
-		briefDiz="Отвезти диск №2 к Оракулу"
-		fullDiz="Теперь, когда у меня есть второй диск, я смогу наконец расшифровать дневник Айвена Го. Конечно, для этого потребуется отправиться в Игнотт к Оракулу."
-		isMainQuest="1">
-		<Map
-			name="r2m1"
-			targetObjName="ToR3M1" />
-
-		<Map
-			name="r2m2"
-			targetObjName="ToR2M1" />
-
-		<Map
-			name="r3m1"
-			targetObjName="ToR3M2" />
-
-		<Map
-			name="r3m2"
-			targetObjName="Oracle_loc" />
 	</QuestInfo>
 
 	<QuestInfo

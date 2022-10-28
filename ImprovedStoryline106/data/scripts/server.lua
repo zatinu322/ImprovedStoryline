@@ -11,14 +11,8 @@
 --  $Id: server.lua,v 1.53 2005/07/26 09:06:59 anton Exp $
 -- ----------------------------------------------------------------------------
 
-if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.0.6 BUILD 221014")
-
-	ISL_VERSION = "106-221014"
-
-	-- only for development needs, should not be in release!
-	EXECUTE_SCRIPT "data\\scripts\\compatch.lua"
-end
+-- include isl version assignment
+EXECUTE_SCRIPT "data\\scripts\\isl.lua"
 
 -- include cheats.lua
 EXECUTE_SCRIPT "data\\scripts\\cheats.lua"

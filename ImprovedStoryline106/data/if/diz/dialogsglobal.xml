@@ -306,7 +306,7 @@
 		name="Dlg_pl_002764"
 		text="Поганая, получается, работёнка, но мне не привыкать. У тебя есть план?"
 		role="PLAYER"
-		scriptResult="CompleteQuest('CivilOrAdept2'); CompleteQuest('CivilOrAdept3'); LOG('YOU ARE DISGUSTING!')"
+		scriptResult="CompleteQuest('CivilOrAdept2'); CompleteQuest('CivilOrAdept3')"
 		nextReplies="Dlg_npc_002765" />
 
 	<Reply
@@ -706,7 +706,7 @@
 
 	<Reply
 		name="Dlg_npc_002834"
-		text="Напасть на Кейтберг. Ты, Миколка на Грейдере и ещё пара наших бойцов нападёте на город снаружи и поснимаете доты, а другие с помощью этих чертежей проникнут внутрь города через канализационные трубы и ударят с тыла. Подобная тактика должна минимизировать потери среди мирного населения."
+		text="Напасть на Кейтберг. Ты, Миколка на Грейдере и ещё пара наших бойцов нападёте на город снаружи и поснимаете доты и внешнюю охрану, а другие с помощью этих чертежей проникнут внутрь города через канализационные трубы и ударят с тыла. Подобная тактика должна минимизировать потери среди мирного населения."
 		role="NPC"
 		nextReplies="Dlg_pl_002835" />
 
@@ -1990,7 +1990,7 @@
 
 	<Reply
 		name="Dlg_pl_003327"
-		text="Может, и не расскажу. Тем более, что у меня к тебе есть одно интересное предложение."
+		text="Может быть. Тем более, что у меня к тебе есть одно интересное предложение."
 		role="PLAYER"
 		scriptCondition="BookExists('r1_ananaga_technology')"
 		nextReplies="Dlg_npc_003330" />
@@ -2203,7 +2203,7 @@
 		text="Что ж, теперь ты видел всё."
 		role="NPC"
 		scriptCondition="QuestStatus('r4m2_TalkWithScientific')==Q_TAKEN"
-		scriptResult="CompleteQuest('r4m2_TalkWithScientific'); TakeQuest('r4m2_DestroyPlate'); TActivate('trExitFromCity'); ShowMap()"
+		scriptResult="CompleteQuest('r4m2_TalkWithScientific'); TakeQuest('r4m2_DestroyPlate'); TActivate('SergoAivenTalk1'); ShowMap()"
 		nextReplies="r4m2_Bar_Scientist_2_N02" />
 
 	<Reply
@@ -3736,7 +3736,7 @@
 		name="r3m1_NearOracle_ODefenders_1_N092"
 		text="Оракул милостью своей защитит тебя в твоих странствиях."
 		role="NPC"
-		nextReplies="r3m1_NearOracle_ODefenders_1_N1022 r3m1_NearOracle_ODefenders_1_N1021" />
+		nextReplies="r3m1_NearOracle_ODefenders_1_N1021 r3m1_NearOracle_ODefenders_1_N1022" />
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N1022"
@@ -5717,7 +5717,7 @@
 		name="Dlg_pl_000469"
 		text="Так точно!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TActivate('SNGPROVIANT');  CompleteQuest('d_FindVerbInAR_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands2_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); FailQuestIfTaken('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInSNG_Quest');  AddHistory(  'r2_AR_00'  );  AddFadingMsgId( 'fm_history_got' );  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TActivate('SNGPROVIANT');  CompleteQuest('d_FindVerbInAR_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); FailQuestIfTaken('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInSNG_Quest');  AddHistory(  'r2_AR_00'  );  AddFadingMsgId( 'fm_history_got' );  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000464"
@@ -6485,7 +6485,7 @@
 		name="Dlg_pl_002166"
 		text="Обязательно. А теперь мне пора: время положить войне конец!"
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken( 'r2m2_MoveToZeonToAlex' );  CompleteQuestIfTaken( 'd_GetAkselBandit_Quest' );  CompleteQuestIfTaken( 'd_FindAksel_Quest' );  TakeQuest( 'r2m2_FightWithAxelInArena_Quest' );  TActivate('AXELARENA'); TActivate('OhranaAxel');  EndConversation()" />
+		scriptResult="CompleteQuestIfTaken( 'r2m2_MoveToZeonToAlex' );  CompleteQuestIfTaken( 'd_GetAkselBandit_Quest' ); TakeQuest( 'r2m2_FightWithAxelInArena_Quest' );  TActivate('AXELARENA'); TActivate('OhranaAxel');  EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002307"
@@ -6559,7 +6559,7 @@
 		name="Dlg_pl_002170"
 		text="Что ж, раз другого выхода нет...|На арену!!"
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken( 'r2m2_MoveToZeonToAlex' );  CompleteQuestIfTaken( 'd_GetAkselBandit_Quest' );  CompleteQuestIfTaken( 'd_FindAksel_Quest' );  TakeQuest( 'r2m2_FightWithAxelInArena_Quest' );  TActivate('AXELARENA'); AddQuestItem('quest_crimson_medal'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_crimson_medal');  EndConversation()" />
+		scriptResult="CompleteQuestIfTaken( 'r2m2_MoveToZeonToAlex' );  CompleteQuestIfTaken( 'd_GetAkselBandit_Quest' ); TakeQuest( 'r2m2_FightWithAxelInArena_Quest' );  TActivate('AXELARENA'); AddQuestItem('quest_crimson_medal'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_crimson_medal');  EndConversation()" />
 <!--Root/r2m2/Сюжетные/Еретик-->
 	<Reply
 		name="Dlg_npc_002315"
@@ -6646,7 +6646,7 @@
 		name="Dlg_pl_002328"
 		text="Будет сделано."
 		role="PLAYER"
-		scriptResult="TakeQuest( 'r2m2_FightWithAxelInArena_Quest' ); CompleteQuest('Eretik_Meet'); TActivate('AXELARENA'); TActivate('OhranaAxel'); TActivate('EretOff'); AddHistory(  'r2_Before_Axel_00'  ); AddFadingMsgId( 'fm_history_got' ); GetPlayerVehicle():SetCustomLinearVelocity(0); GetPlayerVehicle():SetThrottle(0); EndConversation()" />
+		scriptResult="CompleteQuest('Eretik_Meet'); TActivate('AXELARENA'); TakeQuest( 'r2m2_FightWithAxelInArena_Quest' ); TActivate('OhranaAxel'); TActivate('EretOff'); AddHistory(  'r2_Before_Axel_00'  ); AddFadingMsgId( 'fm_history_got' ); GetPlayerVehicle():SetCustomLinearVelocity(0); GetPlayerVehicle():SetThrottle(0); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002329"
@@ -6720,7 +6720,7 @@
 		name="Dlg_pl_002340"
 		text="Ладно, спасибо за информацию. Не груби этим синьорам, и никто тебя не убьёт. А мне надо бы обсудить дальнейшие планы со штабом."
 		role="PLAYER"
-		scriptResult="TakeQuest('ReturnQuest'); CompleteQuest('r2m2_ToLisaToMonastir'); SetTolerance(1100,1017,RS_ALLY); SetTolerance(1100,1015,RS_ALLY); SetTolerance(1100, 1043, RS_ALLY); SetTolerance(1100,1016,RS_ENEMY); TActivate('MarezziaOpen'); EndConversation()" />
+		scriptResult="CompleteQuest('r2m2_ToLisaToMonastir'); TakeQuest('ReturnQuest'); SetTolerance(1100,1017,RS_ALLY); SetTolerance(1100,1015,RS_ALLY); SetTolerance(1100, 1043, RS_ALLY); SetTolerance(1100,1016,RS_ENEMY); TActivate('MarezziaOpen'); EndConversation()" />
 <!--Root/r2m1/Сюжетные--><!--Root/r2m1/Опциональные--><!--Root/r2m1/Опциональные/Эстет-->
 	<Reply
 		name="Estet_hellodlg0"
@@ -7383,7 +7383,7 @@
 		name="Dlg_pl_xyz502"
 		text="Выезжаю немедленно!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('d_FindVerbInSNG_Quest');  CompleteQuest('d_FindVerbInSNG_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands2_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); FailQuestIfTaken('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInAR_Quest');  TActivate ('SERCHSIDELINE');  AddHistory(  'r2_SNG_00'  );  AddFadingMsgId( 'fm_history_got' );  SetTolerance( 1100, 1016, RS_ALLY );  SetTolerance( 1100, 1015, RS_ENEMY );  SetTolerance( 1100, 1083, RS_ENEMY ); TakeQuest('d_PatrulSideSNG_Quest');  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('d_FindVerbInSNG_Quest');  CompleteQuest('d_FindVerbInSNG_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); FailQuestIfTaken('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInAR_Quest');  TActivate ('SERCHSIDELINE');  AddHistory(  'r2_SNG_00'  );  AddFadingMsgId( 'fm_history_got' );  SetTolerance( 1100, 1016, RS_ALLY );  SetTolerance( 1100, 1015, RS_ENEMY );  SetTolerance( 1100, 1083, RS_ENEMY ); TakeQuest('d_PatrulSideSNG_Quest');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_xyz495"
@@ -7841,7 +7841,7 @@
 		name="Dlg_pl_002266"
 		text="Выполняю."
 		role="PLAYER"
-		scriptResult="TakeQuest('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInSNG_Quest'); FailQuestIfTaken('d_FindVerbInAR_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands2_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); CompleteQuestIfTaken('d_FindVerbInAM_Quest'); TakeQuest('Podderzhka_Quest'); AddHistory(  'r2_AM_00'  ); AddFadingMsgId( 'fm_history_got' ); SetTolerance(1100,1083,RS_ALLY); EndConversation()" />
+		scriptResult="TakeQuest('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInSNG_Quest'); FailQuestIfTaken('d_FindVerbInAR_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); CompleteQuestIfTaken('d_FindVerbInAM_Quest'); TakeQuest('Podderzhka_Quest'); AddHistory(  'r2_AM_00'  ); AddFadingMsgId( 'fm_history_got' ); SetTolerance(1100,1083,RS_ALLY); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002267"
@@ -9517,7 +9517,7 @@
 
 	<Reply
 		name="Dlg_npc_002877"
-		text="В общем, ситуация такая: после того, как ты поднагадил торговцам со складом, они объявили тебя врагом и назначили круглую сумму за твою голову."
+		text="В общем, ситуация такая: после того, как ты обманул торговцев со складом, они объявили тебя врагом и назначили круглую сумму за твою голову."
 		role="NPC"
 		nextReplies="Dlg_pl_002878" />
 
@@ -10652,7 +10652,7 @@
 		name="Dlg_pl_003209"
 		text="Выдвигаюсь."
 		role="PLAYER"
-		scriptResult="TakeQuest('FightForPesht'); TActivate('cinFightForPesht'); SetTolerance(1100,1010,RS_ALLY); SetTolerance(1011,1012,RS_NEUTRAL); SetTolerance(1011,1010,RS_NEUTRAL); EndConversation()" />
+		scriptResult="TakeQuest('FightForPesht'); TActivate('cinFightForPesht'); SetTolerance(1100,1010,RS_ALLY); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_003206"
@@ -11417,7 +11417,7 @@
 		text="Мне нужно время, чтобы достать деньги."
 		role="PLAYER"
 		scriptCondition="2500 > GetPlayerMoney()"
-		scriptResult="TakeQuest('d_PayWorkersMoney_Quest'); GetCurNpc():SetSpokenCount(1);  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1);  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_d3d255"
@@ -13005,7 +13005,7 @@
 		name="Dlg_npc_001736"
 		text="А вот и ты. Ну как всё прошло?"
 		role="NPC"
-		scriptCondition="QuestStatus('DestroyRuins2_Quest')==Q_TAKEN"
+		scriptCondition="QuestStatus('DestroyRuins_Quest2')==Q_TAKEN"
 		nextReplies="Dlg_pl_001737" />
 
 	<Reply
@@ -13024,7 +13024,7 @@
 		name="Dlg_pl_001739"
 		text="Счастливо оставаться. Надеюсь, ты не собираешься его убивать."
 		role="PLAYER"
-		scriptResult="CompleteQuest('DestroyRuins2_Quest'); RemoveQuestItem('ArchProrab_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ArchProrab_P'); EndConversation()" />
+		scriptResult="CompleteQuest('DestroyRuins_Quest2'); RemoveQuestItem('ArchProrab_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ArchProrab_P'); EndConversation()" />
 <!--Root/r1m2/Опциональные/Организаторы шоу-->
 	<Reply
 		name="Kollizey1_hellodlg0"
@@ -13100,26 +13100,6 @@
 		text="Будь уж так добра."
 		role="PLAYER"
 		scriptResult="CompleteQuest('EastTalkKollizey_Quest'); EndConversation()" />
-<!--Root/r1m2/Опциональные/Про знаки в Восточном-->
-	<Reply
-		name="out1"
-		text="Люди в соседней деревне напуганы. А сейчас самое время собирать урожай. Если они покинут поля, то мы рискуем остаться без запасов пищи на зиму. Узнай, что там случилось."
-		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount() == 0)   and  not(IsQuestTaken('Signs_Quest'))   and  not(IsQuestComplete('Signs_Quest'))   and  not(IsQuestFailed('Signs_Quest'))"
-		nextReplies="MainSigner_hellodlg0_P1_1 MainSigner_hellodlg0_P1_2" />
-
-	<Reply
-		name="MainSigner_hellodlg0_P1_1"
-		text="Я согласен."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('WhereSigns_Quest');  EndConversation()" />
-
-	<Reply
-		name="MainSigner_hellodlg0_P1_2"
-		text="Не думаю, что проблемы крестьян меня заинтересуют."
-		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); 
- EndConversation()" />
 <!--Root/r1m2/Опциональные/Профессор в Мидгарде-->
 	<Reply
 		name="Professor_hellodlg0"
@@ -13354,13 +13334,13 @@
 		name="Dlg_pl_001711"
 		text="Звучит неплохо, сейчас посмотрю, что там у тебя за следы на поле."
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken( 'WhereSigns_Quest');  GetCurNpc():SetSpokenCount( 1 );  TakeQuest('Signs_Quest');  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('Signs_Quest');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001710"
 		text="Нет, слишком уж это сомнительное дело. Сам разбирайся со своими проблемами."
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken( 'WhereSigns_Quest');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
 <!--Root/r1m2/Опциональные/Директор Коллизея-->
 	<Reply
 		name="Director_hellodlg0"
@@ -13421,7 +13401,7 @@
 		name="Director_hellodlg1"
 		text="Твоя работа уже приносит плоды. В деревню стекается всё больше и больше желающих принять участие в боях на арене. Осталось провести первый показательный бой, а дальше всё пойдёт как по накатанной."
 		role="NPC"
-		scriptCondition="IsQuestTaken('ReturnToDirector_Quest')   and   not(IsQuestComplete('ReturnToDirector_Quest'))   and   not(IsQuestFailed('ReturnToDirector_Quest'))   and   not(IsQuestComplete('r2m2_GiveDisk2ToOrakul'))"
+		scriptCondition="IsQuestTaken('ReturnToDirector_Quest')   and   not(IsQuestComplete('ReturnToDirector_Quest'))   and   not(IsQuestFailed('ReturnToDirector_Quest'))   and   not(IsQuestComplete('Disk2OrakulLisa'))"
 		nextReplies="Director_hellodlg1_P1_1 Dlg_pl_000588" />
 
 	<Reply
@@ -13452,7 +13432,7 @@
 		name="Director_hellodlg2"
 		text="Ну и ну, парень, да ты прирождённый воин. Не хочешь стать регулярным бойцом Колизея? Стабильный заработок и комфортное жильё гарантирую!"
 		role="NPC"
-		scriptCondition="IsQuestTaken('ReturnToDirector2_Quest')   and   not(IsQuestComplete('ReturnToDirector2_Quest'))   and   not(IsQuestFailed('ReturnToDirector2_Quest'))   and   not(IsQuestComplete('r2m2_GiveDisk2ToOrakul'))"
+		scriptCondition="IsQuestTaken('ReturnToDirector2_Quest')   and   not(IsQuestComplete('ReturnToDirector2_Quest'))   and   not(IsQuestFailed('ReturnToDirector2_Quest'))   and   not(IsQuestComplete('Disk2OrakulLisa'))"
 		nextReplies="Director_hellodlg2_P1_1" />
 
 	<Reply
@@ -13491,7 +13471,7 @@
 		name="Director_hellodlg3"
 		text="Ну что, собрал деньги?"
 		role="NPC"
-		scriptCondition="IsQuestTaken('BuyKollizey_Quest')   and   not(IsQuestComplete('BuyKollizey_Quest'))   and   not(IsQuestFailed('BuyKollizey_Quest'))   and   not(IsQuestComplete('r2m2_GiveDisk2ToOrakul'))"
+		scriptCondition="IsQuestTaken('BuyKollizey_Quest')   and   not(IsQuestComplete('BuyKollizey_Quest'))   and   not(IsQuestFailed('BuyKollizey_Quest'))   and   not(IsQuestComplete('Disk2OrakulLisa'))"
 		nextReplies="Director_hellodlg3_P1_1 Director_hellodlg3_P1_2" />
 
 	<Reply
@@ -13917,7 +13897,7 @@
 
 	<Reply
 		name="Dlg_pl_xyz319"
-		text="До свидания. "
+		text="До свидания."
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_CaravanToMidgardBen_Quest'); TakeQuest('d_FindHouseOfBen_Quest');  AddHistory(  'r1_Before_Ben_00'  );  AddFadingMsgId( 'fm_history_got' );  TActivate ('trCaravanToMidgardRemove'); SetVar('FindBen',0); TActivate('tr_THEBEN'); SetTolerance(1100,1009,RS_NEUTRAL);  EndConversation()" />
 
@@ -16288,13 +16268,13 @@
 
 	<Reply
 		name="Dlg_npc_002111"
-		text="Надеюсь на это. И буду надеяться, что ты будешь с Айвеном. "
+		text="Надеюсь на это. И буду надеяться, что ты будешь с Айвеном."
 		role="NPC"
 		nextReplies="Dlg_pl_002112" />
 
 	<Reply
 		name="Dlg_pl_002112"
-		text="И я тоже. Ну, я поехал! "
+		text="И я тоже. Ну, я поехал!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 <!--Root/r1m2/Сюжетные/Бен и Лиса/Перед зимой-->
@@ -16369,7 +16349,7 @@
 
 	<Reply
 		name="Dlg_pl_002616"
-		text='В твоих словах есть смысл. Сам я никакой дороги там не видел, но живёт там один рыбак, который за бутылку поделится любыми местными тайнами. Это он мне помог найти Морские врата. Кто знает, может, и про дорогу в царство холода ему что-нибудь известно? Можно, кстати, ещё и в Минин заглянуть - один из местных шахтёров как-то обмолвился со мной в разговоре про "Царство вечного холода". Вдруг он тоже знает чего...'
+		text='В твоих словах есть смысл. Сам я никакой дороги в тех краях не видел, но живёт там один рыбак, который за бутылку поделится любыми местными тайнами. Это он мне помог найти Морские врата. Кто знает, может, и про дорогу в царство холода ему что-нибудь известно? Можно, кстати, ещё и в Минин заглянуть - один из местных шахтёров как-то обмолвился со мной в разговоре про "Царство вечного холода". Вдруг он тоже знает чего...'
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(2); StartConversation('Ben2')" />
 
@@ -18238,7 +18218,7 @@
 
 	<Reply
 		name="Dlg_npc_002572"
-		text="Да, есть. Нужен доброволец, который доставит материалы для постройки дотов две наши опорные точки, а после поможет нам отразить атаку бандитов. Пока что никто не осмеливается на такое - все боятся высунуть нос из города."
+		text="Да, есть. Нужен доброволец, который доставит материалы для постройки дотов на две наши опорные точки, а после поможет нам отразить атаку бандитов. Пока что никто не осмеливается на такое - все боятся высунуть нос из города."
 		role="NPC"
 		scriptResult="CompleteQuest('TalkToBarmenBeforeDesert');"
 		nextReplies="Dlg_pl_002574 Dlg_pl_002573" />

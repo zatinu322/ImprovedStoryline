@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
-
 <Paths>
-
-	<Path Name = "poezdPrPath">
-		<Point  coord="3343.139 255.000 2023.689" rotation="0.0000 -0.7475 0.0000 0.6643"/>   
-	</Path>
-
-	<Path Name = "poezdUePath">
-		<Point  coord="3492.906 255.000 2039.886" rotation="0.0000 -0.7475 0.0000 0.6643"/>   
+	<!-- Стартовый ролик -->
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
 	</Path>
 
 	<Path Name = "NachRolikCam1">
@@ -18,6 +13,12 @@
 	<Path Name = "NachRolikCam2">
 		<Point  coord="3401.499 258.652 2012.468" rotation="-0.027 0.656 -0.024 0.754"/>
 		<Point  coord="3400.191 258.831 2016.625" rotation="-0.016 0.981 -0.089 0.172"/>
+	</Path>
+
+	<Path Name = "linkedcam1">
+		<Point  coord="3429.867 267.882 2094.416" rotation="-0.006 0.994 -0.082 0.071"/>
+		<Point  coord="3419.878 267.817 2140.776" rotation="-0.010 0.956 -0.033 0.290"/>
+		<Point  coord="3384.023 269.371 2134.431" rotation="-0.002 0.751 -0.002 0.660"/>
 	</Path>
 
 	<Path Name = "NachRolikCam3">
@@ -41,6 +42,12 @@
 		<Point  coord="3165.802 287.385 2116.682" rotation="-0.000 0.853 -0.000 0.522"/>
 	</Path>
 
+	<!-- Путь приезжающего поезда -->
+	<Path Name = "poezdPrPath">
+		<Point  coord="3343.139 255.000 2023.689" rotation="0.0000 -0.7475 0.0000 0.6643"/>   
+	</Path>
+
+	<!-- Игрок нашёл выход из лабиринта -->
 	<Path Name = "KonRolikCam1">
 		<Point  coord="1444.892 256.818 2043.365" rotation="0.022 0.004 0.000 1.000"/>
 		<Point  coord="1447.591 256.818 2043.780" rotation="0.000 0.234 0.000 0.972"/>
@@ -51,14 +58,8 @@
 		<Point  coord="3539.972 260.081 2033.528" rotation="-0.003 0.685 -0.003 0.729"/>
 	</Path>
 
-	<Path Name = "linkedcam">
-		<Point  coord="0.000 1.000 0.000"/>
+	<!-- Путь уезжающего поезда -->
+	<Path Name = "poezdUePath">
+		<Point  coord="3492.906 255.000 2039.886" rotation="0.0000 -0.7475 0.0000 0.6643"/>   
 	</Path>
-
-	<Path Name = "linkedcam1">
-		<Point  coord="3429.867 267.882 2094.416" rotation="-0.006 0.994 -0.082 0.071"/>
-		<Point  coord="3419.878 267.817 2140.776" rotation="-0.010 0.956 -0.033 0.290"/>
-		<Point  coord="3384.023 269.371 2134.431" rotation="-0.002 0.751 -0.002 0.660"/>
-	</Path>
-
 </Paths>

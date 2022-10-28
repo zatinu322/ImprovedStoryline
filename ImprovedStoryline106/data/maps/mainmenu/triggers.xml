@@ -5,7 +5,6 @@
 <trigger	Name="GlobalVar"	active="1">
 		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
-		--println("startvar")
 			SetVar("Fade", 1)
 			trigger:Deactivate()
 		</script>
@@ -72,7 +71,6 @@
 			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(358.551, 264.511, 1423.320), Quaternion(0, 0, 0, 0), 0)
 			CreateNewDummyObject( "cargo", "CamTochkaCentr", -1, -1, CVector(955.502, 280.000, 1151.172), Quaternion(0, 0, 0, 0), 0)
 
-			-- trigger:Deactivate() 
 		</script>
 	</trigger>
 
@@ -90,7 +88,6 @@
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				--println("Zone01")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetRotation(Quaternion(-0.029, 0.679, -0.021, 0.734))
 				vehPlayer:SetExternalPathByName("Zone01_path")
@@ -123,7 +120,6 @@
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone02")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone02_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -150,7 +146,6 @@
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone03")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone03_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -179,7 +174,6 @@
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone04")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone04_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -208,7 +202,6 @@
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone05")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone05_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -235,7 +228,6 @@
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone06")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone06_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -244,7 +236,7 @@
 			end
 
 			local idn01 = GetPlayerVehicleId()
---			FlyLinked("cam_Zone06", idn01, 35, 1, 0, idn01, nil, nil, true, true )
+
 			FlyLinked("cam_Zone06", idn01, 30, Fade, 0, nil, false, true, true, nil )
 			StartCinematic()
 
@@ -264,7 +256,6 @@
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone07")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone07_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -275,13 +266,13 @@
 			local idn01 = GetPlayerVehicleId()
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
+
 			FlyLinked("cam_Zone07", CTochID, 30, Fade, 0, idn01, false, nil, true, nil )
 			StartCinematic()
 			
 			if Fade == 1 then
 				UpdateCinematic( 1 )
 			end
-
 
 		</script>
 	</trigger>
@@ -293,11 +284,9 @@
 			RuleConsole("cinematic_spring_coeff 1.7")
 			local vehPlayer = GetPlayerVehicle()
 			local Fade = GetVar("Fade").AsInt
-			--println(Fade)
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone08")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone08_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -307,10 +296,8 @@
 
 			local idn01 = GetPlayerVehicleId()
 			if CToch then CToch:Remove() end
---			FlyLinked("cam_Zone08", idn01, 35, 0, 0, idn01, nil, nil, true, true )
---			if Fade == 1 then
-				FlyLinked("cam_Zone0", idn01, 30, Fade, 0, nil, false, true, true, nil )
---			end
+
+			FlyLinked("cam_Zone0", idn01, 30, Fade, 0, nil, false, true, true, nil )
 			StartCinematic()
 
 			if Fade == 1 then
@@ -325,11 +312,9 @@
 		<script>
 			local vehPlayer = GetPlayerVehicle()
 			local Fade = GetVar("Fade").AsInt
-			--println(Fade)
 			SetVar("Fade", 0)
 
 			if vehPlayer then
-				--println("Zone09")
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetExternalPathByName("Zone09_path")
 				vehPlayer:SetCustomControlEnabled( false )
@@ -338,12 +323,12 @@
 			end
 
 			local idn01 = GetPlayerVehicleId()
---			FlyLinked("cam_Zone09", idn01, 38, 0, 0, idn01, false, nil, true, nil )
 			if Fade == 1 then
 				FlyLinked("cam_Zone0", idn01, 30, Fade, 0, nil, false, true, true, nil )
 				StartCinematic()
 				UpdateCinematic( 1 )
 			end
+
 			TActivate("Trigger_zone01")
 		</script>
 	</trigger>

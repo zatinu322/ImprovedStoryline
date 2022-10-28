@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
+	<!-- Приехали в шахту разгребать завал -->
+	<Path Name = "SHRolikCam0">
+		<Point  coord="0.000 3.000 0.000"/>
+		<Point  coord="0.000 -1.000 0.000"/>
+	</Path>
 
 	<Path Name = "SHRolikCam1">
 		<Point  coord="1490.246 273.112 2850.543" rotation="0.060 -0.123 -0.007 0.991"/>
@@ -16,16 +21,19 @@
 		<Point  coord="1496.633 277.911 2818.375" rotation="-0.419 0.557 -0.388 0.603"/>
 	</Path>
 
-	<Path Name = "VyezdRolCam2">
-		<Point  coord="2845.415 424.538 142.331" rotation="-0.013 0.972 0.055 -0.229"/> 
-		<Point  coord="2845.720 424.617 141.714" rotation="-0.008 0.974 0.035 -0.222"/>
-	</Path>
-
+	<!-- Осмотр первого выезда -->
 	<Path Name = "VyezdRolCam1">
 		<Point  coord="3812.583 551.495 569.812" rotation="0.030 -0.474 -0.016 0.880"/>
 		<Point  coord="3820.594 551.495 560.386" rotation="0.038 -0.368 -0.015 0.929"/>
 	</Path>
 
+	<!-- Осмотр второго выезда -->
+	<Path Name = "VyezdRolCam2">
+		<Point  coord="2845.415 424.538 142.331" rotation="-0.013 0.972 0.055 -0.229"/> 
+		<Point  coord="2845.720 424.617 141.714" rotation="-0.008 0.974 0.035 -0.222"/>
+	</Path>
+
+	<!-- Диалог с Тихомиром -->
 	<Path Name = "VRRolikCam1">
 		<Point  coord="3135.232 338.971 3198.095" rotation="-0.031 0.860 -0.053 0.507"/>
 		<Point  coord="3095.573 343.287 3224.637" rotation="-0.010 0.952 -0.033 0.303"/>
@@ -56,6 +64,7 @@
 		<Point  coord="3043.707 358.412 3205.854" rotation="-0.028 0.971 -0.187 0.146"/>
 	</Path>
 
+	<!-- Продолжение разговора с Тихомиром, последствия выбора -->
 	<Path Name = "VRRolikCam7">
 		<Point  coord="3062.207 332.944 3195.582" rotation="-0.061 -0.361 0.024 0.930"/>
 		<Point  coord="3058.879 332.944 3200.292" rotation="-0.071 -0.538 0.045 0.838"/>
@@ -66,9 +75,8 @@
 		<Point  coord="3069.783 331.043 3156.849" rotation="-0.004 0.780 -0.005 0.626"/>
 	</Path>
 
-	<Path Name = "VRRolikCam10">
-		<Point  coord="3142.253 333.420 3150.485" rotation="0.005 0.744 0.006 0.668"/>
-		<Point  coord="3102.603 334.016 3146.211" rotation="0.005 0.744 0.006 0.668"/>
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
 	</Path>
 
 	<Path Name = "VRRolikCam11">
@@ -76,20 +84,13 @@
 		<Point  coord="3404.219 397.042 3304.376" rotation="-0.050 0.859 -0.085 0.502"/>
 	</Path>
 
-	<Path Name = "RPGSignsCam">
-		<Point  coord="2072.174 429.801 2241.517" rotation="0.268 0.731 -0.464 -0.422"/>
-		<Point  coord="2037.260 429.801 2181.208" rotation="0.268 0.731 -0.464 -0.422"/>
+	<!-- После смерти Тихомира -->
+	<Path Name = "VRRolikCam10">
+		<Point  coord="3142.253 333.420 3150.485" rotation="0.005 0.744 0.006 0.668"/>
+		<Point  coord="3102.603 334.016 3146.211" rotation="0.005 0.744 0.006 0.668"/>
 	</Path>
 
-	<Path Name = "linkedcam">
-		<Point  coord="0.000 1.000 0.000"/>
-	</Path>
-
-	<Path Name = "SHRolikCam0">
-		<Point  coord="0.000 3.000 0.000"/>
-		<Point  coord="0.000 -1.000 0.000"/>
-	</Path>
-
+	<!-- Находим запчасти аппарата Братислава -->
 	<Path Name = "BComponentsFound_path01">
 		<Point  coord="2082.363 261.185 1309.181" rotation="-0.142 -0.209 0.031 0.967"/>
 		<Point  coord="2084.645 259.643 1314.573" rotation="-0.129 -0.188 0.025 0.973"/>
@@ -105,4 +106,9 @@
 		<Point  coord="3460.272 413.623 3578.257" rotation="0.069 -0.092 -0.006 0.993"/>
 	</Path>
 
+	<!-- Осмотр поля со знаками -->
+	<Path Name = "RPGSignsCam">
+		<Point  coord="2072.174 429.801 2241.517" rotation="0.268 0.731 -0.464 -0.422"/>
+		<Point  coord="2037.260 429.801 2181.208" rotation="0.268 0.731 -0.464 -0.422"/>
+	</Path>
 </Paths>

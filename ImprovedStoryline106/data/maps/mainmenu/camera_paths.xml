@@ -10,6 +10,10 @@
 		<Point  coord="24.000 15.00 50.000" rotation="-0.127 -0.473 0.069 0.869"  speed="1"/>
 	</Path>
 
+	<Path Name = "cam_Zone0">                         
+		<Point  coord="19.671 2.563 25.000" rotation="-0.001 0.858 -0.001 0.514"/>
+	</Path>
+
 	<Path Name = "cam_Zone05">                         
 		<Point  coord="94.487 59.027 64.538" rotation="-0.102 0.867 -0.199 0.445"  speed="1"/>
 		<Point  coord="23.302 46.106 175.657" rotation="-0.043 0.956 -0.182 0.225"  speed="1"/>
@@ -23,19 +27,4 @@
 	<Path Name = "cam_Zone07">                         
 		<Point  coord="0 1 0"/>
 	</Path>
-
-	<Path Name = "cam_Zone08">                         
-		<Point  coord="-22.454 1.322 -1.336" rotation="-0.002 -0.749 0.002 0.663"  speed="1"/>
-		<Point  coord="-7.994 6.202 32.075" rotation="-0.001 0.995 0.009 -0.099"  speed="1"/>
-	</Path>
-
-	<Path Name = "cam_Zone09">                         
-		<Point  coord="-7.924 2.624 -20.124" rotation="-0.025 -0.244 0.006 0.969"  speed="1"/>
-		<Point  coord="0.732 13.770 -51.890" rotation="-0.046 -0.133 0.006 0.990"  speed="1"/>
-	</Path>
-
-	<Path Name = "cam_Zone0">                         
-		<Point  coord="19.671 2.563 25.000" rotation="-0.001 0.858 -0.001 0.514"/>
-	</Path>
-
 </Paths>

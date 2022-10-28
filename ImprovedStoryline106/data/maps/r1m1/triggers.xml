@@ -585,7 +585,7 @@
 	<trigger Name="Create_ConstructionPlace02" active="0">
 		<event 	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateNewSgNodeObject( "ET_PS_HLIGHT", "constl21", -1, -1, CVector(1565.589, 295.000, 3113.854), Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
+			CreateNewSgNodeObject( "ET_PS_HLIGHT", "const21", -1, -1, CVector(1565.589, 295.000, 3113.854), Quaternion(0.0000, 0.0000, 0.0000, 0.0000), 13.00) 
 
 			TActivate("Trigged_ConstructionPlace02")
 

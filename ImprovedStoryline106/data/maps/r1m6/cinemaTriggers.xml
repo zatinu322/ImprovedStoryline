@@ -1366,26 +1366,26 @@
 				vehPlayer:SetGamePositionOnGround( CVector(1448.991, 255.835, 2804.873))
 				vehPlayer:SetRotation(Quaternion(-0.002, 0.490, 0.001, 0.872))
 			end
-						
+
 			local doz = GetEntityByName("Dozz")
 			if doz then doz:Remove() end
-			
+
 			local dozerSkin1 = GetVar("DozerSkin").AsInt
 
 			local doz2 = CreateVehicleEx("Traktor01","SeraDoz1", CVector(1454.789, 256.079, 2827.161), 1088)
 			if doz2 then 
 				doz2:SetRotation(Quaternion(0.002, -0.487, -0.001, -0.873))
 				if dozerSkin1 then
-					doz2:SetSkin(dozerSkin)
+					doz2:SetSkin(dozerSkin1)
 				else
 					doz2:SetRandomSkin()
 				end
 			end
-			
+
 			TeamCreate("SeraZas4",1089,CVector(2232.344, 256.921, 2302.172),{"AKF_Belaz2"}, nil, nil, Quaternion(0.014, -0.046, 0.021, -0.999))
 			TeamCreate("SeraZas5",1089,CVector(1927.015, 255.880, 1429.949),{"AKF_Belaz1"}, nil, nil, Quaternion(-0.010, 0.293, 0.012, 0.956))
 			TeamCreate("SeraZas6",1089,CVector(1025.320, 256.221, 943.350),{"AKF_Cruiser2"}, nil, nil, Quaternion(0.000, 0.640, 0.003, 0.768))
-			
+
 			TActivate( "trCaravanToVillage3sec" )
 			TActivate( "trCaravanToVillageINPLACE" )
 			TActivate( "trCaravanToVillageDIE" )
@@ -1400,7 +1400,7 @@
 			TDeactivate("HomeRolikCam7")
 
 			TakeQuest("SerafimaHome2")
-			
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

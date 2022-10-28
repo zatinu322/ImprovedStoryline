@@ -190,6 +190,11 @@
 					TActivate ("tr_RolikAndPosLeavePesht")
 				end
 			end
+
+			if QuestStatus("FightForPesht1")==Q_TAKEN then
+				TDeactivate("cinFightForPesht")
+			end
+			
 		</script>
 	</trigger>
 
@@ -249,6 +254,10 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			if QuestStatus("FightForPesht1")==Q_TAKEN then
+				TActivate("cinFightForPesht")
+			end
+
 			trigger:Deactivate() 
 		</script>
 	</trigger>
@@ -266,6 +275,10 @@
 			Plf:SetCustomControlEnabled( false )
 
 			SetCameraBehindPlayerVehicle()
+
+			if QuestStatus("FightForPesht1")==Q_TAKEN then
+				TActivate("cinFightForPesht")
+			end
 
 			trigger:Deactivate() 
 		</script>
@@ -346,6 +359,8 @@
 					Plf:AddModifier("hp", "- 3")
 				elseif 666 > PlHP then
 					Plf:AddModifier("hp", "+ 3")
+				elseif PlHP == 666 then
+					Plf:AddModifier("hp", "= 666")
 				else
 					Plf:AddModifier("hp", "= 666")
 				end
@@ -672,7 +687,7 @@
 	<trigger Name="TRIGGER_THIEFWAR" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("ThiefCar",1044,CVector(6919.780, 297.239, 1115.137),{"UralShot"}, nil, 0, Quaternion(-0.030, 0.866, -0.000, 0.498))
+			TeamCreate("ThiefCar",1044,CVector(6844.412, 288.256, 1161.126),{"UralShot"}, CVector(7081.790, 308.722, 1042.585), 0, Quaternion(0.015, 0.818, 0.110, 0.564))
 
 			SetTolerance(1100, 1044, RS_ENEMY)
 			SetTolerance(1012, 1044, RS_ALLY)
@@ -872,9 +887,7 @@
 			end
 			
 			TeamCreate("ZasadaARTeam",1046,CVector(1798.483, 279.056, 5487.830),{"Cruiser01", "CoolBelaz_2"})
-			
-			TActivate("trZasadaAR_Dead")
-			
+						
 			trigger:Deactivate()
 		</script>
 	</trigger>

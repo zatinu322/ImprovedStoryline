@@ -233,7 +233,7 @@
 		</script>
 	</trigger>
 
-	<!-- Бежим в Либриум.  -->
+	<!-- Бежим в Либриум -->
 	<trigger Name="EndingRolik5" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR2M1" />
 		<script>
@@ -1229,7 +1229,6 @@
 				if vehicle then vehicle:Remove() end
 			end
 
-			TDeactivate("RolikBegin_AXELARENADIE")
 			TDeactivate("trAXELARENADIE2_cam01")
 			TDeactivate("trAXELARENADIE2_cam02")
 			TDeactivate("trAXELARENADIE2_cam03")

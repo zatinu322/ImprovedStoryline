@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
-
-	<Path Name = "start_game">
-		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
-	</Path>
-
-	<Path Name = "BolotoOF_cam01">
-		<Point  coord="1266.468 213.171 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
-		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
-	</Path>
-
+	<!-- Болото закрыто. -->
 	<Path Name = "BolotoOF_cam02">                         
 		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
 		<Point  coord="1266.468 232.295 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
 	</Path>
 
+	<!-- Игрок утонул, так как начал пересекать болото неправильно. -->
+	<Path Name = "BolotoOF_cam01">
+		<Point  coord="1266.468 213.171 1519.520" rotation="0.008 -0.468 -0.004 0.884"/>
+		<Point  coord="1250.052 213.171 1554.609" rotation="-0.000 -0.632 0.000 0.775"/>
+	</Path>
+
+	<Path Name = "PlayerSinkCamPath">
+        <Point  coord="1212.460 229.419 1679.307" rotation="-0.077 -0.825 0.116 0.548"/>
+		<Point  coord="1238.896 229.419 1714.096" rotation="0.062 0.928 -0.180 -0.321"/>
+	</Path>
+
+	<!-- Болото открыто. -->
 	<Path Name = "Boloto_cam01">                         
 		<Point coord="-4.510 1.500 20.571" rotation="0.090 -0.603 -0.068 0.790"/>
 	</Path>
@@ -28,21 +31,12 @@
 		<Point  coord="878.287 241.002 1723.050" rotation="0.038 0.891 -0.075 -0.446"/>
 	</Path>
 
-	<Path Name = "PlaneOut_cam01">                         
-		<Point  coord="1117.126 234.753 1357.090" rotation="-0.266 -0.051 0.014 0.963"/>
-		<Point  coord="1115.771 242.544 1344.723" rotation="-0.095 -0.012 0.001 0.995"/>
+	<Path Name = "stranger_cam">                         
+		<Point  coord="937.426 276.849 1537.691" rotation="-0.056 0.211 -0.012 0.976"/>
+        <Point  coord="937.426 276.849 1537.691" rotation="-0.022 0.442 -0.011 0.896"/>
 	</Path>
 
-	<Path Name = "PlaneOut_cam02">                         
-		<Point  coord="1465.230 225.361 1532.261" rotation="-0.021 0.428 -0.010 0.904"/>
-		<Point  coord="1473.342 225.361 1539.949" rotation="-0.052 0.345 -0.019 0.937"/>
-	</Path>
-
-	<Path Name = "PortOut_cam01">                         
-		<Point  coord="787.966 250.249 1703.446" rotation="-0.192 -0.703 0.207 0.652"/>
-		<Point  coord="771.337 262.521 1703.464" rotation="-0.047 -0.753 0.055 0.655"/>
-	</Path>
-
+	<!--ролик с босом "война бобра с ослом":-)-->
 	<Path Name = "Boss02_cam01">                         
 		<Point  coord="833.949 270.194 1368.301" rotation="0.029 0.423 0.013 0.906"/>
 		<Point  coord="833.575 275.535 1360.280" rotation="-0.046 0.106 -0.005 0.993"/>
@@ -58,6 +52,14 @@
 		<Point  coord="-4.000 1.500 -20.000"/>
 	</Path>
 
+	<!-- Разговор с Лисой после Ольма, перед поездкой на Склад -->
+	<Path Name = "peregovor_cam">
+        <Point  coord="2533.030 263.052 1129.728" rotation="0.040 0.935 -0.113 -0.334"/>
+        <Point  coord="2531.537 260.775 1082.971" rotation="-0.106 -0.647 0.092 0.750"/>
+        <Point  coord="2543.274 260.775 1049.362" rotation="-0.107 -0.220 0.024 0.969"/>
+	</Path>
+
+	<!-- Ролик подьезда к конвою лидера экстримистов -->
 	<Path Name = "Caravan_cam01">                         
 		<Point  coord="10.000 3.500 -20.000"/>
 		<Point  coord="10.000 4.500 -10.000"/>
@@ -73,54 +75,19 @@
 		<Point  coord="4.000 6.500 20.000"/>
 	</Path>
 
-	<Path Name = "lodka1">                         
-		<Point  coord="779.983 271.674 1037.732" rotation="-0.000 1.000 -0.007 0.017"/>
-		<Point  coord="775.084 249.252 877.352" rotation="-0.000 1.000 -0.000 0.015"/>
-		<Point  coord="785.818 228.727 787.916" rotation="-0.002 0.962 -0.007 0.273"/>
+	<!-- Перед захватом Склада вместе с ТСП -->
+	<Path Name = "KSGCamPath">
+		<Point  coord="1098.624 313.037 2236.916" rotation="-0.048 0.250 -0.012 0.967"/>
+		<Point  coord="1132.940 370.338 2230.023" rotation="-0.082 0.107 -0.009 0.991"/>
 	</Path>
 
-	<Path Name = "lodka2">                         
-		<Point  coord="775.084 249.252 877.352" rotation="-0.000 1.000 -0.000 0.015"/>
-		<Point  coord="785.818 228.727 787.916" rotation="-0.002 0.962 -0.007 0.273"/>
-	</Path>
-
-	<Path Name = "lodka3">                         
-		<Point  coord="680.886 220.828 766.145" rotation="-0.018 -0.814 0.026 0.580"/>
-		<Point  coord="680.886 220.828 766.145" rotation="-0.002 0.905 0.004 -0.426"/>
-	</Path>
-
-	<Path Name = "lodka4">                         
-		<Point  coord="712.726 160.000 67.000" rotation="0.000 -0.008 -0.000 -1.000"/>
-		<Point  coord="710.435 216.935 630.735" rotation="0.000 -0.008 -0.000 -1.000"/>
-	</Path>
-
-	<Path Name = "mishlen">                         
-		<Point  coord="3793.338 358.817 944.707" rotation="-0.037 0.946 -0.116 0.300"/>
-        <Point  coord="3425.447 328.539 107.705" rotation="-0.033 0.913 -0.076 0.399"/>
-	</Path>
-
-	<Path Name = "stranger_cam">                         
-		<Point  coord="937.426 276.849 1537.691" rotation="-0.056 0.211 -0.012 0.976"/>
-        <Point  coord="937.426 276.849 1537.691" rotation="-0.022 0.442 -0.011 0.896"/>
-	</Path>
-
-	<Path Name = "peregovor_cam">
-        <Point  coord="2533.030 263.052 1129.728" rotation="0.040 0.935 -0.113 -0.334"/>
-        <Point  coord="2531.537 260.775 1082.971" rotation="-0.106 -0.647 0.092 0.750"/>
-        <Point  coord="2543.274 260.775 1049.362" rotation="-0.107 -0.220 0.024 0.969"/>
-	</Path>
-
+	<!-- Разрулили ситуацию со Складом. Едем примерять одежду. -->
 	<Path Name = "Sklad_cam1">
         <Point  coord="1247.267 320.713 2472.374" rotation="0.017 0.949 -0.053 -0.310"/>
 		<Point  coord="1273.234 320.713 2488.937" rotation="0.007 0.984 -0.043 -0.171"/>
 	</Path>
 
 	<Path Name = "Sklad_cam2">
-        <Point  coord="1320.392 307.617 2440.300" rotation="0.008 0.946 -0.024 -0.322"/>
-		<Point  coord="1320.336 308.891 2440.349" rotation="0.015 0.948 -0.044 -0.315"/>
-	</Path>
-
-	<Path Name = "Sklad_cam22">
         <Point  coord="1320.392 307.617 2440.300" rotation="0.008 0.946 -0.024 -0.322"/>
 		<Point  coord="1320.336 308.891 2440.349" rotation="0.015 0.948 -0.044 -0.315"/>
 	</Path>
@@ -140,11 +107,17 @@
 		<Point  coord="1338.321 347.287 2512.785" rotation="-0.043 0.949 -0.148 0.274"/>
 	</Path>
 
+	<Path Name = "Sklad_cam22">
+        <Point  coord="1320.392 307.617 2440.300" rotation="0.008 0.946 -0.024 -0.322"/>
+		<Point  coord="1320.336 308.891 2440.349" rotation="0.015 0.948 -0.044 -0.315"/>
+	</Path>
+
 	<Path Name = "Sklad_cam6">
         <Point  coord="1302.180 309.762 2468.832" rotation="-0.001 0.999 -0.039 0.031"/>
 		<Point  coord="1271.351 309.762 2461.586" rotation="0.004 0.964 -0.016 -0.267"/>
 	</Path>
 
+	<!-- Игрок и Лиса взрывают завал у тоннеля в Лидденклауд -->
 	<Path Name = "Explos_cam1">
         <Point  coord="2110.781 275.878 3501.775" rotation="-0.100 0.344 -0.037 0.933"/>
 		<Point  coord="2110.781 275.878 3501.775" rotation="-0.073 0.387 -0.031 0.919"/>
@@ -155,14 +128,16 @@
 		<Point  coord="2113.875 257.151 3474.667" rotation="0.004 0.300 0.001 0.954"/>
 	</Path>
 
-	<Path Name = "KSGCamPath">
-		<Point  coord="1098.624 313.037 2236.916" rotation="-0.048 0.250 -0.012 0.967"/>
-		<Point  coord="1132.940 370.338 2230.023" rotation="-0.082 0.107 -0.009 0.991"/>
+	<!-- Рыбак предупреждает нас о гневе ТСП -->
+	<Path Name = "RRRolikCam1">
+		<Point  coord="0.000 2.000 0.000"/>
+		<Point  coord="-5.000 -3.000 0.000"/>
 	</Path>
 
-	<Path Name = "PlayerSinkCamPath">
-        <Point  coord="1212.460 229.419 1679.307" rotation="-0.077 -0.825 0.116 0.548"/>
-		<Point  coord="1238.896 229.419 1714.096" rotation="0.062 0.928 -0.180 -0.321"/>
+	<!-- Приехали к самолёту. Встреча с Айвеном. -->
+	<Path Name = "linkedcam">
+		<Point  coord="5.000 2.000 -15.000"/>
+		<Point  coord="5.000 5.000 -15.000"/>
 	</Path>
 
 	<Path Name = "PlaneRCam1">
@@ -180,11 +155,24 @@
 		<Point  coord="1932.850 224.670 808.867" rotation="-0.003 0.790 -0.004 0.614"/>
 	</Path>
 
-	<Path Name = "linkedcam">
-		<Point  coord="5.000 2.000 -15.000"/>
-		<Point  coord="5.000 5.000 -15.000"/>
+	<!--переезд болота от самолета в деревню. -->
+	<Path Name = "PlaneOut_cam01">                         
+		<Point  coord="1117.126 234.753 1357.090" rotation="-0.266 -0.051 0.014 0.963"/>
+		<Point  coord="1115.771 242.544 1344.723" rotation="-0.095 -0.012 0.001 0.995"/>
 	</Path>
 
+	<Path Name = "PlaneOut_cam02">                         
+		<Point  coord="1465.230 225.361 1532.261" rotation="-0.021 0.428 -0.010 0.904"/>
+		<Point  coord="1473.342 225.361 1539.949" rotation="-0.052 0.345 -0.019 0.937"/>
+	</Path>
+
+	<!--переезд болота от порта в деревню.-->
+	<Path Name = "PortOut_cam01">                         
+		<Point  coord="787.966 250.249 1703.446" rotation="-0.192 -0.703 0.207 0.652"/>
+		<Point  coord="771.337 262.521 1703.464" rotation="-0.047 -0.753 0.055 0.655"/>
+	</Path>
+
+	<!-- Последний диалог с Айвеном. Титры. -->
 	<Path Name = "RTMRolikCam1">
         <Point  coord="3523.887 315.098 3907.916" rotation="-0.013 0.982 -0.071 0.175"/>
 		<Point  coord="3493.501 302.326 3825.246" rotation="-0.013 0.982 -0.071 0.175"/>
@@ -200,14 +188,66 @@
 		<Point  coord="3501.127 210.518 3715.811" rotation="-0.022 -0.003 0.000 1.000"/>
 	</Path>
 
+	<Path Name = "start_game">
+		<Point  coord="0 0 0" rotation="0 0 0 1"/>   
+	</Path>
+
 	<Path Name = "AivenSonClothes">
         <Point  coord="3504.582 213.320 3698.208" rotation="-0.087 0.894 -0.198 0.393"/>
 		<Point  coord="3499.417 209.921 3693.460" rotation="-0.135 0.865 -0.336 0.347"/>
 	</Path>
 
-	<Path Name = "RRRolikCam1">
-		<Point  coord="0.000 2.000 0.000"/>
-		<Point  coord="-5.000 -3.000 0.000"/>
+	<!-- Мистер Шляпа показывает статую Мишлен -->
+	<Path Name = "mishlen">                         
+		<Point  coord="3793.338 358.817 944.707" rotation="-0.037 0.946 -0.116 0.300"/>
+        <Point  coord="3425.447 328.539 107.705" rotation="-0.033 0.913 -0.076 0.399"/>
 	</Path>
+
+	<!--подводная лодка-->
+	<Path Name = "lodka1">                         
+		<Point  coord="779.983 271.674 1037.732" rotation="-0.000 1.000 -0.007 0.017"/>
+		<Point  coord="775.084 249.252 877.352" rotation="-0.000 1.000 -0.000 0.015"/>
+		<Point  coord="785.818 228.727 787.916" rotation="-0.002 0.962 -0.007 0.273"/>
+	</Path>
+
+	<Path Name = "lodka3">                         
+		<Point  coord="680.886 220.828 766.145" rotation="-0.018 -0.814 0.026 0.580"/>
+		<Point  coord="680.886 220.828 766.145" rotation="-0.002 0.905 0.004 -0.426"/>
+	</Path>
+
+	<Path Name = "lodka2">                         
+		<Point  coord="775.084 249.252 877.352" rotation="-0.000 1.000 -0.000 0.015"/>
+		<Point  coord="785.818 228.727 787.916" rotation="-0.002 0.962 -0.007 0.273"/>
+	</Path>
+	
+	<!-- Путь подводной лодки -->
+	<Path Name = "lodka4">                         
+		<Point  coord="712.726 160.000 67.000" rotation="0.000 -0.008 -0.000 -1.000"/>
+		<Point  coord="710.435 216.935 630.735" rotation="0.000 -0.008 -0.000 -1.000"/>
+	</Path>
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
 
 </Paths>

@@ -147,16 +147,6 @@
 		</script>
 	</trigger>
 
-	<!-- Разговор Серго и Айвена после того, как игрок уезжает -->
-	<trigger	Name="trExitFromCity"	active="0">
-		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
-		<script>
-			TakeQuest("r1m3_TW_OralceAboutAlien")
-			TActivate("SergoAivenTalk1")
-			trigger:Deactivate()
- 		</script>
-	</trigger>
-
 	<!-- Доставили блокиратор Ньери к Повелителю -->
 	<trigger	Name="BlokiratorPrivezli"	active="1">
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="TarelkaEnd_loc" />

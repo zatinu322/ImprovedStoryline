@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
-
 <Paths>
+	<!-- Начальный ролик -->
 	<Path Name = "start1">
 		<Point  coord="403.050 265.864 1742.360" rotation="-0.003 0.634 -0.003 0.773"/>
 		<Point  coord="407.825 265.864 1777.639" rotation="-0.002 0.769 -0.002 0.639"/>
@@ -61,14 +61,14 @@
 		<Point  coord="450.705 261.967 1825.794" rotation="0.023 -0.460 -0.012 0.888"/>
 	</Path>
 
-	<Path Name = "start121">
-		<Point  coord="397.275 257.335 1774.455" rotation="-0.057 -0.361 0.022 0.931"/>
-		<Point  coord="398.867 257.044 1776.198" rotation="-0.057 -0.361 0.022 0.931"/>
-	</Path>
-
 	<Path Name = "start13">
 		<Point  coord="402.353 256.990 1778.840" rotation="-0.022 0.747 -0.025 0.664"/>
 		<Point  coord="402.353 256.990 1778.840" rotation="-0.038 0.725 -0.040 0.686"/>
+	</Path>
+
+	<Path Name = "start121">
+		<Point  coord="397.275 257.335 1774.455" rotation="-0.057 -0.361 0.022 0.931"/>
+		<Point  coord="398.867 257.044 1776.198" rotation="-0.057 -0.361 0.022 0.931"/>
 	</Path>
 
 	<Path Name = "start14">
@@ -76,19 +76,26 @@
 		<Point  coord="522.956 306.654 1795.796" rotation="-0.109 0.757 -0.131 0.630"/>
 	</Path>
 
+	<!-- Лиса решает в какую сторону ехать -->
+	<Path Name = "LisaDirectionRolik_cam01">
+		<Point  coord="0.000 1.000 0.000"/>
+		<Point  coord="0.000 -8.000 10.000"/>
+	</Path>
+
+	<!-- Лиса попадает в ловушку Адептов. -->
 	<Path Name = "LisaLinkedTrap_cam01">
 		<Point  coord="1108.034 302.293 587.033" rotation="-0.173 -0.733 0.203 0.625"/>
 		<Point  coord="1099.180 303.395 521.275" rotation="-0.111 -0.626 0.091 0.767"/>
 	</Path>
 
-	<Path Name = "LisaLinkedTrap_cam02">
-		<Point  coord="1155.011 271.742 851.836" rotation="-0.001 0.993 -0.004 0.122"/>
-		<Point  coord="1209.799 280.391 919.013" rotation="-0.149 0.276 -0.043 0.949"/>
-	</Path>
-
 	<Path Name = "TrapCam1">
 		<Point  coord="1116.119 287.610 490.995" rotation="-0.037 -0.570 0.026 0.821"/>
 		<Point  coord="1121.586 287.316 488.298" rotation="-0.018 -0.536 0.011 0.844"/>
+	</Path>
+
+	<Path Name = "LisaLinkedTrap_cam02">
+		<Point  coord="1155.011 271.742 851.836" rotation="-0.001 0.993 -0.004 0.122"/>
+		<Point  coord="1209.799 280.391 919.013" rotation="-0.149 0.276 -0.043 0.949"/>
 	</Path>
 
 	<Path Name = "TrapCam4">
@@ -131,6 +138,11 @@
 		<Point  coord="403.779 262.046 1766.150" rotation="-0.078 -0.448 0.039 0.890"/>
 	</Path>
 
+	<Path Name = "TrapCam13dop">
+		<Point  coord="394.572 264.911 1825.858" rotation="0.006 0.926 -0.015 -0.377"/>
+		<Point  coord="364.713 265.615 1806.222" rotation="-0.014 -0.850 0.023 0.526"/>
+	</Path>
+
 	<Path Name = "TrapCam12">
 		<Point  coord="529.618 258.947 1756.200" rotation="-0.010 0.705 -0.010 0.709"/>
 		<Point  coord="519.692 258.682 1756.660" rotation="-0.010 0.682 -0.009 0.731"/>
@@ -141,11 +153,8 @@
 		<Point  coord="392.216 272.063 959.140" rotation="0.014 0.950 -0.043 -0.309"/>
 	</Path>
 
-	<Path Name = "TrapCam13dop">
-		<Point  coord="394.572 264.911 1825.858" rotation="0.006 0.926 -0.015 -0.377"/>
-		<Point  coord="364.713 265.615 1806.222" rotation="-0.014 -0.850 0.023 0.526"/>
-	</Path>
-
+<!-- КАМПАНИЯ ЗА ОЛ -->
+	<!-- Спасаем Серафиму на заводе -->
 	<Path Name = "PSSCam1">
 		<Point  coord="1593.621 286.094 844.553" rotation="0.018 0.982 -0.127 -0.140"/>
 		<Point  coord="1674.567 263.111 507.144" rotation="0.011 0.989 -0.098 -0.114"/>
@@ -161,11 +170,13 @@
 		<Point  coord="1652.176 259.635 728.334" rotation="-0.045 0.276 -0.013 0.960"/>
 	</Path>
 
+	<!-- Спасли Серафиму. Сопровождение. -->
 	<Path Name = "ASSCam1">
 		<Point  coord="1627.580 263.385 730.293" rotation="-0.081 -0.166 0.014 0.983"/>
 		<Point  coord="1604.795 275.286 720.343" rotation="-0.121 -0.277 0.042 0.952"/>
 	</Path>
 
+	<!-- Доехали до ж/д станции -->
 	<Path Name = "StationCam1">
 		<Point  coord="2301.473 261.012 2888.742" rotation="0.006 -0.804 -0.008 0.595"/>
 		<Point  coord="2287.909 261.012 2844.419" rotation="0.006 -0.804 -0.008 0.595"/>
@@ -176,6 +187,7 @@
 		<Point  coord="2455.727 268.894 2826.497" rotation="-0.038 0.488 -0.028 0.871"/>
 	</Path>
 
+	<!-- Доехали до дома. Едем обратно. -->
 	<Path Name = "HomeCam1">
 		<Point  coord="1384.705 262.037 2779.461" rotation="-0.061 -0.019 0.001 0.998"/>
 		<Point  coord="1402.382 262.037 2781.236" rotation="-0.053 0.154 -0.008 0.987"/>
@@ -214,84 +226,28 @@
 		<Point  coord="1492.144 266.096 2810.986" rotation="-0.094 0.545 -0.062 0.831"/>
 	</Path>
 
+	<!-- Серафима мертва. Тупиковая концовка. -->
+	<Path Name = "SerafimaTupikPath">
+		<Point  coord="1437.710 273.570 2779.649" rotation="-0.107 0.388 -0.046 0.914"/>
+		<Point  coord="1412.342 273.570 2761.922" rotation="-0.116 0.181 -0.022 0.976"/>
+	</Path>
+
+	<!-- Перед битвой за Кейтберг -->
 	<Path Name = "MBRolikCam">
 		<Point  coord="2084.245 258.355 1192.660" rotation="0.000 1.000 -0.003 -0.028"/>
 		<Point  coord="2089.608 258.326 1184.189" rotation="0.000 0.999 -0.009 -0.048"/>
 	</Path>
 
+	<!-- Отбили Рязанское -->
 	<Path Name = "FLRolikCam">
 		<Point  coord="2888.301 302.387 1336.950" rotation="0.005 0.988 -0.154 -0.029"/>
 		<Point  coord="2762.073 302.387 1230.159" rotation="-0.090 -0.790 0.119 0.594"/>
 	</Path>
 
+	<!-- Перед битвой за Моску -->
 	<Path Name = "PKERolikCam1">
 		<Point  coord="1606.021 350.909 2084.869" rotation="-0.023 0.573 -0.016 0.819"/>
 		<Point  coord="1612.034 357.084 2100.570" rotation="-0.088 0.832 -0.137 0.530"/>
-	</Path>
-
-	<Path Name = "PKERolikCam2">
-		<Point  coord="1713.401 448.768 2134.849" rotation="-0.206 0.217 -0.047 0.953"/>
-		<Point  coord="1702.911 437.775 2156.675" rotation="-0.206 0.217 -0.047 0.953"/>
-	</Path>
-
-	<Path Name = "FGRolikCam1">
-		<Point  coord="477.074 263.218 821.422" rotation="-0.070 0.254 -0.018 0.965"/>
-		<Point  coord="499.923 263.825 839.548" rotation="-0.055 0.523 -0.034 0.850"/>
-		<Point  coord="511.679 278.348 859.881" rotation="-0.124 0.653 -0.110 0.739"/>
-	</Path>
-
-	<Path Name = "FGRolikCam2">
-		<Point  coord="471.396 254.228 914.478" rotation="0.006 0.765 0.007 0.644"/>
-		<Point  coord="470.666 254.335 915.990" rotation="-0.012 0.920 -0.028 0.392"/>
-	</Path>
-
-	<Path Name = "FGPath1">
-		<Point  coord="399.800 249.295 886.087" rotation="0.0000 -0.9829 0.0000 -0.1844"/>
-		<Point  coord="96.003 249.295 744.443" rotation="0.0000 -0.9829 0.0000 -0.1844"/>
-	</Path>
-
-	<Path Name = "FGPath2">
-		<Point  coord="346.558 248.346 940.394" rotation="0.0000 0.9344 0.0000 0.3563"/>
-		<Point  coord="119.283 248.346 770.254" rotation="0.0000 0.9344 0.0000 0.3563"/>
-	</Path>
-
-	<Path Name = "Zasada1Path">
-		<Point  coord="2003.867 267.684 1605.729" rotation="-0.033 0.908 -0.074 0.411"/>
-		<Point  coord="1920.094 267.684 1614.957" rotation="0.027 0.938 -0.076 -0.337"/>
-	</Path>
-
-	<Path Name = "Zasada2Path">
-		<Point  coord="477.946 258.909 800.604" rotation="-0.018 0.162 -0.003 0.987"/>
-		<Point  coord="511.834 258.909 840.857" rotation="-0.009 0.639 -0.008 0.769"/>
-	</Path>
-
-	<Path Name = "SeraTortPath1">
-		<Point  coord="10.000 4.000 -20.000" />
-		<Point  coord="10.000 5.000 0.000" />
-	</Path>
-
-	<Path Name = "SeraTortPath2">
-		<Point  coord="-5 3 25" />
-		<Point  coord="-5 3 15" />
-	</Path>
-
-	<Path Name = "BurnVil1Path">
-		<Point  coord="715.870 270.390 2535.161" rotation="-0.072 0.565 -0.049 0.820"/>
-		<Point  coord="703.138 267.995 2540.028" rotation="-0.072 0.565 -0.049 0.820"/>
-	</Path>
-
-	<Path Name = "BurnVil2Path">
-		<Point  coord="2639.793 325.972 1311.384" rotation="-0.093 -0.761 0.111 0.633"/>
-		<Point  coord="2638.606 325.972 1247.916" rotation="-0.098 -0.678 0.092 0.722"/>
-	</Path>
-
-	<Path Name = "SinkTheShipPath">
-		<Point  coord="188.250 256.323 692.700" rotation="-0.031 0.311 -0.010 0.950"/>
-		<Point  coord="187.610 256.252 693.575" rotation="-0.031 0.311 -0.010 0.950"/>
-	</Path>
-
-	<Path Name = "PotopPath">
-		<Point  coord="88.858 228.141 774.987" rotation="0.1092 0.8838 -0.3300 0.3131"/>
 	</Path>
 
 	<Path Name = "PKERolikCam1_2">
@@ -304,32 +260,82 @@
 		<Point  coord="1522.614 410.606 2247.499" rotation="0.013 0.871 -0.022 -0.491"/>
 	</Path>
 
-	<Path Name = "LisaDirectionRolik_cam01">
-		<Point  coord="0.000 1.000 0.000"/>
-		<Point  coord="0.000 -8.000 10.000"/>
+	<Path Name = "PKERolikCam2">
+		<Point  coord="1713.401 448.768 2134.849" rotation="-0.206 0.217 -0.047 0.953"/>
+		<Point  coord="1702.911 437.775 2156.675" rotation="-0.206 0.217 -0.047 0.953"/>
 	</Path>
 
-	<Path Name = "SerafimaTupikPath">
-		<Point  coord="1437.710 273.570 2779.649" rotation="-0.107 0.388 -0.046 0.914"/>
-		<Point  coord="1412.342 273.570 2761.922" rotation="-0.116 0.181 -0.022 0.976"/>
+	<!-- Жители Лиденклауда уплывают на свой корабль -->
+	<Path Name = "FGRolikCam1">
+		<Point  coord="477.074 263.218 821.422" rotation="-0.070 0.254 -0.018 0.965"/>
+		<Point  coord="499.923 263.825 839.548" rotation="-0.055 0.523 -0.034 0.850"/>
+		<Point  coord="511.679 278.348 859.881" rotation="-0.124 0.653 -0.110 0.739"/>
 	</Path>
 
-	<Path Name = "LocoSudaPath">
-		<Point  coord="2341.564 255.750 2986.034" rotation="0.000 0.113 0.000 0.994"/>
-		<Point  coord="2331.876 255.750 2946.406" rotation="0.000 0.113 0.000 0.994"/>
-		<Point  coord="2320.708 255.750 2905.853" rotation="0.000 0.135 0.000 0.991"/>
-		<Point  coord="2313.086 255.750 2877.302" rotation="0.000 0.135 0.000 0.991"/>
-		<Point  coord="2304.984 255.750 2849.864" rotation="0.0000 0.1500 0.0000 0.9887"/>
+	<Path Name = "FGRolikCam2">
+		<Point  coord="471.396 254.228 914.478" rotation="0.006 0.765 0.007 0.644"/>
+		<Point  coord="470.666 254.335 915.990" rotation="-0.012 0.920 -0.028 0.392"/>
 	</Path>
 
-	<Path Name = "LocoTudaPath">
-		<Point  coord="2313.086 255.750 2877.302" rotation="0.000 0.135 0.000 0.991"/>
-		<Point  coord="2320.708 255.750 2905.853" rotation="0.000 0.135 0.000 0.991"/>
-		<Point  coord="2331.876 255.750 2946.406" rotation="0.000 0.113 0.000 0.994"/>
-		<Point  coord="2341.564 255.750 2986.034" rotation="0.000 0.113 0.000 0.994"/>
-		<Point  coord="2346.180 255.000 3003.439" rotation="0.0000 0.1132 0.0000 0.9936"/>
+	<!-- Пути для катеров ОЛ -->
+	<Path Name = "FGPath1">
+		<Point  coord="399.800 249.295 886.087" rotation="0.0000 -0.9829 0.0000 -0.1844"/>
+		<Point  coord="96.003 249.295 744.443" rotation="0.0000 -0.9829 0.0000 -0.1844"/>
 	</Path>
 
+	<Path Name = "FGPath2">
+		<Point  coord="346.558 248.346 940.394" rotation="0.0000 0.9344 0.0000 0.3563"/>
+		<Point  coord="119.283 248.346 770.254" rotation="0.0000 0.9344 0.0000 0.3563"/>
+	</Path>
+
+<!-- КАМПАНИЯ ЗА АДЕПТОВ -->
+	<!-- Неудачная засада на ОЛ -->
+	<Path Name = "Zasada1Path">
+		<Point  coord="2003.867 267.684 1605.729" rotation="-0.033 0.908 -0.074 0.411"/>
+		<Point  coord="1920.094 267.684 1614.957" rotation="0.027 0.938 -0.076 -0.337"/>
+	</Path>
+
+	<!-- Опустевшая Сосновка -->
+	<Path Name = "Zasada2Path">
+		<Point  coord="477.946 258.909 800.604" rotation="-0.018 0.162 -0.003 0.987"/>
+		<Point  coord="511.834 258.909 840.857" rotation="-0.009 0.639 -0.008 0.769"/>
+	</Path>
+
+	<!-- Едем на завод, где поймали Серафиму -->
+	<Path Name = "SeraTortPath1">
+		<Point  coord="10.000 4.000 -20.000" />
+		<Point  coord="10.000 5.000 0.000" />
+	</Path>
+
+	<Path Name = "SeraTortPath2">
+		<Point  coord="-5 3 25" />
+		<Point  coord="-5 3 15" />
+	</Path>
+
+	<!-- Нападаем на Чугуевку -->
+	<Path Name = "BurnVil1Path">
+		<Point  coord="715.870 270.390 2535.161" rotation="-0.072 0.565 -0.049 0.820"/>
+		<Point  coord="703.138 267.995 2540.028" rotation="-0.072 0.565 -0.049 0.820"/>
+	</Path>
+
+	<!-- Нападаем на Рязанское -->
+	<Path Name = "BurnVil2Path">
+		<Point  coord="2639.793 325.972 1311.384" rotation="-0.093 -0.761 0.111 0.633"/>
+		<Point  coord="2638.606 325.972 1247.916" rotation="-0.098 -0.678 0.092 0.722"/>
+	</Path>
+
+	<!-- Топим корабль с мирными жителями -->
+	<Path Name = "SinkTheShipPath">
+		<Point  coord="188.250 256.323 692.700" rotation="-0.031 0.311 -0.010 0.950"/>
+		<Point  coord="187.610 256.252 693.575" rotation="-0.031 0.311 -0.010 0.950"/>
+	</Path>
+
+	<!-- Путь тонущего коробля -->
+	<Path Name = "PotopPath">
+		<Point  coord="88.858 228.141 774.987" rotation="0.1092 0.8838 -0.3300 0.3131"/>
+	</Path>
+
+	<!-- Из Гор Мудрецов по секретному тоннелю, едем в Лабиринт -->
 	<Path Name = "ETLLRolikCam1">
 		<Point  coord="2488.487 285.852 2768.272" rotation="-0.075 0.506 -0.044 0.858"/>
 		<Point  coord="2487.171 283.045 2849.604" rotation="-0.086 0.716 -0.090 0.687"/>
@@ -359,4 +365,20 @@
 		<Point  coord="5.000 5.000 11.000" />
 	</Path>
 
+	<!-- Пути для поезда -->
+	<Path Name = "LocoSudaPath">
+		<Point  coord="2341.564 255.750 2986.034" rotation="0.000 0.113 0.000 0.994"/>
+		<Point  coord="2331.876 255.750 2946.406" rotation="0.000 0.113 0.000 0.994"/>
+		<Point  coord="2320.708 255.750 2905.853" rotation="0.000 0.135 0.000 0.991"/>
+		<Point  coord="2313.086 255.750 2877.302" rotation="0.000 0.135 0.000 0.991"/>
+		<Point  coord="2304.984 255.750 2849.864" rotation="0.0000 0.1500 0.0000 0.9887"/>
+	</Path>
+
+	<Path Name = "LocoTudaPath">
+		<Point  coord="2313.086 255.750 2877.302" rotation="0.000 0.135 0.000 0.991"/>
+		<Point  coord="2320.708 255.750 2905.853" rotation="0.000 0.135 0.000 0.991"/>
+		<Point  coord="2331.876 255.750 2946.406" rotation="0.000 0.113 0.000 0.994"/>
+		<Point  coord="2341.564 255.750 2986.034" rotation="0.000 0.113 0.000 0.994"/>
+		<Point  coord="2346.180 255.000 3003.439" rotation="0.0000 0.1132 0.0000 0.9936"/>
+	</Path>
 </Paths>

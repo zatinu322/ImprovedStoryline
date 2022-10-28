@@ -14,7 +14,7 @@
 			TActivate("cinWentOracleDef_FadeIn")
 			TActivate("cinWentOracleDef_End")
 
-		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 5, 1, 1, GetPlayerVehicle():GetId(), nil, 1)
+			FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 5, 1, 1, GetPlayerVehicle():GetId(), nil, 1)
 			StartCinematic()
 
 			trigger:Deactivate()
@@ -87,7 +87,7 @@
 
 			TActivate("cinTurnOracleDef_End")
 
-		    FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 5, 0, 1, GetPlayerVehicle():GetId(), nil, 1)
+			FlyLinked( "OralceDef_Path1", GetPlayerVehicle():GetId(), 5, 0, 1, GetPlayerVehicle():GetId(), nil, 1)
 			StartCinematic()
 
 			if GetPlayerVehicle() then
@@ -486,8 +486,8 @@
 					AddCinematicMessage(11, 0.25)
 				else
 					Fly("WentFactory_TurnAround", CINEMATIC_NO_AIM, nil, 9, 1,0)
-	  				Fly("WentFactory_TurnAround2", CINEMATIC_NO_AIM, nil, 8, 0,1)
-	  				StartCinematic()
+					Fly("WentFactory_TurnAround2", CINEMATIC_NO_AIM, nil, 8, 0,1)
+					StartCinematic()
 
 					TActivate("trExcahgeVehFirst")
 					TActivate("trPlLeaveFactyOnScout")

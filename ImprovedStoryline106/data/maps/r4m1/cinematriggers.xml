@@ -392,7 +392,7 @@
 			SetVar("PlSpeed",GetPlayerVehicle():GetMaxSpeed())
 			SetVar("PlCrSpeed",GetPlayerVehicle():GetCruisingSpeed())
 
-            Fly("EngineerCamPath1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.3, 1,0)
+			Fly("EngineerCamPath1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.3, 1,0)
 			Fly("EngineerCamPath2", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7, 0, 1)
 			StartCinematic()
 
@@ -723,7 +723,7 @@
 		</script>
 	</trigger>
 
-	<!-- Альфаран убили Бухарцев на кладбище кораблей. -->
+	<!-- Альфаран убили Бухарцев на кладбище кораблей -->
 	<trigger Name="BUHARACIN" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Buhara_loc" />
 		<script>
@@ -1049,7 +1049,7 @@
 			humSID = humS:GetId()
 			
 			Fly("Shlyapa_cam", CINEMATIC_NO_AIM, 0, 9, 1, 0)
-			Fly("Shlyapa_cam2", CINEMATIC_AIM_TO_ID, humSID, 17.5, 0, 1, nil, nil, true )
+			Fly("Shlyapa_cam2", CINEMATIC_AIM_TO_ID, humSID, 19, 0, 1, nil, nil, true )
 			StartCinematic()
 			
 			TActivate("HumanSkala_Fade")

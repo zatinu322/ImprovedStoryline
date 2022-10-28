@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
+	<!-- Осмотр машины Айвена -->
+	<Path Name = "FatherCar_Cam">
+		<Point  coord="1546.235 336.135 325.238" rotation="-0.197 -0.272 0.057 0.940"/>
+		<Point  coord="1571.781 336.135 329.583" rotation="-0.180 0.445 -0.092 0.872"/>
+	</Path>
+
+	<Path Name = "FatherCar_Cam2">
+		<Point  coord="1556.309 333.988 358.809" rotation="-0.003 0.994 -0.102 0.028"/>
+		<Point  coord="1557.189 337.071 373.671" rotation="-0.003 0.994 -0.102 0.028"/>
+	</Path>
+
+	<!-- Подъехали к базе безумцев -->
 	<Path Name = "NearBase">
 		<Point  coord="1916.104 327.118 1115.399" rotation="-0.030 -0.722 0.031 0.690"/>
 		<Point  coord="2004.453 359.134 1134.352" rotation="-0.089 -0.718 0.093 0.684"/>
 	</Path>
 
+	<!-- Серго вмешивается в битву с безумцами -->
 	<Path Name = "SavePlInBase1">
 		<Point  coord="2179.453 330.573 1054.697" rotation="-0.150 -0.341 0.055 0.926"/>
 		<Point  coord="2176.030 353.428 1043.912" rotation="-0.156 -0.382 0.065 0.909"/>
@@ -21,11 +34,27 @@
 		<Point  coord="2871.190 365.110 1494.992" rotation="-0.172 0.272 -0.049 0.946"/>
 	</Path>
 
+	<Path Name = "linkedcam1">
+		<Point  coord="0.000 1.000 0.000"/>
+	</Path>
+
 	<Path Name = "SavePlInBase5">
 		<Point  coord="3325.142 300.811 1838.625" rotation="-0.161 0.148 -0.024 0.975"/>
 		<Point  coord="3327.879 317.127 1830.346" rotation="-0.243 0.170 -0.043 0.954"/>
 	</Path>
 
+	<!-- Первый взгляд на упавшую тарелку -->
+	<Path Name = "NearTarelka1">
+		<Point  coord="2983.215 227.129 2377.472" rotation="-0.103 0.188 -0.020 0.977"/>
+		<Point  coord="2983.215 227.129 2377.472" rotation="0.102 0.482 0.057 0.868"/>
+	</Path>
+
+	<Path Name = "NearTarelka2">
+		<Point  coord="2907.291 227.474 2411.286" rotation="0.040 0.956 -0.155 -0.244"/>
+		<Point  coord="2946.170 232.564 2339.657" rotation="0.025 0.972 -0.125 -0.198"/>
+	</Path>
+
+	<!-- Подъехали слишком быстро к Тарелке. Тупиковая концовка. -->
 	<Path Name = "ToTarelka">
 		<Point  coord="2975.369 245.602 2284.166" rotation="-0.182 0.264 -0.051 0.946"/>
 		<Point  coord="2952.739 230.107 2320.297" rotation="-0.051 0.303 -0.016 0.952"/>
@@ -42,26 +71,9 @@
 		<Point  coord="2913.875 224.979 2375.140" rotation="-0.003 0.966 0.010 -0.257"/>
 	</Path>
 
-	<Path Name = "NearTarelka1">
-		<Point  coord="2983.215 227.129 2377.472" rotation="-0.103 0.188 -0.020 0.977"/>
-		<Point  coord="2983.215 227.129 2377.472" rotation="0.102 0.482 0.057 0.868"/>
-	</Path>
-
-	<Path Name = "NearTarelka2">
-		<Point  coord="2907.291 227.474 2411.286" rotation="0.040 0.956 -0.155 -0.244"/>
-		<Point  coord="2946.170 232.564 2339.657" rotation="0.025 0.972 -0.125 -0.198"/>
-	</Path>
-
-	<Path Name = "ending_cam1">
-		<Point  coord="3470.815 265.534 2434.719" rotation="0.060 0.602 0.045 0.795"/>
-		<Point  coord="3354.577 283.839 2467.049" rotation="0.062 0.599 0.047 0.797"/>
-		
-	</Path>
-
-	<Path Name = "ending_cam2">
-		<Point  coord="2897.913 198.811 2549.527" rotation="-0.011 0.986 0.076 -0.145"/>
-		<Point  coord="2942.563 224.849 2387.200" rotation="-0.008 0.991 0.067 -0.116"/>
-		<Point  coord="2950.713 232.287 2339.663" rotation="-0.003 0.992 0.027 -0.121"/>
+	<!-- Разговор Айвена и Серго, когда игрок уезжает -->
+	<Path Name = "linkedcam">
+		<Point  coord="0.000 1.000 0.000"/>
 	</Path>
 
 	<Path Name = "PlayerLeave_Cam">
@@ -69,22 +81,15 @@
 		<Point  coord="3246.418 315.697 2117.206" rotation="0.022 0.973 -0.105 -0.204"/>
 	</Path>
 
-	<Path Name = "FatherCar_Cam">
-		<Point  coord="1546.235 336.135 325.238" rotation="-0.197 -0.272 0.057 0.940"/>
-		<Point  coord="1571.781 336.135 329.583" rotation="-0.180 0.445 -0.092 0.872"/>
+	<!-- Привезли блокиратор Ньери к Повелителю -->
+	<Path Name = "ending_cam1">
+		<Point  coord="3470.815 265.534 2434.719" rotation="0.060 0.602 0.045 0.795"/>
+		<Point  coord="3354.577 283.839 2467.049" rotation="0.062 0.599 0.047 0.797"/>
 	</Path>
 
-	<Path Name = "FatherCar_Cam2">
-		<Point  coord="1556.309 333.988 358.809" rotation="-0.003 0.994 -0.102 0.028"/>
-		<Point  coord="1557.189 337.071 373.671" rotation="-0.003 0.994 -0.102 0.028"/>
+	<Path Name = "ending_cam2">
+		<Point  coord="2897.913 198.811 2549.527" rotation="-0.011 0.986 0.076 -0.145"/>
+		<Point  coord="2942.563 224.849 2387.200" rotation="-0.008 0.991 0.067 -0.116"/>
+		<Point  coord="2950.713 232.287 2339.663" rotation="-0.003 0.992 0.027 -0.121"/>
 	</Path>
-
-	<Path Name = "linkedcam">
-		<Point  coord="0.000 1.000 0.000"/>
-	</Path>
-
-	<Path Name = "linkedcam1">
-		<Point  coord="0.000 1.000 0.000"/>
-	</Path>
-
 </Paths>

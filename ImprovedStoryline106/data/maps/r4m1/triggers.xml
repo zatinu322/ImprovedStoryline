@@ -127,18 +127,17 @@
 				veh:SetRandomSkin()
 				veh:AttachTrailer("MolokovozTrailer")
 
-			   local nametr = veh:GetName().."_Trailer"
-			   local trailer = getObj(nametr)
+				local nametr = veh:GetName().."_Trailer"
+				local trailer = getObj(nametr)
 
-			   if trailer then
+				if trailer then
 					trailer:SetSkin(veh:GetSkin())
-				   local tr = getObj("trTrailerDie")
-				   if tr then
-				      tr:AddEvent("GE_OBJECT_DIE",nametr)
-					  println(nametr)
-			    	  TActivate("trTrailerDie")
-	   			   end
-			   end
+					local tr = getObj("trTrailerDie")
+					if tr then
+						tr:AddEvent("GE_OBJECT_DIE",nametr)
+						TActivate("trTrailerDie")
+	   				end
+				end
 			end
 			
 			TActivate("trGoToChangeVeh")

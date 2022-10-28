@@ -1440,7 +1440,7 @@
 			local CToch = GetEntityByName("CamTochka")
 			local CTochID = CToch:GetId()
 
-			FlyLinked(("Zasada_cam00"), GetPlayerVehicleId(), 19, 1, 0, GetPlayerVehicleId())
+			FlyLinked("Zasada_cam00", GetPlayerVehicleId(), 19, 1, 0, GetPlayerVehicleId())
 			FlyLinked( "Zasada_cam02", CTochID, 15, 0, 1, vehPID )
 			StartCinematic()
 
@@ -1780,7 +1780,6 @@
 			local CToch = GetEntityByName("CamTochka")
 			if CToch then CToch:Remove() end
 			
-			TDeactivate("RolikZasadaARFade")
 			TDeactivate("RolikZasadaARMusic")
 
 			trigger:Deactivate()
@@ -1856,7 +1855,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			FlyAround( 1, 0, 15, 8, PlfCoor, PlfID, 1, 1 )
+			FlyAround( 1, 0, 15, 9, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 			
 			AddCinematicMessage( 8809, 0.25 )
@@ -2735,19 +2734,22 @@
 	<!-- Ãמעמגטלסÿ ס ÒÑÏ מעבטעü Ïורע -->
 	<trigger Name="cinFightForPesht" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFightForPesht" />
+		<event eventid="GE_OBJECT_IN_LOCATION" ObjName="locFightForPesht" />
 		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			Fly("FightForPesht_cam", CINEMATIC_NO_AIM, 0, 23, 1, 1)
-			StartCinematic()
+			if leavingPesht == nil then
+				SaveAllToleranceStatus(RS_NEUTRAL)
+				
+				Fly("FightForPesht_cam", CINEMATIC_NO_AIM, 0, 23, 1, 1)
+				StartCinematic()
 
-			AddCinematicMessage( 8811, 1 )
-			AddCinematicMessage( 8807, 1 )
-			
-			TActivate("EndFightForPesht")
-			TActivate("cinFightForPeshtFade")
+				AddCinematicMessage( 8811, 1 )
+				AddCinematicMessage( 8807, 1 )
+				
+				TActivate("EndFightForPesht")
+				TActivate("cinFightForPeshtFade")
 
-			trigger:Deactivate()
+				trigger:Deactivate()
+			end
 		</script>
 	</trigger>
 
@@ -2757,7 +2759,8 @@
 			PlayCustomMusic("Passage03")
 
 			TeamCreate("ArmiaTSP",1010,CVector(4493.482, 237.003, 3382.276),{"BelazTSP", "TSPFighter", "tspfighter2"}, nil, nil, Quaternion(0.000, 0.730, 0.000, 0.684))
-			TeamCreate("ArmiaBrigada",1012,CVector(4299.682, 241.634, 3702.067),{"Cruiser01", "Cruiser02", "CoolBelaz", "r1m1_molokovoz02", "TSPFighter"}, nil, nil, Quaternion(0.003, 0.995, -0.011, 0.096))
+			TeamCreate("ArmiaBrigada",1044,CVector(4299.682, 241.634, 3702.067),{"Cruiser01", "CruiserBased", "CoolBelaz", "r1m1_molokovoz02", "TSPFighter"}, nil, nil, Quaternion(0.003, 0.995, -0.011, 0.096))
+
 			local TSPPos = {CVector(4493.482, 237.507, 3382.276), 
 							CVector(4492.263, 236.190, 3392.768), 
 							CVector(4491.775, 235.032, 3401.858)}
@@ -2808,7 +2811,11 @@
 			
 			TActivate("BrigadaIsDead")
 			
-			SetTolerance(1100,1012,RS_ENEMY)
+			SetTolerance(1100,1044,RS_ENEMY)
+			SetTolerance(1010,1044,RS_ENEMY)
+
+			local pesh = getObj("Pesht")
+			if pesh then pesh:SetBelong(1044) end
 
 			CompleteQuest("FightForPesht1")
 			
@@ -2872,11 +2879,10 @@
 				vehArmy3:Remove()
 			end
 
-			SetTolerance(1010,1012,RS_ENEMY)
-			SetTolerance(1100,1012,RS_NEUTRAL)
 			SetTolerance(1100,1010,RS_NEUTRAL)
 
-			getObj("Pesht"):SetBelong(1011)
+			local pesh = getObj("Pesht")
+			if pesh then pesh:SetBelong(1011) end
 
 			trigger:Deactivate()
 		</script>

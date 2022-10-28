@@ -500,7 +500,7 @@
 
 	<!-- Разговор Айвена и Серго, когда игрок уезжает -->
 	<trigger Name="SergoAivenTalk1" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
@@ -513,7 +513,7 @@
 			local vehP = GetPlayerVehicle()
 			local vehPID = vehP:GetId()
 			
-			FlyLinked( "linkedcam", CTochID, 11.5, 1, 0, vehPID )
+			FlyLinked( "linkedcam", CTochID, 11.5, 0, 0, vehPID )
 			Fly("PlayerLeave_Cam", CINEMATIC_NO_AIM, 0, 24.5, 0, 1 )
 			StartCinematic()
 			
@@ -564,6 +564,8 @@
 			StopPlayingCustomMusic()
 			
 			SetCameraBehindPlayerVehicle()
+
+			TakeQuest("r1m3_TW_OralceAboutAlien")
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then

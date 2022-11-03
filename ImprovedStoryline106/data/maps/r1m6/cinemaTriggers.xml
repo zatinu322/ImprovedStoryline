@@ -1162,8 +1162,7 @@
 				doz:SetRotation(Quaternion(0.001, 0.849, 0.002, -0.529))
 				doz:setGodMode(1)
 				doz:setImmortalMode(1)
-				doz:SetRandomSkin()
-				SetVar("DozerSkin", doz:GetSkin())
+				doz:SetSkin(7)
 			end
 			
 			TDeactivate("StationRolikCam2")
@@ -1370,16 +1369,10 @@
 			local doz = GetEntityByName("Dozz")
 			if doz then doz:Remove() end
 
-			local dozerSkin1 = GetVar("DozerSkin").AsInt
-
 			local doz2 = CreateVehicleEx("Traktor01","SeraDoz1", CVector(1454.789, 256.079, 2827.161), 1088)
 			if doz2 then 
 				doz2:SetRotation(Quaternion(0.002, -0.487, -0.001, -0.873))
-				if dozerSkin1 then
-					doz2:SetSkin(dozerSkin1)
-				else
-					doz2:SetRandomSkin()
-				end
+				doz2:SetSkin(7)
 			end
 
 			TeamCreate("SeraZas4",1089,CVector(2232.344, 256.921, 2302.172),{"AKF_Belaz2"}, nil, nil, Quaternion(0.014, -0.046, 0.021, -0.999))
@@ -1494,8 +1487,6 @@
 				vehPlayer:SetGamePositionOnGround( CVector(2080.780, 256.056, 1172.848))
 				vehPlayer:SetRotation(Quaternion(0.000, 0.985, 0.000, 0.172))
 			end
-
-			local dozerSkin1 = GetVar("DozerSkin").AsInt
 			
 			TeamCreate("OLArmy",1088,CVector(1852.092, 265.817, 640.742),{"Dozer02", "OL_Ural", "OL_Belaz"})
 
@@ -1504,7 +1495,7 @@
 				ol1:SetGamePositionOnGround( CVector(2093.398, 256.062, 1138.520))
 				ol1:SetRotation(Quaternion(-0.000, 0.183, 0.000, -0.983))
 				ol1:setImmortalMode(1)
-				ol1:SetSkin(dozerSkin1)
+				ol1:SetSkin(7)
 			end
 
 			local ol2 = GetEntityByName("OLArmy_vehicle_1")
@@ -1624,6 +1615,8 @@
 			SetTolerance(1100,1088,RS_ALLY)
 
 			if getObj("Esting") then getObj("Esting"):SetBelong(1088) end
+
+			CreateNewDummyObject("flagshtock", "SowthFlag", -1, -1, CVector(2250.493, 269.836, 713.001), Quaternion(0.0000, 0.6724, 0.0000, 0.7402), 7)
 			
 			trigger:Deactivate()
 		</script>
@@ -1694,8 +1687,10 @@
 			
 			local vehStar = CreateVehicleEx("LisaCar","StarostaDEAD",CVector(1751.921, 357.166, 2365.494), 1042)
 			if vehStar then
+				vehStar:SetCustomLinearVelocity(0)
 				vehStar:SetPosition( CVector(1751.921, 357.165, 2365.494))
 				vehStar:SetRotation(Quaternion(-0.003, -0.652, 0.021, 0.758))
+				vehStar:SetCustomLinearVelocity(0)
 				vehStar:SetSkin(2)
 			end
 			
@@ -1747,8 +1742,6 @@
 				vehPlayer:SetGamePositionOnGround( CVector(1595.477, 348.739, 2091.567))
 				vehPlayer:SetRotation(Quaternion(0.011, -0.718, 0.030, -0.695))
 			end
-
-			local dozerSkin1 = GetVar("DozerSkin").AsInt
 			
 			TeamCreate("OLArmy1",1088,CVector(1852.092, 265.817, 640.742),{"Dozer02", "OL_Belaz", "OL_Ural"})
 
@@ -1757,7 +1750,7 @@
 				ol1:SetGamePositionOnGround( CVector(1557.541, 348.406, 2092.805))
 				ol1:SetRotation(Quaternion(0.009, -0.718, -0.024, -0.696))
 				ol1:setImmortalMode(1)
-				ol1:SetSkin(dozerSkin1)
+				ol1:SetSkin(7)
 			end
 
 			local ol2 = GetEntityByName("OLArmy1_vehicle_1")
@@ -1783,10 +1776,14 @@
 			
 			local vehStar = GetEntityByName("StarostaDEAD")
 			if vehStar then
+				vehStar:SetCustomLinearVelocity(0)
+				vehStar:SetPosition( CVector(1751.921, 357.165, 2365.494))
+				vehStar:SetRotation(Quaternion(-0.003, -0.652, 0.021, 0.758))
 				vehStar:TakeOffAllGuns()
 				vehStar:SetExternalPathByName("StarostaFinalPath")
 				vehStar:SetCruisingSpeed(20)
 				vehStar:SetCustomLinearVelocity(20)
+				vehStar:SetNewPart("CABIN_BIG_GUN_1", "flagshtock01")
 			end
 
 			trigger:Deactivate()

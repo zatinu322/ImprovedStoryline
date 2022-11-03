@@ -695,6 +695,9 @@
 			
 			TActivate("TANKIBATTLECINEND")
 
+			CompleteQuest("KillTankistov")
+			CompleteQuestIfTaken("r4m1_FRP_HelpKef")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -712,10 +715,6 @@
 			TActivate("BUHARAFIRE")
 			TActivate("BUHARACIN")
 			TActivate("trBuhArmy")
-			
-			CompleteQuest("KillTankistov")
-			
-			CompleteQuestIfTaken("r4m1_FRP_HelpKef")
 			
 			TakeQuest("r4m1_FPR_MeetWithOldMan")
 

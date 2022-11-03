@@ -8054,14 +8054,6 @@
 		NodeScale="0.970" />
 
 	<Object
-		Name="dub3_r2561"
-		Belong="-1"
-		Prototype="Breakable_dub3_r2"
-		Pos="1900.877 376.939 3294.703"
-		Rot="0.000 -0.523 0.000 0.853"
-		NodeScale="1.180" />
-
-	<Object
 		Name="dub3_r2562"
 		Belong="-1"
 		Prototype="Breakable_dub3_r2"

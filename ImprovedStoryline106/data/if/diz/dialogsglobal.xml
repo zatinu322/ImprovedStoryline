@@ -4090,7 +4090,7 @@
 		name="Dlg_pl_002029"
 		text="Отправляюсь немедленно."
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m2_TwoMagicThing'); TActivate('trWentToFactory'); TActivate('OracleVrataClose'); GetCurNpc():SetSpokenCount(1); SpawnArtefacts(); EndConversation()" />
+		scriptResult="TakeQuest('r3m2_TwoMagicThing'); TActivate('trWentToFactory'); TActivate('OracleVrataClose'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
 	<Reply
 		name="r3m2_Oracle_Oracle_2_N01"
@@ -5016,7 +5016,7 @@
 		name="r3m1_NearUluk_Civilian1_1_P041"
 		text="Я помогу им. Пусть и тебе сопутствует удача! Прощай."
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m1_RescueUlukCivil'); CreateTeam('RescueCars',1064,CVector(getPos('RescueCiv_loc')),{'DemoMolokovoz1','r1m1_bug02'}); TActivate('trRescArmyPlace'); TActivate('trRescArmyDie'); TActivate('trWentCivCamp'); SetTolerance(1100,1064,RS_ALLY); SetTolerance(1019,1064,RS_ALLY); GetCurNpc():SetSpokenCount(1); SetVar('BezhenAlive', 0); EndConversation();" />
+		scriptResult="TakeQuest('r3m1_RescueUlukCivil'); TActivate('trRescArmyPlace'); TActivate('trRescArmyDie'); TActivate('trWentCivCamp'); SetTolerance(1100,1064,RS_ALLY); SetTolerance(1019,1064,RS_ALLY); GetCurNpc():SetSpokenCount(1); SetVar('BezhenAlive', 0); EndConversation();" />
 
 	<Reply
 		name="Set_Bar_Customer1_2_N01"
@@ -5450,7 +5450,7 @@
 		name="Dlg_pl_001256"
 		text="Дело ясное, что дело темное."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_OldDvigatel2_Quest');  RemoveQuestItem('quest_old_digital'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_old_digital');  GetCurNpc():SetSpokenCount( 2 );  EndConversation()" />
+		scriptResult="CompleteQuest('r2m2_OldDvigatel2_Quest');  RemoveQuestItem('quest_old_digital'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_old_digital'); GetCurNpc():SetSpokenCount( 2 ); getObj('TrashFarmer'):SetSpokenCount(2);  EndConversation()" />
 
 	<Reply
 		name="TrashFarmer_hellodlg2"
@@ -10905,7 +10905,7 @@
 		text="Вот деньги."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() >= 10000"
-		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  CompleteQuest( 'd_MoveToPesht_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  AddPlayerMoney( -10000 );  GetCurNpc():SetSpokenCount( 1 );  TActivate('BASEATTACK'); TDeactivate('trQuickWay'); getObj('Pesht'):SetBelong(1012);  EndConversation()" />
+		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  CompleteQuest( 'd_MoveToPesht_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  AddPlayerMoney( -10000 );  GetCurNpc():SetSpokenCount( 1 );  TActivate('BASEATTACK'); TDeactivate('trQuickWay'); TActivate('trPeshtCapture'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001774"
@@ -10955,7 +10955,7 @@
 		name="Dlg_pl_dd2203"
 		text="Фу-у-у... Обошлось."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  TActivate('BASEATTACK');  AddPlayerMoney( -10000 ); TDeactivate('trQuickWay'); getObj('Pesht'):SetBelong(1012);  EndConversation()" />
+		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest');  CompleteQuest( 'd_GiveMoneyToBase_Quest');  TActivate('BASEATTACK');  AddPlayerMoney( -10000 ); TDeactivate('trQuickWay'); TActivate('trPeshtCapture'); EndConversation()" />
 
 	<Reply
 		name="BaseGuardian_hellodlg2"

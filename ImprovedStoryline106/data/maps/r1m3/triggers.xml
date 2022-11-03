@@ -284,6 +284,22 @@
 		</script>
 	</trigger>
 
+	<!-- Захват Пешта Бригадой -->
+	
+	<trigger Name="trPeshtCapture" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local town = getObj('Pesht')
+			if town then town:SetBelong(1012) end
+
+			CreateNewDummyObject("flagshtock", "PeshtFlag1", -1, -1, CVector(4201.842, 254.859, 3690.678), Quaternion(0, 0, 0, 1), 0)
+			CreateNewDummyObject("flagshtock", "PeshtFlag2", -1, -1, CVector(3927.617, 252.409, 3701.034), Quaternion(0, 0, 0, 1), 0)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
 	<!-- Игрок платит и проезжает по мосту -->
 	<trigger Name="BASEATTACK" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD"/>

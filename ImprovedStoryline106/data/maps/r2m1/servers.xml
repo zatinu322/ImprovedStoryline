@@ -2351,6 +2351,10 @@
 		<Item
 			id="light_dots_brocken2"
 			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="flagshtock"
+			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 
 	<StaticModelsServer />

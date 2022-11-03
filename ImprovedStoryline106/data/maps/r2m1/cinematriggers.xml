@@ -176,11 +176,10 @@
 			Plf:SetThrottle( 0 )
 			Plf:SetCustomControlEnabled( false )
 
-			FlyLinked("Nezn_cam01", PlfID, 15, 1, 1, vehNeznID)
+			FlyLinked("Nezn_cam01", PlfID, 11, 1, 1, vehNeznID)
 			StartCinematic()
 
 			AddCinematicMessage( 11, 1 )
-			AddCinematicMessage( 12, 0.1 )
 
 			TActivate("RolikEnd_FIRSTATTACK")
 			TActivate("trFIRSTATTACK_PathOut")
@@ -708,9 +707,26 @@
 			local towns = {"TheDoubtful", "TheVill2", "TheVill1", "TheUnderAttaks", "TheTuzz", "TheGelvetcia"}
 			local len = getn(towns)
 
+			local FlagPos = {CVector(6404.290, 305.196, 3107.355),
+							 CVector(3902.071, 306.566, 2507.156), 
+							 CVector(3037.489, 238.204, 3449.532), 
+							 CVector(3994.093, 322.728, 1362.927), 
+							 CVector(2717.923, 318.747, 1878.692), 
+							 CVector(6570.422, 343.023, 6980.425)
+							}
+
+			local FlagRot = {Quaternion(0.0000, 0.8829, 0.0000, 0.4695), 
+							 Quaternion(0.0000, 0.6494, 0.0000, 0.7604), 
+							 Quaternion(0.0000, 0.1607, 0.0000, 0.9870), 
+							 Quaternion(0.0000, 0.9035, 0.0000, 0.4285), 
+							 Quaternion(0.0000, 0.7431, 0.0000, -0.6691), 
+							 Quaternion(0,0,0,1)
+							}
+
 			for i = 1,len do
 				println("Setting belong 1083 to "..towns[i])
 				if getObj(towns[i]) then getObj(towns[i]):SetBelong(1083) end
+				CreateNewDummyObject("flagshtock", "R2M1Flag"..i, -1, -1, FlagPos, FlagRot, 4)
 			end
 			
 			TActivate("LISAMOVETOGELVFROMR2M2")
@@ -1164,7 +1180,7 @@
 
 			PlayCustomMusic("IntenseDialogue02")
 
-			RuleConsole("cinematic_spring_coeff 5.7")
+			RuleConsole("cinematic_spring_coeff 9")
 
 			local vehLisa = CreateVehicleEx("LisaCar","vehLisa_0",CVector(0, 2000, 0), 1042)
 			local vehLisaID = vehLisa:GetId()

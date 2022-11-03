@@ -54,9 +54,27 @@
 			if QuestStatus("r2m2_MoveToZeonToAlex")==Q_COMPLETED then
 				local towns = {"TheDoubtful", "TheVill2", "TheVill1", "TheUnderAttaks", "TheTuzz", "TheGelvetcia"}
 				local len = getn(towns)
+
+				local FlagPos = {CVector(6404.290, 305.196, 3107.355),
+								 CVector(3902.071, 306.566, 2507.156), 
+								 CVector(3037.489, 238.204, 3449.532), 
+								 CVector(3994.093, 322.728, 1362.927), 
+								 CVector(2717.923, 318.747, 1878.692), 
+								 CVector(6570.422, 343.023, 6980.425)
+								}
+
+				local FlagRot = {Quaternion(0.0000, 0.8829, 0.0000, 0.4695), 
+								 Quaternion(0.0000, 0.6494, 0.0000, 0.7604), 
+								 Quaternion(0.0000, 0.1607, 0.0000, 0.9870), 
+								 Quaternion(0.0000, 0.9035, 0.0000, 0.4285), 
+								 Quaternion(0.0000, 0.7431, 0.0000, -0.6691), 
+								 Quaternion(0,0,0,1)
+								}
+
 				for i = 1,len do
 					println("Setting belong 1015 to "..towns[i])
 					if getObj(towns[i]) then getObj(towns[i]):SetBelong(1015) end
+					CreateNewDummyObject("flagshtock", "R2M1Flag"..i, -1, -1, FlagPos[i], FlagRot[i], 6)
 				end
 
 				trigger:Deactivate()
@@ -794,6 +812,8 @@
 
 			CompleteQuest("r2m1_ArtAntipod_Quest")
 
+			ShowCircleOnMinimapByName("GulikCar")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1109,6 +1129,20 @@
 			TDeactivate( "RolikExitToMap31" )
 
 			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+	<trigger Name="trTEST" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			LogObjHeight(6404.290, 3107.355, 16.196, "flag")
+			LogObjHeight(3037.489, 3449.532, 16.204, "flag")
+			LogObjHeight(3994.093, 1362.927, 16.728, "flag")
+			LogObjHeight(3902.071, 2507.156, 16.906, "flag")
+			LogObjHeight(2717.923, 1878.692, 16.762, "flag")
+			LogObjHeight(6570.422, 6980.425, 67.690, "flag")
 
 			trigger:Deactivate()
 		</script>

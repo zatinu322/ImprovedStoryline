@@ -63,6 +63,7 @@
 		
 			if QuestStatus("FinalBattle_Quest")==Q_COMPLETED then
 				if getObj("GranicaVillage") then getObj("GranicaVillage"):SetBelong(1083) end
+				CreateNewDummyObject("flagshtock", "GranicaFlag", -1, -1, CVector(1463.337, 296.518, 3759.289), Quaternion(0.0000, -0.1370, 0.0000, 0.9906), 4)
 				trigger:Deactivate()
 			end
 					
@@ -470,19 +471,36 @@
 			SetTolerance(1100, 1043, RS_ALLY)
 			SetTolerance(1100, 1015, RS_ALLY)
 
+			towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
+
+			FlagPos = {CVector(1831.119, 346.501, 3265.784),
+					   CVector(2204.475, 278.896, 2101.200), 
+					   CVector(1516.154, 267.260, 1570.668), 
+					   CVector(1734.877, 331.826, 767.725), 
+					   CVector(2279.645, 284.110, 1495.910)
+					   }
+
+			FlagRot = {Quaternion(0.0000, 0.1305, 0.0000, 0.9914), 
+					   Quaternion(0.0000, 0.1045, 0.0000, 0.9945), 
+					   Quaternion(0.0000, 0.8192, 0.0000, 0.5736), 
+					   Quaternion(0.0000, 0.9162, 0.0000, 0.4007), 
+					   Quaternion(0.0000, -0.7674, 0.0000, 0.6411)
+					   }
+
 			if QuestStatus("d_GetAkselBandit_Quest")==Q_COMPLETED then
 				SetTolerance(1100, 1016, RS_ALLY)
 				belong = 1016
-				towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
-
+				flag_skin = 5
+				
 			elseif QuestStatus("r2m2_MoveToZeonToAlex")==Q_COMPLETED then
 				belong = 1015
 				towns = {"GranicaVillage"}
 				SetTolerance(1100, 1016, RS_ALLY)
+				CreateNewDummyObject("flagshtock", "GranicaFlag", -1, -1, CVector(1463.337, 296.518, 3759.289), Quaternion(0.0000, -0.1370, 0.0000, 0.9906), 6)
 
 			elseif QuestStatus("Eretik_Quest")==Q_COMPLETED then
 				belong = 1083
-				towns = {"Marezzia", "Toskana", "ZnakiVillage", "Zeon", "NewVillage"}
+				flag_skin = 4
 				TActivate("ChangeGranicaVillageBelong")
 			end
 
@@ -490,10 +508,16 @@
 			for i = 1, len do
 				println("Setting belong "..belong.." to "..towns[i])
 				if getObj(towns[i]) then getObj(towns[i]):SetBelong(belong) end
+				if belong ~= 1015 then
+					CreateNewDummyObject("flagshtock", "R2M2Flag"..i, -1, -1, FlagPos[i], FlagRot[i], flag_skin)
+				end
 			end
 
 			belong = nil
 			towns = nil
+			flag_skin = nil
+			FlagPos = nil
+			FlagRot = nil
 			
 			trigger:Deactivate()
 		</script>
@@ -755,6 +779,20 @@
 			TDeactivate( "RolikExitToMap21" )
 
 			SetCameraBehindPlayerVehicle()
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+	<trigger Name="trTEST" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			
+			LogObjHeight(1463.337, 3759.289, 16.271, "flag")
+			LogObjHeight(1831.119, 3265.784, 30.225, "flag")
+			LogObjHeight(2204.475, 2101.200, 15.553, "flag")
+			LogObjHeight(1516.154, 1570.668, 16.195, "flag")
+			LogObjHeight(2279.645, 1495.910, 17.347, "flag")
+			LogObjHeight(1734.877, 767.725, 69.826, "flag")
 
 			trigger:Deactivate()
 		</script>

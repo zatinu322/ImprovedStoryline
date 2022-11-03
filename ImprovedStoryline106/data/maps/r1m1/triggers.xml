@@ -707,6 +707,8 @@
 				end
 			end
 
+			CreateNewDummyObject("flagshtock", "SowthFlag", -1, -1, CVector(1250.813, 324.939, 2934.909), Quaternion(0.0000, -0.6659, 0.0000, 0.7461), 8)
+
 			local town = GetEntityByName("TheTown")
 			if town then town:SetProperty("Belong", 1035) end
 

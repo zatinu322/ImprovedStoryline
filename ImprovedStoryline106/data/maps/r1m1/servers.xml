@@ -9,6 +9,7 @@
 		<Item
 			id="box"
 			file="data\models\AnimModels.xml" />
+
 		<Item
 			id="cub"
 			file="data\models\AnimModels.xml" />
@@ -2256,6 +2257,10 @@
 
 		<Item
 			id="deadtree4"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="flagshtock"
 			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 

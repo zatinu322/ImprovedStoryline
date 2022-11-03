@@ -20,6 +20,8 @@
 			CreateNewDummyObject( "big_stone4", "kamexp3", -1, -1, CVector(2057.401, 261.000, 3551.166), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
 			CreateNewDummyObject( "big_stone2", "kamexp4", -1, -1, CVector(2070.257, 260.000, 3555.813), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
 
+			CreateNewDummyObject("flagshtock", "StorageFlag", -1, -1, CVector(828.723, 324.875, 2605.772), Quaternion(0.0000, 0.9594, 0.0000, -0.2819), 2)
+
 			local i=1
 			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","bumblebee01"}
 			local len = getn(gunlist)

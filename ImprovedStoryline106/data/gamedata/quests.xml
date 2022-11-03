@@ -2170,7 +2170,6 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="r2m1_ArtAntipod_Quest"
 		OnFail='TDeactivate("Trigger_Antipod_Die")'
-		OnTake='ShowCircleOnMinimapByName("GulikCar")'
 		Levels="r2m1" />
 <!--Root/r2m1/Опциональные/Вернуть картину-->
 	<quest

@@ -6,7 +6,6 @@
 		<script>
 			SetVar("Serafima", 0)
 			SetVar("Starosta", 0)
-			SetVar("DozerSkin", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 			
 			CreateNewDummyObject( "agro_gate", "vorota", -1, -1, CVector(458.534, 255.420, 1763.684), Quaternion(0.0000, -0.5948, 0.0000, 0.8039), 0)
@@ -85,9 +84,7 @@
 		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 
-			RuleConsole("g_postEffect cinematic02")	
-			RuleConsole("g_postEffect cinematic03")
-			RuleConsole("g_postEffect cinematic05")
+			RuleConsole("g_postEffect DamageStatic")
 
 			for dot = 1,9 do
 				local d = GetEntityByName("dot0"..dot)

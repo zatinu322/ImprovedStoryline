@@ -822,14 +822,15 @@
 			
 			SetTolerance(1100, 1084, RS_ALLY)
 			SetTolerance(1100, 1085, RS_ENEMY)
-
-			getObj("StorageVil"):SetBelong(1010)
 			
 			AddHistory( "r5_SkladTSP" )
 			AddFadingMsgId( "fm_history_got" )
 
 			local sklad = getObj("StorageVil")
 			if sklad then sklad:SetBelong(1010) end
+
+			local stFlag = getObj("StorageFlag")
+			if stFlag then stFlag:SetSkin(3) end
 			
 			TActivate("RolikOdezhdaBegin")
 

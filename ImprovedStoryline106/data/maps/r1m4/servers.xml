@@ -2256,6 +2256,10 @@
 			id="heavy_dot4"
 			file="data\models\AnimModels.xml" />
 
+		<Item
+			id="flagshtock"
+			file="data\models\AnimModels.xml" />
+
 	</AnimatedModelsServer>
 
 	<StaticModelsServer />

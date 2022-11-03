@@ -208,6 +208,8 @@
 
 			CompleteQuest("r3m2_TwoMagicThing_Factory")
 
+			SpawnArtefacts()
+
 			TActivate("cinWentToFactory")
 			TActivate("trGetThing1")
 			TActivate("trGetThing2")

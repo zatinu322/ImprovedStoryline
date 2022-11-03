@@ -1237,7 +1237,15 @@
 			TakeQuest("r3m1_GoToOracle")
 
 			SetVar("OracleQuickWay",1)
+
+			SetTolerance(1100, 1020, RS_ALLY)
+			SetTolerance(1100, 1019, RS_ALLY)
+
+			CreateNewDummyObject("flagshtock", "TheSetFlag1", -1, -1, CVector(1524.083, 321.837, 2653.771), Quaternion(0.0000, -0.1629, 0.0000, 0.9866), 9)
 			
+			local town = getObj("TheSet")
+			if town then town:SetBelong(1020) end
+		
 			PassToMap("r3m2", "FromR3M1", -1 , true)
 			
 			FailQuestIfTaken("r3m1_LureMainDriud")

@@ -1628,7 +1628,7 @@
 				Prototype="NPC"
 				ModelName="r1_man"
 				skin="2"
-				cfg="138"
+				cfg="186"
 				helloReplyNames="OilMineWorker_hellodlg0"
 				SpokenCount="0" />
 

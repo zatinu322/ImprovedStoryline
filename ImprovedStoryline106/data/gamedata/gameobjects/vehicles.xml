@@ -2191,8 +2191,8 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		<Parts>
 			<Part id = "CABIN"			Prototype = "dozerCab01" />
 			<Part id = "BASKET"		Prototype = "dozerCargo01" />
-			<Part id = "CABIN_SMALL_GUN"	Prototype = "kpvt01" />
-			<Part id = "BASKET_BIG_GUN_0"	Prototype = "octopus01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "flagshtock01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "vector01" />
 		</Parts>
 	</Prototype>
 

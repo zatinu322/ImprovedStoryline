@@ -433,7 +433,7 @@ function SetGameTime( h, m )
 
 end
 
-function LogObjHeight(x, z, objName, y)
+function LogObjHeight(x, z, y, objName)
 
 	if objName == nil then
 		objName = "Object name missing"

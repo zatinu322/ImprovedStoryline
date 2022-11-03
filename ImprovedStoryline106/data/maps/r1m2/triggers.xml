@@ -42,8 +42,12 @@
 	<trigger Name="trCaravanToPorto" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateVehicleEx("r1m3_CaravanMolokovoz01","KARAVANPORTO_vehicle_0", CVector(4340.774, 260, 881.814), 1009)
-			if GetEntityByName("KARAVANPORTO_vehicle_0") then GetEntityByName("KARAVANPORTO_vehicle_0"):SetRandomSkin() end
+			local midCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANPORTO_vehicle_0", CVector(4307.946, 128.224, 875.151), 1009, Quaternion(-0.004, 0.718, -0.001, 0.696))
+			if midCar then 
+				midCar:SetRandomSkin()
+				midCar:AttachTrailer("MolokovozTrailer")
+				PaintTrailer(midCar)
+			 end
 
 			SetTolerance(1100,1009,RS_ALLY)
 
@@ -123,8 +127,12 @@
 				GetEntityByName("KARAVANPORTO_vehicle_0"):Remove()
 			end
 
-			CreateVehicleEx("r1m3_CaravanMolokovoz02","KARAVANMIDGARD_vehicle_0", CVector(6797.209, 260, 6501.624), 1009)
-			if kskin and GetEntityByName("KARAVANMIDGARD_vehicle_0") then GetEntityByName("KARAVANMIDGARD_vehicle_0"):SetSkin(kskin) end
+			local midCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANMIDGARD_vehicle_0", CVector(6810.901, 46.480, 6499.924), 1009, Quaternion(-0.095, 0.995, -0.002, 0.025))
+			if kskin and midCar then 
+				midCar:SetSkin(kskin)
+				midCar:AttachTrailer("MolokovozTrailer")
+				PaintTrailer(midCar)
+			end
 			kskin = nil
 
 			TakeQuest("d_CaravanToMidgardBen_Quest")

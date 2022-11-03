@@ -1075,6 +1075,7 @@
 			if IsQuestComplete( "Zachisti2_Quest" ) then
 				SetTolerance( 1100, 1012, RS_ALLY )
 				getObj("TheBase"):SetBelong(1010)
+				CreateNewDummyObject("flagshtock", "TheBaseFlag1", -1, -1, CVector(7180.591, 342.786, 941.166), Quaternion(0.0000, 0.5574, 0.0000, 0.8303), 3)
 			end
 
 			SetCameraBehindPlayerVehicle()
@@ -2883,6 +2884,11 @@
 
 			local pesh = getObj("Pesht")
 			if pesh then pesh:SetBelong(1011) end
+
+			for flag = 1,2 do
+				local pflag = getObj("PeshtFlag"..flag)
+				if pflag then pflag:SetSkin(1) end
+			end
 
 			trigger:Deactivate()
 		</script>

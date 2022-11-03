@@ -1989,6 +1989,10 @@
 		<Item
 			id="lamppost2_broken"
 			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="flagshtock"
+			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 
 

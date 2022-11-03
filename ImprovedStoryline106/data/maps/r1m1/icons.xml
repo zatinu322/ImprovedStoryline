@@ -8,7 +8,6 @@
 	<Item id="TheGloohoe_House"		file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"	file1=""/>
 	<Item id="TheOilVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 	<Item id="TheContraVillage_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheFreedom_Bar"		file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
-	<Item id="IeriAirplaine_loc"		file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
+	<Item id="TheFreedom_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 
 </icons>

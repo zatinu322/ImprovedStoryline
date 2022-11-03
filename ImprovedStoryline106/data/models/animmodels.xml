@@ -19101,4 +19101,18 @@
 		windwavy="0"
 		trans="0" />
 
+		<model
+		id="flagshtock"
+		file="data\models\flags\flag_big.gam"
+		shadow="1"
+		windwavy="0"
+		trans="0" />
+
+	<model
+		id="flagshtock_small"
+		file="data\models\flags\flag_small.gam"
+		shadow="1"
+		windwavy="0"
+		trans="0" />
+
 </AnimatedModels>

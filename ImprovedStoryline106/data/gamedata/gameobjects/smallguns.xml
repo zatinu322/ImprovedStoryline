@@ -40,6 +40,40 @@ $Id: SmallGuns.xml,v 1.57 2005/11/17 06:42:59 anton Exp $
 	/>
 
 	<Prototype
+		Class			= "TurboAccelerationPusher"
+		Name			= "flagshtock01"
+		ModelFile		= "flagshtock_small"
+		ResourceType		= "TANK_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes		= "false"
+		BulletPrototype		= "turbo"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage			= "0"
+		FiringRate		= "10"
+		GroupingAngle		= "1.0"
+		FiringRange		= "0"
+		RecoilForce		= "2"		
+
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia = "false"
+		Price			= "1"
+		
+		ChargeSize     		= "1"
+		RechargingTime 		= "10"
+
+		Durability		= "20" 
+		
+		ShellsPoolSize		= "1"
+		WithShellsPoolLimit	= "true"
+		
+		AccelerationValue	= "1"
+		AccelerationTime	= "0.1"
+		FiringType		= "Turbo"
+	/>
+
+	<Prototype
 		Class			= "LocationPusher"
 		Name			= "engineOilPusher"
 		ModelFile		= "MasloRazliF"

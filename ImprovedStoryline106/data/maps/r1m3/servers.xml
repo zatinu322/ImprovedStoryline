@@ -2525,6 +2525,10 @@
 		<Item
 			id="cerkov"
 			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="flagshtock"
+			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 
 	<StaticModelsServer />

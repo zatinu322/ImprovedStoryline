@@ -521,10 +521,21 @@
 			FlyAround(0.5, 0, 25, 10, PlfCoor, PlfID, 1, 1 )
 			StartCinematic()
 
+			TActivate("prebattlecin_Fade")
 			TActivate("prebattlecin_end")
 
 			AddCinematicMessage( 159, 3 )
 
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="prebattlecin_Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			TeamCreate("SNGLeaders",1016,CVector(3898.739, 289.628, 2562.902),{"CoolBelaz", "Ural00", "Cruiser02", "Hunter01", "Scout01"}, nil, nil, Quaternion(-0.010, -0.378, 0.009, 0.926))
+			TeamCreate("Antimilit",1083,CVector(3797.348, 278.264, 2653.156),{"r1m1_molokovoz02", "Ural00", "r1m2_hunter02", "Molokovoz02", "Odett_hunter"}, nil, nil, Quaternion(-0.001, -0.980, -0.001, -0.198))
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -536,10 +547,6 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
-
-			TeamCreate("SNGLeaders",1016,CVector(3898.739, 289.628, 2562.902),{"CoolBelaz", "Ural00", "Cruiser02", "Hunter01", "Scout01"})
-			
-			TeamCreate("Antimilit",1083,CVector(3797.348, 278.264, 2653.156),{"r1m1_molokovoz02", "Ural00", "r1m2_hunter02", "Molokovoz02", "Odett_hunter"})
 			
 			local vehOdett = GetEntityByName("Antimilit_vehicle_4")
 			if vehOdett then

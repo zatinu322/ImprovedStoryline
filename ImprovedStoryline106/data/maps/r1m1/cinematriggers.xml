@@ -3007,6 +3007,10 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			-- скрываем машины ИП, если вдруг они забаговались и тусят возле Гугулино
+			SetTolerance(1100, 1003, RS_ENEMY)
+			ShowHostileVehicles(false)
 			
 			PlayCustomMusic("QuietDialogue05")
 
@@ -3274,6 +3278,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
 
+			ShowHostileVehicles(true)
+
 			RestoreAllToleranceStatus()
 		
 			SpawnMessageBox( "5976" )
@@ -3291,6 +3297,8 @@
 	<trigger Name="GoodEndSkip" active="0">
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			ShowHostileVehicles(true)
 
 			RestoreAllToleranceStatus()
 		

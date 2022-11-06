@@ -5,6 +5,10 @@
 		FullName="ОЛЬМ" />
 
 	<Object
+		Name="TheOlme_Administration"
+		FullName="Администрация" />
+
+	<Object
 		Name="Olme_Bar"
 		FullName="На окраине" />
 

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <icons>
 
-	<Item id="BotanicHouse"			file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"		file1=""/>
-	<Item id="FirstLisaLoc"			file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
-	<Item id="TheOilVillageQ2"		file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
-	<Item id="TheTown_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheGloohoe_House"		file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"	file1=""/>
+	<Item id="BotanicHouse"				file="data\if\ico\TalkWithNpcDlg\housedialog1.dds"		file1=""/>
+	<Item id="FirstLisaLoc"				file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
+	<Item id="TheOilVillageQ2"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
+	<Item id="TheTown_Bar"				file="data\if\ico\TalkWithNpcDlg\bardialog1_4.dds"		file1=""/>
+	<Item id="TheGloohoe_House"			file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"	file1=""/>
+	<Item id="TheGloohoeVillage_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1_5.dds"	file1=""/>
 	<Item id="TheOilVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheContraVillage_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheFreedom_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheContraVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1_2.dds"		file1=""/>
+	<Item id="TheFreedom_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_3.dds"		file1=""/>
+	<Item id="Sosnovka_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_3.dds"		file1=""/>
+	<Item id="Lukoil_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_2.dds"		file1=""/>
+	<Item id="Svalka_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="Ruin_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_4.dds"		file1=""/>
+	<Item id="Kolhoz_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_5.dds"		file1=""/>
 
 </icons>

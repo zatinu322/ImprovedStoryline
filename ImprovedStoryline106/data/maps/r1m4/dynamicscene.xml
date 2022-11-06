@@ -29,6 +29,21 @@
 		PointOfViewInInterface="-27.436 79.601 -219.687"
 		CaravansDest="">
 		<Object
+			Name="TheOlme_Administration"
+			Belong="1010"
+			Prototype="barWithoutBarman">
+			<Object
+				Name="Olme_Bar_Customer2"
+				Belong="1010"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="2"
+				cfg="188"
+				helloReplyNames="Olme_Bar_Customer2_1_N01 Olme_Bar_Customer2_2_N01"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
 			Name="Olme_Bar"
 			Belong="1010"
 			Prototype="bar">
@@ -49,16 +64,6 @@
 				ModelName="r1_man"
 				cfg="54"
 				helloReplyNames="Olme_Bar_Customer1_1_N01"
-				SpokenCount="0" />
-
-			<Object
-				Name="Olme_Bar_Customer2"
-				Belong="1010"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="2"
-				cfg="188"
-				helloReplyNames="Olme_Bar_Customer2_1_N01 Olme_Bar_Customer2_2_N01"
 				SpokenCount="0" />
 
 			<Object

@@ -7,14 +7,15 @@
 	<Item id="TheCircus"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
 	<Item id="TheLibrary"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
 	<Item id="TheTrap"			file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
-	<Item id="TheBase_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheBanditOilMine_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="TheBase_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_4.dds"		file1=""/>
+	<Item id="TheBanditOilMine_Bar"	file="data\if\ico\TalkWithNpcDlg\oilderrickdialog1.dds"		file1=""/>
 	<Item id="TheVozleMinin_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheShahts_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="Mer_House"			file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds"	file1=""/>
+	<Item id="TheShahts_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1_3.dds"		file1=""/>
+	<Item id="Mer_House"			file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"	file1=""/>
 	<Item id="TheForgotten_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="Minin_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="Pesht_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="Asgard_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
+	<Item id="Minin_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_2.dds"		file1=""/>
+	<Item id="Pesht_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_4.dds"		file1=""/>
+	<Item id="Asgard_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1_2.dds"		file1=""/>
+	<Item id="ExplosiveShop"			file="data\if\ico\TalkWithNpcDlg\shopdialog1.dds"		file1=""/>
 
 </icons>

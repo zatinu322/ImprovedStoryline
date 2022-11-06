@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <icons>
 
-   <Item id="Olme_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
-   <Item id="FVOnOcean_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
+   <Item id="Olme_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1_4.dds" file1=""/>
+   <Item id="TheOlme_Administration"	file="data\if\ico\TalkWithNpcDlg\officedialog3.dds" file1=""/>
+   <Item id="FVOnOcean_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1_5.dds" file1=""/>
    <Item id="FVNearOlme_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
-   <Item id="FVCalis_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
-   <Item id="FVCordan_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
-   <Item id="FVPerch_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
+   <Item id="FVCalis_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1_5.dds" file1=""/>
+   <Item id="FVCordan_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1_2.dds" file1=""/>
+   <Item id="FVPerch_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1_3.dds" file1=""/>
    <Item id="FVBerko_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog1.dds" file1=""/>
-   <Item id="StorageVilBar"	file="data\if\ico\TalkWithNpcDlg\Dialog_Bar.dds" file1=""/>
+   <Item id="StorageVilBar"	file="data\if\ico\TalkWithNpcDlg\storagedialog1.dds" file1=""/>
 
-   <Item id="FVPerch_Houses"	file="data\if\ico\TalkWithNpcDlg\fatherhousedialog1.dds" file1=""/>
+   <Item id="FVPerch_Houses"	file="data\if\ico\TalkWithNpcDlg\housedialog1.dds" file1=""/>
    <Item id="AfterWinterFisher_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog1.dds" file1=""/>
    <Item id="HomerRyba_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog2.dds" file1=""/>
    <Item id="FilimonLoc"	file="data\if\ico\TalkWithNpcDlg\cardialog1.dds" file1=""/>

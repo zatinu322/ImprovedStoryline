@@ -646,8 +646,7 @@
 
 			PlayCustomMusic("Battle02")
 
-			Fly("cam01", CINEMATIC_NO_AIM, 0, 5, 1, 1 )
-			StartCinematic()
+			r1m1_FirstEnemyStart()
 
 			TActivate("trZasada1_StopPl")
 			TActivate("trZasada1_end")
@@ -660,17 +659,8 @@
 	<trigger	Name="trZasada1_cam01"	active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			CreateVehicleEx("Sml101","FirstB_0",CVector(2888.161, 346.333, 2342.007), 1002)
-
-			local FVehicle = GetEntityByName("FirstB_0")
-			if FVehicle then
-				FVehicle:SetRandomSkin()
-				FVehicle:SetRotation(Quaternion(0.021, 0.472, 0.040, 0.880))
-				FVehicle:SetThrottle( 1 )
-				FVehicle:SetCustomLinearVelocity( 25 )
-				FVehicle:SetExternalPathByName("fun1_5road")
-				FVehicle:setGodMode(1)
-			end
+			
+			r1m1_FirstEnemySpawn()
 
 			trigger:Deactivate()    
 		</script>

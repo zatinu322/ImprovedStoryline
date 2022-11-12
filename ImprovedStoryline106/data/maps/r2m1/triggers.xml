@@ -500,9 +500,21 @@
 		<script>
 
 			TActivate("PARISTUBEREMOVE")
+			TDeactivate("trBoss02Trap")
 
 			local a = GetEntityByName("ToR3M1")
 			if a then a:SetProperty("Active",1) end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBoss02Trap" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Boss02Trap_Loc" />
+		<script>
+			SpawnMessageBox("8809")
+
+			ShowDeathMenu()
 
 			trigger:Deactivate()
 		</script>

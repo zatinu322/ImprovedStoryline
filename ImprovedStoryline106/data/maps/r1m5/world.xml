@@ -2,7 +2,7 @@
 <World
 	name="Object612"
 	class="SgNode"
-	LastId="20405">
+	LastId="20437">
 	<Node
 		name="Object1"
 		class="SgAnimatedModelNode"
@@ -8422,7 +8422,7 @@
 	<Node
 		name="Object1400"
 		class="SgAnimatedModelNode"
-		org="1858.158 0.000 369.323"
+		org="1858.158 0.070 369.323"
 		orgRel="1"
 		rot="0.0000 -0.3726 0.0000 0.9280"
 		id="metal_plate1"

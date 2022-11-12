@@ -242,6 +242,15 @@
 			cfg="92"
 			helloReplyNames="WorkGiver_hellodlg2"
 			SpokenCount="0" />
+
+		<Object
+			Name="AivenGo"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="mask_father"
+			skin="1"
+			helloReplyNames="Dlg_npc_003106"
+			SpokenCount="0" />
 	</Object>
 
 	<Object
@@ -374,15 +383,6 @@
 				skin="4"
 				cfg="94"
 				helloReplyNames="Dlg_npc_003264"
-				SpokenCount="0" />
-
-			<Object
-				Name="AivenGo"
-				Belong="1008"
-				Prototype="NPC"
-				ModelName="mask_father"
-				skin="1"
-				helloReplyNames="Dlg_npc_003106"
 				SpokenCount="0" />
 		</Object>
 

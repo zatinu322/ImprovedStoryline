@@ -2045,65 +2045,35 @@
 
 		<!-- Engines --> 
 
-		<Item id="S_ENGINE_BEETLE_1_LOW" />
 		<Item id="S_ENGINE_BEETLE_1_HIGH" />
-		<Item id="S_ENGINE_BEETLE_2_LOW" />
 		<Item id="S_ENGINE_BEETLE_2_HIGH" />
-		<Item id="S_ENGINE_BEETLE_3_LOW" />
 		<Item id="S_ENGINE_BEETLE_3_HIGH" />
 
-		<Item id="S_ENGINE_MOLOKO_1_LOW" />
 		<Item id="S_ENGINE_MOLOKO_1_HIGH" />
-		<Item id="S_ENGINE_MOLOKO_2_LOW" />
 		<Item id="S_ENGINE_MOLOKO_2_HIGH" />
-		<Item id="S_ENGINE_MOLOKO_3_LOW" />
 		<Item id="S_ENGINE_MOLOKO_3_HIGH" />
 
-		<Item id="S_ENGINE_URAL_1_LOW" />
 		<Item id="S_ENGINE_URAL_1_HIGH" />
-		<Item id="S_ENGINE_URAL_2_LOW" />
 		<Item id="S_ENGINE_URAL_2_HIGH" />
-		<Item id="S_ENGINE_URAL_3_LOW" />
 		<Item id="S_ENGINE_URAL_3_HIGH" />
-		<Item id="S_ENGINE_URAL_4_LOW" />
 		<Item id="S_ENGINE_URAL_4_HIGH" />
-		<Item id="S_ENGINE_URAL_5_LOW" />
 		<Item id="S_ENGINE_URAL_5_HIGH" />
-		<Item id="S_ENGINE_BELAZ_1_LOW" />
 		<Item id="S_ENGINE_BELAZ_1_HIGH" />
-		<Item id="S_ENGINE_BELAZ_2_LOW" />
 		<Item id="S_ENGINE_BELAZ_2_HIGH" />
-		<Item id="S_ENGINE_BELAZ_3_LOW" />
 		<Item id="S_ENGINE_BELAZ_3_HIGH" />
-		<Item id="S_ENGINE_BELAZ_4_LOW" />
 		<Item id="S_ENGINE_BELAZ_4_HIGH" />
-		<Item id="S_ENGINE_BELAZ_5_LOW" />
 		<Item id="S_ENGINE_BELAZ_5_HIGH" />
 
-		<Item id="S_BELAZ_ENGINE_LOW" />
-		<Item id="S_BELAZ_ENGINE_HIGH" />
-
-
 		<Item id="S_ENGINE_MIR_1_HIGH" />
-		<Item id="S_ENGINE_MIR_1_LOW" />
 		<Item id="S_ENGINE_MIR_2_HIGH" />
-		<Item id="S_ENGINE_MIR_2_LOW" />
 		<Item id="S_ENGINE_MIR_3_HIGH" />
-		<Item id="S_ENGINE_MIR_3_LOW" />
 		<Item id="S_ENGINE_MIR_4_HIGH" />
-		<Item id="S_ENGINE_MIR_4_LOW" />
 		<Item id="S_ENGINE_MIR_5_HIGH" />
-		<Item id="S_ENGINE_MIR_5_LOW" />
 		<Item id="S_ENGINE_SMALL_1_HIGH" />
-		<Item id="S_ENGINE_SMALL_1_LOW" />
 		<Item id="S_ENGINE_SCOUT_1_HIGH" />
-		<Item id="S_ENGINE_SCOUT_1_LOW" />
 		<Item id="S_ENGINE_FIGHTER_1_HIGH" />
-		<Item id="S_ENGINE_FIGHTER_1_LOW" />
 		<Item id="S_ENGINE_HUNTER_1_HIGH" />
-		<Item id="S_ENGINE_HUNTER_1_LOW" />
 		<Item id="S_ENGINE_CRUISER_1_HIGH" />
-		<Item id="S_ENGINE_CRUISER_1_LOW" />
 
 		<!-- Missiles --> 
 
@@ -2223,18 +2193,6 @@
 
 		<!-- Starting -->
 
-		<Item id="S_STARTING01" />
-		<Item id="S_STARTING02" />
-		<Item id="S_STARTING03" />
-		<Item id="S_STARTING04" />
-		<Item id="S_STARTING05" />
-		<Item id="S_STARTING06" />
-		<Item id="S_STARTING07" />
-		<Item id="S_STARTING08" />
-		<Item id="S_STARTING09" />
-		<Item id="S_SOMESHOT" />
-		<Item id="S_SHELL_SMALL" />
-		<Item id="S_SHELL_MEDIUM" />
 		<Item id="S_MISSILE_FLAME" />
 		<Item id="S_HORNET_TAIL" />
 		<Item id="S_STATIC07" />

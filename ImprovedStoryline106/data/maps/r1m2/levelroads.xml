@@ -20900,18 +20900,8 @@
 		name="RoadNode1186893868"
 		roadset="road_highway"
 		skinNumber="1"
-		FwdZLink="RoadNode1200450724"
 		BackZLink="RoadNode1186893596"
 		org="2921.037 0.000 5941.164"
-		ModelNum="0" />
-
-	<RoadNode
-		class="RoadNode"
-		name="RoadNode1200450724"
-		roadset="road_highway"
-		skinNumber="1"
-		BackZLink="RoadNode1186893868"
-		org="2898.724 0.000 5941.781"
 		ModelNum="0" />
 
 	<RoadNode

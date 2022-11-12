@@ -24509,26 +24509,4 @@
 		scale="1.608 1.608 1.608"
 		id="arena_barricade1"
 		ndmAction="0" />
-
-	<Node
-		name="ET_S_RAIN"
-		class="SgNode"
-		org="1853.390 297.205 1139.573"
-		orgRel="0">
-		<Node
-			name="noise"
-			class="SgSoundSourceNode"
-			id="S_RAIN" />
-	</Node>
-
-	<Node
-		name="ET_S_RAIN"
-		class="SgNode"
-		org="3041.387 329.330 2835.770"
-		orgRel="0">
-		<Node
-			name="noise"
-			class="SgSoundSourceNode"
-			id="S_RAIN" />
-	</Node>
 </World>

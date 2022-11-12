@@ -2,7 +2,7 @@
 <World
 	name="Object16"
 	class="SgNode"
-	LastId="76473844">
+	LastId="76473958">
 	<Node
 		name="Object12"
 		class="SgAnimatedModelNode"
@@ -9357,46 +9357,49 @@
 	<Node
 		name="Object6464"
 		class="SgAnimatedModelNode"
-		org="2937.895 0.000 1929.976"
+		org="2937.750 1.602 1930.283"
 		orgRel="1"
-		rot="-0.0062 0.1412 -0.0432 0.9890"
+		rot="-0.0013 0.1413 -0.0087 0.9899"
+		scale="1.574 1.574 1.574"
 		id="metal_plate2"
 		ndmAction="0" />
 
 	<Node
 		name="Object6465"
 		class="SgAnimatedModelNode"
-		org="2936.277 0.000 1923.423"
+		org="2936.277 1.508 1923.423"
 		orgRel="1"
-		rot="0.0000 0.1067 0.0000 0.9943"
-		scale="1.149 1.149 1.149"
+		rot="0.0000 0.0719 0.0000 0.9974"
+		scale="1.641 1.641 1.641"
 		id="metal_plate2"
 		ndmAction="0" />
 
 	<Node
 		name="Object6466"
 		class="SgAnimatedModelNode"
-		org="2939.276 0.000 1942.727"
+		org="2938.828 1.952 1943.307"
 		orgRel="1"
-		rot="0.0000 0.0000 0.0850 0.9964"
+		rot="-0.0247 0.0551 0.0146 0.9981"
+		scale="1.516 1.516 1.516"
 		id="metal_plate2"
 		ndmAction="0" />
 
 	<Node
 		name="Object6467"
 		class="SgAnimatedModelNode"
-		org="2938.198 0.000 1936.491"
+		org="2938.375 2.368 1936.767"
 		orgRel="1"
 		rot="0.0000 0.0000 -0.0219 0.9998"
+		scale="1.373 1.373 1.373"
 		id="metal_plate2"
 		ndmAction="0" />
 
 	<Node
 		name="Object6468"
 		class="SgAnimatedModelNode"
-		org="2935.728 0.000 1904.322"
+		org="2935.728 1.836 1904.322"
 		orgRel="1"
-		scale="1.149 1.149 1.149"
+		scale="1.737 1.737 1.737"
 		id="metal_plate2"
 		ndmAction="0" />
 
@@ -9476,7 +9479,7 @@
 	<Node
 		name="Object6479"
 		class="SgAnimatedModelNode"
-		org="2934.674 3.424 1908.044"
+		org="2935.997 3.424 1908.151"
 		orgRel="1"
 		rot="-0.7284 0.0000 0.0000 0.6852"
 		scale="1.104 1.104 1.104"
@@ -9486,10 +9489,9 @@
 	<Node
 		name="Object6480"
 		class="SgAnimatedModelNode"
-		org="2938.995 2.469 1946.140"
+		org="2939.123 3.496 1946.478"
 		orgRel="1"
-		rot="-0.6943 0.0212 -0.0220 0.7190"
-		scale="0.724 0.724 0.724"
+		rot="-0.6938 0.0197 0.0216 0.7195"
 		id="metal_tube1"
 		ndmAction="0" />
 
@@ -9816,19 +9818,19 @@
 	<Node
 		name="Object6879"
 		class="SgAnimatedModelNode"
-		org="3034.766 0.000 1812.081"
+		org="3035.079 1.674 1812.978"
 		orgRel="1"
-		rot="0.0000 0.6978 0.0000 0.7163"
-		scale="1.149 1.149 1.149"
+		rot="-0.0176 0.6721 -0.0194 0.7400"
+		scale="1.544 1.544 1.544"
 		id="metal_plate2"
 		ndmAction="0" />
 
 	<Node
 		name="Object6880"
 		class="SgAnimatedModelNode"
-		org="3044.260 3.128 1811.829"
+		org="3044.093 3.128 1812.800"
 		orgRel="1"
-		rot="0.0000 0.7341 0.6788 0.0192"
+		rot="0.0142 0.7144 0.6996 0.0063"
 		id="metal_plate3"
 		ndmAction="0" />
 
@@ -9854,19 +9856,20 @@
 	<Node
 		name="Object6883"
 		class="SgAnimatedModelNode"
-		org="3060.468 0.000 1810.587"
+		org="3060.434 2.040 1810.433"
 		orgRel="1"
-		rot="-0.0346 0.7913 -0.0266 0.6099"
+		rot="0.0069 0.7920 0.0054 0.6104"
+		scale="1.400 1.400 1.400"
 		id="metal_plate2"
 		ndmAction="0" />
 
 	<Node
 		name="Object6884"
 		class="SgAnimatedModelNode"
-		org="3053.874 0.000 1812.033"
+		org="3053.703 1.589 1811.745"
 		orgRel="1"
 		rot="0.0000 0.7702 0.0000 0.6378"
-		scale="1.149 1.149 1.149"
+		scale="1.641 1.641 1.641"
 		id="metal_plate2"
 		ndmAction="0" />
 
@@ -14184,9 +14187,9 @@
 	<Node
 		name="Object8367"
 		class="SgAnimatedModelNode"
-		org="835.004 1.481 3309.450"
+		org="836.649 1.481 3308.716"
 		orgRel="1"
-		rot="-0.2179 0.7375 0.1710 0.6159"
+		rot="-0.4260 0.5725 0.4091 0.5687"
 		id="metal_plate3"
 		ndmAction="0" />
 
@@ -14227,9 +14230,9 @@
 	<Node
 		name="Object8374"
 		class="SgAnimatedModelNode"
-		org="831.914 0.974 3314.738"
+		org="831.125 0.974 3314.225"
 		orgRel="1"
-		rot="0.0000 0.0000 -0.4067 0.9135"
+		rot="-0.0758 0.1929 -0.3670 0.9068"
 		scale="0.554 0.554 0.554"
 		id="metal_plate3"
 		ndmAction="0" />
@@ -14287,7 +14290,7 @@
 		class="SgAnimatedModelNode"
 		org="800.044 1.705 3324.869"
 		orgRel="1"
-		rot="0.0500 0.1493 -0.9012 -0.4038"
+		rot="-0.1156 -0.0154 -0.8851 -0.4506"
 		id="metal_plate3"
 		ndmAction="0" />
 
@@ -14305,7 +14308,7 @@
 		class="SgAnimatedModelNode"
 		org="786.389 1.324 3317.476"
 		orgRel="1"
-		rot="-0.2585 0.3826 0.1124 0.8799"
+		rot="-0.3803 0.3629 0.1653 0.8345"
 		scale="0.483 0.483 0.483"
 		id="metal_plate3"
 		ndmAction="0" />
@@ -14315,7 +14318,7 @@
 		class="SgAnimatedModelNode"
 		org="787.505 0.720 3318.954"
 		orgRel="1"
-		rot="0.3096 0.4584 -0.1006 0.8270"
+		rot="0.4578 0.3635 -0.1960 0.7873"
 		scale="0.483 0.483 0.483"
 		id="metal_plate3"
 		ndmAction="0" />
@@ -14485,7 +14488,7 @@
 	<Node
 		name="Object8506"
 		class="SgAnimatedModelNode"
-		org="830.911 0.000 3311.845"
+		org="830.571 0.000 3311.121"
 		orgRel="1"
 		rot="0.0000 0.9100 0.0000 -0.4147"
 		scale="0.850 0.850 0.850"
@@ -15513,4 +15516,58 @@
 		id="r2_crag_copped_8"
 		ndmAction="0"
 		skin="1" />
+
+	<Node
+		name="Object76473898"
+		class="SgAnimatedModelNode"
+		org="2936.761 3.364 1927.216"
+		orgRel="1"
+		rot="-0.4846 0.5151 0.4889 0.5107"
+		id="metal_tube1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76473899"
+		class="SgAnimatedModelNode"
+		org="2938.627 3.265 1933.774"
+		orgRel="1"
+		rot="-0.5052 0.4943 0.4836 0.5163"
+		id="metal_tube1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76473900"
+		class="SgAnimatedModelNode"
+		org="2938.593 3.232 1939.960"
+		orgRel="1"
+		rot="0.7009 0.0000 0.0000 0.7133"
+		id="metal_tube1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76473901"
+		class="SgAnimatedModelNode"
+		org="3031.937 3.914 1812.568"
+		orgRel="1"
+		rot="-0.7239 0.0000 0.0000 0.6899"
+		id="metal_tube1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76473902"
+		class="SgAnimatedModelNode"
+		org="3063.418 3.467 1809.614"
+		orgRel="1"
+		rot="-0.7102 0.0000 0.0000 0.7040"
+		id="metal_tube1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76473903"
+		class="SgAnimatedModelNode"
+		org="3057.329 3.515 1811.335"
+		orgRel="1"
+		rot="-0.7117 0.0000 0.0000 0.7025"
+		id="metal_tube1"
+		ndmAction="0" />
 </World>

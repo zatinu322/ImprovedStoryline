@@ -3,7 +3,8 @@
 
 	<Item id="Monastery_Cell"		file="data\if\ico\TalkWithNpcDlg\castledialog1.dds"		file1=""/>
 	<Item id="Marezzia_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
-	<Item id="Zeon_CentralHouse"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="Marezzia_Shtab"			file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"		file1=""/>
+	<Item id="Zeon_CentralHouse"		file="data\if\ico\TalkWithNpcDlg\bunkerdialog1.dds"		file1=""/>
 	<Item id="Toskana_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
 	<Item id="GranicaVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
 	<Item id="ZnakiVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>

@@ -306,6 +306,8 @@
 			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
 			GetPlayerVehicle():SetThrottle( 0 )
 
+			SetTolerance(1100, 1022, RS_ENEMY)
+
 			EnableGodMode()
 
 			PlayCustomMusic("Techno01")

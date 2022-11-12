@@ -111,20 +111,8 @@
 <!-- Engines -->
 
 	<model
-		id="S_ENGINE_BEETLE_1_LOW"
-		file="data\sounds\Driving\Motors\beetle1_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_BEETLE_1_HIGH"
 		file="data\sounds\Driving\Motors\beetle1_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_BEETLE_2_LOW"
-		file="data\sounds\Driving\Motors\beetle2_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -135,22 +123,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_BEETLE_3_LOW"
-		file="data\sounds\Driving\Motors\beetle3_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_BEETLE_3_HIGH"
 		file="data\sounds\Driving\Motors\beetle3_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-
-
-	<model
-		id="S_ENGINE_MOLOKO_1_LOW"
-		file="data\sounds\Driving\Motors\milk1_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -161,34 +135,14 @@
 		/>
 
 	<model
-		id="S_ENGINE_MOLOKO_2_LOW"
-		file="data\sounds\Driving\Motors\milk2_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_MOLOKO_2_HIGH"
 		file="data\sounds\Driving\Motors\milk2_engine_noise_high.wav"
 		group="ENGINE"
 		/>
 
 	<model
-		id="S_ENGINE_MOLOKO_3_LOW"
-		file="data\sounds\Driving\Motors\milk3_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_MOLOKO_3_HIGH"
 		file="data\sounds\Driving\Motors\milk3_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-
-
-	<model
-		id="S_ENGINE_URAL_1_LOW"
-		file="data\sounds\Driving\Motors\ural1_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -199,20 +153,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_URAL_2_LOW"
-		file="data\sounds\Driving\Motors\ural2_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_URAL_2_HIGH"
 		file="data\sounds\Driving\Motors\ural2_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_URAL_3_LOW"
-		file="data\sounds\Driving\Motors\ural3_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -223,20 +165,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_URAL_4_LOW"
-		file="data\sounds\Driving\Motors\ural4_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_URAL_4_HIGH"
 		file="data\sounds\Driving\Motors\ural4_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_URAL_5_LOW"
-		file="data\sounds\Driving\Motors\ural5_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -247,20 +177,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_BELAZ_1_LOW"
-		file="data\sounds\Driving\Motors\belaz1_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_BELAZ_1_HIGH"
 		file="data\sounds\Driving\Motors\belaz1_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_BELAZ_2_LOW"
-		file="data\sounds\Driving\Motors\belaz2_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -271,32 +189,14 @@
 		/>
 
 	<model
-		id="S_ENGINE_BELAZ_3_LOW"
-		file="data\sounds\Driving\Motors\belaz3_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_BELAZ_3_HIGH"
 		file="data\sounds\Driving\Motors\belaz3_engine_noise_high.wav"
 		group="ENGINE"
 		/>
 
 	<model
-		id="S_ENGINE_BELAZ_4_LOW"
-		file="data\sounds\Driving\Motors\belaz4_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_BELAZ_4_HIGH"
 		file="data\sounds\Driving\Motors\belaz4_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_BELAZ_5_LOW"
-		file="data\sounds\Driving\Motors\belaz5_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -314,20 +214,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_MIR_1_LOW"
-		file="data\sounds\Driving\Motors\peacekeeper1_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_MIR_2_HIGH"
 		file="data\sounds\Driving\Motors\peacekeeper2_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_MIR_2_LOW"
-		file="data\sounds\Driving\Motors\peacekeeper2_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -338,20 +226,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_MIR_3_LOW"
-		file="data\sounds\Driving\Motors\peacekeeper3_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_MIR_4_HIGH"
 		file="data\sounds\Driving\Motors\peacekeeper4_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_MIR_4_LOW"
-		file="data\sounds\Driving\Motors\peacekeeper4_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -362,20 +238,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_MIR_5_LOW"
-		file="data\sounds\Driving\Motors\peacekeeper5_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_SMALL_1_HIGH"
 		file="data\sounds\Driving\Motors\small_engine_noise_high.wav"
-		group="ENGINE_1"
-		/>
-
-	<model
-		id="S_ENGINE_SMALL_1_LOW"
-		file="data\sounds\Driving\Motors\small_engine_noise_low.wav"
 		group="ENGINE_1"
 		/>
 
@@ -386,20 +250,8 @@
 		/>
 
 	<model
-		id="S_ENGINE_SCOUT_1_LOW"
-		file="data\sounds\Driving\Motors\scout_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_FIGHTER_1_HIGH"
 		file="data\sounds\Driving\Motors\fighter_engine_noise_high.wav"
-		group="ENGINE"
-		/>
-
-	<model
-		id="S_ENGINE_FIGHTER_1_LOW"
-		file="data\sounds\Driving\Motors\fighter_engine_noise_low.wav"
 		group="ENGINE"
 		/>
 
@@ -410,28 +262,18 @@
 		/>
 
 	<model
-		id="S_ENGINE_HUNTER_1_LOW"
-		file="data\sounds\Driving\Motors\hunter_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-
-	<model
 		id="S_ENGINE_CRUISER_1_HIGH"
 		file="data\sounds\Driving\Motors\cruiser_engine_noise_high.wav"
 		group="ENGINE"
 		/>
 
-	<model
-		id="S_ENGINE_CRUISER_1_LOW"
-		file="data\sounds\Driving\Motors\cruiser_engine_noise_low.wav"
-		group="ENGINE"
-		/>
-      <model
+    <model
 		id="S_ENGINE_TANK_HIGH"
 		file="data\sounds\Driving\Motors\tank_engine_noise_high.wav"
 		group="ENGINE"
 		/>
-      <model
+	
+    <model
 		id="S_ENGINE_FORMULA_1_HIGH"
 		file="data\sounds\Driving\Motors\formula_driving_high.wav"
 		group="ENGINE"
@@ -1271,78 +1113,7 @@
 		group="WEATHER"
 		/>
 
-<!-- Starting -->
-
-
-	<model
-		id="S_STARTING01"
-		file="data\sounds\Driving\Starting\starting01.wav"
-		/>
-
-	<model
-		id="S_STARTING02"
-		file="data\sounds\Driving\Starting\starting02.wav"
-		/>
-
-	<model
-		id="S_STARTING03"
-		file="data\sounds\Driving\Starting\starting03.wav"
-		/>
-
-	<model
-		id="S_STARTING04"
-		file="data\sounds\Driving\Starting\starting04.wav"
-		/>
-
-	<model
-		id="S_STARTING05"
-		file="data\sounds\Driving\Starting\starting05.wav"
-		/>
-
-	<model
-		id="S_STARTING06"
-		file="data\sounds\Driving\Starting\starting06.wav"
-		/>
-
-	<model
-		id="S_STARTING07"
-		file="data\sounds\Driving\Starting\starting07.wav"
-		/>
-
-	<model
-		id="S_STARTING08"
-		file="data\sounds\Driving\Starting\starting08.wav"
-		/>
-
-	<model
-		id="S_STARTING09"
-		file="data\sounds\Driving\Starting\starting09.wav"
-		/>
-
-	<model
-		id="S_BELAZ_ENGINE_LOW"
-		file="data\sounds\Driving\Motors\Truck10_low.wav"
-		/>
-
-	<model
-		id="S_BELAZ_ENGINE_HIGH"
-		file="data\sounds\Driving\Motors\Truck10_high.wav"
-		/>
-
-	<model
-		id="S_SOMESHOT"
-		file="data\sounds\effects\guns\eagleeye.wav"
-		/>
-
-	<model
-		id="S_SHELL_SMALL"
-		file="data\sounds\effects\Shells\shel_small.wav"
-		/>
-
-	<model
-		id="S_SHELL_MEDIUM"
-		file="data\sounds\effects\Shells\shel_medium.wav"
-		/>
+<!-- Some other stuff -->
 
 	<model
 		id="S_MISSILE_FLAME"

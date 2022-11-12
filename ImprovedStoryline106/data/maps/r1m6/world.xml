@@ -2,7 +2,7 @@
 <World
 	name="Object612"
 	class="SgNode"
-	LastId="92389509">
+	LastId="92389559">
 	<Node
 		name="Object92377492"
 		class="SgAnimatedModelNode"
@@ -71,9 +71,9 @@
 	<Node
 		name="Object92377512"
 		class="SgAnimatedModelNode"
-		org="501.654 -5.000 699.407"
+		org="502.421 -5.000 707.936"
 		orgRel="1"
-		rot="0.0000 -0.4848 0.0000 0.8746"
+		rot="0.0000 -0.8736 0.0000 0.4867"
 		scale="1.080 1.080 1.080"
 		id="big_crag_6"
 		ndmAction="0" />
@@ -29154,5 +29154,59 @@
 		orgRel="1"
 		rot="-0.0473 0.7729 -0.0386 0.6315"
 		id="fence_short1"
+		ndmAction="0" />
+
+	<Node
+		name="Object92389553"
+		class="SgAnimatedModelNode"
+		org="565.354 0.000 697.277"
+		orgRel="1"
+		rot="0.0000 -0.4598 0.0000 0.8880"
+		id="arena_barricade3"
+		ndmAction="0" />
+
+	<Node
+		name="Object92389554"
+		class="SgAnimatedModelNode"
+		org="525.542 0.000 667.418"
+		orgRel="1"
+		rot="0.0000 0.9952 0.0000 0.0980"
+		id="arena_barricade3"
+		ndmAction="0" />
+
+	<Node
+		name="Object92389555"
+		class="SgAnimatedModelNode"
+		org="573.418 0.000 725.903"
+		orgRel="1"
+		rot="-0.0642 0.8115 -0.0488 0.5788"
+		id="arena_barricade3"
+		ndmAction="0" />
+
+	<Node
+		name="Object92389556"
+		class="SgAnimatedModelNode"
+		org="509.374 -0.041 692.372"
+		orgRel="1"
+		rot="0.0017 0.6756 0.0014 0.7373"
+		id="arena_barricade3"
+		ndmAction="0" />
+
+	<Node
+		name="Object92389557"
+		class="SgAnimatedModelNode"
+		org="511.089 0.000 670.825"
+		orgRel="1"
+		rot="0.0000 0.2693 0.0000 0.9630"
+		id="arena_barricade4"
+		ndmAction="0" />
+
+	<Node
+		name="Object92389558"
+		class="SgAnimatedModelNode"
+		org="572.816 0.000 711.293"
+		orgRel="1"
+		rot="-0.1013 -0.8557 0.0111 0.5074"
+		id="arena_barricade4"
 		ndmAction="0" />
 </World>

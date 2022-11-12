@@ -1652,6 +1652,8 @@
 	<trigger Name="RolikBegin_OPARIS" active="0">
 		<event timeout="2" eventid="GE_TIME_PERIOD" />
 		<script>
+			SetTolerance(1100, 1018, RS_ENEMY)
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			RuleConsole("cinematic_spring_coeff 1.7")
@@ -1759,6 +1761,7 @@
 			TDeactivate("trOPARIS_cam03")
 
 			TActivate("RolikBegin_BOSSDIE")
+			TActivate("trBoss02Trap")
 
 			CompleteQuest( "d_MoveInParis_Quest" )
 
@@ -1791,6 +1794,7 @@
 
 			TActivate("RolikEnd_BOSSDIE")
 			TActivate("BOSSDIE_RolikFade")
+			TDeactivate("trBoss02Trap")
 
 			trigger:Deactivate()
 		</script>

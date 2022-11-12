@@ -8,6 +8,12 @@
 	<Item id="TheGelvetcia_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
 	<Item id="TheTuzz_Bar"			file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
 	<Item id="TheSel_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="TheGelvetcia_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="TheOldSibilla_Bar"			file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"		file1=""/>
+	<Item id="TheNewSibilla_Bar"			file="data\if\ico\TalkWithNpcDlg\officedialog2.dds"		file1=""/>
+	<Item id="TheTuzz_House"			file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"		file1=""/>
+	<Item id="TheGelvetcia_House"			file="data\if\ico\TalkWithNpcDlg\officedialog2.dds"		file1=""/>
+	<Item id="TheSel_House"			file="data\if\ico\TalkWithNpcDlg\powerstationdialog1.dds"		file1=""/>
 	<Item id="ShlyapaSecret_Loc"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
 
 </icons>

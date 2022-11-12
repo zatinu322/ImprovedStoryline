@@ -1480,6 +1480,65 @@
 			Rot="0.000 -0.292 0.000 0.956"
 			Radius="51.988" />
 
+		<Object
+			Name="heavy_dot3_vulcan9"
+			Belong="1019"
+			Prototype="heavy_dot3_vulcan"
+			Pos="1431.221 288.000 2636.763">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="heavy_dot3_vulcan9CANNON"
+					Belong="1008"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+	
+		<Object
+			Name="heavy_dot2_vector10"
+			Belong="1019"
+			Prototype="heavy_dot2_vector"
+			Pos="1459.756 288.000 2588.627"
+			Rot="0.000 0.716 0.000 0.698">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="heavy_dot2_vector10CANNON"
+					Belong="1008"
+					Prototype="vector01" />
+			</Parts>
+		</Object>
+	
+		<Object
+			Name="sack_dot1_vulcan11"
+			Belong="1019"
+			Prototype="sack_dot1_vulcan"
+			Pos="1401.723 288.000 2597.400"
+			Rot="0.000 -0.998 0.000 0.068">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="sack_dot1_vulcan11CANNON"
+					Belong="1008"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+	
+		<Object
+			Name="sack_dot2_vulcan12"
+			Belong="1019"
+			Prototype="sack_dot2_vulcan"
+			Pos="1415.021 288.110 2572.348"
+			Rot="0.000 -0.808 0.000 0.590">
+			<Parts>
+				<CANNON
+					present="1"
+					Name="sack_dot2_vulcan12CANNON"
+					Belong="1008"
+					Prototype="vulcan01" />
+			</Parts>
+		</Object>
+
 		<Parts>
 			<AttackTeam
 				present="no" />
@@ -2687,41 +2746,6 @@
 		Prototype="heavy_dot4_octopus"
 		Pos="1551.977 249.000 625.582"
 		Rot="0.000 -0.395 0.000 0.919">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="heavy_dot3_vulcan9"
-		Belong="1019"
-		Prototype="heavy_dot3_vulcan"
-		Pos="1431.221 288.000 2636.763">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="heavy_dot2_vector10"
-		Belong="1019"
-		Prototype="heavy_dot2_vector"
-		Pos="1459.756 288.000 2588.627"
-		Rot="0.000 0.716 0.000 0.698">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="sack_dot1_vulcan11"
-		Belong="1019"
-		Prototype="sack_dot1_vulcan"
-		Pos="1401.723 288.000 2597.400"
-		Rot="0.000 -0.998 0.000 0.068">
-		<Parts />
-	</Object>
-
-	<Object
-		Name="sack_dot2_vulcan12"
-		Belong="1019"
-		Prototype="sack_dot2_vulcan"
-		Pos="1415.021 288.110 2572.348"
-		Rot="0.000 -0.808 0.000 0.590">
 		<Parts />
 	</Object>
 

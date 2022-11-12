@@ -3,7 +3,7 @@
 
 	
 	<Item id="TheDreenorVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="TheTown_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
-	<Item id="Esting_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog2.dds"		file1=""/>
+	<Item id="TheTown_Bar"		file="data\if\ico\TalkWithNpcDlg\officedialog2.dds"		file1=""/>
+	<Item id="Esting_Bar"		file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"		file1=""/>
 
 </icons>

@@ -733,7 +733,7 @@
 			for i = 1,len do
 				println("Setting belong 1083 to "..towns[i])
 				if getObj(towns[i]) then getObj(towns[i]):SetBelong(1083) end
-				CreateNewDummyObject("flagshtock", "R2M1Flag"..i, -1, -1, FlagPos, FlagRot, 4)
+				CreateNewDummyObject("flagshtock", "R2M1Flag"..i, -1, -1, FlagPos[i], FlagRot[i], 4)
 			end
 			
 			TActivate("LISAMOVETOGELVFROMR2M2")

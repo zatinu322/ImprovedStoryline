@@ -2423,7 +2423,7 @@
 	<Object
 		Flags="21"
 		Name="Boss02Die_Loc"
-		Belong="1002"
+		Belong="1018"
 		Prototype="genericLocation"
 		Pos="2096.138 233.843 5939.550"
 		Radius="20.000" />

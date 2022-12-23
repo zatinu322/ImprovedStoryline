@@ -4945,7 +4945,7 @@
 
 	<Reply
 		name="Set_Bar_Customer2_1_N03"
-		text="От жителей Улука давно не поступало никаких вестей. Раньше они регулярно заглядывали в наш город, а сейчас уже почти как пару месяцев ни слуху, ни духу. Не мог бы ты съездить проверить, что там произошло? Мы заплатим за работу."
+		text="От жителей Улука давно не поступало никаких вестей. Раньше они регулярно заглядывали в наш город, а сейчас уже почти как пару месяцев от них ничего не слышно. Не мог бы ты съездить проверить, что там произошло? Мы заплатим за работу."
 		role="NPC"
 		nextReplies="Set_Bar_Customer2_1_P041 Set_Bar_Customer2_1_P042" />
 
@@ -5684,7 +5684,7 @@
 
 	<Reply
 		name="Dlg_npc_000461"
-		text="С северянами. Они нас предали в тяжелый для нас час, теперь в наших сердцах не осталось жалости. Аксель ведет нас к эре всеобщего процветания, только жалкие соседи стоят у нас на пути. Но недолго им осталось!"
+		text="С северянами. Они нас предали в тяжелый час, теперь в наших сердцах не осталось жалости. Аксель ведёт нас к эре всеобщего процветания, только жалкие соседи стоят у нас на пути. Но недолго им осталось!"
 		role="NPC"
 		nextReplies="Dlg_pl_000462" />
 
@@ -5980,43 +5980,6 @@
 		text="Вот и здорово."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Ozhidanie2_Quest'); TActivate('Ending5_begin'); EndConversation()" />
-
-	<Reply
-		name="Dlg_npc_002279"
-		text="Хочешь записаться в нашу армию?"
-		role="NPC"
-		scriptCondition="(IsQuestTaken('Podderzhka2_Quest') and not(IsQuestComplete('Podderzhka2_Quest'))) "
-		nextReplies="Dlg_pl_002280" />
-
-	<Reply
-		name="Dlg_pl_002280"
-		text="Не совсем. Я хотел бы поговорить с вышестоящим руководством."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002281" />
-
-	<Reply
-		name="Dlg_npc_002281"
-		text="О чём?"
-		role="NPC"
-		nextReplies="Dlg_pl_002282" />
-
-	<Reply
-		name="Dlg_pl_002282"
-		text="Об антимилитаристском движении."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002283" />
-
-	<Reply
-		name="Dlg_npc_002283"
-		text="Охрана, выведите этого гражданина из города и никогда больше не пускайте. Ещё один пришёл тут сказочки про общество без войн рассказывать! "
-		role="NPC"
-		nextReplies="Dlg_pl_002284" />
-
-	<Reply
-		name="Dlg_pl_002284"
-		text="И почему я ожидал подобный исход?"
-		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('trMarezziaHuksExit'); SetVar('MarezziaCutscene', 1) LeaveTown()" />
 <!--Root/r2m2/Сюжетные/Монах-->
 	<Reply
 		name="Monah_hellodlg0out"
@@ -7217,69 +7180,14 @@
 		name="Dlg_pl_xyz481"
 		text="Я подумаю над твоими словами."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); CompleteQuest('FigureOutWhatsGoingOn_Quest'); TakeQuest('d_GetSupportOneOfTheBands1_Quest'); TakeQuest('d_FindVerbInAR_Quest'); TakeQuest('d_FindVerbInSNG_Quest'); TakeQuest('d_FindVerbInAM_Quest');  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); CompleteQuest('FigureOutWhatsGoingOn_Quest'); TakeQuest('d_GetSupportOneOfTheBands1_Quest'); TakeQuest('d_FindVerbInAR_Quest'); TakeQuest('d_FindVerbInSNG_Quest'); TakeQuest('d_FindVerbInAM_Quest'); AddBook('r1_book_sng_flyer');  EndConversation()" />
 <!--Root/r2m1/Сюжетные/Вербовщик в Тузе-->
 	<Reply
 		name="TuzVerb_hellodlg0"
 		text="Ты готов вступить в нашу армию?"
 		role="NPC"
-		scriptCondition="(QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_TAKEN and (GetCurNpc():GetSpokenCount() == 0)) or QuestStatus('Podderzhka1_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_xyz483 Dlg_pl_002269" />
-
-	<Reply
-		name="Dlg_pl_002269"
-		text="Вот как раз об этом я и пришёл поговорить."
-		role="PLAYER"
-		scriptCondition="QuestStatus('Podderzhka1_Quest')==Q_TAKEN"
-		nextReplies="Dlg_npc_002271" />
-
-	<Reply
-		name="Dlg_npc_002271"
-		text="А что тут говорить? Хочешь воевать за правое дело - записываешься в нашу армию. Нет - идёшь лесом. Третьего не надо."
-		role="NPC"
-		nextReplies="Dlg_pl_002272" />
-
-	<Reply
-		name="Dlg_pl_002272"
-		text="Дано. Я представляю антимилитаристкое движение, и мы хотим, чтобы вы встали на нашу сторону и прекратили эту бесполезную и бессмысленную войну!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002273" />
-
-	<Reply
-		name="Dlg_npc_002273"
-		text="Что? Какое движение?"
-		role="NPC"
-		nextReplies="Dlg_pl_002274" />
-
-	<Reply
-		name="Dlg_pl_002274"
-		text="Антимилитаристское. Мы против всяких войн. И я призываю вас встать на нашу сторону. Позвольте мне поговорить с высшим командованием и донести до них наши взгляды."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002275" />
-
-	<Reply
-		name="Dlg_npc_002275"
-		text="Подожди, я не понял, ты вступать в нашу армию собираешься? "
-		role="NPC"
-		nextReplies="Dlg_pl_002276" />
-
-	<Reply
-		name="Dlg_pl_002276"
-		text="Я? Нет же! Я представляю…"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002277" />
-
-	<Reply
-		name="Dlg_npc_002277"
-		text="Раз не хочешь, значит, проваливай! Вон там толпа людей записаться на войну хочет, а ты время моё тратишь! Давай, гуляй, пока насильно тебя на передовую не определил!"
-		role="NPC"
-		nextReplies="Dlg_pl_002278" />
-
-	<Reply
-		name="Dlg_pl_002278"
-		text="Ладно, ладно, не кричи, уже ушёл.|Мда, это оказалось гораздо сложнее, чем я думал. Может, в Марецции ко мне прислушаются?"
-		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka1_Quest'); EndConversation() " />
+		scriptCondition="(QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_TAKEN and (GetCurNpc():GetSpokenCount() == 0))"
+		nextReplies="Dlg_pl_xyz483" />
 
 	<Reply
 		name="Dlg_pl_xyz483"
@@ -7618,36 +7526,12 @@
 		text="Начинаем! Наша победа близка!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_MoveWithGeneralToGelvetcia_Quest');  AddHistory(  'r2_Before_Axel_00'  );  AddFadingMsgId( 'fm_history_got' ); RemoveQuestItem('ARGeneral_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ARGeneral_P');  EndConversation()" />
-<!--Root/r2m1/Сюжетные/Антимилитаристы-->
+<!--Root/r2m1/Сюжетные/Антимилитаристы--><!--Root/r2m1/Сюжетные/Антимилитаристы/Старая Сибилла-->
 	<Reply
 		name="Dlg_npc_002230"
-		text="Стоять на месте! Одно неверное движение - и мы начинаем стрелять!"
-		role="NPC"
-		scriptCondition="QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_TAKEN and   (GetCurNpc():GetSpokenCount() == 0) and not(IsQuestComplete('r2m2_HeadsHunterQuest'))"
-		nextReplies="Dlg_pl_002231" />
-
-	<Reply
-		name="Dlg_pl_002231"
-		text="Спокойнее, ребята, я сюда не драться приехал."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002232" />
-
-	<Reply
-		name="Dlg_npc_002232"
-		text="Кто таков? СНГ? АР?"
-		role="NPC"
-		nextReplies="Dlg_pl_002233" />
-
-	<Reply
-		name="Dlg_pl_002233"
-		text="Я не понимаю, о чём вы говорите! Я приехал сюда через тоннель, чтобы найти человека, укравшего у меня семейную драгоценность! Я не влезал и не собираюсь влезать в вашу войну!"
-		role="PLAYER"
-		nextReplies="Dlg_npc_002234" />
-
-	<Reply
-		name="Dlg_npc_002234"
 		text="Вот так так! Такие люди, как ты, в этих краях редкость! Обычно сюда приезжают либо убивать за деньги, либо по идеологическим причинам."
 		role="NPC"
+		scriptCondition="QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_TAKEN and   (GetCurNpc():GetSpokenCount() == 0) and not(IsQuestComplete('r2m2_HeadsHunterQuest'))"
 		nextReplies="Dlg_pl_002235" />
 
 	<Reply
@@ -7658,7 +7542,7 @@
 
 	<Reply
 		name="Dlg_npc_002236"
-		text="Да понял я уже. Ладно, опустите оружие. Что за человека ты ищешь?"
+		text="Да понял я уже. Ладно, можешь расслабиться. Что за человека ты ищешь?"
 		role="NPC"
 		nextReplies="Dlg_pl_002237" />
 
@@ -7706,70 +7590,88 @@
 
 	<Reply
 		name="Dlg_npc_002244"
-		text="И вот мы подходим к самому главному. Мы все тут антимилитаристы. "
+		text="Ох и сказал бы я в иных обстоятельствах, куда тебе нужно засунуть свои ребяческие представления о войне, но вот толку-то с этого никакого не будет..."
 		role="NPC"
 		nextReplies="Dlg_pl_002245" />
 
 	<Reply
 		name="Dlg_pl_002245"
-		text="Звучит довольно опасно. А можно перевод?"
+		text="То есть ты не патриот?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002246" />
 
 	<Reply
 		name="Dlg_npc_002246"
-		text="Если не вдаваться в подробности, то мы против любых войн."
+		text="О, совсем наоборот. Такого истинного патриота как я, ты ещё не встречал. И именно поэтому я не поддерживаю эту войну. Как и все здесь присутствующие."
 		role="NPC"
 		nextReplies="Dlg_pl_002247" />
 
 	<Reply
 		name="Dlg_pl_002247"
-		text='Кажется, мне отец рассказывал о чём-то подобном. Только называлось это вроде как "пацифизм". Да и не похожи вы на тех, кто против войны. Напомнить, что пару минут назад вы собирались меня расстрелять?'
+		text="Не совсем понимаю."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002248" />
 
 	<Reply
 		name="Dlg_npc_002248"
-		text='Э-э, парень, тут ты запутался в понятиях. Твои так называемые "пацифисты" против любого насилия, и популярностью эти ребятки не пользовались никогда, даже в старом мире, чего уж говорить про сейчас.'
+		text="Естественно, что не понимаешь. Ты чужак и тебе нет никакого дела до людей, которые отправляются и погибают на эту войну только лишь потому, что две большие шишки не смогли поделить сферы влияния."
 		role="NPC"
 		nextReplies="Dlg_pl_002249" />
 
 	<Reply
 		name="Dlg_pl_002249"
-		text="А вы?"
+		text="Но ведь в брошюре написано, что это ваши соседи..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002250" />
 
 	<Reply
 		name="Dlg_npc_002250"
-		text="А мы конкретно против войны как явления. Понимаешь, немногим хватает ума понять, что любая война выгодна лишь правящим кругам, которые придумывают разные идеологические и другие несуществующие причины, чтобы заставить людей жертвовать своими жизнями. Эта война не исключение."
+		text="Оставь эти глупости, на заборе тоже много чего написано. Правды в этих брошюрах нет никакой. Но знаешь, что на самом деле страшно? То, что если многократно повторять даже самую нелепую ложь, то рано или поздно ты начинаешь в неё искренне верить. Именно это происходит с моей страной в данной момент, и именно поэтому мы и создали движение Антимилитаристов."
 		role="NPC"
 		nextReplies="Dlg_pl_002251" />
 
 	<Reply
 		name="Dlg_pl_002251"
-		text="Интересная позиция. И как планируете войну останавливать? Числом? Вряд ли, вас тут полторы калеки."
+		text="То есть вы против любых войн?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002252" />
 
 	<Reply
 		name="Dlg_npc_002252"
-		text="Следи за языком, я всё ещё могу пристрелить тебя прямо сейчас. Во-первых, нас гораздо больше, чем ты можешь себе представить. А во-вторых, я не собираюсь раскрывать наши планы первому встречному-поперечному. "
+		text="Мы против бессмысленной гибели людей. Мы против застоя и обнаглевших от своей безнаказанности политиков, стоящих во главе нашей страны. Эта война назревала годами и отрицать её также глупо, как и отрицать дождь. Но то, что её невозможно было предотвратить, не значит, что её нельзя закончить быстро и с минимальными потерями."
 		role="NPC"
 		nextReplies="Dlg_pl_002253" />
 
 	<Reply
 		name="Dlg_pl_002253"
-		text="Ну ладно, в таком случае я поехал. Интересный разговор получился, но мне всё ещё надо решить, на чьей я буду стороне."
+		text="Кажется, я начинаю понимать, к чему ты клонишь."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002254" />
 
 	<Reply
 		name="Dlg_npc_002254"
-		text="Ну, в принципе, у тебя есть три варианта. Ты либо воюешь на стороне СНГ, либо на стороне АР, либо ты принимаешь единственно верное решение и помогаешь нам прекратить это бессмысленное кровопролитие."
+		text="А я в тебе и не сомневался. Скажу честно, нашему движению не помешал бы такой человек, как ты. Цели у нас, может, и разные, но выгоду всё равно получит каждый из нас. Ты доберёшься до Акселя и найдёшь свою таинственную воровку, а мы, наконец, начнём жить в том Либриуме, о котором всегда мечтали. Ну так как, присоединишься к нам?"
 		role="NPC"
 		scriptResult="AddBook('r1_book_true_ar')"
-		nextReplies="Dlg_pl_002258 Dlg_pl_002255" />
+		nextReplies="Dlg_pl_002258 Dlg_pl_002255 Dlg_pl_003381" />
+
+	<Reply
+		name="Dlg_pl_003381"
+		text="Даже никакой своей брошюры не дадите?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003382" />
+
+	<Reply
+		name="Dlg_npc_003382"
+		text="А ты вроде бы и не турист. Или тебе нравится ездить по городам и брошюрки собирать, в то время как люди вокруг отдают свои жизни суть ни за что?"
+		role="NPC"
+		nextReplies="Dlg_pl_003383" />
+
+	<Reply
+		name="Dlg_pl_003383"
+		text="Извините, глупый вопрос."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002258"
@@ -7779,67 +7681,55 @@
 
 	<Reply
 		name="Dlg_pl_002255"
-		text="Я не хочу убивать других людей лишь потому, что им не посчастливилось быть на другой стороне. Я с вами!"
+		text="Я с вами! Не хочу убивать других людей лишь потому, что им не посчастливилось быть на другой стороне."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002256" />
 
 	<Reply
 		name="Dlg_npc_002256"
-		text="И ты не пожалеешь о своём решении. А теперь немного откровений. Мне редко доводилось видеть человека, настолько грамотно ведущего диалог. Можно сказать, что я тебя проверял, и проверку ты прошёл успешно."
+		text="И ты не пожалеешь о своём решении. И сразу к делу - в Тузе сейчас активно проводятся мероприятия по насильной отправке людей на войну. В Марецции Алый Рассвет методично уничтожает оппозицию.  Всех нам, ясное дело, не спасти, однако некоторых людей, обладающих особенно ценными знаниями, необходимо из этих городов вывезти. Это и будет твоим первым заданием."
 		role="NPC"
 		nextReplies="Dlg_pl_002257" />
 
 	<Reply
 		name="Dlg_pl_002257"
-		text="Ну, спасибо, наверное…"
+		text="Почему именно я?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002259" />
 
 	<Reply
 		name="Dlg_npc_002259"
-		text="Задание у меня к тебе будет соответствующее. Так как ты не принял ничью сторону, то можешь свободно путешествовать между двумя странами. Мне необходимо, чтобы ты посетил Туз в этой стране и Мареццию в Аржане и заручился поддержкой хотя бы одной из сторон. Расскажешь им про нас и попытаешься образумить от ведения этой глупой войны."
+		text="Потому что тебя там никто не знает. Вот, возьми это."
 		role="NPC"
 		nextReplies="Dlg_pl_002260" />
 
 	<Reply
 		name="Dlg_pl_002260"
-		text="Образумить? Да они же меня пристрелят на месте!"
+		text='"Военный билет"? Для чего он мне?'
 		role="PLAYER"
 		nextReplies="Dlg_npc_002261" />
 
 	<Reply
 		name="Dlg_npc_002261"
-		text="Вряд ли. Мало кто убивает гонцов, хотя всякое бывает. В таком случае, будь готов делать ноги. Ну что, всё понял?"
+		text="Это не простой военный билет. Документ такого образца выдают только профессиональным наёмникам. Эта штука гарантирует, что при всём творящемся беспределе никто в городах СНГ не посмеет тебя тронуть. Только в самой столице особо не размахивай этой бумажкой - там свои законы, и так просто ты от их охраны не отделаешься."
 		role="NPC"
 		nextReplies="Dlg_pl_002262" />
 
 	<Reply
 		name="Dlg_pl_002262"
-		text="Только один вопрос. Мне заплатят?"
+		text="Вот оно как. Понял.|Ну хорошо, я сделаю это."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002263" />
 
 	<Reply
 		name="Dlg_npc_002263"
-		text="Естественно. Деньги - лучший мотиватор. 9000 монет независимо от исхода. И да, если тебе придёт в голову нас предать и рассказать кому-нибудь об этой нашей базе, то мои шпионы тебя найдут и уничтожат. И поверь мне, сделают они это очень болезненно."
+		text="Отправляйся сначала в Туз, там уже всё подготовлено. Наш транспорт будет ожидать тебя неподалёку."
 		role="NPC"
 		nextReplies="Dlg_pl_002264" />
 
 	<Reply
 		name="Dlg_pl_002264"
-		text="Да что ты, я и не думал даже."
-		role="PLAYER"
-		nextReplies="Dlg_npc_002265" />
-
-	<Reply
-		name="Dlg_npc_002265"
-		text="Это я на всякий случай. А теперь иди. Постарайся привести хоть одного союзника."
-		role="NPC"
-		nextReplies="Dlg_pl_002266" />
-
-	<Reply
-		name="Dlg_pl_002266"
-		text="Выполняю."
+		text="Будет сделано."
 		role="PLAYER"
 		scriptResult="TakeQuest('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInSNG_Quest'); FailQuestIfTaken('d_FindVerbInAR_Quest'); CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); CompleteQuestIfTaken('d_FindVerbInAM_Quest'); TakeQuest('Podderzhka_Quest'); AddHistory(  'r2_AM_00'  ); AddFadingMsgId( 'fm_history_got' ); SetTolerance(1100,1083,RS_ALLY); EndConversation()" />
 
@@ -7858,26 +7748,26 @@
 
 	<Reply
 		name="Dlg_pl_002268"
-		text="Я не хочу убивать других людей лишь потому, что им не посчастливилось быть на другой стороне. Я с вами!"
+		text="Я с вами! Не хочу убивать других людей лишь потому, что им не посчастливилось быть на другой стороне."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002256" />
 
 	<Reply
 		name="Dlg_npc_002285"
-		text="Что ж, если они не хотят по-хорошему, то будет по-плохому. Настало время нам заявить о себе."
+		text="Один мудрец как-то сказал, что настоящим подвигом на любой войне является не убийство другого человека, а, наоборот, его спасение. Ты потрясающе себя проявил, но расслабляться пока рано. Теперь настало время нам заявить о себе."
 		role="NPC"
 		scriptCondition="IsQuestTaken('Podderzhka3_Quest') and not(IsQuestComplete('Podderzhka3_Quest'))"
 		nextReplies="Dlg_pl_002286" />
 
 	<Reply
 		name="Dlg_pl_002286"
-		text="Звучит опасно. Что нужно делать?"
+		text="Что нужно делать?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002287" />
 
 	<Reply
 		name="Dlg_npc_002287"
-		text="Мои шпионы доложили, что Алый Рассвет привлёк лучших своих бойцов для того, чтобы напасть на караван с гуманитарной помощью СНГ. Таким образом они собираются вызвать голод и, соответственно, недовольство в тылу врага. Мы не должны допустить подобное."
+		text="Наша разведка доложила, что Алый Рассвет привлёк своих лучших бойцов для того, чтобы напасть на караван с гуманитарной помощью СНГ. Таким образом они собираются вызвать голод и, соответственно, недовольство в тылу врага. Сам понимаешь, мы не можем допустить подобное."
 		role="NPC"
 		nextReplies="Dlg_pl_002288" />
 
@@ -7897,11 +7787,127 @@
 		name="Dlg_pl_002290"
 		text="Так точно!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); EndConversation()" />
+		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); RemoveQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'MarezziaEscapist_P') EndConversation()" />
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Эвакуация из Туза-->
+	<Reply
+		name="Dlg_npc_003363"
+		text="Это какая-то ошибка! Я совершенно никудышный боец, какой толк будет от меня на поле боя? Я обычный инженер-механик! Все остальные здесь тоже обычные работяги, не военные."
+		role="NPC"
+		scriptCondition="QuestStatus('Podderzhka1_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount()==0"
+		scriptResult="getObj('TuzVerb1'):SetSpokenCount(22);"
+		nextReplies="Dlg_pl_003364" />
 
 	<Reply
+		name="Dlg_pl_003364"
+		text="Так, что здесь происходит?"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); StartConversation('TuzVerb1')" />
+
+	<Reply
+		name="Dlg_npc_003365"
+		text="Вас это не касается, гражданин."
+		role="NPC"
+		scriptCondition="QuestStatus('Podderzhka1_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount()==22"
+		nextReplies="Dlg_pl_003366" />
+
+	<Reply
+		name="Dlg_pl_003366"
+		text="[Показать удостоверение]|Наоборот, всё происходящее здесь касается меня напрямую. У меня приказ доставить этих людей в столицу с целью укрепления её инфраструктуры на случай внезапной диверсии врага. А вы, кажется, собираетесь мне препятствовать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003367" />
+
+	<Reply
+		name="Dlg_npc_003367"
+		text="Нет, что вы, ни в коем случае! Вот, забирайте их. А я... я ещё найду добровольцев. Нет проблем."
+		role="NPC"
+		nextReplies="Dlg_pl_003368" />
+
+	<Reply
+		name="Dlg_pl_003368"
+		text="Вот так бы и сразу. Можете быть свободны."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); StartConversation('EngineerEscapist');" />
+
+	<Reply
+		name="Dlg_npc_003369"
+		text="Пожалуйста, добрый человек, смилуйтесь, у нас дома семьи, дети. А в Гельвеции вы же знаете, как оно бывает..."
+		role="NPC"
+		scriptCondition="QuestStatus('Podderzhka1_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount()==1"
+		nextReplies="Dlg_pl_003370" />
+
+	<Reply
+		name="Dlg_pl_003370"
+		text="Не знаю, честно сказать. И вообще никакой я не наёмник. Забирайтесь ко мне в машину, места должно всем хватить. Я переправлю вас туда, где вы будете на время в безопасности."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003371" />
+
+	<Reply
+		name="Dlg_npc_003371"
+		text="Кажется, выбора у нас всё равно нет."
+		role="NPC"
+		nextReplies="Dlg_pl_003372" />
+
+	<Reply
+		name="Dlg_pl_003372"
+		text="Есть. Но, бьюсь об заклад, ещё никогда в вашей жизни он не был настолько очевидным."
+		role="PLAYER"
+		scriptResult="CompleteQuest('Podderzhka1_Quest'); TActivate('trTuzzEscapistsCarsCreate'); GetCurNpc():SetSpokenCount(2); AddQuestItem('TuzzEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'TuzzEscapist_P'); EndConversation()" />
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Эвакуация из Марецции-->
+	<Reply
+		name="Dlg_npc_003373"
+		text="Добрый человек, помоги нам! Вывези нас отсюда!"
+		role="NPC"
+		scriptCondition="QuestStatus('Podderzhka2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount()==0"
+		scriptResult="getObj('RecruiterInAR1'):SetSpokenCount(22);"
+		nextReplies="Dlg_pl_003374" />
+
+	<Reply
+		name="Dlg_pl_003374"
+		text="Именно поэтому я и здесь. Антимилитаристы сказали..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003375" />
+
+	<Reply
+		name="Dlg_npc_003375"
+		text="Тс-с, ни слова больше! Их люди повсюду, устраивают облавы и хватают всех, до кого могут дотянуться!"
+		role="NPC"
+		nextReplies="Dlg_pl_003376" />
+
+	<Reply
+		name="Dlg_pl_003376"
+		text="Тогда нужно тем более уезжать отсюда как можно скорее!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); StartConversation('RecruiterInAR1')" />
+
+	<Reply
+		name="Dlg_npc_003377"
+		text="Кто такие? А ну стоять, дальше пойдёте с нами!"
+		role="NPC"
+		scriptCondition="QuestStatus('Podderzhka2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount()==22"
+		nextReplies="Dlg_pl_003378" />
+
+	<Reply
+		name="Dlg_pl_003378"
+		text="Что за?!"
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); StartConversation('WorkerEscapist');" />
+
+	<Reply
+		name="Dlg_npc_003379"
+		text="Чёрт, они уже здесь. Бежим, скорее!"
+		role="NPC"
+		scriptCondition="QuestStatus('Podderzhka2_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount()==1"
+		nextReplies="Dlg_pl_003380" />
+
+	<Reply
+		name="Dlg_pl_003380"
+		text="Бегите за мной, моя машина прямо у ворот!"
+		role="PLAYER"
+		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('trMarezziaHuksExit'); SetVar('MarezziaCutscene', 1); GetCurNpc():SetSpokenCount(2); AddQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'MarezziaEscapist_P'); LeaveTown()" />
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Новая Сибилла-->
+	<Reply
 		name="Dlg_npc_002295"
-		text="Это ты тот отважный вояка, который под пулями АР вывозил шпиона из Аржана? Хм, я представляла тебя более… крупным, что ли."
+		text="Это ты тот отважный вояка, который под пулями АР вывозил людей из Аржана? Хм, я представляла тебя более… крупным, что ли."
 		role="NPC"
 		scriptCondition="IsQuestTaken('Shpion2_Quest') and not(IsQuestComplete('Shpion2_Quest'))"
 		nextReplies="Dlg_pl_002296" />
@@ -7962,7 +7968,7 @@
 
 	<Reply
 		name="Dlg_npc_002305"
-		text='Тебе предстоит проникнуть вглубь вражеской территории и встретиться там с нашим связным в Тоскане. Пароль: "Старая чушка плодила подсвинков". Не спрашивай.|Он выведет тебя на людей, способных уничтожить диктатуру церкви. Действовать будешь один. И да, будь осторожен. По завершению получишь 50000 монет.'
+		text='Тебе предстоит проникнуть вглубь вражеской территории и встретиться там с нашим связным в Тоскане. Пароль: "Старая чушка плодила подсвинков". Не спрашивай.|Он выведет тебя на людей, способных уничтожить диктатуру церкви. Действовать будешь один. И да, будь осторожен, как в Аржане, так и здесь. Кажется, СНГ начало наконец-то воспринимать нас в серьёз.'
 		role="NPC"
 		nextReplies="Dlg_pl_002306" />
 
@@ -13670,7 +13676,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz281"
-		text="Вот так-так! Сам Дронн тебя прислал! Сто лет его не видал, как он там?"
+		text="Вот так так! Сам Дронн тебя прислал! Сто лет его не видал, как он там?"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz282" />
 
@@ -17803,7 +17809,7 @@
 
 	<Reply
 		name="Dlg_npc_002602"
-		text="И помни. Если устанешь от приключений, мы здесь будем всегда рады тебе. А теперь иди отдохни, негоже вот так сразу без отдыха в путь отправляться."
+		text="И помни: если устанешь от приключений, мы здесь будем всегда рады тебе. А теперь иди отдохни, негоже вот так сразу без отдыха в путь отправляться."
 		role="NPC"
 		nextReplies="Dlg_pl_002603" />
 

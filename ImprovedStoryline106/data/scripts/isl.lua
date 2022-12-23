@@ -12,7 +12,7 @@ function r1m1_FirstEnemyStart()
 	local FVehicle = CreateVehicleEx("Sml101","FirstB_0",CVector(2888.161, 346.333, 2342.007), 1002)
 	local FVehicleID = FVehicle:GetId()
 
-	Fly("cam01_hd", CINEMATIC_AIM_TO_ID, FVehicle:GetId(), 5, 1, 1 )
+	Fly("cam01_hd", CINEMATIC_AIM_TO_ID, FVehicleID, 5, 1, 1 )
 	StartCinematic()
 end
 

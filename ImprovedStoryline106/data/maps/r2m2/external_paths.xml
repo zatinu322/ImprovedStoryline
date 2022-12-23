@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
+		Name="EretOff_Path">
+		<Point
+			coord="2786.795 849.119" />
+
+		<Point
+			coord="2889.305 839.959" />
+
+		<Point
+			coord="3013.251 868.801" />
+
+		<Point
+			coord="3066.046 898.248" />
+
+		<Point
+			coord="3110.333 981.242" />
+
+		<Point
+			coord="3100.896 1051.432" />
+
+		<Point
+			coord="3063.193 1077.693" />
+
+		<Point
+			coord="3004.737 1000.035" />
+	</Path>
+
+	<Path
 		Name="h10_m1">
 		<Point
 			coord="1489.371 2410.624" />
@@ -832,30 +859,15 @@
 	</Path>
 
 	<Path
-		Name="EretOff_Path">
+		Name="player_path01">
 		<Point
-			coord="2786.795 849.119" />
+			coord="1649.659 3292.352" />
 
 		<Point
-			coord="2889.305 839.959" />
+			coord="1562.963 3281.130" />
 
 		<Point
-			coord="3013.251 868.801" />
-
-		<Point
-			coord="3066.046 898.248" />
-
-		<Point
-			coord="3110.333 981.242" />
-
-		<Point
-			coord="3100.896 1051.432" />
-
-		<Point
-			coord="3063.193 1077.693" />
-
-		<Point
-			coord="3004.737 1000.035" />
+			coord="1481.612 3270.733" />
 	</Path>
 
 	<Path
@@ -866,5 +878,4 @@
 		<Point
 			coord="3077.961 2131.525" />
 	</Path>
-
 </Paths>

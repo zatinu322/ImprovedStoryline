@@ -1756,8 +1756,17 @@
 		isMainQuest="1" />
 
 	<QuestInfo
+		questName="Podderzhka1_1_Quest"
+		briefDiz="Доставить беженцев из Туза к транспорту Антимилитаристов"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TuzzEscapists_loc" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="Podderzhka1_Quest"
-		briefDiz="Поговорить с вербовщиком в Тузе"
+		briefDiz="Эвакуировать людей из Туза"
 		isMainQuest="1">
 		<Map
 			name="r2m1"
@@ -1766,7 +1775,7 @@
 
 	<QuestInfo
 		questName="Podderzhka2_Quest"
-		briefDiz="Поговорить с вербовщиком в Марецции"
+		briefDiz="Эвакуировать людей из Марецции"
 		isMainQuest="1">
 		<Map
 			name="r2m1"
@@ -1792,8 +1801,8 @@
 
 	<QuestInfo
 		questName="Podderzhka_Quest"
-		briefDiz="Заручиться поддержкой группировок"
-		fullDiz="Помощь союзников никогда не бывает лишней, поэтому мне предстоит убедить СНГ и АР в том, что войну следует прекратить."
+		briefDiz="Спасти мирных людей от отправки на войну"
+		fullDiz="В Тузе и Марецции идёт настоящая охота на обычных граждан и неугодных власти деятелей. Я не могу остановить это безумие, но могу попробовать спасти от этого как можно больше людей."
 		isMainQuest="1" />
 
 	<QuestInfo

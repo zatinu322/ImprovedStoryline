@@ -177,6 +177,10 @@
 		value="%1p покинула ваш автомобиль." />
 
 	<string
+		id="fm_player_them_poput"
+		value="%1p покинули ваш автомобиль." />
+
+	<string
 		id="fm_cheat_is_not_allowed"
 		value="@FF22FF22Использование читов @FF2222FFЗАПРЕЩЕНО@FFFFFFFF" />
 
@@ -218,7 +222,7 @@
 
 	<string
 		id="fm_wrong_game_version"
-		value="@FFFF0000Вы используете устаревший билд: %1p" />
+		value="@FFFF0000Вы используете устаревший или некорректный билд: %1p" />
 
 	<string
 		id="fm_petro_death"

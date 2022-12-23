@@ -153,6 +153,10 @@
 		FullName="Вербовщик Хэнк" />
 
 	<Object
+		Name="TuzVerb1"
+		FullName="Вербовщик Хэнк" />
+
+	<Object
 		Name="TheDoubtful"
 		FullName="РАЗДОЛЬНОЕ" />
 
@@ -367,4 +371,8 @@
 	<Object
 		Name="Kartograph3"
 		FullName="Картограф" />
+
+	<Object
+		Name="EngineerEscapist"
+		FullName="Инженер Микаэль" />
 </ObjectNames>

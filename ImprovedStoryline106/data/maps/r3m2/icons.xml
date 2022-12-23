@@ -2,7 +2,7 @@
 <icons>
    <Item id="OracleDefendersVil"			file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
    <Item id="AloneDruid_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
-   <Item id="r3m2_NearOracul_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
+   <Item id="NearOracul_Bar"	file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
    <Item id="Oracle_loc"	file="data\if\ico\TalkWithNpcDlg\oracledialog.dds" file1=""/>
    <Item id="OracleDefendersDialogs_loc"	file="data\if\ico\TalkWithNpcDlg\cardialog2.dds" file1=""/>
 </icons>

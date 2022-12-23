@@ -5,8 +5,8 @@
    <Item id="Fist_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
    <Item id="Set_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
    <Item id="Uluk_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog3.dds" file1=""/>
-   <Item id="Uluk_Hram"			file="data\if\ico\TalkWithNpcDlg\" file1="ironisttempledialog1.dds"/>
-   <Item id="Set_HouseMainDruid"			file="data\if\ico\TalkWithNpcDlg\" file1="druidtempledialog1.dds"/>
+   <Item id="Uluk_Hram"			file="data\if\ico\TalkWithNpcDlg\ironisttempledialog1.dds" file1=""/>
+   <Item id="Set_HouseMainDruid"			file="data\if\ico\TalkWithNpcDlg\druidtempledialog1.dds" file1=""/>
    <Item id="NearFist_TalkGuardDialog_loc"			file="data\if\ico\TalkWithNpcDlg\cardialog1.dds" file1=""/>
 
 </icons>

@@ -11,7 +11,7 @@
 	<Item id="TheBanditOilMine_Bar"	file="data\if\ico\TalkWithNpcDlg\oilderrickdialog1.dds"		file1=""/>
 	<Item id="TheVozleMinin_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 	<Item id="TheShahts_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
-	<Item id="Mer_House"			file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"	file1=""/>
+	<Item id="Mer_House"			file="data\if\ico\TalkWithNpcDlg\officedialog2.dds"	file1=""/>
 	<Item id="TheForgotten_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 	<Item id="Minin_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 	<Item id="Pesht_Bar"			file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>

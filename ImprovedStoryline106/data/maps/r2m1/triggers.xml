@@ -13,6 +13,9 @@
 			SetVar("KnownMap",0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
+			local oldS = getObj("TheOldSibilla_enter")
+			if oldS then oldS:SetProperty("Active", 0) end
+
 			TActivate("ChangeTownsBelongR2M1")
 
 			trigger:Deactivate()
@@ -154,6 +157,29 @@
 	</trigger>
 
 <!-- АНТИМИЛЛИТАРИСТЫ -->
+	<!-- Создание эвакуационных машин для жителей Туза -->
+	<trigger Name="trTuzzEscapistsCarsCreate" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateVehicleEx("r1m1_bug03", "EscVehicle01", CVector(3558.553, 270.414, 2111.108), 1083, Quaternion(-0.001, -0.982, -0.004, 0.188))
+			CreateVehicleEx("r1m1_bug03", "EscVehicle02", CVector(3545.451, 270.415, 2113.212), 1083, Quaternion(-0.001, -0.989, -0.004, 0.149))
+
+			for veh = 1,2 do
+				local car = getObj("EscVehicle0"..veh)
+				if car then
+					car:setGodMode(1)
+					car:setImmortalMode(1)
+					car:SetSkin(5)
+					car:SetNewPart("CABIN_SMALL_GUN", "kord01")
+				end
+			end
+
+			TActivate("trTECCRolik_Begin")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Защита каравана СНГ -->
 	<trigger Name="ZashitaCaravan" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />

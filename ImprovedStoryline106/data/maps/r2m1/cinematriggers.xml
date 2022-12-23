@@ -228,6 +228,203 @@
 	</trigger>
 
 <!-- АНТИМИЛЛИТАРИСТЫ -->
+	<!-- Первый приезд в Старую Сибиллу -->
+	<trigger Name="trOCFERolik_Begin" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="OldSibillaEntrance_loc" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("OCFERolik_cam01", CINEMATIC_NO_AIM, 0, 21, 1, 0)
+			FlyLinked( "OCFERolik_cam02", GetPlayerVehicleId(), 16, 0, 1, GetPlayerVehicleId() )
+			StartCinematic()
+
+			AddCinematicMessage(160, 4)
+			AddCinematicMessage(161, 1)
+			AddCinematicMessage(162, 1)
+
+			TActivate("trOCFERolik_Fade")
+			TActivate("trOCFERolik_MusicStart")
+			TActivate("trOCFERolik_cam02")
+			TActivate("trOCFERolik_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trOCFERolik_MusicStart" active="0">
+		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
+		<script>
+			PlayCustomMusic("IntenseDialogue01")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trOCFERolik_Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			CreateNewDummyObject( "dweller", "humAM", -1, -1, CVector(4101.889, 284.046, 6501.771), Quaternion(0.0000, 0.9724, 0.0000, 0.2334), 1)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround( CVector(4191.622, 245.110, 6299.215))
+				vehPlayer:SetRotation(Quaternion(-0.000, -0.205, -0.000, 0.979))
+				vehPlayer:SetExternalPathByName("player_path05")
+				vehPlayer:SetCustomLinearVelocity(10)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trOCFERolik_cam02" active="0">
+		<event flypath="OCFERolik_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			AddCinematicMessage(163, 0.1)
+			AddCinematicMessage(164, 1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trOCFERolik_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:PlaceToEndOfPath("player_path05")
+				vehPlayer:SetCustomLinearVelocity(0)
+				vehPlayer:SetThrottle(0)
+				vehPlayer:SetGamePositionOnGround( CVector(4167.779, 245.457, 6354.651))
+				vehPlayer:SetRotation(Quaternion(-0.018, -0.209, -0.007, 0.978))
+			end
+
+			local oldS = getObj("TheOldSibilla_enter")
+			if oldS then oldS:SetProperty("Active", 1) end
+
+			local humA = getObj("humAM")
+			if humA then humA:Remove() end
+
+			TDeactivate("trOCFERolik_Fade")
+			TDeactivate("trOCFERolik_MusicStart")
+			TDeactivate("trOCFERolik_cam02")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Спасли мирных жителей в Тузе -->
+	<trigger Name="trTECCRolik_Begin" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TuzzEscapists_loc" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("QuietDialogue01")
+
+			local bug = getObj("EscVehicle02")
+			local bugID = bug:GetId()
+
+			FlyLinked("TECCRolik_cam01", GetPlayerVehicleId(), 25.5, 1, 1, bugID)
+			StartCinematic()
+
+			TActivate("trTECCRolik_Fade")
+			TActivate("trTECCRolik_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trTECCRolik_Fade" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			ShowHostileVehicles(false)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(3546.996, 272.048, 2095.528))
+				vehPlayer:SetRotation(Quaternion(-0.002, -0.138, -0.003, -0.990))
+			end
+
+			local bugPoses = {
+				CVector(3558.553, 270.414, 2111.108), 
+				CVector(3545.451, 270.415, 2113.212)
+			}
+
+			local bugRots = {
+				Quaternion(-0.001, -0.982, -0.004, 0.188),
+				Quaternion(-0.001, -0.989, -0.004, 0.149)
+			}
+
+			for veh = 1,2 do
+				local car = getObj("EscVehicle0"..veh)
+				if car then
+					car:SetCustomLinearVelocity(0)
+					car:SetGamePositionOnGround(CVector(bugPoses[veh]))
+					car:SetRotation(Quaternion(bugRots[veh]))
+				end
+			end
+
+			AddCinematicMessage(165, 1)
+			AddCinematicMessage(166, 0.1)
+			AddCinematicMessage(167, 0.1)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trTECCRolik_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
+
+			RemoveQuestItem("TuzzEscapist_P")
+			AddFadingMsgByStrIdFormatted( "fm_player_them_poput", "TuzzEscapist_P")
+
+			ShowHostileVehicles(true)
+
+			CompleteQuest("Podderzhka1_1_Quest")
+
+			for veh = 1,2 do
+				local car = getObj("EscVehicle0"..veh)
+				if car then car:Remove() end
+			end
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(3551.070, 272.552, 2044.250))
+				vehPlayer:SetRotation(Quaternion(-0.002, -0.928, 0.003, 0.372))
+			end
+
+			SetCameraBehindPlayerVehicle()
+
+			TDeactivate("trTECCRolik_Fade")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Перед битвой с бандитами за караван СНГ -->
 	<trigger Name="trBeforeCaravanAM" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="BeforeCaravan_loc" />

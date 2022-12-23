@@ -229,7 +229,7 @@
 				ModelName="r2_man"
 				skin="1"
 				cfg="92"
-				helloReplyNames="RecruiterInAR_hellodlg0 RecruiterInAR_hellodlg1 RecruiterInAR_hellodlg2 RecruiterInAR_hellodlg3 RecruiterInAR_hellodlg4 RecruiterInAR_hellodlg5 Dlg_npc_002279"
+				helloReplyNames="RecruiterInAR_hellodlg0 RecruiterInAR_hellodlg1 RecruiterInAR_hellodlg2 RecruiterInAR_hellodlg3 RecruiterInAR_hellodlg4 RecruiterInAR_hellodlg5"
 				SpokenCount="0" />
 
 			<Object
@@ -265,6 +265,26 @@
 				skin="1"
 				cfg="222"
 				helloReplyNames="TrashFarmer_hellodlg0 TrashFarmer_hellodlg1 TrashFarmer_hellodlg2"
+				SpokenCount="0" />
+
+			<Object
+				Name="WorkerEscapist"
+				Belong="1015"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="0"
+				cfg="380"
+				helloReplyNames="Dlg_npc_003373 Dlg_npc_003379"
+				SpokenCount="0" />
+
+			<Object
+				Name="RecruiterInAR1"
+				Belong="1015"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="1"
+				cfg="92"
+				helloReplyNames="Dlg_npc_003377"
 				SpokenCount="0" />
 
 			<Object

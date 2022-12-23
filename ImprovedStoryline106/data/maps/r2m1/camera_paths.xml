@@ -29,6 +29,23 @@
 	</Path>
 
 <!-- АНТИМИЛЛИТАРИСТЫ -->
+	<!-- Первый приезд в Старую Сибиллу -->
+	<Path Name="OCFERolik_cam01">
+		<Point  coord="4102.065 286.011 6503.869" rotation="0.018 0.975 -0.088 -0.201"/>
+		<Point  coord="4099.917 286.011 6502.932" rotation="0.024 0.961 -0.090 -0.259"/>
+	</Path>
+
+	<Path Name="OCFERolik_cam02">
+		<Point  coord="10 3 20" />
+		<Point  coord="5 4 20" />
+	</Path>
+
+	<!-- Спасли мирных жителей в Тузе -->
+	<Path Name="TECCRolik_cam01">
+		<Point  coord="-30 3 0" />
+		<Point  coord="-30 10 -20" />
+	</Path>
+
 	<!-- Спасли караван СНГ от бойцов АР -->
 	<Path Name = "DefendSngMolok_Path1">
 		<Point  coord="-20 7 -30"/>

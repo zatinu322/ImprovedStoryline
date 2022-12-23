@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes"?>
 <Paths>
 <!-- АНТИМИЛЛИТАРИСТЫ и СНГ -->
+	<!-- Спасаем людей из Марецции -->
+	<Path Name = "Podderzhka_cam01">
+		<Point  coord="1801.826 335.603 3325.779" rotation="-0.035 -0.848 0.056 0.525"/>
+		<Point  coord="1806.973 334.839 3323.217" rotation="-0.035 -0.848 0.056 0.525"/>
+	</Path>
+
+	<Path Name = "Podderzhka_cam02">
+		<Point  coord="-10 10 40"/>
+		<!-- <Point  coord="-20 3 20"/> -->
+	</Path>
+
+	<Path Name = "Podderzhka_cam03">
+		<Point  coord="0 7.25 -25"/>
+	</Path>
+
 	<!-- Встреча с палачом -->
 	<Path Name = "Kontsovka5">
 		<Point  coord="720.094 288.002 3279.181" rotation="-0.110 -0.703 0.112 0.694"/>

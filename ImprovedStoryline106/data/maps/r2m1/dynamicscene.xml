@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="4138">
+	LastId="4140">
 	<TargetNamesForDestroy
 		Names="u1 u2 u3 u4 u5 u6 u7u u8 u9" />
 
@@ -957,13 +957,22 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="ProfessorMal"
+				Name="TuzVerb1"
 				Belong="1016"
 				Prototype="NPC"
-				ModelName="r1_man"
+				ModelName="r2_man"
+				cfg="87"
+				helloReplyNames="Dlg_npc_003365"
+				SpokenCount="0" />
+
+			<Object
+				Name="EngineerEscapist"
+				Belong="1016"
+				Prototype="NPC"
+				ModelName="mask_thief"
 				skin="1"
 				cfg="102"
-				helloReplyNames="Dlg_npc_002551"
+				helloReplyNames="Dlg_npc_003363 Dlg_npc_003369"
 				SpokenCount="0" />
 
 			<Object
@@ -3963,9 +3972,9 @@
 			Name="TheOldSibilla_enter"
 			Belong="1083"
 			Prototype="genericLocation"
-			Pos="4161.907 246.091 6472.610"
+			Pos="4164.730 245.252 6411.322"
 			Rot="0.000 -0.737 0.000 0.676"
-			Radius="50.000" />
+			Radius="35.000" />
 
 		<Object
 			Name="BARIKADACOOL2"
@@ -10000,24 +10009,24 @@
 		Name="factory_box712"
 		Belong="-1"
 		Prototype="factory_box"
-		Pos="4131.988 261.209 6352.832"
-		Rot="0.000 -0.998 0.000 0.061"
+		Pos="4103.843 245.431 6365.120"
+		Rot="0.000 -0.996 0.000 -0.094"
 		NodeScale="0.950" />
 
 	<Object
 		Name="factory_box713"
 		Belong="-1"
 		Prototype="factory_box"
-		Pos="4130.488 261.209 6355.603"
-		Rot="0.000 -0.991 0.000 0.131"
+		Pos="4102.805 245.559 6367.769"
+		Rot="0.000 -0.998 0.000 -0.063"
 		NodeScale="0.970" />
 
 	<Object
 		Name="factory_box714"
 		Belong="-1"
 		Prototype="factory_box"
-		Pos="4135.013 261.209 6354.880"
-		Rot="0.000 0.749 0.000 0.663"
+		Pos="4105.858 245.462 6367.494"
+		Rot="0.000 0.872 0.000 0.489"
 		NodeScale="0.920" />
 
 	<Object
@@ -55348,6 +55357,37 @@
 		Prototype="genericLocation"
 		Pos="2295.433 233.000 5427.806"
 		Radius="71.000" />
+
+	<Object
+		Name="OldSibillaEntrance_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="4187.015 242.771 6317.060"
+		Radius="29.000" />
+
+	<Object
+		Name="Professor_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="0.000 375.893 0.000"
+		Radius="1.000">
+		<Object
+			Name="ProfessorMal"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="r1_man"
+			skin="1"
+			cfg="102"
+			helloReplyNames="Dlg_npc_002551"
+			SpokenCount="0" />
+	</Object>
+
+	<Object
+		Name="TuzzEscapists_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3546.389 270.000 2084.019"
+		Radius="47.000" />
 
 	<Object
 		Belong="1100"

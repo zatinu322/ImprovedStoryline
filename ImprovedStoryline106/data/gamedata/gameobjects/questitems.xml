@@ -347,4 +347,16 @@ $Id: QuestItems.xml,v 1.11 2005/10/18 06:12:48 anton Exp $
 		Name			= "quest_bratislav_component3"
 		ModelFile		= "gadget_04"
 		ResourceType	= "QUEST_POTATO" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "TuzzEscapist_P"
+		ModelFile	= "dweller_white"
+		ResourceType	= "POPYT4IK" />
+
+	<Prototype
+		Class		= "QuestItem"
+		Name		= "MarezziaEscapist_P"
+		ModelFile	= "dweller_white"
+		ResourceType	= "POPYT4IK" />
 </Prototypes>

@@ -2,52 +2,181 @@
 <triggers>
 
 <!-- ÀÍÒÈÌÈËËÈÒÀÐÈÑÒÛ è ÑÍÃ -->
-	<!-- Âûãíàëè èç Ìàðåööèè -->
+	<!-- Ñïàñàåì ëþäåé èç Ìàðåööèè -->
 	<trigger Name="Podderzhka_cin" active="0">
 		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
 		<script>
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.x = PlfCoor.x - 15
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z + 15
-			
-			FlyAround(1.5, 0, 35, 24, PlfCoor, PlfID, 0, 1)
-			StartCinematic()
-			
-			AddCinematicMessage( 64, 0.25 )
-			AddCinematicMessage( 65, 0.25 )
-			AddCinematicMessage( 66, 0.25 )
+			PlayCustomMusic("Passage02")
 
+			RuleConsole("cinematic_spring_coeff 6.0")
+
+			CreateNewDummyObject("dweller2", "humHuxx", -1, -1, CVector(1833.359, 335.795, 3314.328), Quaternion(0.0000, -0.6511, 0.0000, 0.7590), 0)
+			local hHux = getObj("humHuxx")
+			hHuxID = hHux:GetId()
+
+			local mTeam = CreateTeam("MarezziaGuards1", 1015, CVector(1866.919, 323.060, 3746.634), {"Ural00", "DemoShot1"})
+			local mTeamVeh = mTeam:GetVehicle(0)
+			local mTeamVehID = mTeamVeh:GetId()
+			
+			Fly("Podderzhka_cam01", CINEMATIC_AIM_TO_ID, hHuxID, 7, 0, 0)
+			FlyLinked("Podderzhka_cam02", GetPlayerVehicleId(), 5, 0, 0, mTeamVehID)
+			FlyLinked("Podderzhka_cam03", GetPlayerVehicleId(), 2, 0, 0, GetPlayerVehicleId(), nil, nil, nil, true)
+			StartCinematic()
+
+			AddCinematicMessage( 64, 1 )
+
+			TActivate("Podderzhka_cin_msg64")
+			TActivate("Podderzhka_cin_cam02")
+			TActivate("Podderzhka_cin_end")
+			TActivate("Podderzhka_cin_skip")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="Podderzhka_cin_msg64" active="0">
+		<event msgid="64" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			
+			getObj("humHuxx"):SetNodeAction(AT_RESERVED1)
+			getObj("humHuxx"):SetNextForAnimation(AT_RESERVED1, AT_STAND2)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="Podderzhka_cin_cam02" active="0">
+		<event flypath="Podderzhka_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetCustomControlEnabled( true )
-				vehPlayer:SetCustomLinearVelocity( 0 )
-				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround( CVector(1722.219, 319.111, 3285.243))
-				vehPlayer:SetRotation(Quaternion(0.002, -0.746, 0.004, 0.666))
+				vehPlayer:SetCustomControlEnabled(true)
+				vehPlayer:SetGamePositionOnGround(CVector(1703.841, 318.045, 3294.984))
+				vehPlayer:SetRotation(Quaternion(0.001, 0.741, -0.003, -0.671))
+				vehPlayer:SetCustomControlEnabled(false)
+				vehPlayer:SetExternalPathByName("player_path01")
+				vehPlayer:SetCustomLinearVelocity(20)
 			end
 
-			TActivate("Podderzhka_cin_end")
-			
+			local mTeam = getObj("MarezziaGuards1")
+			if mTeam then
+				mTeam:GetVehicle(0):SetGamePositionOnGround(CVector(1765.555, 318.755, 3298.760))
+				mTeam:GetVehicle(0):SetRotation(Quaternion(-0.059, 0.737, 0.064, -0.670))
+				mTeam:GetVehicle(0):SetSkin(5)
+				mTeam:GetVehicle(1):SetGamePositionOnGround(CVector(1769.619, 319.269, 3276.425))
+				mTeam:GetVehicle(1):SetRotation(Quaternion(0.026, 0.736, -0.029, -0.676))
+				mTeam:GetVehicle(1):SetSkin(5)
+				mTeam:SetDestination(CVector(1473.826, 318.045, 3256.403))
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
 
 	<trigger Name="Podderzhka_cin_end" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then 
+				vehPlayer:AddModifier("hp", "+ 2500")
+				vehPlayer:AddModifier("fuel", "+ 100")
+				vehPlayer:SetExternalPathByName("")
+				LOG("NOT A BUG! JUST A FEATURE.")
+			end
+
+			local hHux = getObj("humHuxx")
+			if hHux then hHux:Remove() end
+
+			SetCameraBehindPlayerVehicle()
+
+			SetTolerance(1100, 1015, RS_ENEMY)
+
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			SetVar("MarezziaCutscene", 0)
+
+			for veh = 0,1 do
+				local mVeh = getObj("MarezziaGuards1_vehicle_"..veh)
+				if mVeh then mVeh:Remove() end
+			end
+
+			local mTeam = CreateTeam("MarezziaGuards", 1015, CVector(1632.466, 318.049, 3268.689), {"Ural00", "DemoShot1"}, nil, nil, Quaternion(0.001, 0.708, -0.003, -0.706))
+
+			for veh = 0,1 do
+				local mVeh = getObj("MarezziaGuards_vehicle_"..veh)
+				if mVeh then mVeh:SetSkin(5) end
+			end
+
+			TActivate("trMarezziaGuardsDIE")
+
+			TDeactivate("Podderzhka_cin_msg64")
+			TDeactivate("Podderzhka_cin_cam02")
+			TDeactivate("Podderzhka_cin_skip")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="Podderzhka_cin_skip" active="0">
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
 
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then 
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(1504.116, 318.045, 3275.446))
+				vehPlayer:SetRotation(Quaternion(0.001, 0.777, -0.003, -0.629))
+				vehPlayer:AddModifier("hp", "+ 2500")
+				vehPlayer:AddModifier("fuel", "+ 100")
+			end
+
+			local hHux = getObj("humHuxx")
+			if hHux then hHux:Remove() end
+
 			SetCameraBehindPlayerVehicle()
 
+			SetTolerance(1100, 1015, RS_ENEMY)
+
+			RuleConsole("cinematic_spring_coeff 0.7")
+
 			SetVar("MarezziaCutscene", 0)
+
+			for veh = 0,1 do
+				local mVeh = getObj("MarezziaGuards1_vehicle_"..veh)
+				if mVeh then mVeh:Remove() end
+			end
+
+			local mTeam = CreateTeam("MarezziaGuards", 1015, CVector(1632.466, 318.049, 3268.689), {"Ural00", "DemoShot1"}, nil, nil, Quaternion(0.001, 0.708, -0.003, -0.706))
+
+			for veh = 0,1 do
+				local mVeh = getObj("MarezziaGuards_vehicle_"..veh)
+				if mVeh then mVeh:SetSkin(5) end
+			end
+
+			TActivate("trMarezziaGuardsDIE")
+
+			TDeactivate("Podderzhka_cin_msg64")
+			TDeactivate("Podderzhka_cin_cam02")
+			TDeactivate("Podderzhka_cin_end")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trMarezziaGuardsDIE" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="MarezziaGuards" />
+		<event	timeout="60"		eventid="GE_TIME_PERIOD" />
+		<script>
+			StopPlayingCustomMusic()
 
 			trigger:Deactivate()
 		</script>

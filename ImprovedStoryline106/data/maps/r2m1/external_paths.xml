@@ -1567,6 +1567,12 @@
 	</Path>
 
 	<Path
+		Name="player_path05">
+		<Point
+			coord="4167.408 6355.624" />
+	</Path>
+
+	<Path
 		Name="vehNezn_path01">
 		<Point
 			coord="7647.889 4909.739" />

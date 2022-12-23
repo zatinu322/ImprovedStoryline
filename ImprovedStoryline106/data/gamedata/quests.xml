@@ -2518,8 +2518,8 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="Podderzhka1_Quest"
-			OnTake='ShowCircleOnMinimapByName("Marezzia")' />
+			PrecedingQuests="Podderzhka1_1_Quest"
+			OnTake='ShowCircleOnMinimap("r2m2", CVector(1829.361, 316.000, 3300.456))' />
 
 		<quest
 			Name="Podderzhka3_Quest"
@@ -2527,8 +2527,16 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="Podderzhka2_Quest"
-			OnTake='ShowCircleOnMinimapByName("AMBaza1")' />
+			PrecedingQuests="Podderzhka2_Quest" />
+
+		<quest
+			Name="Podderzhka1_1_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Podderzhka1_Quest"
+			OnTake='ShowCircleOnMinimapByName("TuzzEscapists_loc")' />
 	</quest>
 
 	<quest
@@ -2711,7 +2719,9 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="FigureOutWhatsGoingOn_Quest" />
+		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
+		OnFail='TDeactivate("trOCFERolik_Begin")'
+		OnTake='TActivate("trOCFERolik_Begin")' />
 
 	<quest
 		Name="OdettIsDead_Quest"

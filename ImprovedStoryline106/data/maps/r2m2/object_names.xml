@@ -90,7 +90,7 @@
 
 	<Object
 		Name="RecruiterInAR"
-		FullName="Оппозиционер Хукс" />
+		FullName="Вербовщик Хукс" />
 
 	<Object
 		Name="CaptainInAR"
@@ -307,4 +307,12 @@
 	<Object
 		Name="Kartograph2"
 		FullName="Картограф" />
+
+	<Object
+		Name="WorkerEscapist"
+		FullName="Оппозиционер Алекс" />
+
+	<Object
+		Name="RecruiterInAR1"
+		FullName="Вербовщик Хукс" />
 </ObjectNames>

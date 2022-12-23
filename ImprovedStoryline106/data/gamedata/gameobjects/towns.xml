@@ -1069,7 +1069,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "5"
 
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= "Ural"	>
 			<Article
 				Prototype				= "scrap_metal"				
 				Amount	 			= "24"

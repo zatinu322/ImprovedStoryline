@@ -45,6 +45,9 @@
 
 				PlayCustomMusic("GreenLeaves")
 
+				SetTolerance(1100, 1003, RS_ENEMY)
+				ShowHostileVehicles(false)
+
 				Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
 				Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
 				Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
@@ -405,6 +408,8 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+			ShowHostileVehicles(true)
+			
 			RestoreAllToleranceStatus()
 
 			TeamCreate("HospitalEnemy",1002,CVector(2648.307, 321.213, 1661.576),{"Sml301"})

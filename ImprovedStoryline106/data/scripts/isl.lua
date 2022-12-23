@@ -7,6 +7,7 @@ if ISL_VERSION == nil then
 	EXECUTE_SCRIPT "data\\scripts\\compatch.lua"
 end
 
+-- r1m1, появление первого врага
 function r1m1_FirstEnemyStart()
 	Fly("cam01", CINEMATIC_NO_AIM, 0, 5, 1, 1 )
 	StartCinematic()

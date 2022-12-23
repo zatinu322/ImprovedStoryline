@@ -422,7 +422,7 @@
 			Name="Asgard_enter"
 			Belong="1011"
 			Prototype="genericLocation"
-			Pos="3590.571 288.975 6157.674"
+			Pos="3592.432 288.958 6157.910"
 			Rot="-0.011 -0.888 -0.014 0.460"
 			Radius="30.000"
 			LookingTimeOut="10.000" />
@@ -829,16 +829,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="AboutThief1"
-				Belong="1010"
-				Prototype="NPC"
-				ModelName="r2_man"
-				skin="1"
-				cfg="36"
-				helloReplyNames="AboutThief_hellodlg0 Dlg_npc_002069"
-				SpokenCount="0" />
-
-			<Object
 				Name="Kartograph3"
 				Belong="1010"
 				Prototype="NPC"
@@ -861,6 +851,16 @@
 				skin="1"
 				cfg="86"
 				helloReplyNames="MininMer_hellodlg0 MininMer_hellodlg1"
+				SpokenCount="0" />
+
+			<Object
+				Name="AboutThief1"
+				Belong="1010"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="1"
+				cfg="36"
+				helloReplyNames="AboutThief_hellodlg0 Dlg_npc_002069"
 				SpokenCount="0" />
 
 			<Object

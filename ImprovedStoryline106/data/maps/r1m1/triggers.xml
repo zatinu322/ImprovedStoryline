@@ -825,6 +825,7 @@
 		<script>
 			local Plf = GetPlayerVehicle()
 			Plf:SetExternalPathByName("")
+			LOG("NOT A BUG! JUST A FEATURE.")
 
 			if QuestStatus("d_PunishBandits_Quest")==Q_TAKEN then
 				TActivate("PlayerDrunkBehaviour")

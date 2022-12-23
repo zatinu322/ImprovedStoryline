@@ -666,6 +666,15 @@
 				local hs7 = GetEntityByName("FIRE07")
 				if hs7 then hs7:Remove() end
 
+				local tr = getObj("trMarezziaGuardsDIE")
+				if tr:IsActivated() then
+					TDeactivate("trMarezziaGuardsDIE")
+					for veh = 0,1 do
+						local mVeh = getObj("MarezziaGuards_vehicle_"..veh)
+						if mVeh then mVeh:Remove() end
+					end
+				end
+
 				PassToMap("r2m1", "FromR2M2", -1 )
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)

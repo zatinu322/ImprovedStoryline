@@ -1620,7 +1620,7 @@
 	<Item
 		id="DemoShot1"
 		locForm="0"
-		value="Враг" />
+		value="Урал" />
 
 	<Item
 		id="AxelVehicle"
@@ -1685,12 +1685,12 @@
 	<Item
 		id="r1m3_bug01"
 		locForm="0"
-		value="Охрана моста" />
+		value="Охранник" />
 
 	<Item
 		id="r1m3_molokovoz01"
 		locForm="0"
-		value="Охрана моста" />
+		value="Охранник" />
 
 	<Item
 		id="r1m3_MerScout"
@@ -1780,7 +1780,12 @@
 	<Item
 		id="Bug"
 		locForm="0"
-		value="Транспорт" />
+		value="Вэн" />
+
+	<Item
+		id="Ural"
+		locForm="0"
+		value="Урал" />
 
 	<Item
 		id="Ural02"
@@ -2021,4 +2026,14 @@
 		id="CruiserZhrec"
 		locForm="0"
 		value="Жрец" />
+
+	<Item
+		id="TuzzEscapist_P"
+		locForm="0"
+		value="Беженцы из Туза" />
+
+	<Item
+		id="MarezziaEscapist_P"
+		locForm="0"
+		value="Оппозиция из Марецции" />
 </ModelNames>

@@ -210,20 +210,19 @@
 	<trigger	Name="trRescArmyPlace"	active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			CreateTeam('RescueCars',1064,CVector(getPos('RescueCiv_loc')),{'DemoMolokovoz1','r1m1_bug02'})
-
-			local RescVeh1 = GetEntityByName("RescueCars_vehicle_0")
-			local RescVeh2 = GetEntityByName("RescueCars_vehicle_1")
+			local RescVeh = CreateTeam('RescueCars',1064,CVector(getPos('RescueCiv_loc')),{'DemoMolokovoz1','r1m1_bug02'})
 			
-			if RescVeh1 then
+			if RescVeh:GetVehicle(0) then
 				RescVeh1:SetGamePositionOnGround( CVector(1790.302, 249.817, 1177.060))
 				RescVeh1:SetRotation(Quaternion(-0.000, 0.689, 0.000, 0.725))
 			end
 			
-			if RescVeh2 then
+			if RescVeh:GetVehicle(1) then
 				RescVeh2:SetGamePositionOnGround( CVector(1838.534, 256.242, 1208.368))
 				RescVeh2:SetRotation(Quaternion(-0.082, 0.990, -0.103, 0.053))
 			end
+
+			TActivate("trRescArmyDie")
 			
 			trigger:Deactivate()
 		</script>
@@ -634,6 +633,8 @@
 		<script>
 
 			AddBook("r3_book_transformer")
+
+			SetTolerance(1100, 1020, RS_NEUTRAL)
 
         	trigger:Deactivate()
 		</script>

@@ -4074,6 +4074,10 @@
 		<Item
 			id="end_screen"
 			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="flagshtock_smallGun"
+			file="data\models\AnimModels.xml" />
 	</AnimatedModelsServer>
 
 	<StaticModelsServer />

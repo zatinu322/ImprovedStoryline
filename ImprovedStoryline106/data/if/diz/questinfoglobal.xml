@@ -58,8 +58,7 @@
 
 	<QuestInfo
 		questName="BackToTroickoe"
-		briefDiz="Вернуться в Троицкое и взять рецепт у Петро"
-		fullDiz="Я помог Петро проучить Назара, и теперь он должен поделиться со мной рецептом своей ананаги."
+		briefDiz="Вернуться в Троицкое"
 		isMainQuest="0">
 		<Map
 			name="r1m1"
@@ -333,7 +332,7 @@
 	<QuestInfo
 		questName="CheckTheEast"
 		briefDiz="Найти источник шума"
-		fullDiz="С дороги на восток доносится какой-то шум. Мы c Василием решили проверить"
+		fullDiz="С дороги на восток доносится какой-то шум. Мы c Василием решили проверить, что там происходит."
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -3032,6 +3031,11 @@
 		questName="d_PunishBandits_Quest"
 		briefDiz="Проучить бандитов"
 		fullDiz="Хорошенечко надравшись, Петро решил, что самое время наказать бандита, который плохо относится к местным девушкам. Я просто обязан ему в этом помочь!"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="d_PunishBandits_Quest1"
+		briefDiz="Атаковать базу бандитов"
 		isMainQuest="0">
 		<Map
 			name="r1m1"

@@ -33,35 +33,32 @@
 			local rrr = GetEntityByName ("zagr2")
 			if rrr then rrr:Remove() end
 			
-			CreateVehicleEx("AKF_Cruiser1","Brrig1",CVector(5675.483, 222.303, 1422.223), 1012)
-			CreateVehicleEx("AKF_Cruiser2","Brrig2",CVector(5702.842, 224.224, 1420.564), 1012)
-			CreateVehicleEx("CoolBelaz_2","Brrig3",CVector(5725.101, 227.665, 1418.215), 1012)
+			local br1 = CreateVehicleEx("AKF_Cruiser1","Brrig1",CVector(5675.483, 222.303, 1422.223), 1012, Quaternion(0.010, -0.702, 0.004, 0.713))
+			local br2 = CreateVehicleEx("AKF_Cruiser2","Brrig2",CVector(5702.842, 224.224, 1420.564), 1012, Quaternion(0.055, -0.668, 0.035, 0.741))
+			local br3 = CreateVehicleEx("CoolBelaz_2","Brrig3",CVector(5725.101, 227.665, 1418.215), 1012, Quaternion(0.071, -0.664, 0.042, 0.743))
 			
-			local br1 = GetEntityByName("Brrig1")
 			if br1 then
-				br1:SetRotation(Quaternion(0.010, -0.702, 0.004, 0.713))
 				br1:SetExternalPathByName("BrigadaBridgePath")
 				br1:SetMaxSpeed(10)
 				br1:SetCruisingSpeed(10)
 				br1:setGodMode( 1 )
+				br1:SetRandomSkin()
 			end
 			
-			local br2 = GetEntityByName("Brrig2")
 			if br2 then
-				br2:SetRotation(Quaternion(0.055, -0.668, 0.035, 0.741))
 				br2:SetExternalPathByName("BrigadaBridgePath")
 				br2:SetMaxSpeed(11)
 				br2:SetCruisingSpeed(11)
 				br2:setGodMode( 1 )
+				br2:SetRandomSkin()
 			end
 			
-			local br3 = GetEntityByName("Brrig3")
 			if br3 then
-				br3:SetRotation(Quaternion(0.071, -0.664, 0.042, 0.743))
 				br3:SetExternalPathByName("BrigadaBridgePath")
 				br3:SetMaxSpeed(9)
 				br3:SetCruisingSpeed(9)
 				br3:setGodMode( 1 )
+				br3:SetRandomSkin()
 			end
 			
 			TActivate("trBOOOM_cam011")
@@ -96,7 +93,6 @@
 			CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5535.000, 202, 1423.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
 			CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5545.000, 202, 1425.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
 			CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5555.000, 202, 1422.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
-
 
 			AddCinematicMessage( 1, 5 )
 

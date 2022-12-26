@@ -1101,7 +1101,7 @@
 
 	<Reply
 		name="Dlg_pl_002908"
-		text="Ты разве не хочешь поучаствовать в исследовании этой местности? На тебя непохоже…"
+		text="Ты разве не хочешь поучаствовать в исследовании этой местности? На тебя не похоже…"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002909" />
 
@@ -1849,7 +1849,7 @@
 
 	<Reply
 		name="Dlg_pl_003310"
-		text="Так а почему-бы тебе самому за ними не съездить? Я тебе что, мальчик на побегушках?"
+		text="А почему-бы тебе самому за ними не съездить? Я тебе что, мальчик на побегушках?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003311" />
 
@@ -1867,7 +1867,7 @@
 
 	<Reply
 		name="Dlg_pl_003312"
-		text="Всё это очень странно. Но хорошо, я привезу, что ты просишь. Где мне искать твои запчасти?"
+		text="Темнишь ты что-то. Но хорошо, я привезу, что ты просишь. Где мне искать твои запчасти?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003314" />
 
@@ -1922,7 +1922,7 @@
 
 	<Reply
 		name="Dlg_npc_003322"
-		text="Да никакой проблемы тут нет! Просто наш Верховный, как бы это сказать... Не терпит любых проявлений праздности. Некоторые с этим смирились, но я не из их числа!"
+		text="Да никакой проблемы тут нет! Просто наш Верховный, как бы это сказать... Не терпит никаких проявлений праздности. Некоторые с этим смирились, но я не из их числа!"
 		role="NPC"
 		nextReplies="Dlg_pl_003323" />
 
@@ -2009,7 +2009,7 @@
 
 	<Reply
 		name="Dlg_npc_003332"
-		text='Ну-ка, ну-ка...|Батюшки мои! Это же то, что мне не доставало все эти годы - достойный рецепт и особенности выдержки. Да ты хоть представляешь какой напиток богов мы получим, если соединим твои рецепты с моим методом "отдыха"?'
+		text='Ну-ка, ну-ка...|Батюшки мои! Это же то, чего мне не доставало все эти годы - достойный рецепт и особенности выдержки. Да ты хоть представляешь какой напиток богов мы получим, если соединим твои рецепты с моим методом "отдыха"?'
 		role="NPC"
 		nextReplies="Dlg_pl_003333" />
 
@@ -2064,7 +2064,7 @@
 
 	<Reply
 		name="Dlg_pl_003345"
-		text="Стоп, что?! Несколько месяцев?! Но ведь..."
+		text="Погоди, что?! Несколько месяцев?! Но ведь..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003346" />
 
@@ -2203,7 +2203,7 @@
 		text="Что ж, теперь ты видел всё."
 		role="NPC"
 		scriptCondition="QuestStatus('r4m2_TalkWithScientific')==Q_TAKEN"
-		scriptResult="CompleteQuest('r4m2_TalkWithScientific'); TakeQuest('r4m2_DestroyPlate'); TActivate('SergoAivenTalk1'); ShowMap()"
+		scriptResult="CompleteQuest('r4m2_TalkWithScientific'); TakeQuest('r4m2_DestroyPlate'); ShowMap()"
 		nextReplies="r4m2_Bar_Scientist_2_N02" />
 
 	<Reply
@@ -2463,7 +2463,7 @@
 		name="Dlg_pl_003169"
 		text="Спасибо, прощай."
 		role="PLAYER"
-		scriptResult="AddQuestItem('quest_key_for_submarine1'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_submarine1'); EndConversation()" />
+		scriptResult="TActivate('SergoAivenTalk1'); AddQuestItem('quest_key_for_submarine1'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_submarine1'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_003101"
@@ -2476,7 +2476,7 @@
 		name="Dlg_pl_003102"
 		text="Прощай."
 		role="PLAYER"
-		scriptResult="EndConversation()" />
+		scriptResult="TActivate('SergoAivenTalk1'); EndConversation()" />
 <!--Root/r4m1/Сюжетные--><!--Root/r4m1/Опциональные--><!--Root/r4m1/Разговоры о книгах-->
 	<Reply
 		name="Gadad_Bar_CrazyBook1_1_N01"
@@ -5016,7 +5016,7 @@
 		name="r3m1_NearUluk_Civilian1_1_P041"
 		text="Я помогу им. Пусть и тебе сопутствует удача! Прощай."
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m1_RescueUlukCivil'); TActivate('trRescArmyPlace'); TActivate('trRescArmyDie'); TActivate('trWentCivCamp'); SetTolerance(1100,1064,RS_ALLY); SetTolerance(1019,1064,RS_ALLY); GetCurNpc():SetSpokenCount(1); SetVar('BezhenAlive', 0); EndConversation();" />
+		scriptResult="TakeQuest('r3m1_RescueUlukCivil'); TActivate('trRescArmyPlace'); TActivate('trWentCivCamp'); SetTolerance(1100,1064,RS_ALLY); SetTolerance(1019,1064,RS_ALLY); GetCurNpc():SetSpokenCount(1); SetVar('BezhenAlive', 0); EndConversation();" />
 
 	<Reply
 		name="Set_Bar_Customer1_2_N01"
@@ -7160,7 +7160,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz478"
-		text="Да появилась тут недавно одна шайка, которая ведёт антипропаганду и подрывает наш боевой дух. Гутарят, мол, война никому не нужна, поэтому её надо завершить. Одним словом - дураки. Говорят, они обосновались где-то на севере, но мне как-то слабо в это верится."
+		text="Да появилась тут недавно одна шайка, которая ведёт антипропаганду и подрывает наш боевой дух. Гутарят, мол, война никому не нужна, поэтому её надо завершить. Одним словом - дураки. Говорят, они обосновались где-то на севере, но это скорее пьяные россказни, чем правда."
 		role="NPC"
 		nextReplies="Dlg_pl_xyz479" />
 
@@ -7787,7 +7787,7 @@
 		name="Dlg_pl_002290"
 		text="Так точно!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); RemoveQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'MarezziaEscapist_P') EndConversation()" />
+		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); RemoveQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_them_poput', 'MarezziaEscapist_P') EndConversation()" />
 <!--Root/r2m1/Сюжетные/Антимилитаристы/Эвакуация из Туза-->
 	<Reply
 		name="Dlg_npc_003363"
@@ -7851,7 +7851,7 @@
 		name="Dlg_pl_003372"
 		text="Есть. Но, бьюсь об заклад, ещё никогда в вашей жизни он не был настолько очевидным."
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka1_Quest'); TActivate('trTuzzEscapistsCarsCreate'); GetCurNpc():SetSpokenCount(2); AddQuestItem('TuzzEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'TuzzEscapist_P'); EndConversation()" />
+		scriptResult="CompleteQuest('Podderzhka1_Quest'); TActivate('trTuzzEscapistsCarsCreate'); GetCurNpc():SetSpokenCount(2); AddQuestItem('TuzzEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_many_poput', 'TuzzEscapist_P'); EndConversation()" />
 <!--Root/r2m1/Сюжетные/Антимилитаристы/Эвакуация из Марецции-->
 	<Reply
 		name="Dlg_npc_003373"
@@ -7903,7 +7903,7 @@
 		name="Dlg_pl_003380"
 		text="Бегите за мной, моя машина прямо у ворот!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('trMarezziaHuksExit'); SetVar('MarezziaCutscene', 1); GetCurNpc():SetSpokenCount(2); AddQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'MarezziaEscapist_P'); LeaveTown()" />
+		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('trMarezziaHuksExit'); SetVar('MarezziaCutscene', 1); GetCurNpc():SetSpokenCount(2); AddQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_many_poput', 'MarezziaEscapist_P'); LeaveTown()" />
 <!--Root/r2m1/Сюжетные/Антимилитаристы/Новая Сибилла-->
 	<Reply
 		name="Dlg_npc_002295"
@@ -9599,14 +9599,14 @@
 		name="Dlg_pl_001963"
 		text="И не говори. Ну всё, ананаги бахнул, а теперь и по делам пора. Бывай!"
 		role="PLAYER"
-		scriptCondition="not(IsQuestComplete('BackToTroickoe'))"
+		scriptCondition="not(IsQuestComplete('d_PunishBandits_Quest'))"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001956"
 		text="А вот с этим я бы поспорил!"
 		role="PLAYER"
-		scriptCondition="IsQuestComplete('BackToTroickoe')"
+		scriptCondition="IsQuestComplete('d_PunishBandits_Quest')"
 		nextReplies="Dlg_npc_001957" />
 
 	<Reply
@@ -11089,7 +11089,7 @@
 
 	<Reply
 		name="Dlg_npc_003239"
-		text="И слышать не хочу! А теперь немедленно покиньте магазин, или я зову охрану."
+		text="И слышать не хочу! А теперь немедленно покиньте магазин, или я зову охрану!"
 		role="NPC"
 		nextReplies="Dlg_pl_003240" />
 
@@ -12506,7 +12506,7 @@
 
 	<Reply
 		name="Dlg_npc_d3d212"
-		text="Как-то раз ночью на город напали бандиты. Я плохо помню само нападение, маленький тогда был, но мне отец рассказывал, что много тогда народу полегло. Жену его тоже убили. Радует только одно - ни один из подонков не ушёл живым."
+		text="Как-то раз ночью на город напали бандиты. Я плохо помню само нападение, но люди рассказывали, что много тогда народу полегло. Жену его тоже убили. Радует только одно - ни один из подонков не ушёл живым."
 		role="NPC"
 		nextReplies="Dlg_pl_d3d213" />
 
@@ -13486,7 +13486,7 @@
 
 	<Reply
 		name="Dlg_pl_001726"
-		text="А почему бы и нет. Вот. Надеюсь, не обманешь."
+		text="Рискованная инвестиция... Но я в деле."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() >= 10000"
 		scriptResult="AddPlayerMoney( -10000 ); GetCurNpc():SetSpokenCount( 5 ); CompleteQuest('ReturnToDirector2_Quest'); TakeQuest('BuyKollizey_Quest'); CompleteQuest('BuyKollizey_Quest'); EndConversation()" />
@@ -14179,7 +14179,7 @@
 
 	<Reply
 		name="Dlg_npc_001555"
-		text="А, ну да, Бен…. Нет, в Мидгарде он не живёт. После смены руководства он не сумел договориться с новым мэром, прекратил все свои исследования, покинул город и поселился на отшибе. Ой, чифирёк, наверное, уже заварился. Никуда не уходи."
+		text="А, ну да, Бен…|Нет, в Мидгарде он не живёт. После смены руководства он не сумел договориться с новым мэром, прекратил все свои исследования, покинул город и поселился на отшибе. Ой, чифирёк, наверное, уже заварился. Никуда не уходи."
 		role="NPC"
 		nextReplies="Dlg_pl_001556 Dlg_pl_001564" />
 
@@ -17160,7 +17160,7 @@
 
 	<Reply
 		name="Dlg_npc_001460"
-		text="Вот это другое дело. Ну, как я и говорил, раньше я такого никогда не видел. Как же он её вертел, и так, и эдак, то сверху, то снизу, то на приборку… Наверное, полчаса кувыркались! Я и сам, глядя на это, так возбудился, что чуть напарника своего не того… Ну да ладно, забудь. А закончилось, значит, вот как… Ты знаешь, что делать."
+		text="Вот это другое дело. Ну, как я и говорил, раньше я такого никогда не видел. Как же он её вертел, и так, и эдак… Наверное, полчаса кувыркались! Я и сам, честно скажу, глядя на это, чуть напарника своего не того… Ну да ладно, забудь. А закончилось, значит, вот как… Ты знаешь, что делать."
 		role="NPC"
 		nextReplies="Dlg_pl_001461 Dlg_pl_001464" />
 
@@ -17720,7 +17720,7 @@
 
 	<Reply
 		name="Dlg_npc_001403"
-		text="Один довольно влиятельный местный бандит - Феликс. Я видел, как он вместе с его бойцами проезжал в сторону Глухого."
+		text="Один местный бандитский авторитет - Феликс. Я видел, как он вместе с его бойцами проезжал в сторону Глухого."
 		role="NPC"
 		nextReplies="Dlg_pl_001404 Dlg_pl_003003" />
 

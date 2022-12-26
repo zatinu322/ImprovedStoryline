@@ -1866,7 +1866,7 @@
 				SetCameraDirectionToObj( FVehicle0:GetId() )
 			end
 
-			TeamCreate("FelixBanditCarsBand",1013,CVector(2022.755, 315, 2426.375),{"Fighter01","Fighter01"})
+			TeamCreate("FelixBanditCarsBand",1013,CVector(2022.755, 315, 2426.375),{"Fighter01","Fighter01"}, nil, 1)
 
 			local FVehicle1 = GetEntityByName("FelixBanditCarsBand_vehicle_0")
 			if FVehicle1 then
@@ -1911,7 +1911,8 @@
 			TActivate("trFelix1_cam031")
 			TActivate("trFelix1_cam04")
 			TActivate("trFelix1_PayEnd")
-		trigger:Deactivate()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1988,7 +1989,8 @@
 
 			local vehFelix0 = GetEntityByName("FelixVehicle01")
 			if vehFelix0 then vehFelix0:Remove() end
-		trigger:Deactivate()
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -2322,7 +2324,7 @@
 			TDeactivate( "trFelix2" )
 			TDeactivate( "trFelix2_cam02" )
 
-			TeamCreate("FelixBanditCars2",1013,CVector(493.000, 303.000, 1883.000),{"Fighter01","Fighter01","DemoHunter1"})
+			TeamCreate("FelixBanditCars2",1013,CVector(493.000, 303.000, 1883.000),{"Fighter01","Fighter01","DemoHunter1"}, nil, 1)
 
 			TActivate( "METALFELIXDIE2" )
 
@@ -3364,8 +3366,8 @@
 	<trigger Name="REVOLUTIONTIMEEND" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Terrorists" />
 		<script>
-			if IsQuestTaken("d_PunishBandits_Quest") then
-				CompleteQuest( "d_PunishBandits_Quest" )
+			if IsQuestTaken("d_PunishBandits_Quest1") then
+				CompleteQuest( "d_PunishBandits_Quest1" )
 
 				SaveAllToleranceStatus(RS_NEUTRAL)
 

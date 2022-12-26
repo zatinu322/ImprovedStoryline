@@ -850,7 +850,7 @@
 
 			CompleteQuest("r2m1_ArtAntipod_Quest")
 
-			ShowCircleOnMinimapByName("GulikCar")
+			ShowCircleOnMinimapByName("GulikCar_vehicle_0")
 
 			trigger:Deactivate()
 		</script>

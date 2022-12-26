@@ -5,5 +5,7 @@
 	<Item id="TheDreenorVillage_Bar"		file="data\if\ico\TalkWithNpcDlg\bardialog1.dds"		file1=""/>
 	<Item id="TheTown_Bar"		file="data\if\ico\TalkWithNpcDlg\officedialog2.dds"		file1=""/>
 	<Item id="Esting_Bar"		file="data\if\ico\TalkWithNpcDlg\officedialog1.dds"		file1=""/>
+	<Item id="Serrafima_loc"		file="data\if\ico\TalkWithNpcDlg\cardialog1.dds"		file1=""/>
+	<Item id="LisaPlen1_loc"		file="data\if\ico\TalkWithNpcDlg\cardialog2.dds"		file1=""/>
 
 </icons>

@@ -7247,15 +7247,6 @@
 				skin="1"
 				helloReplyNames="Dlg_npc_002712 Dlg_npc_002734 Dlg_npc_002769 Dlg_npc_002779"
 				SpokenCount="0" />
-
-			<Object
-				Name="Serrafima"
-				Belong="1088"
-				Prototype="NPC"
-				ModelName="r1_woman"
-				cfg="248"
-				helloReplyNames="Dlg_npc_002830"
-				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -12661,7 +12652,7 @@
 				Belong="1091"
 				Prototype="NPC"
 				ModelName="mask_snowlisa"
-				helloReplyNames="Dlg_npc_002838 Dlg_npc_002800"
+				helloReplyNames="Dlg_npc_002800"
 				SpokenCount="0" />
 
 			<Object
@@ -34052,6 +34043,39 @@
 		Belong="-1"
 		Prototype="Breakable_Dub3snow"
 		Pos="1596.561 253.550 517.334" />
+
+	<Object
+		Name="Serrafima_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="0 1 0"
+		Radius="1.000"
+		LookingTimeOut="100.000">
+		<Object
+			Name="Serrafima"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="r1_woman"
+			cfg="248"
+			helloReplyNames="Dlg_npc_002830"
+			SpokenCount="0" />
+	</Object>
+
+	<Object
+		Name="LisaPlen1_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="0 1 0"
+		Radius="1.000"
+		LookingTimeOut="100.000">
+		<Object
+			Name="LisaPlen1"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="mask_snowlisa"
+			helloReplyNames="Dlg_npc_002838"
+			SpokenCount="0" />
+	</Object>
 
 	<Object
 		Belong="1100"

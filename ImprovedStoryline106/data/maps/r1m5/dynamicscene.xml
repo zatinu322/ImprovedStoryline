@@ -57476,6 +57476,16 @@
 			ModelName="mask_hero"
 			helloReplyNames="Dlg_npc_003253"
 			SpokenCount="0" />
+
+		<Object
+			Name="Babca1"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="r1_woman"
+			skin="1"
+			cfg="92"
+			helloReplyNames="Dlg_npc_002939"
+			SpokenCount="0" />
 	</Object>
 
 	<Object
@@ -57928,6 +57938,13 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="688.600 269.770 3270.907"
+		Radius="6.000" />
+
+	<Object
+		Name="Ananaga_loc1"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2086.368 255.000 1320.751"
 		Radius="6.000" />
 
 	<Object

@@ -500,7 +500,7 @@
 
 	<!-- Разговор Айвена и Серго, когда игрок уезжает -->
 	<trigger Name="SergoAivenTalk1" active="0">
-		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
+		<event	eventid="GE_LEAVE_TOWN"	ObjName="ScientiferVillage" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
@@ -516,18 +516,7 @@
 			FlyLinked( "linkedcam", CTochID, 11.5, 0, 0, vehPID )
 			Fly("PlayerLeave_Cam", CINEMATIC_NO_AIM, 0, 24.5, 0, 1 )
 			StartCinematic()
-			
-			TActivate("SergoAivenTalk2")
-			TActivate("SergoAivenTalk3")
-			TActivate("SergoAivenTalk4")
-			
-			trigger:Deactivate()
-		</script>
-	</trigger>
 
-	<trigger Name="SergoAivenTalk2" active="0">
-		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
-		<script>
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetCustomControlEnabled( true )
@@ -538,6 +527,10 @@
 				vehPlayer:SetRotation(Quaternion(-0.039, 0.399, -0.034, -0.916))
 				vehPlayer:SetExternalPathByName("PlayerLeave_Path")
 			end
+			
+			TActivate("SergoAivenTalk3")
+			TActivate("SergoAivenTalk4")
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -578,7 +571,6 @@
 			local CToch = GetEntityByName("CamTochka")
 			if CToch then CToch:Remove() end
 			
-			TDeactivate("SergoAivenTalk2")
 			TDeactivate("SergoAivenTalk3")
 			
 			trigger:Deactivate()

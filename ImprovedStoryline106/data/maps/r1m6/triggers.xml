@@ -498,7 +498,7 @@
 			
 			SetTolerance(1100,1088,RS_ALLY)
 			
-			StartConversation( "LisaPlen" )
+			StartConversation( "LisaPlen1" )
 			
 			trigger:Deactivate()
 		</script>

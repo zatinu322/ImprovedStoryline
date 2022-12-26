@@ -476,7 +476,6 @@
 				AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_start_father_letter")
 				AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_disk_1")
 
-				FailQuestIfTaken( "BackToTroickoe" )
 				FailQuestIfTaken( "WorkGiver_Quest1" )
 				FailQuestIfTaken("d_PunishBandits_Quest")
 
@@ -827,7 +826,7 @@
 			Plf:SetExternalPathByName("")
 			LOG("NOT A BUG! JUST A FEATURE.")
 
-			if QuestStatus("d_PunishBandits_Quest")==Q_TAKEN then
+			if QuestStatus("d_PunishBandits_Quest1")==Q_TAKEN then
 				TActivate("PlayerDrunkBehaviour")
 			end
 
@@ -847,7 +846,7 @@
 	<trigger Name="REVOLUTIONTIMEDEAD" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Punishers" />
 		<script>
-			FailQuest("d_PunishBandits_Quest")
+			FailQuest("d_PunishBandits_Quest1")
 
 			AddImportantFadingMsgId("fm_petro_death")
 

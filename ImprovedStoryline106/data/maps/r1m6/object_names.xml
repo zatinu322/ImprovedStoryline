@@ -146,4 +146,7 @@
 		Name="TheSerafimaHouse_Workshop"
 		FullName="ÄÎÌ ÑÅÐÀÔÈÌÛ" />
 
+	<Object
+		Name="LisaPlen1"
+		FullName="Ëèñà" />
 </ObjectNames>

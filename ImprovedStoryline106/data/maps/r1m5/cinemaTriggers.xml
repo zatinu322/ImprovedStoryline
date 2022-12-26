@@ -202,7 +202,7 @@
 				if h1 then h1:Remove() end
 			end
 
-			StartConversation( "Babca" )
+			StartConversation( "Babca1" )
 			
 			trigger:Deactivate()
 		</script>

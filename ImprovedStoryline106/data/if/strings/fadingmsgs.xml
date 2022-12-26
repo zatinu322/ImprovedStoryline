@@ -169,6 +169,10 @@
 		value="%1p теперь ваш попутчик." />
 
 	<string
+		id="fm_player_add_many_poput"
+		value="%1p теперь ваши попутчики." />
+
+	<string
 		id="fm_player_rem_poput"
 		value="%1p покинул ваш автомобиль." />
 

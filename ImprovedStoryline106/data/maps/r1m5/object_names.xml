@@ -246,4 +246,8 @@
 		Name="BratislavRinolsk"
 		FullName="Рабочий Братислав" />
 
+	<Object
+		Name="Babca1"
+		FullName="Трактирщица Истома" />
+
 </ObjectNames>

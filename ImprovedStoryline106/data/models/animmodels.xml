@@ -18992,4 +18992,11 @@
 		windwavy="0"
 		trans="0" />
 
+	<model
+		id="flagshtock_smallGun"
+		file="data\models\ammo\plasma01.gam"
+		shadow="1"
+		windwavy="0"
+		trans="0" />
+
 </AnimatedModels>

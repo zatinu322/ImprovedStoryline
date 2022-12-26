@@ -57,6 +57,7 @@
 				vehPlayer:SetGamePositionOnGround(CVector(1703.841, 318.045, 3294.984))
 				vehPlayer:SetRotation(Quaternion(0.001, 0.741, -0.003, -0.671))
 				vehPlayer:SetCustomControlEnabled(false)
+				vehPlayer:LimitMaxSpeed(30)
 				vehPlayer:SetExternalPathByName("player_path01")
 				vehPlayer:SetCustomLinearVelocity(20)
 			end
@@ -86,6 +87,7 @@
 				vehPlayer:AddModifier("hp", "+ 2500")
 				vehPlayer:AddModifier("fuel", "+ 100")
 				vehPlayer:SetExternalPathByName("")
+				vehPlayer:UnlimitMaxSpeed()
 				LOG("NOT A BUG! JUST A FEATURE.")
 			end
 
@@ -133,10 +135,12 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:PlaceToEndOfPath("player_path01")
 				vehPlayer:SetGamePositionOnGround(CVector(1504.116, 318.045, 3275.446))
 				vehPlayer:SetRotation(Quaternion(0.001, 0.777, -0.003, -0.629))
 				vehPlayer:AddModifier("hp", "+ 2500")
 				vehPlayer:AddModifier("fuel", "+ 100")
+				vehPlayer:UnlimitMaxSpeed()
 			end
 
 			local hHux = getObj("humHuxx")

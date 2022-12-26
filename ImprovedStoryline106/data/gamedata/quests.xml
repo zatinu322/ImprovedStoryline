@@ -2939,7 +2939,6 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="BackToTroickoe"
 		Levels="r1m4" />
 <!--Root/r1m4/Мистер Шляпа-->
 	<quest
@@ -4088,17 +4087,23 @@
 		PrecedingQuests="Buyer_Quest1"
 		OnComplete="AddPlayerMoney(100)"
 		OnFail='TDeactivate("REVOLUTIONTIMEEND"); TDeactivate("REVOLUTIONTIMEDEAD"); TActivate("REVOLUTIONTIMEREMOVE"); TDeactivate("PlayerDrunkBehaviour"); TDeactivate("PlayerDrunkBehaviourInPlace")'
-		Levels="r1m1" />
+		Levels="r1m1">
+		<quest
+			Name="d_PunishBandits_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="d_PunishBandits_Quest" />
 
-	<quest
-		Name="BackToTroickoe"
-		Automatic="1"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		PrecedingQuests="d_PunishBandits_Quest"
-		OnTake='ShowCircleOnMinimapByName("TheFreedom")'
-		Levels="r1m1" />
+		<quest
+			Name="BackToTroickoe"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="d_PunishBandits_Quest1" />
+	</quest>
 <!--Root/r1m1/Опциональные/Квест про госпиталь-->
 	<quest
 		Name="r1m1_Hospital_Quest"

@@ -5,32 +5,34 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="FatherCar_loc" />
 		<script>
 
-			SaveAllToleranceStatus(RS_NEUTRAL)
+			if QuestStatus("r1m3_TW_OralceAboutAlien")==Q_COMPLETED then
+				SaveAllToleranceStatus(RS_NEUTRAL)
 
-			local Plf = GetPlayerVehicle()
+				local Plf = GetPlayerVehicle()
 
-			if Plf then
-				Plf:SetCustomControlEnabled( true )
-				Plf:SetCustomLinearVelocity( 0 )
-				Plf:SetThrottle( 0 )
-				Plf:SetCustomControlEnabled( false )
+				if Plf then
+					Plf:SetCustomControlEnabled( true )
+					Plf:SetCustomLinearVelocity( 0 )
+					Plf:SetThrottle( 0 )
+					Plf:SetCustomControlEnabled( false )
+				end
+
+				Fly("FatherCar_Cam", CINEMATIC_NO_AIM, 0, 17, 1, 0 )
+				Fly("FatherCar_Cam2", CINEMATIC_NO_AIM, 0, 13.5, 0, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 201, 0.25 )
+				AddCinematicMessage( 202, 0.25 )
+
+				AddHistory( "r4_FindFatherCar" )
+				AddFadingMsgId( "fm_history_got" )
+
+				TakeQuest("LookAtAivenCar")
+				CompleteQuest("LookAtAivenCar")
+
+				TActivate("trMoveToFatherCar_cam02")
+				TActivate("trMoveToFatherCarEnd")
 			end
-
-			Fly("FatherCar_Cam", CINEMATIC_NO_AIM, 0, 17, 1, 0 )
-			Fly("FatherCar_Cam2", CINEMATIC_NO_AIM, 0, 13.5, 0, 1 )
-			StartCinematic()
-
-			AddCinematicMessage( 201, 0.25 )
-			AddCinematicMessage( 202, 0.25 )
-
-			AddHistory( "r4_FindFatherCar" )
-			AddFadingMsgId( "fm_history_got" )
-
-			TakeQuest("LookAtAivenCar")
-			CompleteQuest("LookAtAivenCar")
-
-			TActivate("trMoveToFatherCar_cam02")
-			TActivate("trMoveToFatherCarEnd")
 
 			trigger:Deactivate()
 		</script>

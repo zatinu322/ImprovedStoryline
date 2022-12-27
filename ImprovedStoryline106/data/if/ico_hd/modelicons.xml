@@ -32,7 +32,7 @@
    <Item id="uralCargo03" 	      file="data\if\ico\InventoryDlg\ural\Ural_Cargo03.dds" file1=""/>
    <Item id="uralCargo04" 	      file="data\if\ico\InventoryDlg\ural\Ural_Cargo04.dds" file1=""/>
    <Item id="uralCargo05" 	      file="data\if\ico\InventoryDlg\ural\Ural_Cargo05.dds" file1=""/>
-   <Item id="uralCargo06" 	      file="data\if\ico\InventoryDlg\ural\Ural_Cargo05.dds" file1=""/>
+   <Item id="uralCargo06" 	      file="data\if\ico\InventoryDlg\ural\Ural_Cargo06.dds" file1=""/>
 
    <Item id="belazCab01"         file="data\if\ico\InventoryDlg\belaz\Belaz_Cab01.dds" file1=""/>
    <Item id="belazCab02"         file="data\if\ico\InventoryDlg\belaz\Belaz_Cab02.dds" file1=""/>

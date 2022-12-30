@@ -4,7 +4,7 @@ name: ImprovedStoryline106
 # required human readable info
 display_name: Improved Storyline
 version: "1.0.6-HD-dev"
-build: "221112"
+build: "221230"
 description: |
   Сюжетная модификация, главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 authors: pavlikrpg
@@ -23,7 +23,7 @@ prerequisites:
     - hd_gun_models
     - hd_vehicle_models
     - ost_remaster
-patcher_version_requirement: "1.12"
+patcher_version_requirement: "1.13"
 no_base_content: false
 optional_content:
   - name: KrayCity

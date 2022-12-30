@@ -1828,8 +1828,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="d_FindVerbInAR_Quest"
-		OnComplete="AddPlayerMoney(1000)"
-		OnTake='ShowCircleOnMinimapByName("SNGProviantRiders")' />
+		OnComplete="AddPlayerMoney(1000)" />
 <!--Root/r2m2/Сюжетные/Напасть на деревню-->
 	<quest
 		Name="r2m2_GiveBardakToSideVillage"

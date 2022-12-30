@@ -5,7 +5,7 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="FatherCar_loc" />
 		<script>
 
-			if QuestStatus("r1m3_TW_OralceAboutAlien")==Q_COMPLETED then
+			if QuestStatus("r1m3_TW_OralceAboutAlien")~=Q_COMPLETED then
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
 				local Plf = GetPlayerVehicle()

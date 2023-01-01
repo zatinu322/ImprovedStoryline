@@ -232,20 +232,22 @@
 	<trigger Name="trOCFERolik_Begin" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="OldSibillaEntrance_loc" />
 		<script>
-			SaveAllToleranceStatus(RS_NEUTRAL)
+			if QuestStatus("d_FindVerbInAM_Quest")==Q_TAKEN then
+				SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("OCFERolik_cam01", CINEMATIC_NO_AIM, 0, 21, 1, 0)
-			FlyLinked( "OCFERolik_cam02", GetPlayerVehicleId(), 16, 0, 1, GetPlayerVehicleId() )
-			StartCinematic()
+				Fly("OCFERolik_cam01", CINEMATIC_NO_AIM, 0, 21, 1, 0)
+				FlyLinked( "OCFERolik_cam02", GetPlayerVehicleId(), 16, 0, 1, GetPlayerVehicleId() )
+				StartCinematic()
 
-			AddCinematicMessage(160, 4)
-			AddCinematicMessage(161, 1)
-			AddCinematicMessage(162, 1)
+				AddCinematicMessage(160, 4)
+				AddCinematicMessage(161, 1)
+				AddCinematicMessage(162, 1)
 
-			TActivate("trOCFERolik_Fade")
-			TActivate("trOCFERolik_MusicStart")
-			TActivate("trOCFERolik_cam02")
-			TActivate("trOCFERolik_End")
+				TActivate("trOCFERolik_Fade")
+				TActivate("trOCFERolik_MusicStart")
+				TActivate("trOCFERolik_cam02")
+				TActivate("trOCFERolik_End")
+			end
 
 			trigger:Deactivate()
 		</script>

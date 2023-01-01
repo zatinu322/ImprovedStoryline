@@ -7291,7 +7291,7 @@
 		name="Dlg_pl_xyz502"
 		text="Выезжаю немедленно!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('d_FindVerbInSNG_Quest');  CompleteQuest('d_FindVerbInSNG_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); FailQuestIfTaken('d_FindVerbInAM_Quest'); FailQuestIfTaken('d_FindVerbInAR_Quest');  TActivate ('SERCHSIDELINE');  AddHistory(  'r2_SNG_00'  );  AddFadingMsgId( 'fm_history_got' );  SetTolerance( 1100, 1016, RS_ALLY );  SetTolerance( 1100, 1015, RS_ENEMY );  SetTolerance( 1100, 1083, RS_ENEMY ); TakeQuest('d_PatrulSideSNG_Quest');  EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('d_FindVerbInSNG_Quest');  CompleteQuest('d_FindVerbInSNG_Quest');  CompleteQuestIfTaken('d_GetSupportOneOfTheBands1_Quest'); FailQuestIfTaken('d_FindVerbInAM_Quest'); TDeactivate('trOCFERolik_Begin'); FailQuestIfTaken('d_FindVerbInAR_Quest');  TActivate ('SERCHSIDELINE');  AddHistory(  'r2_SNG_00'  );  AddFadingMsgId( 'fm_history_got' );  SetTolerance( 1100, 1016, RS_ALLY );  SetTolerance( 1100, 1015, RS_ENEMY );  SetTolerance( 1100, 1083, RS_ENEMY ); TakeQuest('d_PatrulSideSNG_Quest');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_xyz495"

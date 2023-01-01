@@ -2719,7 +2719,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="FigureOutWhatsGoingOn_Quest"
-		OnFail='TDeactivate("trOCFERolik_Begin")'
 		OnTake='TActivate("trOCFERolik_Begin")' />
 
 	<quest

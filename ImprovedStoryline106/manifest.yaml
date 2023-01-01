@@ -18,7 +18,7 @@ link: https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr
 prerequisites: 
   - name: community_remaster
     versions:
-      - "1.12"
+      - "1.13"
     optional_content:
     - hd_gun_models
     - hd_vehicle_models

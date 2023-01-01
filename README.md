@@ -1,22 +1,23 @@
 ![ISL_Logo](https://i.imgur.com/PWehxAi.png)
 # Важная информация
 
-Эта версия Improved Storyline предназначена только для [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch).
+Эта версия Improved Storyline предназначена только для `Community Patch`.
 
-В данный момент эта версия мода не завершена и находится в разработке. **Устанавливайте и играйте на свой страх и риск**.
+В данный момент эта версия мода не завершена и находится в разработке. 
 
-Версия для Community Remaster - [здесь](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr).
+**Устанавливайте и играйте на свой страх и риск**.
+
+Версия для `Community Remaster` - [здесь](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr).
 
 # Установка
-~~Скачать мод можно через зелёную кнопку **Code - Download ZIP**.~~
 
 **Скачивайте актуальный билд в [релизах](https://github.com/zatinu322/ImprovedStoryline/releases)!**
 ## 1 способ (на чистую игру)
-1. Создать в корневой папке с игрой папку mods, скопировать туда папку ImprovedStoryline106.
-2. Установить [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch). После завершения установки патча, установщик должен предложить установить обнаруженные моды.
-3. Следуйте инструкциям установщика.
+1. Создать в корневой папке с игрой папку `mods`, скопировать туда папку `ImprovedStoryline106` со всем её содержимым.
+2. Установить [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/releases/). После завершения установки, вам будет предложено установить обнаруженные моды.
+3. Следовать инструкциям установщика.
 
-## 2 способ (на уже установленный [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch))
-1. Создать в корневой папке с игрой папку mods, скопировать туда папку ImprovedStoryline106.
-2. Запустить patcher.exe, ввести команду mods.
+## 2 способ (на уже установленный [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/releases/))
+1. Создать в корневой папке с игрой папку `mods`, скопировать туда папку `ImprovedStoryline106` со всем её содержимым.
+2. Запустить `commod.exe`, ввести команду `mods`.
 3. Следовать инструкциям установщика.

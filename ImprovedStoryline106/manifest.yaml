@@ -18,7 +18,7 @@ link: https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp
 prerequisites: 
   - name: community_patch
     versions:
-      - "1.12"
+      - "1.13"
     optional_content: []
 patcher_version_requirement: "1.13"
 no_base_content: false

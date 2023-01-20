@@ -15218,7 +15218,7 @@
 		name="Dlg_pl_002429"
 		text="Лиса, рад тебя видеть в добром здравии! Ты не поверишь, сколько всего произошло за последние несколько дней. Начать хотя бы с того, что я увидел на востоке пустыни…"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 3 ); TActivate('NextHoursTr'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 3 ); TActivate('NextHoursTr'); SetWeather(0); SetGameTime(21,0); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002459"
@@ -15313,7 +15313,7 @@
 		name="Dlg_pl_002473"
 		text="Мудрые слова, Бен! А сейчас давайте хорошенько отметим конец этого долгого приключения! Хочу сказать тост! За вас, мои друзья! Без вашей помощи у меня навряд ли что-то получилось бы! До дна!"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 5 ); TActivate('NextDayTr'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount( 5 ); TActivate('NextDayTr'); SetGameTime(9, 0); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_003274"
@@ -15375,7 +15375,7 @@
 
 	<Reply
 		name="Dlg_pl_003286"
-		text="Сразу же начинается другое. Понимаю. Ну, до скорого, Бен! Я буду заезжать, вот увидишь!"
+		text="...сразу же начинается другое. Понимаю. Ну, до скорого, Бен! Я буду заезжать, вот увидишь!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 6 ); TActivate('NormalEndCin'); EndConversation() " />
 <!--Root/r1m2/Сюжетные/Отличная концовка-->
@@ -15764,7 +15764,6 @@
 		text="Чего желаете?"
 		role="NPC"
 		scriptCondition="QuestStatus('CureForLisa_Quest')==Q_TAKEN"
-		scriptResult="CompleteQuest('CureForLisa_Quest')"
 		nextReplies="Dlg_pl_003171" />
 
 	<Reply
@@ -15777,13 +15776,21 @@
 		name="Dlg_npc_003172"
 		text="Да, такие у нас есть. Минутку...|С вас 11000 монет."
 		role="NPC"
-		nextReplies="Dlg_pl_003173" />
+		nextReplies="Dlg_pl_003173 Dlg_pl_003384" />
+
+	<Reply
+		name="Dlg_pl_003384"
+		text="Пока у меня нет таких денег."
+		role="PLAYER"
+		scriptCondition="11000 > GetPlayerMoney()"
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_003173"
 		text="Вот, держите.| А теперь скорее к Бену!"
 		role="PLAYER"
-		scriptResult="AddPlayerMoney(-11000); AddQuestItem('quest_lisa_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_lisa_narcotik'); EndConversation()" />
+		scriptCondition="GetPlayerMoney() >= 11000"
+		scriptResult="CompleteQuest('CureForLisa_Quest'); AddPlayerMoney(-11000); AddQuestItem('quest_lisa_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_lisa_narcotik'); EndConversation()" />
 
 	<Reply
 		name="BadEndingDlg"

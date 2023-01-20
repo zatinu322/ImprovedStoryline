@@ -362,6 +362,8 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 
+		ShowHostileVehicles(false)
+
 		SaveAllToleranceStatus(RS_NEUTRAL)
 
 		GetPlayerVehicle():SetCustomLinearVelocity( 0 )
@@ -624,6 +626,8 @@
 		RestoreAllToleranceStatus()
 
 		SetTolerance(1100, 1019, RS_ENEMY)
+
+		ShowHostileVehicles(true)
 
 		skin = nil
 

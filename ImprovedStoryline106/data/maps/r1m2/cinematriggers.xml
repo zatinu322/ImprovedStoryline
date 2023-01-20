@@ -642,6 +642,12 @@
 
 				getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
 				getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+
+				getObj("humLisa"):SetNodeAction(AT_STAND2)
+				getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+
+				getObj("humBen"):SetNodeAction(AT_RESERVED1)
+				getObj("humBen"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 			end
 
 			trigger:Deactivate()
@@ -697,6 +703,12 @@
 
 					getObj("humPlayer"):SetNodeAction(AT_RESERVED1)
 					getObj("humPlayer"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
+
+					getObj("humLisa"):SetNodeAction(AT_STAND2)
+					getObj("humLisa"):SetNextForAnimation(AT_STAND2, AT_STAND1)
+
+					getObj("humBen"):SetNodeAction(AT_RESERVED1)
+					getObj("humBen"):SetNextForAnimation(AT_RESERVED1, AT_STAND1)
 				elseif GetVar("BenDwelPosition").AsString == "LisaNewCar" then
 					CreateNewDummyObject("dweller_ben", "humBen", -1, -1, CVector(3765.977, 116.988, 1806.781), Quaternion(0.0000, -0.5592, 0.0000, 0.8290), 0)
 					CreateNewDummyObject("dweller_lisa", "humLisa", -1, -1, CVector(3762.207, 116.903, 1808.512), Quaternion(0.0000, 0.8605, 0.0000, 0.5094), 0)

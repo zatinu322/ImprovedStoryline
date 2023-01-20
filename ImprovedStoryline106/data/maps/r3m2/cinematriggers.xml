@@ -925,6 +925,7 @@
 				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
 				vehFanatik:SetCustomLinearVelocity( 30 )
 				vehFanatik:SetThrottle( 1 )
+				vehFanatik:SetNewPart("BASKET_SIDE_GUN_0", "marsSideGun")
 				vehFanatik:SetRandomSkin()
 				fan_skin = vehFanatik:GetSkin()
 			end
@@ -953,7 +954,8 @@
 					fan_skin = nil
 				else
 					vehFanatik:SetRandomSkin()
-				end	
+				end
+				vehFanatik:SetNewPart("BASKET_SIDE_GUN_0", "marsSideGun")
 			end
 
 			local vehCrew0 = GetEntityByName("FanatikCrew_vehicle_0")

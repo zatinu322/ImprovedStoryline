@@ -17,10 +17,10 @@
 			StartCinematic()
 			UpdateCinematic( 1 )
 
-			AddCinematicMessage( 77771, 0.1)
-
 			TActivate("trFirstRolikMusic")
 			TActivate("StartOpening")
+
+			r1m1_ShowNarratorText()
 
 			trigger:Deactivate()
 		</script>
@@ -3105,10 +3105,15 @@
 				humPlayer:SetPosition(CVector(3125.330, 318.387, 418.929))
 				humPlayer:SetRotation(Quaternion(0.0000, -0.8266, 0.0000, 0.5628))
 			end
-
+			
 			local humLisa = GetEntityByName("humLisa")
 			if humLisa then
-				humLisa:SetPosition(CVector(3116.525, 318.432, 417.357))
+				if GetVar("KrayCity").AsInt == 1 then -- в KrayCity другая высота
+					humLisa:SetPosition(CVector(3116.525, 318.509, 417.357))
+				else
+					humLisa:SetPosition(CVector(3116.525, 318.432, 417.357))
+				end
+				
 				humLisa:SetRotation(Quaternion(0.0000, -0.6772, 0.0000, -0.7358))
 			end
 

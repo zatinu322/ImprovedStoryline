@@ -1984,7 +1984,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		ParentPrototype 	= "Hunter">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "hunterCab02" />
-			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vector01" />
 			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
 			<Part id = "BASKET"		Prototype = "fakeCargo" />
 		</Parts>

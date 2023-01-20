@@ -1799,26 +1799,20 @@
 			local vehStar = GetEntityByName("StarostaDEAD")
 			if vehStar then vehStar:AddModifier("hp","= 0") end
 
-			CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave0"}
-			local bw = GetEntityByName("PlayerBlastWave0")
-			if bw then bw:SetPosition(GetCameraPos()) end
+			local WavePoses = {
+				GetCameraPos(), 
+				CVector(1638.414, 405.015, 2203.807), 
+				CVector(1653.077, 407.077, 2161.874), 
+				CVector(1720.980, 415.706, 2172.805), 
+				CVector(1731.537, 406.570, 2253.226)
+			}
 
-			CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave1"}
-			local bw = GetEntityByName("PlayerBlastWave1")
-			if bw then bw:SetPosition( CVector(1638.414, 405.015, 2203.807)) end
+			for wave = 1,5 do
+				CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave"..wave}
+				local bw = GetEntityByName("PlayerBlastWave"..wave)
+				if bw then bw:SetPosition(WavePoses[wave]) end
+			end
 
-			CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave2"}
-			local bw = GetEntityByName("PlayerBlastWave2")
-			if bw then bw:SetPosition( CVector(1653.077, 407.077, 2161.874)) end
-
-			CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave3"}
-			local bw = GetEntityByName("PlayerBlastWave3")
-			if bw then bw:SetPosition( CVector(1720.980, 415.706, 2172.805)) end
-
-			CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave4"}
-			local bw = GetEntityByName("PlayerBlastWave4")
-			if bw then bw:SetPosition( CVector(1731.537, 406.570, 2253.226)) end
-			
 			TActivate("trKateberg_destroy")
 			
 			trigger:Deactivate()

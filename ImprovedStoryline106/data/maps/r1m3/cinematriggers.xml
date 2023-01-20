@@ -94,6 +94,22 @@
 			CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5545.000, 202, 1425.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
 			CreateEffectTTLed("ET_PS_PLASMAWATERSPLASH", CVector(5555.000, 202, 1422.000), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
 
+			local WavePoses = {
+				CVector(5540.696, 222.093, 1422.007), 
+				CVector(5576.835, 222.103, 1421.815), 
+				CVector(5611.800, 222.102, 1421.642),
+			}
+
+			for wave = 1, 3 do
+				CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave"..wave}
+				local bw = GetEntityByName("PlayerBlastWave"..wave)
+				if bw then bw:SetPosition(WavePoses[wave]) end
+			end
+
+			CreateNewObject	{	prototypeName = "superBlastWave", objName = "PlayerBlastWave4"}
+			local bw = GetEntityByName("PlayerBlastWave4")
+			if bw then bw:SetPosition(GetCameraPos()) end
+
 			AddCinematicMessage( 1, 5 )
 
 			TActivate("trBOOOM_cam02")
@@ -2383,6 +2399,11 @@
 			
 			CreateVehicleEx("DemoUral1","Buhar1",CVector(3146.185, 277.446, 5717.556), 1026, Quaternion(-0.001, -0.187, -0.005, -0.982))
 			CreateVehicleEx("DemoMolokovoz1","Buhar2",CVector(3151.739, 276.337, 5714.316), 1026, Quaternion(0.005, -0.187, 0.011, -0.982))
+
+			for car = 1,2 do
+				local veh = getObj("Buhar"..car)
+				if veh then veh:SetSkin(car) end
+			end
 
 			trigger:Deactivate()
 		</script>

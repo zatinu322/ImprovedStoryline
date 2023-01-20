@@ -4,6 +4,11 @@ if ISL_VERSION == nil then
 	ISL_VERSION = "106-221230"
 end
 
+-- r1m1, показ текста рассказчика в начале игры
+function r1m1_ShowNarratorText()
+	AddCinematicMessage( 77771, 0.1)
+end
+
 -- r1m1, появление первого врага
 function r1m1_FirstEnemyStart()
 	Fly("cam01", CINEMATIC_NO_AIM, 0, 5, 1, 1 )

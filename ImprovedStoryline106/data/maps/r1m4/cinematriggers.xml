@@ -1390,6 +1390,7 @@
 			local vehRyb = GetEntityByName("RybakTSP")
 			if vehRyb then
 				vehRyb:SetRotation(Quaternion(0.001, -0.168, -0.023, 0.985))
+				vehRyb:SetRandomSkin()
 			end
 			
 			trigger:Deactivate()

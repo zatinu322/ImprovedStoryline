@@ -17,6 +17,9 @@
 
 			CreateNewDummyObject("rr_barrier3", "mininBarrier", -1, -1, CVector(6718.542, 230.886, 5747.152), Quaternion(-0.3620, 0.5734, 0.2916, 0.6747), 0)
 
+			local circus = getObj("r1m3_Circus_1")
+			if circus then circus:SetRuined(true) end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

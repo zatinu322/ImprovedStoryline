@@ -20922,6 +20922,32 @@
 		Pos="2811.427 264.000 2100.330" />
 
 	<Object
+		Name="r3m2_OracleComplex_1"
+		Belong="1080"
+		Prototype="r3m2_OracleComplex"
+		Pos="695.848 269.089 3230.995"
+		Rot="0.000 1.000 0.000 -0.002"
+		MaxDefenders="0"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravansDest="">
+		<Object
+			Flags="21"
+			Name="r3m2_OracleComplex_1_enter"
+			Belong="1080"
+			Prototype="genericLocation"
+			Pos="695.848 269.089 3230.995"
+			Rot="0.000 1.000 0.000 -0.002"
+			Radius="1.000"
+			Active="0" />
+
+		<Parts />
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
 		Belong="1100"
 		Prototype="someRecollection" />
 </DynamicScene>

@@ -383,4 +383,12 @@
 	<Object
 		Name="AivenGo"
 		FullName="Айвен Го" />
+
+	<Object
+		Name="r1m3_Circus_1"
+		FullName="Центр Развлечений" />
+
+	<Object
+		Name="r1m3_Circus_1_enter"
+		FullName="Центр Развлечений" />
 </ObjectNames>

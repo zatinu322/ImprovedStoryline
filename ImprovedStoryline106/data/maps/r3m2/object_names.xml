@@ -123,4 +123,12 @@
 	<Object
 		Name="Kartograph1"
 		FullName="Картограф" />
+
+	<Object
+		Name="r3m2_OracleComplex_1"
+		FullName="Научный комплекс Оракула" />
+
+	<Object
+		Name="r3m2_OracleComplex_1_enter"
+		FullName="Научный комплекс Оракула" />
 </ObjectNames>

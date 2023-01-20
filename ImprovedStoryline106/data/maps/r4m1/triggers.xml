@@ -414,6 +414,7 @@
 					if FVehicle then
 						FVehicle:SetExternalPathByName("BuharsEvac_Path"..(i+1).."_1")
 						FVehicle:SetCruisingSpeed(100)
+						FVehicle:SetSkin(i+1)
 					end
 				end
 			end

@@ -9,7 +9,7 @@
 		Name="TheVill1_Loc"
 		Belong="1016"
 		Prototype="genericLocation"
-		Pos="3005.884 222.000 3509.719"
+		Pos="3037.615 222.000 3487.019"
 		Radius="5.000" />
 
 	<Object
@@ -17,7 +17,7 @@
 		Name="TheVill2_Loc"
 		Belong="1016"
 		Prototype="genericLocation"
-		Pos="3861.513 289.001 2569.645"
+		Pos="3882.092 289.001 2541.639"
 		Radius="5.000" />
 
 	<Object

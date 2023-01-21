@@ -36,7 +36,7 @@
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 
-			Fly("Start01_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+			Fly("Start01_cam01", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 5, 1, 0 )
 			FlyLinked( "Start01_cam02", PlfID, 10, 0, 0, vehNeznID, nil, nil, nil, nil )
 			FlyLinked( "Start01_cam03", PlfID, 50, 0, 0, vehNeznID, nil, nil, nil, nil )
 			FlyLinked( "Start01_cam04", PlfID, 7, 0, 1, vehNeznID, nil, nil, nil, nil )
@@ -222,6 +222,8 @@
 			SetCameraBehindPlayerVehicle()
 
 			TakeQuest( "FigureOutWhatsGoingOn_Quest" )
+
+			AddBook("r1_book_ar_flyer")
 
 			trigger:Deactivate()
 		</script>
@@ -1087,9 +1089,9 @@
 		</script>
 	</trigger>
 
-	<!-- Караван СНГ доехал до Генденбургска -->
+	<!-- Караван СНГ доехал до Роторска -->
 	<trigger Name="trCaravanToVill1INPLACE" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill1_Loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill2_Loc" />
 		<script>
 			CompleteQuest( "d_SecondVillage_Quest" )
 
@@ -1129,9 +1131,9 @@
 		</script>
 	</trigger>
 
-	<!-- Караван СНГ доехал до Роторска -->
+	<!-- Караван СНГ доехал до Генденбургска -->
 	<trigger Name="trCaravanToVill2INPLACE" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill2_Loc" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="TheVill1_Loc" />
 		<script>
 			CompleteQuest( "d_FirstVillage_Quest" )
 

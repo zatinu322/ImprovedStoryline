@@ -282,11 +282,11 @@
 	<trigger Name="trCaravanToVill1" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			local vehCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANvvt_vehicle_0", CVector(2626.940, 281.148, 1704.669), 1016, Quaternion(0.002, 0.439, -0.009, -0.898))
+			local vehCar = CreateVehicleEx("r2m1_CaravanMolokovoz03","KARAVANvvt_vehicle_0", CVector(2619.876, 280.295, 1711.183), 1016, Quaternion(0.009, 0.903, 0.002, 0.429))
 			if vehCar then
+				vehCar:SetRandomSkin()
 				vehCar:AttachTrailer("MolokovozTrailer")
 				PaintTrailer(vehCar)
-				vehCar:SetMaxTorque(200)
 			end
 
 			TakeQuest("d_SecondVillage_Quest")
@@ -312,7 +312,7 @@
 		<script>
 
 			local vehCar = GetEntityByName("KARAVANvvt_vehicle_0")
-			local vehCarTrailer = GetEntityByName("CKARAVANvvt_vehicle_0_Trailer")
+			local vehCarTrailer = GetEntityByName("KARAVANvvt_vehicle_0_Trailer")
 			if vehCar and vehCar:IsAlive() then
 				vehCar:Remove()
 			end

@@ -2695,7 +2695,7 @@
 
 	<QuestInfo
 		questName="d_FirstVillage_Quest"
-		briefDiz="Следовать за караваном до деревни Роторск"
+		briefDiz="Следовать за караваном до деревни Генденбургск"
 		isMainQuest="1">
 		<Map
 			name="r2m1"
@@ -3082,7 +3082,7 @@
 
 	<QuestInfo
 		questName="d_SecondVillage_Quest"
-		briefDiz="Следовать за караваном до деревни Генденбургск"
+		briefDiz="Следовать за караваном до деревни Роторск"
 		isMainQuest="1">
 		<Map
 			name="r2m1"

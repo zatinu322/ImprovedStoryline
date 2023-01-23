@@ -233,7 +233,6 @@
    <Item id="r1m1_OilVillage"			file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m1_ContraVillage"		file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m1_FreedomVillage"		file1="data\if\ico\LocalMap\icn_oilvillage.dds" file=""/>
-   <Item id="r1m2_BenVillage"			file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m2_SignVillage"			file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m2_ArtefactVillage"		file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m2_OlimpVillage"			file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
@@ -256,7 +255,6 @@
    <Item id="r1m4_BerkoVillage"			file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m4_StorageVillage"		file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r3_AloneDruid"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
-   <Item id="OraculTest"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r3_RazboinikVillage"		file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r3_OracleDefVil"			file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r3_NearOracul"				file1="data\if\ico\LocalMap\icn_outpost.dds" file=""/>
@@ -264,7 +262,6 @@
    <Item id="PetrolStationTown"			file1="data\if\ico\LocalMap\icn_gasstation.dds" file=""/>
    <Item id="PetrolStationTown_NoSt"			file1="data\if\ico\LocalMap\icn_gasstation.dds" file=""/>
    <Item id="r4_Aliham"					file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
-   <Item id="r4_Buhara"					file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r4_OilCity"				file1="data\if\ico\LocalMap\icn_oilpump.dds" file=""/>
    <Item id="r4_Zuhel"					file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r4_Scientific"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
@@ -284,8 +281,7 @@
    <Item id="r1m2_BenHouse"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m3_Circus"				file1="data\if\ico\LocalMap\icn_town.dds" file=""/>
    <Item id="r3m2_OracleComplex"				file1="data\if\ico\LocalMap\icn_oraclebase.dds" file=""/>
-   
-   <Item id="DoNotRememberDeleteThisVillage"	file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
+   <Item id="r4_Buhara"					file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
 
    <Item id="genericLocation"			file1="data\if\ico\LocalMap\icn_exit.dds" file=""/>
 

@@ -331,6 +331,8 @@
 	<trigger Name="VyezdRolik3Begin" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
+			ShowHostileVehicles(false)
+
 			SaveAllToleranceStatus(RS_NEUTRAL)
 			
 			PlayCustomMusic("IntenseDialogue02")
@@ -590,6 +592,8 @@
 		<script>
 			RestoreAllToleranceStatus()
 
+			ShowHostileVehicles(true)
+
 			StopPlayingCustomMusic()
 
 			SetCameraBehindPlayerVehicle()
@@ -617,7 +621,9 @@
 
 			elseif GetVar("Tikhomir").AsInt == 2 then
 
-				TeamCreate("TikhomirAgressor", 1092, CVector(3053.686, 329.370, 3152.573), {"UralTikhomir"}, nil, nil, Quaternion(-0.007, 0.340, -0.085, 0.937))
+				TeamCreate("TikhomirAgressor", 1093, CVector(3053.686, 329.370, 3152.573), {"UralTikhomir"}, nil, nil, Quaternion(-0.007, 0.340, -0.085, 0.937))
+
+				SetTolerance(1100, 1093, RS_ENEMY)
 
 				TakeQuest("KillTikhomir_Quest")
 

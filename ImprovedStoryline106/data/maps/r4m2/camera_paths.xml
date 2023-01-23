@@ -2,8 +2,8 @@
 <Paths>
 	<!-- ќсмотр машины јйвена -->
 	<Path Name = "FatherCar_Cam">
-		<Point  coord="1546.235 336.135 325.238" rotation="-0.197 -0.272 0.057 0.940"/>
 		<Point  coord="1571.781 336.135 329.583" rotation="-0.180 0.445 -0.092 0.872"/>
+		<Point  coord="1546.235 336.135 325.238" rotation="-0.197 -0.272 0.057 0.940"/>
 	</Path>
 
 	<Path Name = "FatherCar_Cam2">

@@ -9,11 +9,11 @@
 
 			SetWeather(0)
 
-			Fly("start1", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
-			Fly("start2", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
+			Fly("start1", CINEMATIC_NO_AIM, 0, 11, 1, 0 )
+			Fly("start2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
 			Fly("start3", CINEMATIC_NO_AIM, 0, 7.5, 0, 0 )
 			Fly("start4", CINEMATIC_NO_AIM, 0, 7.5, 0, 0 )
-			Fly("start5", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("start5", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
 			Fly("start6", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
 			Fly("start7", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
 			Fly("start8", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
@@ -225,6 +225,9 @@
 	<trigger Name="StartRolik9" active="0">
 		<event flypath="start9" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then vehPlayer:SetGamePositionOnGround( CVector(1321.876, 256.003, 2738.977)) end
 
 			local veh11 = CreateVehicleEx("SeraFighter01","veh1", CVector(1633.172, 256.060, 2852.080), 1088)
 			if veh11 then
@@ -651,8 +654,15 @@
 			local b1 = CreateVehicleEx("AKF_Belaz1","Bandit1",CVector(1184.202, 256.316, 994.402), 1089)
 			local b2 = CreateVehicleEx("AKF_Belaz2","Bandit2",CVector(1164.261, 256.230, 990.480), 1089)
 						
-			if b1 then b1:SetRotation(Quaternion(-0.008, 0.998, 0.002, -0.065)) end
-			if b2 then b2:SetRotation(Quaternion(-0.000, 0.970, 0.004, 0.243)) end
+			if b1 then
+				b1:SetRotation(Quaternion(-0.008, 0.998, 0.002, -0.065))
+				b1:SetRandomSkin()
+			end
+
+			if b2 then
+				b2:SetRotation(Quaternion(-0.000, 0.970, 0.004, 0.243))
+				b2:SetRandomSkin()
+			end
 
 			TActivate("TrapRolikCam2MusicStart")
 
@@ -678,7 +688,9 @@
 			if b1 then 
 				b1:SetRotation(Quaternion(-0.053, -0.377, -0.029, -0.924)) 
 				b1:SetExternalPathByName("Bandit_path1")
+				b1:SetMaxSpeed(10)
 				b1:SetCruisingSpeed(15)
+				b1:SetRandomSkin()
 			end
 			
 			local vehPlayer = GetPlayerVehicle()
@@ -729,6 +741,7 @@
 			local mik = CreateVehicleEx("Ural00","Mikolka",CVector(515.151, 255.987, 1751.668), 1088)
 			if mik then
 				mik:SetRotation(Quaternion(0.008, -0.618, -0.014, 0.786))
+				mik:SetRandomSkin()
 			end
 
 			trigger:Deactivate()
@@ -1569,6 +1582,8 @@
 	<trigger Name="trAdeptArmyDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AdeptArmy" />
 		<script>
+			CompleteQuest("CaptureMoskaDuring")
+
 			
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -1607,8 +1622,6 @@
 			StopPlayingCustomMusic()
 			
 			SetCameraBehindPlayerVehicle()
-
-			CompleteQuest("CaptureMoskaDuring")
 
 			SetTolerance(1100,1091,RS_ALLY)
 			SetTolerance(1091,1088,RS_ALLY)
@@ -1888,6 +1901,7 @@
 	<trigger Name="KateAdeptDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="AdeptArmy1" />
 		<script>
+			CompleteQuest("CaptureKatebergFight")
 			
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
@@ -1923,8 +1937,6 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
-
-			CompleteQuest("CaptureKatebergFight")
 			
 			SetTolerance(1100,1089,RS_ALLY)
 			SetTolerance(1088,1089,RS_ALLY)

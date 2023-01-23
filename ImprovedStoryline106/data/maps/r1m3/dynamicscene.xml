@@ -60844,15 +60844,6 @@
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
-		<Object
-			Flags="21"
-			Name="r1m3_Circus_1_enter"
-			Belong="1080"
-			Prototype="genericLocation"
-			Pos="3793.429 234.853 864.729"
-			Rot="0.000 1.000 0.000 -0.002"
-			Radius="1.000"
-			Active="0" />
 
 		<Parts />
 

@@ -347,4 +347,8 @@
 	<Object
 		Name="Kartograph3"
 		FullName="Картограф" />
+
+	<Object
+		Name="r4_Buhara_1"
+		FullName="Бухара" />
 </ObjectNames>

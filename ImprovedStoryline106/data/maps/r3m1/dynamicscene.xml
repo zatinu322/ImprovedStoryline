@@ -665,11 +665,6 @@
 	</Object>
 
 	<Object
-		Name="Player1"
-		Belong="1100"
-		Prototype="player" />
-
-	<Object
 		Name="TheRazboynik"
 		Belong="1063"
 		Prototype="r3_RazboinikVillage"

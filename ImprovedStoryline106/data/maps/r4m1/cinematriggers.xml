@@ -975,8 +975,7 @@
 			   
 			setPos("Buharers_vehicle_0", CVector(1355.880, 220.086, 3133.145))
 			setRot("Buharers_vehicle_0", Quaternion(-0.008, 0.741, 0.008, 0.671))
-			setPos("Buharers_vehicle_1", CVector(1354.502, 220.103, 3113.447))
-			setRot("Buharers_vehicle_1", Quaternion(-0.010, 0.374, 0.004, 0.927))
+			setPos("Buharers_vehicle_1", CVector(1354.502, 220.103, 3113.447)); setRot("Buharers_vehicle_1", Quaternion(-0.010, 0.374, 0.004, 0.927))
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -984,8 +983,8 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomControlEnabled( false )
-				vehPlayer:SetGamePositionOnGround(CVector(1387.320, 220.074, 3117.844))
-				vehPlayer:SetRotation(Quaternion(-0.009, -0.001, 0.000, 1.000))
+				vehPlayer:SetGamePositionOnGround( CVector(1379.522, 220.544, 3124.290))
+				vehPlayer:SetRotation(Quaternion(-0.000, -0.723, -0.001, 0.691))
 			end
 
 			AddCinematicMessage( 12, 0.5 )
@@ -1013,8 +1012,6 @@
 
 			StopPlayingCustomMusic()
 
-			SetCameraBehindPlayerVehicle()
-
 			RestoreAllToleranceStatus()
 
 			if IsQuestComplete("r4m1_KNO_FindSpecialist") then
@@ -1022,6 +1019,14 @@
 			else
 				TakeQuest("r4m1_GotoAivenGo")
 			end
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetGamePositionOnGround( CVector(1456.215, 219.688, 3120.292))
+				vehPlayer:SetRotation(Quaternion(-0.007, -0.708, -0.002, -0.707))
+			end
+
+			SetCameraBehindPlayerVehicle()
 
 			local a = GetEntityByName("StartGonka_loc")
 			if a then a:SetProperty("Active",1) end

@@ -1925,14 +1925,36 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Mishlen_loc" />
 		<script>
 			CompleteQuest("MrShlyapa2_Quest")
-			GetPlayerVehicle():SetCustomLinearVelocity( 0 )
-			GetPlayerVehicle():SetThrottle(0)
-			TActivate("MisterShlyapaTr2")
+			
 			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			PlayCustomMusic("Bio07unloop")
+
 			Fly("mishlen", CINEMATIC_NO_AIM, 0, 17, 1, 1 )
 			StartCinematic()
-			PlayCustomMusic("Bio07unloop")
+
 			AddCinematicMessage( 8804, 1 )
+
+			TActivate("MisterShlyapaTr1")
+			TActivate("MisterShlyapaTr2")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="MisterShlyapaTr1" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+				vehPlayer:SetGamePositionOnGround(CVector(3691.777, 252.543, 736.818))
+				vehPlayer:SetRotation(Quaternion(0.021, -0.971, 0.025, 0.236))
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1945,6 +1967,12 @@
 			RestoreAllToleranceStatus()
 
 			StopPlayingCustomMusic()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetPosition( CVector(3763.060, 251.369, 825.684))
+				vehPlayer:SetRotation(Quaternion(0.001, 0.220, -0.003, 0.975))
+			end
 
 			SetCameraBehindPlayerVehicle()
 

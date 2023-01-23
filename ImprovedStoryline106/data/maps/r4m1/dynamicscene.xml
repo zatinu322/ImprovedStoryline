@@ -21350,4 +21350,21 @@
 			Pos="4431.723 312.345 2305.968"
 			Rot="0.000 -0.539 0.000 0.842" />
 	</Object>
+
+	<Object
+		Name="r4_Buhara_1"
+		Belong="1080"
+		Prototype="r4_Buhara"
+		Pos="2024.581 227.147 6363.609"
+		Rot="0.000 1.000 0.000 -0.002"
+		MaxDefenders="0"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravansDest="">
+
+		<Parts />
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
 </DynamicScene>

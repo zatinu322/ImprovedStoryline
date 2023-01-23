@@ -236,7 +236,7 @@
 	<trigger Name="CreateTikhomirCar" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-			local bcar = CreateVehicleEx("UralTikhomir","TikhomirCar",CVector(3053.686, 329.370, 3152.573), 1092)
+			local bcar = CreateVehicleEx("UralTikhomir","TikhomirCar",CVector(3053.686, 329.370, 3152.573), 1093)
 			if bcar then
 				bcar:SetRotation(Quaternion(-0.007, 0.340, -0.085, 0.937))
 				bcar:setGodMode(1)

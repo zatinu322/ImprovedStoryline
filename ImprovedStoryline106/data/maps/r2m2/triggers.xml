@@ -372,7 +372,7 @@
 		</script>
 	</trigger>
 
-	<!-- Создание повстанцев. Бой с ними -->
+	<!-- Если игрок решил спасти повстанцев АР -->
 	<trigger Name="LAGERNOWAR" active="0">
 		<event	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -380,12 +380,12 @@
 			SetTolerance( 1100, 1016, RS_ALLY )
 			SetTolerance( 1100, 1015, RS_ENEMY )
 
-			TeamCreate("ARRR",1015,CVector(1149,247,2787),{"r2m2_Fighter02","r2m2_Hunter01","r2m1_scout03"}, CVector(863,248,2519), 1)
+			TeamCreate("ARRR",1015,CVector(1149,247,2787),{"BelazTSP", "TSPFighter"}, CVector(863,248,2519), 1)
 
 			trigger:Deactivate()    
 		</script>
 	</trigger>
-
+	<!-- Создание повстанцев. Бой с ними -->
 	<trigger	Name="LAGERWARBEGIN" active="0">
 		<event	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -458,6 +458,11 @@
 				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(2983.596, 320.756, 999.595), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(3007.236, 319.616, 1074.728), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE07", -1, -1, CVector(2984.372, 320.633, 1024.796), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			end
+
+			for team = 1,2 do
+				local veh = getObj("AxelGuard"..team):GetVehicle(0)
+				if veh then veh:Remove() end
 			end
 
 			trigger:Deactivate()   

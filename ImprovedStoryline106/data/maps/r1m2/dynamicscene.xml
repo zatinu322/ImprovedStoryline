@@ -55867,15 +55867,6 @@
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
-		<Object
-			Flags="21"
-			Name="r1m2_BenHouse_1_enter"
-			Belong="1080"
-			Prototype="genericLocation"
-			Pos="3775.048 118.326 1808.081"
-			Rot="0.000 1.000 0.000 -0.002"
-			Radius="1.000"
-			Active="0" />
 
 		<Parts />
 

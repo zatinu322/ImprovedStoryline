@@ -464,7 +464,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "0.8"
 			WeaponPriceDispersion = "15"
 
-			Vehicles 	= "Belaz">
+			Vehicles 	= "">
 
 			<Article
 				Prototype			= "tobacco"				
@@ -506,7 +506,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "0.8"
 			WeaponPriceDispersion = "15"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "Molokovoz">
 
 			<Article
 				Prototype				= "potato"				
@@ -638,7 +638,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2.1"
 			WeaponPriceDispersion = "15"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "Ural">
 
 			<Article
 				Prototype				= "oil"				
@@ -693,7 +693,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "1.1"
 			WeaponPriceDispersion = "15"
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= "Molokovoz"	>
 			<Article
 				Prototype				= "potato"				
 				Amount	 				= "0"
@@ -758,7 +758,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "0.6"
 			WeaponPriceDispersion = "15"
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= "Molokovoz"	>
                         <Article
 				Prototype				= "potato"				
 				Amount	 				= "12"
@@ -814,7 +814,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "15"
 
 
-			Vehicles 	= "Bug">	
+			Vehicles 	= "Molokovoz">	
                         <Article
 				Prototype				= "potato"				
 				Amount	 				= "12"
@@ -868,7 +868,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= ""	>
 			<Article
 				Prototype				= "bottle"				
 				Amount	 			= "2"
@@ -911,7 +911,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "5"
 
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= "Ural"	>
 			<Article
 				Prototype				= "scrap_metal"				
 				Amount	 			= "24"
@@ -962,7 +962,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "5"
 
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "Belaz">
 
                         <Article
 				Prototype				= "fuel"				
@@ -1017,7 +1017,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "5"
 
 
-			Vehicles	= "Bug"	>
+			Vehicles	= "Ural"	>
 			<Article
 				Prototype				= "oil"				
 				Amount	 				= "24"
@@ -1120,7 +1120,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= "Ural"	>
 			<Article
 				Prototype				= "fuel"				
 				Amount	 				= "24"
@@ -1174,7 +1174,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug"	>
+			Vehicles 	= "Belaz"	>
 			<Article
 				Prototype				= "oil"				
 				Amount	 				= "24"
@@ -1246,7 +1246,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "Ural">
 			<Article
 				Prototype				= "machinery"				
 				Amount	 				= "30"
@@ -1298,7 +1298,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "Ural">
                     	<Article
 				Prototype				= "machinery"				
 				Amount	 				= "30"
@@ -1351,7 +1351,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug" >
+			Vehicles 	= "Ural" >
 			<Article
 				Prototype				= "machinery"				
 				Amount	 				= "30"
@@ -1391,7 +1391,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug"  >
+			Vehicles 	= "Mirotvorec"  >
 	             	<Article
 				Prototype				= "book"				
 				Amount	 				= "0"
@@ -1444,7 +1444,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug" >
+			Vehicles 	= "Mirotvorec" >
 			<Article
 				Prototype				= "tobacco"				
 				Amount	 				= "0"
@@ -1498,7 +1498,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "Mirotvorec">
 			<Article
 				Prototype				= "tobacco"				
 				Amount	 				= "24"
@@ -1561,7 +1561,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "">
 		</Prototype>
 
 
@@ -1590,7 +1590,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "5"
 
 			MaxDefenders	= "0" 
-			Vehicles	= "Scout" >
+			Vehicles	= "" >
 			
 			<Article
 				Prototype			= "potato"				
@@ -1835,18 +1835,6 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			/>
 
 		</Prototype>
-
-
-		<Prototype
-			Class		= "Town"
-			Name		= "r1m2_BenVillage"
-			ModelFile	= "workshop2"
-			NodeScale	= "1 1 1" 
-
-			MusicName		= "agriculruar_town1"
-			
-			MaxDefenders	="0"
-			Vehicles	= "" />
 
 		<Prototype
 			Class		= "Town"
@@ -2884,7 +2872,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "15"
 
 			MaxDefenders	="0"
-			Vehicles	= "Belaz">
+			Vehicles	= "">
 
 			<Article
 				Prototype				= "tobacco"				
@@ -2950,17 +2938,6 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 		<Prototype
 			Class		= "Town"
-			Name		= "DoNotRememberDeleteThisVillage"
-			ModelFile	= "dweller"
-			NodeScale	= "1 1 1" 
-
-			MusicName		= "bar"
-			
-			MaxDefenders	="0"
-			Vehicles	= "" />
-
-		<Prototype
-			Class		= "Town"
 			Name		= "r3_OracleDefVil"
 			ModelFile	= "r3_druids_mech_house1"
 			NodeScale	= "1 1 1" 
@@ -2972,7 +2949,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= "Ural"
 			/>
 
 		<Prototype
@@ -2988,23 +2965,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
-			/>
-
-		<Prototype
-			Class		= "Town"
-			Name		= "r4_Buhara"
-			ModelFile	= "r3_druids_mech_house1"
-			NodeScale	= "1 1 1" 
-
-			MusicName		= "bar"
-			GateModelFile 	= ""
-
-			IsIntersecting		= "true"
-			LookRadius			= "200"
-			IntersectionRadius	= "50" 
-
-			Vehicles 	= "Bug"
+			Vehicles 	= "Molokovoz"
 			/>
 
 		<Prototype
@@ -3020,7 +2981,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= "Ural"
 			/>
 
 		<Prototype
@@ -3036,7 +2997,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= "Ural"
 			/>
 
 		<Prototype
@@ -3052,7 +3013,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= "Ural"
 			/>
 
 		<Prototype
@@ -3079,7 +3040,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			Vehicles 	= "Bug">
+			Vehicles 	= "">
 			<Article
 				Prototype				= "potato"				
 				Amount	 				= "25"
@@ -3116,23 +3077,6 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 		</Prototype>
 
-
-		<Prototype
-			Class		= "Town"
-			Name		= "OraculTest"
-			ModelFile	= "r3_oracle"
-			NodeScale	= "1 1 1" 
-
-			MusicName		= "bar"
-			GateModelFile 	= "oracle_gate"
-
-			IsIntersecting		= "true"
-			LookRadius			= "200"
-			IntersectionRadius	= "50" 
-
-			Vehicles 	= "Bug"
-			/>
-
 		<Prototype
 			Class		= "Town"
 			Name		= "r3_AloneDruid"
@@ -3146,7 +3090,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= ""
 			/>
 
 		<Prototype
@@ -3162,7 +3106,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= "Ural"
 			/>
 
 		<Prototype
@@ -3177,7 +3121,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			LookRadius			= "200"
 			IntersectionRadius	= "50" 
 
-			Vehicles 	= "Bug"
+			Vehicles 	= "Molokovoz"
 			/>
 
 
@@ -3234,7 +3178,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceDispersion = "5"
 
 
-			Vehicles	= "Bug"	>
+			Vehicles	= "Belaz"	>
 			<Article
 				Prototype				= "oil"				
 				Amount	 				= "24"
@@ -3328,7 +3272,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "3"
 			WeaponPriceDispersion = "5"
 
-			MaxDefenders	="2"
+			MaxDefenders	="0"
 			Vehicles	= "Hunter">
 
 			<Article
@@ -3522,7 +3466,21 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			Vehicles 	= "" />
 		
+		<Prototype
+			Class		= "Town"
+			Name		= "r4_Buhara"
+			ModelFile	= "r3_druids_mech_house1"
+			NodeScale	= "1 1 1" 
 
+			MusicName		= "bar"
+			GateModelFile 	= ""
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50" 
+
+			Vehicles 	= ""
+			/>
 
 	</Folder>
 </Prototypes>

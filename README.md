@@ -3,7 +3,7 @@
   <h1 align="center">Модификация для Ex Machina</h1>
 </div>
 
-<h5><u>russian:</u></h5>
+<h5><ins>russian:</ins></h5>
 
 ## Выберите версию, которая вас интересует:
 
@@ -19,7 +19,7 @@
 
 ***
 
-<h5><u>english:</u></h5>
+<h5><ins>english:</ins></h5>
 
 ## Select the mod version you are interested in:
 
@@ -27,7 +27,7 @@
 + [Improved Storyline for Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp) [RUS]
 + [Improved Storyline for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr) [RUS]
 
-English translation for ComPatch and ComRemaster will be avaliable later.
+English translation for ComPatch and ComRemaster versions will be avaliable later.
 
 ## Author's contacts:
 

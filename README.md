@@ -1,86 +1,36 @@
-![ISL_Logo](https://repository-images.githubusercontent.com/364315459/cf02f200-c30d-11eb-86cc-dd9360a6a2a4)
-# Описание
-Improved Storyline - сюжетная модификация к игре Ex Machina (Hard Truck Apocalypse), главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. Сам доработанный сюжет, хоть и частично основывается на первоначальном сценарии игры, является по большей части вымыслом автора мода.
+<div align="center">
+  <img src="https://repository-images.githubusercontent.com/364315459/cf02f200-c30d-11eb-86cc-dd9360a6a2a4" alt="Logo" width="600">
+  <h1 align="center">Модификация для Ex Machina</h1>
+</div>
 
-В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
+<h5><u>russian:</u></h5>
 
-Текущая версия - 1.0.5.3 build 220906
+## Выберите версию, которая вас интересует:
 
-Особая благодарность [Suslo Red](https://github.com/SusloRed), [Varisane](https://github.com/Varisane) и [DEM-сообществу](https://discord.gg/qKK2Efx) за помощь в разработке.
++ [Improved Storyline для оригинальной Ex Machina](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1053) (Steam 1.02)
++ [Improved Storyline для Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp) [RUS]
++ [Improved Storyline для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr) [RUS]
 
-# Список изменений
+## Контакты автора:
 
-## Глобальные изменения
-1. Переработаны диалоги, записи в «Дневнике», описания квестов
-2. На многих локациях добавлены альтернативные варианты прохождения сюжета.
-3. Добавлены второстепенные квесты.
-4. Переработаны и добавлены концовки.
-5. Добавлены новые карты и сюжет на них.
-6. Адаптирован мод [Kraycity](https://deuswiki.com/w/Kraycity) (модификация от OverLine, добавляющая в Край новые деревни).
+1. [Дискорд-сервер](https://discord.gg/sPrGBP9aFd)
+3. [Канал на Youtube](https://www.youtube.com/user/rpggameland)
+3. [Страница ВК](https://vk.com/id316894646)
 
-## Мелкие исправления
-1. Восстановлены вырезанные фразы главного героя в некоторых катсценах.
-2. Восстановлен и починен квест с беженцами из Улука.
-3. В конце игры идут титры.
-4. У гоночных машин в Вахате теперь есть звук.
-5. Добавлено новое музыкальное сопровождение.
-6. Квесты со знаками на полях полностью проходимы и более не проваливаются при переходе между локациями.
-7. Изменены квестовые противники в Либриуме и Аржане на более сложных.
-8. Добавлены текстуры и модели из Меридиана 113.
-9. Доработаны оригинальные катсцены (подогнаны тайминги, добавлена музыка).
-10. Исправлено отображение иконок группировок в катсценах.
-11. При взрыве моста в Фатерлянде теперь слышен звук взрыва.
-12. Убрана долгая езда при прохождении Либриума и Аржана за СНГ.
-13. Развоз роботов-помощников по менгирам теперь осуществляется в правильном порядке.
-14. Кузова Урала «Крейсер» и «Тигр» обменялись характеристиками.
-15. Ворота Сета, Гельвеции и Порто теперь не взрывают машину игрока.
-16. Увеличены HP у дотов.
-17. Исправлены иконки кабин/кузовов для Урала, Белаза и Миротворца.
-18. Количество артефактов для Оракула увеличено до 4, местоположение изменено.
-19. В Мидгарде теперь продаются абсолютно все кабины/кузова и почти всё оружие.
-20. Оптимизированы некоторые триггеры.
-21. Добавлено поселение в Игнотте возле Оракула.
-22. Добавлена информация о текущих попутчиках.
-23. Добавлены некоторые квестовые предметы.
-24. Убрана взрывная волна у Урала.
-25. Добавлены топовые улучшения для оружия/машины в города второго региона.
-26. Исправлены переезды с Аржана в Вахат и обратно.
-27. Добавлены торговцы картой почти во все локации.
-28. Добавлена машина Айвена в Зармек.
-29. Исправлен дроп предметов из врагов в Хеле и Роще Друидов.
-30. Увеличена громкость реплик Акселя.
-31. У Урала новый клаксон.
-32. Огромное множество других мелких изменений.
+***
 
-# Совместимость
+<h5><u>english:</u></h5>
 
-Данная модификация совместима только с проектами, указанными ниже.
+## Select the mod version you are interested in:
 
-* [Improved Storyline для Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp)
++ [Improved Storyline for original Ex Machina](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1053) (Steam 1.02, only russian version)
++ [Improved Storyline for Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp) [RUS]
++ [Improved Storyline for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr) [RUS]
 
-Планируется адаптация под [Community Remaster](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) после его релиза.
+English translation for ComPatch and ComRemaster will be avaliable later.
 
-Все остальные проекты, использующие данную модификацию или её части, не имеют ко мне никакого отношения и техническая поддержка по ним **не оказывается ни в каком виде**.
+## Author's contacts:
 
-# Установка
-Обратитесь к мануалу или текстовому файлу в архиве с загруженной модификацией.
-
-# Известные неисправимые проблемы
-1. Некоторые люди в городах и деревнях ходят на месте.
-2. Босс-кран в Либриуме иногда уезжает с места сражения и тем самым софтлочит игру. Помогает сохранение перед битвой с ним и перезапуск игры.
-3. Источники питания у тарелки Ньери иногда не уничтожаются. Помогает перезапуск.
-
-# Предыдущие версии
-
-* [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052)
-* [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051)
-* [Improved Storyline v1.0.5](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline105)
-* [Improved Storyline v1.0.4.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1041)
-* [Improved Storyline v1.0.4](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline104)
-# Контакты автора
-
-[Страница ВК](https://vk.com/id316894646)
-
-[Discord сервер](https://discord.gg/sPrGBP9aFd)
-
-[YouTube канал](https://www.youtube.com/user/rpggameland)
+1. [Discord-server](https://discord.gg/sPrGBP9aFd)
+2. [YouTube channel](https://www.youtube.com/user/rpggameland)
+3. [VK page](https://vk.com/id316894646)

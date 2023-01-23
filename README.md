@@ -3,7 +3,7 @@
   <h1 align="center">Модификация для Ex Machina</h1>
 </div>
 
-<h5><u>russian:</u></h5>
+<h5><ins>russian:</ins></h5>
 
 ## Выберите версию, которая вас интересует:
 
@@ -19,7 +19,7 @@
 
 ***
 
-<h5><u>english:</u></h5>
+<h5><ins>english:</ins></h5>
 
 ## Select the mod version you are interested in:
 

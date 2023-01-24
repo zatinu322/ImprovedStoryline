@@ -110,8 +110,8 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Установка
 
-* ### [Установка на оригинальную игру (steam, v1.02)](.\installation.md)
-* ### Установка на Community Patch/Remaster
+* ### [Установка на оригинальную игру (steam, v1.02)](/Docs/installation_vanilla.md)
+* ### [Установка на Community Patch/Remaster](/Docs/installation_compatch.md)
 
 <!-- <a id="compatibility_rus"></a>
 

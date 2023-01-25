@@ -110,8 +110,8 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Установка
 
-* ### [Установка на оригинальную игру (steam, v1.02)](/Docs/installation_vanilla.md)
-* ### [Установка на Community Patch/Remaster](/Docs/installation_compatch.md)
+* ### [Установка на оригинальную игру (steam, v1.02)](/Docs/installation_vanilla.md#russian)
+* ### [Установка на Community Patch/Remaster](/Docs/installation_compatch.md#russian)
 
 <!-- <a id="compatibility_rus"></a>
 
@@ -149,11 +149,6 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 * [Страница ВК](https://vk.com/id316894646)
 
 ***
-<!-- ## Выберите версию, которая вас интересует:
-
-+ [Improved Storyline для оригинальной Ex Machina](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1053) (Steam 1.02)
-+ [Improved Storyline для Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp) [RUS]
-+ [Improved Storyline для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr) [RUS] -->
 
 <a id="english"></a>
 

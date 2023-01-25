@@ -26,20 +26,20 @@
 
 <div align="center"><h1>How to install Improved Storyline on Community Patch / Remaster</h1>
 
-### <ins>**Important!**</ins>
-
-### <ins>There's **NO** english localization for Improved Storyline at the moment! Full english localization will be avaliable later!</ins>
+### <ins>There's **NO** english localization for this version of Improved Storyline at the moment! Full english localization will be avaliable later!</ins>
 
 </div>
 
 ## 1 way (on a clean **_russian version_** of the game from Steam)
 
-1. Create `mods` folder in the game root directory, copy there `ImprovedStoryline106` from archive with all its contents.
-2. Install [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/). After completing the installation, you will be prompted to install the detected mods.
-3. Follow the installer instructions.
+1. Download the latest ComPatch/ComRem compatible release [from here](/README.md#download_rus).
+2. Create `mods` folder in the game root directory, copy there `ImprovedStoryline106` from archive with all its contents.
+3. Install [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/). After completing the installation, you will be prompted to install the detected mods.
+4. Follow the installer instructions.
 
 ## 2 way (with [Community Patch or Remaster](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/) already installed)
 
-1. Copy `ImprovedStoryline106` from mod archive to `mods` folder in game root directory (create one if needed).
-2. Run `commod.exe`, enter `mods` command.
-3. Follow the installer instructions.
+1. Download the latest ComPatch/ComRem compatible release [from here](/README.md#download_eng).
+2. Copy `ImprovedStoryline106` from mod archive to `mods` folder in game root directory (create one if needed).
+3. Run `commod.exe`, enter `mods` command.
+4. Follow the installer instructions.

@@ -24,11 +24,17 @@
 
 <a id="english"></a>
 
-<div align="center"><h1>How to install Improved Storyline on vanilla Hard Truck Apocalypse</h1></div>
+<div align="center"><h1>How to install Improved Storyline on vanilla Hard Truck Apocalypse</h1>
 
-### It is **always** recommended to install the mod on a clean version of the game.
+### <ins>There's **NO** english localization for this version of Improved Storyline!</ins>
 
-1. Download the latest release of Improved Storyline [from here](/README.md#download_rus).
+### <ins>Check the [ComPatch/ComRem](/installation_compatch.md#english) compatible version for the full english localization.</ins>
+
+</div>
+
+### It is **always** recommended to install the mod on a clean version of the game. 
+
+1. Download the latest release of Improved Storyline [from here](/README.md#download_eng).
 2. Open the folder with the installed game.
 3. Copy `data` folder from `Base_mod` in archive to your game folder.
 4. If necessary, similarly to step 3, install the addons you need from the `Addons` folder in archive.

@@ -2,6 +2,8 @@
 
   # [RUS](#russian)/[ENG](#english)
 
+<img src="https://i.imgur.com/kVO23Ro.png" alt="Logo_install_rus" width="600">
+
 </div>
 
 <a id="russian"></a>
@@ -24,11 +26,19 @@
 
 <a id="english"></a>
 
-<div align="center"><h1>How to install Improved Storyline on vanilla Hard Truck Apocalypse</h1>
+<div align="center">
 
-### <ins>There's **NO** english localization for this version of Improved Storyline!</ins>
+  <img src="https://i.imgur.com/5TAkFR1.png" alt="Logo_install_rus" width="600">
 
-### <ins>Check the [ComPatch/ComRem](/installation_compatch.md#english) compatible version for the full english localization.</ins>
+***
+
+  ### <ins>There's **NO** english localization for this version of Improved Storyline!</ins>
+
+  ### Check the [ComPatch/ComRem](/Docs/installation_compatch.md#english) compatible version for the full english localization.
+
+  ***
+
+  <h1>How to install Improved Storyline on vanilla Hard Truck Apocalypse</h1>
 
 </div>
 

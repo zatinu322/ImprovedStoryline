@@ -8,7 +8,7 @@
 	<Pages>
 		<Page
 			id="1"
-			text="Improved Storyline v1.0.6"
+			text="Improved Storyline v1.1"
 			modelName="r2_man"
 			modelSkin="0"
 			modelCfg="294"
@@ -35,12 +35,12 @@
 
 		<Page
 			id="4"
-			text="Отдельное спасибо:| |Lynne за модель локомотива| |Suslo Red за модель медали АР| |Varisane за многочисленные текстовые правки| |А также всем тестировщикам, багрепортерам и тем, кто просто помог советом|@00FFFFFFghghg|"
+			text="Отдельное спасибо:| |Lynne за модель локомотива| |Suslo Red за модель медали АР| |Varisane за многочисленные текстовые правки| |OverLine за зимние лайтмепы| |А также всем тестировщикам, багрепортерам и тем, кто просто помог советом|@00FFFFFFghghg|"
 			modelName="r2_man"
 			modelSkin="1"
 			modelCfg="140"
 			showTime="5"
-			fontSize="14" />
+			fontSize="12" />
 
 		<Page
 			id="5"

@@ -23,13 +23,40 @@
 		</script>
 	</trigger>
 
+	<!-- Переключение белонгов infection-зон, если не дрались с Феликсом -->
+	<trigger Name="trSwitchInfectionBelong" active="0">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if not(IsQuestTaken("d_SinFather_Quest")) and IsQuestTaken("GoBackToHel_Quest") then
+				local brod_zones = {"1", "2", "4", "7", "8", "9"}
+				local koch_zones = {"3", "5", "6", "10", "11"}
+
+				for i = 1,6 do
+					local zone = getObj("InfectionZone"..brod_zones[i])
+					if zone then zone:SetProperty("Belong", 1002) end
+					println("InfectionZone"..brod_zones[i].." belong is now "..zone:GetProperty("Belong").AsInt)
+				end
+
+				for i = 1,5 do
+					local zone = getObj("InfectionZone"..koch_zones[i])
+					if zone then zone:SetProperty("Belong", 1005) end
+					println("InfectionZone"..koch_zones[i].." belong is now "..zone:GetProperty("Belong").AsInt)
+				end
+			else
+				println("All belongs already setted")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Автосохранение -->
 	<trigger Name="trAutoSave" active="0">
 		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			if GetVar("AutoSaveCount").AsInt == 0 then
 				SetVar("AutoSaveCount", 1)
-				AutoSave()
+				AutoSave(STR_PUNISH_BANDITS)
 			end
 
 			trigger:Deactivate()
@@ -293,7 +320,6 @@
 		<script>
 			SetTolerance( 1100, 1042, RS_ALLY )
 			SetTolerance( 1002, 1042, RS_ENEMY )
-			SetTolerance( 1013, 1042, RS_ENEMY )
 
 			local newControllerId = CreateNewObject {
 				prototypeName	= "someNPCMotionController",
@@ -836,6 +862,7 @@
 
 	<trigger Name="PlayerDrunkBehaviourInPlace" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FelixGangNearFreedom_Loc" />
+		<event	timeout="45"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SetVar("DrunkRide", 1)
 

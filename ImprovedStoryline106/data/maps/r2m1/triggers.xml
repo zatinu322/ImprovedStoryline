@@ -10,6 +10,7 @@
 			SetVar("R", 0)
 			SetVar("Go",0)
 			SetVar("AutoSaveCount", 0)
+			SetVar("UFOCounterStarted", 0)
 			SetVar("KnownMap",0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
@@ -43,7 +44,15 @@
 		<script>
 			if GetVar("AutoSaveCount").AsInt == 0 then
 				SetVar("AutoSaveCount", 1)
-				AutoSave()
+				AutoSave(STR_FIGHT_WITH_CLAW_R2M1) -- перед боссом-погрузчиком
+			elseif GetVar("AutoSaveCount").AsInt == 2 then
+				SetVar("AutoSaveCount", 3)
+				TActivate("trUFOSourcesBugCounterStart")
+				AutoSave(STR_BOSS_NJERI) -- перед битвой с Ньери
+			elseif GetVar("AutoSaveCount").AsInt == 3 then
+				SetVar("AutoSaveCount", 1)
+				PlayCustomMusic("Battle01") -- чтобы играла музыка боя после загрузки автосейва
+				AllowSave(false)
 			end
 
 			trigger:Deactivate()
@@ -546,19 +555,6 @@
 		</script>
 	</trigger>
 
-<!-- Уничтожили тарелку Ньери -->
-	<trigger Name="TRIGGER_ALIENSDIE" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="AliensShip" />
-		<script>
-			TActivate( "RolikBegin_UFODIE" )
-
-			CompleteQuest( "r2m1_DestroyAlienShip" )
-			CompleteQuest( "r4m2_DestroyPlate" )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 <!-- мерцающее нло -->
 	<trigger Name="trGeneric" active="0">
 		<event timeout="0.03" eventid="GE_TIME_PERIOD" />
@@ -793,6 +789,43 @@
 			CreateEffectTTLed("ET_PS_LENS_D1", CVector(6015.383, 77.968 + y, 4402.774), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 200)
 			CreateEffectTTLed("ET_PS_LENS_D1", CVector(6013.823, 77.968 + y, 4404.696), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 100)
 			CreateEffectTTLed("ET_PS_LENS_D4", CVector(5957.439, 65.895 + y, 4392.166), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 50)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Сообщение о возможном баге источников питания -->
+	<trigger Name="trUFOSourcesBugCounterStart" active="0">
+		<event	timeout="5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("UFOCounterStarted").AsInt == 0 then
+				TActivate("trUFOSourcesBugCounter")
+				SetVar("UFOCounterStarted", 1)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trUFOSourcesBugCounter" active="0">
+		<event	timeout="25"		eventid="GE_TIME_PERIOD" />
+		<script>
+			AddImportantFadingMsgId("fm_ufo_sources_bug")
+			AddFadingMsgId("fm_ufo_sources_bug")
+			
+		</script>
+	</trigger>
+
+	<!-- Уничтожили тарелку Ньери -->
+	<trigger Name="TRIGGER_ALIENSDIE" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="AliensShip" />
+		<script>
+			TActivate( "RolikBegin_UFODIE" )
+			TDeactivate("trUFOSourcesBugCounterStart")
+			TDeactivate("trUFOSourcesBugCounter")
+
+			CompleteQuest( "r2m1_DestroyAlienShip" )
+			CompleteQuest( "r4m2_DestroyPlate" )
 
 			trigger:Deactivate()
 		</script>

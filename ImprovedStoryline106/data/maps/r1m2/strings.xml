@@ -372,7 +372,7 @@
 
 	<string
 		id="5964"
-		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: **z***********|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
+		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: **w************|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
 	<string
 		id="5963"
 		modelName="mask_hero"
@@ -411,7 +411,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600«Improved Storyline v1.0.6»| | | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Çàèìñòâîâàíèÿ èç ìîäîâ| |@00ffffffÀÀÀÀÀÀAIÀÀÀÀÀÀÀ@ffffffffBooster Mod - êàðòû, òåêñòóðû, èêîíêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffKraycity - èìïîðòèðîâàí ïîëíîñòüþ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffSteel Dawn - èêîíêè| | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Ìóçûêàëüíûå êîìïîçèöèè| |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAÀAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAÀAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAÔAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAÀÀÀAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffÖèôåi - Ôóòóðî|@00ffffffAAAAAAAAAAÀAAAAAAAAA@ffffffffÖèôåi - Ïðîùàé, Àòëàíòèñ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Ïðàçäíèê æèçíè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Êîãäà âîçâðàùàþòñÿ áëèçêèå| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Îòäåëüíîå ñïàñèáî| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne çà ìîäåëü ëîêîìîòèâà|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red çà ìîäåëü ìåäàëè ÀÐ|@00ffffffÀÀÀÀ..AÀÀÀÀÀ@ffffffffVarisane çà ìíîãî÷èñëåííûå òåêñòîâûå ïðàâêè| |@00ffffffAAIAAAAAAAAA@ffffffffÀ òàêæå âñåì òåñòèðîâùèêàì, áàãðåïîðòåðàì|@00ffffffÀAAAÀÀÀÀÀAÀÀÀÀÀÀÀ@ffffffffè òåì, êòî ïðîñòî ïîìîã ñîâåòîì"
+		value="@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀAÀÀÀÀA@ffffa600«Improved Storyline v1.1»| | | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀA@ffffa600Çàèìñòâîâàíèÿ èç ìîäîâ| |@00ffffffÀÀÀÀÀÀAIÀÀÀÀÀÀÀ@ffffffffBooster Mod - êàðòû, òåêñòóðû, èêîíêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffKraycity - èìïîðòèðîâàí ïîëíîñòüþ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffSteel Dawn - èêîíêè| | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Ìóçûêàëüíûå êîìïîçèöèè| |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAÀAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAÀAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAÔAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAÀÀÀAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffÖèôåi - Ôóòóðî|@00ffffffAAAAAAAAAAÀAAAAAAAAA@ffffffffÖèôåi - Ïðîùàé, Àòëàíòèñ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Ïðàçäíèê æèçíè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Êîãäà âîçâðàùàþòñÿ áëèçêèå| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Îòäåëüíîå ñïàñèáî| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne çà ìîäåëü ëîêîìîòèâà|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red çà ìîäåëü ìåäàëè ÀÐ|@00ffffffÀÀÀÀ..AÀÀÀÀÀ@ffffffffVarisane çà ìíîãî÷èñëåííûå òåêñòîâûå ïðàâêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀA@ffffffffOverLine çà çèìíèå ëàéòìåïû| |@00ffffffAAIAAAAAAAAA@ffffffffÀ òàêæå âñåì òåñòèðîâùèêàì, áàãðåïîðòåðàì|@00ffffffÀAAAÀÀÀÀÀAÀÀÀÀÀÀÀ@ffffffffè òåì, êòî ïðîñòî ïîìîã ñîâåòîì"
 		sound=""
 		fontSize="18"
 		scrollSpeed="1.75"
@@ -448,7 +448,7 @@
 	<!-- Íîðìàëüíàÿ êîíöîâêà -->
 	<string
 		id="5970"
-		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: ***x**********|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
+		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: ***x***********|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
 
     <string
 		id="5971"
@@ -480,7 +480,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600«Improved Storyline v1.0.6»| | | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Çàèìñòâîâàíèÿ èç ìîäîâ| |@00ffffffÀÀÀÀÀÀAIÀÀÀÀÀÀÀ@ffffffffBooster Mod - êàðòû, òåêñòóðû, èêîíêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffKraycity - èìïîðòèðîâàí ïîëíîñòüþ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffSteel Dawn - èêîíêè| | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Ìóçûêàëüíûå êîìïîçèöèè| |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAÀAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAÀAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAÔAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAÀÀÀAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffÖèôåi - Ôóòóðî|@00ffffffAAAAAAAAAAÀAAAAAAAAA@ffffffffÖèôåi - Ïðîùàé, Àòëàíòèñ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Ïðàçäíèê æèçíè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Êîãäà âîçâðàùàþòñÿ áëèçêèå| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Îòäåëüíîå ñïàñèáî| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne çà ìîäåëü ëîêîìîòèâà|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red çà ìîäåëü ìåäàëè ÀÐ|@00ffffffÀÀÀÀ..AÀÀÀÀÀ@ffffffffVarisane çà ìíîãî÷èñëåííûå òåêñòîâûå ïðàâêè| |@00ffffffAAIAAAAAAAAA@ffffffffÀ òàêæå âñåì òåñòèðîâùèêàì, áàãðåïîðòåðàì|@00ffffffÀAAAÀÀÀÀÀAÀÀÀÀÀÀÀ@ffffffffè òåì, êòî ïðîñòî ïîìîã ñîâåòîì"
+		value="@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀAÀÀÀÀA@ffffa600«Improved Storyline v1.1»| | | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀA@ffffa600Çàèìñòâîâàíèÿ èç ìîäîâ| |@00ffffffÀÀÀÀÀÀAIÀÀÀÀÀÀÀ@ffffffffBooster Mod - êàðòû, òåêñòóðû, èêîíêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffKraycity - èìïîðòèðîâàí ïîëíîñòüþ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffSteel Dawn - èêîíêè| | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Ìóçûêàëüíûå êîìïîçèöèè| |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAÀAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAÀAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAÔAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAÀÀÀAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffÖèôåi - Ôóòóðî|@00ffffffAAAAAAAAAAÀAAAAAAAAA@ffffffffÖèôåi - Ïðîùàé, Àòëàíòèñ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Ïðàçäíèê æèçíè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Êîãäà âîçâðàùàþòñÿ áëèçêèå| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Îòäåëüíîå ñïàñèáî| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne çà ìîäåëü ëîêîìîòèâà|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red çà ìîäåëü ìåäàëè ÀÐ|@00ffffffÀÀÀÀ..AÀÀÀÀÀ@ffffffffVarisane çà ìíîãî÷èñëåííûå òåêñòîâûå ïðàâêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀA@ffffffffOverLine çà çèìíèå ëàéòìåïû| |@00ffffffAAIAAAAAAAAA@ffffffffÀ òàêæå âñåì òåñòèðîâùèêàì, áàãðåïîðòåðàì|@00ffffffÀAAAÀÀÀÀÀAÀÀÀÀÀÀÀ@ffffffffè òåì, êòî ïðîñòî ïîìîã ñîâåòîì"
 		sound=""
 		fontSize="18"
 		scrollSpeed="1.9"
@@ -705,8 +705,24 @@
 		sound="data\sounds\speech\rolik\narator_r1m6_b.ogg"
 		fontSize="18"
 		time="16" />
+
+	<string
+		id="77798"
+		modelName=""
+		value="Âîïðåêè âñåì ïîïûòêàì áàíäèòîâ çàõâàòèòü Þæíûé, ãîðîä óñòîÿë. Ñâîåâðåìåííàÿ ïîìîùü îäíîãî îòâàæíîãî è íåðàâíîäóøíîãî ïóòåøåñòâåííèêà ñïàñëà âåñü Êðàé. Áàíäèòû æí áðîñèëè âñå ïîïûòêè çàõâàòà ãîðîäà è âåðíóëèñü ê ãðàáåæó è ðàçáîþ, ïðîâîðà÷èâàòü êîòîðûé èì ñ êàæäûì äí¸ì ñòàíîâèòñÿ âñ¸ ñëîæíåå."
+		sound="data\sounds\speech\rolik\narator_r1m6_g.ogg"
+		fontSize="18"
+		time="19" />
+
+	<string
+		id="77799"
+		modelName=""
+		value="Ãîðîäó Þæíûé íå óäàëîñü îòáèòü íàïàäåíèå áàíäèòîâ, è òåïåðü ãîðîä ïðèíàäëåæèò êëàíó Áðîäÿã, ïðèøåäøåìó íà ìåñòî êîìàíäû Ôåëèêñà, êîòîðàÿ ðàçâàëèëàñü ïîñëå èñ÷åçíîâåíèÿ å¸ ëèäåðà. Íàñåëåíèå Êðàÿ â ñòðàõå, îáðîê áàíäèòîâ ñ êàæäûì äí¸ì ðàñò¸ò, è êàæåòñÿ, ÷òî íàäåæäû íà ñâåòëîå áóäóùåå áîëüøå óæå è íåò."
+		sound="data\sounds\speech\rolik\narator_r1m6_b.ogg"
+		fontSize="18"
+		time="16" />
 		
 	<string
 		id="9999"
-		value="Improved Storyline v1.0.6||Äàííîå ñîõðàíåíèå íåñîâìåñòèìî ñ òåêóùåé âåðñèåé Improved Storyline. ||Ïîæàëóéñòà, íà÷íèòå íîâóþ èãðó.| "/>
+		value="Improved Storyline v1.1||Äàííîå ñîõðàíåíèå íåñîâìåñòèìî ñ òåêóùåé âåðñèåé Improved Storyline. ||Ïîæàëóéñòà, íà÷íèòå íîâóþ èãðó.| "/>
 </resource>

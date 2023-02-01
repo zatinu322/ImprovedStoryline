@@ -59,7 +59,7 @@
 		<script>
 			if GetVar("AutoSaveCount").AsInt == 0 then
 				SetVar("AutoSaveCount", 1)
-				AutoSave()
+				AutoSave(STR_FIGHT_WITH_CLAW_R1M4)
 			end
 
 			trigger:Deactivate()

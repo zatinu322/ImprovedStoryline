@@ -1,8 +1,15 @@
 if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.0.6 BUILD 221230")
+	LOG("IMPROVED STORYLINE V1.1 BUILD 221230")
 
 	ISL_VERSION = "106-221230"
 end
+
+-- локализация
+STR_PUNISH_BANDITS = "Проучить бандитов"
+STR_FIGHT_WITH_CLAW_R1M4 = "Босс-кран"
+STR_FIGHT_WITH_CLAW_R2M1 = "Босс-погрузчик"
+STR_BOSS_CHOOSE = "Перед Оракулом"
+STR_BOSS_NJERI = "Битва с Ньери"
 
 -- r1m1, показ текста рассказчика в начале игры
 function r1m1_ShowNarratorText()

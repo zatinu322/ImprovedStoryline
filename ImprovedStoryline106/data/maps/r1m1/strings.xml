@@ -520,6 +520,13 @@
 		sound="data\sounds\speech\rolik\narator_r1m6_g.ogg"
 		fontSize="18"
 		time="10" />
+	<string
+		id="77793"
+		modelName=""
+		value="Âîïðåêè âñåì ïîïûòêàì áàíäèòîâ çàõâàòèòü Þæíûé, ãîðîä óñòîÿë. Ñâîåâðåìåííàÿ ïîìîùü îäíîãî îòâàæíîãî è íåðàâíîäóøíîãî ïóòåøåñòâåííèêà ñïàñëî âåñü Êðàé. Ïîñëå òàêîãî ìîùíîãî îòïîðà áàíäèòû áðîñèëè âñå ïîïûòêè çàõâàòà ãîðîäà è âåðíóëèñü ê ãðàáåæó è ðàçáîþ, ïðîâîðà÷èâàòü êîòîðûé èì ñ êàæäûì ñòàíîâèòñÿ âñ¸ ñëîæíåå."
+		sound="data\sounds\speech\rolik\narator_r1m6_g.ogg"
+		fontSize="18"
+		time="10" />
 
 	<string
 		id="10"
@@ -544,7 +551,7 @@
 
 	<string
 		id="13"
-		value="|@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ||@FF000000ÀÀÀÀÀIÀÀÀÀÀAIÀÀÀÀ@FFFFFFFFImproved Storyline v1.0.6"
+		value="|@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ||@FF000000ÀÀÀÀÀIÀÀÀÀÀAIÀÀÀÀ@FFFFFFFFImproved Storyline v1.1"
 		sound=""
 		fontSize="12"
 		time="6" />
@@ -563,12 +570,12 @@
 
 	<string
 		id="90001"
-		value="Improved Storyline v1.0.6||Ïåðåä íà÷àëîì èãðû íàñòîÿòåëüíî ðåêîìåíäóåòñÿ îçíàêîìèòüñÿ ñ ìàíóàëîì ê ìîäó.|@00FFFFFFA"
+		value="Improved Storyline v1.1||Ïåðåä íà÷àëîì èãðû íàñòîÿòåëüíî ðåêîìåíäóåòñÿ îçíàêîìèòüñÿ ñ ìàíóàëîì ê ìîäó.|@00FFFFFFA"
 		numButtons="1" />
 
 	<string
 		id="5976"
-		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: r*************|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
+		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: K**************|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
 
 	<string
 		id="5965"
@@ -668,7 +675,7 @@
 
 	<string
 		id="5977"
-		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: *}************|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
+		value="Ïàðîëü äëÿ áîíóñíîé êîíöîâêè: *4*************|Áîëåå ïîäðîáíàÿ èíôîðìàöèÿ ñîäåðæèòñÿ â ìàíóàëå ê ìîäó." />
 
 	<string
 		id="5978"
@@ -700,7 +707,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600«Improved Storyline v1.0.6»| | | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Çàèìñòâîâàíèÿ èç ìîäîâ| |@00ffffffÀÀÀÀÀÀAIÀÀÀÀÀÀÀ@ffffffffBooster Mod - êàðòû, òåêñòóðû, èêîíêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffKraycity - èìïîðòèðîâàí ïîëíîñòüþ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffSteel Dawn - èêîíêè| | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Ìóçûêàëüíûå êîìïîçèöèè| |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAÀAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAÀAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAÔAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAÀÀÀAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffÖèôåi - Ôóòóðî|@00ffffffAAAAAAAAAAÀAAAAAAAAA@ffffffffÖèôåi - Ïðîùàé, Àòëàíòèñ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Ïðàçäíèê æèçíè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Êîãäà âîçâðàùàþòñÿ áëèçêèå| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Îòäåëüíîå ñïàñèáî| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne çà ìîäåëü ëîêîìîòèâà|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red çà ìîäåëü ìåäàëè ÀÐ|@00ffffffÀÀÀÀ..AÀÀÀÀÀ@ffffffffVarisane çà ìíîãî÷èñëåííûå òåêñòîâûå ïðàâêè| |@00ffffffAAIAAAAAAAAA@ffffffffÀ òàêæå âñåì òåñòèðîâùèêàì, áàãðåïîðòåðàì|@00ffffffÀAAAÀÀÀÀÀAÀÀÀÀÀÀÀ@ffffffffè òåì, êòî ïðîñòî ïîìîã ñîâåòîì"
+		value="@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀAÀÀÀÀA@ffffa600«Improved Storyline v1.1»| | | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀA@ffffa600Çàèìñòâîâàíèÿ èç ìîäîâ| |@00ffffffÀÀÀÀÀÀAIÀÀÀÀÀÀÀ@ffffffffBooster Mod - êàðòû, òåêñòóðû, èêîíêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffKraycity - èìïîðòèðîâàí ïîëíîñòüþ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffSteel Dawn - èêîíêè| | |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffa600Ìóçûêàëüíûå êîìïîçèöèè| |@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffNick Perito - The Green Leaves of Summer|@00ffffffAAAAAAAÀAAAAAAAA@ffffffffAkira Yamaoka - Promise (Acoustic)|@00ffffffAAAAAAAAAAAAÀAAAAAAAA@ffffffffLee Jackson - Dukelinka|@00ffffffAAAAAAAAAAAÔAAAAAAAA@ffffffffJeff Russo - Fargo Theme|@00ffffffAAAAAÀÀÀAAAA@ffffffffGodless – Don’t Forget The Girls of La Belle|@00ffffffAAAAAAAAAAAAAAAAAAAAAAAAA@ffffffffÖèôåi - Ôóòóðî|@00ffffffAAAAAAAAAAÀAAAAAAAAA@ffffffffÖèôåi - Ïðîùàé, Àòëàíòèñ|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Ïðàçäíèê æèçíè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@ffffffffÖèôåi - Êîãäà âîçâðàùàþòñÿ áëèçêèå| | |@00ffffffAAAAAAAAAAAAAAAAAAAAAAA@ffffa600Îòäåëüíîå ñïàñèáî| |@00ffffffAAAAAAAIAAAAAAAAAAA@ffffffffLynne çà ìîäåëü ëîêîìîòèâà|@00ffffffAAAAAAAAAAAAAAAAAA@ffffffffSuslo Red çà ìîäåëü ìåäàëè ÀÐ|@00ffffffÀÀÀÀ..AÀÀÀÀÀ@ffffffffVarisane çà ìíîãî÷èñëåííûå òåêñòîâûå ïðàâêè|@00ffffffÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀA@ffffffffOverLine çà çèìíèå ëàéòìåïû| |@00ffffffAAIAAAAAAAAA@ffffffffÀ òàêæå âñåì òåñòèðîâùèêàì, áàãðåïîðòåðàì|@00ffffffÀAAAÀÀÀÀÀAÀÀÀÀÀÀÀ@ffffffffè òåì, êòî ïðîñòî ïîìîã ñîâåòîì"
 		sound=""
 		fontSize="18"
 		scrollSpeed="2.55"
@@ -773,7 +780,7 @@
 	<string
 		id="5988"
 		modelName="mask_hero"
-		value="Äà, èìåííî î òàêîé æèçíè ÿ âñåãäà è ìå÷òàë."
+		value="Äà, ïîæàëóé, èìåííî î òàêîé æèçíè ÿ âñåãäà è ìå÷òàë."
 		sound=""
 		time="5" />
 
@@ -786,9 +793,9 @@
 
 	<string
 		id="9999"
-		value="Improved Storyline v1.0.6||Äàííîå ñîõðàíåíèå íåñîâìåñòèìî ñ òåêóùåé âåðñèåé Improved Storyline. ||Ïîæàëóéñòà, íà÷íèòå íîâóþ èãðó.| "/>
+		value="Improved Storyline v1.1||Äàííîå ñîõðàíåíèå íåñîâìåñòèìî ñ òåêóùåé âåðñèåé Improved Storyline. ||Ïîæàëóéñòà, íà÷íèòå íîâóþ èãðó.| "/>
 
 	<string
 		id="9998"
-		value="Improved Storyline v1.0.6||Äàííàÿ âåðñèÿ Improved Storyline ïðåäíàçíà÷åíà òîëüêî äëÿ ðàáîòû â ñîñòàâå ñ Community Patch/Remaster.||Ïîæàëóéñòà, ïðîèçâåäèòå êîððåêòíóþ óñòàíîâêó ýòèõ äâóõ ìîäèôèêàöèé è ïîïðîáóéòå ñíîâà.| "/>
+		value="Improved Storyline v1.1||Äàííàÿ âåðñèÿ Improved Storyline ïðåäíàçíà÷åíà òîëüêî äëÿ ðàáîòû â ñîñòàâå ñ Community Patch/Remaster.||Ïîæàëóéñòà, ïðîèçâåäèòå êîððåêòíóþ óñòàíîâêó ýòèõ äâóõ ìîäèôèêàöèé è ïîïðîáóéòå ñíîâà.| "/>
 </resource>

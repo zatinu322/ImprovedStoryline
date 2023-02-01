@@ -2462,8 +2462,10 @@
 			if bossp then
 				ShowBossIndicator(bossp:GetId())
 			end
+			AllowSave(false)
 
-			SpawnMessageBox("8806")
+			SetVar("AutoSaveCount", 2)
+			TActivate("trAutoSave")
 
 			trigger:Deactivate()
 		</script>
@@ -2509,6 +2511,8 @@
 			TActivate("trUFODIE_cam02")
 			TActivate("trUFODIE_cam04")
 			TActivate("trUFODIE_FADE")
+			
+			AllowSave(true)
 
 			trigger:Deactivate()
 		</script>

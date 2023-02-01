@@ -538,7 +538,7 @@
 
 			CreateNewDummyObject( "dweller_ben", "HumanBen", -1, -1, CVector(3787.429, 121.943, 1824.044), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
 			if QuestStatus("BenZima_Quest")==Q_TAKEN or QuestStatus("BenGoodEnd")==Q_TAKEN or QuestStatus("BenNormalEnd")==Q_TAKEN then
-				CreateNewDummyObject( "dweller_lisa", "HumanLisa", -1, -1, CVector(3786.886, 121.943, 1823.141), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
+				CreateNewDummyObject( "dweller_lisa", "HumanLisa", -1, -1, CVector(3786.886, 121.957, 1823.141), Quaternion( 0.0000, -0.1240, 0.0000, 0.9923 ), 0)
 			end
 
 			local PlVehicle = GetPlayerVehicle()
@@ -1158,6 +1158,7 @@
 			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
 			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
 			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
+			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 0)
 			Fly("EndingScreenCam1", CINEMATIC_NO_AIM, nil, 10, 0, 1)
 			StartCinematic()
 
@@ -1325,6 +1326,22 @@
 				fly_amount = fly_amount + 1
 
 			elseif fly_amount == 7 then
+			
+				-- блок ёжный
+				if QuestStatus("DefendSowth_Quest")==Q_COMPLETED then
+					AddCinematicMessage( 77798, 0 )
+					r1m6_skin = 19
+				else
+					AddCinematicMessage( 77799, 0 )
+					r1m6_skin = 18
+				end
+
+				local pic = GetEntityByName("CurPicture")
+				if pic then pic:SetSkin(r1m6_skin) end
+
+				fly_amount = fly_amount + 1
+
+			elseif fly_amount == 8 then
 
 				AddCinematicMessage( 77792, 0 )
 
@@ -1333,7 +1350,7 @@
 
 				fly_amount = fly_amount + 1
 
-			elseif fly_amount == 8 then
+			elseif fly_amount == 9 then
 			
 				AddCinematicMessage( 77793, 0 )
 

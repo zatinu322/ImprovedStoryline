@@ -17925,7 +17925,7 @@
 		name="Dlg_pl_002598"
 		text="Спасибо за всё. Феликс будет повержен."
 		role="PLAYER"
-		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('d_SinFather_Quest'); AddHistory(  'r1_South_About_Felix_00'  ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('d_SinFather_Quest'); AddHistory(  'r1_South_About_Felix_00'  ); AddFadingMsgId( 'fm_history_got' ); TActivate('trSwitchInfectionBelong'); EndConversation()" />
 
 	<Reply
 		name="HurdTrucker_hellodlg2"

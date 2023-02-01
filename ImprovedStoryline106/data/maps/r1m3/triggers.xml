@@ -30,7 +30,7 @@
 		<script>
 			if GetVar("AutoSaveCount").AsInt == 0 then
 				SetVar("AutoSaveCount", 1)
-				AutoSave()
+				AutoSave(STR_BOSS_CHOOSE)
 			end
 
 			trigger:Deactivate()

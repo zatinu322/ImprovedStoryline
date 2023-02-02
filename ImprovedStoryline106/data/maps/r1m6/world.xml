@@ -2,7 +2,7 @@
 <World
 	name="Object612"
 	class="SgNode"
-	LastId="92389559">
+	LastId="92389605">
 	<Node
 		name="Object92377492"
 		class="SgAnimatedModelNode"
@@ -2894,7 +2894,8 @@
 		orgRel="1"
 		rot="0.0000 0.1435 0.0000 0.9897"
 		id="rr_platform"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object92378149"
@@ -8904,7 +8905,8 @@
 		rot="0.0000 -0.5428 0.0000 0.8399"
 		scale="0.734 0.734 0.734"
 		id="city_ruins"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object92379055"
@@ -9118,7 +9120,8 @@
 		rot="0.0000 0.4962 0.0000 0.8682"
 		scale="1.526 1.526 1.526"
 		id="millitary_town"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object92379292"
@@ -9128,7 +9131,8 @@
 		rot="0.0000 -0.8714 0.0000 0.4905"
 		scale="3.102 3.102 3.102"
 		id="heavy_dot3"
-		ndmAction="0" />
+		ndmAction="0"
+		CastShadow="no" />
 
 	<Node
 		name="Object92379293"

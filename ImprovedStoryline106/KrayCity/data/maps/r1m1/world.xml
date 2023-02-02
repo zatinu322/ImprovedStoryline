@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="76483091">
+	LastId="76483164">
 	<Node
 		name="Object3"
 		class="SgAnimatedModelNode"
@@ -3080,36 +3080,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object3328"
-		class="SgAnimatedModelNode"
-		org="2465.003 0.000 2683.675"
-		orgRel="1"
-		rot="0.0000 0.9659 0.0000 0.2588"
-		scale="0.884 0.884 0.884"
-		id="big_stone3"
-		ndmAction="0" />
-
-	<Node
-		name="Object3329"
-		class="SgAnimatedModelNode"
-		org="2453.899 0.000 2692.970"
-		orgRel="1"
-		rot="0.0000 0.2334 0.0000 0.9724"
-		scale="1.030 1.030 1.030"
-		id="big_stone4"
-		ndmAction="0" />
-
-	<Node
-		name="Object3330"
-		class="SgAnimatedModelNode"
-		org="2463.580 0.000 2675.383"
-		orgRel="1"
-		rot="0.0000 0.4924 0.0000 0.8704"
-		scale="0.785 0.785 0.785"
-		id="big_stone4"
-		ndmAction="0" />
-
-	<Node
 		name="Object3331"
 		class="SgAnimatedModelNode"
 		org="2482.509 0.000 2700.664"
@@ -3280,16 +3250,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object3348"
-		class="SgAnimatedModelNode"
-		org="2484.250 0.000 2795.233"
-		orgRel="1"
-		rot="0.0000 0.2672 0.0000 0.9636"
-		scale="0.825 0.825 0.825"
-		id="big_stone4"
-		ndmAction="0" />
-
-	<Node
 		name="Object3361"
 		class="SgAnimatedModelNode"
 		org="2503.738 0.000 2913.938"
@@ -3340,16 +3300,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object3366"
-		class="SgAnimatedModelNode"
-		org="2462.784 0.000 2984.692"
-		orgRel="1"
-		rot="0.0000 0.5878 0.0000 -0.8090"
-		scale="0.936 0.936 0.936"
-		id="big_stone1"
-		ndmAction="0" />
-
-	<Node
 		name="Object3367"
 		class="SgAnimatedModelNode"
 		org="2474.932 0.000 2988.761"
@@ -3357,16 +3307,6 @@
 		rot="0.0000 0.2756 0.0000 -0.9613"
 		scale="0.908 0.908 0.908"
 		id="big_stone2"
-		ndmAction="0" />
-
-	<Node
-		name="Object3368"
-		class="SgAnimatedModelNode"
-		org="2467.570 0.000 2972.213"
-		orgRel="1"
-		rot="0.0000 0.9426 0.0000 0.3338"
-		scale="1.029 1.029 1.029"
-		id="big_stone4"
 		ndmAction="0" />
 
 	<Node
@@ -3380,52 +3320,12 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object3370"
-		class="SgAnimatedModelNode"
-		org="2452.259 0.000 3012.665"
-		orgRel="1"
-		rot="0.0000 0.9272 0.0000 0.3746"
-		scale="1.184 1.184 1.184"
-		id="big_stone1"
-		ndmAction="0" />
-
-	<Node
-		name="Object3371"
-		class="SgAnimatedModelNode"
-		org="2462.493 0.000 3008.445"
-		orgRel="1"
-		rot="0.0000 0.3502 0.0000 0.9367"
-		scale="0.871 0.871 0.871"
-		id="big_stone3"
-		ndmAction="0" />
-
-	<Node
-		name="Object3372"
-		class="SgAnimatedModelNode"
-		org="2471.083 0.000 3016.346"
-		orgRel="1"
-		rot="0.0000 0.7133 0.0000 -0.7009"
-		scale="0.921 0.921 0.921"
-		id="big_stone3"
-		ndmAction="0" />
-
-	<Node
 		name="Object3373"
 		class="SgAnimatedModelNode"
 		org="2479.075 0.000 3046.118"
 		orgRel="1"
 		rot="0.0000 0.3907 0.0000 0.9205"
 		scale="1.198 1.198 1.198"
-		id="big_stone1"
-		ndmAction="0" />
-
-	<Node
-		name="Object3374"
-		class="SgAnimatedModelNode"
-		org="2476.857 0.000 3024.385"
-		orgRel="1"
-		rot="0.0000 0.9781 0.0000 -0.2079"
-		scale="1.050 1.050 1.050"
 		id="big_stone1"
 		ndmAction="0" />
 
@@ -3855,46 +3755,6 @@
 		rot="0.0000 0.6157 0.0000 -0.7880"
 		scale="0.890 0.890 0.890"
 		id="big_stone4"
-		ndmAction="0" />
-
-	<Node
-		name="Object3452"
-		class="SgAnimatedModelNode"
-		org="2480.044 0.000 2739.713"
-		orgRel="1"
-		rot="0.0000 0.9483 0.0000 0.3173"
-		scale="1.001 1.001 1.001"
-		id="big_stone1"
-		ndmAction="0" />
-
-	<Node
-		name="Object3453"
-		class="SgAnimatedModelNode"
-		org="2480.929 0.000 2766.288"
-		orgRel="1"
-		rot="0.0000 0.7193 0.0000 -0.6947"
-		scale="1.016 1.016 1.016"
-		id="big_stone4"
-		ndmAction="0" />
-
-	<Node
-		name="Object3454"
-		class="SgAnimatedModelNode"
-		org="2539.555 0.000 2696.365"
-		orgRel="1"
-		rot="0.0000 0.5000 0.0000 0.8660"
-		scale="0.964 0.964 0.964"
-		id="big_stone2"
-		ndmAction="0" />
-
-	<Node
-		name="Object3455"
-		class="SgAnimatedModelNode"
-		org="2518.396 0.000 2688.934"
-		orgRel="1"
-		rot="0.0000 0.6361 0.0000 0.7716"
-		scale="0.995 0.995 0.995"
-		id="big_stone3"
 		ndmAction="0" />
 
 	<Node

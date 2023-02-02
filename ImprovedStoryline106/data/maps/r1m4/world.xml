@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76489026">
+	LastId="76489096">
 	<Node
 		name="Object9"
 		class="SgAnimatedModelNode"
@@ -3632,8 +3632,9 @@
 	<Node
 		name="Object1258"
 		class="SgAnimatedModelNode"
-		org="2795.793 0.000 2723.019"
+		org="2795.793 -3.589 2723.019"
 		orgRel="1"
+		rot="0.0000 0.0000 0.0480 0.9988"
 		scale="1.707 1.707 1.707"
 		id="crag_copped_6"
 		ndmAction="0" />
@@ -4060,9 +4061,9 @@
 	<Node
 		name="Object1302"
 		class="SgAnimatedModelNode"
-		org="2840.604 0.000 3379.948"
+		org="2840.604 -1.217 3379.948"
 		orgRel="1"
-		rot="0.0000 0.2588 0.0000 -0.9659"
+		rot="0.1449 0.2559 0.0388 -0.9550"
 		scale="0.830 0.830 0.830"
 		id="crag_copped_7"
 		ndmAction="0" />
@@ -4070,9 +4071,9 @@
 	<Node
 		name="Object1303"
 		class="SgAnimatedModelNode"
-		org="2896.022 -4.868 3403.405"
+		org="2896.022 -5.747 3403.405"
 		orgRel="1"
-		rot="0.0000 0.9007 0.0000 0.4344"
+		rot="-0.0605 0.8920 0.1254 0.4302"
 		scale="1.690 1.690 1.690"
 		id="crag_copped_7"
 		ndmAction="0" />
@@ -20932,13 +20933,13 @@
 		id="berth"
 		ndmAction="0"
 		CastShadow="no" />
-	
+
 	<Node
 		name="FilimonsElka"
 		class="SgAnimatedModelNode"
 		org="3874.981 0.000 925.486"
 		orgRel="1"
-		rot="0.000 0.292 0.000 0.956"
+		rot="0.0000 0.2920 0.0000 0.9560"
 		scale="0.800 0.800 0.800"
 		id="elka1"
 		ndmAction="0" />

@@ -2681,7 +2681,7 @@
 				vehPlayer:SetRotation(Quaternion(0.005, 0.950, 0.003, 0.313))
 			end
 			
-			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(187.386, 254.706, 697.989), Quaternion(0.0000, -0.3317, 0.0000, 0.9434), 1)
+			CreateNewDummyObject( "dweller_player", "humPlayer", -1, -1, CVector(187.386, 254.766, 697.989), Quaternion(0.0000, -0.3317, 0.0000, 0.9434), 1)
 			getObj("humPlayer"):SetNodeAction(AT_STAND1)
 			
 			trigger:Deactivate()

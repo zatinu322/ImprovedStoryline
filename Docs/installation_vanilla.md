@@ -2,11 +2,11 @@
 
   # [RUS](#russian)/[ENG](#english)
 
+<a id="russian"></a>
+
 <img src="https://i.imgur.com/kVO23Ro.png" alt="Logo_install_rus" width="600">
 
 </div>
-
-<a id="russian"></a>
 
 <div align="center"><h1>Установка Improved Storyline на оригинальную игру</h1></div>
 

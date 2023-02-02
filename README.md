@@ -100,11 +100,11 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Скачать
 * ## Для оригинальной игры (steam, v1.02)
-  * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906)
+  * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
 * ## Для Community Patch v1.13
-  * [Improved Storyline v1.0.6 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-dev-build-221230)
+  * [Improved Storyline v1.0.6 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-dev-build-221230) [RUS]
 * ## Для Community Remaster v1.13
-  * [Improved Storyline v1.0.6 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-hd-dev-build-221230)
+  * [Improved Storyline v1.0.6 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-hd-dev-build-221230) [RUS]
 
 <a id="installation_rus"></a>
 
@@ -164,8 +164,8 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 - [Change list](#changelist_main_eng)
   - [Major changes](#changelist_global_eng)
   - [Minor fixes](#changelist_minor_eng)
-- [Download](#download_eng)
-- [Installation guide](#installation_eng)
+- [Download Links](#download_eng)
+- [Installation guides](#installation_eng)
 - [Troubleshooting](#bugs_eng)
 - [Previous versions](#previous_versions_eng)
 - [Contacts](#contacts_eng)
@@ -186,7 +186,7 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 
 <a id="changelist_global_eng"></a>
 
-## Global changes
+## Major changes
 1. Redesigned all the dialogues, diary entries and quests descriptions.
 2. Added a lot of alternative ways for passing main story.
 3. Added some secondary quests.
@@ -252,11 +252,11 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 # Download Links
 
 * ## For original vanilla game (steam, v1.02)
-  * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906)
+  * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS ONLY]
 * ## For Community Patch v1.13
-  * [Improved Storyline v1.1 for Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp)
+  * [Improved Storyline v1.1 for Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-dev-build-221230) [RUS]
 * ## For Community Remaster v1.13
-  * [Improved Storyline v1.1 for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr)
+  * [Improved Storyline v1.1 for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-hd-dev-build-221230) [RUS]
 
 <a id="installation_eng"></a>
 
@@ -267,9 +267,9 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 
 <a id="bugs_eng"></a>
 
-# Known issues and how to fix them
+# Troubleshooting
 1. Some people in towns and villages walk on the spot. For them to start moving, you need to take a screenshot (F12).
-2. The power sources at Njeri's ship sometimes not destroyed. Restarting the game helps.
+2. The power sources at Njeri's ship sometimes can not be destroyed. Restarting the game fixes this problem.
 
 <a id="previous_versions_eng"></a>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="3629">
+	LastId="3632">
 	<TargetNamesForDestroy
 		Names="urod1 urod2 urod3 urod4 urod5 urod6 urod7 urod8 urod9" />
 
@@ -3810,38 +3810,6 @@
 				LinearVelocity="13.889"
 				AngularVelocity="0.500"
 				NumPathPoint="-1" />
-		</Object>
-	</Object>
-
-	<Object
-		Name="barricade6_wGw69"
-		Belong="1002"
-		Prototype="barricade6_wGw"
-		Pos="1970.278 288.000 2547.463"
-		Probability="0.500">
-		<Object
-			Flags="21"
-			Name="barricade6_wGw69_Team"
-			Belong="1002"
-			Prototype="settlementTeam">
-			<Formation
-				Name="barricade6_wGw69_Team_Formation"
-				Belong="1002"
-				Prototype="caravanFormation"
-				DistBetweenVehicles="30.000"
-				Pos="0.000 0.000 0.000"
-				Direction="0.000 0.000 1.000"
-				LinearVelocity="100.000"
-				AngularVelocity="0.500"
-				NumPathPoint="-1" />
-		</Object>
-
-		<Object
-			Name="barricade6_wGw69_Child3"
-			Belong="1002"
-			Prototype="staticAutoGun07"
-			Pos="1970.278 288.000 2547.463">
-			<Parts />
 		</Object>
 	</Object>
 
@@ -28636,129 +28604,30 @@
 		Rot="0.000 -1.000 0.000 0.020" />
 
 	<Object
-		Name="lamppost13324"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2503.501 248.333 947.966"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13325"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2503.608 248.333 968.389"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13326"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2503.714 248.333 988.812"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13327"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2503.821 248.333 1009.235"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13328"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2503.927 248.333 1029.658"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13329"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2504.033 248.333 1050.081"
-		Rot="0.000 -0.705 0.000 0.709">
-		<Object
-			Belong="-1"
-			Prototype="Light_Yellow_Lens"
-			Pos="2500.868 258.525 1050.099"
-			Rot="0.000 -0.705 0.000 0.709" />
-	</Object>
-
-	<Object
-		Name="lamppost13330"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2504.140 248.333 1070.504"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13331"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2504.246 248.332 1090.927"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13332"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2504.353 248.326 1111.350"
-		Rot="0.000 -0.705 0.000 0.709" />
-
-	<Object
-		Name="lamppost13333"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2511.510 248.402 1112.007"
-		Rot="0.000 0.707 0.000 0.707" />
-
-	<Object
-		Name="lamppost13334"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2511.518 248.588 1091.584"
-		Rot="0.000 0.707 0.000 0.707" />
-
-	<Object
 		Name="lamppost13335"
 		Belong="-1"
 		Prototype="lamppost1"
 		Pos="2511.527 248.580 1071.161"
-		Rot="0.000 0.707 0.000 0.707" />
-
-	<Object
-		Name="lamppost13336"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2511.535 248.566 1050.737"
-		Rot="0.000 0.707 0.000 0.707" />
-
-	<Object
-		Name="lamppost13337"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2511.543 248.552 1030.314"
-		Rot="0.000 0.707 0.000 0.707" />
+		Rot="0.000 0.707 0.000 0.707">
+		<Object
+			Belong="-1"
+			Prototype="LightObject2"
+			Pos="2514.692 258.772 1071.161"
+			Rot="0.000 0.707 0.000 0.707" />
+	</Object>
 
 	<Object
 		Name="lamppost13338"
 		Belong="-1"
 		Prototype="lamppost1"
 		Pos="2511.552 248.504 1009.891"
-		Rot="0.000 0.707 0.000 0.707" />
-
-	<Object
-		Name="lamppost13339"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2511.560 248.435 989.468"
-		Rot="0.000 0.707 0.000 0.707" />
-
-	<Object
-		Name="lamppost13340"
-		Belong="-1"
-		Prototype="lamppost1"
-		Pos="2511.568 248.367 969.045"
-		Rot="0.000 0.707 0.000 0.707" />
+		Rot="0.000 0.707 0.000 0.707">
+		<Object
+			Belong="-1"
+			Prototype="LightObject2"
+			Pos="2514.717 258.696 1009.891"
+			Rot="0.000 0.707 0.000 0.707" />
+	</Object>
 
 	<Object
 		Name="lamppost13341"
@@ -28768,7 +28637,7 @@
 		Rot="0.000 0.707 0.000 0.707">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2514.741 258.525 948.622"
 			Rot="0.000 0.707 0.000 0.707" />
 	</Object>
@@ -29507,7 +29376,7 @@
 		Rot="0.000 1.000 0.000 0.028">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="929.672 316.193 2518.414"
 			Rot="0.000 1.000 0.000 0.028" />
 	</Object>
@@ -29519,7 +29388,7 @@
 		Pos="2615.698 248.333 1035.717">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2615.815 257.803 1035.464"
 			Rot="0.998 0.000 0.000 0.060" />
 	</Object>
@@ -29532,7 +29401,7 @@
 		Rot="0.000 0.709 0.000 0.706">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2609.979 258.525 913.543"
 			Rot="0.000 0.709 0.000 0.706" />
 	</Object>
@@ -29556,7 +29425,7 @@
 		Pos="3835.709 249.000 938.145">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3835.709 259.192 941.310" />
 	</Object>
 
@@ -29568,7 +29437,7 @@
 		Rot="0.000 -0.722 0.000 0.692">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2778.387 258.595 1926.723"
 			Rot="0.000 -0.722 0.000 0.692" />
 	</Object>
@@ -30118,12 +29987,12 @@
 	<Object
 		Name="lamppost23559"
 		Belong="-1"
-		Prototype="lamppost2"
+		Prototype="lamppost3"
 		Pos="3057.053 226.000 747.484"
 		Rot="0.000 0.770 0.000 0.638">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3057.236 232.946 748.456"
 			Rot="0.000 0.770 0.000 0.638" />
 	</Object>
@@ -32574,51 +32443,14 @@
 		Rot="0.000 -0.554 0.000 0.833" />
 
 	<Object
-		Name="lamppost23617"
-		Belong="1001"
-		Prototype="lamppost2"
-		Pos="3902.844 249.000 903.555"
-		Rot="0.000 -0.537 0.000 0.843">
-		<Object
-			Belong="1001"
-			Prototype="Light_Yellow_Lens"
-			Pos="3902.426 255.946 902.658"
-			Rot="0.000 -0.537 0.000 0.843" />
-	</Object>
-
-	<Object
-		Name="lamppost23618"
-		Belong="1001"
-		Prototype="lamppost2"
-		Pos="3291.005 224.231 2111.396"
-		Rot="0.000 -0.781 0.000 0.624">
-		<Object
-			Belong="1001"
-			Prototype="Light_Yellow_Lens"
-			Pos="3291.225 231.178 2110.431"
-			Rot="0.000 -0.781 0.000 0.624" />
-	</Object>
-
-	<Object
-		Name="lamppost23619"
-		Belong="1001"
-		Prototype="lamppost2"
-		Pos="2777.270 216.036 3641.543">
-		<Object
-			Belong="1001"
-			Prototype="Light_Yellow_Lens"
-			Pos="2776.280 222.982 3641.542" />
-	</Object>
-
-	<Object
 		Name="lamppost23620"
 		Belong="1001"
-		Prototype="lamppost2"
+		Prototype="lamppost3"
 		Pos="346.246 335.061 3181.000"
 		Rot="0.000 -0.677 0.000 0.736">
 		<Object
 			Belong="1001"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="346.165 342.007 3180.014"
 			Rot="0.000 -0.677 0.000 0.736" />
 	</Object>
@@ -32626,12 +32458,12 @@
 	<Object
 		Name="lamppost23621"
 		Belong="1001"
-		Prototype="lamppost2"
+		Prototype="lamppost3"
 		Pos="1641.410 270.000 1816.448"
 		Rot="0.000 -0.892 0.000 0.452">
 		<Object
 			Belong="1001"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="1641.996 276.946 1815.650"
 			Rot="0.000 0.892 0.000 -0.452" />
 	</Object>
@@ -32639,12 +32471,12 @@
 	<Object
 		Name="lamppost23622"
 		Belong="1001"
-		Prototype="lamppost2"
+		Prototype="lamppost3"
 		Pos="2974.701 248.921 1777.687"
 		Rot="0.000 -0.517 0.000 0.856">
 		<Object
 			Belong="1001"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2974.241 255.867 1776.811"
 			Rot="0.000 -0.517 0.000 0.856" />
 	</Object>
@@ -33191,4 +33023,43 @@
 	<Object
 		Belong="1100"
 		Prototype="someRecollection" />
+
+	<Object
+		Name="lamppost13629"
+		Belong="1001"
+		Prototype="lamppost1"
+		Pos="2777.231 215.993 3638.283"
+		Rot="0.000 -0.707 0.000 0.707">
+		<Object
+			Belong="1001"
+			Prototype="LightObject2"
+			Pos="2774.066 226.185 3638.283"
+			Rot="0.000 -0.707 0.000 0.707" />
+	</Object>
+
+	<Object
+		Name="lamppost13630"
+		Belong="1001"
+		Prototype="lamppost1"
+		Pos="3290.381 224.231 2108.037"
+		Rot="0.000 -0.746 0.000 0.666">
+		<Object
+			Belong="1001"
+			Prototype="LightObject2"
+			Pos="3287.236 234.424 2107.678"
+			Rot="0.000 -0.746 0.000 0.666" />
+	</Object>
+
+	<Object
+		Name="lamppost13631"
+		Belong="1001"
+		Prototype="lamppost1"
+		Pos="3899.006 249.000 901.470"
+		Rot="0.000 -0.324 0.000 0.946">
+		<Object
+			Belong="1001"
+			Prototype="LightObject2"
+			Pos="3897.068 259.192 903.972"
+			Rot="0.000 -0.324 0.000 0.946" />
+	</Object>
 </DynamicScene>

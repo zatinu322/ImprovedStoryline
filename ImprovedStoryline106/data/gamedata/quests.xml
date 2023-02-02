@@ -2937,6 +2937,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		PrecedingQuests="d_PunishBandits_Quest"
 		Levels="r1m4" />
 <!--Root/r1m4/Мистер Шляпа-->
 	<quest

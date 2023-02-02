@@ -2415,7 +2415,7 @@
 		Pos="491.655 288.000 1573.338">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="491.655 298.192 1576.503" />
 	</Object>
 
@@ -2720,7 +2720,7 @@
 		Rot="0.000 0.706 0.000 0.709">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2393.699 305.336 1036.305"
 			Rot="0.000 0.706 0.000 0.709" />
 	</Object>
@@ -2803,7 +2803,7 @@
 		Rot="0.000 0.356 0.000 0.934">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2271.867 305.192 1184.965"
 			Rot="0.000 0.356 0.000 0.934" />
 	</Object>
@@ -2893,7 +2893,7 @@
 		Rot="0.000 -0.015 0.000 1.000">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2436.889 305.195 1180.277"
 			Rot="0.000 -0.015 0.000 1.000" />
 	</Object>
@@ -2921,7 +2921,7 @@
 		Rot="0.000 -0.013 0.000 1.000">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="2148.743 305.192 1099.279"
 			Rot="0.000 -0.013 0.000 1.000" />
 	</Object>
@@ -3893,7 +3893,7 @@
 		Rot="-0.017 0.996 0.001 0.085">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3262.691 260.975 1904.630"
 			Rot="-0.017 0.996 0.001 0.085" />
 	</Object>
@@ -3906,7 +3906,7 @@
 		Rot="0.000 0.528 0.000 0.849">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3433.758 287.057 1779.651"
 			Rot="0.000 0.528 0.000 0.849" />
 	</Object>

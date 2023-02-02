@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="2780">
+	LastId="2781">
 	<TargetNamesForDestroy
 		Names="urod1 urod2 urod3 urod4 urod5 urod6 urod7 urod8 urod9" />
 
@@ -1484,11 +1484,11 @@
 				<CANNON
 					present="1"
 					Name="heavy_dot3_vulcan9CANNON"
-					Belong="1008"
+					Belong="1019"
 					Prototype="vulcan01" />
 			</Parts>
 		</Object>
-	
+
 		<Object
 			Name="heavy_dot2_vector10"
 			Belong="1019"
@@ -1499,11 +1499,11 @@
 				<CANNON
 					present="1"
 					Name="heavy_dot2_vector10CANNON"
-					Belong="1008"
+					Belong="1019"
 					Prototype="vector01" />
 			</Parts>
 		</Object>
-	
+
 		<Object
 			Name="sack_dot1_vulcan11"
 			Belong="1019"
@@ -1514,11 +1514,11 @@
 				<CANNON
 					present="1"
 					Name="sack_dot1_vulcan11CANNON"
-					Belong="1008"
+					Belong="1019"
 					Prototype="vulcan01" />
 			</Parts>
 		</Object>
-	
+
 		<Object
 			Name="sack_dot2_vulcan12"
 			Belong="1019"
@@ -1529,7 +1529,7 @@
 				<CANNON
 					present="1"
 					Name="sack_dot2_vulcan12CANNON"
-					Belong="1008"
+					Belong="1019"
 					Prototype="vulcan01" />
 			</Parts>
 		</Object>
@@ -25203,7 +25203,7 @@
 		Rot="0.000 -0.818 0.000 0.575">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="1573.831 259.192 666.974"
 			Rot="0.000 -0.818 0.000 0.575" />
 	</Object>
@@ -25223,7 +25223,7 @@
 		Rot="0.000 0.897 0.000 0.442">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="847.031 298.195 973.539"
 			Rot="0.000 0.897 0.000 0.442" />
 	</Object>
@@ -25256,12 +25256,6 @@
 		Pos="1725.991 283.423 1532.027" />
 
 	<Object
-		Name="lamppost22610"
-		Belong="-1"
-		Prototype="lamppost2"
-		Pos="3063.732 260.805 1339.959" />
-
-	<Object
 		Name="lamppost12611"
 		Belong="-1"
 		Prototype="lamppost1"
@@ -25269,7 +25263,7 @@
 		Rot="0.000 0.914 0.000 0.405">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3795.034 266.413 1938.163"
 			Rot="0.000 0.914 0.000 0.405" />
 	</Object>
@@ -25286,7 +25280,13 @@
 		Belong="-1"
 		Prototype="lamppost1"
 		Pos="3221.175 249.286 1421.800"
-		Rot="0.000 0.979 0.000 0.206" />
+		Rot="0.000 0.979 0.000 0.206">
+		<Object
+			Belong="-1"
+			Prototype="Light_Red"
+			Pos="3222.451 259.478 1418.903"
+			Rot="0.000 0.979 0.000 0.206" />
+	</Object>
 
 	<Object
 		Name="lamppost12614"
@@ -25507,7 +25507,13 @@
 		Belong="-1"
 		Prototype="lamppost1"
 		Pos="3355.177 249.019 1413.982"
-		Rot="0.000 0.979 0.000 0.206" />
+		Rot="0.000 0.979 0.000 0.206">
+		<Object
+			Belong="-1"
+			Prototype="Light_Red"
+			Pos="3356.453 259.211 1411.085"
+			Rot="0.000 0.979 0.000 0.206" />
+	</Object>
 
 	<Object
 		Name="lamppost12646"
@@ -25517,7 +25523,7 @@
 		Rot="0.000 0.901 0.000 0.434">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3481.934 259.289 1487.495"
 			Rot="0.000 0.901 0.000 0.434" />
 	</Object>
@@ -25537,7 +25543,7 @@
 		Rot="0.000 0.976 0.000 0.216">
 		<Object
 			Belong="-1"
-			Prototype="Light_Yellow_Lens"
+			Prototype="LightObject2"
 			Pos="3696.334 259.252 1784.300"
 			Rot="0.000 0.976 0.000 0.216" />
 	</Object>
@@ -27075,4 +27081,22 @@
 		Prototype="pack_breakable"
 		Pos="1789.908 249.000 1187.625"
 		Rot="0.000 -0.387 0.000 0.922" />
+
+	<Object
+		Name="Player1"
+		Belong="1100"
+		Prototype="player" />
+
+	<Object
+		Name="lamppost12780"
+		Belong="1001"
+		Prototype="lamppost1"
+		Pos="3066.683 260.806 1344.732"
+		Rot="0.000 -0.965 0.000 0.263">
+		<Object
+			Belong="1001"
+			Prototype="Light_Red"
+			Pos="3065.077 270.998 1342.005"
+			Rot="0.000 0.965 0.000 -0.263" />
+	</Object>
 </DynamicScene>

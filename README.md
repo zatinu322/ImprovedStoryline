@@ -102,9 +102,9 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 * ## Для оригинальной игры (steam, v1.02)
   * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906)
 * ## Для Community Patch v1.13
-  * [Improved Storyline v1.1 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cp)
+  * [Improved Storyline v1.0.6 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-dev-build-221230)
 * ## Для Community Remaster v1.13
-  * [Improved Storyline v1.1 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr)
+  * [Improved Storyline v1.0.6 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.6-hd-dev-build-221230)
 
 <a id="installation_rus"></a>
 

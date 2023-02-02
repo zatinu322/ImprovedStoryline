@@ -8,7 +8,7 @@
 
 </div>
 
-<div align="center"><h1>РЈСЃС‚Р°РЅРѕРІРєР° Improved Storyline РЅР° Community Patch / Remaster</h1></div>
+<div align="center"><h1>Установка Improved Storyline на Community Patch / Remaster</h1></div>
 
 ## 1 способ (на чистую **_русскую версию игры из Steam_**)
 

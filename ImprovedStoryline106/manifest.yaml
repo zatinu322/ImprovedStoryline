@@ -3,8 +3,8 @@ name: ImprovedStoryline106
 
 # required human readable info
 display_name: Improved Storyline
-version: "1.0.6-HD-dev"
-build: "221230"
+version: "1.1-HD-dev"
+build: "230202"
 description: |
   Сюжетная модификация, главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 authors: pavlikrpg
@@ -12,7 +12,7 @@ authors: pavlikrpg
 # optional human readable info
 release_date: TBA
 language: ru
-link: https://github.com/zatinu322/ImprovedStoryline/tree/patch106cr
+link: https://github.com/zatinu322/ImprovedStoryline/
 
 # installation confguration
 prerequisites: 

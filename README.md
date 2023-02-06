@@ -134,6 +134,7 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Предыдущие версии
 * Для оригинальной игры:
+  * [Improved Storyline v1.0.5.3 [build 220422]](https://github.com/zatinu322/ImprovedStoryline/archive/d73fb14401f74ff37a4aeaaf2011e4b3fe5de25c.zip) [RUS]
   * [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052) [RUS]
   * [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051) [RUS]
   * [Improved Storyline v1.0.5](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline105) [RUS]
@@ -275,6 +276,7 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 
 # Previous versions
 * For original vanilla Hard Truck Apocalypse:
+  * [Improved Storyline v1.0.5.3 [build 220422]](https://github.com/zatinu322/ImprovedStoryline/archive/d73fb14401f74ff37a4aeaaf2011e4b3fe5de25c.zip) [RUS]
   * [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052) [RUS]
   * [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051) [RUS]
   * [Improved Storyline v1.0.5](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline105) [RUS]

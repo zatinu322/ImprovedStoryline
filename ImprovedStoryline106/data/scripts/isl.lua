@@ -16,6 +16,13 @@ function r1m1_ShowNarratorText()
 	AddCinematicMessage( 77771, 0.1)
 end
 
+-- r1m1, начальные титры
+function r1m1_ShowTitlesOnGameStart(title, delay)
+	titles = {10, 11, 12, 13}
+
+	AddCinematicMessage(titles[title], delay)
+end
+
 -- r1m1, появление первого врага
 function r1m1_FirstEnemyStart()
 	Fly("cam01", CINEMATIC_NO_AIM, 0, 5, 1, 1 )

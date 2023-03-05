@@ -1213,12 +1213,12 @@
 
 				-- блок Оракул/Ньери
 				if IsQuestComplete("r4m2_BlokiratorToUFO") then
-					AddCinematicMessage( 77774, 0 )
+					AddCinematicMessage( 77774, 0.5 )
 					AddCinematicMessage( 77775, 0.1 )
 					AddCinematicMessage( 77776, 0.1 )
 					boss_skin = 1
 				elseif IsQuestComplete("r2m1_DestroyAlienShip") then
-					AddCinematicMessage( 77771, 0 )
+					AddCinematicMessage( 77771, 0.5 )
 					AddCinematicMessage( 77772, 0.1 )
 					AddCinematicMessage( 77773, 0.1 )
 					boss_skin = 0
@@ -1233,16 +1233,16 @@
 			
 				-- блок Фатерлянд        
 				if IsQuestComplete("Zachisti3_Quest") then
-					AddCinematicMessage( 77779, 0 )
+					AddCinematicMessage( 77779, 0.5 )
 					if QuestStatus("d_IntrigaOfMerMinin_Quest")==Q_COMPLETED then
 						AddCinematicMessage( 77780, 0.1 )
 					end
 					r1m3_skin = 2
 				elseif IsQuestComplete("FightForPesht") then
-					AddCinematicMessage( 77778, 0 )
+					AddCinematicMessage( 77778, 0.5 )
 					r1m3_skin = 3
 				else
-					AddCinematicMessage( 77777, 0 )
+					AddCinematicMessage( 77777, 0.5 )
 					r1m3_skin = 4
 				end
 
@@ -1255,14 +1255,14 @@
 			
 				-- блок Роща Друидов
 				if IsQuestComplete("r3m1_RescueUlukCivil_TakeToSet") and IsQuestComplete("r3m1_ClearSanctuary") then
-					AddCinematicMessage( 77781, 0 )
+					AddCinematicMessage( 77781, 0.5 )
 					r3m1_skin = 5
 				elseif IsQuestComplete("r3m1_ClearSanctuary") and not(IsQuestComplete("r3m1_RescueUlukCivil_TakeToSet")) then
-					AddCinematicMessage( 77782, 0 )
+					AddCinematicMessage( 77782, 0.5 )
 					AddCinematicMessage( 77783, 0.1 )
 					r3m1_skin = 6
 				else 
-					AddCinematicMessage( 77784, 0 )
+					AddCinematicMessage( 77784, 0.5 )
 					AddCinematicMessage( 77785, 0.1 )
 					r3m1_skin = 7
 				end
@@ -1276,14 +1276,14 @@
 
 				-- блок Либриум/Аржан
 				if IsQuestComplete("FinalBattle_Quest") then
-					AddCinematicMessage( 77786, 0 )
+					AddCinematicMessage( 77786, 0.5 )
 					AddCinematicMessage( 77787, 0.1 )
 					r2m1_skin = 8
 				elseif IsQuestComplete("d_MoveWithGeneralToGelvetcia_Quest") then
-					AddCinematicMessage( 77788, 0 )
+					AddCinematicMessage( 77788, 0.5 )
 					r2m1_skin = 9
 				elseif IsQuestComplete("r2m2_KillMrPresidentAndOther") then
-					AddCinematicMessage( 77789, 0 )
+					AddCinematicMessage( 77789, 0.5 )
 					AddCinematicMessage( 77790, 0.1 )
 					r2m1_skin = 10
 				end
@@ -1297,10 +1297,10 @@
 			
 				-- блок ТСП/Рыбаки
 				if QuestStatus("FreeExtremistLeader_Quest5")==Q_COMPLETED then
-					AddCinematicMessage( 77794, 0 )
+					AddCinematicMessage( 77794, 0.5 )
 					r1m4_skin = 11
 				elseif QuestStatus("WaitTillEnd")==Q_COMPLETED then
-					AddCinematicMessage( 77795, 0 )
+					AddCinematicMessage( 77795, 0.5 )
 					r1m4_skin = 12
 				end
 
@@ -1313,10 +1313,10 @@
 			
 				-- блок ОЛ/АКФ
 				if QuestStatus("GoToMudrec_Quest")==Q_COMPLETED then
-					AddCinematicMessage( 77796, 0 )
+					AddCinematicMessage( 77796, 0.5 )
 					r1m6_skin = 13
 				elseif QuestStatus("GoToMudr_Quest")==Q_COMPLETED then
-					AddCinematicMessage( 77797, 0 )
+					AddCinematicMessage( 77797, 0.5 )
 					r1m6_skin = 14
 				end
 
@@ -1329,10 +1329,11 @@
 			
 				-- блок Южный
 				if QuestStatus("DefendSowth_Quest")==Q_COMPLETED then
-					AddCinematicMessage( 77798, 0 )
+					AddCinematicMessage( 77798, 0.5 )
+					AddCinematicMessage( 77800, 0 )
 					r1m6_skin = 19
 				else
-					AddCinematicMessage( 77799, 0 )
+					AddCinematicMessage( 77799, 0.5 )
 					r1m6_skin = 18
 				end
 
@@ -1343,7 +1344,7 @@
 
 			elseif fly_amount == 8 then
 
-				AddCinematicMessage( 77792, 0 )
+				AddCinematicMessage( 77792, 0.5 )
 
 				local pic = GetEntityByName("CurPicture")
 				if pic then pic:SetSkin(15) end
@@ -1352,7 +1353,7 @@
 
 			elseif fly_amount == 9 then
 			
-				AddCinematicMessage( 77793, 0 )
+				AddCinematicMessage( 77793, 0.5 )
 
 				local pic = GetEntityByName("CurPicture")
 				if pic then pic:SetSkin(16) end

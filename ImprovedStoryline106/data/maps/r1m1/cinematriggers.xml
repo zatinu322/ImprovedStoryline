@@ -86,8 +86,8 @@
 				TActivate( "ROLIK14" )
 				TActivate( "Finish00" )
 
-				AddCinematicMessage( 10, 1)
-				AddCinematicMessage( 11, 0.25 )
+				r1m1_ShowTitlesOnGameStart(1, 1)
+				r1m1_ShowTitlesOnGameStart(2, 0.25)
 				
 				
 				TakeQuest( "Buyer_Quest1" )
@@ -113,7 +113,8 @@
 	<trigger Name="trOpeningOpen1" active="0">
 		<event flypath="OpeningOpen2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			AddCinematicMessage( 12, 0.25  )
+			r1m1_ShowTitlesOnGameStart(3, 0.25)
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -133,7 +134,8 @@
 				vehPlayer:SetBelong(1042)
 			end
 			
-			AddCinematicMessage( 13, 0.1  )
+			r1m1_ShowTitlesOnGameStart(4, 0.1)
+
 			trigger:Deactivate()    
 		</script>
 	</trigger>
@@ -3080,6 +3082,10 @@
 
 			CreateNewDummyObject("end_screen", "CurPicture", -1, -1, CVector(1344.532, 333.877, 810.539), Quaternion(0.0000, -0.7117, 0.0000, 0.7025), 0)
 
+			-- удаляем двеллера, чтобы игрок его не сшиб в катсцене
+			local oldDwel = getObj("Human33")
+			if oldDwel then oldDwel:Remove() end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -3167,7 +3173,7 @@
 				RuleConsole("g_postEffect BWFadeIn")
 
 				-- Ньери
-				AddCinematicMessage( 77776, 0 )
+				AddCinematicMessage( 77776, 0.5 )
 				AddCinematicMessage( 77777, 0.1 )
 				AddCinematicMessage( 77778, 0.1 )
 
@@ -3179,7 +3185,7 @@
 			elseif fly_amount == 2 then
 			
 				-- фатерлянд
-				AddCinematicMessage( 77779, 0 )
+				AddCinematicMessage( 77779, 0.5 )
 				if QuestStatus("d_IntrigaOfMerMinin_Quest")==Q_COMPLETED then
 					AddCinematicMessage( 77780, 0.1 )
 				end
@@ -3192,7 +3198,7 @@
 			elseif fly_amount == 3 then
 
 				-- роща друидов
-				AddCinematicMessage( 77781, 0 )
+				AddCinematicMessage( 77781, 0.5 )
 
 				local pic = GetEntityByName("CurPicture")
 				if pic then pic:SetSkin(5) end
@@ -3202,7 +3208,7 @@
 			elseif fly_amount == 4 then
 			
 				-- Антимилитаристы
-				AddCinematicMessage( 77782, 0 )
+				AddCinematicMessage( 77782, 0.5 )
 				AddCinematicMessage( 77783, 0.1 )
 
 				local pic = GetEntityByName("CurPicture")
@@ -3213,7 +3219,7 @@
 			elseif fly_amount == 5 then
 
 				-- Рыбаки
-				AddCinematicMessage( 77791, 0 )
+				AddCinematicMessage( 77791, 0.5 )
 
 				local pic = GetEntityByName("CurPicture")
 				if pic then pic:SetSkin(11) end
@@ -3223,7 +3229,7 @@
 			elseif fly_amount == 6 then
 
 				-- Жители Лиденклауда
-				AddCinematicMessage( 77792, 0 )
+				AddCinematicMessage( 77792, 0.5 )
 
 				local pic = GetEntityByName("CurPicture")
 				if pic then pic:SetSkin(13) end
@@ -3233,7 +3239,8 @@
 			elseif fly_amount == 7 then
 
 				-- процветание Южного
-				AddCinematicMessage( 77793, 0 )
+				AddCinematicMessage( 77793, 0.5 )
+				AddCinematicMessage( 77794, 0 )
 
 				local pic = GetEntityByName("CurPicture")
 				if pic then pic:SetSkin(19) end
@@ -3243,7 +3250,7 @@
 			elseif fly_amount == 8 then
 
 				-- Главный герой
-				AddCinematicMessage( 77784, 0 )
+				AddCinematicMessage( 77784, 0.5 )
 
 				-- "спавн" бутылок с ананагой
 				if QuestStatus("r1m5_AnanagaWait_Quest")==Q_COMPLETED then

@@ -66,6 +66,10 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
+			id="arena_barricade12"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="arena_barricade15"
 			file="data\models\AnimModels.xml" />
 

@@ -378,11 +378,7 @@
 			Fly("Ending5", CINEMATIC_NO_AIM, 0, 17, 1, 1 )
 			StartCinematic()
 
-			if IsQuestComplete("Podderzhka_Quest") then
-				AddCinematicMessage( 8804, 1 )
-			else
-				AddCinematicMessage( 8805, 1 )
-			end
+			AddCinematicMessage( 8804, 1 )
 
 			TActivate("EndingRolik5Fade")
 			TActivate("EndingRolik5End")

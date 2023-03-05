@@ -13,7 +13,14 @@ STR_BOSS_NJERI = "Битва с Ньери"
 
 -- r1m1, показ текста рассказчика в начале игры
 function r1m1_ShowNarratorText()
-	AddCinematicMessage( 77771, 0.1)
+	AddCinematicMessage( 77772, 0.1)
+end
+
+-- r1m1, начальные титры
+function r1m1_ShowTitlesOnGameStart(title, delay)
+	titles = {5990, 5991, 5992, 5993}
+
+	AddCinematicMessage(titles[title], delay)
 end
 
 -- r1m1, появление первого врага

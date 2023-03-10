@@ -1551,7 +1551,13 @@
 	<Path
 		Name="player_path04">
 		<Point
-			coord="1304.344 1643.644" />
+			coord="1275.776 1609.075" />
+
+		<Point
+			coord="1318.916 1637.836" />
+
+		<Point
+			coord="1376.542 1655.743" />
 	</Path>
 
 	<Path

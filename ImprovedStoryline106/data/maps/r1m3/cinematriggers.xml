@@ -2290,64 +2290,6 @@
 		</script>
 	</trigger>
 
-	<!-- Игрок встаёт на сторону Оракула -->
-	<trigger Name="trORACLEAGRESSOR_cam04" active="0">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-		
-			local vehBoss = GetEntityByName("OracleFlyBoss_Rolik")
-			local idn01 = GetPlayerVehicleId()
-			local vehBossID = vehBoss:GetId()
-
-			FlyLinked("ORACLEAGRESSOR_cam03", vehBossID, 10, 0, 1, idn01 )
-			StartCinematic()
-
-			TActivate("RolikEnd_ORACLEAGRESSOR2")
-
-			local mover = GetEntityByName("MoverB")
-			if mover == nil then
-				TActivate("trORACLEAGRESSOR_FlySkipped")
-			end
-
-			AddCinematicMessage( 368, 0.5 )
-			AddCinematicMessage( 369, 0.5 )
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-	<trigger Name="RolikEnd_ORACLEAGRESSOR2" active="0">
-		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
-		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
-		<script>
-			RestoreAllToleranceStatus()
-
-			RuleConsole("cinematic_spring_coeff 0.7")
-
-			local mover = GetEntityByName("MoverB")
-			if mover then mover:Remove() end
-			
-			local BossRolik = GetEntityByName("OracleFlyBoss_Rolik")
-			if BossRolik then BossRolik:Remove() end
-
-			TDeactivate( "trORACLEAGRESSOR_cam03")
-			TDeactivate("trORACLEAGRESSOR_FlySkipped")
-
-			StopPlayingCustomMusic()
-
-			SetCameraBehindPlayerVehicle()
-			
-			RemoveQuestItem("quest_blokirator")
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_blokirator")
-			
-			TakeQuest("r1m3_DestroyRadiationSource")
-			
-			FailQuest("r2m1_DeployBloks")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
 	<!-- Игрок абстрагируется от противостояния Оракула и Ньери -->
 	<trigger Name="trORACLEAGRESSOR_cam05" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />

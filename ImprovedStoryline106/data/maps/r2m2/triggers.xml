@@ -797,18 +797,4 @@
 			trigger:Deactivate()
 		</script>
 	</trigger>
-	<trigger Name="trTEST" active="0">
-		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
-		<script>
-			
-			LogObjHeight(1463.337, 3759.289, 16.271, "flag")
-			LogObjHeight(1831.119, 3265.784, 30.225, "flag")
-			LogObjHeight(2204.475, 2101.200, 15.553, "flag")
-			LogObjHeight(1516.154, 1570.668, 16.195, "flag")
-			LogObjHeight(2279.645, 1495.910, 17.347, "flag")
-			LogObjHeight(1734.877, 767.725, 69.826, "flag")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
 </triggers>

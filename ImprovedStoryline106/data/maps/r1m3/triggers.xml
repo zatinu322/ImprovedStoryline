@@ -925,9 +925,6 @@
 
 				TActivate( "RolikBegin_ORACLEABOTPLATE" )
 
-				AddHistory( "r1_Before_Fight_Aliens" )
-				AddFadingMsgId( "fm_history_got" )
-
 				trigger:Deactivate()
 			end
 		</script>

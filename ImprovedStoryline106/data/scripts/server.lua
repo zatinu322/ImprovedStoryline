@@ -526,6 +526,8 @@ function CreateTeam(Name, Belong, CreatePos, ListOfVehicle, WalkPos, IsWares, Ro
 				if mapName == "r1m2" then mapNum = 1 end
 				if mapName == "r1m3" then mapNum = 1 end
 				if mapName == "r1m4" then mapNum = 2 end
+				if mapName == "r1m5" then mapNum = 6 end
+				if mapName == "r1m6" then mapNum = 6 end
 				if mapName == "r2m1" then mapNum = 3 end
 				if mapName == "r2m2" then mapNum = 4 end
 				if mapName == "r3m1" then mapNum = 5 end

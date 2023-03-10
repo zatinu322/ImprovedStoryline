@@ -239,8 +239,4 @@
 	<string
 		id="fm_mr_shlyapa_off"
 		value="Мистер Шляпа отключен." />
-
-	<string
-		id="fm_ufo_sources_bug"
-		value="Если источники питания у тарелки не уничтожаются - перезапустите игру." />
 </resource>

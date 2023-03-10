@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<Paths>
+	<Path
+		Name="AfterBattle_path01">
+		<Point
+			coord="2711.058 1741.141" />
+
+		<Point
+			coord="2746.950 1756.863" />
+
+		<Point
+			coord="2774.750 1804.519" />
+	</Path>
+
+	<Path
+		Name="AfterBattle_path02">
+		<Point
+			coord="2804.360 1823.128" />
+	</Path>
+
+	<Path
+		Name="h1_m1">
+		<Point
+			coord="2668.633 1758.942" />
+
+		<Point
+			coord="2687.635 1759.733" />
+
+		<Point
+			coord="2685.467 1743.406" />
+
+		<Point
+			coord="2698.605 1744.943" />
+
+		<Point
+			coord="2699.111 1755.651" />
+
+		<Point
+			coord="2714.642 1758.244" />
+
+		<Point
+			coord="2746.518 1775.011" />
+
+		<Point
+			coord="2755.153 1786.194" />
+
+		<Point
+			coord="2740.162 1798.409" />
+
+		<Point
+			coord="2755.652 1784.284" />
+
+		<Point
+			coord="2746.510 1769.414" />
+
+		<Point
+			coord="2686.651 1751.538" />
+
+		<Point
+			coord="2670.900 1757.201" />
+	</Path>
+
+	<Path
+		Name="h2_m1">
+		<Point
+			coord="2692.513 1713.234" />
+
+		<Point
+			coord="2710.058 1710.601" />
+
+		<Point
+			coord="2706.261 1719.133" />
+
+		<Point
+			coord="2728.703 1728.779" />
+
+		<Point
+			coord="2756.984 1738.332" />
+
+		<Point
+			coord="2753.517 1744.989" />
+
+		<Point
+			coord="2764.646 1751.458" />
+
+		<Point
+			coord="2695.257 1716.064" />
+	</Path>
+
+	<Path
+		Name="h3_m1">
+		<Point
+			coord="2784.739 1773.314" />
+
+		<Point
+			coord="2792.438 1778.208" />
+
+		<Point
+			coord="2784.904 1789.504" />
+
+		<Point
+			coord="2805.288 1792.099" />
+
+		<Point
+			coord="2794.726 1807.955" />
+
+		<Point
+			coord="2815.360 1823.067" />
+
+		<Point
+			coord="2791.055 1855.795" />
+
+		<Point
+			coord="2777.596 1854.939" />
+
+		<Point
+			coord="2764.852 1819.126" />
+
+		<Point
+			coord="2796.546 1783.629" />
+
+		<Point
+			coord="2784.020 1775.433" />
+	</Path>
+
+	<Path
+		Name="h5_m1">
+		<Point
+			coord="2705.366 1954.342" />
+
+		<Point
+			coord="2710.501 1940.319" />
+
+		<Point
+			coord="2682.835 1952.748" />
+
+		<Point
+			coord="2685.631 1931.822" />
+
+		<Point
+			coord="2715.632 1900.159" />
+
+		<Point
+			coord="2701.106 1892.051" />
+
+		<Point
+			coord="2678.120 1873.084" />
+
+		<Point
+			coord="2676.509 1847.633" />
+
+		<Point
+			coord="2679.239 1878.230" />
+
+		<Point
+			coord="2707.492 1908.860" />
+
+		<Point
+			coord="2704.049 1951.379" />
+	</Path>
+</Paths>

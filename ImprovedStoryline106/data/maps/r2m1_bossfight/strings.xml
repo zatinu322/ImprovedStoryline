@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="131"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_131_hero.ogg"
+		value="Скоро мир будет очищен от скверны, и люди смогут снова дышать воздухом!"
+		time="4" />
+
+	<string
+		id="8808"
+		value="Вы желаете перенестись сразу в Риджин?"
+		numButtons="2" />
+</resource>

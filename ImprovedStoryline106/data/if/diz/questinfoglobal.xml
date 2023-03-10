@@ -3926,6 +3926,10 @@
 		<Map
 			name="r2m1"
 			coordinate="1184.729 428.760 1479.850" />
+
+		<Map
+			name="r2m1_bossfight"
+			coordinate="1184.729 428.760 1479.850" />
 	</QuestInfo>
 
 	<QuestInfo

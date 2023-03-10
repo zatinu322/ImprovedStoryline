@@ -110,6 +110,47 @@
 		</script>
 	</trigger>
 
+	<!-- Включаем дождь, когда приезжаем смотреть на тарелку -->
+	<trigger Name="trTurnOnTheRain" active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if QuestStatus("r2m1_TW_SellsCivilian")==Q_TAKEN then
+				SetWeather(1)
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<!-- Помещаем тарелку в канаву после битвы с Ньери -->
+	<trigger Name="trPlaceNjeriToDefeatedPosition" active="0">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			local plate = GetEntityByName("AliensShip")
+			if plate then
+				plate:SetPosition(CVector(1909.498, 351.254, 1599.223))
+				plate:SetRotation(Quaternion(-0.167, -0.822, 0.242, 0.488))
+			end
+
+			if LevelInfoManager then
+				LevelInfoManager:ClearVisibilityMapForLevel("r2m1_bossfight")
+			end
+
+			if BookExists("r1_book_doklad") then
+				local pcar = CreateVehicleEx("FelixVehicle2", "ProfessorCar", CVector(2693.961, 285.541, 1732.479), 1009, Quaternion(0.000, 0.522, 0.000, 0.853))
+				if pcar then
+					pcar:SetSkin(1)
+					pcar:SetGamePositionOnGround( CVector(2772.473, 286.377, 1791.452))
+		   			pcar:SetRotation(Quaternion(-0.000, 0.216, 0.000, 0.976))
+					pcar:setGodMode(1)
+					pcar:SetExternalPathByName("AfterBattle_path02")
+					pcar:SetCruisingSpeed(10)
+				end
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Машинка игрока останавливается -->
 	<trigger Name="trVehSTOP" active="0">
  		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
@@ -656,27 +697,24 @@
 
 			if 20 >= g then
 				getObj("AliensShip"):SetPosition( CVector(1366.725, 0, 1801.638))
+				getObj("AliensShipStation1"):SetPosition(CVector(1367.696, -7.443, 1801.875))
+				getObj("AliensShipStation2"):SetPosition(CVector(1368.555, -7.503, 1796.631))
+				getObj("AliensShipStation3"):SetPosition(CVector(1362.245, -10.167, 1803.102))
 			end
 			if g >= 21 then
-			getObj("AliensShip"):SetPosition( CVector(1366.725, y, 1801.638)) 
+				getObj("AliensShip"):SetPosition( CVector(1366.725, y, 1801.638))
+				getObj("AliensShipStation1"):SetPosition(CVector(1367.696, 483.361, 1801.875))
+				getObj("AliensShipStation2"):SetPosition(CVector(1368.555, 483.301, 1796.631))
+				getObj("AliensShipStation3"):SetPosition(CVector(1362.245, 480.637, 1803.102))
 			end
 			if g >= 40 then
 				getObj("AliensShip"):SetPosition( CVector(1366.725, 490.804, 1801.638))
+				getObj("AliensShipStation1"):SetPosition(CVector(1367.696, 483.361, 1801.875))
+				getObj("AliensShipStation2"):SetPosition(CVector(1368.555, 483.301, 1796.631))
+				getObj("AliensShipStation3"):SetPosition(CVector(1362.245, 480.637, 1803.102))
 			end
 
 			SetVar("R", r)
-		</script>
-	</trigger>
-
-<!-- Тарелку под землю -->
-	<trigger Name="trAliensShipAnderEarth" active="1">
-		<event timeout="0" eventid="GE_TIME_PERIOD" />
-		<script>
-			local y = 0
-
-			getObj("AliensShip"):SetPosition( CVector(1366.725, y, 1801.638)) 
-
-			trigger:Deactivate()
 		</script>
 	</trigger>
 

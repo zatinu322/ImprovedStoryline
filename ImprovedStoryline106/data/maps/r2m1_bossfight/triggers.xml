@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+
+	<!-- Инициализация карты -->
+	<trigger	Name="GlobalVar"	active="1">
+		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+
+			SetVar("AutoSaveCount", 0)
+			SetVar("UFOCounterStarted", 0)
+
+			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
+
+			PlayCustomMusic("Battle01")
+
+			CreateNewDummyObject( "r2_crag_copped_3", "cragTR", -1, -1, CVector(1255, 420, 1591), Quaternion(0.0000, 0.1951, 0.0000, 0.9808), 0)
+
+			TActivate("TRIGGER_ALIENSDIE")
+
+			local bossp = GetEntityByName("AliensShip")
+			if bossp then
+				bossp:NextState()
+				ShowBossIndicator(bossp:GetId())
+			end
+			
+			AllowSave(false)
+
+			TActivate("trAutoSave")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Автосохранение -->
+	<trigger Name="trAutoSave" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("AutoSaveCount").AsInt == 0 then
+				SetVar("AutoSaveCount", 3)
+				AutoSave(STR_BOSS_NJERI) -- перед битвой с Ньери
+			elseif GetVar("AutoSaveCount").AsInt == 3 then
+				SetVar("AutoSaveCount", 1)
+				PlayCustomMusic("Battle01") -- чтобы играла музыка боя после загрузки автосейва
+				AllowSave(false)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Уничтожили тарелку Ньери -->
+	<trigger Name="TRIGGER_ALIENSDIE" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="AliensShip" />
+		<script>
+			TActivate( "RolikBegin_UFODIE" )
+			TDeactivate("trUFOSourcesBugCounter")
+
+			CompleteQuest( "r2m1_DestroyAlienShip" )
+			CompleteQuest( "r4m2_DestroyPlate" )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Выбор финала в зависимости от действий игрока -->
+	<trigger Name="VyborFinala" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local ending = DefineTheEnding()
+			
+			if ending==1 then
+				TakeQuest("BenGoodEnd")
+			elseif ending==0 then
+				TakeQuest("BenNormalEnd")
+			else
+				println("CRITICAL! CAN NOT DEFINE THE ENDING!")
+				LOG("CRITICAL! CAN NOT DEFINE THE ENDING!")
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Телепорт в Риджин после катсцены с боссом. -->
+	<trigger Name="ToR2M1AfterBoss" active="0">
+		<event        timeout="0.01"        eventid="GE_TIME_PERIOD" />
+		<script>
+			local b = SpawnMessageBox("8808")
+			if b == 1 then
+				PassToMap("r1m2", "FromR1M3", -1, true)
+			else
+				PassToMap("r2m1", "AfterDistantNjeriBattle_loc", -1, true)
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+</triggers>

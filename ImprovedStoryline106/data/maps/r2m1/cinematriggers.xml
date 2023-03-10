@@ -2092,8 +2092,13 @@
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			PlayCustomMusic("Techno04")
+
+			CreateNewDummyObject("boss04chassis", "AliensShip", -1, -1, CVector(1366.725, 0, 1801.638), Quaternion(0.000, 0.617, 0.000, 0.787))
+			CreateNewDummyObject("boss04station", "AliensShipStation1", -1, -1, CVector(1367.696, -6.639, 1801.875), Quaternion(0.000, 0.617, 0.000, 0.787))
+			CreateNewDummyObject("boss04station", "AliensShipStation2", -1, -1, CVector(1368.555, -6.699, 1796.631), Quaternion(0.000, 0.990, 0.000, -0.141))
+			CreateNewDummyObject("boss04station", "AliensShipStation3", -1, -1, CVector(1362.245, -9.363, 1803.102), Quaternion(0.000, 0.373, 0.000, -0.928))
 				
-			getObj("AliensShip"):SetPosition( CVector(1366.725, 0.804, 1801.638))
+			-- getObj("AliensShip"):SetPosition( CVector(1366.725, 0.804, 1801.638))
 
 			Fly("UFO_cam01", CINEMATIC_NO_AIM, 0, 4, 0, 0 )
 			Fly("UFO_cam022", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
@@ -2125,6 +2130,9 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			getObj("AliensShip"):SetPosition( CVector(1366.725, 490.804, 1801.638))
+			getObj("AliensShipStation1"):SetPosition(CVector(1367.696, 483.361, 1801.875))
+			getObj("AliensShipStation2"):SetPosition(CVector(1368.555, 483.301, 1796.631))
+			getObj("AliensShipStation3"):SetPosition(CVector(1362.245, 480.637, 1803.102))
 
 			RuleConsole("g_postEffect cinematicEnd")
 
@@ -2402,7 +2410,6 @@
 
 			-- битва с Ќьери
 			elseif QuestStatus("r2m1_DestroyAlienShip")==Q_TAKEN then
-				PlayCustomMusic("Battle01")
 
 				local vehPlayer = GetPlayerVehicle()
 				if vehPlayer then
@@ -2410,21 +2417,6 @@
 					vehPlayer:PlaceToEndOfPath("player_path04")
 					vehPlayer:UnlimitMaxSpeed()
 				end
-
-				CreateNewDummyObject( "r2_crag_copped_3", "cragTR", -1, -1, CVector(1255, 420, 1591), Quaternion(0.0000, 0.1951, 0.0000, 0.9808), 0)
-
-				TActivate("TRIGGER_ALIENSDIE")
-
-				local bossp = GetEntityByName("AliensShip")
-				if bossp then
-					bossp:NextState()
-					ShowBossIndicator(bossp:GetId())
-				end
-				
-				AllowSave(false)
-
-				SetVar("AutoSaveCount", 2)
-				TActivate("trAutoSave")
 
 				AddHistory( "r1_Before_Fight_Aliens" )
 				AddFadingMsgId( "fm_history_got" )
@@ -2454,9 +2446,12 @@
 			IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP" )
 
 			TActivate("trLightOn")
+			TActivate("trPlaceNjeriToDefeatedPosition")
 
 			RuleConsole("cinematic_spring_coeff 0.7")
 			RuleConsole("g_postEffect cinematicEnd")
+
+			PassToMap("r2m1_bossfight", "NjeriFight_loc", -1, true)
 
 			trigger:Deactivate()
 		</script>

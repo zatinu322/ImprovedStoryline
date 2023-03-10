@@ -247,7 +247,7 @@
 				ModelName="r2_man"
 				skin="2"
 				cfg="368"
-				helloReplyNames="SelCitizen_hellodlg0 SelCitizen_hellodlg1 SelCitizen_hellodlg2"
+				helloReplyNames="SelCitizen_hellodlg0 SelCitizen_hellodlg1"
 				SpokenCount="0" />
 		</Object>
 
@@ -55379,6 +55379,14 @@
 			skin="1"
 			cfg="102"
 			helloReplyNames="Dlg_npc_002551"
+			SpokenCount="0" />
+		
+		<Object
+			Name="PlayerNjeri"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="mask_hero"
+			helloReplyNames="Dlg_npc_003391"
 			SpokenCount="0" />
 	</Object>
 

@@ -3379,15 +3379,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="r4m2_TalkWithScientific" />
-<!--Root/r1m3/Сюжетные/Устранить источник электропомех-->
-	<quest
-		Name="r1m3_DestroyRadiationSource"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all taken"
-		PrecedingQuests="r2m1_DeployBloks"
-		OnTake='ShowCircleOnMinimapByName("ToR2M1"); ShowCircleOnMinimap("r2m1",CVector(5997.535, 276.571, 4385.696))' />
 <!--Root/r1m3/Сюжетные/Уничтожить боевой корабль пришелцев-->
 	<quest
 		Name="r2m1_DestroyAlienShip"
@@ -3395,7 +3386,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="r1m3_DestroyRadiationSource"
+		PrecedingQuests="r2m1_TW_SellsCivilian"
 		OnTake='ShowCircleOnMinimap( "r2m1", CVector(1184.729, 428.760, 1479.850), 100 )' />
 <!--Root/r1m3/Сюжетные/ Прознать про Врата в Минине -->
 	<quest
@@ -3802,7 +3793,7 @@
 <!--Root/r1m2/Сюжетные/Установить блокираторы-->
 	<quest
 		Name="r2m1_DeployBloks"
-		Automatic="1"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"

@@ -3623,20 +3623,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r1m3_DestroyRadiationSource"
-		briefDiz="”странить источник помех"
-		fullDiz="Ёлектростанци€ в городе —ель €вл€етс€ источником помех. я должен найти способ вырубить ее хот€ бы на несколько минут."
-		isMainQuest="1">
-		<Map
-			name="r1m3"
-			targetObjName="ToR2M1" />
-
-		<Map
-			name="r2m1"
-			targetObjName="TheSel" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r1m3_FightWithThief"
 		briefDiz="ќтобрать второй диск у вора"
 		fullDiz="Ётот вор еще не знает, с кем св€залс€! ƒиск будет моим любой ценой. “олько смерть одного из нас может разрешить эту проблему."
@@ -5149,7 +5135,7 @@
 
 	<QuestInfo
 		questName="r4m2_DestroyPlate"
-		briefDiz="”ничтожить тарелку"
+		briefDiz="”ничтожить упавшую тарелку"
 		fullDiz="“арелка €вл€етс€ источником излучени€, которое разрушило наш мир. ќна должна быть уничтожена!"
 		isMainQuest="1">
 		<Map

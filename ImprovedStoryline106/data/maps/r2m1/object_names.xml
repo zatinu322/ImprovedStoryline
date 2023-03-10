@@ -375,4 +375,8 @@
 	<Object
 		Name="EngineerEscapist"
 		FullName="Инженер Микаэль" />
+
+	<Object
+		Name="PlayerNjeri"
+		FullName=" " />
 </ObjectNames>

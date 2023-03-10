@@ -7023,7 +7023,8 @@
 		name="SelCitizen_hellodlg1"
 		text="Я занят важными организационными вопросами."
 		role="NPC"
-		scriptCondition="IsQuestTaken('r1m3_DestroyRadiationSource')   and   not(IsQuestComplete('r1m3_DestroyRadiationSource'))"
+		scriptCondition="IsQuestTaken('r2m1_TW_SellsCivilian')   and   not(IsQuestComplete('r2m1_TW_SellsCivilian')) "
+		scriptResult="SetWeather(1);"
 		nextReplies="Dlg_pl_000642" />
 
 	<Reply
@@ -7067,7 +7068,7 @@
 		name="Dlg_pl_002560"
 		text="Вот и молодец. А теперь иди отсюда."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
+		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip'); TActivate('RolikBegin_UFO'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_002555"
@@ -7086,7 +7087,7 @@
 		name="Dlg_pl_002558"
 		text="Ты оказал миру неоценимую услугу!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
+		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip'); TActivate('RolikBegin_UFO'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_000645"
@@ -7105,44 +7106,7 @@
 		name="Dlg_pl_000651"
 		text="Ты оказал миру неоценимую услугу!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_DestroyRadiationSource'); TakeQuest('r2m1_DestroyAlienShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
-
-	<Reply
-		name="SelCitizen_hellodlg2"
-		text="Что тебе нужно на этот раз?"
-		role="NPC"
-		scriptCondition="IsQuestTaken('r2m1_TW_SellsCivilian')   and   not(IsQuestComplete('r2m1_TW_SellsCivilian'))"
-		nextReplies="Dlg_pl_000656" />
-
-	<Reply
-		name="Dlg_pl_000656"
-		text="Вы не замечали в последнее время необычных явлений? Или странных людей?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000657" />
-
-	<Reply
-		name="Dlg_npc_000657"
-		text="Ходят слухи, что неподалеку есть аномальная зона... Так что странных людей у нас хватает поблизости. Некоторые даже говорят, что видели металлические конструкции в небе. "
-		role="NPC"
-		nextReplies="Dlg_pl_000658" />
-
-	<Reply
-		name="Dlg_pl_000658"
-		text="Мне точно нужно туда попасть. Спасибо за наводку."
-		role="PLAYER"
-		nextReplies="Dlg_npc_001268" />
-
-	<Reply
-		name="Dlg_npc_001268"
-		text="Черт, опять неполадки с работой станции! Иди отсюда, не до тебя."
-		role="NPC"
-		nextReplies="Dlg_pl_001269" />
-
-	<Reply
-		name="Dlg_pl_001269"
-		text="Да ладно-ладно."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip');  TActivate('RolikBegin_UFO');  LeaveTown()" />
+		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip'); TActivate('RolikBegin_UFO'); LeaveTown()" />
 <!--Root/r2m1/Сюжетные/Бармен из Селя-->
 	<Reply
 		name="SelBarmen_hellodlg0"
@@ -7561,7 +7525,27 @@
 		text="Начинаем! Наша победа близка!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_MoveWithGeneralToGelvetcia_Quest');  AddHistory(  'r2_Before_Axel_00'  );  AddFadingMsgId( 'fm_history_got' ); RemoveQuestItem('ARGeneral_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ARGeneral_P');  EndConversation()" />
-<!--Root/r2m1/Сюжетные/Антимилитаристы--><!--Root/r2m1/Сюжетные/Антимилитаристы/Старая Сибилла-->
+<!--Root/r2m1/Сюжетные/Антимилитаристы--><!--Root/r2m1/Сюжетные/Сражение с тарелкой-->
+	<Reply
+		name="Dlg_npc_003391"
+		text="Что я выберу?"
+		role="NPC"
+		scriptCondition="QuestStatus('r2m1_TW_AlienInShip')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		scriptResult="GetCurNpc():SetSpokenCount(1); CompleteQuest('r2m1_TW_AlienInShip');"
+		nextReplies="Dlg_pl_003392 Dlg_pl_003393" />
+
+	<Reply
+		name="Dlg_pl_003393"
+		text="Атаковать иноземных захватчиков."
+		role="PLAYER"
+		scriptResult="TakeQuest('r2m1_DestroyAlienShip'); TActivate('trUFODIOLOG_cam10'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003392"
+		text="Доставить блокиратор."
+		role="PLAYER"
+		scriptResult="TakeQuest('r2m1_DeployBloks'); TActivate('trUFODIOLOG_cam10'); EndConversation()" />
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Старая Сибилла-->
 	<Reply
 		name="Dlg_npc_002230"
 		text="Ну и ну! Такие люди, как ты, в этих краях редкость! Обычно сюда приезжают либо убивать за деньги, либо по идеологическим причинам."
@@ -12030,7 +12014,7 @@
 		text="Итак, каков же мой выбор?"
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount( ) == 1"
-		nextReplies="Dlg_pl_002426 Dlg_pl_002427 Dlg_pl_002991" />
+		nextReplies="Dlg_pl_002426 Dlg_pl_002991" />
 
 	<Reply
 		name="Dlg_pl_002991"
@@ -12040,14 +12024,8 @@
 		scriptResult="TActivate('trORACLEAGRESSOR_cam05'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
 
 	<Reply
-		name="Dlg_pl_002427"
-		text="Встать на сторону Оракула."
-		role="PLAYER"
-		scriptResult="TActivate('trORACLEAGRESSOR_cam04'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
-
-	<Reply
 		name="Dlg_pl_002426"
-		text="Встать на сторону Ньери."
+		text="Атаковать Оракула."
 		role="PLAYER"
 		scriptResult="TActivate('trORACLEAGRESSOR_cam03'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
 <!--Root/r1m3/Сюжетные/Айвен Го-->

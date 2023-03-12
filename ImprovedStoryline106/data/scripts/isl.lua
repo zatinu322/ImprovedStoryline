@@ -104,5 +104,12 @@ end
 
 -- r1m8, титры бонусной концовки
 function r1m8_ShowBonusEndingTitles()
-	local a = "PLACEHOLDER"
+	AddCinematicMessage( 5971, 0)
+	AddCinematicMessage( 5975, 0.1)
+	AddCinematicMessage( 5978, 0.1)
+	AddCinematicMessage( 5979, 0.1)
+	AddCinematicMessage( 5976, 0.1)
+	AddCinematicMessage( 5977, 0.1)
+	AddCinematicMessage( 5972, 0)
+	AddCinematicMessage( 5980, 0)
 end

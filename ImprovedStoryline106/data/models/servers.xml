@@ -1880,10 +1880,6 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
-			id="vagon3"
-			file="data\models\AnimModels.xml" />
-
-		<Item
 			id="rr_vagon1"
 			file="data\models\AnimModels.xml" />
 

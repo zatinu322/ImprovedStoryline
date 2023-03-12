@@ -812,7 +812,7 @@
 
 			SetWeather(1)
 			
-			AddCinematicMessage( 27, 1 )
+			r1m6_ShowFewHoursLaterMessage()
 			
 			local vehPlayer = GetEntityByName("LiddenPlayerVeh1")
 			if vehPlayer then

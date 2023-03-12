@@ -1,3 +1,5 @@
+-- Special settings for ISL (ComPatch version)
+
 if ISL_VERSION == nil then
 	LOG("IMPROVED STORYLINE V1.1 BUILD 230202")
 
@@ -41,4 +43,65 @@ function r1m1_FirstEnemySpawn()
 		FVehicle:SetExternalPathByName("fun1_5road")
 		FVehicle:setGodMode(1)
 	end
+end
+
+-- r1m1, титры отличной концовки
+function r1m1_ShowGoodEndingTitles()
+	AddCinematicMessage( 5981, 0)
+	AddCinematicMessage( 5980, 0.1)
+	AddCinematicMessage( 5998, 0.1)
+	AddCinematicMessage( 5978, 0.1)
+	AddCinematicMessage( 5979, 0.1)
+end
+
+-- r1m2, перебивка "На следующий день"
+function r1m2_ShowNextDayMessage()
+	AddCinematicMessage(88060, 1)
+end
+
+-- r1m2, перебивка "Спустя час"
+function r1m2_ShowNextHourMessage()
+	AddCinematicMessage(88062, 1)
+end
+
+-- r1m2, титры плохой концовки
+function r1m2_ShowBadEndingTitles()
+	AddCinematicMessage( 5968, 0)
+	AddCinematicMessage( 5967, 0.1)
+	AddCinematicMessage( 59689, 0.1)
+	AddCinematicMessage( 5965, 0.1)
+	AddCinematicMessage( 5966, 0.1)
+end
+
+-- r1m2, титры нормальной концовки
+function r1m2_ShowNormalEndingTitles()
+	AddCinematicMessage( 5968, 0)
+	AddCinematicMessage( 5973, 0.1)
+	AddCinematicMessage( 5974, 0.1)
+	AddCinematicMessage( 5971, 0.1)
+	AddCinematicMessage( 5972, 0.1)
+end
+
+-- r1m4, титры истинной концовки
+function r1m4_ShowTrueEndingTitles()
+	AddCinematicMessage( 5971, 0)
+	AddCinematicMessage( 5970, 0.1)
+	AddCinematicMessage( 5973, 0.1)
+	AddCinematicMessage( 5968, 0.1)
+	AddCinematicMessage( 5969, 0.1)
+end
+
+-- r1m5, перебивка "Некоторое время спустя"
+function r1m5_ShowFewMomentsLaterMessage()
+	AddCinematicMessage( 3, 1 )
+end
+
+-- r1m6, перебивка "Спустя несколько часов"
+function r1m6_ShowFewHoursLaterMessage()
+	AddCinematicMessage( 27, 1 )
+end
+
+-- r1m8, титры бонусной концовки
+function r1m8_ShowBonusEndingTitles()
+	local a = "PLACEHOLDER"
 end

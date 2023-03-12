@@ -14461,13 +14461,6 @@
 		trans="0" />
 
 	<model
-		id="vagon3"
-		file="data\models\buildings\region1\vagon3.gam"
-		shadow="1"
-		windwavy="0"
-		trans="0" />
-
-	<model
 		id="rr_vagon1"
 		file="data\models\buildings\region1\rr_vagon1.gam"
 		shadowVolume="1"

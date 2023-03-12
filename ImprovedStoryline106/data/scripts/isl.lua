@@ -1,9 +1,9 @@
 -- Special settings for ISL (ComPatch version)
 
 if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.1 BUILD 230202")
+	LOG("IMPROVED STORYLINE V1.1 BUILD 230312")
 
-	ISL_VERSION = "110-230202"
+	ISL_VERSION = "110-230312"
 end
 
 -- локализация

@@ -231,7 +231,7 @@
 	<string
 		id="27"
 		modelName=""
-		value="@FF000000AAAAAAAAAAAAAAAAAAA@FFFFFFFFЧерез несколько часов"
+		value="||@FF000000AAAAAAAAAAAAAAAAAAA@FFFFFFFFЧерез несколько часов"
 		sound=""
 		fontSize="18"
 		time="6" />
@@ -1033,6 +1033,15 @@
 		modelSkin="1"
 		value="Я не знаю, куда ведет эта дорога, поэтому останусь здесь."
 		sound=""
+		time="6" />
+
+	<!-- Community Remaster, перебивка -->
+	<string
+		id="117"
+		modelName=""
+		value="||@FF000000AAAAAA AAAAAAAAAAAAAAAAAA@FFFFFFFFЧерез несколько часов"
+		sound=""
+		fontSize="18"
 		time="6" />
 
 	<string

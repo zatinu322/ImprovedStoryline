@@ -631,7 +631,7 @@
 			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
 			StartCinematic()
 			
-			AddCinematicMessage( 88060, 1 )
+			r1m2_ShowNextDayMessage()
 			
 			TActivate("NextTrEnd2")
 
@@ -691,7 +691,7 @@
 			Fly("NextDayCam", CINEMATIC_NO_AIM, 0, 7, 0, 1 )
 			StartCinematic()
 			
-			AddCinematicMessage( 88062, 1 )
+			r1m2_ShowNextHourMessage()
 			
 			TActivate("NextTrEnd")
 
@@ -776,7 +776,7 @@
 			Fly("BefDesert", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 1 )
 			StartCinematic()
 
-			AddCinematicMessage( 88060, 1 )
+			r1m2_ShowNextDayMessage()
 
 			local Plf = GetPlayerVehicle()
 			if Plf then
@@ -1048,13 +1048,8 @@
 			Fly("start_game", CINEMATIC_NO_AIM, 0, 365, 0, 1 )
 			StartCinematic()
 
-			AddCinematicMessage( 5968, 0)
-			AddCinematicMessage( 5967, 0.1)
-			AddCinematicMessage( 59689, 0.1)
-			AddCinematicMessage( 5965, 0.1)
-			AddCinematicMessage( 5966, 0.1)
+			r1m2_ShowBadEndingTitles()
 			
-
 			TActivate("BadEndEnd")
 			TActivate("BadEndSkip")
 			
@@ -1391,11 +1386,7 @@
 			Fly("start_game", CINEMATIC_NO_AIM, 0, 327, 0, 1 )
 			StartCinematic()
 
-			AddCinematicMessage( 5968, 0)
-			AddCinematicMessage( 5973, 0.1)
-			AddCinematicMessage( 5974, 0.1)
-			AddCinematicMessage( 5971, 0.1)
-			AddCinematicMessage( 5972, 0.1)
+			r1m2_ShowNormalEndingTitles()
 
 			fly_amount = nil
 			boss_skin = nil

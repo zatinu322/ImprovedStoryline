@@ -70,7 +70,7 @@
 	<trigger Name="SHRolikCam2" active="0">
 		<event flypath="SHRolikCam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			AddCinematicMessage( 3, 1 )
+			r1m5_ShowFewMomentsLaterMessage()
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then

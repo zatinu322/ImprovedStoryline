@@ -1834,11 +1834,7 @@
 			Fly("start_game", CINEMATIC_NO_AIM, 0, 386, 0, 1 )
 			StartCinematic()
 
-			AddCinematicMessage( 5971, 0)
-			AddCinematicMessage( 5970, 0.1)
-			AddCinematicMessage( 5973, 0.1)
-			AddCinematicMessage( 5968, 0.1)
-			AddCinematicMessage( 5969, 0.1)
+			r1m4_ShowTrueEndingTitles()
 
 			local humP = GetEntityByName("humPlayer")
 			if humP then humP:Remove() end

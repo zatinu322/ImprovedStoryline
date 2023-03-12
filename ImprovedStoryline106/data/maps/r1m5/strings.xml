@@ -20,7 +20,7 @@
 	<string
 		id="3"
 		modelName=""
-		value="@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFFFFFÍåêîòîðîå âðåìÿ ñïóñòÿ..."
+		value="||@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFFFFFÍåêîòîðîå âðåìÿ ñïóñòÿ..."
 		sound=""
 		time="5" />
 
@@ -243,6 +243,13 @@
 		modelName="mask_hero"
 		modelSkin="1"
 		value="×¸ðòîâû òðóáû - åù¸ ñ Èãíîòòà â êîøìàðàõ ìíå ñíÿòñÿ."
+		sound=""
+		time="5" />
+
+	<string
+		id="27"
+		modelName=""
+		value="||@FF000000ÀÀÀÀÀÀÀAAAAA..ÀÀÀÀÀÀÀÀÀÀ@FFFFFFFFÍåêîòîðîå âðåìÿ ñïóñòÿ..."
 		sound=""
 		time="5" />
 

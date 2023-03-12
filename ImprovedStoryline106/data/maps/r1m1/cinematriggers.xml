@@ -3304,11 +3304,7 @@
 			Fly("start_game", CINEMATIC_NO_AIM, 0, 245, 0, 1 )
 			StartCinematic()
 			
-			AddCinematicMessage( 5981, 0)
-			AddCinematicMessage( 5980, 0.1)
-			AddCinematicMessage( 5990, 0.1)
-			AddCinematicMessage( 5978, 0.1)
-			AddCinematicMessage( 5979, 0.1)
+			r1m1_ShowGoodEndingTitles()
 			
 			TActivate("GoodEndEnd")
 			TActivate("GoodEndSkip")

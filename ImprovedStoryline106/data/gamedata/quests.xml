@@ -2982,6 +2982,27 @@
 		OnFail='RemoveQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "StarDod_P");'
 		OnTake='ShowCircleOnMinimapByName("TheLibrary")'
 		Levels="r1m3" />
+
+	<quest
+		Name="r1m3_ArchHelp2"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r1m3_ArchVisit"
+		OnComplete='AddPlayerMoney(5000); RemoveQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "StarDod_P");'
+		OnFail='RemoveQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "StarDod_P");'
+		OnTake='AddQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "StarDod_P");'
+		Levels="r1m3 r1m2 r1m1" />
+
+	<quest
+		Name="r1m3_ArchVisit"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r1m3_ArchHelp"
+		Levels="r1m3" />
 <!--Root/r1m3/Опциональные/Мужик из Пешта-->
 	<quest
 		Name="r1m3_CrazyManQuest"

@@ -3585,8 +3585,36 @@
 
 	<QuestInfo
 		questName="r1m3_ArchHelp"
-		briefDiz="Отвезти старика"
+		briefDiz="Отвезти старого археолога к руинам Старого мира"
 		fullDiz="Старик попросил отвезти его к руинам, где бы он мог заняться своими исследованиями."
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="TheLibrary" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_ArchHelp2"
+		briefDiz="Отвезти старого археолога в Мидгард"
+		fullDiz="Нужно отвезти уже знакомого мне старика-археолога в Мидгард, где он поделится своими наблюдениями с коллегами."
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_ArchVisit"
+		briefDiz="Проведать археолога"
+		fullDiz="По пути в Фатерлянд я вспомнил, как подвозил старого археолога к старым руинам. Интересно, он всё ещё там?"
 		isMainQuest="0">
 		<Map
 			name="r1m3"

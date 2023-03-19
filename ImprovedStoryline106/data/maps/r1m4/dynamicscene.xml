@@ -3792,7 +3792,7 @@
 			<Object
 				Name="barricade8_wwwC8_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Fighter02"
 				Pos="2614.413 226.586 3366.840"
 				Rot="0.011 0.168 -0.009 0.986">
 				<Parts />

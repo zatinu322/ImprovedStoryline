@@ -390,7 +390,6 @@
 	<trigger Name="EndingRolik5Fade" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			SetWeather(0)
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -562,8 +561,6 @@
 		<event        timeout="0.01"        eventid="GE_TIME_PERIOD" />
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
-			
-			SetWeather(0)
 			
 			PlayCustomMusic("IntenseDialogue03")
 						

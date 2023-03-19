@@ -7135,7 +7135,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz474"
-		text="О, чудо! Боец приезжает через наши земли не для того, чтобы убивать за деньги."
+		text="О, чудо! Неужели кто-то ещё приезжает в наши земли не для того, чтобы убивать за деньги?"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz475" />
 
@@ -10243,7 +10243,7 @@
 <!--Root/r1m3/Опциональные/Архитектор в Минине-->
 	<Reply
 		name="ArchitectorMinin_hellodlg0"
-		text="Молодой человек, не откажите в любезности, помогите старику."
+		text="Молодой человек, не откажите в любезности, помогите старику. "
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('FindGomerNearBereg_Quest')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001098" />
@@ -10295,7 +10295,60 @@
 		name="Dlg_pl_001243"
 		text="Удачи в исследованиях!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r1m3_ArchHelp'); RemoveQuestItem('StarDod_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'StarDod_P'); EndConversation()" />
+		scriptResult="CompleteQuest('r1m3_ArchHelp'); RemoveQuestItem('StarDod_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'StarDod_P'); TActivate('trArchVisit'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003394"
+		text="Ох, как же я рад вас снова видеть, молодой человек! Я закончил все свои исследования и теперь мне нужно показать их моим коллегам архитекторам в Мидгарде. Не довезёте меня туда?"
+		role="NPC"
+		scriptCondition="QuestStatus('r1m3_ArchVisit')==Q_TAKEN"
+		scriptResult="CompleteQuest('r1m3_ArchVisit')"
+		nextReplies="Dlg_pl_003396" />
+
+	<Reply
+		name="Dlg_pl_003396"
+		text="В Мидгард? Далековато выходит..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003397" />
+
+	<Reply
+		name="Dlg_npc_003397"
+		text="Да, я всё понимаю, и заплачу весьма приличную сумму денег за такие неудобства. Ну что, по рукам?"
+		role="NPC"
+		nextReplies="Dlg_pl_003399 Dlg_pl_003400 Dlg_pl_003401" />
+
+	<Reply
+		name="Dlg_pl_003401"
+		text="Простите, но слишком уж это большой крюк для меня."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003400"
+		text="Вот это уже другой разговор! Залезайте в кабину."
+		role="PLAYER"
+		scriptCondition="not(QuestStatus('q_PlaceWithSign')==Q_TAKEN) and not(QuestStatus('r2m2_Znaki2Midgard_Quest')==Q_TAKEN)"
+		scriptResult="TakeQuest('r1m3_ArchHelp2'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_003399"
+		text="А почему бы и нет. Тем более у меня у самого есть в Мидгарде одно незаконченное дело."
+		role="PLAYER"
+		scriptCondition="QuestStatus('q_PlaceWithSign')==Q_TAKEN or QuestStatus('r2m2_Znaki2Midgard_Quest')==Q_TAKEN"
+		scriptResult="TakeQuest('r1m3_ArchHelp2'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_003395"
+		text="Спасибо вам огромное, молодой человек! Благодаря вам, нашей команде наконец удастся завершить один архитектурный проект. Вот, примите эту сумму в качестве платы за труды."
+		role="NPC"
+		scriptCondition="QuestStatus('r1m3_ArchHelp2')==Q_TAKEN"
+		nextReplies="Dlg_pl_003398" />
+
+	<Reply
+		name="Dlg_pl_003398"
+		text="И вам спасибо. Удачи в исследованиях."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r1m3_ArchHelp2'); EndConversation()" />
 <!--Root/r1m3/Опциональные/Про лабиринт-->
 	<Reply
 		name="Labirint_hellodlg0"
@@ -11200,7 +11253,7 @@
 
 	<Reply
 		name="Dlg_pl_001796"
-		text="Даже не спросишь, что именно я собираюсь с ней делать?"
+		text="Даже не спросишь, что за мост я собираюсь взорвать?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001797" />
 
@@ -11371,7 +11424,7 @@
 
 	<Reply
 		name="Dlg_pl_002078"
-		text="Можно и так сказать. Мне сказали, что ты хотел меня видеть?"
+		text="Можно и так сказать. Мне сообщили, что ты хотел меня видеть?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002430" />
 
@@ -15210,7 +15263,7 @@
 
 	<Reply
 		name="Dlg_npc_001687"
-		text="Думаете, торговец Вас обманул? Поверьте, это очень маловероятно. Скорее всего, на караван напали бандиты. Не так давно одна шайка устроила лагерь прямо возле торгового пути. Может, они к этому причастны?"
+		text="Думаете, торговец Вас обманул? Поверьте, это очень маловероятно. Скорее всего, на караван напали бандиты. Не так давно одна шайка устроила лагерь прямо возле торгового пути. Не знают ещё, что в этих краях так дела не делаются... |Может, они к этому причастны?"
 		role="NPC"
 		nextReplies="Dlg_pl_001688" />
 
@@ -16740,7 +16793,7 @@
 
 	<Reply
 		name="Dlg_npc_001482"
-		text="Что ж, раз ты совершеннолетний… Хах, представляешь, мне тут один умник рассказывал, что в старом мире не родители решали, когда их чадо выходит в свет, а что все становились совершеннолетними после определённого возраста! Вот так вот!"
+		text="Что ж, раз ты совершеннолетний… Хах, представляешь, мне тут один умник рассказывал, что в старом мире не родители решали, когда их чаду пора выходить в свет, а что все становились совершеннолетними после определённого возраста! Вот так вот!"
 		role="NPC"
 		nextReplies="Dlg_pl_001483" />
 
@@ -17472,7 +17525,7 @@
 
 	<Reply
 		name="Dlg_npc_001343"
-		text="И правда. Не стоит так рисковать. Вот тебе 60 монет. Отдай их ему, и он всё сделает."
+		text="И правда. Не стоит так рисковать, всё таки ты мой единственный сын.  Вот тебе 60 монет. Отдай их ему, и он всё сделает."
 		role="NPC"
 		nextReplies="Dlg_pl_001344" />
 
@@ -18090,7 +18143,7 @@
 
 	<Reply
 		name="Dlg_npc_001365"
-		text="И да, и нет. Я хочу выкупить этот предмет, но перед этим поговорю с его обладателем. В моём деле не бывает лишней информации."
+		text="И да, и нет. Я хочу выкупить его, но перед этим поговорю с его обладателем. В моём деле не бывает лишней информации."
 		role="NPC"
 		nextReplies="Dlg_pl_001366" />
 

@@ -1165,6 +1165,9 @@ function CreateBoxWithAffixGun(pos, GunPrototype, CountAffixes, ClassAffixes, Bo
 		if i ~= 4 then
 			table.insert(afflist, damageAffixes[i])
 		end
+	elseif GunPrototype == "someTurboAccelerationPusher" then
+		MyChest:AddChild(gun)
+		return nil
 	else
 		--local afflist = GenerateRandomAffixList ( CountAffixes, ClassAffixes )
 		afflist = CreateRandomAffixesForGun ( CountAffixes )

@@ -217,6 +217,10 @@
 		FullName="倚稳质闻" />
 
 	<Object
+		Name="TheFreedom_deploy"
+		FullName="倚稳质闻" />
+
+	<Object
 		Name="TheOilVillage_enter"
 		FullName="抢忍世" />
 

@@ -1958,7 +1958,7 @@
 			ModelName="r1_man"
 			skin="2"
 			cfg="12"
-			helloReplyNames="ArchitectorMinin_hellodlg1"
+			helloReplyNames="ArchitectorMinin_hellodlg1 Dlg_npc_003394"
 			SpokenCount="0" />
 	</Object>
 
@@ -2877,7 +2877,7 @@
 			<Object
 				Name="barricade8_wwwC39_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="DemoHunter1"
 				Pos="6178.510 280.333 1106.205"
 				Rot="0.001 0.843 -0.006 0.538">
 				<Parts />
@@ -2928,7 +2928,7 @@
 			<Object
 				Name="barricade8_wwwC4_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="r1m2_bug04"
 				Pos="4827.153 236.439 1286.760"
 				Rot="-0.008 0.763 0.037 0.645">
 				<Parts />
@@ -3003,7 +3003,7 @@
 			<Object
 				Name="barricade8_wwwC97_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="r1m1_molokovoz03"
 				Pos="2879.651 230.978 812.406"
 				Rot="0.003 0.000 0.005 1.000">
 				<Parts />

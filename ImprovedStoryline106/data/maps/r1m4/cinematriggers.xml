@@ -1966,7 +1966,7 @@
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetPosition( CVector(3763.060, 251.369, 825.684))
+				vehPlayer:SetGamePositionOnGround( CVector(3763.060, 251.369, 825.684))
 				vehPlayer:SetRotation(Quaternion(0.001, 0.220, -0.003, 0.975))
 			end
 

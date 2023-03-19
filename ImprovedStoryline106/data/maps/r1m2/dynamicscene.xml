@@ -71,6 +71,16 @@
 			cfg="248"
 			helloReplyNames="Kollizey1_hellodlg0"
 			SpokenCount="0" />
+
+		<Object
+			Name="Librarian1"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="r1_man"
+			skin="2"
+			cfg="12"
+			helloReplyNames="Dlg_npc_003395"
+			SpokenCount="0" />
 	</Object>
 
 	<Object
@@ -876,6 +886,16 @@
 				skin="1"
 				cfg="102"
 				helloReplyNames="Professor_hellodlg0 Professor_hellodlg1 Professor_hellodlg2 Professor_hellodlg3 Dlg_npc_003071"
+				SpokenCount="0" />
+
+			<Object
+				Name="Librarian"
+				Belong="1009"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="2"
+				cfg="12"
+				helloReplyNames="Dlg_npc_003395"
 				SpokenCount="0" />
 
 			<Object
@@ -5499,7 +5519,7 @@
 			<Object
 				Name="barricade8_wwwC51_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="r1m1_bug03"
 				Pos="1229.918 77.750 6636.093"
 				Rot="-0.009 -0.040 -0.007 0.999">
 				<Parts />
@@ -5576,7 +5596,7 @@
 			<Object
 				Name="barricade8_wwwC97_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Scout03"
 				Pos="2477.511 76.361 7104.707"
 				Rot="0.019 -0.039 -0.026 0.999">
 				<Parts />
@@ -5719,7 +5739,7 @@
 			<Object
 				Name="barricade8_wwwC33_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Hunter01"
 				Pos="1243.579 79.648 2328.146"
 				Rot="0.000 -0.041 0.000 0.999">
 				<Parts />
@@ -5848,7 +5868,7 @@
 			<Object
 				Name="barricade8_wwwC61_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="Fighter01"
 				Pos="825.109 93.613 1260.744"
 				Rot="0.000 -0.038 0.000 0.999">
 				<Parts />
@@ -5928,30 +5948,6 @@
 	</Object>
 
 	<Object
-		Name="barricade7_GwG28"
-		Belong="1005"
-		Prototype="barricade7_GwG"
-		Pos="6517.642 101.557 2474.983"
-		Probability="0.500">
-		<Object
-			Flags="21"
-			Name="barricade7_GwG28_Team"
-			Belong="1005"
-			Prototype="settlementTeam">
-			<Formation
-				Name="barricade7_GwG28_Team_Formation"
-				Belong="1005"
-				Prototype="caravanFormation"
-				DistBetweenVehicles="30.000"
-				Pos="0.000 0.000 0.000"
-				Direction="0.000 0.000 1.000"
-				LinearVelocity="100.000"
-				AngularVelocity="0.500"
-				NumPathPoint="-1" />
-		</Object>
-	</Object>
-
-	<Object
 		Name="barricade8_wwwC76"
 		Belong="1002"
 		Prototype="barricade8_wwwC"
@@ -5965,7 +5961,7 @@
 			<Object
 				Name="barricade8_wwwC76_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Bug02"
 				Pos="6044.441 91.648 3266.533"
 				Rot="0.061 -0.034 -0.041 0.997">
 				<Parts />
@@ -6000,7 +5996,7 @@
 			<Object
 				Name="barricade8_wwwC40_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="Fighter01"
 				Pos="7374.458 125.193 6273.548"
 				Rot="-0.006 -0.040 0.008 0.999">
 				<Parts />
@@ -6035,7 +6031,7 @@
 			<Object
 				Name="barricade8_wwwC15_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="r2m1_scout01"
 				Pos="7363.915 125.263 6284.919"
 				Rot="-0.009 -0.040 0.001 0.999">
 				<Parts />
@@ -6201,7 +6197,7 @@
 			<Object
 				Name="barricade8_wwwC9_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Fighter01"
 				Pos="4969.639 93.531 1393.930"
 				Rot="0.032 0.196 0.009 0.980">
 				<Parts />
@@ -6236,7 +6232,7 @@
 			<Object
 				Name="barricade8_wwwC17_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="DemoHunter1"
 				Pos="4149.055 64.097 2190.667"
 				Rot="0.039 0.679 -0.015 0.733">
 				<Parts />

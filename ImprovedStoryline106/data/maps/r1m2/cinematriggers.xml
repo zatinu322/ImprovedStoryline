@@ -279,6 +279,7 @@
 				vehLisa:SetSkin(2)
 				vehLisa:SetGamePositionOnGround( CVector(5320.740, 53.949, 4678.966))
 				vehLisa:SetRotation(Quaternion(0.121, 0.990, -0.036, -0.056))
+				vehLisa:TakeOffAllGuns()
 			end
 
 			trigger:Deactivate()
@@ -312,7 +313,14 @@
 
 			StopPlayingCustomMusic()
 
-			TeamCreate("LisaInBanditDen",1002,CVector(5476,49,4567),{"molokovozBandos","r1m2_bug04", "r1m1_scout01"})
+			if IsQuestTaken("d_SinFather_Quest") then
+				belong = 1013
+				SetTolerance(1100,1013,RS_ENEMY)
+			else
+				belong = 1002
+			end
+
+			TeamCreate("LisaInBanditDen",belong,CVector(5476,49,4567),{"molokovozBandos","r1m2_bug04", "r1m1_scout01"})
 
 			TakeQuest("BenRim4_Quest")
 
@@ -390,7 +398,8 @@
 				vehLisa:SetCruisingSpeed(11)
 				vehLisa:SetExternalPathByName("Lisa_path01")
 				vehLisa:SetThrottle( 1 )                      
-				vehLisa:SetCustomLinearVelocity( 10 ) 
+				vehLisa:SetCustomLinearVelocity( 10 )
+				vehLisa:TakeOffAllGuns()
 			end
 
 			AddCinematicMessage( 21, 1 )

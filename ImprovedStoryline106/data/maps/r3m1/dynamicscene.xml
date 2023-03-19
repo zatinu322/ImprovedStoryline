@@ -3187,9 +3187,9 @@
 			<Object
 				Name="js_wallwithenemy176_Child7"
 				Belong="1002"
-				Prototype="r1m1_scout01"
-				Pos="965.244 305.791 2192.625"
-				Rot="-0.050 -0.961 -0.028 0.270">
+				Prototype="r2m1_scout02"
+				Pos="846.738 356.805 3200.852"
+				Rot="-0.048 -0.938 -0.032 0.343">
 				<Parts />
 
 				<Repository />
@@ -3198,9 +3198,9 @@
 			<Object
 				Name="js_wallwithenemy176_Child8"
 				Belong="1002"
-				Prototype="r1m3_hunter02"
-				Pos="978.916 304.556 2183.506"
-				Rot="-0.041 -0.961 -0.006 0.273">
+				Prototype="Ural00"
+				Pos="853.271 355.659 3193.322"
+				Rot="-0.041 -0.943 -0.008 0.331">
 				<Parts />
 
 				<Repository />
@@ -3255,7 +3255,7 @@
 			<Object
 				Name="js_wallwithenemy168_Child7"
 				Belong="1002"
-				Prototype="r1m1_scout01"
+				Prototype="r2m1_scout02"
 				Pos="1556.849 270.981 1394.204"
 				Rot="-0.004 0.524 -0.031 0.851">
 				<Parts />
@@ -3266,7 +3266,7 @@
 			<Object
 				Name="js_wallwithenemy168_Child8"
 				Belong="1002"
-				Prototype="r1m3_hunter02"
+				Prototype="Ural00"
 				Pos="1550.021 271.930 1409.153"
 				Rot="-0.013 0.526 -0.025 0.850">
 				<Parts />
@@ -3347,7 +3347,7 @@
 			<Object
 				Name="barricade8_wwwC17_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Fighter02"
 				Pos="1459.413 270.129 1106.697"
 				Rot="0.000 0.236 0.000 0.972">
 				<Parts />
@@ -3621,7 +3621,7 @@
 			<Object
 				Name="barricade8_wwwC15_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="Hunter01"
 				Pos="2209.073 249.706 744.277"
 				Rot="-0.087 -0.703 -0.112 0.697">
 				<Parts />
@@ -4295,7 +4295,7 @@
 			<Object
 				Name="barricade8_wwwC8_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="Molokovoz02"
 				Pos="1657.334 278.810 1686.692"
 				Rot="0.021 -0.004 0.063 0.998">
 				<Parts />
@@ -25767,43 +25767,43 @@
 		Name="brick_wall22683"
 		Belong="-1"
 		Prototype="Breakable_BrickWall2"
-		Pos="974.873 305.733 2177.236"
-		Rot="0.000 -0.962 0.000 0.274" />
+		Pos="849.595 356.076 3187.083"
+		Rot="0.000 -0.941 0.000 0.338" />
 
 	<Object
 		Name="brick_wall22684"
 		Belong="-1"
 		Prototype="Breakable_BrickWall2"
-		Pos="968.126 306.353 2181.439"
-		Rot="0.000 -0.962 0.000 0.274" />
+		Pos="843.476 356.193 3192.157"
+		Rot="0.000 -0.941 0.000 0.338" />
 
 	<Object
 		Name="brick_wall22685"
 		Belong="-1"
 		Prototype="Breakable_BrickWall2"
-		Pos="961.453 306.640 2185.569"
-		Rot="0.000 -0.962 0.000 0.274" />
+		Pos="837.421 355.911 3197.149"
+		Rot="0.000 -0.941 0.000 0.338" />
 
 	<Object
 		Name="sack_wall22686"
 		Belong="-1"
 		Prototype="Breakable_SackWall2"
-		Pos="974.405 305.636 2175.232"
-		Rot="0.000 -0.962 0.000 0.274" />
+		Pos="848.861 356.168 3185.160"
+		Rot="0.000 -0.941 0.000 0.338" />
 
 	<Object
 		Name="sack_wall22687"
 		Belong="-1"
 		Prototype="Breakable_SackWall2"
-		Pos="967.947 306.310 2179.264"
-		Rot="0.000 -0.962 0.000 0.274" />
+		Pos="843.006 356.323 3190.027"
+		Rot="0.000 -0.941 0.000 0.338" />
 
 	<Object
 		Name="sack_wall22688"
 		Belong="-1"
 		Prototype="Breakable_SackWall2"
-		Pos="961.388 306.632 2183.405"
-		Rot="0.000 -0.962 0.000 0.274" />
+		Pos="837.065 356.088 3195.014"
+		Rot="0.000 -0.941 0.000 0.338" />
 
 	<Object
 		Name="brick_wall22689"

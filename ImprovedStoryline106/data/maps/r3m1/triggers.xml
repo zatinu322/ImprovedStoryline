@@ -29,7 +29,7 @@
 		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
 		<script>
 			local i=1
-			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
+			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun", "someTurboAccelerationPusher"}
 			local len = getn(gunlist)
 
 			while getObj("SecretPlace"..i.."_loc")~=nil do

@@ -50,8 +50,8 @@
 
 				Fly("OpeningOpen", CINEMATIC_NO_AIM, 0, 12, 1, 0 )
 				Fly("OpeningOpen2", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
-				Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
-				Fly("Opening11", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 0 )
+				Fly("Opening1", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 7.5, 0, 0 )
+				Fly("Opening11", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
 				Fly("Opening2", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
 				Fly("Opening22", CINEMATIC_NO_AIM, nil, 8, 0, 0 )
 				Fly("Opening3", CINEMATIC_AIM_TO_ID, GetPlayerVehicleId(), 8, 0, 0 )
@@ -2667,6 +2667,13 @@
 
 			local brod_zones = {"1", "2", "4", "7", "8", "9"}
 			local koch_zones = {"3", "5", "6", "10", "11"}
+			local dynamic_stuff = {
+				"barricade4_wGw72", 
+				"barricade6_wGw42", 
+				"barricade6_wGw13", 
+				"barricade8_wwwC3", 
+				"barricade8_wwwC29"
+			}
 
 			for i = 1,6 do
 				local zone = getObj("InfectionZone"..brod_zones[i])
@@ -2678,6 +2685,12 @@
 				local zone = getObj("InfectionZone"..koch_zones[i])
 				if zone then zone:SetProperty("Belong", 1005) end
 				println("InfectionZone"..koch_zones[i].." belong is now "..zone:GetProperty("Belong").AsInt)
+			end
+
+			for i = 1,5 do
+				local stuff = getObj(dynamic_stuff[i])
+				if stuff then stuff:SetProperty("Belong", 1002) end
+				println("DynamicFormation "..dynamic_stuff[i].."belong is now "..stuff:GetProperty("Belong").AsInt)
 			end
 
 			StopPlayingCustomMusic()

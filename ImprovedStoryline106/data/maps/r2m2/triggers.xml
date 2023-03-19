@@ -427,6 +427,9 @@
 			TeamCreate("AxelGuard1",1015,CVector(2706.528, 262.327, 1204.278),{"BrigadaCruiser"})
 			TeamCreate("AxelGuard2",1015,CVector(2962.989, 278.958, 1338.927),{"BelazTSP"})
 
+			-- костыль, чтобы крейсер не агрился на машины-болванчики АМ
+			SetTolerance(1015, 1083, RS_NEUTRAL)
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

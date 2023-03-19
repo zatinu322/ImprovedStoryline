@@ -131,6 +131,18 @@
 		</script>
 	</trigger>
 
+	<trigger	Name="trArchVisit"	active="0">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if QuestStatus("r3m2_RideToFatherRoomAfterOracul")==Q_TAKEN and QuestStatus("r1m3_ArchVisit")==Q_CANBEGIVEN then
+
+				TakeQuest("r1m3_ArchVisit")
+
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
 	<!-- Открытие Пешта -->
 	<trigger Name="tr_OpenTownAndShowButtonInPesht" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />

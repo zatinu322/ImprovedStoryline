@@ -3473,7 +3473,7 @@
 			<Object
 				Name="barricade8_wwwC69_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="Ural00"
 				Pos="6636.306 277.310 4046.801"
 				Rot="-0.028 -0.663 0.020 0.748"
 				Skin="1">
@@ -3509,7 +3509,7 @@
 			<Object
 				Name="barricade36_Child4"
 				Belong="1002"
-				Prototype="Sml101"
+				Prototype="Belaz01"
 				Pos="2779.090 222.359 4102.216"
 				Rot="0.065 -0.007 -0.106 0.992"
 				Skin="1">
@@ -3684,7 +3684,7 @@
 			<Object
 				Name="barricade8_wwwC14_Child4"
 				Belong="1005"
-				Prototype="Sml301"
+				Prototype="Ural00"
 				Pos="4416.109 284.739 3515.012"
 				Rot="0.089 -0.006 -0.067 0.994"
 				Skin="1">

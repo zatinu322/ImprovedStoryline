@@ -5669,30 +5669,6 @@
 		Radius="10.000" />
 
 	<Object
-		Name="barricade5_GwG67"
-		Belong="1001"
-		Prototype="barricade5_GwG"
-		Pos="3293.497 274.426 6955.328"
-		Probability="0.500">
-		<Object
-			Flags="21"
-			Name="barricade5_GwG67_Team"
-			Belong="1001"
-			Prototype="settlementTeam">
-			<Formation
-				Name="barricade5_GwG67_Team_Formation"
-				Belong="1001"
-				Prototype="caravanFormation"
-				DistBetweenVehicles="30.000"
-				Pos="0.000 0.000 0.000"
-				Direction="0.000 0.000 1.000"
-				LinearVelocity="100.000"
-				AngularVelocity="0.500"
-				NumPathPoint="-1" />
-		</Object>
-	</Object>
-
-	<Object
 		Name="js_barricade139"
 		Belong="1001"
 		Prototype="js_barricade1"
@@ -5704,30 +5680,6 @@
 			Prototype="settlementTeam">
 			<Formation
 				Name="js_barricade139_Team_Formation"
-				Belong="1001"
-				Prototype="caravanFormation"
-				DistBetweenVehicles="30.000"
-				Pos="0.000 0.000 0.000"
-				Direction="0.000 0.000 1.000"
-				LinearVelocity="100.000"
-				AngularVelocity="0.500"
-				NumPathPoint="-1" />
-		</Object>
-	</Object>
-
-	<Object
-		Name="barricade7_GwG90"
-		Belong="1001"
-		Prototype="barricade7_GwG"
-		Pos="3701.515 253.173 7006.365"
-		Probability="0.500">
-		<Object
-			Flags="21"
-			Name="barricade7_GwG90_Team"
-			Belong="1001"
-			Prototype="settlementTeam">
-			<Formation
-				Name="barricade7_GwG90_Team_Formation"
 				Belong="1001"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
@@ -5859,7 +5811,7 @@
 			<Object
 				Name="js_wallwithenemy122_Child7"
 				Belong="1002"
-				Prototype="r1m1_scout01"
+				Prototype="Ural00"
 				Pos="3041.468 278.469 6202.152"
 				Rot="0.016 0.000 -0.003 1.000">
 				<Parts />
@@ -5870,7 +5822,7 @@
 			<Object
 				Name="js_wallwithenemy122_Child8"
 				Belong="1002"
-				Prototype="r1m3_hunter02"
+				Prototype="CruiserBased"
 				Pos="3025.042 278.685 6202.712"
 				Rot="0.018 0.000 -0.005 1.000">
 				<Parts />
@@ -6102,7 +6054,7 @@
 			<Object
 				Name="js_wallwithenemy117_Child7"
 				Belong="1002"
-				Prototype="r1m1_scout01"
+				Prototype="CoolBelaz_2"
 				Pos="3961.633 249.209 4347.632">
 				<Parts />
 
@@ -6112,7 +6064,7 @@
 			<Object
 				Name="js_wallwithenemy117_Child8"
 				Belong="1002"
-				Prototype="r1m3_hunter02"
+				Prototype="Cruiser02"
 				Pos="3945.208 249.159 4348.192">
 				<Parts />
 
@@ -7098,7 +7050,7 @@
 			<Object
 				Name="barricade8_wwwC60_Child4"
 				Belong="1002"
-				Prototype="Sml301"
+				Prototype="AKF_Cruiser2"
 				Pos="5046.757 249.943 5848.064"
 				Rot="0.004 -0.737 0.002 0.676">
 				<Parts />

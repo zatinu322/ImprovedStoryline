@@ -889,7 +889,7 @@
 		Pos="1966.708 300.805 830.206"
 		Rot="0.000 0.429 0.000 0.903"
 		PointOfViewInInterface="50.000 50.000 50.000"
-		CaravansDest="TheFreedom_enter">
+		CaravansDest="TheFreedom_deploy">
 		<Object
 			Name="TheOilVillage_Bar"
 			Belong="1008"
@@ -1194,8 +1194,8 @@
 			Name="TheFreedom_deploy"
 			Belong="1008"
 			Prototype="genericLocation"
-			Pos="3180.278 320.365 1254.009"
-			Radius="10.063"
+			Pos="3188.756 319.992 1238.609"
+			Radius="72.445"
 			LookingTimeOut="20.000" />
 
 		<Parts />
@@ -1892,13 +1892,13 @@
 
 	<Object
 		Name="barricade4_wGw72"
-		Belong="1002"
+		Belong="1013"
 		Prototype="barricade4_wGw"
 		Pos="2071.135 311.021 3626.832"
 		Probability="0.500">
 		<Object
 			Name="barricade4_wGw72_Child3"
-			Belong="1002"
+			Belong="1013"
 			Prototype="staticAutoGun08"
 			Pos="2071.135 311.411 3626.832">
 			<Parts />
@@ -1907,11 +1907,11 @@
 		<Object
 			Flags="21"
 			Name="barricade4_wGw72_Team"
-			Belong="1002"
+			Belong="1013"
 			Prototype="settlementTeam">
 			<Formation
 				Name="barricade4_wGw72_Team_Formation"
-				Belong="1002"
+				Belong="1013"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -1924,18 +1924,18 @@
 
 	<Object
 		Name="barricade6_wGw42"
-		Belong="1002"
+		Belong="1013"
 		Prototype="barricade6_wGw"
 		Pos="784.891 306.123 1414.585"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade6_wGw42_Team"
-			Belong="1002"
+			Belong="1013"
 			Prototype="settlementTeam">
 			<Formation
 				Name="barricade6_wGw42_Team_Formation"
-				Belong="1002"
+				Belong="1013"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -1947,7 +1947,7 @@
 
 		<Object
 			Name="barricade6_wGw42_Child3"
-			Belong="1002"
+			Belong="1013"
 			Prototype="staticAutoGun07"
 			Pos="784.773 306.148 1414.618"
 			Rot="0.000 -0.375 0.000 0.927">
@@ -1957,18 +1957,18 @@
 
 	<Object
 		Name="barricade6_wGw13"
-		Belong="1002"
+		Belong="1013"
 		Prototype="barricade6_wGw"
 		Pos="2552.302 321.232 1660.848"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade6_wGw13_Team"
-			Belong="1002"
+			Belong="1013"
 			Prototype="settlementTeam">
 			<Formation
 				Name="barricade6_wGw13_Team_Formation"
-				Belong="1002"
+				Belong="1013"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -1980,7 +1980,7 @@
 
 		<Object
 			Name="barricade6_wGw13_Child3"
-			Belong="1002"
+			Belong="1013"
 			Prototype="staticAutoGun07"
 			Pos="2552.066 321.628 1660.808"
 			Rot="0.000 -0.727 0.000 0.687">
@@ -1990,18 +1990,18 @@
 
 	<Object
 		Name="barricade8_wwwC3"
-		Belong="1002"
+		Belong="1013"
 		Prototype="barricade8_wwwC"
 		Pos="2801.754 336.176 1312.053"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade8_wwwC3_Team"
-			Belong="1002"
+			Belong="1013"
 			Prototype="settlementTeam">
 			<Object
 				Name="barricade8_wwwC3_Child4"
-				Belong="1002"
+				Belong="1013"
 				Prototype="Sml301"
 				Pos="2807.011 336.962 1314.415"
 				Rot="-0.012 0.633 0.006 0.774">
@@ -2012,7 +2012,7 @@
 
 			<Formation
 				Name="barricade8_wwwC3_Team_Formation"
-				Belong="1002"
+				Belong="1013"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"
@@ -2025,19 +2025,19 @@
 
 	<Object
 		Name="barricade8_wwwC29"
-		Belong="1002"
+		Belong="1013"
 		Prototype="barricade8_wwwC"
 		Pos="2446.277 317.732 442.434"
 		Probability="0.500">
 		<Object
 			Flags="21"
 			Name="barricade8_wwwC29_Team"
-			Belong="1002"
+			Belong="1013"
 			Prototype="settlementTeam">
 			<Object
 				Name="barricade8_wwwC29_Child4"
-				Belong="1002"
-				Prototype="Sml301"
+				Belong="1013"
+				Prototype="Fighter01"
 				Pos="2447.574 319.034 438.203"
 				Rot="0.000 0.611 0.017 0.791">
 				<Parts />
@@ -2047,7 +2047,7 @@
 
 			<Formation
 				Name="barricade8_wwwC29_Team_Formation"
-				Belong="1002"
+				Belong="1013"
 				Prototype="caravanFormation"
 				DistBetweenVehicles="30.000"
 				Pos="0.000 0.000 0.000"

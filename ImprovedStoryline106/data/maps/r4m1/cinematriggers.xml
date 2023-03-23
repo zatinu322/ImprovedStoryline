@@ -421,6 +421,7 @@
 				enveh:SetRotation(Quaternion(-0.002, -0.490, -0.011, 0.872))
 				enveh:SetExternalPathByName("NearEngineerEngineerPath")
 				enveh:setGodMode(1)
+				enveh:SetRandomSkin()
 			end
 
 			trigger:Deactivate()

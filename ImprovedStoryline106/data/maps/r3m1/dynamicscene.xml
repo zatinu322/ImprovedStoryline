@@ -25283,7 +25283,7 @@
 		Rot="0.000 0.979 0.000 0.206">
 		<Object
 			Belong="-1"
-			Prototype="Light_Red"
+			Prototype="LightObject2"
 			Pos="3222.451 259.478 1418.903"
 			Rot="0.000 0.979 0.000 0.206" />
 	</Object>
@@ -25510,7 +25510,7 @@
 		Rot="0.000 0.979 0.000 0.206">
 		<Object
 			Belong="-1"
-			Prototype="Light_Red"
+			Prototype="LightObject2"
 			Pos="3356.453 259.211 1411.085"
 			Rot="0.000 0.979 0.000 0.206" />
 	</Object>
@@ -27095,7 +27095,7 @@
 		Rot="0.000 -0.965 0.000 0.263">
 		<Object
 			Belong="1001"
-			Prototype="Light_Red"
+			Prototype="LightObject2"
 			Pos="3065.077 270.998 1342.005"
 			Rot="0.000 0.965 0.000 -0.263" />
 	</Object>

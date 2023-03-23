@@ -30227,18 +30227,6 @@
 		Rot="0.000 0.269 0.000 0.963" />
 
 	<Object
-		Name="sack_wall23593"
-		Belong="-1"
-		Prototype="Breakable_SackWall2"
-		Pos="1964.278 288.000 2547.463" />
-
-	<Object
-		Name="sack_wall13594"
-		Belong="-1"
-		Prototype="Breakable_SackWall1"
-		Pos="1976.278 287.965 2547.463" />
-
-	<Object
 		Belong="-1"
 		Prototype="Cable_1">
 		<Post
@@ -33021,10 +33009,6 @@
 		PathsNames="human12" />
 
 	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
-
-	<Object
 		Name="lamppost13629"
 		Belong="1001"
 		Prototype="lamppost1"
@@ -33062,4 +33046,8 @@
 			Pos="3897.068 259.192 903.972"
 			Rot="0.000 -0.324 0.000 0.946" />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

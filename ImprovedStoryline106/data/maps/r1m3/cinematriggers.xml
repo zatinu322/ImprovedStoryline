@@ -1554,6 +1554,7 @@
 
 			StopPlayingCustomMusic()
 			
+			SetVar("StrangerSkin", Pskin)
 			Pskin = nil
 
 			trigger:Deactivate()
@@ -1750,8 +1751,11 @@
 			StartCinematic()
 			UpdateCinematic(1)
 			
-			CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1046, Quaternion(-0.027, -0.711, -0.027, 0.702))
-			CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1800.970, 280.535, 5493.521), 1046, Quaternion(-0.000, -0.706, 0.004, 0.709))
+			local nezn = CreateVehicleEx("Cruiser01","ZasadaAR1",CVector(1800.213, 279.418, 5484.097), 1046, Quaternion(-0.027, -0.711, -0.027, 0.702))
+			if nezn then nezn:SetSkin(GetVar("StrangerSkin").AsInt) end
+
+			local nezn2 = CreateVehicleEx("CoolBelaz_2","ZasadaAR2",CVector(1800.970, 280.535, 5493.521), 1046, Quaternion(-0.000, -0.706, 0.004, 0.709))
+			if nezn2 then nezn2:SetRandomSkin() end
 
 			TActivate("RolikZasadaARMusic")
 			TActivate("RolikZasadaAREnd")

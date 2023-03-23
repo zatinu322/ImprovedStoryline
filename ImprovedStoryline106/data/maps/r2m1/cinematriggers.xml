@@ -2420,6 +2420,8 @@
 
 				AddHistory( "r1_Before_Fight_Aliens" )
 				AddFadingMsgId( "fm_history_got" )
+
+				PassToMap("r2m1_bossfight", "NjeriFight_loc", -1, true)
 			end
 
 			RestoreAllToleranceStatus()
@@ -2450,8 +2452,6 @@
 
 			RuleConsole("cinematic_spring_coeff 0.7")
 			RuleConsole("g_postEffect cinematicEnd")
-
-			PassToMap("r2m1_bossfight", "NjeriFight_loc", -1, true)
 
 			trigger:Deactivate()
 		</script>

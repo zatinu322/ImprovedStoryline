@@ -144,9 +144,18 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Контакты автора
 
-* [Discord сервер](https://discord.gg/sPrGBP9aFd)
-* [YouTube канал](https://www.youtube.com/user/rpggameland)
-* [Страница ВК](https://vk.com/id316894646)
+<div align="left">
+  <a href="https://discord.gg/sPrGBP9aFd">
+    <img src="https://i.imgur.com/1p7N4lm.png" alt="Discord" height="55">
+  </a>
+  <a href="https://www.youtube.com/user/rpggameland">
+    <img src="https://i.imgur.com/eZj65ig.png" alt="YT" height="55">
+  </a>
+  <a href="https://vk.com/id316894646">
+    <img src="https://i.imgur.com/4lcRJSW.png" alt="VK" height="55">
+  </a>
+
+</div>
 
 ***
 
@@ -285,6 +294,15 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 
 # Contacts
 
-* [Discord server](https://discord.gg/sPrGBP9aFd)
-* [YouTube channel](https://www.youtube.com/user/rpggameland)
-* [VK page](https://vk.com/id316894646)
+<div align="left">
+  <a href="https://discord.gg/sPrGBP9aFd">
+    <img src="https://i.imgur.com/1p7N4lm.png" alt="Discord" height="55">
+  </a>
+  <a href="https://www.youtube.com/user/rpggameland">
+    <img src="https://i.imgur.com/eZj65ig.png" alt="YT" height="55">
+  </a>
+  <a href="https://vk.com/id316894646">
+    <img src="https://i.imgur.com/4lcRJSW.png" alt="VK" height="55">
+  </a>
+
+</div>

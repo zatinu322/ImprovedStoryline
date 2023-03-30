@@ -402,6 +402,8 @@
 			RestoreAllToleranceStatus()
 			
 			StopPlayingCustomMusic()
+
+			SetCameraBehindPlayerVehicle()
 			
 			TakeQuest("PlayForLisa_Quest")
 			
@@ -480,6 +482,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
 			
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
@@ -1056,8 +1060,6 @@
 			
 			StopPlayingCustomMusic()
 			
-			SetCameraBehindPlayerVehicle()
-			
 			local carS = GetEntityByName("Serafima")
 			if carS then
 				carS:SetGamePositionOnGround( CVector(1544.352, 265.338, 1049.008))
@@ -1079,6 +1081,8 @@
 			TeamCreate("SeraZas3",1089,CVector(1922.263, 257.655, 2723.119),{"AKF_Belaz1"}, nil, nil, Quaternion(-0.015, -0.838, -0.005, -0.545))
 					
 			SetTolerance(1088,1089,RS_ENEMY)
+
+			SetCameraBehindPlayerVehicle()
 			
 			TActivate( "trCaravanToStation3sec" )
 			TActivate( "trCaravanToStationINPLACE" )

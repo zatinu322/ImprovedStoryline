@@ -4354,6 +4354,10 @@
 		fullDiz="Ученых в Мидгарде заинтересует такая информация. Возможно, мне даже удастся на этом подзаработать деньжат."
 		isMainQuest="0">
 		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
 			name="r1m2"
 			targetObjName="MidgardProfessor" />
 
@@ -4368,6 +4372,14 @@
 		<Map
 			name="r2m2"
 			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
 	</QuestInfo>
 
 	<QuestInfo

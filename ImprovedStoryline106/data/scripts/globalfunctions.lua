@@ -27,6 +27,7 @@ function println( s )
 		LOG( s )
 	else
 		g_Console:PrintF( "\n"..tostring(s).."\n" )
+		LOG( s )
 	end
 end
 

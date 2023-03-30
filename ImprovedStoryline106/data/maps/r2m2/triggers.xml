@@ -35,7 +35,6 @@
 			local len = getn(gunlist)
 
 			for i=1,12 do
-				--println("step"..i.."succesful")
 				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[random(len)], random(0, 2))
 			end
 			trigger:Deactivate()
@@ -514,7 +513,6 @@
 
 			local len = getn(towns)
 			for i = 1, len do
-				println("Setting belong "..belong.." to "..towns[i])
 				if getObj(towns[i]) then getObj(towns[i]):SetBelong(belong) end
 				if belong ~= 1015 then
 					CreateNewDummyObject("flagshtock", "R2M2Flag"..i, -1, -1, FlagPos[i], FlagRot[i], flag_skin)

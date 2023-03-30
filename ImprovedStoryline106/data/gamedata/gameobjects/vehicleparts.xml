@@ -2629,6 +2629,35 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 				Main   = "0"	
 			/>			
 		</Prototype>
+
+		<Prototype
+			Class				= "Basket"
+			Name				= "molokovozTrailer01Basket02"
+			ModelFile			= "molokovozTrailer01Basket"
+			ResourceType		= "MOLOKOVOZ_TRAILER_BASKET"
+			Durability			= "60"
+			DurCoeffsForDamageTypes	= "10 5 5"
+			NodeScale			= "1 1 1"
+            VisibleInEncyclopedia = "false"
+			Price				= "12000"
+			RepairCoef			= "0.2"
+
+			Mass				= "1.0" 
+			LoadPoints			= "LP_BIG01" >
+	
+			<RepositoryDescription
+				RepositorySize		= "9 11">
+
+				<Slot
+					Name		= "BASKET_BIG_GUN_0"
+					Pos		= "9 1"
+				/>
+
+			</RepositoryDescription>
+			<GroupsHealth
+				Main   = "0"	
+			/>			
+		</Prototype>
 		<!-- Кузова Урала для игрока -->
 		<Prototype
 			Class				= "Basket"

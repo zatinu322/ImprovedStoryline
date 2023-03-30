@@ -2193,9 +2193,13 @@
 				vehPlayer:UnlimitMaxSpeed()
 			end
 
-			getObj("DecidePlz"):SetSpokenCount(1)
+			if QuestStatus("LookAtAivenCar")==Q_COMPLETED then
+				getObj("DecidePlz"):SetSpokenCount(1)
 
-			StartConversation("DecidePlz")
+				StartConversation("DecidePlz")
+			else
+				TActivate("trORACLEAGRESSOR_cam03")
+			end
 
 			trigger:Deactivate()
 		</script>

@@ -31,9 +31,9 @@
 			local len = getn(gunlist)
 
 			for i=1,10 do
-				--println("step"..i.."succesful")
 				CreateBoxWithAffixGun(CVector(getPos("SecretPlace"..i.."_loc")), gunlist[exrandom(len)], random(0, 2))
 			end
+			
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -46,6 +46,7 @@
 			if midCar then 
 				midCar:SetRandomSkin()
 				midCar:AttachTrailer("MolokovozTrailer")
+				midCar:GetTrailer():SetNewPart("BASKET", "molokovozTrailer01Basket02")
 				PaintTrailer(midCar)
 			 end
 
@@ -131,6 +132,7 @@
 			if kskin and midCar then 
 				midCar:SetSkin(kskin)
 				midCar:AttachTrailer("MolokovozTrailer")
+				midCar:GetTrailer():SetNewPart("BASKET", "molokovozTrailer01Basket02")
 				PaintTrailer(midCar)
 			end
 			kskin = nil

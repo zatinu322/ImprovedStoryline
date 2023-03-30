@@ -3380,7 +3380,7 @@
 		name="Dlg_pl_002420"
 		text="Да. И ты тоже. А теперь отправляйся, пока эти безумцы не нашли тебя."
 		role="PLAYER"
-		scriptResult="CompleteQuest('PeregReturn'); TakeQuest('r4m1_GotoAivenGo');  RemoveQuestItem('quest_key_for_submarine'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_key_for_submarine'); EndConversation()" />
+		scriptResult="CompleteQuest('PeregReturn'); TakeQuest('r4m1_GotoAivenGo');  RemoveQuestItem('quest_key_for_submarine'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_key_for_submarine'); GetPlayerVehicle():SetCustomLinearVelocity(0); EndConversation()" />
 <!--Root/r4m1/Сюжетные/Вернулся в Кеф (после поисков)-->
 	<Reply
 		name="Kef_Bar_Customer1_3_N01"
@@ -14641,7 +14641,7 @@
 
 	<Reply
 		name="Dlg_npc_001573"
-		text="Да. 100000 монет."
+		text="Да. 1000000 монет."
 		role="NPC"
 		nextReplies="Dlg_pl_001574 Dlg_pl_003232" />
 
@@ -14649,7 +14649,7 @@
 		name="Dlg_pl_003232"
 		text="Ладно, вот, держи."
 		role="PLAYER"
-		scriptCondition="GetPlayerMoney() >= 100000"
+		scriptCondition="GetPlayerMoney() >= 1000000"
 		scriptResult="SetVar('Player4eeter',1); TActivate('trBenDialogActivate');"
 		nextReplies="Dlg_npc_003233" />
 

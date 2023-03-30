@@ -192,7 +192,7 @@
 		<event flypath="Opening22" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 		
-			TeamCreate("Bolnoy",1002,CVector(2464.338, 322.302, 1643.903),{"Sml101"})
+			TeamCreate("Bolnoy",1013,CVector(2464.338, 322.302, 1643.903),{"Sml101"})
 
 			local vehBol = GetEntityByName("Bolnoy_vehicle_0")
 			if vehBol then
@@ -414,7 +414,7 @@
 			
 			RestoreAllToleranceStatus()
 
-			TeamCreate("HospitalEnemy",1002,CVector(2648.307, 321.213, 1661.576),{"Sml301"})
+			TeamCreate("HospitalEnemy",1013,CVector(2648.307, 321.213, 1661.576),{"Sml301"})
 			local hen = GetEntityByName("HospitalEnemy_vehicle_0")
 			if hen then hen:SetRotation(Quaternion(-0.024, 0.714, -0.000, -0.700)) end
 
@@ -701,7 +701,7 @@
 				FVehicle:Remove()
 			end
 
-			TeamCreate("FirstB",1002,CVector(2957.974, 333.446, 2394.033),{"Sml101"})
+			TeamCreate("FirstB",1013,CVector(2957.974, 333.446, 2394.033),{"Sml101"})
 			local terr = GetEntityByName("FirstB_vehicle_0")
 			if terr then
 				terr:SetSkin ( klop_skin )
@@ -2678,19 +2678,16 @@
 			for i = 1,6 do
 				local zone = getObj("InfectionZone"..brod_zones[i])
 				if zone then zone:SetProperty("Belong", 1002) end
-				println("InfectionZone"..brod_zones[i].." belong is now "..zone:GetProperty("Belong").AsInt)
 			end
 
 			for i = 1,5 do
 				local zone = getObj("InfectionZone"..koch_zones[i])
 				if zone then zone:SetProperty("Belong", 1005) end
-				println("InfectionZone"..koch_zones[i].." belong is now "..zone:GetProperty("Belong").AsInt)
 			end
 
 			for i = 1,5 do
 				local stuff = getObj(dynamic_stuff[i])
 				if stuff then stuff:SetProperty("Belong", 1002) end
-				println("DynamicFormation "..dynamic_stuff[i].."belong is now "..stuff:GetProperty("Belong").AsInt)
 			end
 
 			StopPlayingCustomMusic()

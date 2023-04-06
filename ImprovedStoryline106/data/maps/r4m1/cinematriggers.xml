@@ -218,6 +218,7 @@
 
 			GetPlayerVehicle():SetExternalPathByName("ZapravkaOut")
 			GetPlayerVehicle():PlaceToEndOfPath("ZapravkaOut")
+			GetPlayerVehicle():setImmortalMode(1)
 
 			SetCameraBehindPlayerVehicle()
 
@@ -293,6 +294,7 @@
 				veh:PlaceToEndOfPath("playerMolokPath")
 				veh:setGodMode(false)
 				veh:SetCustomControlEnabled(0)
+				veh:setImmortalMode(0)
 			end
 
 			SetCameraBehindPlayerVehicle()

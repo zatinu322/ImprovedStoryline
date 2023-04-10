@@ -3138,7 +3138,7 @@
 			local y = 318.432
 
 			if GetVar("KrayCity").AsInt == 1 then -- в KrayCity другая высота
-				y = 318.432
+				y = 318.520
 			end
 
 			if humLisa then

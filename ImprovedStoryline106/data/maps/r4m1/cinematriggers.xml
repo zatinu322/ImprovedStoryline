@@ -639,6 +639,8 @@
 
 			AddCinematicMessage( 8804, 1 )
 
+			FailQuestIfTaken("r4m1_Tankisty")
+
 			TActivate( "SPYTANKI_cp" )
 
 			TDeactivate("SPYTANKIEND")
@@ -656,8 +658,6 @@
 			local r1 = GetEntityByName ("Tankisty")
 			if r1 then r1:Remove() end
 
-			FailQuestIfTaken("r4m1_Tankisty")
-			
 			TakeQuest("r4m1_FPR_MeetWithOldMan")
 
 			SetCameraBehindPlayerVehicle()

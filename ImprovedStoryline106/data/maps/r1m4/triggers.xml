@@ -31,9 +31,12 @@
 				i = i + 1
 			end
 
-			local kar = CreateVehicleEx("r2m2_CaravanUral02", "CaravanFromR1M3", CVector(2724.686, 227.850, 523.578), 1010, Quaternion(0.001, -0.130, 0.011, 0.991))
-			if kar then
-				kar:SetExternalPathByName("CaravanR1M3_path01")
+			if QuestStatus("d_FindVrata_Quest")==Q_TAKEN then
+				local kar = CreateVehicleEx("r2m2_CaravanUral02", "CaravanFromR1M3", CVector(2724.686, 227.850, 523.578), 1010, Quaternion(0.001, -0.130, 0.011, 0.991))
+				if kar then
+					kar:SetExternalPathByName("CaravanR1M3_path01")
+					kar:SetSkin(2)
+				end
 			end
 
 		    trigger:Deactivate()

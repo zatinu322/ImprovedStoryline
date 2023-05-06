@@ -3358,7 +3358,7 @@
 <!--Root/r1m3/—южетные/ќтобрать диск2 у вора-->
 	<quest
 		Name="r1m3_FightWithThief"
-		Automatic="1"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
@@ -3527,7 +3527,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="Kollizey_Quest"
 		OnComplete="AddPlayerMoney(175)"
-		OnFail='TDeactivate("KOLIZEYFIGHTDIE"); TDeactivate("KOLIZEYFIGHT")'
+		OnFail='TDeactivate("KOLIZEYFIGHTDIE1"); TDeactivate("KOLIZEYFIGHT")'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
 		Levels="r1m2">
 		<quest
@@ -3622,7 +3622,7 @@
 		ConditionToGive="any complete"
 		PrecedingQuests="r1m2_RedkiyMineral_Quest OpenMid11_Quest"
 		OnComplete="AddPlayerMoney(15000)"
-		OnFail='TDeactivate("KOLIZEYFIGHTDIE"); TDeactivate("KOLIZEYFIGHT")'
+		OnFail='TDeactivate("KOLIZEYFIGHTDIE2"); TDeactivate("KOLIZEYFIGHT")'
 		OnTake='ShowCircleOnMinimapByName("Kolizey_location")'
 		Levels="r1m2">
 		<quest

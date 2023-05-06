@@ -547,13 +547,15 @@
 	<trigger	Name="ShamanesTriggerCreate" active="0">
 		<event	timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("ShamanCar1",1005,CVector(2771,262,501),{"r2m2_ShamanHunter01"}, nil, 1)
-			TeamCreate("ShamanCar2",1002,CVector(1638,293,2251),{"r2m2_ShamanHunter01"}, nil, 1)
+			TeamCreate("ShamanCar1",1094,CVector(2771,262,501),{"r2m2_ShamanHunter01"}, nil, 1)
+			TeamCreate("ShamanCar2",1094,CVector(1638,293,2251),{"r2m2_ShamanHunter01"}, nil, 1)
 
 			TActivate ("Shaman1TriggerDie")
 			TActivate ("Shaman2TriggerDie")
 
 			TakeQuest("r2m2_HeadsHunterQuest")
+
+			SetTolerance(1100, 1094, RS_ENEMY)
 
 			trigger:Deactivate()    
 		</script>

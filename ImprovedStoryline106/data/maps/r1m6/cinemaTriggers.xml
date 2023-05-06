@@ -108,14 +108,17 @@
 			if vehPal1 then
 				vehPal1:SetRotation(Quaternion(-0.000, -0.999, 0.000, -0.036))
 				vehPal1:SetExternalPathByName("palach_path1")
+				vehPal1:SetSkin(7)
 			end
 			if vehPal2 then
 				vehPal2:SetRotation(Quaternion(0.000, 0.996, -0.000, 0.084))
 				vehPal2:SetExternalPathByName("palach_path2")
+				vehPal2:SetSkin(7)
 			end
 			if vehPal3 then
 				vehPal3:SetRotation(Quaternion(0.000, 0.996, -0.000, 0.095))
 				vehPal3:SetExternalPathByName("palach_path3")
+				vehPal3:SetSkin(7)
 			end
 			
 			trigger:Deactivate()
@@ -234,6 +237,7 @@
 				veh11:SetRotation(Quaternion(-0.001, -0.669, 0.002, 0.744))
 				veh11:SetExternalPathByName("start_path2")
 				veh11:SetMaxSpeed(50)
+				veh11:SetSkin(7)
 			end
 
 			trigger:Deactivate()
@@ -398,6 +402,10 @@
 			
 			local vehLisa = GetEntityByName("CARLISA")
 			if vehLisa then vehLisa:Remove() end
+
+			if LevelInfoManager then
+				LevelInfoManager:ClearVisibilityMapForLevel("r1m6")
+			end
 			
 			RestoreAllToleranceStatus()
 			
@@ -2520,6 +2528,9 @@
 			
 			TActivate("BV2RolikStart")
 			TActivate("BVDEADEND")
+
+			local vill = getObj("PetrolStationTown3")
+			if vill then vill:SetRuined(true) end
 			
 			trigger:Deactivate()
 		</script>
@@ -2644,6 +2655,9 @@
 			AddCinematicMessage( 101, 1 )
 
 			TActivate("BVDEADEND")
+
+			local vill = getObj("PetrolStationTown2")
+			if vill then vill:SetRuined(true) end
 			
 			trigger:Deactivate()
 		</script>

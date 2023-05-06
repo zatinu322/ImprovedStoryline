@@ -133,6 +133,11 @@
 				LevelInfoManager:ClearVisibilityMapForLevel("r2m1_bossfight")
 			end
 
+			for stat = 1,3 do
+				local part = getObj("AliensShipStation"..stat)
+				if part then part:Remove() end
+			end
+
 			if BookExists("r1_book_doklad") then
 				local pcar = CreateVehicleEx("FelixVehicle2", "ProfessorCar", CVector(2693.961, 285.541, 1732.479), 1009, Quaternion(0.000, 0.522, 0.000, 0.853))
 				if pcar then

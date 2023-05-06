@@ -2096,8 +2096,6 @@
 			CreateNewDummyObject("boss04station", "AliensShipStation1", -1, -1, CVector(1367.696, -6.639, 1801.875), Quaternion(0.000, 0.617, 0.000, 0.787))
 			CreateNewDummyObject("boss04station", "AliensShipStation2", -1, -1, CVector(1368.555, -6.699, 1796.631), Quaternion(0.000, 0.990, 0.000, -0.141))
 			CreateNewDummyObject("boss04station", "AliensShipStation3", -1, -1, CVector(1362.245, -9.363, 1803.102), Quaternion(0.000, 0.373, 0.000, -0.928))
-				
-			-- getObj("AliensShip"):SetPosition( CVector(1366.725, 0.804, 1801.638))
 
 			Fly("UFO_cam01", CINEMATIC_NO_AIM, 0, 4, 0, 0 )
 			Fly("UFO_cam022", CINEMATIC_NO_AIM, 0, 9, 0, 0 )

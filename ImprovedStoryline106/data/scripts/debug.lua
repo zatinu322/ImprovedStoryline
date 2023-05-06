@@ -201,7 +201,7 @@ function ValidateGameVersion()
 			InvalidFunctionName() -- валим триггер, иначе интерфейс может сломаться
 		end
 	else
-		AddFadingMsg("Game version validated.")
+		-- AddFadingMsg("Game version validated.")
 		return GAME_VERSION
 	end
 end
@@ -467,7 +467,7 @@ function GetAllTolerance(belong)
 			   1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1040, 1041, 1042, 
 			   1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 
 			   1060, 1061, 1062, 1063, 1064, 1065, 1080, 1081, 1083, 1084, 1085, 1088, 
-			   1089, 1090, 1091, 1092}
+			   1089, 1090, 1091, 1092, 1093, 1094}
 	i = 1
 	while belongs[i] ~= nil do
 		LOG("Belong_"..belongs[i].." has "..GetTolerance(belong, belongs[i]).." tolerance to "..belong..".")

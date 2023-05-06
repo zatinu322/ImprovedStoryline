@@ -872,6 +872,22 @@
 			StartCinematic()
 			
 			AddCinematicMessage( 3, 1 )
+
+			-- наследуем скин фанатика от крейсера возле Оракула
+			-- если он уничтожен, то рандом из прописанных на карте
+			local zashitt = GetEntityByName("OracleDefenders")
+			fan_skin = 0
+
+			if zashitt then
+				local zashitt1 = zashitt:GetVehicle(0)
+				if zashitt1 then
+					fan_skin = zashitt1:GetSkin()
+					zashitt1:Remove()
+				end
+			else
+				local skins = {0, 2, 3, 6}
+				fan_skin = skins[random(1,4)]
+			end
 			
 			TActivate("cin_FanatikRage")
 			TActivate("cin_FanatikFade")
@@ -905,15 +921,6 @@
 		<script>
 			PlayCustomMusic("IntenseDialogue05")
 
-			local zashitt = GetEntityByName("OracleDefenders")
-			
-			if zashitt then
-				local zashitt1 = zashitt:GetVehicle(0)
-				if zashitt1 then
-					zashitt1:Remove()
-				end
-			end
-
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetRotation(Quaternion(0.000, 0.913, 0.004, 0.409))
@@ -926,8 +933,7 @@
 				vehFanatik:SetCustomLinearVelocity( 30 )
 				vehFanatik:SetThrottle( 1 )
 				vehFanatik:SetNewPart("BASKET_SIDE_GUN_0", "marsSideGun")
-				vehFanatik:SetRandomSkin()
-				fan_skin = vehFanatik:GetSkin()
+				vehFanatik:SetSkin(fan_skin)
 			end
 			
 			trigger:Deactivate()
@@ -941,22 +947,11 @@
 
 			TeamCreate("Fanatik",1021,CVector(1370.991, 287.842, 1128.789),{"Cruiser02"})
 			TeamCreate("FanatikCrew",1021,CVector(1159.899, 296.939, 1134.574),{"r1m2_hunter02", "Fighter02", "Scout03"})
-		
+
+			-- если кто это читает, то простите меня за названия
+
 			local vehFanCut = GetEntityByName("Fanatic_Cruiser")
 			if vehFanCut then vehFanCut:Remove() end
-
-			local vehFanatik = GetEntityByName("Fanatik_vehicle_0")
-			if vehFanatik then
-				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
-				vehFanatik:PlaceToEndOfPath("FanatikVmeshalsa")
-				if fan_skin then
-					vehFanatik:SetSkin(fan_skin)
-					fan_skin = nil
-				else
-					vehFanatik:SetRandomSkin()
-				end
-				vehFanatik:SetNewPart("BASKET_SIDE_GUN_0", "marsSideGun")
-			end
 
 			local vehCrew0 = GetEntityByName("FanatikCrew_vehicle_0")
 			if vehCrew0 then
@@ -996,6 +991,16 @@
 			
 			RemoveQuestItem( "quest_repair_robot3" )
 			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_repair_robot3")
+
+			local vehFanatik = GetEntityByName("Fanatik_vehicle_0")
+			if vehFanatik then
+				vehFanatik:SetExternalPathByName("FanatikVmeshalsa")
+				vehFanatik:PlaceToEndOfPath("FanatikVmeshalsa")
+				vehFanatik:SetNewPart("BASKET_SIDE_GUN_0", "marsSideGun")
+				vehFanatik:SetSkin(fan_skin)
+			end
+
+			fan_skin = nil
 			
 			trigger:Deactivate()
 		</script>

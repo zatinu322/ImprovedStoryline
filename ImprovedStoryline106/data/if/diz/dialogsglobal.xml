@@ -1127,7 +1127,7 @@
 		name="Dlg_pl_002912"
 		text="Ладно, оставайся здесь, я постараюсь закончить побыстрее. Кажется, длительное пребывание в этом месте плохо на тебя влияет."
 		role="PLAYER"
-		scriptResult="RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'Lisa_P'); EndConversation()" />
+		scriptResult="RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Lisa_P'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002967"
@@ -3834,7 +3834,7 @@
 		name="Dlg_pl_000203"
 		text="Надеюсь, его совет стоит того, что я пережил на пути сюда."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r3m2_OvercomeOracleGuard'); StopPlayingCustomMusic(); TActivate('OracleCinStart'); EndConversation();" />
+		scriptResult="CompleteQuest('r3m2_OvercomeOracleGuard'); StopPlayingCustomMusic(); TActivate('OracleCinStart'); TDeactivate('trOracleDefendersDie'); EndConversation();" />
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N16221"
@@ -3859,7 +3859,7 @@
 		name="Dlg_pl_000204"
 		text="Надеюсь, оно того стоило."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r3m2_OvercomeOracleGuard'); StopPlayingCustomMusic(); TActivate('OracleCinStart'); EndConversation();" />
+		scriptResult="CompleteQuest('r3m2_OvercomeOracleGuard'); StopPlayingCustomMusic(); TActivate('OracleCinStart'); TDeactivate('trOracleDefendersDie'); EndConversation();" />
 
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N041"
@@ -4427,7 +4427,7 @@
 
 	<Reply
 		name="r3m2_AloneDruid1_1_N02"
-		text="Я ищу оракула."
+		text="Я ищу Оракула."
 		role="PLAYER"
 		nextReplies="r3m2_AloneDruid1_1_N03" />
 
@@ -7079,7 +7079,7 @@
 
 	<Reply
 		name="Dlg_npc_002557"
-		text="Как ты себе это представляешь? На несколько минут. Да аварийный пуск займёт сутки, не меньше. Впрочем, как раз подходит время профилактического ремонта. Иди, ищи своих зелёных человечков."
+		text="Как ты себе это представляешь? На несколько минут. Да пуск станции после аварийного отключения займёт сутки, не меньше. Впрочем, как раз подходит время профилактического ремонта. Ладно, иди, ищи своих зелёных человечков."
 		role="NPC"
 		nextReplies="Dlg_pl_002558" />
 
@@ -7098,7 +7098,7 @@
 
 	<Reply
 		name="Dlg_npc_000647"
-		text="Как ты себе это представляешь? На несколько минут. Да аварийный пуск займет сутки, не меньше. Впрочем, как раз подходит время профилактического ремонта. Иди, ищи своих зеленых человечков."
+		text="Как ты себе это представляешь? На несколько минут. Да пуск станции после аварийного отключения займет сутки, не меньше. Впрочем, как раз подходит время профилактического ремонта. Ладно, иди, ищи своих зеленых человечков."
 		role="NPC"
 		nextReplies="Dlg_pl_000651" />
 
@@ -10980,7 +10980,7 @@
 
 	<Reply
 		name="Dlg_npc_den195"
-		text="Знаешь, как только ты сюда приехал, я хотел тебя убить. Но теперь не хочу."
+		text="Знаешь, как только ты сюда приехал, я хотел тебя убить. Но теперь не хочу, уж больно ты рассмешил меня."
 		role="NPC"
 		nextReplies="Dlg_pl_den196" />
 
@@ -11007,7 +11007,7 @@
 		name="Dlg_pl_001774"
 		text="Может, мне удастся найти другой путь."
 		role="PLAYER"
-		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
+		scriptResult="CompleteQuestIfTaken( 'd_RideAcrossBase_Quest');  TakeQuest('d_GiveMoneyToBase_Quest');  GetCurNpc():SetSpokenCount( 1 ); GetPlayerVehicle():SetCustomLinearVelocity(0);  EndConversation()" />
 
 	<Reply
 		name="BaseGuardian_hellodlg1"
@@ -11027,7 +11027,7 @@
 		name="Dlg_pl_den1199"
 		text="Спокойно, я уже почти заработал деньги..."
 		role="PLAYER"
-		scriptResult=" EndConversation()" />
+		scriptResult="GetPlayerVehicle():SetCustomLinearVelocity(0); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_dd2200"
@@ -11071,7 +11071,7 @@
 		name="Dlg_pl_d3d181"
 		text="Слишком высокая цена для меня."
 		role="PLAYER"
-		scriptResult="EndConversation()" />
+		scriptResult="GetPlayerVehicle():SetCustomLinearVelocity(0);  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Бандит в Пеште-->
 	<Reply
 		name="BanditPeshtGuardian_hellodlg0"
@@ -17891,7 +17891,7 @@
 		name="Dlg_pl_002603"
 		text="Спасибо огромное. Не знаю, увидимся ли мы когда-нибудь снова, но я всегда буду помнить родные места."
 		role="PLAYER"
-		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('BenEast_Quest'); AddHistory(  'r1_Felix_Not_Dead'  ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('BenEast_Quest'); AddHistory(  'r1_Felix_Not_Dead'  ); AddFadingMsgId( 'fm_history_got' ); TActivate('trSwitchInfectionBelong'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001410"
@@ -17957,7 +17957,7 @@
 		name="Dlg_pl_002598"
 		text="Спасибо за всё. Феликс будет повержен."
 		role="PLAYER"
-		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('d_SinFather_Quest'); AddHistory(  'r1_South_About_Felix_00'  ); AddFadingMsgId( 'fm_history_got' ); TActivate('trSwitchInfectionBelong'); EndConversation()" />
+		scriptResult="CompleteQuest('BenSouth_Quest'); TakeQuest('d_SinFather_Quest'); AddHistory(  'r1_South_About_Felix_00'  ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 
 	<Reply
 		name="HurdTrucker_hellodlg2"

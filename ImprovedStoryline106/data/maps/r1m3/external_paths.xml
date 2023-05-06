@@ -177,7 +177,7 @@
 	<Path
 		Name="banditoilmine_path">
 		<Point
-			coord="6884.130 6990.195" />
+			coord="6818.057 7019.336" />
 
 		<Point
 			coord="6663.171 7091.674" />
@@ -259,6 +259,21 @@
 
 		<Point
 			coord="4555.667 7498.343" />
+	</Path>
+
+	<Path
+		Name="banditoilmine_path02">
+		<Point
+			coord="6899.936 7004.149" />
+
+		<Point
+			coord="6868.950 6993.279" />
+
+		<Point
+			coord="6846.191 7002.888" />
+
+		<Point
+			coord="6730.958 7049.716" />
 	</Path>
 
 	<Path

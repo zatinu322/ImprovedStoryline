@@ -686,6 +686,7 @@
 			local vehP = GetEntityByName("KARAVAN14_vehicle_0")
 			if vehP then
 				vehP:SetExternalPathByName("karavan_path")
+				vehP:SetSkin(2)
 			end
 
 			trigger:Deactivate()
@@ -724,6 +725,8 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 			TeamCreate("ThiefCar",1044,CVector(6844.412, 288.256, 1161.126),{"UralShot"}, CVector(7081.790, 308.722, 1042.585), 0, Quaternion(0.015, 0.818, 0.110, 0.564))
+
+			TakeQuest("r1m3_FightWithThief")
 
 			SetTolerance(1100, 1044, RS_ENEMY)
 			SetTolerance(1012, 1044, RS_ALLY)

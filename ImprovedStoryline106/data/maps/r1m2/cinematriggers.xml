@@ -63,6 +63,8 @@
 
 			SetCameraBehindPlayerVehicle()
 
+			StopPlayingCustomMusic()
+
 			CompleteQuest("Chifir_Quest")
 			TakeQuest("FindBen2_Quest")
 
@@ -1575,6 +1577,9 @@
 
 			Plf:SetCustomLinearVelocity(0)
 			Plf:SetThrottle(0)
+
+			local arch = GetEntityByName("CarOfSiencer_vehicle_0")
+			if arch then arch:SetMaxSpeed(0) end
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 

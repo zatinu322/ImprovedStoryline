@@ -434,7 +434,7 @@
 				vehR:SetGamePositionOnGround(CVector(6954.294, 259.027, 7065.042))
 				vehR:SetRotation(Quaternion(0.008, 0.931, 0.020, -0.364))
 				vehR:SetSkin(4)
-				vehR:SetExternalPathByName("banditoilmine_path")
+				vehR:SetExternalPathByName("banditoilmine_path02")
 				vehR:SetCruisingSpeed(10)
 			end
 			trigger:Deactivate()
@@ -453,7 +453,7 @@
 			local CToch = GetEntityByName("camTochka")
 			if CToch then CToch:Remove() end
 
-			TeamCreate("OilMineRuner",1044,CVector(6897.545, 261.550, 7004.525),{"DemoBandit"}, nil, 1, Quaternion(-0.002, 0.930, 0.007, -0.367))
+			TeamCreate("OilMineRuner",1044,CVector(6847.383, 260.091, 7002.013),{"DemoBandit"}, nil, 1, Quaternion(-0.003, 0.554, -0.019, -0.833))
 			local vehP = GetEntityByName("OilMineRuner_vehicle_0")
 			if vehP then
 				vehP:SetExternalPathByName("banditoilmine_path")
@@ -1900,6 +1900,8 @@
 			RestoreAllToleranceStatus()
 
 			SetCameraBehindPlayerVehicle()
+
+			SetTolerance(1100,1012,RS_NEUTRAL)
 
 			trigger:Deactivate()
 		</script>

@@ -143,15 +143,6 @@ function tp ()
 	teleport()
 end
 
-function yaohuel ()
-	if testcheat()~=1 then return end
-	GetPlayerVehicle():AddItemsToRepository("add_damage_guns_and_grouping_angle_guns", 2)
-	GetPlayerVehicle():AddItemsToRepository("firing_rate_guns_and_add_damage_guns", 2)
-	GetPlayerVehicle():AddItemsToRepository("add_stability_and_speed2", 4)
-	GetPlayerVehicle():AddItemsToRepository("additional_durability3", 4)
-	GetPlayerVehicle():AddItemsToRepository("someTurboAccelerationPusher", 1)
-end
-
 function cab (num)
 	if testcheat()~=1 then return end
    local number=1
@@ -233,18 +224,6 @@ end
 
 function OpenEncyclopaedia()
 	Journal:ShowAllInEncyclopaedia()
-end
-
-function mir(md)
-	if md == nil then
-		md = 0
-	end
-
-	if md == 1 then
-		SaveAllToleranceStatus(RS_ALLY)
-	elseif md ~= 1 then
-		RestoreAllToleranceStatus()
-	end
 end
 
 function testcheat()

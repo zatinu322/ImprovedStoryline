@@ -463,11 +463,14 @@
 			end
 
 			for team = 1,2 do
-				local veh = getObj("AxelGuard"..team):GetVehicle(0)
-				if veh then veh:Remove() end
+				local veh = getObj("AxelGuard"..team)
+				if veh then
+					local veh1 = veh:GetVehicle(0)
+					if veh1 then veh1:Remove() end
+				end
 			end
 
-			trigger:Deactivate()   
+			trigger:Deactivate()
 		</script>
 	</trigger>
 

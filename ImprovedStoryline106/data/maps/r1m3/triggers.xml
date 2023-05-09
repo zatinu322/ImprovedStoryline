@@ -104,12 +104,22 @@
 
 			TDeactivate("preBOOOM")
 			TDeactivate("BOOOM")
-			TDeactivate("SHAHTSBANDITBOSSDIE")
 
 			CompleteQuestIfTaken("d_MoveToPesht_Quest")
 
 			local a = GetEntityByName("BaseGuardian_loc")
 			if a then a:SetProperty("Active",1) end
+
+			TActivate("trPeshtCapture")
+
+			-- машины охраны на мосту, если есть
+			local enemy_team = getObj("OhranaBridge")
+			if enemy_team then
+				for car = 0,1 do
+					local enemy_car = enemy_team:GetVehicle(car)
+					if enemy_car then enemy_car:Remove() end
+				end
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -439,7 +449,9 @@
 	<trigger Name="SHAHTSBANDIT" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			TeamCreate("ShahtsBoss",1002,CVector(2202, 285, 6936),{"r1m1_molokovoz02","r1m3_Fighter01","r1m1_CaravanBug02"}, CVector(2041, 287, 7182), 1)
+			TeamCreate("ShahtsBoss",1044,CVector(2202, 285, 6936),{"r1m1_molokovoz02","r1m3_Fighter01","r1m1_CaravanBug02"}, CVector(2041, 287, 7182), 1)
+
+			SetTolerance(1100, 1044, RS_ENEMY)
 
 			TakeQuest("d_BombShahtsAtakBandits_Quest")
 
@@ -453,6 +465,24 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="ShahtsBoss" />
 		<script>
    			CompleteQuest( "d_BombShahtsAtakBandits_Quest" )
+			
+			SetTolerance(1100, 1044, RS_NEUTRAL)
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Дополнительно удаляем машины нападающих, если игрок воспользовался сюжетным срезом во время этого момента -->
+	<trigger Name="SHAHTSBANDITBOSSREMOVE" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+   			local enemy_team = getObj("ShahtsBoss")
+			if enemy_team then
+				for car = 0,2 do
+					local enemy_car = enemy_team:GetVehicle(car)
+					if enemy_car then enemy_car:Remove() end
+				end
+			end
 
 			trigger:Deactivate()
 		</script>

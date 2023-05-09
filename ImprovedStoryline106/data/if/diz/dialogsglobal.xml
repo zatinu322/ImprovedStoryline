@@ -6327,9 +6327,9 @@
 
 	<Reply
 		name="Dlg_pl_000516"
-		text="Мне больше нет места в Алом Рассвете. Я теперь тоже беглец. Садись, я отвезу тебя. "
+		text="Мне больше нет места в Алом Рассвете. Я теперь тоже беглец. Садись, я отвезу тебя к твоим союзникам."
 		role="PLAYER"
-		scriptResult="FailQuest( 'r2m2_ToKillAllSNGPeople' ); TActivate('LAGERNOWAR'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+		scriptResult="FailQuest( 'r2m2_ToKillAllSNGPeople' ); TActivate('LAGERNOWAR'); GetCurNpc():SetSpokenCount( 1 ); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000513"
@@ -8075,7 +8075,7 @@
 		name="r1m4_UnknownBar_Customer2_1_N01"
 		text="Ты когда-нибудь слышал про рыбалку на бубенчиках?"
 		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		scriptCondition="QuestStatus('GoToLiden_Quest')~=Q_COMPLETED and GetCurNpc():GetSpokenCount()==0"
 		nextReplies="r1m4_UnknownBar_Customer2_1_P02" />
 
 	<Reply
@@ -8112,7 +8112,7 @@
 		name="r1m4_UnknownBar_Customer4_1_N01"
 		text="Эй, чужеземец, присядь ко мне."
 		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		scriptCondition="QuestStatus('GoToLiden_Quest')~=Q_COMPLETED and GetCurNpc():GetSpokenCount()==0"
 		nextReplies="r1m4_UnknownBar_Customer4_1_N02" />
 
 	<Reply
@@ -8167,7 +8167,7 @@
 		name="Dlg_npc_001929"
 		text="Хочешь купить у меня рыбы?"
 		role="NPC"
-		scriptCondition="(GetCurNpc():GetSpokenCount()==0) "
+		scriptCondition="QuestStatus('GoToLiden_Quest')~=Q_COMPLETED and GetCurNpc():GetSpokenCount()==0"
 		nextReplies="Dlg_pl_001930" />
 
 	<Reply
@@ -9581,7 +9581,7 @@
 		name="r1m4_UnknownBar_Customer3_1_N01"
 		text="Привет. Садись и выпей со мной рюмочку ананаги."
 		role="NPC"
-		scriptCondition="not(IsQuestComplete('AnanagaTech_Quest')) and GetCurNpc():GetSpokenCount()==0"
+		scriptCondition="not(IsQuestComplete('AnanagaTech_Quest')) and QuestStatus('GoToLiden_Quest')~=Q_COMPLETED and GetCurNpc():GetSpokenCount()==0"
 		nextReplies="r1m4_UnknownBar_Customer3_1_N02a r1m4_UnknownBar_Customer3_1_N02b" />
 
 	<Reply
@@ -12376,6 +12376,7 @@
 		text="Уговорил, вот, держи."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() >= 15000"
+		scriptResult="CompleteQuest('d_FindKeyInTunel_Quest'); FailQuestIfTaken('d_FindZasadaInTunel_Quest'); TakeQuest('d_OpenTunel_Quest'); TDeactivate ('ZASADATUNEL'); AddPlayerMoney( -15000 ); AddQuestItem('quest_key_for_tunnel'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_tunnel'); EndConversation()"
 		nextReplies="Dlg_npc_xyz458" />
 
 	<Reply
@@ -17279,7 +17280,7 @@
 		name="Botanik_hellodlg0"
 		text="Привет, незнакомец! Редко я вижу новые лица! Как ты вообще тут оказался?"
 		role="NPC"
-		scriptCondition="not(QuestStatus('BenEast_Quest')==Q_COMPLETED) and not(IsQuestFailed('r1m1_Botanik_Quest')) and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="not(QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED) and not(IsQuestFailed('r1m1_Botanik_Quest')) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_001506 Dlg_pl_001507" />
 
 	<Reply
@@ -17392,7 +17393,7 @@
 		name="Dlg_npc_001523"
 		text="И снова приветствую. Нашёл что-нибудь?"
 		role="NPC"
-		scriptCondition="GetCurNpc():GetSpokenCount() > 0 and not(IsQuestComplete( 'r1m1_Botanik_Quest' ))   and   not(IsQuestFailed( 'r1m1_Botanik_Quest' ))"
+		scriptCondition="GetCurNpc():GetSpokenCount() > 0 and not(IsQuestComplete( 'r1m1_Botanik_Quest' ))   and   not(IsQuestFailed( 'r1m1_Botanik_Quest' )) and not(QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001510 Dlg_pl_001525" />
 
 	<Reply

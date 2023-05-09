@@ -3030,8 +3030,8 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="d_GiveMoneyToBase_Quest"
-		OnFail='TDeactivate("cinFightForPesht"); TDeactivate("BrigadaIsDead"); TActivate("tr_OpenTownAndShowButtonInPesht"); getObj("Pesht"):SetBelong(1012)'
+		PrecedingQuests="r3m2_OracleMemory"
+		OnFail='TDeactivate("cinFightForPesht"); TDeactivate("BrigadaIsDead"); TActivate("tr_OpenTownAndShowButtonInPesht"); getObj("Pesht"):SetBelong(1012); TActivate("BrigadaIsDeadRemove")'
 		Levels="r1m3">
 		<quest
 			Name="FightForPesht1"
@@ -3075,7 +3075,8 @@
 		CheckAll="1"
 		ConditionToGive="all taken"
 		PrecedingQuests="d_FindRealFatherRoom_Quest"
-		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 300, "specter01", 3, 7)'>
+		OnComplete='AddPlayerGunsWithRandomAffixOrMoney( 300, "specter01", 3, 7)'
+		OnFail='TDeactivate("SHAHTSBANDITBOSSDIE");'>
 		<quest
 			Name="d_BombInAsgard_Quest"
 			Automatic="1"
@@ -3109,7 +3110,8 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="d_BombInAsgard2_Quest" />
+			PrecedingQuests="d_BombInAsgard2_Quest"
+			OnFail='SetTolerance(1100, 1044, RS_NEUTRAL); TActivate("SHAHTSBANDITBOSSREMOVE")' />
 
 		<quest
 			Name="d_BombShahtsReturn_Quest"
@@ -3128,7 +3130,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="d_GetBomb_Quest"
 		OnComplete="AddPlayerMoney(200)"
-		OnFail='RemoveQuestItem("quest_explosive")'
+		OnFail='RemoveQuestItem("quest_explosive"); SetTolerance(1100, 1012, RS_NEUTRAL)'
 		OnTake='ShowCircleOnMinimapByName("BaseGuardian_loc")'>
 		<quest
 			Name="d_DestroyBridge_Quest1"
@@ -3650,7 +3652,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="TalkWithFather_Quest"
 		OnComplete="AddPlayerMoney(100)"
-		OnFail='TDeactivate("RUINSWAR1");'
+		OnFail='TDeactivate("RUINSWAR");'
 		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
 		Levels="r1m2" />
 <!--Root/r1m2/Опциональные/ Разрушить руины -->
@@ -3662,7 +3664,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="TalkWithFather_Quest"
 		OnComplete="AddPlayerMoney(350)"
-		OnFail='TDeactivate("RUINSWAR2"); RemoveQuestItem("ArchProrab_P");'
+		OnFail='TDeactivate("RUINSWAR"); RemoveQuestItem("ArchProrab_P");'
 		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
 		Levels="r1m2">
 		<quest

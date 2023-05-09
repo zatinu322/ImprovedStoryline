@@ -1,9 +1,9 @@
 -- Special settings for ISL (ComPatch version)
 
 if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.1 BUILD 230506")
+	LOG("IMPROVED STORYLINE V1.1 BUILD 230510")
 
-	ISL_VERSION = "110-230506"
+	ISL_VERSION = "110-230510"
 end
 
 -- локализация
@@ -12,6 +12,36 @@ STR_FIGHT_WITH_CLAW_R1M4 = "Босс-кран"
 STR_FIGHT_WITH_CLAW_R2M1 = "Босс-погрузчик"
 STR_BOSS_CHOOSE = "Перед Оракулом"
 STR_BOSS_NJERI = "Битва с Ньери"
+
+-- выставление правильных биндов в каждой катсцене
+function CorrectSkippingMode()
+	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
+	IMPULSES:BindKey1( "GS_CINEMATIC", "KEY_SPACE", "IM_CINEMATIC_SKIP_MSG" )
+
+	return true
+end
+
+-- отладочные команды
+function mir(md)
+	if md == nil then
+		md = 0
+	end
+
+	if md == 1 then
+		SaveAllToleranceStatus(RS_ALLY)
+	elseif md ~= 1 then
+		RestoreAllToleranceStatus()
+	end
+end
+
+function yaohuel ()
+	if testcheat()~=1 then return end
+	GetPlayerVehicle():AddItemsToRepository("add_damage_guns_and_grouping_angle_guns", 2)
+	GetPlayerVehicle():AddItemsToRepository("firing_rate_guns_and_add_damage_guns", 2)
+	GetPlayerVehicle():AddItemsToRepository("add_stability_and_speed2", 4)
+	GetPlayerVehicle():AddItemsToRepository("additional_durability3", 4)
+	GetPlayerVehicle():AddItemsToRepository("someTurboAccelerationPusher", 1)
+end
 
 -- r1m1, показ текста рассказчика в начале игры
 function r1m1_ShowNarratorText()

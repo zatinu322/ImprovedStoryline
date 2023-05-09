@@ -1837,7 +1837,7 @@
 		questName="QuickFindBen"
 		briefDiz="Найти Бена"
 		fullDiz="Я нашёл Бена."
-		isMainQuest="0" />
+		isMainQuest="1" />
 
 	<QuestInfo
 		questName="RPGSigns_Quest"

@@ -340,8 +340,9 @@ function StartCinematic()
 	
 	UpdateCinematic( 0 ) -- by Anton: don't touch this!
 
-	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-	IMPULSES:BindKey1( "GS_CINEMATIC",	"KEY_SPACE",	"IM_CINEMATIC_SKIP_MSG" )
+	if not CorrectSkippingMode() then
+		ASSERT(0, "Error: Critical problems with StartCinematic function, probably bad installation")
+	end
 end
 
 -- Подготавливает игру к проигрыванию скриптового ролика
@@ -1352,7 +1353,7 @@ function RestoreAllToleranceStatus()
 end
 
 function DefineTheEnding()
-	good = 1
+	local good = 1
 
 	LOG("Selecting appropriate ending...")
 

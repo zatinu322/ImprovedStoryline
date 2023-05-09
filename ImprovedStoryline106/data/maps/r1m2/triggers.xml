@@ -48,6 +48,9 @@
 				midCar:AttachTrailer("MolokovozTrailer")
 				midCar:GetTrailer():SetNewPart("BASKET", "molokovozTrailer01Basket02")
 				PaintTrailer(midCar)
+				local nametr = midCar:GetTrailer():GetName()
+				local tr = getObj("trCaravanToPortoDIE")
+				if tr then tr:AddEvent("GE_OBJECT_DIE", nametr) end
 			 end
 
 			SetTolerance(1100,1009,RS_ALLY)
@@ -90,6 +93,9 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="KARAVANPORTO_vehicle_0" />
 		<script>
 			FailQuestIfTaken( "FindBen2_Quest" )
+
+			local run = GetEntityByName("KARAVANPORTO_vehicle_0")
+			if run then run:AddModifier("hp", "= 0") end
 
 			TActivate("cinCaravanDead")
 			TDeactivate( "trCaravanToPorto5sec" )
@@ -134,6 +140,9 @@
 				midCar:AttachTrailer("MolokovozTrailer")
 				midCar:GetTrailer():SetNewPart("BASKET", "molokovozTrailer01Basket02")
 				PaintTrailer(midCar)
+				local nametr = midCar:GetTrailer():GetName()
+				local tr = getObj("trCaravanToMidgardDIE")
+				if tr then tr:AddEvent("GE_OBJECT_DIE", nametr) end
 			end
 			kskin = nil
 
@@ -175,6 +184,9 @@
 		<event eventid="GE_OBJECT_DIE" ObjName="KARAVANMIDGARD_vehicle_0" />
 		<script>
 			FailQuestIfTaken( "FindBen2_Quest" )
+
+			local run = GetEntityByName("KARAVANMIDGARD_vehicle_0")
+			if run then run:AddModifier("hp", "= 0") end
 
 			TActivate("cinCaravanDead")
 			TDeactivate("trCaravanToMidgardINPLACE")

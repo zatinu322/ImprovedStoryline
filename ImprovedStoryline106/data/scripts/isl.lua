@@ -16,7 +16,7 @@ STR_BOSS_NJERI = "Битва с Ньери"
 -- выставление правильных биндов в каждой катсцене
 function CorrectSkippingMode()
 	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-	IMPULSES:BindKey1( "GS_CINEMATIC", "KEY_SPACE", "IM_CINEMATIC_SKIP_MSG" )
+	IMPULSES:BindKey1( "GS_CINEMATIC", "KEY_SPACE", "IM_CINEMATIC_SKIP" )
 
 	return true
 end

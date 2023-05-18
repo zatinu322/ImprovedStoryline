@@ -45,14 +45,6 @@
 			if GetVar("AutoSaveCount").AsInt == 0 then
 				SetVar("AutoSaveCount", 1)
 				AutoSave(STR_FIGHT_WITH_CLAW_R2M1) -- перед боссом-погрузчиком
-			elseif GetVar("AutoSaveCount").AsInt == 2 then
-				SetVar("AutoSaveCount", 3)
-				TActivate("trUFOSourcesBugCounterStart")
-				AutoSave(STR_BOSS_NJERI) -- перед битвой с Ньери
-			elseif GetVar("AutoSaveCount").AsInt == 3 then
-				SetVar("AutoSaveCount", 1)
-				PlayCustomMusic("Battle01") -- чтобы играла музыка боя после загрузки автосейва
-				AllowSave(false)
 			end
 
 			trigger:Deactivate()
@@ -342,6 +334,11 @@
 				vehCar:AttachTrailer("MolokovozTrailer")
 				vehCar:GetTrailer():SetNewPart("BASKET", "molokovozTrailer01Basket02")
 				PaintTrailer(vehCar)
+				local nametr = vehCar:GetTrailer():GetName()
+				local tr = getObj("trCaravanDIE")
+				if tr and nametr then
+					tr:AddEvent("GE_OBJECT_DIE", nametr)
+				end
 			end
 
 			TakeQuest("d_SecondVillage_Quest")
@@ -353,8 +350,11 @@
 			TDeactivate("triggerExitToMap13")
 
 			for car = 0,1 do
-				local veh = GetEntityByName("SNGArmy1"):GetVehicle(car)
-				if veh then veh:Remove() end
+				local veh = GetEntityByName("SNGArmy1")
+				if veh then 
+					local veh1 = veh:GetVehicle(car)
+					if veh1 then veh1:Remove() end
+				end
 			end
 
 			trigger:Deactivate()
@@ -363,17 +363,9 @@
 
 	<trigger Name="trCaravanDIE" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="KARAVANvvt_vehicle_0" />
-		<event eventid="GE_OBJECT_DIE" ObjName="KARAVANvvt_vehicle_0_Trailer" />
 		<script>
-
 			local vehCar = GetEntityByName("KARAVANvvt_vehicle_0")
-			local vehCarTrailer = GetEntityByName("KARAVANvvt_vehicle_0_Trailer")
-			if vehCar and vehCar:IsAlive() then
-				vehCar:Remove()
-			end
-			if vehCarTrailer and vehCarTrailer:IsAlive() then
-				vehCarTrailer:Remove()
-			end
+			if vehCar then vehCar:Remove() end
 
 			FailQuestIfTaken( "d_CaravanFromTuzzToVillage_Quest" )
 

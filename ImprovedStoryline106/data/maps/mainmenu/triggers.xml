@@ -66,7 +66,7 @@
 				vehPlayer:AddModifier("maxfuel", "+ 1000")
 				vehPlayer:AddModifier("fuel", "+ 1000")
 				vehPlayer:SetMaxSpeed(16.67)
-				giveguns()
+				giveguns(true)
 			end
 			CreateNewDummyObject( "cargo", "CamTochka", -1, -1, CVector(358.551, 264.511, 1423.320), Quaternion(0, 0, 0, 0), 0)
 			CreateNewDummyObject( "cargo", "CamTochkaCentr", -1, -1, CVector(955.502, 280.000, 1151.172), Quaternion(0, 0, 0, 0), 0)
@@ -99,7 +99,7 @@
 				vehPlayer:AddModifier("maxfuel", "+ 1000")
 				vehPlayer:AddModifier("fuel", "+ 1000")
 				vehPlayer:SetMaxSpeed(16.67)
-				giveguns()
+				giveguns(true)
 			end
 			Fly("cam_Zone01", CINEMATIC_NO_AIM, 0, 20, Fade, 0, false, true, nil )
 			StartCinematic()

@@ -470,6 +470,13 @@
 		time="8" />
 
 	<string
+		id="392"
+		modelName="mask_hero"
+		sound=""
+		value="Интересно, как там тот старик из Минина, которого я отвозил к руинам? Надо бы проведать его."
+		time="10" />
+
+	<string
 		id="37"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r1m3\r1m3_37_hero.ogg"

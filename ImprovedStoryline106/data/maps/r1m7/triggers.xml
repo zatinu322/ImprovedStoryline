@@ -5,6 +5,7 @@
 	<trigger Name="GlobalVar" active="1">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
+			SetVar("AutoSaveCount", 0)
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				local vehPlayer = GetPlayerVehicle()
 				if vehPlayer then
@@ -24,6 +25,21 @@
 				trigger:Deactivate()
 			end
 			
+		</script>
+	</trigger>
+
+	<!-- Автосейв перед началом лабиринта -->
+	<trigger Name="trAutoSave" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			if GetVar("AutoSaveCount").AsInt == 0 then
+				SetVar("AutoSaveCount", 1)
+				AutoSave(STR_LABYRINTH)
+			else
+				AllowSave(false)
+			end
+
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -207,6 +223,8 @@
 			TDeactivate("PlayerDieOrNot")
 
 			TActivate("KonRolikBegin")
+
+			AllowSave(true)
 
 			trigger:Deactivate()
 		</script>

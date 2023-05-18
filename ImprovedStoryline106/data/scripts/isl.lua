@@ -1,22 +1,28 @@
 -- Special settings for ISL (ComPatch version)
 
 if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.1 BUILD 230510")
+	LOG("IMPROVED STORYLINE V1.1 BUILD 230518")
 
-	ISL_VERSION = "110-230510"
+	ISL_VERSION = "110-230518"
 end
 
 -- локализация
 STR_PUNISH_BANDITS = "Проучить бандитов"
 STR_FIGHT_WITH_CLAW_R1M4 = "Босс-кран"
 STR_FIGHT_WITH_CLAW_R2M1 = "Босс-погрузчик"
+STR_LABYRINTH = "Лабиринт"
 STR_BOSS_CHOOSE = "Перед Оракулом"
 STR_BOSS_NJERI = "Битва с Ньери"
 
 -- выставление правильных биндов в каждой катсцене
 function CorrectSkippingMode()
 	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
-	IMPULSES:BindKey1( "GS_CINEMATIC", "KEY_SPACE", "IM_CINEMATIC_SKIP" )
+
+	if GetComputerName() == "PAVLIKRPG" then
+		IMPULSES:BindKey1( "GS_CINEMATIC", "KEY_SPACE", "IM_CINEMATIC_SKIP_MSG" )
+	else
+		IMPULSES:BindKey1( "GS_CINEMATIC", "KEY_SPACE", "IM_CINEMATIC_SKIP" )
+	end
 
 	return true
 end
@@ -142,3 +148,6 @@ function r1m8_ShowBonusEndingTitles()
 	AddCinematicMessage( 5972, 0)
 	AddCinematicMessage( 5973, 0)
 end
+
+-- activating bonus ending if avaliable
+EXECUTE_SCRIPT "data\\scripts\\bonus.lua"

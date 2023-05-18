@@ -552,56 +552,85 @@
 	</trigger>
 
 	<!-- Охрана лидера померла -->
-	<trigger Name="trLeaderCaravanDie" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="LeaderGuardTeam" />
-		<event eventid="GE_OBJECT_DIE" ObjName="LeaderCar_vehicle_0" />
+	<trigger Name="trMainCarDie" active="0">
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="LeaderCar_vehicle_0" />
 		<script>
-			if getObj("LeaderCar_vehicle_0"):IsAlive() or GetVar("MainCarDead").AsInt==1 then
-				CompleteQuest("FreeExtremistLeader_Quest3_1")
+			local count = GetVar("MainCarDead").AsInt
+
+			if not(IsQuestTaken("FreeExtremistLeader_Quest3_2")) then
 				TakeQuest("FreeExtremistLeader_Quest3_2")
+				CompleteQuest("FreeExtremistLeader_Quest3_2")
 			else
-				if not(IsQuestTaken("FreeExtremistLeader_Quest3_2")) then
-					TakeQuest("FreeExtremistLeader_Quest3_2")
-					CompleteQuest("FreeExtremistLeader_Quest3_2")
-				else
-					CompleteQuestIfTaken("FreeExtremistLeader_Quest3_2")
-				end
-
-				SetVar("MainCarDead", 1)
+				CompleteQuestIfTaken("FreeExtremistLeader_Quest3_2")
 			end
 
-			trigger:IncCount()
-			local count = trigger:GetCount()
-		    if 2>count then
-		    	return
-		    end
-		    SaveAllToleranceStatus(RS_NEUTRAL)
-		    PlayCustomMusic("IntenseDialogue03")
-			CompleteQuestIfTaken("FreeExtremistLeader_Quest3")
-			TakeQuest("FreeExtremistLeader_Quest4")
-			TDeactivate("trLeaderCarDie")
-			if getObj("LeaderCar") then
-				getObj("LeaderCar"):Remove()
+			local lcar = getObj("LeaderCar_vehicle_0")
+			if lcar then
+				lcar:SetMaxSpeed(0)
+				lcar:SetMaxTorque(0)
+				lcar:SetThrottle(0)
+				lcar:SetCustomLinearVelocity(0)
+				lcar:TakeOffAllGuns()
 			end
-			local Plf = GetPlayerVehicle()
-			local PlfID = GetPlayerVehicleId()
-			local PlfCoor = Plf:GetPosition()
-			PlfCoor.y = PlfCoor.y + 5
-			PlfCoor.z = PlfCoor.z - 20
 
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
+			SetVar("MainCarDead", count+1)
 
-			FlyAround(2, 0, 35, 28, PlfCoor, PlfID, 1, 1 )
-			StartCinematic()
+			TActivate("trLeaderCaravanDie")
 
-			AddCinematicMessage( 10, 1 )
-			AddCinematicMessage( 11, 1 )
-			AddCinematicMessage( 12, 1 )
-			
-			TActivate("trLeaderCaravanDie2")
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trLeaderGuardsDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="LeaderGuardTeam" />
+		<script>
+			local count = GetVar("MainCarDead").AsInt
+
+			CompleteQuest("FreeExtremistLeader_Quest3_1")
+			TakeQuest("FreeExtremistLeader_Quest3_2")
+
+			SetVar("MainCarDead", count+1)
+
+			TActivate("trLeaderCaravanDie")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trLeaderCaravanDie" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local count = GetVar("MainCarDead").AsInt
+			if count == 2 then
+				TDeactivate("trLeaderCarDie")
+
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				PlayCustomMusic("IntenseDialogue03")
+
+				CompleteQuestIfTaken("FreeExtremistLeader_Quest3")
+				TakeQuest("FreeExtremistLeader_Quest4")
+
+				local Plf = GetPlayerVehicle()
+				local PlfID = GetPlayerVehicleId()
+				local PlfCoor = Plf:GetPosition()
+				PlfCoor.y = PlfCoor.y + 5
+				PlfCoor.z = PlfCoor.z - 20
+
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+
+				FlyAround(2, 0, 35, 28, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				AddCinematicMessage( 10, 1 )
+				AddCinematicMessage( 11, 1 )
+				AddCinematicMessage( 12, 1 )
+				
+				TActivate("trLeaderCaravanDie2")
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -635,7 +664,16 @@
 <!-- Тупиковая концовка. Машина с лидером померла -->
 	<trigger Name="trLeaderCarDie" active="0">
 		<script>
-			FailQuestIfTaken("TRS_Quest3b")
+			TDeactivate("trLeaderGuardsDie")
+			TDeactivate("trMainCarDie")
+
+			local lcar = getObj("LeaderCar_vehicle_0")
+			if lcar then
+				lcar:setImmortalMode(0)
+				lcar:GetTrailer():setImmortalMode(0)
+				lcar:AddModifier("hp", "= 0")
+			end
+
 			FailQuestIfTaken("FreeExtremistLeader_Quest3")
 			FailQuestIfTaken("FreeExtremistLeader_Quest3_1")
 			FailQuestIfTaken("FreeExtremistLeader_Quest3_2")
@@ -661,8 +699,8 @@
 
 			AddCinematicMessage( 13, 1 )
 
-			TDeactivate("trLeaderCaravanDie")
 			TActivate("TupikEnding")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1227,22 +1265,29 @@
 				local PlfCoor = Plf:GetPosition()
 				PlfCoor.y = PlfCoor.y + 2
 				PlfCoor.z = PlfCoor.z - 20
+				local time = 30
 
 				if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
-					FlyAround( 2, 0, 15, 38, PlfCoor, PlfID, 1, 1 )
-					StartCinematic()
-					UpdateCinematic(1)
-			
-					AddCinematicMessage( 8826, 5 )
-					AddCinematicMessage( 8827, 0.1 )
+					time = time + 8
+				end
+
+				if QuestStatus("GoBackWithoutDobr_Quest")==Q_COMPLETED then
+					time = time + 8.5
+				end
+
+				FlyAround(2, 0, 15, time, PlfCoor, PlfID, 1, 1)
+				StartCinematic()
+				UpdateCinematic(1)
+
+				AddCinematicMessage( 8826, 5 )
+				AddCinematicMessage( 8827, 0.1 )
+
+				if QuestStatus("FreeExtremistLeader_Quest1")==Q_COMPLETED then
 					AddCinematicMessage( 8832, 0.1 )
-				else
-					FlyAround( 2, 0, 15, 30, PlfCoor, PlfID, 1, 1 )
-					StartCinematic()
-					UpdateCinematic(1)
-			
-					AddCinematicMessage( 8826, 5 )
-					AddCinematicMessage( 8827, 0.1 )
+				end
+
+				if QuestStatus("GoBackWithoutDobr_Quest")==Q_COMPLETED then
+					AddCinematicMessage(8853, 0.1)
 				end
 
 				local vehPlayer = GetPlayerVehicle()

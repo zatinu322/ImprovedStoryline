@@ -142,12 +142,13 @@
 		</script>
 	</trigger>
 
+	<!-- Активация второго квеста Дода -->
 	<trigger	Name="trArchVisit"	active="0">
 		<event eventid="GE_GAME_START" ObjName="Player1" />
 		<script>
 			if QuestStatus("r3m2_RideToFatherRoomAfterOracul")==Q_TAKEN and QuestStatus("r1m3_ArchVisit")==Q_CANBEGIVEN then
 
-				TakeQuest("r1m3_ArchVisit")
+				TActivate("trDodsterSecondTime")
 
 				trigger:Deactivate()
 			end
@@ -528,11 +529,6 @@
 				TActivate( "RolikBegin_FATHERHOUSE" )
 
    				CompleteQuest( "d_FatherRoomInMinin_Quest" )
-
-				AddHistory( "r1_Father_Room_00" )
-				AddFadingMsgId( "fm_history_got" )
-				AddQuestItem("quest_key_for_submarine")
-				AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_key_for_submarine")
 			end
 			
 			local vehPlayer = GetPlayerVehicle()

@@ -2762,16 +2762,14 @@
 		CheckAll="1"
 		ConditionToGive="all complete"
 		PrecedingQuests="TraiderStorage_Quest1"
-		OnComplete="AddPlayerMoney(2000)"
-		Levels="r1m4">
+		OnComplete="AddPlayerMoney(2000)">
 		<quest
 			Name="FreeExtremistLeader_Quest2"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all taken"
-			PrecedingQuests="FreeExtremistLeader_Quest1"
-			Levels="r1m4" />
+			PrecedingQuests="FreeExtremistLeader_Quest1" />
 
 		<quest
 			Name="FreeExtremistLeader_Quest3"
@@ -2780,8 +2778,7 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="FreeExtremistLeader_Quest2"
-			OnTake='TActivate("trFreeExtremistLeader_Take")'
-			Levels="r1m4" />
+			OnTake='TActivate("trFreeExtremistLeader_Take")' />
 
 		<quest
 			Name="FreeExtremistLeader_Quest4"
@@ -2789,8 +2786,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="FreeExtremistLeader_Quest3_1 FreeExtremistLeader_Quest3_2"
-			Levels="r1m4" />
+			PrecedingQuests="FreeExtremistLeader_Quest3_1 FreeExtremistLeader_Quest3_2" />
 
 		<quest
 			Name="FreeExtremistLeader_Quest5"
@@ -2993,7 +2989,7 @@
 		OnComplete='AddPlayerMoney(5000); RemoveQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "StarDod_P");'
 		OnFail='RemoveQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "StarDod_P");'
 		OnTake='AddQuestItem("StarDod_P"); AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "StarDod_P");'
-		Levels="r1m3 r1m2 r1m1" />
+		Levels="r1m3 r1m2 r1m1 r1m4" />
 
 	<quest
 		Name="r1m3_ArchVisit"
@@ -3002,7 +2998,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="r1m3_ArchHelp"
-		Levels="r1m3" />
+		Levels="r1m3 r1m4 r1m1 r1m2" />
 <!--Root/r1m3/Опциональные/Мужик из Пешта-->
 	<quest
 		Name="r1m3_CrazyManQuest"

@@ -22,8 +22,8 @@
 	</Path>
 
 	<Path Name = "NachRolikCam3">
-		<Point  coord="3161.382 287.838 2116.725" rotation="-0.085 -0.690 0.082 0.714"/>
-		<Point  coord="3161.830 287.751 2114.381" rotation="-0.083 -0.687 0.080 0.717"/>
+		<Point  coord="3158.491 289.178 2119.791" rotation="-0.095 -0.719 0.100 0.681"/>
+		<Point  coord="3162.483 287.786 2116.336" rotation="-0.089 -0.703 0.089 0.700"/>
 	</Path>
 
 	<Path Name = "NachRolikCam4">

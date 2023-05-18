@@ -267,18 +267,20 @@
 			local lcar = getObj("LeaderCar_vehicle_0")
 			if lcar then
 				lcar:AttachTrailer("MolokovozTrailer")
-				local nametr = lcar:GetName().."_Trailer"
-				local trailer = getObj(nametr)
-				if trailer then
-					trailer:SetSkin(lcar:GetSkin())
-					local tr = getObj("trLeaderCarDie")
-					if tr then
-						tr:AddEvent("GE_OBJECT_DIE",nametr)
-	   				end
+				local trailer = lcar:GetTrailer()
+				lcar:setImmortalMode(1)
+				trailer:setImmortalMode(1)
+				local nametr = trailer:GetName()
+				PaintTrailer(lcar)
+
+				local tr = getObj("trLeaderCarDie")
+				if tr then
+					tr:AddEvent("GE_VEHICLE_WITHOUT_HEALTH", nametr)
 	   			end
 	   		end
 
-			TActivate("trLeaderCaravanDie")
+			TActivate("trMainCarDie")
+			TActivate("trLeaderGuardsDie")
 			TActivate("trLeaderCarDie")
 			TActivate("trNearCaravanLeader")
 			TActivate("trExtrLeader")
@@ -457,15 +459,24 @@
 			PlfCoor.z = PlfCoor.z - 15
 
 			ValidateGameVersion()
+			if QuestStatus("FreeExtremistLeader_Quest1")~=Q_TAKEN then
+				local b = SpawnMessageBox( "8801" )
+				if b == 1 then
+					TDeactivate("RrybakRoadStart")
 
-			local b = SpawnMessageBox( "8801" )
-			if b == 1 then
-				TDeactivate("RrybakRoadStart")
+					local kar = GetEntityByName("CaravanFromR1M3")
+					if kar then kar:Remove() end
 
-				local kar = GetEntityByName("CaravanFromR1M3")
-				if kar then kar:Remove() end
+					PassToMap("r1m3", "FromR1M4", -1 )
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
 
-				PassToMap("r1m3", "FromR1M4", -1 )
+					FlyAround(0.1, 0, 25, 3, PlfCoor, PlfID, 1, 1)
+					StartCinematic()
+
+					TActivate("trConv_Fade")
+					TActivate("trConv_End")
+				end
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
@@ -591,11 +602,21 @@
 
 				ValidateGameVersion()
 
-				local b = SpawnMessageBox( "8801" )
-				if b == 1 then
-					TActivate("cinMovePlToR3M1_begin")
-					local kar = GetEntityByName("CaravanFromR1M3")
-					if kar then kar:Remove() end
+				if QuestStatus("FreeExtremistLeader_Quest1")~=Q_TAKEN then
+					local b = SpawnMessageBox( "8801" )
+					if b == 1 then
+						TActivate("cinMovePlToR3M1_begin")
+						local kar = GetEntityByName("CaravanFromR1M3")
+						if kar then kar:Remove() end
+					else
+						SaveAllToleranceStatus(RS_NEUTRAL)
+
+						FlyAround(0.1, 0, -100, 3, PlfCoor, PlfID, 1, 1)
+						StartCinematic()
+
+						TActivate ("trMovePlToR3M1_Fade")
+						TActivate ("trMovePlToR3M1_End")
+					end
 				else
 					SaveAllToleranceStatus(RS_NEUTRAL)
 

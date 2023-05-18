@@ -350,6 +350,11 @@
 			local humPl = GetEntityByName("humPlayer")
 			if humPl then humPl:Remove() end
 
+			AddHistory( "r1_Father_Room_00" )
+			AddFadingMsgId( "fm_history_got" )
+			AddQuestItem("quest_key_for_submarine")
+			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_key_for_submarine")
+
 			TDeactivate("trFATHERHOUSE_cam01") 
 			TDeactivate("trFATHERHOUSE_cam02") 
 			TDeactivate("trFATHERHOUSE_cam03") 
@@ -2339,6 +2344,7 @@
 				vehPlayer:SetGamePositionOnGround( CVector(3057.847, 279.047, 5817.844))
 				vehPlayer:SetRotation(Quaternion(0.006, 0.739, -0.009, 0.673))
 				vehPlayer:SetExternalPathByName("PlBuhPath")
+				vehPlayer:LimitMaxSpeed(15)
 			end
 
 			local mover = GetEntityByName("MoverB")
@@ -2695,6 +2701,53 @@
 			TDeactivate("trLOPRolikCam3")
 			TDeactivate("trLOPRolikMsg380")
 			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Катсцена с напоминанием о том, чтобы проведать старика Дода -->
+	<trigger Name="trDodsterSecondTime" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.x = PlfCoor.x - 25
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z + 5
+
+			FlyAround(1, 0, 15, 12, PlfCoor, PlfID, 1, 1)
+			StartCinematic()
+			UpdateCinematic(1)
+
+			AddCinematicMessage(392, 1)
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+
+			TActivate("trDodsterSecondTime_End")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trDodsterSecondTime_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+			TakeQuest("r1m3_ArchVisit")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>

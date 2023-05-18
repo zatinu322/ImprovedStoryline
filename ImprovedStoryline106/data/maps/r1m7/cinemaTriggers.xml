@@ -21,7 +21,7 @@
 			Fly("NachRolikCam1", CINEMATIC_NO_AIM, 0, 23, 0, 0 )
 			Fly("NachRolikCam2", CINEMATIC_NO_AIM, 0, 26, 0, 0 )
 			Fly("linkedcam1", CINEMATIC_AIM_TO_ID, vehPID, 9, 0, 0)
-			Fly("NachRolikCam3", CINEMATIC_NO_AIM, 0, 25, 0, 0 )
+			Fly("NachRolikCam3", CINEMATIC_NO_AIM, 0, 25, 0, 0, nil, nil, true )
 			Fly("NachRolikCam4", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
 			Fly("NachRolikCam5", CINEMATIC_NO_AIM, 0, 45, 0, 0 )
 			Fly("NachRolikCam6", CINEMATIC_NO_AIM, 0, 23, 0, 1 )
@@ -198,7 +198,7 @@
 				vehPlayer:AddModifier( "maxfuel", "+ 10000" )
 				vehPlayer:AddModifier( "fuel", "+ 10000" )
 			end
-			
+
 			AllowSave(false)
 			
 			TDeactivate("trNachRolikFade")
@@ -209,6 +209,7 @@
 			TDeactivate("trNachRolikCam4")
 			TDeactivate("trNachRolikCam5")
 			TDeactivate("trNachRolikCam6")
+			TActivate("trAutoSave")
 			TActivate("trExitExplosion")
 			TActivate("PlayerDieOrNot")
 			TActivate("trExitLabirint")

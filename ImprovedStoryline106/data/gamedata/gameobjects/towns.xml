@@ -462,9 +462,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			CabinsAndBasketsAffixesCount	= "2"
 
 			WeaponPriceMultiplier = "0.8"
-			WeaponPriceDispersion = "15"
-
-			Vehicles 	= "">
+			WeaponPriceDispersion = "15">
 
 			<Article
 				Prototype			= "tobacco"				
@@ -866,9 +864,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			CabinsAndBasketsAffixesCount	= "2"
 
 			WeaponPriceMultiplier = "2"
-			WeaponPriceDispersion = "5"
-
-			Vehicles 	= ""	>
+			WeaponPriceDispersion = "5">
 			<Article
 				Prototype				= "bottle"				
 				Amount	 			= "2"
@@ -1213,9 +1209,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius		= "200"
-			IntersectionRadius	= "30" 
-			 
-			Vehicles 	= "">	
+			IntersectionRadius	= "30">	
 			
 
 		</Prototype>
@@ -1559,9 +1553,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			CabinsAndBasketsAffixesCount	= "2"
 
 			WeaponPriceMultiplier = "2"
-			WeaponPriceDispersion = "5"
-
-			Vehicles 	= "">
+			WeaponPriceDispersion = "5">
 		</Prototype>
 
 
@@ -1589,8 +1581,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "1.7"
 			WeaponPriceDispersion = "5"
 
-			MaxDefenders	= "0" 
-			Vehicles	= "" >
+			MaxDefenders	= "0">
 			
 			<Article
 				Prototype			= "potato"				
@@ -2150,8 +2141,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			MusicName		= "bar"
 			
-			MaxDefenders	="0"
-			Vehicles	= ""> 
+			MaxDefenders	="0"> 
                         <Article
 				Prototype				= "firewood"				
 				Amount	 				= "0"
@@ -2197,8 +2187,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			MaxDefenders	="0"
-			Vehicles	= ""> 
+			MaxDefenders	="0"> 
 			
                         <Article
 				Prototype				= "firewood"				
@@ -2245,8 +2234,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2"
 			WeaponPriceDispersion = "5"
 
-			MaxDefenders	="0"
-			Vehicles	= ""> 
+			MaxDefenders	="0"> 
                         <Article
 				Prototype				= "firewood"				
 				Amount	 				= "0"
@@ -2833,8 +2821,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "2.3"
 			WeaponPriceDispersion = "5"
 
-			MaxDefenders	="0"
-			Vehicles	= "">
+			MaxDefenders	="0">
 
 			<Article
 				Prototype				= "bottle"				
@@ -2871,8 +2858,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			WeaponPriceMultiplier = "0.8"
 			WeaponPriceDispersion = "15"
 
-			MaxDefenders	="0"
-			Vehicles	= "">
+			MaxDefenders	="0">
 
 			<Article
 				Prototype				= "tobacco"				
@@ -3038,9 +3024,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 			CabinsAndBasketsAffixesCount	= "2"
 
 			WeaponPriceMultiplier = "2"
-			WeaponPriceDispersion = "5"
-
-			Vehicles 	= "">
+			WeaponPriceDispersion = "5">
 			<Article
 				Prototype				= "potato"				
 				Amount	 				= "25"
@@ -3088,10 +3072,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "50" 
-
-			Vehicles 	= ""
-			/>
+			IntersectionRadius	= "50"/>
 
 		<Prototype
 			Class		= "Town"
@@ -3135,9 +3116,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "25" 
-
-			Vehicles 	= "" />
+			IntersectionRadius	= "25" />
 
 		<Prototype
 			Class		= "Town"
@@ -3149,9 +3128,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "25" 
-
-			Vehicles 	= "" />
+			IntersectionRadius	= "25" />
 
 		<Prototype
 			Class		= "Town"
@@ -3434,9 +3411,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "25" 
-
-			Vehicles 	= "" />
+			IntersectionRadius	= "25" />
 
 		<Prototype
 			Class		= "Town"
@@ -3448,9 +3423,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "25" 
-
-			Vehicles 	= "" />
+			IntersectionRadius	= "25" />
 
 		<Prototype
 			Class		= "Town"
@@ -3462,9 +3435,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "25" 
-
-			Vehicles 	= "" />
+			IntersectionRadius	= "25" />
 		
 		<Prototype
 			Class		= "Town"
@@ -3477,10 +3448,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 			IsIntersecting		= "true"
 			LookRadius			= "200"
-			IntersectionRadius	= "50" 
-
-			Vehicles 	= ""
-			/>
+			IntersectionRadius	= "50" />
 
 	</Folder>
 </Prototypes>

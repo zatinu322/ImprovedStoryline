@@ -7706,7 +7706,7 @@
 
 	<Reply
 		name="Dlg_npc_002256"
-		text="И ты не пожалеешь о своём решении. И сразу к делу - в Тузе сейчас активно проводятся мероприятия по насильной отправке людей на войну. В Марецции Алый Рассвет методично уничтожает оппозицию.  Всех нам, ясное дело, не спасти, однако некоторых людей, обладающих особенно ценными знаниями, необходимо из этих городов вывезти. Это и будет твоим первым заданием."
+		text="И ты не пожалеешь о своём решении. И сразу к делу - в Тузе сейчас активно проводятся мероприятия по насильной отправке людей на войну. В Марецции Алый Рассвет методично уничтожает оппозицию. Всех нам, ясное дело, не спасти, однако некоторых людей, обладающих особенно ценными знаниями, необходимо из этих городов вывезти. Это и будет твоим первым заданием."
 		role="NPC"
 		nextReplies="Dlg_pl_002257" />
 
@@ -9146,13 +9146,13 @@
 		name="Dlg_pl_003000"
 		text="Ну, удачи вам в этой войне. А я пойду за тёплой одеждой."
 		role="PLAYER"
-		scriptResult="TActivate('RolikOdezhdaBegin'); RemoveQuestItem('ExtLeader_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ExtLeader_P'); SetTolerance(1100,1014,RS_ALLY); SetTolerance(1100,1084,RS_ALLY); SetTolerance(1100,1010,RS_ENEMY); AddHistory( 'r5_SkladRybaki' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="TActivate('RolikOdezhdaBegin'); RemoveQuestItem('ExtLeader_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ExtLeader_P'); SetTolerance(1100,1014,RS_ALLY); SetTolerance(1100,1084,RS_ALLY); SetTolerance(1100,1010,RS_ENEMY); if QuestStatus('Zachisti3_Quest')==Q_COMPLETED then SetTolerance(1100, 1012, RS_ENEMY) end; AddHistory( 'r5_SkladRybaki' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002709"
 		text="Обязательно. Ну, я пошёл."
 		role="PLAYER"
-		scriptResult="TActivate('RolikOdezhdaBegin'); RemoveQuestItem('ExtLeader_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ExtLeader_P'); SetTolerance(1100,1014,RS_ALLY); SetTolerance(1100,1084,RS_ALLY); SetTolerance(1100,1010,RS_ENEMY); AddHistory( 'r5_SkladRybaki' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
+		scriptResult="TActivate('RolikOdezhdaBegin'); RemoveQuestItem('ExtLeader_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ExtLeader_P'); SetTolerance(1100,1014,RS_ALLY); SetTolerance(1100,1084,RS_ALLY); SetTolerance(1100,1010,RS_ENEMY); if QuestStatus('Zachisti3_Quest')==Q_COMPLETED then SetTolerance(1100, 1012, RS_ENEMY) end; AddHistory( 'r5_SkladRybaki' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
 <!--Root/r1m4/Сюжетные/Айвен Го-->
 	<Reply
 		name="Dlg_npc_003103"
@@ -11267,7 +11267,7 @@
 		name="Dlg_pl_001798"
 		text="Ещё раз спасибо. А насчёт шерифа можешь не переживать. Никто не будет оплакивать этих людей."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_BombShahtsReturn_Quest' ); CompleteQuestIfTaken( 'd_GetBomb_Quest' ); FailQuestIfTaken('d_RideAcrossBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1); TakeQuest('d_DestroyBridge_Quest');  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
+		scriptResult="CompleteQuest( 'd_BombShahtsReturn_Quest' ); FailQuestIfTaken('d_RideAcrossBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1); TakeQuest('d_DestroyBridge_Quest');  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Мер Минина-->
 	<Reply
 		name="MininMer_hellodlg0"
@@ -15701,13 +15701,13 @@
 		name="Dlg_npc_002516"
 		text="Вот, держите. Только пейте маленькими глоточками."
 		role="NPC"
-		nextReplies="Dlg_pl_002517" />
+		nextReplies="Dlg_pl_002517 Dlg_pl_003241" />
 
 	<Reply
 		name="Dlg_pl_003241"
 		text="Опять это странное ощущение..."
 		role="PLAYER"
-		scriptCondition="IsQuestComplete('MrShlyapa4_Quest') and IsQuestComplete('MrShlyapaSecret')"
+		scriptCondition="IsQuestComplete('MrShlyapa4_Quest') and IsQuestComplete('MrShlyapaSecret') and BONUS_ACTIVE"
 		scriptResult="FailQuestIfTaken('TalkToLisaArtefact'); TActivate('ToSpecEnd'); LeaveTown()" />
 
 	<Reply
@@ -15803,7 +15803,7 @@
 		scriptResult="CompleteQuest('VisitBarmen'); TActivate('GoodEndAlmostHere'); SetGameTime(9,0); SetWeather(0); EndConversation()" />
 <!--Root/r1m2/Сюжетные/СпецКонцовка-->
 	<Reply
-		name="Dlg_npc_002576nifiga"
+		name="Dlg_npc_002576"
 		text="А вот и нет, чифирёк отменяется!"
 		role="NPC"
 		scriptCondition="IsQuestFailed('StartCalmLife') and GetCurNpc():GetSpokenCount() == 1"

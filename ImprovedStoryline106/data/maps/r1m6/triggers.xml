@@ -102,7 +102,10 @@
 			end
 
 			local townM = GetEntityByName("TheTown")
-			if townM then townM:Remove() end
+			if townM then 
+				townM:SetRuined(true)
+				townM:Remove()
+			end
 			
 			CreateNewDummyObject("concrete_ruins1", "d_town1", -1, -1, CVector(1697.665, 405.454, 2285.421), Quaternion(0.0000, 0.5592, 0.0000, 0.8290), 0)
 			CreateNewDummyObject("concrete_ruins2", "d_town2", -1, -1, CVector(1710.799, 404.386, 2283.772), Quaternion(0.0000, -0.6852, 0.0000, 0.7284), 0)

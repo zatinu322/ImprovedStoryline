@@ -163,9 +163,11 @@ function cargo (num)
    GetPlayerVehicle():SetNewPart("BASKET",newcargo)
 end
 
-function giveguns ()
+function giveguns (silent)
 	--éêìÜàÖ
+	if silent == nil then
 		if testcheat()~=1 then return end
+	end
 				local veh=GetPlayerVehicle()
 				local parts={"CABIN_","BASKET_","CHASSIS_"}
 				local slots={"SMALL_","BIG_","GIANT_","SIDE_"}

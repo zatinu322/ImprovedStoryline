@@ -735,10 +735,10 @@
 	<trigger Name="TrapRolikCam8" active="0">
 		<event flypath="TrapCam8" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-			
+		
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:AddModifier("hp", "2500")
+				vehPlayer:AddModifier("hp", "+ 2500")
 				vehPlayer:setGodMode(1)
 				vehPlayer:SetGamePositionOnGround( CVector(285.551, 261.617, 1556.713))
 				vehPlayer:SetRotation(Quaternion(-0.047, 0.417, -0.002, 0.908))
@@ -748,12 +748,14 @@
 			if vehPlayOld then
 				vehPlayOld:SetGamePositionOnGround( CVector(416.618, 256.069, 1775.519))
 				vehPlayOld:SetRotation(Quaternion(0.000, 0.782, -0.000, 0.624))
+				vehPlayOld:SetCustomLinearVelocity(0)
+				vehPlayOld:SetThrottle(0)
 			end
 
 			local mik = CreateVehicleEx("Ural00","Mikolka",CVector(515.151, 255.987, 1751.668), 1088)
 			if mik then
 				mik:SetRotation(Quaternion(0.008, -0.618, -0.014, 0.786))
-				mik:SetRandomSkin()
+				mik:SetSkin(7)
 			end
 
 			trigger:Deactivate()
@@ -808,6 +810,7 @@
 
 			local vehPlayer = GetEntityByName("LiddenPlayerVeh1")
 			if vehPlayer then
+				vehPlayer:SetCruisingSpeed(20)
 				vehPlayer:SetExternalPathByName("Player_path1")
 			end
 			
@@ -1960,11 +1963,6 @@
 			end
 
 			TActivate("FGRolikStart")
-
-			local town = GetEntityByName ("TheTown")
-			if town then
-				town:SetRuined(true)
-			end
 			
 			AddQuestItem("quest_boat_digital")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "quest_boat_digital")

@@ -1016,7 +1016,7 @@
 
 	<QuestInfo
 		questName="FreeExtremistLeader_Quest3_2"
-		briefDiz="Уничтожить головную машину"
+		briefDiz="Разоружить головную машину"
 		isMainQuest="1">
 		<Map
 			name="r1m4"
@@ -3609,6 +3609,10 @@
 		<Map
 			name="r1m3"
 			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3617,8 +3621,20 @@
 		fullDiz="По пути в Фатерлянд я вспомнил, как подвозил старого археолога к старым руинам. Интересно, он всё ещё там?"
 		isMainQuest="0">
 		<Map
+			name="r1m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
 			name="r1m3"
 			targetObjName="TheLibrary" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
 	</QuestInfo>
 
 	<QuestInfo

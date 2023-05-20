@@ -81,36 +81,40 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 		</Prototype>
 
 		<Prototype
-			Class		= "Chassis"
-			Name		= "sml1Chassis"
-			ModelFile	= "sml1Chassis"
-			ResourceType= "SML1_CHASSIS"
-			NodeScale	= "1 1 1"
-			Mass		= "50.0" 			
-			MaxHealth	= "50" 
-			MaxFuel	= "100"
-			BrakingSound="ET_S_BRAKE01"
-			PneumoSound	="ET_S_PNEUMO_BRAKE01"
-			GearShiftSound="ET_S_GEAR_SHIFT01"
-			LoadPoints	= "LP_CAB01" >
+			Class			= "Chassis"
+			Name			= "sml1Chassis"
+			ModelFile		= "sml1Chassis"
+			ResourceType	= "SML1_CHASSIS"
+			NodeScale		= "1 1 1"
+			Price			= "150"
+			RepairCoef		= "0.2"
+			Mass			= "50.0"
+			MaxHealth		= "200"
+			MaxFuel			= "100"
+			BrakingSound	= "ET_S_BRAKE01"
+			PneumoSound		= "ET_S_PNEUMO_BRAKE01"
+			GearShiftSound	= "ET_S_GEAR_SHIFT01"
+			LoadPoints		= "LP_CAB01" >
 				<GroupsHealth
 					Main   = "10000"	
 				/>
 		</Prototype>
 
 		<Prototype
-			Class		= "Chassis"
-			Name		= "sml2Chassis"
-			ModelFile	= "sml2Chassis"
-			ResourceType= "SML2_CHASSIS"
-			NodeScale	= "1 1 1"
-			Mass		= "50.0" 			
-			MaxHealth	= "75" 
-			MaxFuel	= "100"
-			BrakingSound="ET_S_BRAKE01"
-			PneumoSound	="ET_S_PNEUMO_BRAKE01"
-			GearShiftSound="ET_S_GEAR_SHIFT01"
-			LoadPoints	= "LP_CAB01" >
+			Class			= "Chassis"
+			Name			= "sml2Chassis"
+			ModelFile		= "sml2Chassis"
+			ResourceType	= "SML2_CHASSIS"
+			NodeScale		= "1 1 1"
+			Price			= "150"
+			RepairCoef		= "0.5"
+			Mass			= "50.0" 			
+			MaxHealth		= "225" 
+			MaxFuel			= "90"
+			BrakingSound	= "ET_S_BRAKE01"
+			PneumoSound		= "ET_S_PNEUMO_BRAKE01"
+			GearShiftSound	= "ET_S_GEAR_SHIFT01"
+			LoadPoints		= "LP_CAB01" >
 				<GroupsHealth
 					Main   = "10000"	
 				/>
@@ -136,36 +140,40 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 
 
 		<Prototype
-			Class		= "Chassis"
-			Name		= "sml3Chassis"
-			ModelFile	= "sml3Chassis"
-			ResourceType= "SML3_CHASSIS"
-			NodeScale	= "1 1 1"
-			Mass		= "50.0" 			
-			MaxHealth	= "100" 
-			MaxFuel	= "100"
-			BrakingSound="ET_S_BRAKE01"
-			PneumoSound	="ET_S_PNEUMO_BRAKE01"
-			GearShiftSound="ET_S_GEAR_SHIFT01"
-			LoadPoints	= "LP_CAB01" >
+			Class			= "Chassis"
+			Name			= "sml3Chassis"
+			ModelFile		= "sml3Chassis"
+			ResourceType	= "SML3_CHASSIS"
+			NodeScale		= "1 1 1"
+			Price			= "200"
+			RepairCoef		= "0.3"
+			Mass			= "50.0" 			
+			MaxHealth		= "240" 
+			MaxFuel			= "130"
+			BrakingSound	= "ET_S_BRAKE01"
+			PneumoSound		= "ET_S_PNEUMO_BRAKE01"
+			GearShiftSound	= "ET_S_GEAR_SHIFT01"
+			LoadPoints		= "LP_CAB01" >
 				<GroupsHealth
 					Main   = "10000"	
 				/>
 		</Prototype>
 
 		<Prototype
-			Class		= "Chassis"
-			Name		= "sml4Chassis"
-			ModelFile	= "sml4Chassis"
-			ResourceType= "SML4_CHASSIS"
-			NodeScale	= "1 1 1"
-			Mass		= "50.0" 			
-			MaxHealth	= "125" 
-			MaxFuel	= "100"
-			BrakingSound="ET_S_BRAKE01"
-			PneumoSound	="ET_S_PNEUMO_BRAKE01"
-			GearShiftSound="ET_S_GEAR_SHIFT01"
-			LoadPoints	= "LP_CAB01" >
+			Class			= "Chassis"
+			Name			= "sml4Chassis"
+			ModelFile		= "sml4Chassis"
+			ResourceType	= "SML4_CHASSIS"
+			NodeScale		= "1 1 1"
+			Price			= "400"
+			RepairCoef		= "0.4"
+			Mass			= "50.0" 			
+			MaxHealth		= "275" 
+			MaxFuel			= "135"
+			BrakingSound	= "ET_S_BRAKE01"
+			PneumoSound		= "ET_S_PNEUMO_BRAKE01"
+			GearShiftSound	= "ET_S_GEAR_SHIFT01"
+			LoadPoints		= "LP_CAB01" >
 				<GroupsHealth
 					Main   = "10000"	
 				/>
@@ -542,56 +550,71 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 		</Prototype>
 
 		<Prototype
-			Class				= "Cabin"
-			Name				= "sml1Cab01"
-			ModelFile			= "sml1Cab01"
-			ResourceType		= "SML1_CABIN"
-			NodeScale			= "1 1 1"
-			Durability			= "20"
+			Class				    = "Cabin"
+			Name				    = "sml1Cab01"
+			ModelFile			    = "sml1Cab01"
+			ResourceType		    = "SML1_CABIN"
+			NodeScale			    = "1 1 1"
+			Durability			    = "15"
 			DurCoeffsForDamageTypes	= "0 -25 -25"
-			VisibleInEncyclopedia = "false"
-			Mass				= "10.0"
-			MaxPower			= "30"
-			MaxTorque			= "40"
-			EngineHighSound		        = "ET_S_ENGINE_SMALL_1_HIGH"
-			Price				= "500"	
-			MaxSpeed			= "100.0"
-			BlowEffect	= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
-			LoadPoints			= "LP_SML01" >
+			VisibleInEncyclopedia   = "false"
+			Mass				    = "10.0"
+			MaxPower			    = "30"
+			MaxTorque			    = "65"
+			EngineHighSound		    = "ET_S_ENGINE_SMALL_1_HIGH"
+			Price				    = "500"
+			MaxSpeed			    = "110.0"
+			BlowEffect	            = "ET_PS_VEH_PART_BLOW_SMALL_CAB"
+			LoadPoints			    = "LP_SML01"
+			FuelConsumption			= "0.35" >
+			<GadgetDescription>
+				<Slot
+					ResourceType	= "GADGET_COMMON"
+					MaxAmount		= "1" />
+
+				<Slot
+					ResourceType	= "GADGET_WEAPON"
+					MaxAmount		= "1" />
+			</GadgetDescription>
 				<GroupsHealth
-					Main   = "5"	
-					Breakable1   = "1"	
-				    	Breakable2   = "1"
-					Breakable3   = "2"
-					Breakable4   = "5"
+					Main		= "5"
+					Breakable1	= "1"
+				    Breakable2	= "1"
+					Breakable3	= "2"
+					Breakable4	= "5"
 				/>
 		</Prototype>
 
 		<Prototype
-			Class				= "Cabin"
-			Name				= "sml2Cab01"
-			ModelFile			= "sml2Cab01"
-			ResourceType		= "SML2_CABIN"
-			NodeScale			= "1 1 1"
-			Durability			= "30"
-			DurCoeffsForDamageTypes	= "15 -25 -25"
-			VisibleInEncyclopedia = "false"
-			Mass				= "10.0"
-			MaxPower			= "30"
-			BlowEffect	= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
-
-			MaxTorque			= "40"
-			EngineHighSound		        = "ET_S_ENGINE_SMALL_1_HIGH"
-			Price				= "700"	
-			MaxSpeed			= "100.0"
-			LoadPoints			= "LP_SML01" >
+			Class					= "Cabin"
+			Name					= "sml2Cab01"
+			ModelFile				= "sml2Cab01"
+			ResourceType			= "SML2_CABIN"
+			NodeScale				= "1 1 1"
+			Durability				= "20"
+			DurCoeffsForDamageTypes	= "5 -25 -25"
+			VisibleInEncyclopedia 	= "false"
+			Mass					= "10.0"
+			MaxPower				= "60"
+			BlowEffect				= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
+			MaxTorque				= "115"
+			EngineHighSound		    = "ET_S_ENGINE_SMALL_1_HIGH"
+			Price					= "900"
+			MaxSpeed				= "150.0"
+			LoadPoints				= "LP_SML01"
+			FuelConsumption			= "0.45" >
+			<GadgetDescription>
+				<Slot
+					ResourceType	= "GADGET_COMMON"
+					MaxAmount		= "2" />
+			</GadgetDescription>
 				<GroupsHealth
-					Main   = "5"	
-					Breakable1   = "3"	
-				    	Breakable2   = "3"
-					Breakable3   = "3"
-					Breakable4   = "2"
-					Breakable5   = "2"
+					Main		= "5"
+					Breakable1	= "3"
+				    Breakable2	= "3"
+					Breakable3	= "3"
+					Breakable4	= "2"
+					Breakable5	= "2"
 				/>
 		</Prototype>
 
@@ -622,56 +645,72 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 		</Prototype>
 
 		<Prototype
-			Class				= "Cabin"
-			Name				= "sml3Cab01"
-			ModelFile			= "sml3Cab01"
-			ResourceType		= "SML3_CABIN"
-			NodeScale			= "1 1 1"
-			Durability			= "40"
-			DurCoeffsForDamageTypes	= "20 -25 -25"
-			VisibleInEncyclopedia = "false"
-			Mass				= "10.0"
-			MaxPower			= "30"
-			MaxTorque			= "60"
-			EngineHighSound		        = "ET_S_ENGINE_SMALL_1_HIGH"
-			Price				= "900"	
-			BlowEffect	= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
-			MaxSpeed			= "100.0"
-			LoadPoints			= "LP_SML01" >
+			Class					= "Cabin"
+			Name					= "sml3Cab01"
+			ModelFile				= "sml3Cab01"
+			ResourceType			= "SML3_CABIN"
+			NodeScale				= "1 1 1"
+			Durability				= "25"
+			DurCoeffsForDamageTypes	= "8 -25 -25"
+			VisibleInEncyclopedia 	= "false"
+			Mass					= "10.0"
+			MaxPower				= "100"
+			MaxTorque				= "115"
+			EngineHighSound			= "ET_S_ENGINE_SMALL_1_HIGH"
+			Price					= "700"
+			BlowEffect				= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
+			MaxSpeed				= "118.0"
+			LoadPoints				= "LP_SML01"
+			FuelConsumption			= "0.65" >
+			<GadgetDescription>
+				<Slot
+					ResourceType	= "GADGET_WEAPON"
+					MaxAmount		= "2" />         
+			</GadgetDescription>
 				<GroupsHealth
-					Main   = "5"	
-					Breakable1   = "1"	
-				    	Breakable2   = "5"
-					Breakable3   = "5"
-					Breakable4   = "2"
-					Breakable5   = "2"
+					Main		= "5"	
+					Breakable1	= "1"	
+				    Breakable2	= "5"
+					Breakable3	= "5"
+					Breakable4	= "2"
+					Breakable5	= "2"
 				/>
 		</Prototype>
 
 		<Prototype
-			Class				= "Cabin"
-			Name				= "sml4Cab01"
-			ModelFile			= "sml4Cab01"
-			ResourceType		= "SML4_CABIN"
-			NodeScale			= "1 1 1"
-			Durability			= "60"
-			DurCoeffsForDamageTypes	= "23 -25 -25"
-			VisibleInEncyclopedia = "false"
-			Mass				= "10.0"
-			MaxPower			= "30"
-			MaxTorque			= "60"
-			EngineHighSound		        = "ET_S_ENGINE_SMALL_1_HIGH"
-			Price				= "1200"	
-			BlowEffect	= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
-                        MaxSpeed			= "100.0"
-			LoadPoints			= "LP_SML01" >
+			Class					= "Cabin"
+			Name					= "sml4Cab01"
+			ModelFile				= "sml4Cab01"
+			ResourceType			= "SML4_CABIN"
+			NodeScale				= "1 1 1"
+			Durability				= "35"
+			DurCoeffsForDamageTypes	= "13 -15 -15"
+			VisibleInEncyclopedia	= "false"
+			Mass					= "15.0"
+			MaxPower				= "100"
+			MaxTorque				= "95"
+			EngineHighSound		    = "ET_S_ENGINE_SMALL_1_HIGH"
+			Price					= "1200"	
+			BlowEffect				= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
+            MaxSpeed				= "112.0"
+			LoadPoints				= "LP_SML01"
+			FuelConsumption			= "0.8" >
+			<GadgetDescription>
+				<Slot
+					ResourceType	= "GADGET_COMMON"
+					MaxAmount		= "1" />
+
+				<Slot
+					ResourceType	= "GADGET_WEAPON"
+					MaxAmount		= "2" />         
+			</GadgetDescription>
 				<GroupsHealth
-					Main   = "5"	
-					Breakable1   = "1"	
-				    	Breakable2   = "5"
-					Breakable3   = "2"
-					Breakable4   = "3"
-					Breakable5   = "1"
+					Main		= "5"	
+					Breakable1	= "1"	
+				    Breakable2	= "5"
+					Breakable3	= "2"
+					Breakable4	= "3"
+					Breakable5	= "1"
 				/>
 		</Prototype>
 
@@ -2347,7 +2386,7 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 			/>			
 		</Prototype>
 
-		<!-- Кузова Молоковоза для игрока. -->
+		<!-- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. -->
 		<Prototype
 			Class				= "Basket"
 			Name				= "molokovozCargo01"
@@ -2455,7 +2494,7 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 				Breakable5   = "0.2"
 			/>			
 		</Prototype>
-		<!-- Кузова Молоковоза для врагов -->
+		<!-- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ -->
 		<Prototype
 			Class				= "Basket"
 			Name				= "e_molokovozCargo01"
@@ -2662,7 +2701,7 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 				Main   = "0"	
 			/>			
 		</Prototype>
-		<!-- Кузова Урала для игрока -->
+		<!-- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ -->
 		<Prototype
 			Class				= "Basket"
 			Name				= "uralCargo01"
@@ -2897,7 +2936,7 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 				Breakable5   = "1"
 			/>			
 		</Prototype>
-		<!-- Кузова Урала для врагов -->
+		<!-- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ -->
 		<Prototype
 			Class				= "Basket"
 			Name				= "e_uralCargo01"

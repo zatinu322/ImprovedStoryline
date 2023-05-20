@@ -49626,7 +49626,232 @@
 		<Object
 			Name="Svalka_Workshop"
 			Belong="1008"
-			Prototype="workshop" />
+			Prototype="workshop">
+			<CabinsAndBaskets>
+				<Item
+					PosX="0"
+					PosY="40"
+					Flags="16"
+					Prototype="sml1Cab01" />
+
+				<Item
+					PosX="5"
+					PosY="40"
+					Flags="16"
+					Prototype="sml1Cab01" />
+
+				<Item
+					PosX="10"
+					PosY="40"
+					Flags="16"
+					Prototype="sml1Cab01" />
+
+				<Item
+					PosX="15"
+					PosY="40"
+					Flags="16"
+					Prototype="sml1Cab01" />
+
+				<Item
+					PosX="20"
+					PosY="40"
+					Flags="16"
+					Prototype="sml1Cab01" />
+
+				<Item
+					PosX="0"
+					PosY="40"
+					Flags="16"
+					Prototype="sml2Cab01" />
+
+				<Item
+					PosX="5"
+					PosY="40"
+					Flags="16"
+					Prototype="sml2Cab01" />
+
+				<Item
+					PosX="10"
+					PosY="40"
+					Flags="16"
+					Prototype="sml2Cab01" />
+
+				<Item
+					PosX="15"
+					PosY="40"
+					Flags="16"
+					Prototype="sml2Cab01" />
+
+				<Item
+					PosX="20"
+					PosY="40"
+					Flags="16"
+					Prototype="sml2Cab01" />
+
+				<Item
+					PosX="0"
+					PosY="40"
+					Flags="16"
+					Prototype="sml3Cab01" />
+
+				<Item
+					PosX="5"
+					PosY="40"
+					Flags="16"
+					Prototype="sml3Cab01" />
+
+				<Item
+					PosX="10"
+					PosY="40"
+					Flags="16"
+					Prototype="sml3Cab01" />
+
+				<Item
+					PosX="15"
+					PosY="40"
+					Flags="16"
+					Prototype="sml3Cab01" />
+
+				<Item
+					PosX="20"
+					PosY="40"
+					Flags="16"
+					Prototype="sml3Cab01" />
+
+				<Item
+					PosX="0"
+					PosY="40"
+					Flags="16"
+					Prototype="sml4Cab01" />
+
+				<Item
+					PosX="5"
+					PosY="40"
+					Flags="16"
+					Prototype="sml4Cab01" />
+
+				<Item
+					PosX="10"
+					PosY="40"
+					Flags="16"
+					Prototype="sml4Cab01" />
+
+				<Item
+					PosX="15"
+					PosY="40"
+					Flags="16"
+					Prototype="sml4Cab01" />
+
+				<Item
+					PosX="20"
+					PosY="40"
+					Flags="16"
+					Prototype="sml4Cab01" />
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="KlopForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="fakeCargo" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="sml1Cab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="sml1Chassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="TarakanForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="fakeCargo" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="sml2Cab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="sml2Chassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="MuraveiForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="fakeCargo" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="sml3Cab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="sml3Chassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="KuznechikForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="fakeCargo" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="sml4Cab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="sml4Chassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
+		</Object>
 
 		<Object
 			Name="Svalka_deploy"

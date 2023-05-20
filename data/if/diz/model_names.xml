@@ -647,6 +647,26 @@
 		value="Вэн" />
 
 	<Item
+		id="KlopForSale"
+		locForm="0"
+		value="Клоп" />
+
+	<Item
+		id="TarakanForSale"
+		locForm="0"
+		value="Таракан" />
+
+	<Item
+		id="MuraveiForSale"
+		locForm="0"
+		value="Муравей" />
+
+	<Item
+		id="KuznechikForSale"
+		locForm="0"
+		value="Кузнечик" />
+
+	<Item
 		id="MolokovozForSale"
 		locForm="0"
 		value="Молоковоз" />

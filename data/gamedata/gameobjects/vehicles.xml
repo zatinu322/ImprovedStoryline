@@ -246,33 +246,29 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 	<!-- Small vehicles -->
 	<Prototype
-		Class				= "Vehicle"
-		Name				= "Sml4"
+		Class					= "Vehicle"
+		Name					= "Sml4"
 		ResourceType			= "VEHICLE"
-
-		DiffRatio			= "2.0"
-		MaxEngineRpm		= "7000"
+		DiffRatio				= "2.0"
+		PressingForce			= "1.5"
+		MaxEngineRpm			= "7000"
 		LowGearShiftLimit		= "1000"
-		HighGearShiftLimit	= "2000"
-
-		SteeringSpeed		= "1.0"
-		
-		HornSound		= "ET_S_HORN01"
-
-		DecisionMatrix		= "vehiclemain.lua"
-		AdditionalWheelsHover   ="0.1"
-
-		LookRadius			= "300.0"
-		IntersectionRadius	= "2.5"
-		TakingRadius		= "30.0"
-		DriftCoeff		="0.3"
-		MassSize			= "4 1 1"
-		MassTranslation		= "0 -0.5 0"
+		HighGearShiftLimit		= "2000"
+		SteeringSpeed			= "1.5"
+		HornSound				= "ET_S_HORN01"
+		DecisionMatrix			= "vehiclemain.lua"
+		AdditionalWheelsHover	= "0.1"
+		LookRadius				= "300.0"
+		IntersectionRadius		= "2.5"
+		TakingRadius			= "30.0"
+		DriftCoeff				= "0.08"
+		MassSize				= "4 1 1"
+		MassTranslation			= "0 -0.5 0"
 		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
-		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
-		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
-		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
-		Abstract 			= "true"	>
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 				= "true"	>
 
 		<MainPartDescription id = "CHASSIS" partResourceType = "SML4_CHASSIS">
 			<PartDescription id = "CABIN" partResourceType = "SML4_CABIN" lpName = "LP_CAB01" >
@@ -294,32 +290,28 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 	</Prototype>
 
 	<Prototype
-		Class				= "Vehicle"
-		Name				= "Sml3"
+		Class					= "Vehicle"
+		Name					= "Sml3"
 		ResourceType			= "VEHICLE"
-
-		DiffRatio			= "2.0"
-		MaxEngineRpm		= "7000"
+		PressingForce			= "1.5"
+		DiffRatio				= "2.0"
+		MaxEngineRpm			= "7000"
 		LowGearShiftLimit		= "1000"
-		HighGearShiftLimit	= "2000"
-
-		SteeringSpeed		= "1.0"
-		
-                AdditionalWheelsHover   ="0.1"
-
-		DecisionMatrix		= "vehiclemain.lua"
-
-		LookRadius			= "300.0"
-		IntersectionRadius	= "2.5"
-		TakingRadius		= "30.0"
-		DriftCoeff		= "0.3"
-		MassSize		= "4 1 1"
-		MassTranslation		= "0 -0.5 0"
+		HighGearShiftLimit		= "2000"
+		SteeringSpeed			= "1.5"
+		AdditionalWheelsHover   = "0.1"
+		DecisionMatrix			= "vehiclemain.lua"
+		LookRadius				= "300.0"
+		IntersectionRadius		= "2.5"
+		TakingRadius			= "30.0"
+		DriftCoeff				= "0.09"
+		MassSize				= "4 1 1"
+		MassTranslation			= "0 -0.5 0"
 		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
-		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
-		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
-		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
-		Abstract 			= "true"	>
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 				= "true"	>
 
 		<MainPartDescription id = "CHASSIS" partResourceType = "SML3_CHASSIS">
 			<PartDescription id = "CABIN" partResourceType = "SML3_CABIN" lpName = "LP_CAB01" >
@@ -342,34 +334,29 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 
 
 	<Prototype
-		Class				= "Vehicle"
-		Name				= "Sml2"
+		Class					= "Vehicle"
+		Name					= "Sml2"
 		ResourceType			= "VEHICLE"
-
-		DiffRatio			= "2.0"
-		MaxEngineRpm		= "7000"
+		PressingForce			= "1.2"
+		DiffRatio				= "2.0"
+		MaxEngineRpm			= "7000"
 		LowGearShiftLimit		= "1000"
-		HighGearShiftLimit	= "2000"
-
-		AdditionalWheelsHover   ="0.1"
-		SteeringSpeed		= "1.0"
-		
-		HornSound		= "ET_S_HORN01"
-
-		DecisionMatrix		= "vehiclemain.lua"
-
-		LookRadius			= "300.0"
-		IntersectionRadius	= "2.5"
-		TakingRadius		= "30.0"
-		DriftCoeff		= "0.3"
-		MassSize		= "4 1 2"
-		MassTranslation		= "0 -0.5 0"
+		HighGearShiftLimit		= "2000"
+		AdditionalWheelsHover   = "0.1"
+		SteeringSpeed			= "1.0"
+		HornSound				= "ET_S_HORN01"
+		DecisionMatrix			= "vehiclemain.lua"
+		LookRadius				= "300.0"
+		IntersectionRadius		= "2.5"
+		TakingRadius			= "30.0"
+		DriftCoeff				= "0.1"
+		MassSize				= "4 1 2"
+		MassTranslation			= "0 -0.5 0"
 		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
-		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
-		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
-		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
-
-		Abstract 			= "true"	>
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 				= "true"	>
 
 		<MainPartDescription id = "CHASSIS" partResourceType = "SML2_CHASSIS">
 			<PartDescription id = "CABIN" partResourceType = "SML2_CABIN" lpName = "LP_CAB01" >
@@ -391,49 +378,44 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 	</Prototype>
 
 	<Prototype
-		Class				= "Vehicle"
-		Name				= "Sml1"
+		Class					= "Vehicle"
+		Name					= "Sml1"
 		ResourceType			= "VEHICLE"
-
-		DiffRatio			= "6.0"
-		MaxEngineRpm		= "7000"
+		PressingForce			= "1.5"
+		DiffRatio				= "3.5"
+		MaxEngineRpm			= "7000"
 		LowGearShiftLimit		= "1000"
-		HighGearShiftLimit	= "2000"
-
-		SteeringSpeed		= "1.0"
-		AdditionalWheelsHover   ="0.1"
-		
-		HornSound		= "ET_S_HORN01"
-
-		DecisionMatrix		= "vehiclemain.lua"
-
-		LookRadius			= "300.0"
-		IntersectionRadius	= "2.5"
-		TakingRadius		= "30.0"
-		DriftCoeff		= "0.3"
-		MassSize		= "2 1 4"
-		MassTranslation		= "0 -0.5 -1.1"
+		HighGearShiftLimit		= "2000"
+		SteeringSpeed			= "1.4"
+		AdditionalWheelsHover   = "0.1"
+		HornSound				= "ET_S_HORN01"
+		DecisionMatrix			= "vehiclemain.lua"
+		LookRadius				= "300.0"
+		IntersectionRadius		= "2.5"
+		TakingRadius			= "30.0"
+		DriftCoeff				= "0.08"
+		MassSize				= "4 1 1"
+		MassTranslation			= "0 -0.5 0"
 		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
-		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
-		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
-		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 				= "true"	>
 
-		Abstract 			= "true"	>
-
-		<MainPartDescription id = "CHASSIS" partResourceType = "SML1_CHASSIS">
-			<PartDescription id = "CABIN" partResourceType = "SML1_CABIN" lpName = "LP_CAB01" >
-				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+		<MainPartDescription id = "CHASSIS"	partResourceType = "SML1_CHASSIS">
+			<PartDescription id = "CABIN"	partResourceType = "SML1_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN"	partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
 			</PartDescription>
-			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+			<PartDescription id = "BASKET"	partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
 		</MainPartDescription>
 
 		<Parts>
-			<Part id = "CHASSIS"			Prototype = "sml1Chassis" />
+			<Part id = "CHASSIS"	Prototype = "sml1Chassis" />
 		</Parts>
 
 		<Wheels>
-			<Wheel Prototype = "sml1Wheel01"  steering = "correct" />
-			<Wheel Prototype = "sml1Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml1Wheel01"	steering = "correct" />
+			<Wheel Prototype = "sml1Wheel01"	steering = "correct" />
 			<Wheel Prototype = "sml1Wheel02" />
 			<Wheel Prototype = "sml1Wheel02" />
 		</Wheels>
@@ -1409,6 +1391,50 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 	</Prototype>
 
 	<!-- Small cars -->
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "KlopForSale"
+		ParentPrototype 		= "Sml1"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"	Prototype = "sml1Cab01" />
+			<Part id = "BASKET"	Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "TarakanForSale"
+		ParentPrototype 		= "Sml2"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"	Prototype = "sml2Cab01" />
+			<Part id = "BASKET"	Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "MuraveiForSale"
+		ParentPrototype 		= "Sml3"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"	Prototype = "sml3Cab01" />
+			<Part id = "BASKET"	Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "KuznechikForSale"
+		ParentPrototype 		= "Sml4"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"	Prototype = "sml4Cab01" />
+			<Part id = "BASKET"	Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
 	<Prototype
 		Class			= "Vehicle"
 		Name			= "r1m1_sml01"

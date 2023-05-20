@@ -4,7 +4,12 @@
 <icons>
    <Item id="arcadescoutCab"	   file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
    <Item id="FormulaCab01"		   file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
-   <Item id="fakeCargo"	         file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
+   <Item id="fakeCargo"	         file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>
+
+   <Item id="sml1Cab01"          file="data\if\ico\InventoryDlg\sml1\Sml1_Cab01.dds" file1=""/>
+   <Item id="sml2Cab01"          file="data\if\ico\InventoryDlg\sml2\Sml2_Cab01.dds" file1=""/>
+   <Item id="sml3Cab01"          file="data\if\ico\InventoryDlg\sml3\Sml3_Cab01.dds" file1=""/>
+   <Item id="sml4Cab01"          file="data\if\ico\InventoryDlg\sml4\Sml4_Cab01.dds" file1=""/>
 
    <Item id="bugCab01"   	      file="data\if\ico\InventoryDlg\bug\Bug_Cab01.dds" file1=""/>
    <Item id="bugCab02"   	      file="data\if\ico\InventoryDlg\bug\Bug_Cab02.dds" file1=""/>

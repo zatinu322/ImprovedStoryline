@@ -3,9 +3,14 @@
 
 <icons>
 
-   <Item id="arcadescoutCab"	file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
+   <Item id="arcadescoutCab"	file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>
    <Item id="FormulaCab01"		file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
-   <Item id="fakeCargo"	file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
+   <Item id="fakeCargo"	file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>
+
+   <Item id="sml1Cab01"   	file="data\if\ico\InventoryDlg\sml1\Sml1_Cab01.dds" file1=""/>
+   <Item id="sml2Cab01"    file="data\if\ico\InventoryDlg\sml2\Sml2_Cab01.dds" file1=""/>
+   <Item id="sml3Cab01"    file="data\if\ico\InventoryDlg\sml3\Sml3_Cab01.dds" file1=""/>
+   <Item id="sml4Cab01"    file="data\if\ico\InventoryDlg\sml4\Sml4_Cab01.dds" file1=""/>
 
    <Item id="bugCab01"   	file="data\if\ico\InventoryDlg\bug\Bug_Cab01.dds" file1=""/>
    <Item id="bugCab02"   	file="data\if\ico\InventoryDlg\bug\Bug_Cab02.dds" file1=""/>
@@ -277,7 +282,7 @@
    <Item id="r1m6_MudrecStation"		file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m5_LaBelle"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
 
-   <!-- Неактивные поселения / точки интереса -->
+   <!-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ -->
    <Item id="r1m2_BenHouse"				file1="data\if\ico\LocalMap\icn_village.dds" file=""/>
    <Item id="r1m3_Circus"				file1="data\if\ico\LocalMap\icn_town.dds" file=""/>
    <Item id="r3m2_OracleComplex"				file1="data\if\ico\LocalMap\icn_oraclebase.dds" file=""/>
@@ -306,13 +311,13 @@
    <Item id="someLair3"		file1="data\if\ico\LocalMap\Map_Turret.dds" file=""/>
    <Item id="someLair4"		file1="data\if\ico\LocalMap\Map_Turret.dds" file=""/>
 
-<!-- Боссы -->
+<!-- пїЅпїЅпїЅпїЅпїЅ -->
     <Item id="bossMetalArm"		file="data\if\ico\BossIndicator\BossIcons\boss1.dds" file1=""/>
    <Item id="boss02"			file="data\if\ico\BossIndicator\BossIcons\boss1.dds" file1=""/>
    <Item id="boss03"			file="data\if\ico\BossIndicator\BossIcons\boss2.dds" file1=""/>
    <Item id="boss04"			file="data\if\ico\BossIndicator\BossIcons\boss3.dds" file1=""/>
 
-<!-- аффиксы -->
+<!-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -->
    <Item id="useless_cabin"			file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
    <Item id="rusty_cabin"			file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
    <Item id="excellent_cabin"			file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
@@ -341,7 +346,7 @@
    <Item id="with_water_cooling_gun"	file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
    <Item id="with_nitro_cooling_gun"	file="data\if\ico\InventoryDlg\Opacity1.dds" file1=""/>	
 
-<!-- группировки -->	
+<!-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ -->	
    <Item id="Belong_1002"		file="data\if\ico\clans\vagabonds03.dds" 			file1="data\if\ico\clans\vagabonds02.dds"/>
    <Item id="Belong_1003"		file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
    <Item id="Belong_1004"		file="data\if\ico\clans\explorers03.dds" 			file1="data\if\ico\clans\explorers02.dds"/>

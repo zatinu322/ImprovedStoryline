@@ -516,7 +516,6 @@
 		<script>
 			TActivate("RolikBegin_LISADIED")
 
-			AddHistory( "r2_Lisa_After_Axel_02" )
 			AddHistory( "r2_With_Lisa_To_Oracul_01" )
 			AddFadingMsgId( "fm_history_got" )
 

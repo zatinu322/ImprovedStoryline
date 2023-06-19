@@ -2902,7 +2902,7 @@
 	<QuestInfo
 		questName="d_MoveCanistraToMinin_Quest"
 		briefDiz="Вернуться в Минин"
-		fullDiz="Теперь, когда нефтяная вышка, наконец, заработала, я смогу проехать дальше не север."
+		fullDiz="Теперь, когда нефтяная вышка, наконец, заработала, я смогу проехать дальше на север."
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -3072,8 +3072,8 @@
 
 	<QuestInfo
 		questName="d_RideAcrossBase_Quest"
-		briefDiz="Попробовать пересечь разлом в другом месте"
-		fullDiz="Мне необходимо попасть на ту сторону разлома. Сделать это можно только в Пеште или на территории бандитов..."
+		briefDiz="Попробовать пересечь реку в другом месте"
+		fullDiz="Мне необходимо попасть на ту сторону реки. Сделать это можно только в Пеште или на территории бандитов..."
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -3164,7 +3164,7 @@
 	<QuestInfo
 		questName="d_TalkSharkiAfterMer_Quest"
 		briefDiz="Вернуться в бар к Шарки"
-		fullDiz="Раз уж мэр города не заинтересован в решении проблем города, придётся вновь поговорить с Шарки."
+		fullDiz="Раз уж мэр Минина не заинтересован в решении проблем города, придётся вновь поговорить с Шарки."
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -4148,7 +4148,7 @@
 	<QuestInfo
 		questName="r2m2_FindROMinCastle"
 		briefDiz="Приехать в монастырь"
-		fullDiz="Что-то есть подозрительное в простом задании привезти вино из монастыря..."
+		fullDiz="Есть что-то подозрительное в простом задании привезти вино из монастыря..."
 		isMainQuest="1">
 		<Map
 			name="r2m2"
@@ -4572,7 +4572,7 @@
 
 	<QuestInfo
 		questName="r3m1_LureMainDriud_Ambush"
-		briefDiz="Привезти друида в место засады"
+		briefDiz="Привести друида в место засады"
 		isMainQuest="1">
 		<Map
 			name="r3m1"
@@ -4692,7 +4692,7 @@
 	<QuestInfo
 		questName="r3m2_MonterHead"
 		briefDiz="Принести голову чудища"
-		fullDiz="Защитники оракула пропустят меня, если чудище будет убито. В качестве доказательства нужно принести его голову."
+		fullDiz="Защитники Оракула пропустят меня, если чудище будет убито. В качестве доказательства нужно принести его голову."
 		isMainQuest="1" />
 
 	<QuestInfo
@@ -5277,42 +5277,6 @@
 		<Map
 			name="r4m2"
 			targetObjName="ToR4M1" />
-	</QuestInfo>
-
-	<QuestInfo
-		questName="r4m2_NeutralizePlate"
-		briefDiz="Обезвредить тарелку"
-		fullDiz="Корабль пришельцев является источником излучения, которое разрушило наш мир. Ее необходимо обезвредить."
-		isMainQuest="1">
-		<Map
-			name="r1m1" />
-
-		<Map
-			name="r1m2" />
-
-		<Map
-			name="r1m3" />
-
-		<Map
-			name="r1m4" />
-
-		<Map
-			name="r2m1" />
-
-		<Map
-			name="r2m2" />
-
-		<Map
-			name="r3m1" />
-
-		<Map
-			name="r3m2" />
-
-		<Map
-			name="r4m1" />
-
-		<Map
-			name="r4m2" />
 	</QuestInfo>
 
 	<QuestInfo

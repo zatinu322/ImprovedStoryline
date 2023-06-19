@@ -470,7 +470,9 @@
 				AddImportantFadingMsgId("fm_mr_shlyapa_on")
 			end
 
-			ShowMap()
+			if LevelInfoManager then
+				LevelInfoManager:ClearVisibilityMapForLevel("r1m1")
+			end
 
 			TDeactivate( "ROLIK15" )
 			TDeactivate( "ROLIK16" )
@@ -2134,6 +2136,9 @@
 		<script>
 			AddCinematicMessage( 33332, 1 )
 
+			CreateNewSgNodeObject( "quest_letter", "fathersthing_1", -1, -1, CVector(3354.890, 367.758, 3302.107), Quaternion(0.0000, 0.2122, 0.0000, 0.9772), 0.138)
+			CreateNewSgNodeObject( "quest_cd1", "fathersthing_2", -1, -1, CVector(3354.790, 367.751, 3302.009), Quaternion(-0.6885, -0.2187, -0.2094, 0.6591), 0.013)
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2153,6 +2158,11 @@
 		<event flypath="Father_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
 			AddCinematicMessage( 33334, 1.5 )
+
+			for i = 1,2 do
+				local thing = getObj("fathersthing_"..i)
+				if thing then thing:Remove() end
+			end
 
 			trigger:Deactivate()
 		</script>
@@ -2207,6 +2217,11 @@
 			local humSon = GetEntityByName("Son")
 			if humSon then
 				humSon:Remove()
+			end
+
+			for i = 1,2 do
+				local thing = getObj("fathersthing_"..i)
+				if thing then thing:Remove() end
 			end
 
 			TDeactivate( "trFather_Fade" )

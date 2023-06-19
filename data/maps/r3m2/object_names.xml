@@ -62,11 +62,11 @@
 
 	<Object
 		Name="OracleGuardian_1"
-		FullName="Защитник оракула" />
+		FullName="Защитник Оракула" />
 
 	<Object
 		Name="OracleGuardian_2"
-		FullName="Защитник оракула" />
+		FullName="Защитник Оракула" />
 
 	<Object
 		Name="AloneDruid_Workshop"

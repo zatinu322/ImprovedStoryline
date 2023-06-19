@@ -45,10 +45,6 @@
 		FullName="Наёмник Василий" />
 
 	<Object
-		Name="FelixDecide"
-		FullName="" />
-
-	<Object
 		Name="TheGloohoeVillage_Bar"
 		FullName="Бар &quot;На грани&quot;" />
 

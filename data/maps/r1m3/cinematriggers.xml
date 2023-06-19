@@ -1347,6 +1347,14 @@
 			TDeactivate( "trLISAAFTERTHIEF_cam06")
 			TDeactivate( "RolikBegin_LISAAFTERTHIEF" )
 
+			RemoveQuestItem("quest_disk_1")
+			RemoveQuestItem("quest_disk_2")
+			RemoveQuestItem("quest_key_for_submarine")
+			
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_1")
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_2")
+			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_key_for_submarine")
+
 			StopPlayingCustomMusic()
 
 			SetCameraBehindPlayerVehicle()
@@ -2494,7 +2502,6 @@
 
    			CompleteQuest( "r2m1_DeployBloks1" )
    			CompleteQuest( "r1m3_DestroyOracle" )
-   			CompleteQuest( "r4m2_NeutralizePlate" )
 
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()

@@ -772,14 +772,6 @@
    			FailQuest( "r1m3_MoveToOraculAfterThief" )
    			TakeQuest( "LisaVPeshte" )
 
-			RemoveQuestItem("quest_disk_1")
-			RemoveQuestItem("quest_disk_2")
-			RemoveQuestItem("quest_key_for_submarine")
-			
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_1")
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_disk_2")
-			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_key_for_submarine")
-
 			AddFadingMsgId( "fm_history_got" )
 
 			trigger:Deactivate()

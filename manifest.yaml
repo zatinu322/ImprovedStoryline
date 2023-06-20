@@ -1,37 +1,65 @@
-# unique service name
-name: ImprovedStoryline106
-
-# required human readable info
+# common info
+name: ImprovedStoryline
+language: ru
+installment: exmachina
+ 
+# main human readable info
 display_name: Improved Storyline
-version: "1.1-dev"
-build: "230518"
+version: "1.1"
+build: "230620a"
 description: |
   Сюжетная модификация, главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 authors: pavlikrpg
-
+ 
 # optional human readable info
-release_date: TBA
-language: ru
+logo: assets/isl1-1.jpg
+release_date: "20.06.2023"
 link: https://github.com/zatinu322/ImprovedStoryline/
-
-# installation confguration
-prerequisites: 
-  - name: community_patch
-    versions:
-      - "1.13"
-    optional_content: []
-patcher_version_requirement: "1.13"
+trailer_url: https://www.youtube.com/watch?v=c7kZsW94dWY
+tags: [story]
+change_log: assets/change_list_ru.md
+# not done yet other_info: faq.md
+screenshots:
+  - img: assets/screen_0.jpg
+    text: Новый зимний регион, состоящий из трёх локаций.
+  - img: assets/screen_1.jpg
+    text: Один из множества переработанных игровых диалогов.
+  - img: assets/screen_2.jpg
+    text: Дополненная начальная катсцена - Лиса разговаривает с Феликсом на его базе.
+  - img: assets/screen_3.jpg
+    text: Катсцена с подлодкой в Хеле с восстановленными вырезанными фразами главного героя.
+  - img: assets/screen_4.jpg
+    text: Система отображения текущих попутчиков игрока.
+  - img: assets/screen_5.jpg
+    text: Катсцена в начале нового второстепенного квеста.
+#disabled, does not work properly translations: [eng]
+ 
+# installation configuration
 no_base_content: false
+strict_requirements: true
+compatible_minor_versions: false
+compatible_patch_versions: false
+ 
+# installator compatibility
+patcher_version_requirement: "1.14"
+
+# community patch requirements
+prerequisites:
+  - name: [community_patch]
+    versions: 
+     - "1.14"
+
+# optional mod content
 optional_content:
   - name: Icons
     display_name: Иконки
     description: |
       Улучшенные иконки для радара из модификации Steel Dawn.
-  - name: KrayCity
-    display_name: KrayCity
-    description: |
-      Модификация от OverLine (Rock), добавляющая 5 новых деревень на территорию локации Край.
   - name: Snowfall
     display_name: Улучшенный снегопад
     description: |
       Более интенсивный и красивый снегопад в зимних локациях. Значительно влияет на производительность и не рекомендуется к установке людям со слабыми ПК.
+  - name: KrayCity
+    display_name: KrayCity
+    description: Модификация от OverLine (Rock), добавляющая пять новых деревень на территорию локации Край.
+    default_option: skip

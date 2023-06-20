@@ -1235,22 +1235,7 @@
 					Flags="16"
 					Prototype="UralForSale"
 					Skin="5">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="uralCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="uralCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="uralChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>
@@ -1495,22 +1480,7 @@
 					Flags="16"
 					Prototype="UralForSale"
 					Skin="5">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="uralCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="uralCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="uralChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>
@@ -1521,22 +1491,7 @@
 					Flags="16"
 					Prototype="BelazForSale"
 					Skin="5">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="belazCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="belazCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="belazChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>

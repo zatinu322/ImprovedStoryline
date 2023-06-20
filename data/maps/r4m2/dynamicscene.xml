@@ -786,22 +786,7 @@
 					PosY="0"
 					Flags="16"
 					Prototype="UralForSale">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="uralCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="uralCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="uralChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>
@@ -811,22 +796,7 @@
 					PosY="0"
 					Flags="16"
 					Prototype="BelazForSale">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="belazCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="belazCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="belazChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>
@@ -836,22 +806,7 @@
 					PosY="0"
 					Flags="16"
 					Prototype="MirotvorecForSale">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="mirotvorecCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="mirotvorecCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="mirotvorecChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>

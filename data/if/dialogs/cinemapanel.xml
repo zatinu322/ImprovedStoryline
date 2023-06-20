@@ -186,7 +186,7 @@
 			scrollPaneName="Scroll1"
 			paneFlags="0"
 			wrap="2"
-			format="3"
+			format="0"
 			font="0"
 			clientEdges="0.000 0.000 0.000 0.000"
 			wndColor="00000000"

@@ -332,22 +332,7 @@
 					PosY="0"
 					Flags="16"
 					Prototype="BugForSale">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="bugCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="bugCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="bugChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>
@@ -357,22 +342,7 @@
 					PosY="0"
 					Flags="16"
 					Prototype="MolokovozForSale">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="molokovozCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="molokovozCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="molokovozChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>
@@ -382,22 +352,7 @@
 					PosY="0"
 					Flags="16"
 					Prototype="UralForSale">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="uralCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="uralCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="uralChassis" />
-					</Parts>
+					<Parts />
 
 					<Repository />
 				</Item>

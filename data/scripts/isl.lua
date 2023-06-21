@@ -1,9 +1,9 @@
 -- Special settings for ISL (ComRem version)
 
 if ISL_VERSION == nil then
-	LOG("IMPROVED STORYLINE V1.1 HD BUILD 230518")
+	LOG("IMPROVED STORYLINE V1.1 HD BUILD 230621a")
 
-	ISL_VERSION = "110-HD-230518"
+	ISL_VERSION = "110-HD-230621a"
 end
 
 -- локализация

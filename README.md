@@ -99,19 +99,22 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 <a id="download_rus"></a>
 
 # Скачать
+
+* ## Для Community Patch/Remaster v1.14
+  * [Improved Storyline v1.1]() [RUS]
+
 * ## Для оригинальной игры (steam, v1.02)
-  * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
-* ## Для Community Patch v1.13
-  * [Improved Storyline v1.1 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
-* ## Для Community Remaster v1.13
-  * [Improved Storyline v1.1 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
+  * [Improved Storyline v1.0.5.3](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
+
 
 <a id="installation_rus"></a>
 
 # Установка
 
-* ### [Установка на оригинальную игру (steam, v1.02)](/Docs/installation_vanilla.md#russian)
 * ### [Установка на Community Patch/Remaster](/Docs/installation_compatch.md#russian)
+
+* ### [Установка на оригинальную игру (steam, v1.02)](/Docs/installation_vanilla.md#russian)
+
 
 <!-- <a id="compatibility_rus"></a>
 
@@ -128,11 +131,15 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Известные проблемы и способы их решения
 1. Некоторые люди в городах и деревнях ходят на месте. Чтобы они начали двигаться, необходимо сделать скриншот (F12).
-2. Источники питания у тарелки Ньери иногда не уничтожаются. Помогает перезапуск игры.
 
 <a id="previous_versions_rus"></a>
 
 # Предыдущие версии
+
+* Для Community Patch/Remaster v1.13
+  * [Improved Storyline v1.1 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
+  * [Improved Storyline v1.1 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
+
 * Для оригинальной игры:
   * [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052) [RUS]
   * [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051) [RUS]
@@ -260,29 +267,33 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 
 # Download Links
 
+* ## For Community Patch/Remaster v1.14
+  * [Improved Storyline v1.1]() [RUS]
+
 * ## For original vanilla game (steam, v1.02)
-  * [Improved Storyline v1.0.5.3 [build 220906]](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS ONLY]
-* ## For Community Patch v1.13
-  * [Improved Storyline v1.1 for Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
-* ## For Community Remaster v1.13
-  * [Improved Storyline v1.1 for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
+  * [Improved Storyline v1.0.5.3](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS ONLY]
+
 
 <a id="installation_eng"></a>
 
 # Installation guides
 
-* ### [Installation guide for the original game (steam, v1.02)](/Docs/installation_vanilla.md#english)
 * ### [Installation guide for Community Patch/Remaster](/Docs/installation_compatch.md#english)
+
+* ### [Installation guide for the original game (steam, v1.02)](/Docs/installation_vanilla.md#english)
 
 <a id="bugs_eng"></a>
 
 # Troubleshooting
 1. Some people in towns and villages walk on the spot. For them to start moving, you need to take a screenshot (F12).
-2. The power sources at Njeri's ship sometimes can not be destroyed. Restarting the game fixes this problem.
 
 <a id="previous_versions_eng"></a>
 
 # Previous versions
+* For Community Patch/Remaster v1.13
+  * [Improved Storyline v1.1 for Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
+  * [Improved Storyline v1.1 for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
+
 * For original vanilla Hard Truck Apocalypse:
   * [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052) [RUS]
   * [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051) [RUS]

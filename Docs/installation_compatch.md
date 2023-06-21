@@ -13,10 +13,10 @@
 ## На Community Patch/Remaster v1.14 и выше (рекомендуется)
 
 1. Установить `Community Patch` или `Community Remaster` по инструкции с [этой](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) страницы.
-2. В `DEM Community Mod Manager` на вкладке `Моды` нажмите `Добавить мод` и укажите архив, который вы скачали [отсюда](/README.md#download_rus).
+2. В `DEM Community Mod Manager` на вкладке `Моды` нажмите `Добавить мод` и укажите архив, который вы скачали [отсюда](https://github.com/zatinu322/ImprovedStoryline#download_rus).
 3. После его появления в списке модов нажмите `Распаковать`.
 4. После распаковки нажмите `Установить` и следуйте инструкциям мод-менеджера.
-5. Приятной игры. При возникновении проблем с установкой обратитесь в дискорд разработчика или дискорд DEM. Ссылки на эти серверы вы можете найти [здесь](/README.md#contacts_rus).
+5. Приятной игры. При возникновении проблем с установкой обратитесь в дискорд разработчика или дискорд DEM. Ссылки на эти серверы вы можете найти [здесь](https://github.com/zatinu322/ImprovedStoryline#contacts_rus).
 
 ## На Community Patch/Remaster v1.13 и ниже (устарело)
 
@@ -54,23 +54,23 @@
 ## On Community Patch/Remaster v1.14 and higher (recommended)
 
 1. Install `Community Patch` or `Community Remaster` according to the instructions on [this](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) page.
-2. In `DEM Community Mod Manager` on the `Local mods` tab press `Add mod` and specify the archive you downloaded from [here](/README.md#download_eng).
+2. In `DEM Community Mod Manager` on the `Local mods` tab press `Add mod` and specify the archive you downloaded from [here](https://github.com/zatinu322/ImprovedStoryline#download_eng).
 3. After it appears in the list of mods, click `Extract`.
 4. After unpacking, click `Install` and follow the instructions of the mod manager.
-5. Enjoy the game. If you have problems with the installation, contact the developer's discord or the DEM discord. Links to these servers can be found [here](/README.md#contacts_eng).
+5. Enjoy the game. If you have problems with the installation, contact the developer's discord or the DEM discord. Links to these servers can be found [here](https://github.com/zatinu322/ImprovedStoryline#contacts_eng).
 
 ## On Community Patch/Remaster v1.14 and lower (outdated)
 
 ### 1 way (on a clean **_russian version_** of the game from Steam)
 
-1. Download the latest ComPatch/ComRem compatible release [from here](/README.md#download_eng).
+1. Download the latest ComPatch/ComRem compatible release [from here](https://github.com/zatinu322/ImprovedStoryline#download_eng).
 2. Create `mods` folder in the game root directory, copy there `ImprovedStoryline106` from archive with all its contents.
 3. Install [Community Patch](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/). After completing the installation, you will be prompted to install the detected mods.
 4. Follow the installer instructions.
 
 ### 2 way (with [Community Patch or Remaster](https://github.com/DeusExMachinaTeam/EM-CommunityPatch/) already installed)
 
-1. Download the latest ComPatch/ComRem compatible release [from here](/README.md#download_eng).
+1. Download the latest ComPatch/ComRem compatible release [from here](https://github.com/zatinu322/ImprovedStoryline#download_eng).
 2. Copy `ImprovedStoryline106` from mod archive to `mods` folder in game root directory (create one if needed).
 3. Run `commod.exe`, enter `mods` command.
 4. Follow the installer instructions.

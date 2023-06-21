@@ -12,7 +12,7 @@
 
 ## На Community Patch/Remaster v1.14 и выше (рекомендуется)
 
-1. Установить `Community Patch` или `Community Remaster` по инструкции с [этой](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) страницы.
+1. Установить `Community Patch` или `Community Remaster со всеми дополнительными опциями` по инструкции с [этой](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) страницы.
 2. В `DEM Community Mod Manager` на вкладке `Моды` нажмите `Добавить мод` и укажите архив, который вы скачали [отсюда](https://github.com/zatinu322/ImprovedStoryline#download_rus).
 3. После его появления в списке модов нажмите `Распаковать`.
 4. После распаковки нажмите `Установить` и следуйте инструкциям мод-менеджера.
@@ -53,7 +53,7 @@
 
 ## On Community Patch/Remaster v1.14 and higher (recommended)
 
-1. Install `Community Patch` or `Community Remaster` according to the instructions on [this](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) page.
+1. Install `Community Patch` or `Community Remaster with all optional content` according to the instructions on [this](https://github.com/DeusExMachinaTeam/EM-CommunityPatch) page.
 2. In `DEM Community Mod Manager` on the `Local mods` tab press `Add mod` and specify the archive you downloaded from [here](https://github.com/zatinu322/ImprovedStoryline#download_eng).
 3. After it appears in the list of mods, click `Extract`.
 4. After unpacking, click `Install` and follow the instructions of the mod manager.

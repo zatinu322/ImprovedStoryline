@@ -305,8 +305,8 @@
 	</Path>
 
 	<Path Name = "Father_cam03">
-		 <Point  coord="3353.614 368.487 3303.540" rotation="-0.017 0.879 0.032 -0.476"/>
-		 <Point  coord="3354.031 368.523 3303.271" rotation="-0.023 0.877 0.042 -0.478"/>
+		 <Point  coord="3353.614 368.587 3303.540" rotation="-0.017 0.879 0.032 -0.476"/>
+		 <Point  coord="3354.031 368.623 3303.271" rotation="-0.023 0.877 0.042 -0.478"/>
 	</Path>
 
 	<Path Name = "Father_cam04">

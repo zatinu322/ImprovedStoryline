@@ -155,6 +155,9 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
   <a href="https://discord.gg/sPrGBP9aFd">
     <img src="https://i.imgur.com/1p7N4lm.png" alt="Discord" height="55">
   </a>
+  <a href="https://discord.gg/qKK2Efx">
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/68562524/247600262-a332fc85-7552-4edb-aa10-e85ec4c14dab.png" alt="Discord DEM" height="55">
+  </a>
   <a href="https://www.youtube.com/user/rpggameland">
     <img src="https://i.imgur.com/eZj65ig.png" alt="YT" height="55">
   </a>
@@ -308,6 +311,9 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
 <div align="left">
   <a href="https://discord.gg/sPrGBP9aFd">
     <img src="https://i.imgur.com/1p7N4lm.png" alt="Discord" height="55">
+  </a>
+  <a href="https://discord.gg/qKK2Efx">
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/68562524/247600262-a332fc85-7552-4edb-aa10-e85ec4c14dab.png" alt="Discord DEM" height="55">
   </a>
   <a href="https://www.youtube.com/user/rpggameland">
     <img src="https://i.imgur.com/eZj65ig.png" alt="YT" height="55">

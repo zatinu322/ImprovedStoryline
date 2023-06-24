@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="TheGelvetcia"
+		FullName="HELVETIA" />
+
+	<Object
+		Name="TheOldSibilla"
+		FullName="OLD SYBILLA" />
+
+	<Object
+		Name="TheNewSibilla"
+		FullName="NEW SYBILLA" />
+
+	<Object
+		Name="TheGelvetcia_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheOldSibilla_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheNewSibilla_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheGelvetcia_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheOldSibilla_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheNewSibilla_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheGelvetcia_House"
+		FullName="SENATE" />
+
+	<Object
+		Name="TheGelvetcia_Bar"
+		FullName="Restaurant" />
+
+	<Object
+		Name="TheOldSibilla_Bar"
+		FullName="Headquarters" />
+
+	<Object
+		Name="TheNewSibilla_Bar"
+		FullName="Command post" />
+
+	<Object
+		Name="TheGelvetcia_Bar_Barman"
+		FullName="Secretary Blair" />
+
+	<Object
+		Name="AMRekruter"
+		FullName="Recruiter Gilbert" />
+
+	<Object
+		Name="AMLider"
+		FullName="Leader Odette" />
+
+	<Object
+		Name="ProfessorMal"
+		FullName="Professor Mal" />
+
+	<Object
+		Name="Senat"
+		FullName="Senator Schwartz" />
+
+	<Object
+		Name="Senat_1"
+		FullName="Senator Schwartz" />
+
+	<Object
+		Name="Senat_2"
+		FullName="Senator Schwartz" />
+
+	<Object
+		Name="Gulik"
+		FullName="Rogue Inks" />
+
+	<Object
+		Name="MrShlyapa"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="TheSel"
+		FullName="SEL" />
+
+	<Object
+		Name="TheSel_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheSel_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheSel_House"
+		FullName="Power plant" />
+
+	<Object
+		Name="TheSel_Bar"
+		FullName="Bar &quot;Lavin&quot;" />
+
+	<Object
+		Name="TheSel_Bar_Barman"
+		FullName="Employer Bee" />
+
+	<Object
+		Name="SelCitizen"
+		FullName="Electrician" />
+
+	<Object
+		Name="SelBarmen"
+		FullName="Barmaid Will" />
+
+	<Object
+		Name="Estet"
+		FullName="Aesthete Kaufman" />
+
+	<Object
+		Name="TheTuzz"
+		FullName="TUZZ" />
+
+	<Object
+		Name="TheTuzz_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheTuzz_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheTuzz_House"
+		FullName="Recruitment headquarters" />
+
+	<Object
+		Name="TheTuzz_Bar"
+		FullName="Dining room" />
+
+	<Object
+		Name="TheTuzz_Bar_Barman"
+		FullName="Agitator Bo" />
+
+	<Object
+		Name="TuzVerb"
+		FullName="Recruiter Hank" />
+
+	<Object
+		Name="TuzVerb1"
+		FullName="Recruiter Hank" />
+
+	<Object
+		Name="TheDoubtful"
+		FullName="RAZDOLNOE" />
+
+	<Object
+		Name="TheDoubtful_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheDoubtful_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheDoubtful_Bar"
+		FullName="Bar" />
+
+	<Object
+		Name="TheDoubtful_Bar_Barman"
+		FullName="Barmaid" />
+
+	<Object
+		Name="AntipodEstet"
+		FullName="Antique Connoisseur" />
+
+	<Object
+		Name="TheUnderAttaks"
+		FullName="PETROPAVLOVSK" />
+
+	<Object
+		Name="TheUnderAttaks_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheUnderAttaks_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheUnderAttaks_Bar"
+		FullName="Bar" />
+
+	<Object
+		Name="TheUnderAttaks_Bar_Barman"
+		FullName="Barmaid" />
+
+	<Object
+		Name="TheVill2"
+		FullName="ROTORSK" />
+
+	<Object
+		Name="TheVill2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheVill2_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheVill2_Bar"
+		FullName="Bar" />
+
+	<Object
+		Name="TheVill2_Bar_Barman"
+		FullName="Barmaid" />
+
+	<Object
+		Name="TheVill1"
+		FullName="GENDENBURGSK" />
+
+	<Object
+		Name="TheVill1_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheVill1_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheVill1_Bar"
+		FullName="Bar" />
+
+	<Object
+		Name="TheVill1_Bar_Barman"
+		FullName="Barmaid" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown4"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown5"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown5_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheGelvetcia_enter"
+		FullName="HELVETIA" />
+
+	<Object
+		Name="TheSel_enter"
+		FullName="SEL" />
+
+	<Object
+		Name="TheTuzz_enter"
+		FullName="TUZZ" />
+
+	<Object
+		Name="TheDoubtful_enter"
+		FullName="RAZDOLNOE" />
+
+	<Object
+		Name="TheUnderAttaks_enter"
+		FullName="PETROPAVLOVSK" />
+
+	<Object
+		Name="TheVill1_enter"
+		FullName="GENDENBURGSK" />
+
+	<Object
+		Name="TheVill2_enter"
+		FullName="ROTORSK" />
+
+	<Object
+		Name="ToR1M3"
+		FullName="Tunnel" />
+
+	<Object
+		Name="ToR3M1"
+		FullName="Underwater tunnel" />
+
+	<Object
+		Name="ToR2M2"
+		FullName="Road to Argen" />
+
+	<Object
+		Name="ToR2M2small"
+		FullName="Trail to Argen" />
+
+	<Object
+		Name="u1"
+		FullName="Shrike" />
+
+	<Object
+		Name="u2"
+		FullName="Pete" />
+
+	<Object
+		Name="u3"
+		FullName="Richie" />
+
+	<Object
+		Name="u4"
+		FullName="Gin" />
+
+	<Object
+		Name="u5"
+		FullName="Mira" />
+
+	<Object
+		Name="u6"
+		FullName="Ray" />
+
+	<Object
+		Name="u7"
+		FullName="Shadow" />
+
+	<Object
+		Name="u8"
+		FullName="Phosgene" />
+
+	<Object
+		Name="u9"
+		FullName="Jean" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph3"
+		FullName="Cartographer" />
+
+	<Object
+		Name="EngineerEscapist"
+		FullName="Engineer Mikael" />
+
+	<Object
+		Name="PlayerNjeri"
+		FullName=" " />
+</ObjectNames>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="131"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_131_hero.ogg"
+		value="Soon the world will be cleansed of filth, and people will be able to breathe air again!"
+		time="4" />
+
+	<string
+		id="8808"
+		value="Do you wish to teleport directly to Ridzin?"
+		numButtons="2" />
+</resource>

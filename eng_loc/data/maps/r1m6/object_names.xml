@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+
+	<Object
+		Name="Esting"
+		FullName="KATEBERG" />
+
+	<Object
+		Name="Esting_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Esting_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Esting_Bar"
+		FullName="Field HQ" />
+
+	<Object
+		Name="TheOilVillage"
+		FullName="ABANDONED STATION" />
+
+	<Object
+		Name="TheOilVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="RYAZANSKOE" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="CHUGUEVKA" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown3_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="PetrolStationTown4"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown5"
+		FullName="MALINOVKA" />
+
+	<Object
+		Name="TheTown"
+		FullName="MOSKA" />
+
+	<Object
+		Name="TheTown_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheTown_Workshop"
+		FullName="Elite car service" />
+
+	<Object
+		Name="TheTown_Bar"
+		FullName="Bar &quot;Golden-Domed&quot;" />
+
+	<Object
+		Name="TheDreenorVillage"
+		FullName="SEVERKA" />
+
+	<Object
+		Name="TheDreenorVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheDreenorVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheDreenorVillage_Bar"
+		FullName="Tavern &quot;Chicken bottom&quot;" />
+
+	<Object
+		Name="Starosta"
+		FullName="Headman Velimir" />
+
+	<Object
+		Name="Starosta1"
+		FullName="Headman Velimir" />
+
+	<Object
+		Name="Serrafima"
+		FullName="Seraphima" />
+
+	<Object
+		Name="Voevoda"
+		FullName="Commander Ludwig" />
+
+	<Object
+		Name="Voevoda2"
+		FullName="Captain Sebastian" />
+
+	<Object
+		Name="LisaPlen"
+		FullName="Lisa" />
+
+	<Object
+		Name="LisaPlen2"
+		FullName="Lisa" />
+
+	<Object
+		Name="ToR1M4"
+		FullName="Road to Hel" />
+
+	<Object
+		Name="ToR1M5"
+		FullName="Road to the Mountains of the Wise" />
+
+	<Object
+		Name="SerafimaHouse"
+		FullName="SERAPHIMA'S HOUSE" />
+
+	<Object
+		Name="TheSerafimaHouse_Workshop"
+		FullName="SERAPHIMA'S HOUSE" />
+
+	<Object
+		Name="LisaPlen1"
+		FullName="Lisa" />
+</ObjectNames>

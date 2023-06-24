@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="TheOlme"
+		FullName="OLME" />
+
+	<Object
+		Name="TheOlme_Administration"
+		FullName="Administration" />
+
+	<Object
+		Name="Olme_Bar"
+		FullName="On the outskirts" />
+
+	<Object
+		Name="Olme_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Olme_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Olme_Bar_Customer1"
+		FullName="Perchitto" />
+
+	<Object
+		Name="MrShlyapa"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="MrShlyapaEmpty"
+		FullName=" " />
+
+	<Object
+		Name="Olme_Bar_Customer2"
+		FullName="Galden" />
+	<Object
+		Name="Bar_Gomer1"
+		FullName="Homer" />
+	<Object
+		Name="Olme_Bar_Customer3"
+		FullName="Markizych" />
+	<Object
+		Name="WorkGiver"
+		FullName="Farmer Dick" />
+	<Object
+		Name="Olme_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="FVOnOcean"
+		FullName="SALINIOM" />
+
+	<Object
+		Name="FVOnOcean_Bar"
+		FullName="Near the sea" />
+
+	<Object
+		Name="FVOnOcean_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="FVOnOcean_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="FVOnOcean_Bar_Customer1"
+		FullName="Talion" />
+
+	<Object
+		Name="FVOnOcean_Bar_Customer3"
+		FullName="Helm" />
+
+	<Object
+		Name="FVOnOcean_Bar_Gomer"
+		FullName="Homer" />
+
+	<Object
+		Name="FVOnOcean_Bar_Gomer1"
+		FullName="Homer" />
+
+	<Object
+		Name="FVOnOcean_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="FVNearOlme"
+		FullName="LAUKA" />
+
+	<Object
+		Name="FVNearOlme_Bar"
+		FullName="Selind" />
+
+	<Object
+		Name="FVNearOlme_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="FVNearOlme_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="FVNearOlme_Bar_Customer2"
+		FullName="Paliness" />
+
+	<Object
+		Name="FVNearOlme_Bar_Customer3"
+		FullName="Crystal" />
+
+	<Object
+		Name="FVNearOlme_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="FVCalis"
+		FullName="CALYS" />
+
+	<Object
+		Name="FVCalis_Bar"
+		FullName="Gladiator" />
+
+	<Object
+		Name="FVCalis_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="FVCalis_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="FVCalis_Bar_Customer3"
+		FullName="Eric" />
+
+	<Object
+		Name="FVCalis_Bar_Customer1"
+		FullName="Jame" />
+
+	<Object
+		Name="FVCalis_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="FVCordan"
+		FullName="CORDAN" />
+
+	<Object
+		Name="FVCordan_Bar"
+		FullName="Shark's Mouth" />
+
+	<Object
+		Name="FVCordan_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="FVCordan_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="FVCordan_Bar_Customer2"
+		FullName="Matvey" />
+
+	<Object
+		Name="FVCordan_Bar_Barman"
+		FullName="Cook Nyura" />
+
+	<Object
+		Name="FVPerch"
+		FullName="PERCH" />
+
+	<Object
+		Name="FVPerch_Bar"
+		FullName="Goldmine" />
+
+	<Object
+		Name="FVPerch_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="FVPerch_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="FVPerch_Bar_Customer2"
+		FullName="Daren" />
+
+	<Object
+		Name="FVPerch_Bar_Barman"
+		FullName="Barmaid" />
+
+	<Object
+		Name="FVBerko"
+		FullName="BERKO" />
+
+	<Object
+		Name="FVBerko_Bar"
+		FullName="Corner" />
+
+	<Object
+		Name="FVBerko_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="FVBerko_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="FVBerko_Bar_Customer2"
+		FullName="Neil" />
+	
+	<Object
+		Name="FVBerko_Bar_Customer2_1"
+		FullName="Neil" />
+
+	<Object
+		Name="FVBerko_Bar_Barman"
+		FullName="Barmaid" />
+
+	<Object
+		Name="StorageVil"
+		FullName="STORAGE" />
+
+	<Object
+		Name="StorageVilBar"
+		FullName="Warehouse" />
+
+	<Object
+		Name="StorageVil_Shop"
+		FullName="Salesman's booth" />
+
+	<Object
+		Name="r1m4_Storage_Guard1"
+		FullName="Pulkonnen" />
+
+	<Object
+		Name="StorageVil_enter"
+		FullName="STORAGE" />
+
+	<Object
+		Name="TheOlme_enter"
+		FullName="OLME" />
+
+	<Object
+		Name="FVPerch_enter"
+		FullName="PERCH" />
+
+	<Object
+		Name="FVCalis_Bar_Husbent1"
+		FullName="Filimon" />
+
+	<Object
+		Name="LookingWife1"
+		FullName="Wife Allushka" />
+
+	<Object
+		Name="FVPerch_Houses"
+		FullName="Allushka's house" />
+
+	<Object
+		Name="ToR1M3"
+		FullName="Road to Vaterland" />
+
+	<Object
+		Name="ToR3M1"
+		FullName="Port to the Druid Grove" />
+
+	<Object
+		Name="ToR1M6"
+		FullName="Tunnel to Lidencloud" />
+
+	<Object
+		Name="bigboss1"
+		FullName="Boss" />
+
+	<Object
+		Name="urod1"
+		FullName="Vinnie" />
+
+	<Object
+		Name="urod2"
+		FullName="Don" />
+
+	<Object
+		Name="urod3"
+		FullName="Yucca" />
+
+	<Object
+		Name="urod4"
+		FullName="Daisy" />
+
+	<Object
+		Name="urod5"
+		FullName="Gates" />
+
+	<Object
+		Name="urod6"
+		FullName="Folco" />
+
+	<Object
+		Name="urod7"
+		FullName="Bortan" />
+
+	<Object
+		Name="urod8"
+		FullName="Duke" />
+
+	<Object
+		Name="urod9"
+		FullName="Red 13" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="AivenGo"
+		FullName="Ivan Go" />
+	
+	<Object
+		Name="AivenGo1"
+		FullName="Ivan Go" />
+	
+	<Object
+		Name="TikhomirInSorrow"
+		FullName="Tikhomir" />
+	
+	<Object
+		Name="TikhomirInSorrow1"
+		FullName="Tikhomir" />
+
+</ObjectNames>

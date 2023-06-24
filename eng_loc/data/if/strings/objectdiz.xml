@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="r1m1_TheTown_diz"
+		value="Small trade town" />
+
+	<string
+		id="r1m1_Svalka_diz"
+		value="A small settlement, spontaneously formed on a car junkyard. Due to this feature, the village has no problems with scrap metal." />
+
+	<string
+		id="r1m1_Sosnovka_diz"
+		value="A village whose name (Pineville) exactly reflects the area in which it is located. There is a small pond near the village." />
+
+	<string
+		id="r1m1_Lukoil_diz"
+		value="The only settlement in the county that is engaged in oil production. The quality and quantity of production leaves much to be desired." />
+
+	<string
+		id="r1m1_Ruin_diz"
+		value="A settlement spontaneously formed on the ruins of a former civilization. It is hard to understand the people who choose this creepy place to live." />
+
+	<string
+		id="r1m1_Kolhoz_diz"
+		value="Quite a large agrarian village specializing in growing potatoes." />
+
+	<string
+		id="r1m1_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m1_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m1_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m2_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m2_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m2_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m2_PetrolStationTown4_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m2_PetrolStationTown5_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m2_r1m2_BenHouse_1_diz"
+		value="A small shack on the outskirts, where Ben Throttle moved after a conflict with the administration of Midgard." />
+
+	<string
+		id="r1m3_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m3_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m3_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m3_PetrolStationTown4_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m3_PetrolStationTown5_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m3_r1m3_Circus_1_diz"
+		value="Formerly a rich and prosperous entertainment center, now a pile of ruins left behind by a bunch of gambling gangsters." />
+
+	<string
+		id="r2m1_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m1_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m1_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m1_PetrolStationTown4_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m1_PetrolStationTown5_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m2_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m2_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r2m2_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown4_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown5_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown6_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m1_PetrolStationTown7_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r4m2_PetrolStationTown61_diz"
+		value="This gas station offers some very useful services at a reasonable price. " />
+
+	<string
+		id="r1m1_TheContraVillage_diz"
+		value="The locals are often hostile to the visitors" />
+
+	<string
+		id="r1m1_TheGloohoe_diz"
+		value="Home sweet home" />
+
+	<string
+		id="r1m1_TheOilVillage_diz"
+		value="Prosperous village" />
+
+	<string
+		id="r1m1_TheFreedom_diz"
+		value="Distant village, rarely visited by foreigners" />
+
+	<string
+		id="r1m1_ToR1M3_diz"
+		value="Road to Vaterland" />
+
+	<string
+		id="r1m1_ToR4M1_diz"
+		value="Road to Vahat" />
+
+	<string
+		id="r1m1_ToR1M2_diz"
+		value="Road to Ridzin" />
+
+	<string
+		id="r1m2_ToR1M1_diz"
+		value="Road to Krai" />
+
+	<string
+		id="r1m2_ToR1M3_diz"
+		value="Road to Vaterland" />
+
+	<string
+		id="r1m4_ToR1M3_diz"
+		value="Road to Vaterland" />
+
+	<string
+		id="r1m4_ToR3M1_diz"
+		value="Road to Druid Grove" />
+
+	<string
+		id="r2m1_ToR2M2_diz"
+		value="Road to Argen" />
+
+	<string
+		id="r2m1_ToR2M2small_diz"
+		value="Road to Argen" />
+
+	<string
+		id="r2m1_ToR1M3_diz"
+		value="Road to Vaterland" />
+
+	<string
+		id="r2m1_ToR3M1_diz"
+		value="Road to Druid Grove" />
+
+	<string
+		id="r2m2_ToR2M1_diz"
+		value="Road to Librium" />
+
+	<string
+		id="r2m2_ToR2M1small_diz"
+		value="Path to Librium" />
+
+	<string
+		id="r3m1_ToR2M1_diz"
+		value="Road to Librium" />
+
+	<string
+		id="r3m1_ToR3M2_diz"
+		value="Road to Ignott" />
+
+	<string
+		id="r3m2_ToR3M1_diz"
+		value="Road to Druid Grove" />
+
+	<string
+		id="r4m1_ToR1M1_diz"
+		value="Road to Krai" />
+
+	<string
+		id="r4m1_ToR2M2_diz"
+		value="Road to Argen" />
+
+	<string
+		id="r4m1_ToR4M2_diz"
+		value="Road to Zarmek" />
+
+	<string
+		id="r1m2_Esting_diz"
+		value="Border town, surrounded by fields" />
+
+	<string
+		id="r1m2_Midragd_diz"
+		value="Scientific centre of the new world" />
+
+	<string
+		id="r1m2_Porto_diz"
+		value="The only known port town" />
+
+	<string
+		id="r1m2_TheArtefact_diz"
+		value="Farmer village" />
+
+	<string
+		id="r1m2_TheSign_diz"
+		value="Farmer village" />
+
+	<string
+		id="r1m2_TheRace_diz"
+		value="Farmer village" />
+
+	<string
+		id="r1m2_TheOlimp_diz"
+		value="Farmer village" />
+
+	<string
+		id="r1m2_TheTickets_diz"
+		value="Village by the Colosseum" />
+
+	<string
+		id="r1m3_Pesht_diz"
+		value="Bridge town at the crossroads of the major trade roads is the only place in the world where the trucks must pay a fare. Many factions plan to conquer it, but so far no one succeed. " />
+
+	<string
+		id="r1m3_Asgard_diz"
+		value="At first glance it is just a village lost in the middle of nowhere but it is actually the center of clandestine trade with the Occident." />
+
+	<string
+		id="r1m3_Minin_diz"
+		value="It is a bastion of free trade and a model of honest trade achievements." />
+
+	<string
+		id="r1m3_TheShahts_diz"
+		value="The miners dig deep to find a slightest piece of precious materials or artifacts." />
+
+	<string
+		id="r1m3_TheForgotten_diz"
+		value="In spite of favorable location, this village is very poor. Probably because it cannot compete with the large factions. Or its people are just lazy." />
+
+	<string
+		id="r1m3_TheVozleMinin_diz"
+		value="A tiny village where nothing ever happens." />
+
+	<string
+		id="r1m3_TheBanditOilMine_diz"
+		value="The source of oil of the NPT." />
+
+	<string
+		id="r1m3_TheBase_diz"
+		value="Tons of ancient weapons are buried in the basement of this ancient military base. " />
+
+	<string
+		id="r1m3_ToR1M1_diz"
+		value="Road to Krai" />
+
+	<string
+		id="r1m3_ToR2M1_diz"
+		value="Road to Librium" />
+
+	<string
+		id="r1m3_ToR1M2_diz"
+		value="Road to Ridzin" />
+
+	<string
+		id="r1m3_ToR1M4_diz"
+		value="Road to Hel" />
+
+	<string
+		id="r1m4_TheOlme_diz"
+		value="This trade town is the North Path Traders’ important source of wealth. It provides them with rare merchandise and never-ending struggles with the locals." />
+
+	<string
+		id="r1m4_FVOnOcean_diz"
+		value="Village of fishers" />
+
+	<string
+		id="r1m4_FVNearOlme_diz"
+		value="Small village" />
+
+	<string
+		id="r1m4_FVCalis_diz"
+		value="Calis" />
+
+	<string
+		id="r1m4_FVCordan_diz"
+		value="Cordan" />
+
+	<string
+		id="r1m4_FVPerch_diz"
+		value="Perch" />
+
+	<string
+		id="r1m4_FVBerko_diz"
+		value="Berko" />
+
+	<string
+		id="r1m4_StorageVil_diz"
+		value="Storage" />
+
+	<string
+		id="r1m4_ToR1M6_diz"
+		value="A tunnel into the realm of eternal cold." />
+
+	<string
+		id="r1m6_TheDreenorVillage_diz"
+		value="The last stronghold of the locals." />
+
+	<string
+		id="r1m6_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price." />
+
+	<string
+		id="r1m6_PetrolStationTown2_diz"
+		value="One of the local villages." />
+
+	<string
+		id="r1m6_PetrolStationTown3_diz"
+		value="One of the local villages." />
+
+	<string
+		id="r1m6_PetrolStationTown4_diz"
+		value="This gas station offers some very useful services at a reasonable price." />
+
+	<string
+		id="r1m6_PetrolStationTown5_diz"
+		value="The first village attacked by Adepts. Currently destroyed." />
+
+	<string
+		id="r1m6_TheTown_diz"
+		value="The capital of the Red Torch Adepts. This is where their main headquarters and military forces are concentrated." />
+
+	<string
+		id="r1m6_Esting_diz"
+		value="The second most important city owned by the Adepts, after Mosca." />
+
+	<string
+		id="r1m6_TheOilVillage_diz"
+		value="An abandoned train station with a strange electronic lock that cannot be opened." />
+
+	<string
+		id="r1m6_SerafimaHouse_diz"
+		value="Seraphima's house, destroyed by Adepts." />
+
+	<string
+		id="r1m6_ToR1M5_diz"
+		value="The road to the Mountains of the Wise." />
+
+	<string
+		id="r1m6_ToR1M4_diz"
+		value="Tunnel to Hel." />
+
+	<string
+		id="r1m5_ToR1M6_diz"
+		value="The road to Lidencloud." />
+
+	<string
+		id="r1m5_Esting_diz"
+		value="The capital of the Mountains. It is in this city that the Supreme Wise Man lives." />
+
+	<string
+		id="r1m5_TheTown_diz"
+		value="The industrial center of the Mountains. All the factories and workshops are concentrated here." />
+
+	<string
+		id="r1m5_TheSign_diz"
+		value="The mine, which provides raw materials for the Rinolsk factories." />
+
+	<string
+		id="r1m5_ToR1M6JD_diz"
+		value="Secret tunnel to Lidencloud." />
+
+	<string
+		id="r1m5_TheOilVillage_diz"
+		value="A small village with only women left, constantly suffering from attacks by bandits." />
+
+	<string
+		id="r1m5_TheContraVillage_diz"
+		value="A village on the very border of the Mountains. Long ago many people used to pass through it." />
+
+	<string
+		id="r1m5_PetrolStationTown1_diz"
+		value="A quiet village on the edge of the Mountains." />
+
+	<string
+		id="r1m5_PetrolStationTown2_diz"
+		value="This gas station offers some very useful services at a reasonable price." />
+
+	<string
+		id="r1m5_PetrolStationTown3_diz"
+		value="This gas station offers some very useful services at a reasonable price." />
+
+	<string
+		id="r1m5_PetrolStationTown4_diz"
+		value="This gas station offers some very useful services at a reasonable price." />
+
+	<string
+		id="r1m7_PetrolStationTown1_diz"
+		value="This gas station offers some very useful services at a reasonable price." />
+
+	<string
+		id="r2m1_TheGelvetcia_diz"
+		value="The capital of Commonwealth of Independent Towns. Within its walls strategic plans of battle against Crimson Dawn are born. " />
+
+	<string
+		id="r2m1_TheSel_diz"
+		value="This town provides the main industrial support to the CIT army. " />
+
+	<string
+		id="r2m1_TheTuzz_diz"
+		value="CIT’s Military base, where hundreds of soldiers await orders to defend the native land. " />
+
+	<string
+		id="r2m1_TheDoubtful_diz"
+		value="Distant village " />
+
+	<string
+		id="r2m1_TheUnderAttaks_diz"
+		value="This settlement is often being attacked by CD’s mercenaries." />
+
+	<string
+		id="r2m1_TheVill2_diz"
+		value="People of this village are ready to give all they have to support the soldiers in the battle against the CD." />
+
+	<string
+		id="r2m1_TheVill1_diz"
+		value="Logistics is an important part of the warfare, that’s why the locals work hard to help the army." />
+
+	<string
+		id="r2m1_TheOldSibilla_diz"
+		value="A gas station taken over by anti-militarists and turned into a fortified base." />
+
+	<string
+		id="r2m1_TheNewSibilla_diz"
+		value="The main base of the anti-militarists. This is where their headquarters and armament depots are located." />
+
+	<string
+		id="r2m2_Monastery_diz"
+		value="Headquarters of the Church of Enlightenment. Few uninitiated actually visited it and returned." />
+
+	<string
+		id="r2m2_Marezzia_diz"
+		value="Scared people work here round the clock to provide supplies to the Axel’s mercenaries. " />
+
+	<string
+		id="r2m2_Zeon_diz"
+		value="Axel’s hidden town. Only a couple of most trusted men know its whereabouts. It is the heart of the Crimson Down." />
+
+	<string
+		id="r2m2_Toskana_diz"
+		value="Unassailable fortress that coordinates the actions of a big gang of cutthroats that the people of Argen became." />
+
+	<string
+		id="r2m2_GranicaVillage_diz"
+		value="Boundary settlement. However nobody remembers what border it is about. " />
+
+	<string
+		id="r2m2_ZnakiVillage_diz"
+		value="Farmer settlement." />
+
+	<string
+		id="r2m2_NewVillage_diz"
+		value="The people of this village are often attacked by both sides. " />
+
+	<string
+		id="r2m2_EnterToSubmarine_loc_diz"
+		value="To Vahat" />
+
+	<string
+		id="r3m1_TheSet_diz"
+		value="Grand town of the Druids raise its towers to the skies like the branches of a hundred-year-old oak." />
+
+	<string
+		id="r3m1_TheFist_diz"
+		value="Small settlement in the middle of the forest. A nice place to hide from the storms of the outer world. " />
+
+	<string
+		id="r3m1_TheUluk_diz"
+		value="Children of Iron, former druids, rebuilt their town according to the new beliefs." />
+
+	<string
+		id="r3m1_TheRazboynik_diz"
+		value="Village of ex-brigands" />
+
+	<string
+		id="r3m1_ToR1M4_diz"
+		value="Road to Hel" />
+
+	<string
+		id="r3m2_OracleDefendersVil_diz"
+		value="Oracle’s Disciples holds here their rites in hope to attract his attention." />
+
+	<string
+		id="r3m2_AloneDruid_diz"
+		value="Hermitage" />
+
+	<string
+		id="r3m2_NearOraculBuilding_diz"
+		value="An outpost used by the Servants of the Oracle to protect their Godhead from various dangers." />
+
+	<string
+		id="r3m2_r3m2_OracleComplex_1_diz"
+		value="A huge structure of three menhirs, inside which is a powerful artificial intelligence, calling itself the &quot;Oracle.&quot;" />
+
+	<string
+		id="r4m1_TheGadad_diz"
+		value="Once prosperous town has been reduced almost to rubble in the last few years. It preserved traces or the former greatness, though. " />
+
+	<string
+		id="r4m1_TheKef_diz"
+		value="The capital of Vahat is the true jewel of the desert. Since older days this town is well known for its unsurpassed gunsmiths and architects. " />
+
+	<string
+		id="r4m1_TheKazif_diz"
+		value="Townspeople organize spectacular races for everyone willing to participate. Not that there are too many people, however." />
+
+	<string
+		id="r4m1_r4_AlihamVil_diz"
+		value="Small town on the edge of the desert has witnessed a lot of strange and terrible events. " />
+
+	<string
+		id="r4m1_r4_Buhara_1_diz"
+		value="Ancient port at the shore of the dead sea. Dozens of ships that will never see the ocean again rot here. " />
+
+	<string
+		id="r4m1_TheOilCity_diz"
+		value="Richest oilfield in the world. " />
+
+	<string
+		id="r4m1_TheZuhel_diz"
+		value="Settlement, suffering from constant raider’s attacks." />
+
+	<Object
+		Name="PetrolStationTown1_diz"
+		value="Gas station" />
+
+	<Object
+		Name="PetrolStationTown2_diz"
+		value="Gas station" />
+
+	<Object
+		Name="PetrolStationTown3_diz"
+		value="Gas station" />
+
+	<Object
+		Name="PetrolStationTown4_diz"
+		value="Gas station" />
+
+	<Object
+		Name="PetrolStationTown5_diz"
+		value="Gas station" />
+
+	<Object
+		Name="PetrolStationTown6"
+		value="Gas station" />
+
+	<Object
+		Name="PetrolStationTown7"
+		value="Gas station" />
+
+	<string
+		id="r4m2_ScientiferVillage_diz"
+		value="Settlement founded at near the source of alien radiation." />
+
+	<string
+		id="r4m2_MilitaryBase_diz"
+		value="Whole Zarmek dreads this place, where hundreds of madmen gather to start the next attack." />
+
+	<string
+		id="r4m2_PetrolStationTower_diz"
+		value="Gas station" />
+
+	<string
+		id="demo_TheOlme_diz"
+		value="Large trade town. It is a source of rare merchandise and never-ending struggle with the locals." />
+
+	<string
+		id="demo_FVOnOcean_diz"
+		value="Village of fishers." />
+
+	<string
+		id="demo_FVNearOlme_diz"
+		value="Small village." />
+
+	<string
+		id="demo_FVCalis_diz"
+		value="Settlement by the ruins " />
+
+	<string
+		id="demo_FVCordan_diz"
+		value="You can live even by the swamp. " />
+
+	<string
+		id="demo_FVPerch_diz"
+		value="Distant miner village." />
+
+	<string
+		id="demo_FVBerko_diz"
+		value="Friends of traders live here." />
+
+	<string
+		id="r3m1_r3_FarVillage_diz"
+		value="This distant druids’ village serves as a refuge to the people who are tired from the war." />
+
+	<string
+		id="r4m2_CrazyBase_diz"
+		value="Old military base, inhabited by the aggressive madmen. There are few people who passed through it alive. " />
+
+	<string
+		id="r3m2_AloneDruidBuilding_diz"
+		value="For some reason this sage druid left his brother and live here alone. " />
+
+	<string
+		id="ArcadeScout01_diz"
+		value="Though this vehicle doesn’t look impressive, its stats are quite impressive. " />
+
+	<string
+		id="Formula01_diz"
+		value="A race car made of junk." />
+</resource>

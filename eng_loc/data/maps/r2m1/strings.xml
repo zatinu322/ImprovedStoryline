@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_7_hero.ogg"
+		value="I guess I'll try to get there after all. Since you don't know anything, I'll look for someone who can help me."
+		time="8" />
+
+	<string
+		id="8"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="59"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_8_stranger.ogg"
+		value="STRANGER|Wait, who are you anyway? How did you get through the tunnel? "
+		time="4" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_9_hero.ogg"
+		value="What business is it of yours? I'm a free wanderer: I go wherever I want!"
+		time="4" />
+
+	<string
+		id="10"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="59"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_10_stranger.ogg"
+		value="STRANGER|I protect my country from people like you: spies and provocateurs! "
+		time="4" />
+
+	<string
+		id="11"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="59"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_11_stranger.ogg"
+		value="STRANGER|You're a tough guy, I see.  If you need a job, go to Marezzia, we have headquarters there."
+		time="8" />
+
+	<string
+		id="12"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_12_hero.ogg"
+		value="Not in this life."
+		time="4" />
+
+	<string
+		id="13"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_13_CIT_officer_radio.ogg"
+		value="RADIO|Soldier! The enemy is attacking the village and your car is the closest to the hot spot. Protect the villagers until reinforcements arrive!"
+		time="8" />
+
+	<string
+		id="14"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_14_hero.ogg"
+		value="How I hate this bandit scum!"
+		time="4" />
+
+	<string
+		id="15"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_15_hero.ogg"
+		value="Here come the reinforcements! Over here, guys! Give them hell."
+		time="4" />
+
+	<string
+		id="16"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="326"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_16_CIT_soldier.ogg"
+		value="CIT SOLDIER|You did a good job. Go back to base. You'll be rewarded and given a new assignment."
+		time="4" />
+
+	<string
+		id="17"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_17_hero.ogg"
+		value="Humanitarian aid will help people in this village."
+		time="4" />
+
+	<string
+		id="18"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_18_hero.ogg"
+		value="These people are suffering. I feel that my actions help them."
+		time="4" />
+
+	<string
+		id="19"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_19_hero.ogg"
+		value="I will cleanse this land of bandits!"
+		time="4" />
+
+	<string
+		id="20"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_20_hero.ogg"
+		value="Now not only bandits can go through the tunnel, but all free people! I'll go back to headquarters with a report. Let them to send their men to arrange everything here in a new way."
+		time="11" />
+
+	<string
+		id="2012"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_2012_CIT_officer_radio.ogg"
+		value="RADIO|You are a true hero, and our leaders want to entrust you with a mission that even I don't know about. Go straight to Helvetia. Transmitting coordinates. Over."
+		time="13" />
+
+	<string
+		id="21"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="326"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_21_CIT_soldier.ogg"
+		value="CIT SOLDIER|We'll deal with the guards, and you'll capture CD General. He rides in a personal car, you'll recognize him right away."
+		time="4" />
+
+	<string
+		id="22"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_22_hero.ogg"
+		value="The general is in our hands! They'll make him spill everything he knows about Axel!"
+		time="4" />
+
+	<string
+		id="23"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_23_hero.ogg"
+		value="Now Lisa won't run away from me! All that remains is to find out from the locals where she is hiding."
+		time="4" />
+
+	<string
+		id="24"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_24_hero.ogg"
+		value="Hi! Do you know a girl named Lisa? Can you tell me where to find her?"
+		time="4" />
+
+	<string
+		id="25"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="59"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_25_stranger.ogg"
+		value="STRANGER|Who doesn't know Lisa! But it's going to be hard to get to her. She's friends with Axel, our commander."
+		time="8" />
+
+	<string
+		id="26"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_26_hero.ogg"
+		value="So I should have a heart-to-heart talk with him then."
+		time="4" />
+
+	<string
+		id="27"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="59"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_27_stranger.ogg"
+		value="STRANGER|Ha-ha-ha! That's funny! There's no chance for you to see him! Only those who perform a feat can get a reward from his hands. But you obviously can't."
+		time="8" />
+
+	<string
+		id="29"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_29_hero.ogg"
+		value="Lisa! I got you, you liar! Now I won't let you go so easily! You'll answer for everything!"
+		time="4" />
+
+	<string
+		id="30"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_30_alice.ogg"
+		value="LISA|You're so stubborn. It looks like I'll have to teach you a lesson to get you off my back."
+		time="4" />
+
+	<string
+		id="39"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_39_alice.ogg"
+		value="LISA|Many have tried to find him, but no one has succeeded. For years I searched for clues, until just recently I managed to get information about Ivan's old friend. Then I went to the city of Sowth to find him..."
+		time="13" />
+
+	<string
+		id="40"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_40_hero.ogg"
+		value="But you didn't know exactly where to look. So you put on this charade for me to show you all the local villages!"
+		time="8" />
+
+	<string
+		id="41"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_41_alice.ogg"
+		value="LISA|Yes. But I was late..."
+		time="3" />
+
+	<string
+		id="42"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_42_hero.ogg"
+		value="To kill the last witness, someone destroyed an entire village. My village! What kind of man would do such a thing?! Ivan must have discovered something very important, and now someone is trying to cover up all traces. I must find out who's behind all this!"
+		time="23" />
+
+	<string
+		id="45"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_45_alice.ogg"
+		value="LISA|We must. I can see that you are as close to the goal as anyone. Please let me go with you to see the completion of my efforts."
+		time="9" />
+
+	<string
+		id="48"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_48_hero.ogg"
+		value="It's decided, let's go on a search together!"
+		time="4" />
+
+	<string
+		id="50"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_50_alice.ogg"
+		value="LISA|There is an underground passage leading to Oracle Island nearby. Only it seems to be guarded."
+		time="6" />
+
+	<string
+		id="53"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_35_alice.ogg"
+		value="LISA|You win! I surrender..."
+		time="4" />
+
+	<string
+		id="54"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_36_hero.ogg"
+		value="Give me back what you stole!"
+		time="4" />
+
+	<string
+		id="55"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_37_alice.ogg"
+		value="LISA|You don't understand! You won't be able to use it properly..."
+		time="4" />
+
+	<string
+		id="56"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_38_hero.ogg"
+		value="Don't test my patience! Give me back the disks and the amulet. Now!"
+		time="4" />
+
+	<string
+		id="57"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_39_alice.ogg"
+		value="LISA|All right, take it. You're in charge now... But listen to me! I'm not the villain you think I am! I just really need to find Ivan!"
+		time="11" />
+
+	<string
+		id="58"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_40_hero.ogg"
+		value="My father? Why would you want to do that?"
+		time="6" />
+
+	<string
+		id="59"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_41_alice.ogg"
+		value="LISA|I really want to do something significant, something really important for me and for those around me. And your father is a symbol! Whoever finds him, even his body, will be a hero and will be able to unite this chaotic world. "
+		time="16" />
+
+	<string
+		id="61"
+		modelName="mask_hero"
+		sound=""
+		value="Great, so we won't have to go around. Show me the way!"
+		time="3" />
+
+	<string
+		id="60"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_60_hero.ogg"
+		value="The job is done! The caravan is stopped. I can go back to base."
+		time="4" />
+
+	<string
+		id="100"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_100_hero.ogg"
+		value="Who are you and why are you hiding here when my people are suffering? "
+		time="4" />
+
+	<string
+		id="101"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_101_njeri.ogg"
+		value="NJERI|We are Njeri, guests from distant worlds. By the will of fate, our eternal path crossed the trajectory of your planet. And it has brought only sorrow to all."
+		time="8" />
+
+	<string
+		id="102"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_102_hero.ogg"
+		value="One of your mechanisms is poisoning this planet, and I want to know why it's happening!"
+		time="4" />
+
+	<string
+		id="103"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_103_njeri.ogg"
+		value="NJERI|A cargo transport was hit by an Earth weapon and crashed to the planet's surface. While we were planning a rescue operation, a device designed to operate in open space away from living matter was turned on by Earthlings."
+		time="10" />
+
+	<string
+		id="104"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_104_hero.ogg"
+		value="What kind of device was it? What were the consequences of its operation?"
+		time="5" />
+
+	<string
+		id="105"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_105_njeri.ogg"
+		value="NJERI|The technical details won't tell you anything. The consequences are devastating for all living creatures. Only the most resilient organisms, including humans, managed to adapt and, having changed, survive in the new conditions."
+		time="12" />
+
+	<string
+		id="106"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_106_hero.ogg"
+		value="I admit that both of our races are to blame for what happened... But you knew what was happening and you did nothing!"
+		time="8" />
+
+	<string
+		id="107"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_107_njeri.ogg"
+		value="NJERI|We have been here for many years to correct the evil caused by our technology. Alas, our progress so far has been very poor. The fact is that the device that caused the catastrophe is designed for autonomous operation and cannot be turned off."
+		time="12" />
+
+	<string
+		id="108"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_108_hero.ogg"
+		value="It's all just words! What prevents you from destroying the emitter?"
+		time="4" />
+
+	<string
+		id="109"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_109_njeri.ogg"
+		value="NJERI|There is no telling what effect the sudden change in the information field will have on the survivors. It could be the last straw and kill everyone. But humanity's resource is not limitless, and after a while even the most resilient among you will no longer be able to exist."
+		time="8" />
+
+	<string
+		id="110"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_110_hero.ogg"
+		value="There must be some way out! After all these years you've already found a solution, tell me what needs to be done!"
+		time="4" />
+
+	<string
+		id="111"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_111_njeri.ogg"
+		value="NJERI|We were able to develop a device that will slowly reduce emission levels while we investigate the changes that are happening to people."
+		time="12" />
+
+	<string
+		id="1111"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_1111_njeri.ogg"
+		value="NJERI|It needs to be positioned near the downed ship, but neither we nor our equipment can get within the right distance."
+		time="9" />
+
+	<string
+		id="112"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m1\r2m1_112_hero.ogg"
+		value="Everything is clear. I was already there, and nothing happened to me. So I can deliver your blocker."
+		time="7" />
+
+	<string
+		id="113"
+		modelAutosized="true"
+		modelName="boss04dronegun"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m1\r2m1_113_njeri.ogg"
+		value="NJERI|We hoped for your help. You are the last resort of mankind."
+		time="8" />
+
+	<string
+		id="114"
+		modelName="mask_hero"
+		sound=""
+		value="I don't believe a word you say! And now that you have revealed yourself, I will disrupt your plans!"
+		time="9" />
+
+	<string
+		id="135"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="372"
+		modelSlot="1"
+		sound=""
+		value="CARAVANNER|Thank you, without your help they would have destroyed me."
+		time="5" />
+
+	<string
+		id="136"
+		modelName="mask_hero"
+		sound=""
+		value="I represent the anti-militarist resistance movement, and I want you to know that we are always ready to help! Your generals didn't bother to do a reconnaissance before sending you out, which almost got you killed."
+		time="15" />
+
+
+	<string
+		id="137"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="372"
+		modelSlot="1"
+		sound=""
+		value="CARAVANNER|The anti-militarists? I'll remember. And I will be sure to tell everyone I can about you."
+		time="8" />
+
+	<string
+		id="138"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="RADIO|This is HQ. Report on the success of the operation."
+		time="5" />
+
+	<string
+		id="139"
+		modelName="mask_hero"
+		sound=""
+		value="The CD forces have been successfully destroyed. Awaiting further instructions."
+		time="5" />
+
+	<string
+		id="140"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="RADIO|You will have to make another raid into Argen. It is reported that the CDs have found the location of one of our men and are going to torture him. There's no way that can happen. Right now, he's hiding at the old gas station."
+		time="12" />
+
+	<string
+		id="141"
+		modelName="mask_hero"
+		sound=""
+		value="Go to Argen and wrest your man from the clutches of the CD. I get it."
+		time="5" />
+
+	<string
+		id="142"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="RADIO|Take him to our main base, our leader will meet you there. You'll get 13,000 coins for the job. I'm passing the coordinates. Over."
+		time="9" />
+
+	<string
+		id="143"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="RADIO|Nice work. According to the latest intel, the CIT Senator is holding the fort in Rotorsk, and all of our troops are already moving there. Your presence there is also very desirable. We pay 100,000 coins for the success of the operation."
+		time="14" />
+
+	<string
+		id="144"
+		modelName="mask_hero"
+		sound=""
+		value="It's time to end the war."
+		time="4" />
+
+	<string
+		id="147"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="104"
+		modelSlot="1"
+		sound=""
+		value="ODETTE|What is this car? Why isn't it armed? My gun is jammed, shoot her!"
+		time="3.5" />
+
+	<string
+		id="148"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|Don't let it get too close! Fire!"
+		time="3" />
+
+	<string
+		id="149"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="104"
+		modelSlot="1"
+		sound=""
+		value="ODETTE|Goddamn it! Shoot it!"
+		time="3" />
+
+	<string
+		id="150"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|Everybody, Odette's hurt! Does anyone have anything to stop the bleeding?"
+		time="5" />
+
+	<string
+		id="151"
+		modelName="mask_hero"
+		sound=""
+		value="Yes, take it. This should help!"
+		time="4" />
+
+	<string
+		id="152"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|What luck! Thank you so much! Now her chances of survival have increased many times over!"
+		time="6" />
+
+	<string
+		id="153"
+		modelName="mask_hero"
+		sound=""
+		value="Is there anything else I can do to help?"
+		time="4" />
+
+	<string
+		id="154"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|No, we'll take it from here. And you go to Helvetia, the way there is now free. Good luck!"
+		time="6" />
+
+	<string
+		id="156"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|She will die if she is not treated immediately! We must get her to Sybilla immediately!"
+		time="6" />
+
+	<string
+		id="157"
+		modelName="mask_hero"
+		sound=""
+		value="Is there anything I can do to help?"
+		time="4" />
+
+	<string
+		id="158"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|No, we've got it covered. Thank you for your help, but we'll take it from here. And you go to Helvetia, the way there is now free."
+		time="9" />
+
+	<string
+		id="159"
+		modelName="mask_hero"
+		sound=""
+		value="This is the last battle! Everything will be resolved here and now!"
+		time="6" />
+	
+	<string
+		id="160"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|Hold it right there! One wrong move and we start shooting!"
+		time="5" />
+
+	<string
+		id="161"
+		modelName="mask_hero"
+		sound=""
+		value="Take it easy, guys, I didn't come here to fight."
+		time="4" />
+
+	<string
+		id="162"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|I don't recognize the logo on your car. Who is it? CIT? CD?"
+		time="6" />
+
+	<string
+		id="163"
+		modelName="mask_hero"
+		sound=""
+		value="I don't know what you're talking about! I came here through the tunnel to find the one who stole my family jewel! I was not and will not be a part of your war!"
+		time="8" />
+	
+	<string
+		id="164"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|Now that's interesting. All right, come into town, and we'll talk in a quieter atmosphere."
+		time="6" />
+	
+	<string
+		id="165"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|You did a good job! Thanks to you, these people will not perish in this senseless meat grinder. Now go to Marezzia."
+		time="10" />
+
+	<string
+		id="166"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="162"
+		modelSlot="1"
+		sound=""
+		value="GILBERT|Just be careful: they say they treat outsiders with much more suspicion, and you can no longer hide behind your fake ID."
+		time="10" />
+
+	<string
+		id="167"
+		modelName="mask_hero"
+		sound=""
+		value="I'll do my best."
+		time="3" />
+
+	<string
+		id="70"
+		modelName="mask_hero"
+		sound="data\sounds\speech\r2m1\r2m1_70_hero.ogg"
+		value="I have the jewelry box now."
+		time="4" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
+		value="I don't know where this road leads, so I'll stay here."
+		time="3" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="It's a strange place. I'd better stay away from here."
+		time="3" />
+
+	<string
+		id="8804"
+		modelName=""
+		value="You failed to protect the CIT humanitarian caravan, and now you will never be given a serious assignment again. Now you will not be able to find Lisa and learn the truth about your real father."
+		sound="data\sounds\speech\rolik\ending9.ogg"
+		time="12" />
+
+	<string
+		id="8805"
+		value="Password for the bonus ending: **********m****|For more information, read the mod's manual." />
+		
+	<string
+		id="8807"
+		modelName="mask_hero"
+		sound=""
+		value="I will not let them starve innocent people!"
+		time="7" />
+
+	<string
+		id="8809"
+		value="ParisBoss: there was an unexpected error (the crane probably drove away).| |Please restart the game and try again.|" />
+
+	<string
+		id="9999"
+		value="Improved Storyline v1.1||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+</resource>

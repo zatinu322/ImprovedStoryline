@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="TheTown"
+		FullName="SOWTH" />
+
+	<Object
+		Name="TheTown_Workshop"
+		FullName="Garage" />
+
+	<Object
+		Name="TheTown_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheTown_Bar"
+		FullName="Bar 'Long Way'" />
+
+	<Object
+		Name="TheTown_Bar_Barman"
+		FullName="Bartender's Wife" />
+
+	<Object
+		Name="CaptainZhukov"
+		FullName="Captain Zhukov" />
+
+	<Object
+		Name="HurdTrucker"
+		FullName="Bartender Dronn" />
+
+	<Object
+		Name="Buyer"
+		FullName="Merchant Sergo" />
+
+	<Object
+		Name="WorkGiver"
+		FullName="Farmer Dick" />
+
+	<Object
+		Name="Vasily"
+		FullName="Mercenary Vasily" />
+
+	<Object
+		Name="VasilyBar"
+		FullName="Mercenary Vasily" />
+
+	<Object
+		Name="TheGloohoeVillage_Bar"
+		FullName="Bar 'On the Edge'" />
+
+	<Object
+		Name="TheGloohoe_Bar_Barman"
+		FullName="Barmaid Ilona" />
+
+	<Object
+		Name="WorkGiver1"
+		FullName="Farmer Dick" />
+
+	<Object
+		Name="Lisa"
+		FullName="Lisa" />
+
+	<Object
+		Name="TheGloohoe"
+		FullName="GLOOHOE" />
+
+	<Object
+		Name="TheGloohoe_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheGloohoe_Shop"
+		FullName="Supermarket" />
+
+	<Object
+		Name="TheGloohoe_House"
+		FullName="House" />
+
+	<Object
+		Name="Father"
+		FullName="Father" />
+
+	<Object
+		Name="LisaSouth"
+		FullName="Lisa" />
+
+	<Object
+		Name="TheOilVillage"
+		FullName="ZAIMKA" />
+
+	<Object
+		Name="TheOilVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheOilVillage_Shop"
+		FullName="Bazaar" />
+
+	<Object
+		Name="TheOilVillage_Bar"
+		FullName="Snack bar 'Yat'" />
+
+	<Object
+		Name="TheOilVillage_Bar_Barman"
+		FullName="Saleswoman Dara" />
+
+	<Object
+		Name="HaveBigBoom"
+		FullName="Writer Quentin" />
+
+	<Object
+		Name="TheContraVillage"
+		FullName="GUGULINO" />
+
+	<Object
+		Name="TheContraVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheContraVillage_Shop"
+		FullName="Market" />
+
+	<Object
+		Name="TheContraVillage_Bar"
+		FullName="Bar 'Megrat'" />
+
+	<Object
+		Name="TheContraVillage_Bar_Barman"
+		FullName="Barmaid Ulyana" />
+
+	<Object
+		Name="TheFreedom"
+		FullName="TROITSKOE" />
+
+	<Object
+		Name="TheFreedom_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheFreedom_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheFreedom_Bar"
+		FullName="Diner 'Crab'" />
+
+	<Object
+		Name="TheFreedom_Bar_Barman"
+		FullName="Barmaid Rukha" />
+
+	<Object
+		Name="CS"
+		FullName="Drunkard Petro" />
+
+	<Object
+		Name="Botanik"
+		FullName="Botanist Lukk" />
+
+	<Object
+		Name="Medik"
+		FullName="Casual Vova" />
+
+	<Object
+		Name="Oldsolder"
+		FullName="Old soldier" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="ToR1M2"
+		FullName="Road to Ridzin" />
+
+	<Object
+		Name="ToR1M3"
+		FullName="Road to Vaterland" />
+
+	<Object
+		Name="ToR4M1"
+		FullName="Road to Vahat" />
+
+	<Object
+		Name="TheContraVillage_defend"
+		FullName="GUGULINO" />
+
+	<Object
+		Name="TheTown_enter"
+		FullName="SOWTH" />
+
+	<Object
+		Name="TheFreedom_enter"
+		FullName="TROITSKOE" />
+
+	<Object
+		Name="TheFreedom_deploy"
+		FullName="TROITSKOE" />
+
+	<Object
+		Name="TheOilVillage_enter"
+		FullName="ZAIMKA" />
+
+	<Object
+		Name="u1"
+		FullName="Chukcha Joe" />
+
+	<Object
+		Name="u2"
+		FullName="Max" />
+
+	<Object
+		Name="u3"
+		FullName="Terminator" />
+
+	<Object
+		Name="u4"
+		FullName="Legless Bo" />
+
+	<Object
+		Name="u5"
+		FullName="Hamster Bee" />
+
+	<Object
+		Name="u6"
+		FullName="Brake" />
+
+	<Object
+		Name="u7"
+		FullName="Big Ben" />
+
+	<Object
+		Name="u8"
+		FullName="Mo" />
+
+	<Object
+		Name="u9"
+		FullName="Corley" />
+
+	<Object
+		Name="Sosnovka"
+		FullName="SOSNOVKA" />
+
+	<Object
+		Name="Sosnovka_Shop"
+		FullName="Market" />
+
+	<Object
+		Name="Sosnovka_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Sosnovka_Bar"
+		FullName="Bar 'At the sawmill'" />
+
+	<Object
+		Name="Sosnovka_Bar_Barman"
+		FullName="Barmaid Sova" />
+
+	<Object
+		Name="Sosnovka_enter"
+		FullName="SOSNOVKA" />
+
+	<Object
+		Name="Lukoil"
+		FullName="CHESNOKOIL" />
+
+	<Object
+		Name="Lukoil_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Lukoil_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Lukoil_Bar"
+		FullName="Bar 'Drop of Oil'" />
+
+	<Object
+		Name="Lukoil_Bar_Barman"
+		FullName="Barmaid Gaika" />
+
+	<Object
+		Name="Lukoil_enter"
+		FullName="CHESNOKOIL" />
+
+	<Object
+		Name="Svalka"
+		FullName="RZHAVENSK" />
+
+	<Object
+		Name="Svalka_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Svalka_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Svalka_Bar"
+		FullName="Bar 'Grease'" />
+
+	<Object
+		Name="Svalka_Bar_Barman"
+		FullName="Bartender Litol" />
+
+	<Object
+		Name="Svalka_enter"
+		FullName="RZHAVENSK" />
+
+	<Object
+		Name="Ruin"
+		FullName="OLD VILLAGE" />
+
+	<Object
+		Name="Ruin_Shop"
+		FullName="Market" />
+
+	<Object
+		Name="Ruin_Workshop"
+		FullName="Garage" />
+
+	<Object
+		Name="Ruin_Bar"
+		FullName="Bar 'Into the dust'" />
+
+	<Object
+		Name="Ruin_Bar_Barman"
+		FullName="Bartender Knigoved" />
+
+	<Object
+		Name="Ruin_enter"
+		FullName="OLD VILLAGE" />
+
+	<Object
+		Name="Kolhoz"
+		FullName="HAMMER AND SICKLE" />
+
+	<Object
+		Name="Kolhoz_Shop"
+		FullName="Storage" />
+
+	<Object
+		Name="Kolhoz_Workshop"
+		FullName="Garage" />
+
+	<Object
+		Name="Kolhoz_Bar"
+		FullName="Bar 'Rye spikes'" />
+
+	<Object
+		Name="Kolhoz_Bar_Barman"
+		FullName="Bartender Schavel" />
+
+	<Object
+		Name="Kolhoz_enter"
+		FullName="HAMMER AND SICKLE" />
+
+	<Object
+		Name="FelixDecide"
+		FullName=" " />
+
+	<Object
+		Name="AivenGo"
+		FullName="Ivan Go" />
+
+	<Object
+		Name="TraiderAfterStryga"
+		FullName="Caravanner Mads" />
+
+</ObjectNames>

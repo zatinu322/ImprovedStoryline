@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="Esting"
+		FullName="EASTERN" />
+
+	<Object
+		Name="MrShlyapa"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="Mirik"
+		FullName="Reveler Marco" />
+
+	<Object
+		Name="Esting_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Esting_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Esting_Bar"
+		FullName="Pub &quot;Happy&quot;" />
+
+	<Object
+		Name="Esting_Bar_Barman"
+		FullName="Bartender Spike" />
+
+	<Object
+		Name="Fermer"
+		FullName="Farmer Jose" />
+
+	<Object
+		Name="MainSigner"
+		FullName="Mechanic Chucky" />
+
+	<Object
+		Name="Kollizey1"
+		FullName="Organizer Nika" />
+
+	<Object
+		Name="Midragd"
+		FullName="MIDGARD" />
+
+	<Object
+		Name="Midragd_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Midragd_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Midragd_Bar"
+		FullName="Bar" />
+
+	<Object
+		Name="Midragd_Museum"
+		FullName="Museum" />
+
+	<Object
+		Name="Midragd_Bar_Barman"
+		FullName="Barmaid Ashley" />
+
+	<Object
+		Name="Professor"
+		FullName="Professor Mal" />
+	
+	<Object
+		Name="Professor_1"
+		FullName="Professor Mal" />
+
+	<Object
+		Name="Kollizey2"
+		FullName="Cashier Kristin" />
+	
+	<Object
+		Name="Kollizey2_1"
+		FullName="Cashier Kristin" />
+
+	<Object
+		Name="Citizen"
+		FullName="Citizen YoMoyo" />
+
+	<Object
+		Name="Zavhoz"
+		FullName="Supply manager Midas" />
+
+	<Object
+		Name="Umelec"
+		FullName="Master Doka" />
+
+	<Object
+		Name="Porto"
+		FullName="PORTO" />
+
+	<Object
+		Name="Porto_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Porto_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Porto_Bar"
+		FullName="Bar &quot;Dead Anchor&quot;" />
+
+	<Object
+		Name="Porto_Bar_Barman"
+		FullName="Businessman Max" />
+
+	<Object
+		Name="Karavanshik"
+		FullName="Caravanner Sean" />
+
+	<Object
+		Name="Anticwar"
+		FullName="Archaeologist Jaunes" />
+
+	<Object
+		Name="Kollizey3"
+		FullName="Supply manager Claudia" />
+
+	<Object
+		Name="PortoCitizen"
+		FullName="Citizen Kane" />
+
+	<Object
+		Name="TheArtefact"
+		FullName="LOCUS" />
+
+	<Object
+		Name="TheArtefact_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheArtefact_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheArtefact_Bar"
+		FullName="Saloon" />
+
+	<Object
+		Name="TheArtefact_BarWB"
+		FullName="Grandma Paula's house" />
+
+	<Object
+		Name="TheArtefact_Bar_Barman"
+		FullName="Saloon owner" />
+
+	<Object
+		Name="Staruha"
+		FullName="Grandma Paula" />
+
+	<Object
+		Name="Ben"
+		FullName="Ben The Throttle" />
+
+	<Object
+		Name="TheSign"
+		FullName="YAR" />
+
+	<Object
+		Name="TheSign_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheSign_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheSign_Bar"
+		FullName="Bar &quot;Crossroads&quot;" />
+
+	<Object
+		Name="TheSign_Bar_Barman"
+		FullName="Headman Bob" />
+
+	<Object
+		Name="Signer"
+		FullName="Peasant Shi" />
+
+	<Object
+		Name="Salvatore"
+		FullName="Thief Salvatore" />
+
+	<Object
+		Name="Lisa"
+		FullName="Lisa" />
+
+	<Object
+		Name="Lisa1"
+		FullName="Lisa" />
+
+	<Object
+		Name="Lisa2"
+		FullName="Lisa" />
+
+	<Object
+		Name="Ben2"
+		FullName="Ben The Throttle" />
+
+	<Object
+		Name="Stryga"
+		FullName="Merchant Stryga" />
+
+	<Object
+		Name="TheRace"
+		FullName="SMALL LAND" />
+
+	<Object
+		Name="TheRace_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheRace_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheRace_Bar"
+		FullName="Bar &quot;Nostalgia&quot;" />
+
+	<Object
+		Name="TheRace_Bar_Barman"
+		FullName="Barmaid Leoni" />
+
+	<Object
+		Name="TheOlimp"
+		FullName="RIMSKOE" />
+
+	<Object
+		Name="TheOlimp_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheOlimp_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheOlimp_Bar"
+		FullName="Bar &quot;Champion&quot;" />
+
+	<Object
+		Name="TheOlimp_Bar_Barman"
+		FullName="Headman Zeus" />
+
+	<Object
+		Name="TheTickets"
+		FullName="OLYMPIC" />
+
+	<Object
+		Name="TheTickets_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheTickets_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheTickets_Bar"
+		FullName="Bar &quot;Gambling&quot;" />
+
+	<Object
+		Name="TheTickets_ZAO"
+		FullName="CJSC &quot;Colosseum&quot;" />
+
+	<Object
+		Name="TheTickets_Bar_Barman"
+		FullName="Bookmaker Leah" />
+
+	<Object
+		Name="Director"
+		FullName="Collosseum Director" />
+
+	<Object
+		Name="Antisincer"
+		FullName="Slacker Den" />
+	
+	<Object
+		Name="Antisincer_1"
+		FullName="Slacker Den" />
+
+	<Object
+		Name="Fighter1"
+		FullName="Gladiator Sarah" />
+
+	<Object
+		Name="Fighter2"
+		FullName="Gladiator Logan" />
+
+	<Object
+		Name="Valerio"
+		FullName="Loader Valery" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown4"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown5"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown5_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Esting_enter"
+		FullName="EASTERN" />
+
+	<Object
+		Name="Midragd_enter"
+		FullName="MIDGARD" />
+
+	<Object
+		Name="Porto_enter"
+		FullName="PORTO" />
+
+	<Object
+		Name="TheArtefact_enter"
+		FullName="LOCUS" />
+
+	<Object
+		Name="TheSign_enter"
+		FullName="YAR" />
+
+	<Object
+		Name="TheRace_enter"
+		FullName="SMALL LAND" />
+
+	<Object
+		Name="TheOlimp_enter"
+		FullName="RIMSKOE" />
+
+	<Object
+		Name="TheTickets_enter"
+		FullName="OLYMPIC" />
+
+	<Object
+		Name="ToR1M1"
+		FullName="Road to Krai" />
+
+	<Object
+		Name="ToR1M3"
+		FullName="Road to Vaterland" />
+
+	<Object
+		Name="u1"
+		FullName="Benjamin" />
+
+	<Object
+		Name="u2"
+		FullName="Musk" />
+
+	<Object
+		Name="u3"
+		FullName="Schwartz" />
+
+	<Object
+		Name="u4"
+		FullName="Myth" />
+
+	<Object
+		Name="u5"
+		FullName="Hunchback" />
+
+	<Object
+		Name="u6"
+		FullName="River" />
+
+	<Object
+		Name="u7"
+		FullName="Sefer OT" />
+
+	<Object
+		Name="u8"
+		FullName="Caesar" />
+
+	<Object
+		Name="u9"
+		FullName="Zell" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph3"
+		FullName="Cartographer" />
+
+	<Object
+		Name="ChemistMan"
+		FullName="Pharmacist Nolan" />
+
+	<Object
+		Name="r1m2_BenHouse_1"
+		FullName="Ben's hut" />
+
+	<Object
+		Name="Librarian"
+		FullName="Old man Dod" />
+
+	<Object
+		Name="Librarian1"
+		FullName="Old man Dod" />
+</ObjectNames>

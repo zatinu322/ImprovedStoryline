@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="TheSet"
+		FullName="SET" />
+
+	<Object
+		Name="Set_Bar"
+		FullName="Cafeteria &quot;At the Oak&quot;" />
+
+	<Object
+		Name="Set_Bar_Barman"
+		FullName="Feren" />
+
+	<Object
+		Name="Set_Bar_MainDruid"
+		FullName="High Druid" />
+
+	<Object
+		Name="Set_Bar_Customer1"
+		FullName="Fionius" />
+
+	<Object
+		Name="Set_Bar_Customer2"
+		FullName="Asterisk" />
+
+	<Object
+		Name="Set_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Set_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheFist"
+		FullName="FIST" />
+
+	<Object
+		Name="Fist_Bar"
+		FullName="Bar &quot;Rock&quot;" />
+
+	<Object
+		Name="Fist_Bar_Barman"
+		FullName="Stallione" />
+
+	<Object
+		Name="Fist_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Fist_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheUluk"
+		FullName="ULUK" />
+
+	<Object
+		Name="Uluk_Bar"
+		FullName="Bar &quot;Crankshaft&quot;" />
+
+	<Object
+		Name="Uluk_Bar_Barman"
+		FullName="Karter" />
+
+	<Object
+		Name="Uluk_Bar_Leader"
+		FullName="Cult Leader" />
+
+	<Object
+		Name="Uluk_Bar_Customer1"
+		FullName="Carb" />
+
+	<Object
+		Name="Uluk_Workshop"
+		FullName="Workshop &quot;DIY&quot;" />
+
+	<Object
+		Name="Uluk_Shop"
+		FullName="Shop &quot;Bob's&quot;" />
+
+	<Object
+		Name="r3m1_NearFist_Guard1"
+		FullName="Fist Guard" />
+
+	<Object
+		Name="r3m1_NearFist_Guard2"
+		FullName="Fist Guard" />
+
+	<Object
+		Name="r3m1_NearUluk_RescueMan1"
+		FullName="Denissio" />
+
+	<Object
+		Name="TheRazboynik"
+		FullName="HIDEOUT" />
+
+	<Object
+		Name="TheRazboynik_Bar"
+		FullName="Blue nose" />
+
+	<Object
+		Name="TheRazboynik_Workshop"
+		FullName="AutoMedic" />
+
+	<Object
+		Name="Razboynik_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="TheRazboynik_Shop"
+		FullName="At the decibel" />
+
+	<Object
+		Name="Raz_Bar_Lisa"
+		FullName="Lisa" />
+
+	<Object
+		Name="ToR2M1"
+		FullName="Road to Librium" />
+
+	<Object
+		Name="ToR3M2"
+		FullName="Road to Ignott" />
+
+	<Object
+		Name="UlukAmush_loc"
+		FullName="Ambush site" />
+
+	<Object
+		Name="ToR1M4"
+		FullName="Port to Hel" />
+
+	<Object
+		Name="r3_FarVillage"
+		FullName="Elminst" />
+
+	<Object
+		Name="Razboynic_Bar_Customer1"
+		FullName="Gelvanto" />
+
+	<Object
+		Name="Uluk_Hram"
+		FullName="Temple of Worship" />
+
+	<Object
+		Name="Uluk_Hram_Zrec1"
+		FullName="Priest" />
+
+	<Object
+		Name="Set_HouseMainDruid"
+		FullName="House of Solitude" />
+
+	<Object
+		Name="r3_FarVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="r3_FarVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="heavy_dot2_vector1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot2_vulcan2"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot2_vulcan3"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot2_vulcan4"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_vulcan5"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_vulcan6"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot4_octopus7"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot4_octopus8"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot3_vulcan9"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot2_vector10"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot1_vulcan11"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_vulcan12"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord13"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord14"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_flag15"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot4_big_kpvt16"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot4_big_kpvt17"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot4_vulcan18"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_omega19"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot4_big_kpvt20"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_vulcan21"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord22"
+		FullName="Pillbox" />
+
+	<Object
+		Name=""
+		FullName="" />
+
+	<Object
+		Name="urod1"
+		FullName="Krowd" />
+
+	<Object
+		Name="urod2"
+		FullName="Shkvol" />
+
+	<Object
+		Name="urod3"
+		FullName="Borg" />
+
+	<Object
+		Name="urod4"
+		FullName="Mukhlik" />
+
+	<Object
+		Name="urod5"
+		FullName="Dan" />
+
+	<Object
+		Name="urod6"
+		FullName="Gaya" />
+
+	<Object
+		Name="urod7"
+		FullName="Sherman" />
+
+	<Object
+		Name="urod8"
+		FullName="Hrrr" />
+
+	<Object
+		Name="urod9"
+		FullName="Uncle Fu" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Cartographer" />
+</ObjectNames>

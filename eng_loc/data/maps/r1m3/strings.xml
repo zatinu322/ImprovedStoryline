@@ -1,0 +1,668 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_hero"
+		value="The bridge is blown up. The bandits won't be able to travel this way for a long time. It's time to go back."
+		sound="data\sounds\Speech\r1m3\r1m3_1_hero.ogg"
+		time="4" />
+
+	<string
+		id="4"
+		modelName="mask_hero"
+		value="There's a lot of strange things here... And everything is smashed. My name is carved on this board... It's a stash, and there's some kind of amulet inside. It's a curious thing. I'll keep it. "
+		sound="data\sounds\Speech\r1m3\r1m3_4_hero.ogg"
+		time="8" />
+
+	<string
+		id="401"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="RADIO|Hey! I think it's working! This is Ben,over. I've set up the radio transmitter. How's the search going?"
+		sound="data\sounds\Speech\r1m3\r1m3_401_ben_radio.ogg"
+		time="8" />
+
+	<string
+		id="402"
+		modelName="mask_hero"
+		value="Radio communication at this distance? You're a real genius. The search turned up nothing, unfortunately. There's nothing here but junk. But I did find an amusing amulet with buttons and the inscription: UB-627 Red access."
+		sound="data\sounds\Speech\r1m3\r1m3_402_hero.ogg"
+		time="8" />
+
+	<string
+		id="403"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="RADIO|Just like in the old manuscripts! It's the key to the Sea Gate! But where did your father get it? It doesn't matter. Listen carefully..."
+		sound="data\sounds\Speech\r1m3\r1m3_403_ben_radio.ogg"
+		time="8" />
+
+	<string
+		id="404"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="RADIO|It is said that an Oracle lives on an island lost in the ocean. Whoever passes all the challenges on the way to his residence will get an answer to any question he may have."
+		sound="data\sounds\Speech\r1m3\r1m3_404_ben_radio.ogg"
+		time="14" />
+
+	<string
+		id="4044"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="RADIO|Obviously, all this is fiction. However, there is reason to believe that this legend has a scientific basis. And the key you now wear around your neck is clear evidence of that."
+		sound="data\sounds\Speech\r1m3\r1m3_4044_ben_radio.ogg"
+		time="14" />
+
+	<string
+		id="405"
+		modelName="mask_hero"
+		value="It would be nice to find out from this Oracle what happened to Ivan. In any case, it was not for nothing that such a rare thing ended up in his stash."
+		sound="data\sounds\Speech\r1m3\r1m3_405_hero.ogg"
+		time="8" />
+
+	<string
+		id="406"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="RADIO|I have read ancient documents which said, or rather one could read between the lines, that there was some large and very secret construction on an island. "
+		sound="data\sounds\Speech\r1m3\r1m3_406_ben_radio.ogg"
+		time="8" />
+
+	<string
+		id="407"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_407_ben_radio.ogg"
+		value="RADIO|Drive all the way north. Somewhere at the very edge of the earth are the Sea Gates. You'll know it when you see it. I don't know any more than that myself. It looks like my radio is completely broken..."
+		time="12" />
+
+	<string
+		id="408"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_408_hero.ogg"
+		value="The signal was cut off... But I understood what Ben was talking about. I'll get the details in Minin."
+		time="4" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_5_hero.ogg"
+		value="So how do I open this enormous gates? The bartender is not as simple as I thought. If I go back, he'll ask such a price for the key... Maybe I should come up with another plan."
+		time="8" />
+
+	<string
+		id="6"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_6_hero.ogg"
+		value="Since I came here, I'll wait here! Somebody will show up. All I have to do is find an inconspicuous place to hide."
+		time="8" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_7_hero.ogg"
+		value="This is where I'm going to hide. It's a great place for an ambush."
+		time="4" />
+
+	<string
+		id="8"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_8_hero.ogg"
+		value="Someone is coming out of the tunnel! I could attack him right away. Or is it better to follow him and try to obtain the key peacefully?"
+		time="8" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_9_hero.ogg"
+		value="Sorry for killing you, but I really need this key."
+		time="4" />
+
+	<string
+		id="10"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_10_hero.ogg"
+		value="Right, he went to a bar to have some fun. I should definitely follow him. "
+		time="4" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_16_hero.ogg"
+		value="I think the mayor is in that car! Where, I wonder, is he going in such a hurry? I'd better follow..."
+		time="4" />
+
+	<string
+		id="17"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_17_hero.ogg"
+		value="How much stuff is piled up in that secret stash! So the mayor really is a thief! If I tell Minin about it, he'll definitely be kicked out of the governing post. If not worse. And the workers might want to work again!"
+		time="12" />
+
+	<string
+		id="18"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_18_hero.ogg"
+		value="Well, I've failed the surveillance..."
+		time="4" />
+
+	<string
+		id="19"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_19_hero.ogg"
+		value="I've failed surveillance on the mayor..."
+		time="4" />
+
+	<string
+		id="20"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_20_hero.ogg"
+		value="Well, the derrick is free! The last enemy has run away. He can lead me to the bandit base. But do I need it?!"
+		time="8" />
+
+	<string
+		id="30"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_30_hero.ogg"
+		value="What happened here? The wall panels have been broken off. There was a secret place behind them, but it's open now. And it's empty. Somebody has robbed my father's house."
+		time="13" />
+
+	<string
+		id="31"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_31_hero.ogg"
+		value="The enemy is defeated! I have the disk! Time to go to the Oracle!!!"
+		time="4" />
+
+	<string
+		id="32"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_32_hero.ogg"
+		value="Lisa, you?! It's not often you see a familiar face in a foreign land. How have you been?"
+		time="4" />
+
+	<string
+		id="33"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_33_alice.ogg"
+		value="LISA|It's all right, thank you. You've matured since the last time I saw you. If I'd known who you were right away, it would have saved me a lot of time. It's not that bad, though."
+		time="8" />
+
+	<string
+		id="34"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_34_hero.ogg"
+		value="What are you doing? Stop! That's mine! You thief, I'll get you! She stole the disk, without it I can't find out anything from the Oracle!"
+		time="8" />
+
+	<string
+		id="3412"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_3412_hero.ogg"
+		value="What the hell is that?!"
+		time="4" />
+
+	<string
+		id="35"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_35_oracle.ogg"
+		value="ORACLE|Human! You have arrived on time."
+		time="4" />
+
+	<string
+		id="36"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_36_hero.ogg"
+		value="Oracle? You have been transformed. How lucky we are to meet! I must speak to you."
+		time="4" />
+
+	<string
+		id="361"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_361_oracle.ogg"
+		value="ORACLE|First hear me out. I trust you completely, and I want to tell you a secret. It is very important. Many years ago, alien invaders irradiated our planet with death rays, resulting in a drastic reduction in the planet's biomass."
+		time="22" />
+
+	<string
+		id="3610"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_3610_oracle.ogg"
+		value="ORACLE|Being in hibernation mode, I analyzed the data and prepared a counterattack. I almost managed to locate the source of the emissions, but I need more accurate data."
+		time="15" />
+
+	<string
+		id="362"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_362_hero.ogg"
+		value="It is in the desert! I found a terrible place in the middle of the dunes, that kills everyone who comes near! It is the source of the contagion that has poisoned the planet and killed so many people! The devil's machine must be stopped to cleanse our world!"
+		time="12" />
+
+	<string
+		id="363"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_363_oracle.ogg"
+		value="ORACLE|Your information is priceless. These coordinates coincide with my calculations. I, like you, see only one way - the complete destruction of the alien element."
+		time="8" />
+
+	<string
+		id="364"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_364_hero.ogg"
+		value="We just need to find a weapon powerful enough, and I will indicate the coordinates of the target. Surely our ancestors must have had a stockpile of weapons. Try to remember!"
+		time="8" />
+
+	<string
+		id="365"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_365_oracle.ogg"
+		value="ORACLE|Indeed, humans have accumulated an enormous number of deadly devices. Right now there are dozens of satellites loaded with atomic warheads circling in the sky above us. Orbital bombardment is the best way to attack in this situation."
+		time="12" />
+
+	<string
+		id="366"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_366_hero.ogg"
+		value="Then what are you waiting for?!"
+		time="4" />
+
+	<string
+		id="367"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_367_oracle.ogg"
+		value="ORACLE|The powerful interference source blocking most of my signals is in Librium. My guess is that it's powered by the Sel power plant. Deactivate it, and my control over all ancient technology is complete."
+		time="12" />
+
+	<string
+		id="368"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_368_hero.ogg"
+		value="I am glad to have such an ally as you, Oracle."
+		time="4" />
+
+	<string
+		id="369"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_369_oracle.ogg"
+		value="ORACLE|Soon the planet will be saved!"
+		time="4" />
+
+	<string
+		id="370"
+		modelName="mask_hero"
+		sound=""
+		value="There's something you both aren't telling me, and you want to use me for your own ends! I have no intention of interfering in your conflict!"
+		time="10" />
+
+	<string
+		id="371"
+		modelName="r4_man"
+		modelSkin="0"
+		modelCfg="135"
+		modelSlot="1"
+		sound=""
+		value="BUKHARIAN'S ELDER|There you are! We've been looking all over for you!"
+		time="5" />
+
+	<string
+		id="372"
+		modelName="mask_hero"
+		sound=""
+		value="Oh, it's you! I'm glad you made it safely to our peaceful land. What do you need me for?"
+		time="8" />
+
+	<string
+		id="373"
+		modelName="r4_man"
+		modelSkin="0"
+		modelCfg="135"
+		modelSlot="1"
+		sound=""
+		value="BUKHARIAN'S ELDER|Time waits for no man - here, take this sacred scripture. Perhaps only you will be able to understand what is written here."
+		time="9" />
+
+	<string
+		id="374"
+		value="The new man||I tried to analyze the reasons of the catastrophe and came to the conclusion, that it was an evolutionary leap, triggered by an unknown power. I dread to think, what we would have turned into, had we been prepared for that gift. Whoever gave us that power, has done it before time.|The process of skin transformation under the mask was almost over, but the people needed a leap of faith to complete it. Yet they grew so attached to the new world and the fear of unknown was so strong, that they couldn’t let themselves go. People preferred to live and to die as children of the earth. Their numbers dwindled.|Those who remained were holding onto their former life, even though they had only a distant memory of what human life was like. It wasn’t easy to lead the life of a human, when you didn’t know what you were supposed to do. So, they tried to recreate towns and governments and engaged themselves in the most archaic activities – trade and war.|..." />
+
+	<string
+		id="375"
+		value="The new man||The more people realized their spiritual nature, the harder they tried to surround themselves with objects that reminded them of their former life. Hence their love for vehicles – the objects that are always with you and that let you be who you are. So, the truck becomes everything to the modern man. It’s his home, his identity and his weapon. The economy of the new world is based on truck production, service and refueling. The money is spent solely on the truck upgrades. The truck has become a fetish for the new man. All hopes and ambitions were now focused on the piece of metal on wheels... There remained some other emotions, of course, but these were in fact memories of emotions.|...|You should put an end to this imitation of life.|...|...|Everything will be resolved at the iron bird that fell from heaven on the swamps..." />
+
+	<string
+		id="376"
+		modelName="mask_hero"
+		sound=""
+		value="Where did you get this book?"
+		time="4" />
+
+	<string
+		id="377"
+		modelName="r4_man"
+		modelSkin="0"
+		modelCfg="135"
+		modelSlot="1"
+		sound=""
+		value="BUKHARIAN'S ELDER|It was left for us by the man you asked about. I had completely forgotten about it when we first spoke to you. He said to give it to someone who would follow in his footsteps."
+		time="14" />
+
+	<string
+		id="378"
+		modelName="mask_hero"
+		sound=""
+		value="It says about some place at the end... An iron bird on the swamps... I think I saw something like that out of the corner of my eye when I drove to the Sea Gate. Thanks for the info!"
+		time="12" />
+
+	<string
+		id="379"
+		modelName="mask_hero"
+		sound=""
+		value="Well, here's the caravan. Only brought two sacks of potatoes... Not enough. Very few, in fact."
+		time="8" />
+
+	<string
+		id="380"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		sound=""
+		value="IVAN GO|He's leaving. Let's see what they have in the warehouse."
+		time="5" />
+
+	<string
+		id="381"
+		modelName="mask_hero"
+		sound=""
+		value="No way! There's enough provisions for ten cities! There's not even enough room in the warehouse! Don't they notice all this?"
+		time="10" />
+
+	<string
+		id="382"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		sound=""
+		value="IVAN GO|That's right. Their worldview is fixed on a lack of food, and even if you unloaded those bags right in the middle of town, they would just silently put them back in the warehouse and continue to &quot;starve&quot;."
+		time="14" />
+
+	<string
+		id="383"
+		modelName="mask_hero"
+		sound=""
+		value="But why do you and I see it all?"
+		time="5" />
+
+	<string
+		id="384"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		sound=""
+		value="IVAN GO|Once you doubt the reality of what's happening, you can't start acting as if nothing terrible is happening again. A frightening secret was revealed to you, as it was to me. There is no going back."
+		time="15" />
+
+	<string
+		id="385"
+		modelName="mask_hero"
+		sound=""
+		value="What's next?"
+		time="3" />
+
+	<string
+		id="386"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		sound=""
+		value="IVAN GO|You haven't fully believed me yet. Some part of your mind is still clinging to your old life. You still believe in death, don't you?"
+		time="10" />
+
+	<string
+		id="387"
+		modelName="mask_hero"
+		sound=""
+		value="Yes. I do."
+		time="3" />
+
+	<string
+		id="388"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		sound=""
+		value="IVAN GO|Well, let me prove to you that it's impossible to die in this world. What example would you like to see?"
+		time="9" />
+
+	<string
+		id="389"
+		modelName="mask_hero"
+		sound=""
+		value="Let's go to Gloohoe!"
+		time="3" />
+
+	<string
+		id="390"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		sound=""
+		value="IVAN GO|Are you sure?"
+		time="2" />
+
+	<string
+		id="391"
+		modelName="mask_hero"
+		sound=""
+		value="Yes. If there's any place to deconstruct my faith in death, it's in the place where it all began!"
+		time="8" />
+
+	<string
+		id="392"
+		modelName="mask_hero"
+		sound=""
+		value="I wonder how that old man from Minin, whom I took to the ruins, is doing. I should check on him."
+		time="10" />
+
+	<string
+		id="37"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_37_hero.ogg"
+		value="Now I'll have to look for workers in another village."
+		time="4" />
+
+	<string
+		id="38"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_38_hero.ogg"
+		value="Now I will never know where the bandit base is."
+		time="4" />
+
+	<string
+		id="3002"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_3002_oracle.ogg"
+		value="ORACLE|Human, you helped me regain my former power, but now you interfere in things you don't understand!"
+		time="8" />
+
+	<string
+		id="3004"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_3004_oracle.ogg"
+		value="ORACLE|I am looking for resources to destroy the source of the radiation."
+		time="4" />
+
+	<string
+		id="3005"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_3005_hero.ogg"
+		value="Why destroy? There are plenty of people around! There is always another way. It's enough to use this device and..."
+		time="8" />
+
+	<string
+		id="3006"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_3006_oracle.ogg"
+		value="ORACLE|Fool! I know who gave you this. Once you turn on your device, life on earth will end. This is the last part of their plan to take over the planet! Step back!"
+		time="8" />
+
+	<string
+		id="3007"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_3007_hero.ogg"
+		value="You're insane! I intend to save all of you, and no one can stop me!"
+		time="4" />
+
+	<string
+		id="3008"
+		modelName="mask_oracul"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m3\r1m3_3008_oracle.ogg"
+		value="ORACLE|Cooperation with the enemy is unacceptable. The traitor must be destroyed."
+		time="4" />
+
+	<string
+		id="3009"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r1m3\r1m3_3009_hero.ogg"
+		value="Then I'll have to fight you!"
+		time="4" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
+		value="I don't know where this road leads, so I'll stay here."
+		time="3" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="It's a strange place. I'd better stay away from here."
+		time="3" />
+
+	<string
+		id="8804"
+		value="Do you want to cross the bridge?"
+		numButtons="2" />
+
+	<string
+		id="8805"
+		value="Do you want to cross the bridge?|It will cost you 1500 coins."
+		numButtons="2" />
+
+	<string
+		id="8806"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="SQUAD LEADER|There you are! The plan is as follows: we act in a well-coordinated manner. First we demolish the Brigade's turrets near the bridge, then we move deeper, knocking out all the enemy vehicles that we meet along the way. Our main objective is to destroy the base's defenses. Is that clear?"
+		time="15" />
+
+	<string
+		id="8807"
+		modelName="mask_hero"
+		sound=""
+		value="Yes, sir! Attack!"
+		time="5" />
+
+	<string
+		id="8808"
+		modelName="mask_hero"
+		sound=""
+		value="And from afar the ruins seemed much smaller than they really were... How am I supposed to find out where the merchant hid the covers? Well, I guess I'll have to look."
+		time="11" />
+
+	<string
+		id="8809"
+		modelName="mask_hero"
+		sound=""
+		value="There's the box! Without those bandits, it would have taken me a long time to find it. Now that I have the covers, it's time to go back to Midgard!"
+		time="7" />
+
+	<string
+		id="8810"
+		modelName="mask_hero"
+		sound=""
+		value="Damn it, the Oracle isn't inside. It seems to be just one of its remote modules. I need to get the blocker to the Overlord as soon as possible! I'll better sail through Argen, it'll be much faster."
+		time="15" />
+
+	<string
+		id="8811"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="SQUAD LEADER|There you are! The plan is as follows: we act accurately and coherently. The standard blitz attack - we attack suddenly and in a bunch, and, taking advantage of the confusion of the enemy, quickly destroy them. Is that clear?"
+		time="15" />
+
+	<string
+		id="8812"
+		modelName="mask_hero"
+		sound=""
+		value="Now the main artery of northern trade is open again! Hopefully, prosperity will return to the region."
+		time="7" />
+
+	<string
+		id="8813"
+		modelName="mask_hero"
+		sound=""
+		value="Damn it, she slipped away! There's no other way out of here, so she must have gone through Pesht. I'll try my luck there."
+		time="9" />
+
+	<string
+		id="6006"
+		value="Not enough money. You must have 1500 coins to cross the bridge." />
+
+	<string
+		id="5963"
+		modelName=""
+		value="After you killed the Minin mayor, the North Path Traders declared you an enemy, and now you will never know the way to the Oracle."
+		sound="data\sounds\speech\rolik\ending4.ogg"
+		fontSize="18"
+		time="10" />
+
+	<string
+		id="5964"
+		modelName=""
+		value="Without detailed information from the traders, you had to find your way to the north yourself. You got lost, you ran out of fuel, and the bandits hiding in an ambush easily destroyed you."
+		sound="data\sounds\speech\rolik\ending5.ogg"
+		fontSize="18"
+		time="13" />
+
+	<string
+		id="5966"
+		value="Password for the bonus ending: ****X**********|For more information, read the mod's manual." />
+		
+	<string
+		id="5967"
+		value="Password for the bonus ending: *****c*********|For more information, read the mod's manual." />
+
+	<string
+		id="9999"
+		value="Improved Storyline v1.1||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+</resource>

@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_hero"
+		value="It's a dangerous place. I don't want to get into this swamp without an important reason."
+		sound="data\sounds\Speech\r1m4\r1m4_1_hero.ogg" />
+
+	<string
+		id="2"
+		modelName="mask_hero"
+		value="This seems to be the place Homer was talking about. I'll try to cross the swamp here."
+		sound="data\sounds\Speech\r1m4\r1m4_2_hero.ogg"
+		time="1" />
+
+	<string
+		id="3"
+		modelName="mask_hero"
+		value="The old man was right, there was a solid bottom beneath the layer of mud. I wonder what is waiting for me on the other side?"
+		sound="data\sounds\Speech\r1m4\r1m4_3_hero.ogg"
+		time="1" />
+
+	<string
+		id="4"
+		modelName="r1_man"
+		modelSkin="2"
+		modelCfg="132"
+		modelSlot="1"
+		value="GUARD|Do not approach! Any suspicious actions will be considered as aggression!"
+		sound="data\sounds\Speech\r1m4\r1m4_4_guard.ogg"
+		time="4" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		value="You carry the cargo I need. I will pay you generously for it."
+		sound="data\sounds\Speech\r1m4\r1m4_5_hero.ogg"
+		time="4" />
+
+	<string
+		id="6"
+		modelName="r1_man"
+		modelSkin="2"
+		modelCfg="132"
+		modelSlot="1"
+		value="GUARD|Attempted bribery of an official in the line of duty! "
+		sound="data\sounds\Speech\r1m4\r1m4_6_guard.ogg"
+		time="4" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		value="Looks like I'm going to have to do this the hard way. Free the prisoner and get the hell out of here. You won't get a second chance."
+		sound="data\sounds\Speech\r1m4\r1m4_7_hero.ogg"
+		time="4" />
+
+	<string
+		id="8"
+		modelName="r1_man"
+		modelSkin="2"
+		modelCfg="132"
+		modelSlot="1"
+		value="GUARD|Everyone to the guns! Let's show that impudent man how to mess with the officers of the law!"
+		sound="data\sounds\Speech\r1m4\r1m4_8_guard.ogg"
+		time="4" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		value="You chose to do it yourself. The main thing is not to hit the trailer with the prisoner. The rest can burn in flames!"
+		sound="data\sounds\Speech\r1m4\r1m4_9_hero.ogg"
+		time="4" />
+
+	<string
+		id="10"
+		modelName="mask_hero"
+		value="What are you waiting for? Get in my truck. Hurry, they could have called for help.  "
+		sound="data\sounds\Speech\r1m4\r1m4_10_hero.ogg"
+		time="4" />
+
+	<string
+		id="11"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="86"
+		modelSlot="1"
+		value="LEADER|Thank you for freeing me, stranger. But what are your motives? I'm not sure I can trust you."
+		sound="data\sounds\Speech\r1m4\r1m4_11_leader.ogg"
+		time="4" />
+
+	<string
+		id="12"
+		modelName="mask_hero"
+		value="I made a deal with your men that I would free you in exchange for the one thing I needed. And they had better hold up their part of the bargain!"
+		sound="data\sounds\Speech\r1m4\r1m4_12_hero.ogg"
+		time="4" />
+
+	<string
+		id="13"
+		modelName="mask_hero"
+		value="Unfortunately, the prisoner's trailer got exploded in the heat of the moment. He's dead, and I have nothing to offer the extremists..."
+		sound="data\sounds\Speech\r1m4\r1m4_13_hero.ogg"
+		time="4" />
+
+	<string
+		id="15"
+		value="CLAW|Forbidden Zone!"
+		sound="data\sounds\Speech\r1m4\r1m4_15_boss.ogg"
+		time="4" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		value="Oh, my God! What the...? Why did the people of Old World need such machines?"
+		sound="data\sounds\Speech\r1m4\r1m4_16_hero.ogg"
+		time="4" />
+
+	<string
+		id="17"
+		modelName="mask_hero"
+		value="This monster guards the passage to the Sea Gate. I need to find a way to defeat it... I'm not sure if regular bullets will work on its body."
+		sound="data\sounds\Speech\r1m4\r1m4_17_hero.ogg"
+		time="4" />
+
+	<string
+		id="18"
+		modelName="mask_hero"
+		value="This is the place that Homer mentioned, but I don't see any gate. Was it all for nothing?!"
+		sound="data\sounds\Speech\r1m4\r1m4_18_hero.ogg"
+		time="4" />
+
+	<string
+		id="19"
+		modelName="mask_hero"
+		value="What's that coming out of the water? I just killed one monster and another one's on the way... This one's a little calmer, though."
+		sound="data\sounds\Speech\r1m4\r1m4_19_hero.ogg"
+		time="12" />
+
+	<string
+		id="20"
+		modelName="mask_hero"
+		value="It seems he's inviting me into his jaws. So this is the Sea Gate! In the belly of the beast I will swim to the Oracle. It's scary, of course... Well, I've got nothing to lose. Only forward!"
+		sound="data\sounds\Speech\r1m4\r1m4_20_hero.ogg"
+		time="4" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="8804"
+		modelName="mask_hero"
+		value="There's something out there in the distance. That statue... Why is it there? Who built it there? I don't understand..."
+		time="15" />
+
+	<string
+		id="8805"
+		modelName="mask_hero"
+		value="Lisa, do you copy? Can you hear me?"
+		time="5" />
+
+	<string
+		id="8806"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="LISA|Yeah, it's intermittent, but I can hear you. How's the search going?"
+		sound=""
+		time="7" />
+
+	<string
+		id="8807"
+		modelName="mask_hero"
+		value="It looks like the road to the frozen lands really starts here. I'm trying to get some warm clothes, and we're going to need some explosives, too."
+		time="13" />
+
+	<string
+		id="8808"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="LISA|Explosives? What for?"
+		sound=""
+		time="3" />
+
+	<string
+		id="8809"
+		modelName="mask_hero"
+		value="The tunnel leading there is blocked by the rocks. And it looks like Ivan did it himself."
+		time="9" />
+
+	<string
+		id="8810"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="LISA|Got it. I'll get the explosives and come straight to you. Over and out."
+		sound=""
+		time="8" />
+
+	<string
+		id="8811"
+		modelName="mask_hero"
+		value="That's a lot of stuff in here. Yep, there's clothes, I think. Well, I hope it fits."
+		time="10" />
+
+	<string
+		id="8812"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Well, not bad at all."
+		time="7" />
+
+	<string
+		id="8813"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound=""
+		value="LISA|You look great, fancy man."
+		time="6" />
+
+	<string
+		id="8814"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="You're just jealous that I got to the storage earlier and got the best of everything."
+		time="9" />
+
+	<string
+		id="8815"
+		modelName="mask_lisa"
+		modelSlot="1"
+		sound=""
+		value="LISA|Yes, with black envy. All right, let's see what we have here."
+		time="8" />
+
+	<string
+		id="8816"
+		modelName="mask_lisa"
+		modelSkin="0"
+		modelSlot="1"
+		sound=""
+		value="LISA|Wow! I've only seen these in pictures!"
+		time="7" />
+
+	<string
+		id="8817"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		sound=""
+		value="LISA|It's nice and warm! I'm ready! What now?"
+		time="7" />
+
+	<string
+		id="8818"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="The most essential part is left - to clear the tunnel."
+		time="7" />
+
+	<string
+		id="8819"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		sound=""
+		value="LISA|I have explosives, that should be enough. Show me the way."
+		time="8" />
+
+	<string
+		id="8820"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Lisa, get away, I'm lighting the fuse!"
+		time="7" />
+
+	<string
+		id="8821"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		sound=""
+		value="LISA|It seemed to work. And how impressive, too!"
+		time="8" />
+
+	<string
+		id="8822"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="All right, the way is cleared. I don't know what awaits us on the other side, but I'm ready!"
+		time="9" />
+
+	<string
+		id="8823"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		sound=""
+		value="LISA|Me too. Let's go!"
+		time="5" />
+
+	<string
+		id="8824"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="SQUAD LEADER|So, you all know what to do! Full throttle, first the pillboxes, then the guards! Let's show them how to mess with the northern traders!"
+		time="11" />
+
+	<string
+		id="8825"
+		modelName="mask_hero"
+		value="The storage is cleared, the work is done! Now it's time to check out what's in this warehouse at all."
+		time="9" />
+
+	<string
+		id="8826"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="MASTER DOKA|This is the master from Midgard, over. I ordered the covers, and the merchant left them in the ruins of the old city in Vaterland, I'm sending the coordinates. Be careful, they say the &quot;Brigade&quot; bandits were seen there."
+		sound=""
+		time="15" />
+
+	<string
+		id="8827"
+		modelName="mask_hero"
+		value="Got it. I've got the composite, so I'll pick up the covers and drive up to Midgard. Be ready to get to work. Over and out."
+		time="9" />
+
+	<string
+		id="8828"
+		value="Try to cross the swamp?"
+		numButtons="2" />
+
+	<string
+		id="8829"
+		modelName="mask_hero"
+		value="It's a dangerous place. It's dangerous to go into this swamp at random, but I can't afford to waste time questioning the locals. I'll try to drive around the edge."
+		time="14" />
+
+	<string
+		id="8830"
+		modelName="mask_hero"
+		value="Damn it, I think the wheels are stuck in the mud! Come on, come on! Come on! Come on!"
+		time="8" />
+
+	<string
+		id="8831"
+		modelName="mask_hero"
+		value="No! No! No! It can't end like this! It can't! It can't..."
+		time="7" />
+
+	<string
+		id="8832"
+		modelName="mask_hero"
+		value="After what I've done here, I think it's safer to go through the Druid islands."
+		time="7" />
+
+	<string
+		id="8833"
+		modelName="mask_hero"
+		value="Here comes the iron bird. And what is to be resolved here?"
+		time="6" />
+
+	<string
+		id="8834"
+		modelName="mask_hero"
+		value="Let's check the cabin. There's something in here. Some kind of book. &quot;Confirmation of the instant evolution theory&quot;. I think that's what I need."
+		time="13" />
+
+	<string
+		id="8835"
+		modelName="mask_hero"
+		value="There's a signature. &quot;Author... ...better known in the new world as Ivan Go.&quot;"
+		time="6" />
+
+	<string
+		id="8836"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|Hello, son."
+		time="4" />
+
+	<string
+		id="8837"
+		value="Confirmation of the instant evolution theory||...In the course of my research, I was able to find definitive and credible arguments in favor of the theory of evolutionary leapfrogging, however paradoxical it might be. Most people really could not accept this gift, permanently settled in cities, and still desperately grasping for the crumbs of their former lives.||But there are exceptions. They, who also don't understand what they are up against, try to behave like the most ordinary people, but there is great potential in them themselves. They are the ones who manage to break the shackles of the daily routine, leave their homes, and travel the world.||At first everything seems normal to them, but the more they observe the world from the outside, the stronger their sense of unreality, of the artificiality of what is happening. Then they begin to search for answers, and this search leads them to the Overlord, who takes them for himself forever.||However, the author of this theory was wrong about one thing. No living human could die, no matter what happened to him. After the activation of the device inside the Overlord (as the Madmen call him), time itself stopped existing on this planet, and, therefore, the concept of death underwent strong changes." />
+
+	<string
+		id="8838"
+		value="Of course, because people still hold the old conceptions of death, a person who dies in front of their eyes will be considered dead by them, but he himself will not die, but, instantly forgetting his death, will continue to do what he was doing before. It is just that other people will stop noticing him.||It is the same with physiological needs. The new people are not hungry, thirsty, hot, cold, suffering from any disease or injury. Yes, they can still freeze from the cold and sweat from the heat and die from supposedly deadly diseases, but it all happens only in their heads according to the same algorithm I described above.||With emotions it is much more complicated. As I was able to find out, the mental state of new people is directly affected by the downed plate. In its immediate surroundings (Vahat and Zarmek), people are excessively aggressive, their minds are clouded, and their thinking is confused. In my opinion, this is explained by the Overlord's defense mechanism, whose main purpose is to protect himself by preventing intruders from entering Zarmek." />
+
+	<string
+		id="8839"
+		value="On the other side of the fallen plate lie the Mountains of the Wise, with a radically different situation. Whereas in the Desert, the locals force strangers away from the crash site, the peaceful snowy landscapes themselves dispose anyone in the region to abandon all their goals and stay there forever. Very few are able to resist the strange energy of this place, which the locals call the &amp;quot;Grace&amp;quot;. It is, as we see it, a very different mechanism for protecting the Overlord from strangers.||The mind of people in other regions is almost completely unaffected by the Overlord. The reason for this behavior is unknown - either the inhabitants of distant lands pose no danger to him, or he simply cannot influence such long distances.||It is also extremely important to mention the two sides of the conflict surrounding the Overlord. On one side is the Njeri race, to which the Overlord directly belongs. On the other side is an artificial intelligence calling itself the Oracle. Njeri pursue the goal of keeping humanity in check, preventing the final accomplishment of the evolutionary leap mentioned earlier. The Oracle's goal is the complete destruction of the Overlord, which will do more harm than good.||But how can we, ordinary people, get out of this difficult situation? There is only one way out: wait. Waiting for someone who, having learned the whole truth, will not go crazy, will realize his otherness and break free from the shackles of a familiar, but now non-existent life." />
+
+	<string
+		id="8840"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|You were right - it really is a beautiful place."
+		time="5" />
+
+	<string
+		id="8841"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|You know, sometimes I catch myself thinking that we no longer exist in the universe."
+		time="7" />
+
+	<string
+		id="8842"
+		modelName="mask_hero"
+		value="How's that?"
+		time="3" />
+
+	<string
+		id="8843"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|It seems to me that we are in a kind of Purgatory. Not metaphorically, but really in biblical Purgatory. A place where our souls are imprisoned in the shackles of an ever-repeating existence. A place where there is no time, no need, and no death."
+		time="17" />
+
+	<string
+		id="8844"
+		modelName="mask_hero"
+		value="It's kind of like that."
+		time="3" />
+
+	<string
+		id="8845"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|And our souls are doomed to sit in the same place and do the same things. Sometimes there are strong souls who are able to break free from these chains. There are also those who must hinder such souls and lead them down the path - the Oracle and Njeri."
+		time="17" />
+
+	<string
+		id="8846"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|And at the end of the path, when no one has broken you, you take off the mask and release your soul."
+		time="8" />
+
+	<string
+		id="8847"
+		modelName="mask_hero"
+		value="I wish I could believe that. But it's too simple an explanation."
+		time="7" />
+
+	<string
+		id="8848"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|Who knows..."
+		time="3" />
+
+	<string
+		id="8849"
+		modelName="mask_hero"
+		value="I am ready. I feel that there is no fear in me anymore. Father, I don't know what will come next, but whatever happens, don't tell anyone about it. For their sake."
+		time="14" />
+
+	<string
+		id="8850"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="IVAN GO|It's the least I can do for you."
+		time="5" />
+
+	<string
+		id="8851"
+		modelName="mask_hero"
+		value="Well, let's not hesitate any longer. On the count of three. One... Two..."
+		time="6" />
+
+	<string
+		id="8852"
+		modelName="mask_hero"
+		value="Three..."
+		time="3" />
+
+	<string
+		id="8853"
+		modelName="mask_hero"
+		value="I wonder how Tikhomir and Dobroslava are doing. I'll probably have to pay them a visit on my way to Vaterland."
+		time="9" />
+
+	<string
+		id="5963"
+		value="Password for the bonus ending: ******z********|For more information, read the mod's manual." />
+	<string
+		id="5964"
+		value="Password for the bonus ending: *******Q*******|For more information, read the mod's manual." />
+	<string
+		id="5965"
+		value="Password for the bonus ending: ********v******|For more information, read the mod's manual." />
+
+	<string
+		id="5968"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Компания «Targem Games»| | | |@ffffa600Продюсер||@ffffffffСтанислав «scorp» Скорб| | |@ffffa600Технический директор проекта||@ffffffffАлексей Скрябин| | |@ffffa600Менеджер проекта||@ffffffffЕвгений «Hrrr» Хрунов| | |@ffffa600Сценарий||@ffffffffАлексей «Alex TG» Честных| | |@ffffa600Ведущий программист проекта||@ffffffffАнтон «anger» Савин| | |@ffffa600Главный дизайнер проекта||@ffffffffАлексей «Alex TG» Честных| | |@ffffa600Ведущий художник проекта||@ffffffffАлександр «Alex ML» Маргушин| | |@ffffa600Дизайн игры||@ffffffffДенис «mif2000» Галанин|@ffffffffСергей «JSinx» Удюрминский|@ffffffffАлексей «Razaz» Ануфриев|@ffffffffСтанислав «scorp» Скорб|@ffffffffБорис «borg» Смирнов| | |@ffffa600Программирование||@ffffffffЕлена «SoftKitty» Евдокимова|@ffffffffИван «Vano» Власов|@ffffffffИлья «phosgen» Рузаков|@ffffffffМаксим «Shadow» Сарманов|@ffffffffСергей «Ice Cat» Ключковский|@ffffffffИгорь «Goryh» Дегтярев| | |@ffffa600Графика||@ffffffffАлександр «Alex ML» Маргушин|@ffffffffИван Снигирев|@ffffffffЕвгений «Dzhin» Гольцов|@ffffffffВладимир «Price» Селезнев|@ffffffffСтанислав «Staz» Черва|@ffffffffРустам «Rychi» Турей|@ffffffffЕвгений Токарев|@ffffffffСергей «Sega» Митряев|@ffffffffВиктор «isymbosi» Корьякин|@ffffffffРоман Латынов| | |@ffffa600Дизайн миссий||@ffffffffДенис «mif2000» Галанин|@ffffffffСергей «JSinx» Удюрминский|@ffffffffАртем «solo» Соловьев|@ffffffffКондратьев «HiKiller» Даниил|@ffffffffСтанислав «Staz» Черва| | |@ffffa600Разработка интерфейсов||@ffffffffМихаил «Rai» Матвиенко| | |@ffffa600Спецэффекты||@ffffffffАлексей «Hal» Лобанов| | |@ffffa600Музыка/звуки||@ffffffffАнтон Попов|@ffffffffЕкатерина Швеммер| | |@ffffa600Тестирование||@ffffffffВячеслав «ls» Авдеев| | |@ffffa600PR-менеджер||@ffffffffСветлана «Сrystal» Честных| | |@ffffa600В игре использовались композиции победителей музыкального|@ffffa600конкурса||@ffffffffАлександр Чекстер|@ffffffffБорис Веденский|@ffffffffАлександр Трегер|@ffffffffМихаил Сидоров|@ffffffffАлександр Лисенков|@ffffffffParalaxeen|@ffffffffИгорь Белоусов| | |@ffffa600Также принимали участие на разных этапах||@ffffffffКонстантин Сохарев - программирование|@ffffffffСвятослав Паташников - руководство|@ffffffffАлексей Андрущенко - Веб-дизайн"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.43"
+		time="106" />
+
+	<string
+		id="5969"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Компания «Бука»| | | |@ffffa600Продюсер||@ffffffffИван Бунаков| | |@ffffa600Старший продюсер||@ffffffffИван Мороз| | |@ffffa600Менеджеры по продвижению продуктов||@ffffffffЮрий Вирич|@ffffffffАлексей Писклюков| | |@ffffa600Технический эксперт||@ffffffffКирилл Бестемьянов| | |@ffffa600Эксперт по звуку||@ffffffffРуслан Дмитриев| | |@ffffa600Дизайнеры-полиграфисты||@ffffffffСанан Ушанов|@ffffffffДаниелла Климашевская| | |@ffffa600PR-менеджер||@ffffffffАлексей Пастушенко| | |@ffffa600Ассистент PR-менеджера||@ffffffffОлег Морозов| | |@ffffa600Ассистент продюсера||@ffffffffАлексей Пешехонов|@ffffffffНиколай Сафронов| | |@ffffa600Менеджер по новым командам||@ffffffffНиколай Сафронов| | |@ffffa600Выпускающий продюсер||@ffffffffАлександр Пак| | |@ffffa600Старший тестировщик||@ffffffffЕвгений Попов|@ffffffffИван Рид| | |@ffffa600Служба тестирования||@ffffffffАнтон Епишин|@ffffffffАлексей Петров|@ffffffffАлександр Полосин|@ffffffffЕвгений Попов|@ffffffffИван Райнов|@ffffffffИван Рид|@ffffffffАлексей Чеботарев| | |@ffffa600Внешнее тестирование||@ffffffffПетр Беляев|@ffffffffАлексей Бунак|@ffffffffИгорь Дмитриев|@ffffffffМихаил Матюшов|@ffffffffДенис Соколов|@ffffffffИгорь Пешехонцев|@ffffffffДмитрий Чичков|@ffffffffАлексей Шеховцов|@ffffffffИлья Юсипов|@ffffffffТимур Юсипов| | |@ffffa600Служба продаж||@ffffffffМаксим О. Алексеев|@ffffffffМаксим Ю. Алексеев|@ffffffffМаксим А. Алексеев|@ffffffffНаталья Анкундинова|@ffffffffЕлена Антонова|@ffffffffИлья Бровченко|@ffffffffПавел Григорьев|@ffffffffВиктория Киселева|@ffffffffАлександр Кочетков|@ffffffffПавел Круглов|@ffffffffАндрей Осипов|@ffffffffАлександр Петринский|@ffffffffОльга Полковникова|@ffffffffЛариса Савельева|@ffffffffЕвгений Самсонов|@ffffffffСветлана Самсонова|@ffffffffВалерий Тихвинский|@ffffffffСергей Федосов| | |@ffffa600Торговый маркетинг||@ffffffffТатьяна Васекина| | |@ffffa600Комьюнити менеджер||@ffffffffАлександр Ковалев| | |@ffffa600Экспертный совет||@ffffffffВладимир Миняев|@ffffffffМаксим Н. Михалев|@ffffffffИван Мороз|@ffffffffСергей Руденко|@ffffffffВиталий Харитоненко| | |@ffffa600Юридическая поддержка||@ffffffffГеоргий Виталиев| | |@ffffa600Техническая поддержка||@ffffffffЕвгений Дмитриев| | |@ffffa600Генеральный директор||@ffffffffАлександр Михайлов| | |@ffffa600Финансовый директор||@ffffffffМарина Равун| | |@ffffa600Руководитель отдела маркетинга||@ffffffffМаксим Н. Михалев| | |@ffffa600Руководитель коммерческого отдела||@ffffffffТатьяна Устинова| | |@ffffa600Руководитель отдела разработок||@ffffffffИван Бунаков| | |@ffffa600Отдельное спасибо||@ffffffffЮлия Белова|@ffffffffСергей Бобков|@ffffffffИлья Бровченко|@ffffffffДмитрий Захаров|@ffffffffДмитрий Кулешов|@ffffffffДмитрий Лесин|@ffffffffВладимир Миняев|@ffffffffИван Мороз|@ffffffffМарина Равун|@ffffffffИван Рид|@ffffffffИнна Суцепина|@ffffffffИгорь Устинов|@ffffffffИрина Царева|@ffffffffВиктория Эннс| | |@ffffa600Спасибо за игру!"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.38"
+		time="155.5" />
+
+	<string
+		id="5970"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600«Improved Storyline v1.1»| | | |@ffffa600Заимствования из модов| |@ffffffffBooster Mod - карты, текстуры, иконки|@ffffffffKraycity - импортирован полностью|@ffffffffSteel Dawn - иконки| | |@ffffa600Музыкальные композиции| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffЦифеi - Футуро|@ffffffffЦифеi - Прощай, Атлантис|@ffffffffЦифеi - Праздник жизни|@ffffffffЦифеi - Когда возвращаются близкие| | |@ffffa600Отдельное спасибо| |@ffffffffLynne за модель локомотива|@ffffffffSuslo Red за модель медали АР|@ffffffffVarisane за многочисленные текстовые правки|@ffffffffOverLine за зимние лайтмепы| |@ffffffffА также всем тестировщикам, багрепортерам|@ffffffffи тем, кто просто помог советом"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.63"
+		time="36.5" />
+	
+	<string
+		id="5971"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value=""
+		sound=""
+		fontSize="18"
+		scrollSpeed="0.5"
+		time="1" />
+
+	<string
+		id="5973"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Community Patch / Remaster| | | |@ffffa600Александр «Seel» Парфененков||@ffffffffменеджер проекта, инструментарий, дизайн| | |@ffffa600Александр «ThePlain» Фатеев||@ffffffffинструментарий, графика, 3D моделирование| | |@ffffa600Алексей «__nEmPoBu4__» Смирнов||@ffffffff3D моделирование, скрипты, квесты| | |@ffffa600Анна Жукова||@ffffffffграфический дизайн| | |@ffffa600Антон Попов||@ffffffffмузыка| | |@ffffa600Владислав «OverLine» Курочкин||@ffffffffконтент-дизайн, картостроение| | |@ffffa600Дмитрий «Гном» Сащенко||@ffffffffскрипты, квесты, 3D моделирование| | |@ffffa600Иван «ICAS-14» Черепанов||@ffffffff3D моделирование| | |@ffffa600Леонид «KoYoT» Кочетов||@ffffffffисправление ошибок| | |@ffffa600Максим «Spok» Бердников||@ffffffff3D моделирование| | |@ffffa600Марк «Apocalypse007» Малыгин||@ffffffffтекстовые правки| | |@ffffa600Ник «BIBIKUZ» Кононенко||@ffffffff3D моделирование| | |@ffffa600Павел «pavlikrpg» Иванов||@ffffffffскрипты, квесты| | |@ffffa600Серафим «Varisane» Шагин||@ffffffffконтент-дизайн, текстовые правки| | |@ffffa600Экспертный совет||@ffffffffBuba|@ffffffffOracle|@ffffffffRusya_27|@ffffffffTraygen|@ffffffffСемимахов| | |@ffffa600Тестирование||@ffffffffSuslo Red|@ffffffffИван «MrKarfen» Атаманов|@ffffffffСемён «Omezera» Озерицкий|@ffffffffPushistik_7977|@ffffffffAnarxolis|@ffffffffScorpyX|@ffffffffАлександр192|@ffffffffTerorchat| | |@ffffa600Отдельное спасибо||@ffffffffСообществу Deus Ex Machina|@ffffffffdiscord.gg/qKK2Efx||@ffffffffСообществу EM2ch|@ffffffffvk.com/em2ch||@ffffffffПаблику Ex Machina Вконтакте|@ffffffffvk.com/exmachina2||@ffffffffЗрителям канала «Павлик RPG»||@ffffffffНашим жёнам, девушкам, родственникам и кошкам,|@ffffffffкоторые терпели нас во время разработки||@ffffffffВсем тем, кто ждал и поддерживал этот проект"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.6"
+		time="86" />
+
+	<string
+		id="5972"
+		value="&quot;You skip credits - you don't get a password.&quot;" />
+
+	
+	<string
+		id="5974"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Компания «Targem Games»| | | |@ffffa600Продюсер||@ffffffffСтанислав «scorp» Скорб| | |@ffffa600Технический директор проекта||@ffffffffАлексей Скрябин| | |@ffffa600Менеджер проекта||@ffffffffЕвгений «Hrrr» Хрунов| | |@ffffa600Сценарий||@ffffffffАлексей «Alex TG» Честных| | |@ffffa600Ведущий программист проекта||@ffffffffАнтон «anger» Савин| | |@ffffa600Главный дизайнер проекта||@ffffffffАлексей «Alex TG» Честных| | |@ffffa600Ведущий художник проекта||@ffffffffАлександр «Alex ML» Маргушин| | |@ffffa600Дизайн игры||@ffffffffДенис «mif2000» Галанин|@ffffffffСергей «JSinx» Удюрминский|@ffffffffАлексей «Razaz» Ануфриев|@ffffffffСтанислав «scorp» Скорб|@ffffffffБорис «borg» Смирнов| | |@ffffa600Программирование||@ffffffffЕлена «SoftKitty» Евдокимова|@ffffffffИван «Vano» Власов|@ffffffffИлья «phosgen» Рузаков|@ffffffffМаксим «Shadow» Сарманов|@ffffffffСергей «Ice Cat» Ключковский|@ffffffffИгорь «Goryh» Дегтярев| | |@ffffa600Графика||@ffffffffАлександр «Alex ML» Маргушин|@ffffffffИван Снигирев|@ffffffffЕвгений «Dzhin» Гольцов|@ffffffffВладимир «Price» Селезнев|@ffffffffСтанислав «Staz» Черва|@ffffffffРустам «Rychi» Турей|@ffffffffЕвгений Токарев|@ffffffffСергей «Sega» Митряев|@ffffffffВиктор «isymbosi» Корьякин|@ffffffffРоман Латынов| | |@ffffa600Дизайн миссий||@ffffffffДенис «mif2000» Галанин|@ffffffffСергей «JSinx» Удюрминский|@ffffffffАртем «solo» Соловьев|@ffffffffКондратьев «HiKiller» Даниил|@ffffffffСтанислав «Staz» Черва| | |@ffffa600Разработка интерфейсов||@ffffffffМихаил «Rai» Матвиенко| | |@ffffa600Спецэффекты||@ffffffffАлексей «Hal» Лобанов| | |@ffffa600Музыка/звуки||@ffffffffАнтон Попов|@ffffffffЕкатерина Швеммер| | |@ffffa600Тестирование||@ffffffffВячеслав «ls» Авдеев| | |@ffffa600PR-менеджер||@ffffffffСветлана «Сrystal» Честных| | |@ffffa600В игре использовались композиции победителей музыкального|@ffffa600конкурса||@ffffffffАлександр Чекстер|@ffffffffБорис Веденский|@ffffffffАлександр Трегер|@ffffffffМихаил Сидоров|@ffffffffАлександр Лисенков|@ffffffffParalaxeen|@ffffffffИгорь Белоусов| | |@ffffa600Также принимали участие на разных этапах||@ffffffffКонстантин Сохарев - программирование|@ffffffffСвятослав Паташников - руководство|@ffffffffАлексей Андрущенко - Веб-дизайн"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.56"
+		time="106" />
+
+	<string
+		id="5975"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Компания «Бука»| | | |@ffffa600Продюсер||@ffffffffИван Бунаков| | |@ffffa600Старший продюсер||@ffffffffИван Мороз| | |@ffffa600Менеджеры по продвижению продуктов||@ffffffffЮрий Вирич|@ffffffffАлексей Писклюков| | |@ffffa600Технический эксперт||@ffffffffКирилл Бестемьянов| | |@ffffa600Эксперт по звуку||@ffffffffРуслан Дмитриев| | |@ffffa600Дизайнеры-полиграфисты||@ffffffffСанан Ушанов|@ffffffffДаниелла Климашевская| | |@ffffa600PR-менеджер||@ffffffffАлексей Пастушенко| | |@ffffa600Ассистент PR-менеджера||@ffffffffОлег Морозов| | |@ffffa600Ассистент продюсера||@ffffffffАлексей Пешехонов|@ffffffffНиколай Сафронов| | |@ffffa600Менеджер по новым командам||@ffffffffНиколай Сафронов| | |@ffffa600Выпускающий продюсер||@ffffffffАлександр Пак| | |@ffffa600Старший тестировщик||@ffffffffЕвгений Попов|@ffffffffИван Рид| | |@ffffa600Служба тестирования||@ffffffffАнтон Епишин|@ffffffffАлексей Петров|@ffffffffАлександр Полосин|@ffffffffЕвгений Попов|@ffffffffИван Райнов|@ffffffffИван Рид|@ffffffffАлексей Чеботарев| | |@ffffa600Внешнее тестирование||@ffffffffПетр Беляев|@ffffffffАлексей Бунак|@ffffffffИгорь Дмитриев|@ffffffffМихаил Матюшов|@ffffffffДенис Соколов|@ffffffffИгорь Пешехонцев|@ffffffffДмитрий Чичков|@ffffffffАлексей Шеховцов|@ffffffffИлья Юсипов|@ffffffffТимур Юсипов| | |@ffffa600Служба продаж||@ffffffffМаксим О. Алексеев|@ffffffffМаксим Ю. Алексеев|@ffffffffМаксим А. Алексеев|@ffffffffНаталья Анкундинова|@ffffffffЕлена Антонова|@ffffffffИлья Бровченко|@ffffffffПавел Григорьев|@ffffffffВиктория Киселева|@ffffffffАлександр Кочетков|@ffffffffПавел Круглов|@ffffffffАндрей Осипов|@ffffffffАлександр Петринский|@ffffffffОльга Полковникова|@ffffffffЛариса Савельева|@ffffffffЕвгений Самсонов|@ffffffffСветлана Самсонова|@ffffffffВалерий Тихвинский|@ffffffffСергей Федосов| | |@ffffa600Торговый маркетинг||@ffffffffТатьяна Васекина| | |@ffffa600Комьюнити менеджер||@ffffffffАлександр Ковалев| | |@ffffa600Экспертный совет||@ffffffffВладимир Миняев|@ffffffffМаксим Н. Михалев|@ffffffffИван Мороз|@ffffffffСергей Руденко|@ffffffffВиталий Харитоненко| | |@ffffa600Юридическая поддержка||@ffffffffГеоргий Виталиев| | |@ffffa600Техническая поддержка||@ffffffffЕвгений Дмитриев| | |@ffffa600Генеральный директор||@ffffffffАлександр Михайлов| | |@ffffa600Финансовый директор||@ffffffffМарина Равун| | |@ffffa600Руководитель отдела маркетинга||@ffffffffМаксим Н. Михалев| | |@ffffa600Руководитель коммерческого отдела||@ffffffffТатьяна Устинова| | |@ffffa600Руководитель отдела разработок||@ffffffffИван Бунаков| | |@ffffa600Отдельное спасибо||@ffffffffЮлия Белова|@ffffffffСергей Бобков|@ffffffffИлья Бровченко|@ffffffffДмитрий Захаров|@ffffffffДмитрий Кулешов|@ffffffffДмитрий Лесин|@ffffffffВладимир Миняев|@ffffffffИван Мороз|@ffffffffМарина Равун|@ffffffffИван Рид|@ffffffffИнна Суцепина|@ffffffffИгорь Устинов|@ffffffffИрина Царева|@ffffffffВиктория Эннс| | |@ffffa600Спасибо за игру!"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.47"
+		time="155.5" />
+
+	<string
+		id="5976"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600«Improved Storyline v1.1»| | | |@ffffa600Заимствования из модов| |@ffffffffBooster Mod - карты, текстуры, иконки|@ffffffffKraycity - импортирован полностью|@ffffffffSteel Dawn - иконки| | |@ffffa600Музыкальные композиции| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffЦифеi - Футуро|@ffffffffЦифеi - Прощай, Атлантис|@ffffffffЦифеi - Праздник жизни|@ffffffffЦифеi - Когда возвращаются близкие| | |@ffffa600Отдельное спасибо| |@ffffffffLynne за модель локомотива|@ffffffffSuslo Red за модель медали АР|@ffffffffVarisane за многочисленные текстовые правки|@ffffffffOverLine за зимние лайтмепы| |@ffffffffА также всем тестировщикам, багрепортерам|@ffffffffи тем, кто просто помог советом"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.01"
+		time="36.5" />
+	
+	<string
+		id="5977"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Community Patch / Remaster| | | |@ffffa600Александр «Seel» Парфененков||@ffffffffменеджер проекта, инструментарий, дизайн| | |@ffffa600Александр «ThePlain» Фатеев||@ffffffffинструментарий, графика, 3D моделирование| | |@ffffa600Алексей «__nEmPoBu4__» Смирнов||@ffffffff3D моделирование, скрипты, квесты| | |@ffffa600Анна Жукова||@ffffffffграфический дизайн| | |@ffffa600Антон Попов||@ffffffffмузыка| | |@ffffa600Владислав «OverLine» Курочкин||@ffffffffконтент-дизайн, картостроение| | |@ffffa600Дмитрий «Гном» Сащенко||@ffffffffскрипты, квесты, 3D моделирование| | |@ffffa600Иван «ICAS-14» Черепанов||@ffffffff3D моделирование| | |@ffffa600Леонид «KoYoT» Кочетов||@ffffffffисправление ошибок| | |@ffffa600Максим «Spok» Бердников||@ffffffff3D моделирование| | |@ffffa600Марк «Apocalypse007» Малыгин||@ffffffffтекстовые правки| | |@ffffa600Ник «BIBIKUZ» Кононенко||@ffffffff3D моделирование| | |@ffffa600Павел «pavlikrpg» Иванов||@ffffffffскрипты, квесты| | |@ffffa600Серафим «Varisane» Шагин||@ffffffffконтент-дизайн, текстовые правки| | |@ffffa600Экспертный совет||@ffffffffBuba|@ffffffffOracle|@ffffffffRusya_27|@ffffffffTraygen|@ffffffffСемимахов| | |@ffffa600Тестирование||@ffffffffSuslo Red|@ffffffffИван «MrKarfen» Атаманов|@ffffffffСемён «Omezera» Озерицкий|@ffffffffPushistik_7977|@ffffffffAnarxolis|@ffffffffScorpyX|@ffffffffАлександр192|@ffffffffTerorchat| | |@ffffa600Отдельное спасибо||@ffffffffСообществу Deus Ex Machina|@ffffffffdiscord.gg/qKK2Efx||@ffffffffСообществу EM2ch|@ffffffffvk.com/em2ch||@ffffffffПаблику Ex Machina Вконтакте|@ffffffffvk.com/exmachina2||@ffffffffЗрителям канала «Павлик RPG»||@ffffffffНашим жёнам, девушкам, родственникам и кошкам,|@ffffffffкоторые терпели нас во время разработки||@ffffffffВсем тем, кто ждал и поддерживал этот проект"
+		sound=""
+		fontSize="18"
+		scrollSpeed="1.76"
+		time="86" />
+
+	<string
+		id="9999"
+		value="Improved Storyline v1.1||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+</resource>

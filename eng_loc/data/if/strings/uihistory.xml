@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="r1_Firsy_History_00"
+		value="For several years now, my father and I have been driving our old truck to sell vegetables in the Sowth. I'm not bad at driving myself, but until today my father wouldn't let me go into town alone. But today, I guess I'm allowed to do everything. I think it's because of my birthday: my father is preparing some kind of surprise for me and wants to be alone. Well, I'm going to dive into big city life!" />
+
+	<string
+		id="r1_Yes_Lisa_History_01"
+		value="Not far from the city an unexpected encounter occurred. A pretty girl in a fast car asked me for help. I suspected from her behavior that she was involved with bandits, but I agreed: one should trust people. Especially since I don't see anything wrong with asking to show the surroundings." />
+
+	<string
+		id="r1_Three_Villages_00"
+		value="But what was my father going to tell me? It's time to go back, because I'm late enough as it is." />
+
+	<string
+		id="r1_First_Felix_Meet_00"
+		value="Goddamn bandits! No living at all. It's a good thing my truck is old, but it's very sturdy! I defeated Felix's bandits, but their threats of revenge somehow got under my skin." />
+
+	<string
+		id="r1_After_Gloohoe_To_Ben_01"
+		value="Already from afar I saw the smoke over my home village. A terrible thing had happened: someone had attacked the defenseless inhabitants and burned the village to the ground. My father lay on the ground, his strength was leaving him. With a last effort, he handed me a box tied with a ribbon - a birthday present - and, saying: &quot;Find Ben The Throttle&quot; he died. I buried the dead and, not knowing what to do with my life, climbed into the cab of the truck and opened the box. There was my father's emergency savings, a shiny disc-shaped object, and a sealed letter addressed to me." />
+
+	<string
+		id="r1_After_Letter_00"
+		value="According to what it said, I was adopted, and my real father was Ivan Go, the Explorer. All that was left of him was my car and a disk of unknown purpose. Ivan himself disappeared many years ago and is most likely dead. My whole life was turned upside down. I had to find out all about my real father if I was to regain my footing! If he is alive, I will find him, wherever he is, and find out why he left me. The first thing I have to do is talk to Ben The Throttle." />
+
+	<string
+		id="r1_South_About_Felix_00"
+		value="The bartender at Sowth told me where I could find Ben The Throttle and shared his suspicions that the local thug Felix might have been involved in my father's death. I decided to kill him: not for revenge, but for the safety of others. With a powerful weapon offered by one kind man, I could clean out this nest of evil." />
+
+	<string
+		id="r1_Felix_Not_Dead"
+		value="The bartender at Sowth told me where I could find Ben The Throttle and shared his suspicions that the local thug Felix might have been involved in my father's death. But I decided to honor my father's last wish and not avenge his murder, since it is more important to find Ben now." />
+
+	<string
+		id="r1_Before_Ben_00"
+		value="I had to travel a lot before I found out anything concrete. I didn't expect that there were other towns and villages besides my hometowns. Finally, I was pointed in the direction of Ben's house." />
+
+	<string
+		id="r1_After_Ben_00"
+		value="The old man saw familiar features in me and accepted me as his family. His house was full of strange things. When I told my story, Ben thought for a while and told me that my father had really gone missing about twenty years ago. He had found something very significant, but he didn't want to tell anyone what it was until he was sure it was safe. Ben also told me a little bit about what my father was like and what it is - to be an Explorer, and he also told me that Lisa was his daughter and she was looking for my father, too. He also pointed out the place where my father used to live and work." />
+
+	<string
+		id="r1_Kill_Felix_00"
+		value="The bandit base was in ruins, and Felix had fled with his tail between his legs. I didn't have the courage to shoot him in cold blood, since he had nothing to do with my father's death. As villainous as he was, it was not for me to judge him. The monsters who destroyed the Gloohoe had far more firepower than this handful of scoundrels. I realized it myself when I attacked their hideout, and the leader's words only confirmed my guess. The only witness to the terrible crime was Lisa, a visitor from the north. Perhaps I should follow her. I'll talk to the bartender about it." />
+
+	<string
+		id="r1_Father_Room_00"
+		value="If Ben's place seemed strange to me, then my father's place was amazing. Although to me, all the strange things that filled my father's house were just a pile of useless junk. Not a single machine showed any signs of life. Maybe it was the humid air coming in through the broken windows and the leaky roof. Only one thing caught my attention. As I walked around the house, a board cracked beneath me, and I found a cache containing an oddly shaped amulet." />
+
+	<string
+		id="r1_See_Tonnel_00"
+		value="The mercenaries move through a tunnel, the entrance to which is not far from Asgard. It's quite a dangerous place - I suspect the locals collaborate with the bandits and profit by buying trophies and trading weapons." />
+
+	<string
+		id="r2_After_Tonnel_00"
+		value="I managed to get the key to the tunnel, and so, after several hours of traveling by only headlights, I found myself in a place completely unknown to me." />
+
+	<string
+		id="r2_Find_Lisa_00"
+		value="After my first encounter with the locals, I realized that manners here are not as civilized as they are in the Krai. However, I was able to find out that Lisa was an assistant to a certain Axel, the leader of the bandits based in Argen.|Apparently, this Axel isn't ordinary at all. He runs a group called the Crimson Dawn, and it's much more than just a bunch of thugs. They're fighting a real war against Librium, and they seem to be after more than that. I don't think I can get to him alone." />
+
+	<string
+		id="r2_SNG_00"
+		value="I joined the ranks of the CIT. The Commonwealth of Independent Towns - that is what the inhabitants of Librium call themselves. It seems to me that their fight against the invaders is a righteous cause. Besides, we have a common enemy: Axel." />
+
+	<string
+		id="r2_AM_00"
+		value="I joined the ranks of the anti-militarists. It seems to me that their movement against general warfare is a righteous cause. Maybe this way I can even get to Axel without too much violence." />
+
+	<string
+		id="r2_AR_00"
+		value="I decided that the surest way to get to Axel is to become one of the soldiers of his Crimson Dawn army. All that's left is to get the commander's respect and be presented with an award. And when the time comes for me to meet Axel in person, he won't get away from me." />
+
+	<string
+		id="r2_Before_Axel_00"
+		value="It was precisely the war. Not always direct and overt, but always destructive. And I had to do a lot of things that I might regret later. But this was no time to doubt: I almost have Axel in my hands." />
+
+	<string
+		id="r2_After_Axel_02"
+		value="When I defeated the leader of the CD, I was bitterly disappointed. I had expected to encounter a barbarian and a brutal killer, but I was faced with an enlightened man who cared about the fate of his country. Though I could not agree with his methods, he did not disgust me. All the more so because he had once been deceived by Lisa, just as I had been. But she could not hide from me now!" />
+
+	<string
+		id="r2_With_Lisa_To_Oracul_01"
+		value="Lisa told me about her true motives and asked me to take her with me to the Oracle. I felt sorry for her, so I agreed. She told that there is no need to go to the Oracle through the north, and that there is an underwater tunnel guarded by a creature like the one I fought in Hel." />
+
+	<string
+		id="r1_Before_Desert_00"
+		value="I obtained all the necessary components, gave them to the Midgard's master, and, after paying for the work, found myself the owner of a machine capable of enduring the hardships of the endless desert." />
+
+	<string
+		id="r1_Lisa_Thief_00"
+		value="My happiness was short-lived. Lisa, an old friend of mine, had stolen both disks and the key to the Sea Gate! Ben told me to look for her in the west. There I would hunt the devil down and find out why she wanted things that were only of use to me." />
+
+	<string
+		id="r1_After_Boss1"
+		value="I didn't expect there to be such monsters, one of which I came face to face with today. As it turned out, the way to the Sea Gate was guarded, but I managed to defeat the guard, although a couple of times I thought he would stomp me to the ground." />
+
+	<string
+		id="r3_After_WaterGate_1"
+		value="When I finally reached the seashore, I immediately saw the sea gate. It was a majestic structure on the very edge of the solid earth. As soon as I approached it and lifted the amulet, which was slightly heated, a huge metal fish slowly surfaced out of the water. Only a nightmare could have imagined such a monster. The fish opened its jaws enough to hold two of my trucks at a time, and stood still, as if inviting me in. Struggling with fear, I drove across the bridge into the belly of the fish. As soon as I was inside, the jaws slammed shut, and I felt the monster plunge into the depths of the sea with a splash and a roar.|It turned out that this fish was just a big car like my truck." />
+
+	<string
+		id="r3_JustGo_1"
+		value="The new overseas land turned out to be very unusual: the huge trees and the damp, heavy air evoked something primordial." />
+
+	<string
+		id="r3_Fist_Fight_1"
+		value="The only road through the jungle soon led me to a small settlement. However, they were not very welcoming to me, so I had to leave in a fight and look for a more friendly people.|Strangely enough, this was found quite quickly. Strange as it may seem, I found one quickly enough. I was accepted there as one of my own and offered to help in the fight against the aggressive Druids." />
+
+	<string
+		id="r3_Uluk_LureDruid"
+		value="I agreed, though I didn't like the idea of an ambush. In exchange for my services, the machine-worshippers showed me the way to the Oracle." />
+
+	<string
+		id="r3_Uluk_NoLureDruid"
+		value="I decided not to help them in this bloody business and went to try my luck in the druid's forest capital - Set." />
+
+	<string
+		id="r3_Fist_Friendly"
+		value="The only road through the jungle soon led me to a small settlement. They didn't greet me with much hospitality, but I was able to clear up the misunderstanding. It turned out that only the High Druid, who lives in Set, knows the way to the Oracle, so I went in search of him." />
+
+	<string
+		id="r3_Set_HelpMainDruid_1"
+		value="The High Druid gave me a difficult task, but a few steel monsters could not break my will to win. I had to wander around the godforsaken land to earn the old man's trust and find out the location of the Oracle." />
+
+	<string
+		id="r3_Oracle_FirstTime"
+		value="When talking about the Oracle, I imagined a hermit's hut on top of a mountain, but what I saw was nothing like the stories of sorcerers and wise men. A complex of towers connected by aerial spans sparkled with a dangerous energy, and inside was a human-made monster. Thus was my first encounter with the Oracle." />
+
+	<string
+		id="r3_Oracle_HelpHim_1"
+		value="The Oracle demanded his services in exchange for information. I had no choice but to agree." />
+
+	<string
+		id="r3_Oracle_DecodeDisc1"
+		value="I had to suffer through the tasks of the Oracle, who said he could read what my father's disk, but only if I do some things for him. I didn't count on free help anyway, especially since there were a lot of interesting places on the island." />
+
+	<string
+		id="r3_Oracle_NeedDisc2"
+		value="When the Oracle took the disc from me, I stood still in anticipation of what might be revealed to me. What was my disappointment when an emotionless voice said: &quot;Insert a second disk&quot;. I only had one! I said so through the small window, interspersing my speech with puns and swear words. All my efforts were in vain! The Oracle calmly asked me where I had obtained the object and what I was trying to find out from it. The second disk must be among my father's things, and hidden so that I could find it easily. I think it's time to go to his house again." />
+
+	<string
+		id="r3_Oracle_BringDisc2"
+		value="After I got the disk and the amulet back, I was able to get to the Oracle and read my father's diary. At last I could hear his voice, find out what he lived by and what he was looking for. And most importantly, I found out that his way was through the desert, in search of some important device. It was something very mysterious, since my father had kept his diary so secret. And I also realized that my father wanted me to hear all those words, to know what he knew, if there was no way back for him. I must find my father!" />
+
+	<string
+		id="r3_v2_Uluk_FirstTime_1"
+		value="The only road through the jungle soon led me to a small settlement. I was welcomed there and offered to help in the fight against the aggressive Druids." />
+
+	<string
+		id="r4_AfterSomeTimeTravel"
+		value="I was so tired from the omnipresent sand and the burning white sun after many days of travel that I could not believe my eyes when I saw the clay dwellings of the people of Vahat.|But the people there are strange: sometimes they are friendly, and at other times they are trying to stab you in the back. And, surprisingly, everyone seems to be busy with something, but no one can speak coherently about anything. It feels like everyone here has lost their memory." />
+
+	<string
+		id="r4_KnownAboutBuhara"
+		value="I managed to find out that there is a village of memory keepers somewhere - apparently, that's what they call old people. I must go there and find at least one reasonable person. What happened here, after all? There are traces of destruction everywhere..." />
+
+	<string
+		id="r4_FindBuhara"
+		value="With great difficulty, though, I learned the location of the keepers' village. I did not immediately find the place, lost in the desert among the wrecks of huge ships, and I paid tribute to the cautiousness of its owners. Only it is not clear why the old men would hide?" />
+
+	<string
+		id="r4_TalkWithBuhares"
+		value="My visit alarmed the whole of Bukhara. But the Memory Keepers realized that I was not a threat to them, and told their grim story: Many years ago, the inhabitants of all the surrounding villages seemed to have gone mad. They killed each other, and then did not remember what they had done. Strangely enough, the old men of Bukhara were not affected by the aggression, although they lived in constant fear of attack. It was a shock to me to learn that there are no mysterious villains, and that people destroy what they create themselves." />
+
+	<string
+		id="r4_AfterAtackToBuhars"
+		value="Apparently, the village was so well hidden for a reason. After me, the locals arrived and started shooting Bukhara with cannons. I could not leave the old men in the lurch: the memories of the destruction of the Gloohoe were still fresh. I helped to repel the attack and evacuate the inhabitants by ship. In gratitude for this, I learned that a man who resembled my father had really been passing through the village. He was looking for something and was heading northeast. So that's where I'm going!" />
+
+	<string
+		id="r4_LisaBecameCrazy"
+		value="Lisa had been acting up the whole way: she became nervous, suspicious, and finally turned hysterical right in the cabin. It was a real test of my humanity. But I realized that it was just the desert that was affecting her mind.|By the time we got to the port, she was unconscious. So I sent her back to the &quot;big land&quot;, along with the rest of the Buhara's inhabitants, and let Ben take care of her. I continued the search myself." />
+
+	<string
+		id="r4_FindFatherCar"
+		value="Soon I found an old armored truck covered with sand, apparently damaged in the firefight. There were no remains of the driver inside, but I found a jacket with my father's name on it. Now I knew for sure he was here! He wanted to get to his destination so badly that he had to walk. I also removed some parts from the car that were too good to leave here. Plus, they reminded me of my dad. Now I knew for sure that I was on the right track." />
+
+	<string
+		id="r4_AfterMilitaryBase"
+		value="Nothing prepared me for the encounter with the army of madmen. Almost dying in a skirmish with a superior enemy force, I was saved by an unexpected ally, my old familiar Sergo." />
+
+	<string
+		id="r4_NearTarelka"
+		value="As I crossed another dune, I saw a terrifying sight: a lot of people standing motionless around a hill of obviously artificial origin. I didn't know if they were alive or not. I didn't know why they were gathered here. But I sensed that Ivan Go was one of them. No one responded to my shouts and other signals. And looming over it all was the monstrous bulk of a disk of molten gray metal." />
+
+	<string
+		id="r1_Before_Fight_Aliens"
+		value="My eyes were opened. Evil alien invaders are altering the planet for their inhuman needs with a transmitter set up in the desert. But their headquarters is elsewhere, on the outskirts of Sel. The interference caused by its operation prevents the Oracle from taking control of the orbital weaponry. If I succeed in disrupting the headquarters, my mechanical ally will launch nuclear strikes against the invader's targets." />
+
+	<string
+		id="r2_Before_Fight_Oracle"
+		value="I personally met with one of the aliens, Njeri, as they call themselves. They assured me that the catastrophe was caused by a chain of tragic accidents that set in motion a mechanism not designed to operate near living beings. Even the Njeri themselves cannot get close enough to it. However, I was there once before and survived, which means I can stop the emitter. And I will do it!" />
+
+	<string
+		id="r4_AfterTarelka2"
+		value="I could almost feel the power coming from the center of this circle, beckoning me to join the majority. I was able to resist it and return to the base. Sergo told me the reasons for the catastrophe that destroyed the ancient world. It is not proper for humans to interfere with things whose meaning they cannot fully understand... The alien mechanism, started by the hands of the scientists in times immemorial, still works and poisons the air of the planet. I must destroy this cursed place together with all its terrors. The Oracle must know where to find a powerful weapon." />
+
+	<string
+		id="r5_Sklad"
+		value="I couldn't find the composite in Midgard, so Ben told me about the Kingdom of Eternal Cold, where Ivan might have been able to obtain this rather rare material. I went again to Hel and found Homer, who, to my surprise, told me that this place really exists. In order to get there, I will need warm clothes, which can only be found in a storage facility taken over by the local fishermen. I would have to solve this problem somehow." />
+
+	<string
+		id="r5_SkladRybaki"
+		value="After listening to both sides of the conflict, I decided to support the locals and free their leader from the clutches of the northern traders. I attacked their caravan, killed the guards, and rescued the prisoner, after which the fishermen left the storage and Lisa and I got some warm clothes. After blowing the tunnel's blockage, we finally made our way to Lidencloud." />
+
+	<string
+		id="r5_SkladTSP"
+		value="After listening to both sides of the conflict, I decided to side with the merchants and liberate the storage by force. The cleanup itself was not very difficult, as I was assisted by a considerable military force of the traders. After the fishermen were defeated, Lisa and I picked up some warm clothes, blew up the tunnel blockage, and headed for Lidencloud." />
+
+	<string
+		id="r5_LisaKidnapped"
+		value="When we arrived in Lidencloud, we immediately encountered a problem: the tunnel exit was blocked, and only Lisa managed to squeeze through a small hole in the wall. After scouting around a bit, she came across some locals who were hiding from the violent invaders - the Red Torch Adepts. She agreed to go to the abandoned village for food, warm clothing, and the key to the gate, but on her way back she was ambushed by the Adepts and captured. Later, the locals opened the gate for me and briefly described the situation. In Kateberg, one of the Adept cities, I was given a choice: fight on the side of the locals and endanger both my life and Lisa's, or join the Adepts and effortlessly defeat the trapped inhabitants of Lidencloud." />
+
+	<string
+		id="r5_AdeptWin"
+		value="My feelings of remorse were very strong, but I couldn't put Lisa's life in danger, so I agreed to fight on the side of the adepts. I had done many disgusting things, and the ghosts of my past would haunt me for the rest of my life. In the end, together with the Adepts, I exterminated all the locals, and they opened the bridge for me and set Lisa free, but now she doesn't talk to me." />
+
+	<string
+		id="r5_LocalsWin"
+		value="The decision to fight on the side of the locals was easy enough for me. Of course, I was worried about Lisa's well-being, so I did everything very quietly and carefully, but my fears were in vain: from the very first day in Moska, Lisa developed an escape plan and persuaded a couple of locals to help her, while the Velimir provided quite wise planning and demonstrated an example of sacrifice worthy of respect. Finally the Adepts were defeated, the locals evacuated, and Lisa and I headed further into the mountains." />
+
+	<string
+		id="r5_SplavTaken"
+		value="The Mountains of the Wise proved to be an amazing place. From the fact that all the people in the region are infinitely kind to outsiders, to their unusual outlook and willingness to forget the past and live only in the present. But sometimes very strange things happen here too, for which I have no explanation yet. In spite of some difficulties, I completed all the tasks of the Wise Men, and they produced the required amount of composite for me." />
+
+</resource>

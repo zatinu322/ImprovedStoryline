@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+
+	<Object
+		Name="Esting"
+		FullName="VOLOZH" />
+
+	<Object
+		Name="Esting_enter"
+		FullName="VOLOZH" />
+
+	<Object
+		Name="Esting_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Esting_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Esting_Bar_Barman"
+		FullName="Innkeeper Gavrila" />
+
+	<Object
+		Name="Esting_Bar"
+		FullName="Tavern &quot;Knowledge&quot;" />
+
+	<Object
+		Name="TheSign"
+		FullName="ORE MINE" />
+
+	<Object
+		Name="TheSign_enter"
+		FullName="ORE MINE" />
+
+	<Object
+		Name="TheSign_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheOilVillage"
+		FullName="LA BELL" />
+
+	<Object
+		Name="TheOilVillage_enter"
+		FullName="LA BELL" />
+
+	<Object
+		Name="TheOilVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheOilVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheOilVillage_Bar_Barman"
+		FullName="Innkeeper Istoma" />
+
+	<Object
+		Name="TheOilVillage_Bar"
+		FullName="Tavern &quot;Mighty&quot;" />
+
+
+
+	<Object
+		Name="TheTown"
+		FullName="RINOLSK" />
+
+	<Object
+		Name="TheTown_enter"
+		FullName="RINOLSK" />
+
+	<Object
+		Name="TheTown_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheTown_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheTown_Bar_Barman"
+		FullName="Innkeeper Aksinya" />
+
+	<Object
+		Name="TheTown_Bar"
+		FullName="Bar &quot;Black Lungs&quot;" />
+
+
+
+	<Object
+		Name="TheContraVillage"
+		FullName="ERMAKOVO" />
+
+	<Object
+		Name="TheContraVillage_enter"
+		FullName="ERMAKOVO" />
+
+	<Object
+		Name="TheContraVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="TheContraVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheContraVillage_Bar_Barman"
+		FullName="Waitress Stephanida" />
+
+	<Object
+		Name="TheContraVillage_Bar"
+		FullName="Tavern &quot;Hospitable&quot;" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="MIKHAILOVKA" />
+
+	<Object
+		Name="PetrolStationTown1_enter"
+		FullName="MIKHAILOVKA" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Workshop" />
+
+		<Object
+		Name="PetrolStationTown1_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2_enter"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown3_enter"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown4_enter"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="ToR1M6"
+		FullName="Road to Lidencloud" />
+
+	<Object
+		Name="ToR1M6JD"
+		FullName="Secret tunnel" />
+
+	<Object
+		Name="VerhMudr"
+		FullName="Supreme Wise Man" />
+
+	<Object
+		Name="Lisa"
+		FullName="Lisa" />
+
+	<Object
+		Name="Muzhik"
+		FullName="Guard Yelisey" />
+
+	<Object
+		Name="Muzhik1"
+		FullName="Herald Kuzma" />
+
+	<Object
+		Name="Muzhik2"
+		FullName="Forester Thaddeus" />
+
+	<Object
+		Name="Muzhik3"
+		FullName="Handyman Klim" />
+
+	<Object
+		Name="DobroslavaFather"
+		FullName="Potter Vsevolod" />
+
+	<Object
+		Name="Babca"
+		FullName="Widow Alice" />
+
+	<Object
+		Name="PS_Bar"
+		FullName="Tavern &quot;Lil' Gudgeon&quot;" />
+
+	<Object
+		Name="PS1_Bar"
+		FullName="House of Vsevolod" />
+
+	<Object
+		Name="PS_Bar_Barman"
+		FullName="Innkeeper Trophim" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Cartographer" />
+
+	<Object
+		Name="IeronimFarm"
+		FullName="Farmer Hieronymus" />
+
+	<Object
+		Name="FelixBandit"
+		FullName="Felix" />
+
+	<Object
+		Name="PlayerAboutTikhomirsFate"
+		FullName=" " />
+
+	<Object
+		Name="BratislavVolozh"
+		FullName="Worker Bratislav" />
+
+	<Object
+		Name="BratislavRinolsk"
+		FullName="Worker Bratislav" />
+
+	<Object
+		Name="Babca1"
+		FullName="Innkeeper Istoma" />
+
+</ObjectNames>

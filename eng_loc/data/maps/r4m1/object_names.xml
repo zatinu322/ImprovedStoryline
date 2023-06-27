@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="TheGadad"
+		FullName="GADAD" />
+
+	<Object
+		Name="Gadad_Bar"
+		FullName="Cafe &quot;Thirst&quot;" />
+
+	<Object
+		Name="Gadad_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="Gadad_Shop"
+		FullName="Shop" />
+	
+	<Object
+		Name="Lisa"
+		FullName="Lisa" />
+
+	<Object
+		Name="LisaGadad"
+		FullName="Lisa" />
+
+	<Object
+		Name="LisaKef"
+		FullName="Lisa" />
+
+	<Object
+		Name="MrShlyapa"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="MrShlyapaAbs"
+		FullName=" " />
+
+	<Object
+		Name="Tankist"
+		FullName="Tank driver" />
+
+	<Object
+		Name="r4m1_FindPereg"
+		FullName="Fararat" />
+
+	<Object
+		Name="Gadad_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Gadad_Bar_Customer1"
+		FullName="Zine" />
+
+	<Object
+		Name="TheKef"
+		FullName="KEF" />
+
+	<Object
+		Name="Kef_Bar"
+		FullName="Oasis" />
+
+	<Object
+		Name="Kef_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="Kef_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Kef_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Kef_Bar_Customer1"
+		FullName="Mario" />
+
+	<Object
+		Name="TheKazif"
+		FullName="KAZIF" />
+
+	<Object
+		Name="Kazif_Bar"
+		FullName="Bar &quot;Black sludge&quot;" />
+
+	<Object
+		Name="Kazif_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="Kazif_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Kazif_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Kazif_Bar_Customer1"
+		FullName="Dead Morose" />
+
+	<Object
+		Name="r4_AlihamVil"
+		FullName="ALIKHAM" />
+
+	<Object
+		Name="r4_Aliham_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="r4_Aliham_Bar"
+		FullName="The Diner" />
+
+	<Object
+		Name="r4_Aliham_Bar_Barman"
+		FullName="Galanis" />
+
+	<Object
+		Name="r4_Aliham_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Oil_loc"
+		FullName="Oil well" />
+
+	<Object
+		Name="LostEngineer_loc"
+		FullName="Runaway Engineer" />
+
+	<Object
+		Name="Buhara_loc"
+		FullName="BUKHARA" />
+
+	<Object
+		Name="ToR1M1"
+		FullName="Road to Krai" />
+
+	<Object
+		Name="ToR4M2"
+		FullName="Road to Zarmek" />
+
+	<Object
+		Name="ToR2M2"
+		FullName="Port to Argen" />
+
+	<Object
+		Name="TheOilCity"
+		FullName="NEFTEGRAD" />
+
+	<Object
+		Name="TheZuhel"
+		FullName="ZUKHEL" />
+
+	<Object
+		Name="r4m1_BuharsLeader"
+		FullName="Bukharian's Elder" />
+
+	<Object
+		Name="Kazif_Bar_Customer2"
+		FullName="Schumacher" />
+
+	<Object
+		Name="Gadad_Bar_CrazyBook1"
+		FullName="Metricello" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown5"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown6"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown7"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="r4m1_Engineer"
+		FullName="Oil engineer" />
+
+	<Object
+		Name="r4m1_Engineer_1"
+		FullName="Oil engineer" />
+
+	<Object
+		Name="heavy_dot1_vulcan1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot1_vulcan2"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot2_vulcan3"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot1_vulcan4"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot1_vulcan5"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot1_vulcan6"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot1_vulcan7"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot2_vector1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="heavy_dot3_rainmetal1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_flag1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_vulcan8"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord2"
+		FullName="Pillbox" />
+
+	<Object
+		Name="TheOilCity_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="TheOilCity_Shop"
+		FullName="shop" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown4_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown5_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown6_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown7_Workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="r4_Zuhel_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="r4_Zuhel_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="urod1"
+		FullName="Shaman" />
+
+	<Object
+		Name="urod2"
+		FullName="Mikko" />
+
+	<Object
+		Name="urod3"
+		FullName="Borg" />
+
+	<Object
+		Name="urod4"
+		FullName="Alex" />
+
+	<Object
+		Name="urod5"
+		FullName="Scorpion" />
+
+	<Object
+		Name="urod6"
+		FullName="Gaya" />
+
+	<Object
+		Name="urod7"
+		FullName="Sherman" />
+
+	<Object
+		Name="urod8"
+		FullName="Hrrr" />
+
+	<Object
+		Name="urod9"
+		FullName="Uncle Fu" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph3"
+		FullName="Cartographer" />
+
+	<Object
+		Name="r4_Buhara_1"
+		FullName="Bukhara" />
+</ObjectNames>

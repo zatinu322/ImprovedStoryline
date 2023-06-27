@@ -509,7 +509,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound=""
-		value="RADIO|Take him to our main base, our leader will meet you there. You'll get 13,000 coins for the job. I'm passing the coordinates. Over."
+		value="RADIO|Take him to our main base, our leader will meet you there. You'll get 13000 coins for the job. I'm passing the coordinates. Over."
 		time="9" />
 
 	<string
@@ -518,7 +518,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound=""
-		value="RADIO|Nice work. According to the latest intel, the CIT Senator is holding the fort in Rotorsk, and all of our troops are already moving there. Your presence there is also very desirable. We pay 100,000 coins for the success of the operation."
+		value="RADIO|Nice work. According to the latest intel, the CIT Senator is holding the fort in Rotorsk, and all of our troops are already moving there. Your presence there is also very desirable. We pay 100000 coins for the success of the operation."
 		time="14" />
 
 	<string
@@ -609,7 +609,7 @@
 		modelCfg="162"
 		modelSlot="1"
 		sound=""
-		value="GILBERT|She will die if she is not treated immediately! We must get her to Sybilla immediately!"
+		value="GILBERT|She will die if she is not treated immediately! We must get her to Sybilla as soon as possible!"
 		time="6" />
 
 	<string
@@ -660,7 +660,7 @@
 		modelCfg="162"
 		modelSlot="1"
 		sound=""
-		value="GILBERT|I don't recognize the logo on your car. Who is it? CIT? CD?"
+		value="GILBERT|I don't recognize the logo on your car. Who are you? CIT? CD?"
 		time="6" />
 
 	<string

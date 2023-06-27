@@ -4954,8 +4954,8 @@
 
 	<QuestInfo
 		questName="r4m1_EnginAliham"
-		briefDiz="Ask about the driver in Aliham"
-		fullDiz="The missing ferryman from Kef was last seen near the village of Aliham. I think I should start the search from there."
+		briefDiz="Ask about the driver in Alikham"
+		fullDiz="The missing ferryman from Kef was last seen near the village of Alikham. I think I should start the search from there."
 		isMainQuest="1">
 		<Map
 			name="r4m1"

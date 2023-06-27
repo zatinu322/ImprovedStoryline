@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Well, here we are. Only one final challenge separates us from the composite."
+		sound=""
+		time="7" />
+
+	<string
+		id="2"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Yes, that's why you shouldn't wait too long. I understand this vehicle is prepared especially for you."
+		sound=""
+		time="7" />
+
+	<string
+		id="3"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Yes, it looks like it. But I wish you had stayed on the train instead of coming with me."
+		sound=""
+		time="7" />
+
+	<string
+		id="4"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Why would I do that?"
+		sound=""
+		time="3" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I have a bad feeling about the locals and their traditions. They seem to be a little too strange."
+		sound=""
+		time="8" />
+
+	<string
+		id="6"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Okay, let's do it your way. I might miss a lot of interesting things, but at least I'll be warm."
+		sound=""
+		time="7" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I'll tell you all about it later, I promise. All right, I'm off."
+		sound=""
+		time="6" />
+
+	<string
+		id="8"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|Stranger, you have done many glorious things to reach your goal, and now you only have one last challenge to face."
+		sound=""
+		time="10" />
+
+	<string
+		id="81"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|If you manage to get out of this labyrinth alive, you will get what you came for. If not, then it is your destiny."
+		sound=""
+		time="9" />
+
+	<string
+		id="9"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|Do you see these people at the top of the mountain? Those are the greatest of us, the best of the best, gathered here to watch your challenge. Do you have any questions?"
+		sound=""
+		time="14" />
+
+	<string
+		id="10"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What dangers await me in this labyrinth?"
+		sound=""
+		time="5" />
+
+	<string
+		id="11"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|The greatest and only danger you'll face is time. As soon as the challenge starts, I will activate the detonator attached to your car. You'll have seven minutes to find your way out before the explosion occurs."
+		sound=""
+		time="17" />
+
+	<string
+		id="12"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="And what if I refuse to take part in it?"
+		sound=""
+		time="5" />
+
+	<string
+		id="13"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|If you do so, you will not get what you came here for, and you will be banished from our lands forever."
+		sound=""
+		time="8" />
+
+	<string
+		id="14"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Okay, I got it. I agree to pass this challenge. I can't turn back now, anyway."
+		sound=""
+		time="8" />
+
+	<string
+		id="15"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|Wise words, stranger. May fortune be with you. And most importantly, remember that as you follow the straight path of life, you should not ignore its non-obvious turns."
+		sound=""
+		time="14" />
+
+	<string
+		id="16"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|I declare the Death Maze Challenge begun!"
+		sound=""
+		time="7" />
+
+	<string
+		id="17"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|Congratulations, stranger! Our chosen ones were very pleased with you. Go back to Volozh; they already know of your victory."
+		sound=""
+		time="11" />
+
+	<string
+		id="18"
+		modelName="mask_lisa"
+		modelSkin="1"
+		modelSlot="1"
+		value="KNOWLEDGE KEEPER|And also accept the gift of this book, written by our best chroniclers. Read it, and you will understand everything. Farewell, fellow traveler."
+		sound=""
+		time="11" />
+
+	<string
+		id="19"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Farewell."
+		sound=""
+		time="3" />
+
+</resource>

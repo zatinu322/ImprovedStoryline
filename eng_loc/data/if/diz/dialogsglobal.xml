@@ -2167,13 +2167,13 @@
 
 	<Reply
 		name="Dlg_npc_003356"
-		text="Каков наглец! Но, честно сказать, я ожидал от него нечто подобное. Спасибо тебе, добрый путник. Я незамедлительно отправлюсь в Ринольск и радикально решу этот вопрос."
+		text="What a liar! But, honestly, I expected something like that from him. Thank you, fellow traveler. I'll go to Rinolsk immediately and resolve this issue drastically."
 		role="NPC"
 		nextReplies="Dlg_pl_003357" />
 
 	<Reply
 		name="Dlg_pl_003357"
-		text="What a liar! But, honestly, I expected something like that from him. Thank you, fellow traveler. I'll go to Rinolsk immediately and resolve this issue drastically."
+		text="No problem. I don't like to be taken for a fool."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m5_AnanagaBetrayal_Quest'); EndConversation()" />
 
@@ -2198,7 +2198,7 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_1_N01"
-		text="Проходи, располагайся. Нам предстоит очень долгий разговор."
+		text="Come in, make yourself comfortable. We have a very long conversation ahead of us."
 		role="NPC"
 		scriptCondition="QuestStatus('r4m2_FightWithCrazy')==Q_COMPLETED and QuestStatus('r4m2_InvestigationPlate')==Q_CANBEGIVEN"
 		scriptResult="CompleteQuest('r4m1_GotoAivenGo')"
@@ -2206,37 +2206,37 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_1_N02"
-		text="Назови мне хоть одну причину, по которой я не должен убить тебя прямо сейчас! Говори, что произошло с Айвеном! Почему ты напал на него в Минине? А зачем сжигал его дом в Хеле? И какого чёрта ты прикидывался купцом в Южном? Отвечай!"
+		text="Give me one good reason why I shouldn't kill you right now! Tell me what happened to Ivan! Why did you attack him in Minin? And why did you burn down his house in Hel? And why the hell did you pretend to be a merchant in Sowth? Answer me!"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_1_N03" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_1_N03"
-		text="Я понимаю твоё негодование, но не стоит так кричать. Я тебе всё расскажу. Но сперва могу я тебя попросить чуть-чуть проехать вперёд и посмотреть на одну вещь?"
+		text="I understand your indignation, but you don't have to yell. I'll tell you everything, I promise. But first, can I ask you to drive forward a little bit and look at one thing?"
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_1_N04" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_1_N04"
-		text="Да как ты смеешь..?!"
+		text="How dare you?!"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_1_N05" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_1_N05"
-		text="Поверь, это значительно облегчит наш разговор. Пожалуйста. Я никуда не денусь - буду ждать тебя здесь."
+		text="Trust me, it will make our conversation a lot easier. Please. I'll wait for you here."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_1_N06" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_1_N06"
-		text="Лучше бы это было что-нибудь действительно важное."
+		text="It better be something really important."
 		role="PLAYER"
 		scriptResult="TActivate('trNearPlate'); TakeQuest('r4m2_InvestigationPlate'); EndConversation();" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N01"
-		text="Что ж, теперь ты видел всё."
+		text="Well, now you've seen everything."
 		role="NPC"
 		scriptCondition="QuestStatus('r4m2_TalkWithScientific')==Q_TAKEN"
 		scriptResult="CompleteQuest('r4m2_TalkWithScientific'); TakeQuest('r4m2_DestroyPlate'); ShowMap()"
@@ -2244,337 +2244,337 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N02"
-		text="Что это за место?"
+		text="What is this place?"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N03" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N03"
-		text="Если не возражаешь, я начну свой рассказ с самого начала. Очень давно, в самом конце 2011 года, 31 декабря военный командный центр города Гадад зафиксировал неопознанный летающий объект, медленно приближающийся к нашей планете. После краткосрочного совещания руководство центра приняло решение нанести по объекту ракетный удар."
+		text="If you don't mind, I'll start this story from the beginning. A long time ago, at the very end of 2011, on December 31st, the Gadad City Military Command Center detected an unidentified flying object slowly approaching our planet. After a short meeting, the leadership of the center decided to launch a missile strike on the object."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N04" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N04"
-		text="Но ведь не было острой необходимости в столь агрессивной реакции!"
+		text="But there was no urgent need for such an aggressive reaction!"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N05" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N05"
-		text="Обстановка в регионе тогда была очень напряжённая: из-за борьбы с террористами в этой стране было опасно находиться, поэтому на тот момент такая реакция казалась наиболее оправданным шагом. Но мы тогда ошиблись. Очень жестоко ошиблись."
+		text="The situation in the region at that time was very tense: it was dangerous to be in that country because of the fight against terrorists, so at that time such a reaction seemed the most justified step. But we were wrong at the time. We were very badly mistaken."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N06" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N06"
-		text="Что случилось?"
+		text="What happened?"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N07" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N07"
-		text="Как только сбитый объект упал на землю, наиболее развитые государства прислали на место крушения свои исследовательские группы. Когда им удалось проникнуть внутрь инопланетного корабля - а это безо всяких сомнений был именно корабль, - наступила эйфория. Какие перспективы ждали нас: новые лекарства, сверхпрочные материалы, революционные технологии… Но нашли мы лишь смерть."
+		text="As soon as the downed object hit the ground, the most developed nations sent their research teams to the crash site. When they managed to get inside the alien ship - and it was undoubtedly the alien ship - there was euphoria. What prospects awaited us: new medicines, heavy-duty materials, revolutionary technology ... But all we found was death."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N08" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N08"
-		text="Кажется, я начинаю понимать."
+		text="I think I'm starting to understand."
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N09" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N09"
-		text="Работники гибли под колёсами техники, трое ведущих исследователей покончили с собой за два дня исследований. Но самое страшное случилось, когда они распечатали герметичную камеру в центральном отсеке…"
+		text="Workers died under the wheels of machinery, three leading researchers committed suicide in two days of research. But the worst thing happened when they opened the sealed chamber in the central compartment..."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N10" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N10"
-		text="Не стоило вам этого делать. Как можно игнорировать такие чёткие предупреждающие сигналы?!"
+		text="They shouldn't have done that. How can they ignore such clear warning signals?!"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N11" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N11"
-		text="Они же ученые. Суеверия не для них. Я продолжу: видимо, включилась спящая до того момента автоматика. Началось что-то невообразимое: тела учёных буквально взорвались, в голове других людей зазвучал странный гул. Многие погибли, а те, кто выжил, позже очнулись в этом лагере. Радио молчало. Они поняли, что случилась катастрофа."
+		text="They are scientists. Superstitions are not for them. I'll continue: apparently, the automatic system that had been asleep up to that point turned on. Something unimaginable began to happen: the scientists' bodies literally exploded, and a strange humming sound was heard in other people's heads. Many died, and those who survived later woke up in this camp. The radio was silent. Then they realized that a disaster had occurred."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N12" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N12"
-		text="Значит, какая-то кучка людей разрушила мир только ради удовлетворения своего любопытства?!"
+		text="So some bunch of people ruined the whole world just to satisfy their curiosity?!"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N13" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N13"
-		text="Что сделано, то сделано. Нет пути назад."
+		text="What's done is done. There is no going back."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N14" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N14"
-		text="Подожди, а ты сам откуда всё это знаешь? Ведь это всё были события двухсотлетней давности!"
+		text="Wait, how do you know all this? After all, these were all events of two hundred years ago!"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N15" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N15"
-		text="Я не первый, кто побывал в этом лагере. И я уверен, что не последний. Я восстановил эти события по документам и записям людей, бывших здесь в ту страшную пору."
+		text="I'm not the first person to have been to this camp. And I am sure that I won't be the last. I have reconstructed these events from the documents and records of the people who were here at that terrible time."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N16" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N16"
-		text="Но что ты здесь тогда делаешь? И что это за люди, стоящие перед тарелкой?"
+		text="But then what are you doing here? And what are these people standing in front of the ship?"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N17" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N17"
-		text="И вот мы подходим к самому интересному. Как ты уже заметил, не тебя одного поиски правды занесли в это проклятое место. До тебя здесь уже побывало немалое количество смелых и отважных людей, но всех их забрал &quot;Повелитель&quot;."
+		text="And here we come to the most interesting part. As you've noticed, you're not the only one who's been searching for the truth in this cursed place. There have been many brave and courageous people here before you, but they were all taken by the &quot;Overlord&quot;."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N18" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N18"
-		text="Повелитель?"
+		text="Overlord?"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N19" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N19"
-		text="Я так называю эту упавшую тарелку. Надо же её как-нибудь называть, правильно? Я не знаю, по какому принципу работает эта штука, но она буквально выжигает мозг. Стоит приблизиться к тарелке на близкое расстояние, как ты перестаёшь себя контролировать. Твоё тело тебя не слушается, ты перестаёшь испытывать любые физиологические потребности. И ты просто встаёшь напротив этого корабля, не в силах пошевелиться и уйти. Я видел это часто. Слишком часто."
+		text="That's how I call this fallen monster. We gotta call it somehow, right? I don't know how it works, but it literally burns your brain out. Once you get close to the ship, you can't control yourself. Your body doesn't listen to you, you stop having any physiological needs. And you just stand in front of that ship, unable to move and walk away. I've seen that a lot."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N22b" />
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N22b"
-		text="А Айвен… Айвен тоже был среди них? Среди тех, кого забрала эта штука?"
+		text="And Ivan... Was Ivan among them? Among those who were taken by that thing?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003079" />
 
 	<Reply
 		name="Dlg_npc_003079"
-		text="Да, скорее всего. Столько людей здесь побывало - всех уже и не припомнишь."
+		text="Yeah, probably. So many people have been here that it's hard to remember them all."
 		role="NPC"
 		nextReplies="Dlg_pl_003080" />
 
 	<Reply
 		name="Dlg_pl_003080"
-		text="Ты лжёшь! Ты не можешь не помнить Айвена! Иначе зачем тебе было нападать на Минин и сжигать дом в Хеле?"
+		text="You're lying! You can't not remember Ivan! Why else would you have attacked Minin and burned down the house in Hel?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003081" />
 
 	<Reply
 		name="Dlg_npc_003081"
-		text="Не переоценивай значимость своего отца. Я всего лишь заметал за ним следы, чтобы никто другой не смог сюда добраться, воспользовавшись его заметками. Я так делаю всегда. Не хочу, чтобы эта штука сожрала ещё больше человеческих душ."
+		text="Don't overestimate the importance of your father. I was just covering his tracks so that no one else could get here using his notes. That's what I always do. I don't want this thing to consume any more human souls."
 		role="NPC"
 		nextReplies="Dlg_pl_003082" />
 
 	<Reply
 		name="Dlg_pl_003082"
-		text="Но ведь я не говорил, что Айвен мой отец!"
+		text="But I never said Ivan was my father!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003083" />
 
 	<Reply
 		name="Dlg_npc_003083"
-		text="Ну… Эм… Поверь, это было очень просто угадать. Ради кого ещё такой человек, как ты, готов пересечь полмира? Только ради близкого родственника, скорее всего, отца. Не нужно быть семи пядей во лбу, чтобы до этого додуматься."
+		text="Well... Um... Believe me, it was very easy to guess. Who else would a man like you cross halfway around the world for? Only a close relative, most likely a father. You don't have to be smart to figure that out."
 		role="NPC"
 		nextReplies="Dlg_pl_003084" />
 
 	<Reply
 		name="Dlg_pl_003084"
-		text="А нападение на Глухое тоже твоих рук дело?"
+		text="What about the attack on Gloohoe? Was it your order?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003085" />
 
 	<Reply
 		name="Dlg_npc_003085"
-		text="Да. Но это скорее моя оплошность, нежели намерение. У безумцев, с которыми ты сражался до моего появления, бывают иногда неконтролируемые приступы агрессии. Иногда настолько сильные, что они могут в этом порыве даже пересечь Пустыню смерти. У меня есть над ними власть, и я всегда заворачиваю их назад до того, как они натворят дел. Но в тот раз я просто не успел."
+		text="It was my mistake, not my order. The madmen you fought before I came along sometimes have uncontrollable fits of aggression. Sometimes so intense that they might even cross the desert in their impulse. I have power over them, and I always turn them back before they've done anything bad. But this time I just didn't get there in time."
 		role="NPC"
 		nextReplies="Dlg_pl_003086" />
 
 	<Reply
 		name="Dlg_pl_003086"
-		text="А зачем нужно было притворяться торговцем в Южном?"
+		text="And why did you have to pretend to be a trader in the Sowth?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003087" />
 
 	<Reply
 		name="Dlg_npc_003087"
-		text="Так гораздо проще было контролировать обстановку вокруг Пустыни и вовремя препятствовать распространению информации о &quot;Повелителе&quot;. Ты сам прекрасно понимаешь: огласка такого рода подробностей обёрнется самыми непредсказуемыми последствиями."
+		text="It was much easier to control the situation around the Desert and prevent the spread of information about the Overlord. You know perfectly well that the publicity of such details would have the most unpredictable consequences."
 		role="NPC"
 		nextReplies="Dlg_pl_003088" />
 
 	<Reply
 		name="Dlg_pl_003088"
-		text="Мне очень трудно в это поверить. Но в твоих словах есть смысл."
+		text="I find that very hard to believe. But your words do make sense."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003089" />
 
 	<Reply
 		name="Dlg_npc_003089"
-		text="Вижу, вопросы у тебя закончились."
+		text="I see you're out of questions."
 		role="NPC"
 		nextReplies="Dlg_pl_003090" />
 
 	<Reply
 		name="Dlg_pl_003090"
-		text="Остался только один. Почему я сейчас разговариваю с тобой, а не стою с выжженными мозгами возле тарелки? Ты ведь говорил, что никому ещё не удавалось избежать её влияния."
+		text="There's only one left. Why am I talking to you now, and not standing with my brain scorched by this ship? You told me that no one had ever escaped its influence."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003091" />
 
 	<Reply
 		name="Dlg_npc_003091"
-		text="Никому. Вплоть до сегодняшнего дня. Я не знаю, что в тебе особенного, но ты смог воспротивиться Повелителю! Так далеко мы ещё не заходили!"
+		text="No one. Until today. I don't know what it is about you that makes you so special, but you can resist the Overlord! That's the furthest we've ever gone!"
 		role="NPC"
 		nextReplies="Dlg_pl_003092" />
 
 	<Reply
 		name="Dlg_pl_003092"
-		text="Мы?"
+		text="We?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003093" />
 
 	<Reply
 		name="Dlg_npc_003093"
-		text="Я имею в виду весь человеческий род в целом."
+		text="I mean the human race as a whole."
 		role="NPC"
 		nextReplies="Dlg_pl_003094" />
 
 	<Reply
 		name="Dlg_pl_003094"
-		text="Но ведь ты тоже сейчас здесь. Да и с рассудком у тебя всё в порядке. Значит, всё-таки я не единственный."
+		text="But you're here now, too. And there's nothing wrong with your mind. So I'm not the only one after all."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003095" />
 
 	<Reply
 		name="Dlg_npc_003095"
-		text="Тут есть одна проблема: я не могу уйти слишком далеко от этого места. Хель был моим максимумом. Да и то сейчас, наверное, я уже и до Края добраться не смогу. Стоит мне отдалиться на большое расстояние, я начинаю слабеть и испытывать те же симптомы, что и подошедшие слишком близко. Ещё раз повторю: я не знаю, как это работает, но в моём случае всё наоборот. Если других людей Повелитель уничтожает сразу, то на меня он накинул что-то вроде поводка. Я спокойно живу рядом с ним, но начинаю слабеть, если покидаю его зону влияния."
+		text="There's one problem: I can't get too far away from this place. Hel was my maximum. And even now, I probably can't even get to the Krai anymore. Once I get too far away, I begin to weaken and experience the same symptoms as when I get too close. Once again, I don't know how it works, but in my case, it's the opposite. While the Overlord destroys other people at once, he's put a sort of leash on me. I exist comfortably next to him, but become weaker when I leave his sphere of influence."
 		role="NPC"
 		nextReplies="Dlg_pl_003096" />
 
 	<Reply
 		name="Dlg_pl_003096"
-		text="Вот, значит, как…"
+		text="So that's how it is..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003097" />
 
 	<Reply
 		name="Dlg_npc_003097"
-		text="Так что, получается, ты всё ещё единственный человек, способный ему противостоять."
+		text="So it turns out that you're still the only person who can resist him."
 		role="NPC"
 		nextReplies="Dlg_pl_003098" />
 
 	<Reply
 		name="Dlg_pl_003098"
-		text="И что мне теперь делать? Как я могу остановить заразу, поступающую в атмосферу? Ты провёл в этом месте столько времени, у тебя уже наверняка есть какой-нибудь план!"
+		text="What do I do now? How can I stop a contagion entering the atmosphere? You've been in this place so long, you must have some kind of plan by now!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003099" />
 
 	<Reply
 		name="Dlg_npc_003099"
-		text="А вариантов у нас так-то немного. Либо перекрыть источник заразы, как ты выразился, либо уничтожить его. Но мы с тобой не располагаем ресурсами, чтобы это провернуть."
+		text="We don't have many options. Either shut off the source of the contagion, as you put it, or destroy it. But neither you nor I don't have the resources to do that."
 		role="NPC"
 		nextReplies="Dlg_pl_003100" />
 
 	<Reply
 		name="Dlg_pl_003100"
-		text="Зато я знаю, кто располагает. Пришло время вновь нанести визит Оракулу."
+		text="But I know who does. It's time to pay another visit to the Oracle."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003101 Dlg_npc_003167" />
 
 	<Reply
 		name="Dlg_npc_003167"
-		text="Будь осторожен. И пусть тебе повезёт там, где другие не справились. Вряд ли мы увидимся с тобой снова. Вот, возьми - это дубликат того устройства, с помощью которого ты активировал Морские врата в разных частях света. Мне он всё равно не нужен, а тебе явно понадобится."
+		text="Be careful. And may you be successful where others have failed. It's unlikely that we'll see each other again. Here, take this - it's a duplicate of the device you used to activate the Sea Gate in different parts of the world. I don't need it anyway, but you obviously will."
 		role="NPC"
 		scriptCondition="QuestStatus('PeregReturn')==Q_COMPLETED"
 		nextReplies="Dlg_pl_003169" />
 
 	<Reply
 		name="Dlg_pl_003169"
-		text="Спасибо, прощай."
+		text="Thank you, goodbye."
 		role="PLAYER"
 		scriptResult="TActivate('SergoAivenTalk1'); AddQuestItem('quest_key_for_submarine1'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_submarine1'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_003101"
-		text="Будь осторожен. И пусть тебе повезёт там, где другие не справились. Вряд ли мы увидимся с тобой снова. Успехов тебе!"
+		text="Be careful. And may you be successful where others have failed. It's unlikely that we'll see each other again."
 		role="NPC"
 		scriptCondition="not(QuestStatus('PeregReturn')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_003102" />
 
 	<Reply
 		name="Dlg_pl_003102"
-		text="Прощай."
+		text="Goodbye."
 		role="PLAYER"
 		scriptResult="TActivate('SergoAivenTalk1'); EndConversation()" />
 
 	<Reply
 		name="Gadad_Bar_CrazyBook1_1_N01"
-		text="Иноземец! Ты не поддался великому зову, поэтому я хочу отдать тебе одну вещь."
+		text="Foreigner! You have not yielded to the great call, so I want to give you one thing."
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount( ) == 0"
 		nextReplies="Gadad_Bar_CrazyBook1_1_N02" />
 
 	<Reply
 		name="Gadad_Bar_CrazyBook1_1_N02"
-		text="Что за великий зов? Что за вещь???"
+		text="What's the great call? What's this thing?"
 		role="PLAYER"
 		nextReplies="Gadad_Bar_CrazyBook1_1_N03" />
 
 	<Reply
 		name="Gadad_Bar_CrazyBook1_1_N03"
-		text="Скорей, скорей, они следят. Это последний экземпляр книги, в которой говорится о том, что происходит с нашим миром..."
+		text="Quick! They are watching. This is the last copy of the book that tells us what is happening to our world..."
 		role="NPC"
 		nextReplies="Gadad_Bar_CrazyBook1_1_N04" />
 
 	<Reply
 		name="Gadad_Bar_CrazyBook1_1_N04"
-		text="Стой, сумасшедший! Куда побежал..."
+		text="Stop, you madman! Where are you running..."
 		role="PLAYER"
 		scriptResult="AddBook('r4_book_Scarytail1'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
 
 	<Reply
 		name="r4_Racers_Men_1_N01"
-		text="Сегодня проводится чемпионат сверхбыстрых машин. Любой может принять участие!"
+		text="Today is the ultra-fast car championship. Anyone can take part!"
 		role="NPC"
 		scriptCondition="GetVar('Gonka').AsInt==0"
 		nextReplies="r4_Racers_Men_1_N02a r4_Racers_Men_1_N02b" />
 
 	<Reply
 		name="r4_Racers_Men_1_N02b"
-		text="Мне это неинтересно. "
+		text="I'm not interested."
 		role="PLAYER"
 		scriptResult="TActivate('trPlaceCar'); EndConversation()" />
 
 	<Reply
 		name="r4_Racers_Men_1_N02a"
-		text="Я бы хотел стать участником соревнований."
+		text="I'd like to participate."
 		role="PLAYER"
 		scriptCondition="QuestStatus('r4m1_Kef_NeedOil')~=Q_TAKEN and QuestStatus('r4m1_RescueBuharsCivilian')~=Q_TAKEN"
 		nextReplies="r4_Racers_Men_1_N03a" />
 
 	<Reply
 		name="r4_Racers_Men_1_N03a"
-		text="Ты должен заплатить взнос в 10000 монет, из них 5000 - залог за машину"
+		text="You have to pay a fee of 10000 coins, of which 5000 is the deposit for the car."
 		role="NPC"
 		nextReplies="r4_Racers_Men_1_N04aa r4_Dlg_pl_000158" />
 
 	<Reply
 		name="r4_Dlg_pl_000158"
-		text="У меня есть специальная страховка, так что машину я вам не дам"
+		text="I have special insurance, so I'm not giving you my car."
 		role="PLAYER"
 		scriptCondition="GetVar('Strahovka').AsInt==1"
 		nextReplies="r4_Dlg_npc_000164" />
 
 	<Reply
 		name="r4_Dlg_npc_000164"
-		text="Хм, действительно. Тем проще нам и вам. "
+		text="Hmm, really. All the easier for us and for you. "
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000165" />
 
@@ -2591,94 +2591,94 @@
 
 	<Reply
 		name="r4_Racers_Men_1_N04aa"
-		text="За какую машину? О чем ты говоришь?"
+		text="What car? What are you talking about?"
 		role="PLAYER"
 		nextReplies="r4_Racers_Men_1_N05aa" />
 
 	<Reply
 		name="r4_Racers_Men_1_N05aa"
-		text="Мы тебе даем дорогую гоночную машину, и если ты ее разобьешь, то мы компенсируем расходы из суммы залога"
+		text="We'll give you an expensive race car, and if you wreck it, we'll cover out repairment cost from the deposit."
 		role="NPC"
 		nextReplies="r4_Racers_Men_1_N06aaa r4_Racers_Men_1_N06aab r4_Racers_Men_1_N06aac" />
 
 	<Reply
 		name="r4_Racers_Men_1_N06aac"
-		text="У меня нет таких денег"
+		text="I don't have that much money."
 		role="PLAYER"
 		scriptCondition="10000&gt;GetPlayerMoney()"
 		scriptResult="TActivate('trPlaceCar'); EndConversation()" />
 
 	<Reply
 		name="r4_Racers_Men_1_N06aab"
-		text="Нее... меня не устраивают такие условия. "
+		text="Nah... I am not satisfied with such terms. "
 		role="PLAYER"
 		scriptResult="TActivate('trPlaceCar'); EndConversation()" />
 
 	<Reply
 		name="r4_Racers_Men_1_N06aaa"
-		text="Отлично, я согласен. "
+		text="Great, I'm in."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney()&gt;=10000"
 		nextReplies="r4_Racers_Men_1_N07aaa" />
 
 	<Reply
 		name="r4_Racers_Men_1_N07aaa"
-		text="Правила такие: фальстарт - проиграл, разбил - машину - проиграл. 1-ое место: 40 000, 2-ое место: 20 000, 3-е место: 10 000. В конце гонки возвращаем залог за машину с учетом ремонта, так что не обижайся, если не получишь все свои деньги назад."
+		text="The rules are: false start - you lose, crashed the car - you lose. 1st place: 40000, 2nd place: 20000, 3rd place: 10000. At the end of the race we return the deposit for the car without repairment cost, so do not complain if you do not get all your money back."
 		role="NPC"
 		nextReplies="r4_Racers_Men_1_N08aaa" />
 
 	<Reply
 		name="r4_Racers_Men_1_N08aaa"
-		text="Все понятно. ПОЕХАЛИ!"
+		text="I got it. LET'S GO!"
 		role="PLAYER"
 		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi');  EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002580"
-		text="О, ты уже добрался до пустыни! События развиваются довольно быстро, я за тобой даже не поспеваю."
+		text="Oh, you made it to the desert already! Things are going pretty fast, I can't even keep up with you."
 		role="NPC"
 		scriptCondition="IsQuestComplete('r4m1_KNO_BringOil') and IsQuestComplete('MrShlyapa3_Quest') and GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('r4m2_TalkWithScientific')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_002581" />
 
 	<Reply
 		name="Dlg_pl_002581"
-		text="Я настолько часто тебя видел за последие дни, что я уже даже не удивлён."
+		text="I've seen you so often in the last times that I'm not even surprised anymore."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002582" />
 
 	<Reply
 		name="Dlg_npc_002582"
-		text="Это не может не радовать, значит, скоро мы с тобой наконец-таки поговорим."
+		text="I'm glad to hear it, it means that soon we will finally be able to talk."
 		role="NPC"
 		nextReplies="Dlg_pl_002583" />
 
 	<Reply
 		name="Dlg_pl_002583"
-		text="А что мешает поговорить сейчас?"
+		text="What's stopping you from talking now?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002584" />
 
 	<Reply
 		name="Dlg_npc_002584"
-		text="Ты ещё не готов. Но очень скоро будешь. Ты знаешь, что делать, - давай сюда карту. Отправляйся в это место и посмотри на самый верх."
+		text="You're not ready yet. But you will be very soon. You know what to do - give me the map. Go to this place and look at the very top."
 		role="NPC"
 		nextReplies="Dlg_pl_002585" />
 
 	<Reply
 		name="Dlg_pl_002585"
-		text="Меня уже начинает это утомлять."
+		text="I'm starting to get tired of it."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002586" />
 
 	<Reply
 		name="Dlg_npc_002586"
-		text="Не ной, это последнее, о чём я тебя прошу. Дальше я не смогу тебя сопровождать, тебе придётся действовать самому. И если всё сложится удачно, то мы с тобой, наконец-то, поговорим. А теперь, вынужден откланяться."
+		text="Stop whining, that's the last thing I'm asking you to do. I won't be able to accompany you from here, so you'll have to do this on your own. And if all goes well, we will finally talk. Now, I must take my leave."
 		role="NPC"
 		nextReplies="Dlg_pl_002587" />
 
 	<Reply
 		name="Dlg_pl_002587"
-		text="Да объясни ты мне уже, что здесь происходит!"
+		text="Just tell me what’s going on here!"
 		role="PLAYER"
 		scriptResult="TakeQuest('MrShlyapa4_Quest'); TActivate('HumanSkala_Rolik'); GetCurNpc():SetSpokenCount(1); StartConversation('MrShlyapaAbs'); " />
 
@@ -2690,70 +2690,70 @@
 
 	<Reply
 		name="Dlg_pl_003359"
-		text="И всё-таки он ненастоящий. Да, ну не может он быть настоящим. Бред."
+		text="And yet he’s not real. Yeah, well, he can’t be real. Nonsense."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_003032"
-		text="Здравствуй, путешественник. Не желаешь приобрести у меня подробную карту окрестных земель? Всего 30000 монет."
+		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 30000 coins."
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and GetVar('KnownMap').AsInt == 0"
 		nextReplies="Dlg_pl_003033 Dlg_pl_003034" />
 
 	<Reply
 		name="Dlg_pl_003034"
-		text="Не сейчас."
+		text="Not now."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_003033"
-		text="Желаю, вот деньги."
+		text="Sure. Here's the money."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 30000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-30000); EndConversation()" />
 
 	<Reply
 		name="r4_Dlg_npc_000007"
-		text="Что мы сделали тебе, чужеземец? Почему ты следишь за нами?"
+		text="What have we done to you, stranger? Why are you following us?"
 		role="NPC"
 		scriptCondition="IsQuestComplete('r4m1_Tankisty') and (GetCurNpc():GetSpokenCount( ) == 0) "
 		nextReplies="r4_Dlg_pl_000008" />
 
 	<Reply
 		name="r4_Dlg_pl_000008"
-		text="Я не собирался вас убивать, мне нужны ответы! Несколько недель назад вы пересекли пустыню, напали на беззащитную деревню и убили всех её жителей! Я хочу знать, кто вам приказал сотворить такое!"
+		text="I didn't mean to kill you, I want answers! A few weeks ago you crossed the desert, attacked a defenseless village, and killed all its inhabitants! I want to know who ordered you to do such a thing!"
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000009" />
 
 	<Reply
 		name="r4_Dlg_npc_000009"
-		text="Ты что, брат? Мы никого не трогаем, сражаемся с безумцами, которые разрушают наши города. Нам нет дела до далеких соседей!"
+		text="Calm down, brother. We don't touch anyone, we fight the madmen who destroy our cities. We don't care about our distant neighbors!"
 		role="NPC"
 		nextReplies="Dlg_pl_002408" />
 
 	<Reply
 		name="Dlg_pl_002408"
-		text="У меня есть свидетельница нападения, которая видела твою машину на месте совершения преступления! Ты был там!"
+		text="I have a witness to the attack who saw your car at the scene of the crime! You were there!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002409" />
 
 	<Reply
 		name="Dlg_npc_002409"
-		text="Я не понимаю… Я? Но я никогда не покидал эти края… Та деревня… Крики, пламя… И кровь… Но это был сон. Да, этого не могло быть взаправду! Это был просто дурной сон… Реальны только безумцы… Ты один из них! Готовься к смерти!"
+		text="I don't understand... Me? But I never left these parts... That village... The screams, the flames... And the blood... But it was a dream. Yes, it couldn't have been real! It was just a bad dream. Only madmen are real. You are one of them. Prepare to die!"
 		role="NPC"
 		nextReplies="Dlg_pl_002410" />
 
 	<Reply
 		name="Dlg_pl_002410"
-		text="С удовольствием оборву ваше никчёмное существование!"
+		text="I will gladly terminate your worthless existence!"
 		role="PLAYER"
 		scriptResult="TActivate('TANKIBATTLE'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_N01"
-		text="Мы рады вас видеть в нашем прекрасном городе, дорогие гости! Что я могу сделать для вас?"
+		text="We are glad to see you in our beautiful city, dear guests! What can I do for you?"
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_FindNative')==Q_TAKEN"
 		scriptResult="CompleteQuest('r4m1_FindNative'); AddHistory( 'r4_AfterSomeTimeTravel' ); AddFadingMsgId( 'fm_history_got' );"
@@ -2761,110 +2761,110 @@
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_P02"
-		text="Дорогие гости?! А разве не ваши войска открыли по нам огонь недалеко от города?!"
+		text="Dear guests?! Didn't your troops open fire on us near the city?!"
 		role="PLAYER"
 		nextReplies="Gadad_Bar_Customer1_01_N03" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_N03"
-		text="Что ты такое говоришь? Мы всегда рады гостям и никогда не позволяем себе неоправданную агрессию. Именно поэтому сады и фонтаны нашего славного города воспеты величайшими поэтами!"
+		text="What are you talking about? We always welcome guests and never allow ourselves unwarranted aggression. That's why the gardens and fountains of our glorious city have been praised by the greatest poets!"
 		role="NPC"
 		nextReplies="Gadad_Bar_Customer1_01_P04" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_P04"
-		text="Но ведь здесь нет ни садов, ни фонтанов…"
+		text="But there are no gardens or fountains..."
 		role="PLAYER"
 		nextReplies="Gadad_Bar_Customer1_01_N05" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_N05"
-		text="Аргх!! Это злобные ракшасы совершают набеги на наши жилища, разрушая все на своем пути! Почти каждый божий день приходится нам отбивать их нападения! Поэтому мы не успеваем поддерживать памятники культуры в должном виде. Как жаль..."
+		text="Argh!!! It is the vicious rakshases who raid our dwellings, destroying everything in their path! Almost every single day we have to repel their attacks! That is why we have no time to keep the cultural monuments in proper condition. What a pity..."
 		role="NPC"
 		nextReplies="Gadad_Bar_Customer1_01_P06" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_P06"
-		text="Это поэтому вы на меня напали? Потому что решили, что я один из них? "
+		text="Is that why you attacked me? Because you thought I was one of them? "
 		role="PLAYER"
 		nextReplies="Gadad_Bar_Customer1_01_N07" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_N07"
-		text="Что? Ты о чём? Мы всегда рады гостям! Ты уже видел центральный фонтан? Если нет, то посмотри обязательно, неописуемая красота!"
+		text="What? What are you talking about? We're always happy to have visitors! Have you seen the central fountain? If you haven't, you must see it, it's indescribably beautiful!"
 		role="NPC"
 		nextReplies="Gadad_Bar_Customer1_01_P08" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_P08"
-		text="[Да что же, чёрт возьми, здесь происходит такое?! Ладно, лучше перейду сразу к делу.]|Могу я спросить вас о событиях двадцатилетней давности?"
+		text="[What the hell is going on here?! All right, I'd better get straight to the point.]|May I ask you about the events of twenty years ago?"
 		role="PLAYER"
 		nextReplies="Gadad_Bar_Customer1_01_N09" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_N09"
-		text="А зачем это тебе? Зачем тебе интересоваться прошлым, когда есть чудесное настоящее? "
+		text="Why are you interested in the past when there's a wonderful present?"
 		role="NPC"
 		nextReplies="Gadad_Bar_Customer1_01_P10" />
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_P10"
-		text="И всё же не могли бы вы припомнить человека, проезжающего через эти земли примерно лет двадцать назад?"
+		text="And yet, can you remember a person who passed through these lands twenty years ago?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002357" />
 
 	<Reply
 		name="Dlg_npc_002357"
-		text="Мы не ведём записей о приезжих, нам это незачем. Только старики могли бы помочь тебе, но они все ушли."
+		text="We don't keep records of newcomers, we don't need to. Only elders could help you, but they're all gone."
 		role="NPC"
 		nextReplies="Dlg_pl_002358" />
 
 	<Reply
 		name="Dlg_pl_002358"
-		text="Вы знаете куда?"
+		text="Where?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002359" />
 
 	<Reply
 		name="Dlg_npc_002359"
-		text="Откуда нам… Попробуй спросить в Кефе, это дальше по дороге."
+		text="Unfortunately... Try asking at Kef, it's further down the road."
 		role="NPC"
 		nextReplies="Dlg_pl_002360" />
 
 	<Reply
 		name="Dlg_pl_002360"
-		text="Ладно, и на том спасибо."
+		text="Okay, thank you for that."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002353"
-		text="Меня пугает это место."
+		text="This place creeps me out."
 		role="NPC"
 		scriptCondition="IsQuestTaken('r4m1_LisaGadad') and not(IsQuestComplete('r4m1_LisaGadad'))"
 		nextReplies="Dlg_pl_002354" />
 
 	<Reply
 		name="Dlg_pl_002354"
-		text="Меня тоже настораживает. Какие-то все здесь странные. "
+		text="I'm also worried. Everyone here seems strange. "
 		role="PLAYER"
 		nextReplies="Dlg_npc_002355" />
 
 	<Reply
 		name="Dlg_npc_002355"
-		text="Про какой город он там говорил? Кеф? Давай скорее туда. Мне не хочется здесь оставаться слишком долго."
+		text="What town did he talk about? Kef? Let's get over there. I don't want to stay here too long."
 		role="NPC"
 		nextReplies="Dlg_pl_002356" />
 
 	<Reply
 		name="Dlg_pl_002356"
-		text="Само собой. Меня дважды просить не придётся."
+		text="Of course. You don't have to ask me twice."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_LisaGadad'); EndConversation()" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N01"
-		text="Доброго здравия, путник! Что ищешь ты в краю далёком?"
+		text="Good afternoon, traveler! What are you looking for in this faraway land?"
 		role="NPC"
 		scriptCondition="IsQuestTaken('r4m1_FRP_GotoKef') and not(IsQuestComplete('r4m1_FRP_GotoKef')) and (GetCurNpc():GetSpokenCount( ) == 0)"
 		scriptResult="CompleteQuest('r4m1_FRP_GotoKef'); AddHistory( 'r4_KnownAboutBuhara' ); AddFadingMsgId( 'fm_history_got' );"
@@ -2872,354 +2872,354 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N02"
-		text="Приветствую вас! В Гададе мне сказали, что здесь я смогу найти ответ на свой вопрос."
+		text="Greetings! A man from Gadad told me that I could find the answer to my question here."
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N03" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N03"
-		text="Что ж, раз наши друзья в Гададе так считают, то я с удовольствием тебя выслушаю. Что тебя заботит?"
+		text="Well, since our friends in Gadad think so, I'd love to help you. What's on your mind?"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N04" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N04"
-		text="Один человек, Айвен, был в ваших краях много лет назад. Он не вернулся домой, и мы очень этим обеспокоены. В вашем городе есть те, кто помнит о прошлых временах?"
+		text="There was a man, Ivan, who visited your country many years ago. He didn't come home, and we're very concerned about that. Is there anyone in your town who remembers times past?"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N05" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N05"
-		text="К сожалению, нет. Наши старики, хранители памяти, однажды собрались и просто ушли в неизвестном направлении. Мы пытаемся найти их, но пока это нам не удалось."
+		text="Sadly, no. Our elders, the memory keepers, got together one day and just left in an unknown direction. We are trying to find them, but so far without success."
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N06" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N06"
-		text="А почему они покинули вас?"
+		text="Why did they leave you?"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N07" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N07"
-		text="Война. Постоянные нападения истощили нас, заставили забыть о красоте и почитании предков. Теперь все наши силы уходят на то, чтобы выжить.|Но стоит ли жить, когда ушла красота? Растравил ты мне душу, чужеземец!"
+		text="War. The constant attacks have exhausted us, made us forget about beauty and reverence for our ancestors. Now all our energies go into surviving.|But is it worth living when beauty is gone? You've hurt my soul, stranger!"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N08" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N08"
-		text="А с кем война-то?"
+		text="Who are you at war with?"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N09" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N09"
-		text="С чёртовыми ракшасами из Гадада, шагу не дают нам ступить без боя!"
+		text="With the goddamn rakshases of Gadad, they won't let us go a step without a fight!"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N10" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N10"
-		text="Но ведь… у вас же мирные отношения с Гададом, они сами меня послали к вам…"
+		text="But... I thought you have peaceful relations with Gadad, they sent me to you..."
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N11" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N11"
-		text="С Гададом? Конечно же, мирные! Мы все очень близкие друзья, и я очень надеюсь, что всё будет так и впредь."
+		text="With Gadad? Of course, we're very good friends! And I really hope it stays that way forever."
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N12" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N12"
-		text="[Меня начинает пугать этот разговор, нужно поскорее его закончить, пока он не решил и меня с Лисой прикончить.]"
+		text="[This conversation is starting to scare me, and I need to end it as soon as possible, before he decides to finish me and Lisa off as well.]"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_1_N13" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N13"
-		text="Как бы то ни было, мы постоянно посылаем экспедиции на поиски наших предков и добились в этом немалых успехов. Одна из наших экспедиций должна скоро вернуться. А пока мы ждём, не мог бы ты помочь нам в нашей беде?"
+		text="In any case, we are constantly sending expeditions in search of our elders and have had considerable success in doing so. One of our expeditions should return soon. While we wait, could you help us in our trouble?"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N13a" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N13a"
-		text="[Чует моё сердце, не стоит мне ему отказывать.]|Я сделаю всё, что в моих силах. А что случилось?"
+		text="[I have a feeling in my heart that I should not refuse him.]|I'll do everything I can. What happened?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002361" />
 
 	<Reply
 		name="Dlg_npc_002361"
-		text="Нефть - это наша кровь. Без неё машины перестанут работать, и мы окажемся беззащитными перед нападающими!"
+		text="Oil is literally our blood. Without it, the machines will stop working and we will be defenseless against attackers!"
 		role="NPC"
 		nextReplies="Dlg_pl_002362" />
 
 	<Reply
 		name="Dlg_pl_002362"
-		text="Сложно с этим поспорить. Я так понимаю, что-то случилось с вашей нефтью?"
+		text="It's hard to argue with that. I assume something happened to your oil?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002363" />
 
 	<Reply
 		name="Dlg_npc_002363"
-		text="Пересох источник драгоценной жидкости! До недавнего времени нас снабжали жители Казифа, но больше никто не отваживается туда ездить: слишком опасно стало покидать городские стены."
+		text="The source of the precious liquid has dried up! Until recently, we were supplied by the people of Kazif, but no one dares to go there anymore: it has become too dangerous to leave the city walls."
 		role="NPC"
 		nextReplies="Dlg_pl_002364" />
 
 	<Reply
 		name="Dlg_pl_002364"
-		text="То есть вы хотите, чтобы я привёз вам цистерну нефти?"
+		text="So you want me to bring you a tanker of oil?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002365" />
 
 	<Reply
 		name="Dlg_npc_002365"
-		text="Да. Мы дадим тебе грузовик-цистерну, а твоя машина пока побудет у нас."
+		text="Yes. We'll give you a tanker truck, while your car will be safely parked here.."
 		role="NPC"
 		nextReplies="Dlg_pl_002366" />
 
 	<Reply
 		name="Dlg_pl_002366"
-		text="Мне нужно подумать. Дай мне пару минут."
+		text="I need to think about it. Give me a few minutes."
 		role="PLAYER"
 		scriptResult="TakeQuest('r4m1_LisaKef'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N01"
-		text="Ты всё-таки привёз нам нефть!"
+		text="You brought us oil after all!"
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_KNO_ReportToKefAboutOil')==Q_TAKEN"
 		nextReplies="Kef_Bar_Customer1_2_N02" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N02"
-		text="А что, мог не привезти?"
+		text="&quot;After all&quot;?"
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_KNO_ReportToKefAboutOil')"
 		nextReplies="Kef_Bar_Customer1_2_N03" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N03"
-		text="Ну… эм…|Конечно же нет! Всё хорошо… Да… Всё очень хорошо…"
+		text="Lever mind...|Yeah, everything is fine... Completely fine..."
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_2_N04" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N04"
-		text="Ну… А ваша экспедиция ещё не вернулась? "
+		text="Well, has your expedition returned?"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_2_N05" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N05"
-		text="Ещё пока нет. Тебе придётся ещё немного подождать."
+		text="Not yet.You'll have to wait a little longer."
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_2_N06" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N06"
-		text="Ну ладно, раз уж так…"
+		text="All right, if that's the case..."
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_2_N07" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N07"
-		text="Вот горе! Мы ничего не сможем сделать с нефтью, которую ты привёз!"
+		text="What a misery! There's nothing we can do about the oil you brought in!"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_2_N08" />
 
 	<Reply
 		name="Kef_Bar_Customer1_2_N08"
-		text="Почему?"
+		text="Why?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002381" />
 
 	<Reply
 		name="Dlg_npc_002381"
-		text="Пропал наш единственный специалист по перегонке. А на сырой нефти техника работать не будет!"
+		text="Our only oil engineer had disappeared. And our equipment will not work on raw oil!"
 		role="NPC"
 		nextReplies="Dlg_pl_002382" />
 
 	<Reply
 		name="Dlg_pl_002382"
-		text="Вот так прямо взял и пропал?"
+		text="Disappeared? For no reason and in broad daylight?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002383" />
 
 	<Reply
 		name="Dlg_npc_002383"
-		text="Да! Абсолютно без каких-либо причин! Верни его."
+		text="Yes! Absolutely for no reason at all! Bring him back."
 		role="NPC"
 		nextReplies="Dlg_pl_002384" />
 
 	<Reply
 		name="Dlg_pl_002384"
-		text="Я? Вам не кажется, что кому-нибудь из местных будет гораздо проще убедить его вернуться?"
+		text="Me? Don't you think it would be much easier for one of the locals to convince him to come back?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002385" />
 
 	<Reply
 		name="Dlg_npc_002385"
-		text="Исключено. Нас он даже слушать не станет."
+		text="No way. He won't even listen to us."
 		role="NPC"
 		nextReplies="Dlg_pl_002386" />
 
 	<Reply
 		name="Dlg_pl_002386"
-		text="Странно как-то всё это. Ладно, я попробую его поискать."
+		text="It's kind of weird. All right, I'll try to search for him."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002387" />
 
 	<Reply
 		name="Dlg_npc_002387"
-		text="Последний раз его видели возле деревни Алихам. "
+		text="He was last seen near the village of Alikham. "
 		role="NPC"
 		nextReplies="Dlg_pl_002388" />
 
 	<Reply
 		name="Dlg_pl_002388"
-		text="Я поговорю с ним, но ничего не обещаю."
+		text="I'll talk to him, but I don't promise anything."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1a_N01"
-		text="Ты решился на это!? Ты привезёшь нам нефть?"
+		text="You dare to do that?! Will you bring us oil?"
 		role="NPC"
 		scriptCondition="(GetCurNpc():GetSpokenCount( ) == 1) and QuestStatus('r4m1_Kef_NeedOil')==Q_CANBEGIVEN and IsQuestComplete('r4m1_LisaKef')"
 		nextReplies="Kef_Bar_Customer1_1a_N02" />
 
 	<Reply
 		name="Kef_Bar_Customer1_1a_N02"
-		text="Да, я привезу. Про какой грузовик вы там говорили?"
+		text="Yes, I will. What truck were you talking about?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003001" />
 
 	<Reply
 		name="Dlg_npc_003001"
-		text="Он уже подготовлен и стоит слева от города. Твою машину можешь оставить там же."
+		text="It is already prepared and parked on the left side of town. You can leave your car there as well."
 		role="NPC"
 		nextReplies="Dlg_pl_003002" />
 
 	<Reply
 		name="Dlg_pl_003002"
-		text="Хорошо."
+		text="All right."
 		role="PLAYER"
 		scriptResult="TakeQuest('r4m1_Kef_NeedOil'); TActivate('trCreateMolokovoz'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002367"
-		text="Что ты задумал?"
+		text="What are you up to?"
 		role="NPC"
 		scriptCondition="IsQuestTaken('r4m1_LisaKef') and not(IsQuestComplete('r4m1_LisaKef'))"
 		nextReplies="Dlg_pl_002368" />
 
 	<Reply
 		name="Dlg_pl_002368"
-		text="Лиса, ты только успокойся."
+		text="Lisa, just calm down."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002369" />
 
 	<Reply
 		name="Dlg_npc_002369"
-		text="Я спокойна. Я спокойна, как никто другой в этом проклятом месте. А вот твой тон меня настораживает. Так что ты задумал?"
+		text="I am calm. I'm as calm as nobody else in this goddamn place. It's your tone that worries me. So what are you up to?"
 		role="NPC"
 		nextReplies="Dlg_pl_002370" />
 
 	<Reply
 		name="Dlg_pl_002370"
-		text="Лиса. Я понимаю, что тебе не по себе из-за этого долгого переезда, да и пустыня, как ты сказала, &quot;давит на тебя&quot;…"
+		text="Lisa. I understand that you feel uncomfortable about this long ride, and the desert, as you said, &quot;is crushing your mind&quot;..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002371" />
 
 	<Reply
 		name="Dlg_npc_002371"
-		text="Ближе к делу, что ты всё ходишь вокруг да около!"
+		text="Get to the point, why are you beating around the bush!"
 		role="NPC"
 		nextReplies="Dlg_pl_002372" />
 
 	<Reply
 		name="Dlg_pl_002372"
-		text="Я хочу, чтобы ты осталась в городе и проследила за моей машиной."
+		text="I want you to stay in town and watch for my car."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002373" />
 
 	<Reply
 		name="Dlg_npc_002373"
-		text="Нет. И речи быть не может!"
+		text="No. Out of the question!"
 		role="NPC"
 		nextReplies="Dlg_pl_002374" />
 
 	<Reply
 		name="Dlg_pl_002374"
-		text="Лиса, послушай…"
+		text="Lisa, listen..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002375" />
 
 	<Reply
 		name="Dlg_npc_002375"
-		text="Ни за что! Я не останусь одна в окружении этих безумцев!"
+		text="No way! I won't stay alone surrounded by these madmen!"
 		role="NPC"
 		nextReplies="Dlg_pl_002376" />
 
 	<Reply
 		name="Dlg_pl_002376"
-		text="Лиса! Мысли здраво! Они дадут мне грузовик максимум с лёгким вооружением. А я тебя оставляю здесь со своей тяжеловооружённой машиной. Водить и стрелять ты умеешь. Просто подумай: если вдруг что случится, где будет безопаснее? В моей машине или в их?"
+		text="Lisa! Think straight! They'll give me a light-armed truck at most. And I'll leave you here with a heavily armed vehicle. You know how to drive and shoot. Just think, if something happens, where will you be safer? My car or theirs?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002377" />
 
 	<Reply
 		name="Dlg_npc_002377"
-		text="Да… Да… Наверное, так будет лучше…|Пожалуйста, возвращайся скорей!"
+		text="Yeah... yeah... It'll probably be safer...|Please come back soon!"
 		role="NPC"
 		nextReplies="Dlg_pl_002378" />
 
 	<Reply
 		name="Dlg_pl_002378"
-		text="Конечно. Постараюсь не задерживаться."
+		text="Sure. I'll try not to stay too long."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_LisaKef'); RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Lisa_P'); EndConversation()" />
 
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N01"
-		text="Чего ищешь?"
+		text="What are you looking for?"
 		role="NPC"
 		scriptCondition="IsQuestTaken('r4m1_EnginAliham') and not(IsQuestComplete('r4m1_EnginAliham'))"
 		nextReplies="r4m1_SomeWhere_Man1_1_N02" />
 
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N02"
-		text="Тут не проезжал механик из соседнего города?"
+		text="Did an oil engineer from Kef come through here?"
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Man1_1_N03" />
 
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N03"
-		text="Было дело. Странный он был какой-то, взъерошенный."
+		text="He did. Just a few minutes ago. He was kind of strange, disheveled. "
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Man1_1_N04" />
 
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N04"
-		text="А куда он отправился потом?"
+		text="Where did he go?"
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Man1_1_N05" />
 
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N05"
-		text="Дальше по дороге."
+		text="Further down the road."
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Man1_1_N06" />
 
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N06"
-		text="Спасибо."
+		text="Thanks."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_EnginAliham'); EndConversation()" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N01"
-		text="Умоляю, не трогайте меня!"
+		text="I beg you, don't hurt me!"
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_KNO_FindSpecialist')==Q_TAKEN"
 		scriptResult="TakeQuest('r4m1_KNO_ReportToKef'); "
@@ -3227,164 +3227,164 @@
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N02"
-		text="Зачем мне причинять тебе вред?"
+		text="Why would I hurt you?"
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N03" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N03"
-		text="Откуда мне знать, почему люди мучают и убивают друг друга! Оставьте меня!"
+		text="How should I know why people torture and kill each other! Leave me alone!"
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N04" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N04"
-		text="Да что с тобой стряслось?"
+		text="What happened to you?"
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N05" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N05"
-		text="Я видел их настоящую сущность...|Нет... Я ничего не знаю, я ничего не скажу!"
+		text="I saw their true nature...|No... I won't say anything!"
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N06" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N06"
-		text="Похоже, этот малый совсем сошел с ума. Придется доставить его назад в таком виде, хотя вряд ли он сможет помочь жителям Кефа."
+		text="This fellow seems to have lost his mind. I'll have to bring him back like that, though I don't think he can help the people of Kef."
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N07" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N07"
-		text="Ты не посмеешь! Отпусти меня! Я хочу знать, остались ли еще в мире живые люди. Если нет, то мне нет смысла сражаться. Но я не вернусь к ним! Ни за что!"
+		text="You wouldn't dare! Let me go! I want to know if there are any living people left in the world. If not, there's no point in me fighting. But I won't go back to them! I won't go back!"
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N07b r4m1_SomeWhere_Engineer_1_N07a" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N07a"
-		text="Значит, мне придется применить силу."
+		text="So I have to use force."
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N08a" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N08a"
-		text="Лучше смерть!"
+		text="Better to die!"
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N09a" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N09a"
-		text="Значит, так тому и быть!"
+		text="Then so be it!"
 		role="PLAYER"
 		scriptResult="TActivate('trEngineerGoToBarrel');  FailQuest('r4m1_KNO_FindSpecialist'); EndConversation()" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N07b"
-		text="Расскажи, что случилось с тобой?"
+		text="Tell me, what happened to you?"
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N08b" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N08b"
-		text="Мне открылась страшная истина. Я не уверен, что смогу жить с этим знанием. Нет, я не могу этого вынести! Все ложь!"
+		text="A terrible truth has been revealed to me. I'm not sure I can live with this knowledge. No, I cannot bear it! Everything is a lie!"
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N09b" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N09b"
-		text="Я не совсем понимаю, что ты имеешь в виду, но, похоже, ты тоже осознал, что с местными жителями творится что-то странное.|Ты знаешь место, где можно спрятаться?"
+		text="I am not quite sure what you mean, but you seem to have realized that there is something strange going on with the locals, too.| Do you know a place to hide?"
 		role="PLAYER"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N10b" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N10b"
-		text="Да, я знаю одно непримечательное место. Вот здесь."
+		text="Yes, I know an unremarkable place. It's right here."
 		role="NPC"
 		nextReplies="r4m1_SomeWhere_Engineer_1_N11b" />
 
 	<Reply
 		name="r4m1_SomeWhere_Engineer_1_N11b"
-		text="Отправляйся туда и спрячься пока там. Как только я найду способ переправить тебя отсюда, я за тобой вернусь."
+		text="Go there and hide. As soon as I find a way to get you out of here, I'll come back for you."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002379" />
 
 	<Reply
 		name="Dlg_npc_002379"
-		text="Спасибо тебе. Но твоя доброта подозрительна... Вдруг ты так же безумен, как и они?"
+		text="Thank you. But your kindness is suspicious... What if you're as insane as they are?"
 		role="NPC"
 		nextReplies="Dlg_pl_002380" />
 
 	<Reply
 		name="Dlg_pl_002380"
-		text="Я понимаю твои опасения, но в данном случае тебе просто придётся поверить мне на слово. В любом случае выбора у тебя особо-то и нет. Когда я найду оптимальный для тебя способ побега - я приеду. Если я тебя там не найду - пеняй на себя, ждать не буду."
+		text="I understand your worries, but in this case you'll just have to take my word for it. Anyway, you don't have much of a choice. When I find the best way for you to escape, I'll be there. If I don't find you there, you're on your own."
 		role="PLAYER"
 		scriptResult="TActivate('trEngineerGoAway'); CompleteQuest('r4m1_KNO_FindSpecialist'); EndConversation();" />
 
 	<Reply
 		name="Dlg_npc_002411"
-		text="Ты всё-таки вернулся!"
+		text="You're finally back!"
 		role="NPC"
 		scriptCondition="IsQuestTaken('PeregReturn') and not(IsQuestComplete('PeregReturn'))"
 		nextReplies="Dlg_pl_002412" />
 
 	<Reply
 		name="Dlg_pl_002412"
-		text="Тебе нужно спешить, времени мало! Возьми это устройство, отправляйся в порт и вызови с помощью этой штуковины лодку, которая переправит тебя отсюда на другие земли."
+		text="You have to hurry, time is limited! Take this device, go to the port, and use it to summon a boat to take you from here to other lands."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002413" />
 
 	<Reply
 		name="Dlg_npc_002413"
-		text="Какая удача, поверить не могу!"
+		text="I can't believe how lucky I am!"
 		role="NPC"
 		nextReplies="Dlg_pl_002414" />
 
 	<Reply
 		name="Dlg_pl_002414"
-		text="Сможешь сам добраться до порта?"
+		text="Can you get to the port yourself?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002415" />
 
 	<Reply
 		name="Dlg_npc_002415"
-		text="Да, я знаю некоторые тайные тропы. Спасибо тебе, добрый человек."
+		text="Yes, I know some secret trails. Thank you, good man."
 		role="NPC"
 		nextReplies="Dlg_pl_002416" />
 
 	<Reply
 		name="Dlg_pl_002416"
-		text="Пока рано благодарить."
+		text="It's too early to thank."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002417" />
 
 	<Reply
 		name="Dlg_npc_002417"
-		text="Ты поедешь со мной?"
+		text="Will you come with me?"
 		role="NPC"
 		nextReplies="Dlg_pl_002418" />
 
 	<Reply
 		name="Dlg_pl_002418"
-		text="Нет, у меня здесь осталось одно незаконченное дело."
+		text="No, I have some unfinished business here."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002419" />
 
 	<Reply
 		name="Dlg_npc_002419"
-		text="Что бы ты ни задумал, будь осторожен!"
+		text="Whatever you're up to, be careful!"
 		role="NPC"
 		nextReplies="Dlg_pl_002420" />
 
 	<Reply
 		name="Dlg_pl_002420"
-		text="Да. И ты тоже. А теперь отправляйся, пока эти безумцы не нашли тебя."
+		text="Yes. And so are you. Now get going before those madmen find you."
 		role="PLAYER"
 		scriptResult="CompleteQuest('PeregReturn'); TakeQuest('r4m1_GotoAivenGo');  RemoveQuestItem('quest_key_for_submarine'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_key_for_submarine'); GetPlayerVehicle():SetCustomLinearVelocity(0); EndConversation()" />
 
 	<Reply
 		name="Kef_Bar_Customer1_3_N01"
-		text="Мы не видим с тобой механика, ты его нашел?"
+		text="I don't see an engineer with you, did you find him?"
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_KNO_ReportToKef')==Q_TAKEN"
 		scriptResult="CompleteQuest('r4m1_KNO_ReportToKef'); CompleteQuest('r4m1_FRP_HelpKef'); TakeQuest('r4m1_LisaKef2'); AddHistory( 'r4_FindBuhara' ); AddFadingMsgId( 'fm_history_got' );"
@@ -3392,160 +3392,160 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_3_N02"
-		text="К несчастью, мне не удалось вернуть механика. Он был так чем-то напуган, что убил себя."
+		text="Unfortunately, I couldn't get him back. He was so scared of something that he killed himself."
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_3_N03" />
 
 	<Reply
 		name="Kef_Bar_Customer1_3_N03"
-		text="Мне грустно слышать об этом... Но я верю, что ты сделал все, что мог."
+		text="I'm sad to hear about it... But I believe you did everything you could."
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_3_N04" />
 
 	<Reply
 		name="Kef_Bar_Customer1_3_N04"
-		text="То есть вы все-таки скажете мне, где искать тех, кто помнит?"
+		text="So you will still tell me where to look for the elders?"
 		role="PLAYER"
 		nextReplies="Kef_Bar_Customer1_3_N05" />
 
 	<Reply
 		name="Kef_Bar_Customer1_3_N05"
-		text="Да, мы обнаружили их деревню. Старики прячутся от всех на побережье. Как только мы оправимся от очередного нападения, то вышлем за ними экспедицию. Негоже почтенным людям ютиться в хижинах!"
+		text="Yes, we have located their village. The elders are hiding from everyone on the coast. As soon as we've recovered from another attack, we'll send an expedition after them. It's not right for honorable people to huddle in huts!"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_3_N06" />
 
 	<Reply
 		name="Kef_Bar_Customer1_3_N06"
-		text="Спасибо, я им передам ваши добрые слова."
+		text="Thank you, I will tell them your kind words."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_002389"
-		text="Я хочу тебе кое в чём признаться."
+		text="I have a confession to make."
 		role="NPC"
 		scriptCondition="IsQuestTaken('r4m1_LisaKef2') and not(IsQuestComplete('r4m1_LisaKef2'))"
 		nextReplies="Dlg_pl_002390" />
 
 	<Reply
 		name="Dlg_pl_002390"
-		text="Прямо сейчас? Может, в пути поговорим?"
+		text="Right now? Can we talk about it on the road?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002391" />
 
 	<Reply
 		name="Dlg_npc_002391"
-		text="Нет, прямо сейчас."
+		text="No. Right now."
 		role="NPC"
 		nextReplies="Dlg_pl_002392" />
 
 	<Reply
 		name="Dlg_pl_002392"
-		text="Хорошо, тогда я слушаю."
+		text="All right, I'm listening."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002393" />
 
 	<Reply
 		name="Dlg_npc_002393"
-		text="Я никогда тебе этого не говорила, но я знаю, кто напал на твою деревню."
+		text="I never told you this, but I know who attacked your village."
 		role="NPC"
 		nextReplies="Dlg_pl_002394 Dlg_pl_003227" />
 
 	<Reply
 		name="Dlg_pl_003227"
-		text="Да, ты мне, кажется, рассказывала в пути, что это были какие-то заезжие бандиты на необычной технике. Если это всё, в чём ты хотела..."
+		text="Yeah, you told me somehow that it was some nomadic bandits on unusual vehicles. If that's all you wanted..."
 		role="PLAYER"
 		scriptCondition="QuestStatus('d_SinFather_Quest')~=Q_COMPLETED"
 		nextReplies="Dlg_npc_002395" />
 
 	<Reply
 		name="Dlg_pl_002394"
-		text="Да, мне Феликс рассказывал, что это были какие-то заезжие бандиты на необычной технике. Если это всё, в чём ты хотела…"
+		text="Yeah, Felix told me, that it was some nomadic bandits on unusual vehicles. If that's all you wanted..."
 		role="PLAYER"
 		scriptCondition="QuestStatus('d_SinFather_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_npc_002395" />
 
 	<Reply
 		name="Dlg_npc_002395"
-		text="Нет, ты не понял. Я знаю, кто конкретно напал на твою деревню. Я видела этого человека и его машину."
+		text="No, you don't understand. I know exactly who attacked your village. I saw this man and his car."
 		role="NPC"
 		nextReplies="Dlg_pl_002396" />
 
 	<Reply
 		name="Dlg_pl_002396"
-		text="Видела? Где?"
+		text="You saw him? Where?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002397" />
 
 	<Reply
 		name="Dlg_npc_002397"
-		text="Прямо здесь. Вон там дальше, видишь?"
+		text="Right here. Over there, you see?"
 		role="NPC"
 		nextReplies="Dlg_pl_002398" />
 
 	<Reply
 		name="Dlg_pl_002398"
-		text="Да, вижу. Ты точно уверена, что это он?"
+		text="Yes. Are you sure it's him?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002399" />
 
 	<Reply
 		name="Dlg_npc_002399"
-		text="Абсолютно. Необычная конструкция его машины мне очень хорошо запомнилась. И номер совпадает. Это точно он!"
+		text="Absolutely. I remember the unusual design of his car very well. And the body number. It's definitely him!"
 		role="NPC"
 		nextReplies="Dlg_pl_002400" />
 
 	<Reply
 		name="Dlg_pl_002400"
-		text="Что ты предлагаешь? Убить его? Не думаю, что это хорошая идея."
+		text="What do you suggest? Kill him? I don't think that's a good idea."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002401" />
 
 	<Reply
 		name="Dlg_npc_002401"
-		text="Не убить, а проследить. Разве тебе не интересно, кто стоит за этим безрассудным нападением? И зачем оно было совершено?"
+		text="Not to kill, but to follow him. Don't you wonder who was behind this reckless attack? And why it was committed?"
 		role="NPC"
 		nextReplies="Dlg_pl_002402" />
 
 	<Reply
 		name="Dlg_pl_002402"
-		text="Не будет ли лучше сейчас поехать к старикам и спросить их про Айвена? А с ними мы всегда расквитаться успеем."
+		text="Wouldn't it be better to go to the elders now and ask them about Ivan? "
 		role="PLAYER"
 		nextReplies="Dlg_npc_002403" />
 
 	<Reply
 		name="Dlg_npc_002403"
-		text="Почему ты так уверен, что старики тебе подскажут, где искать Айвена? Это ещё большой вопрос. А эти убийцы могут что-то знать! Сдаётся мне, не зря они напали именно на твою деревню."
+		text="What makes you so sure that the elders will tell you where to look for Ivan? That is the main question. And these murderers might know something! I don't think they just attacked your village for nothing."
 		role="NPC"
 		nextReplies="Dlg_pl_002404" />
 
 	<Reply
 		name="Dlg_pl_002404"
-		text="Соглашусь, выглядит это странно. Но вариант со слежкой тоже весьма рискованный."
+		text="I agree, it's strange. But the option of following him is also very risky."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002405" />
 
 	<Reply
 		name="Dlg_npc_002405"
-		text="Я уже всё сказала. Выбор за тобой. "
+		text="I've already said it all. The choice is yours. "
 		role="NPC"
 		nextReplies="Dlg_pl_002406 Dlg_pl_002407" />
 
 	<Reply
 		name="Dlg_pl_002407"
-		text="Не думаю, что стоит за ними следить. Кем бы они ни были, они исполняли чью-то волю и вряд ли они знают что-нибудь об Айвене. Лучше съездить к старикам."
+		text="I don't think it's worth it. Whoever they are, they were following somebody else's order, and I doubt they know anything about Ivan. Better go see the elders."
 		role="PLAYER"
 		scriptResult="TakeQuest('r4m1_FPR_MeetWithOldMan'); CompleteQuest('r4m1_LisaKef2'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002406"
-		text="Ты права, старики никуда не денутся, а эти ребята могут нам предоставить важную информацию. Давай сядем им на хвост."
+		text="You're right, the elders aren't going anywhere, and these guys can give us important information. Let's follow them."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_LisaKef2'); TActivate('trTankistyRolikStart'); LeaveTown()" />
 
 	<Reply
 		name="Buhara_Outside_Leader_1_N01"
-		text="Они нашли нас, спасайся, кто может!"
+		text="They found us, run for your lives!"
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_FPR_MeetWithOldMan')==Q_TAKEN and not(IsQuestComplete('KillTankistov'))"
 		scriptResult="TActivate('trBuhArmy')"
@@ -3553,110 +3553,110 @@
 
 	<Reply
 		name="r4_Dlg_pl_000072"
-		text="Постойте! Я пришел с миром."
+		text="Hold on! I come in peace."
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000073" />
 
 	<Reply
 		name="r4_Dlg_npc_000073"
-		text="(в сторону) Он выглядит вполне нормальным...|Как ты нашел нас?"
+		text="(To the side) He seems quite normal...|How did you find us?"
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000074" />
 
 	<Reply
 		name="r4_Dlg_pl_000074"
-		text="Один славный человек из города указал мне дорогу. Он сказал, что скоро за вами вышлют спасательную экспедицию."
+		text="A nice man from Kef pointed me in the right direction. He said a rescue expedition would be sent for you soon."
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000075" />
 
 	<Reply
 		name="r4_Dlg_npc_000075"
-		text="Этот момент все-таки настал. Братья, мы не можем больше скрываться. Мы примем бой. И погибнем, если придется."
+		text="This moment has finally arrived. Brothers, we can no longer hide. We will fight and die if we have to."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000076" />
 
 	<Reply
 		name="r4_Dlg_pl_000076"
-		text="О чем ты говоришь? Они же..."
+		text="What are you talking about? They are..."
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000077" />
 
 	<Reply
 		name="r4_Dlg_npc_000077"
-		text="Ты ничего не понял? Думаю, у нас есть еще немного времени. Заезжай и выслушай нашу историю."
+		text="Don't you understand anything? I think we have a little more time. Come in and listen to our story."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000078" />
 
 	<Reply
 		name="r4_Dlg_pl_000078"
-		text="Объясните же мне, наконец, что здесь происходит?"
+		text="Explain to me, at last, what is going on here?"
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000079" />
 
 	<Reply
 		name="r4_Dlg_npc_000079"
-		text="Много лет назад наш край был настоящим цветущим садом. Мы оправились от Катастрофы и принялись отстраивать свою жизнь заново. Потом мы стали замечать, что люди временами ведут себя странно. Иногда в их глазах светится безумная радость, а иногда - черная злоба."
+		text="Many years ago our region was a blooming garden. We recovered from the Catastrophe and began to rebuild our lives. Then we began to notice that people behaved strangely at times. Sometimes there was an insane joy in their eyes, and sometimes there was a black anger."
 		role="NPC"
 		scriptResult="AddHistory( 'r4_TalkWithBuhares' ); AddFadingMsgId( 'fm_history_got' );"
 		nextReplies="r4_Dlg_pl_000081" />
 
 	<Reply
 		name="r4_Dlg_pl_000081"
-		text="Кажется, я начинаю понимать."
+		text="I think I'm starting to understand."
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000082" />
 
 	<Reply
 		name="r4_Dlg_npc_000082"
-		text="Поначалу все сдерживали свои эмоции, но однажды все рухнуло. Один добрый человек напал на свою семью и не помнил этого. Его казнили, и в наших сердцах поселился страх. Уже невозможно было доверять самым близким людям. Невозможно было доверять самим себе."
+		text="At first everyone kept their emotions in check, but one day it all came crashing down. A good man attacked his family and had no memory of it. He was executed, and fear settled in our hearts. It was no longer possible to trust the people closest to us. It was impossible to trust ourselves."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000083" />
 
 	<Reply
 		name="r4_Dlg_pl_000083"
-		text="Значит, нет никаких неуловимых бандитов."
+		text="So there are no elusive bandits."
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000084" />
 
 	<Reply
 		name="r4_Dlg_npc_000084"
-		text="Боюсь, что это так. Со временем люди с похожими циклами безумия объединились в группы и начали охотиться друг на друга. После долгих мучительных лет выжили только немногие."
+		text="I'm afraid this is true. Over time, people with similar cycles of madness joined together and began to hunt each other down. After long, agonizing years, only a few survived."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000085" />
 
 	<Reply
 		name="r4_Dlg_pl_000085"
-		text="Почему вас не задело безумие?"
+		text="Why weren't you affected by the insanity?"
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000086" />
 
 	<Reply
 		name="r4_Dlg_npc_000086"
-		text="Мы были очень стары уже тогда. Сильные  эмоции - это удел молодых. А наша участь - хранить воспоминания и скорбеть об умерших. Когда мы поняли, что произошло, то ушли из больших городов и старались укрыться от глаз безумцев. Но это не могло продолжаться вечно. Теперь мы обнаружены и очень скоро будем убиты. Я уже чувствую приближение врага..."
+		text="We were very old then. Strong emotions are the lot of the young. Our lot was to keep the memories and grieve for the dead. When we realized what had happened, we left the big cities and tried to hide from the eyes of the madmen. But it could not go on like this forever. Now we have been discovered and will be killed very soon. I can already feel the enemy approaching..."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000087" />
 
 	<Reply
 		name="r4_Dlg_pl_000087"
-		text="Я не дам вам умереть, пока вы не расскажете все, что знаете об Айвене!"
+		text="I won't let you die until you tell me everything you know about Ivan!"
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000088" />
 
 	<Reply
 		name="r4_Dlg_npc_000088"
-		text="Слишком поздно. Они атакуют."
+		text="It's too late. They're attacking."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000089" />
 
 	<Reply
 		name="r4_Dlg_pl_000089"
-		text="Я помогу вам сражаться!"
+		text="I will help you fight!"
 		role="PLAYER"
 		scriptResult="TActivate('cinBuhArmyFirst'); EndConversation()" />
 
 	<Reply
 		name="Buhara_Outside_Leader_2_N01"
-		text="Мы победили, но они вернутся. Это только вопрос времени. У нас не осталось больше сил сражаться."
+		text="We won, but they will come back. It's only a matter of time. We have no more strength left to fight."
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_RBC_Evacuate')==Q_CANBEGIVEN and GetCurNpc():GetSpokenCount( ) == 0"
 		scriptResult="TActivate('trCreateBuharers');"
@@ -3664,56 +3664,56 @@
 
 	<Reply
 		name="r4_Dlg_pl_000091"
-		text="Что же делать? Я не могу просто оставить вас здесь! Как же переправить вас отсюда?"
+		text="What should I do? I can't just leave you here!"
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000092" />
 
 	<Reply
 		name="r4_Dlg_npc_000092"
-		text="Поблизости есть порт, но там не осталось кораблей. Хотя вся техника работает, мы проверяли."
+		text="There is a port nearby, but there are no ships left. Although all the equipment is working, we checked."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000093" />
 
 	<Reply
 		name="r4_Dlg_pl_000093"
-		text="Отлично, у меня есть устройство, с помощью которого я вызову корабль и смогу эвакуировать вас туда, где живут нормальные люди."
+		text="Great, I have a device that I can use to summon a ship and evacuate you to a place where normal people live."
 		role="PLAYER"
 		nextReplies="r4_Dlg_npc_000094" />
 
 	<Reply
 		name="r4_Dlg_npc_000094"
-		text="Какая удача. Я с трудом верю, что это возможно."
+		text="What a stroke of luck. I can hardly believe it's possible."
 		role="NPC"
 		nextReplies="r4_Dlg_pl_000095" />
 
 	<Reply
 		name="r4_Dlg_pl_000095"
-		text="Показывайте, где порт, я вас сопровожу и вызову корабль."
+		text="Show me where the port is, and I'll escort you and call a ship."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); StartConversation('Lisa')" />
 
 	<Reply
 		name="Dlg_npc_002421"
-		text="Я думаю, что будет лучше, если я отправлюсь вместе с ними."
+		text="I think it's better if I go with them."
 		role="NPC"
 		scriptCondition="QuestStatus('r4m1_RBC_Evacuate')==Q_CANBEGIVEN and getObj('r4m1_BuharsLeader'):GetSpokenCount( ) == 1"
 		nextReplies="Dlg_pl_002422" />
 
 	<Reply
 		name="Dlg_pl_002422"
-		text="Ты уверена?"
+		text="Are you sure?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002423" />
 
 	<Reply
 		name="Dlg_npc_002423"
-		text="Да. Я не могу больше здесь находиться. Я чувствую, как силы с каждой минутой покидают меня."
+		text="Yes. I can't stay here anymore. I can feel my strength leaving me by the minute."
 		role="NPC"
 		nextReplies="Dlg_pl_002424" />
 
 	<Reply
 		name="Dlg_pl_002424"
-		text="Хорошо, тогда отправляйся вместе с ними. Увидимся у Бена."
+		text="All right, then go with them. I'll see you at Ben's."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 

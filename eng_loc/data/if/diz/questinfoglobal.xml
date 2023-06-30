@@ -5181,7 +5181,7 @@
 
 	<QuestInfo
 		questName="r4m2_BlokiratorToUFO"
-		briefDiz="Bring the blocker to the downed plate"
+		briefDiz="Bring the blocker to the downed ship"
 		fullDiz="Njeri's device will be able to block the deadly radiation of the Source. But only if I install it in close range of it."
 		isMainQuest="1">
 		<Map
@@ -5195,8 +5195,8 @@
 
 	<QuestInfo
 		questName="r4m2_DestroyPlate"
-		briefDiz="Destroy the downed plate"
-		fullDiz="The plate is the source of the radiation that destroyed our world. It must be destroyed!"
+		briefDiz="Destroy the downed ship"
+		fullDiz="The alien ship is the source of the radiation that destroyed our world. It must be destroyed!"
 		isMainQuest="1">
 		<Map
 			name="r1m1" />

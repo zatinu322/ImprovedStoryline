@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="ScientiferVillage"
+		FullName="Sergo's hideout" />
+
+	<Object
+		Name="ScientiferVillage_Bar"
+		FullName="Bunker" />
+
+	<Object
+		Name="ScientiferVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="ScientiferVillage_WorkShop"
+		FullName="Workshop" />
+
+	<Object
+		Name="ScientiferVillage_Bar_Scientif"
+		FullName="Sergo" />
+
+	<Object
+		Name="ToR4M1"
+		FullName="Road to Vahat" />
+
+	<Object
+		Name="MilitaryBase_loc"
+		FullName="Military base" />
+
+	<Object
+		Name="PlateRadiation_loc"
+		FullName="Overlord" />
+
+	<Object
+		Name="PetrolStationTown61"
+		FullName="OLD GAS STATION" />
+
+	<Object
+		Name="CrazyBase"
+		FullName="Military base" />
+
+	<Object
+		Name="PetrolStationTown61_workshop"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="urod1"
+		FullName="Tidus" />
+
+	<Object
+		Name="urod2"
+		FullName="Shaman" />
+
+	<Object
+		Name="urod3"
+		FullName="Borg" />
+
+	<Object
+		Name="urod4"
+		FullName="Alex" />
+
+	<Object
+		Name="urod5"
+		FullName="Scorp" />
+
+	<Object
+		Name="urod6"
+		FullName="Gaya" />
+
+	<Object
+		Name="urod7"
+		FullName="Sherman" />
+
+	<Object
+		Name="urod8"
+		FullName="Hrrr" />
+
+	<Object
+		Name="urod9"
+		FullName="Uncle Fu" />
+</ObjectNames>

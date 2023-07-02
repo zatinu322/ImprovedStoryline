@@ -575,7 +575,7 @@
 
 	<string
 		id="13"
-		value="|@FF000000ÀAAÀ.ÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000ÀÀÀÀÀIÀÀÀÀAAÀAAIÀÀÀÀ@FFFFFFFFImproved Storyline v1.1"
+		value="|@FF000000ÀAAÀ.ÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000ÀÀÀÀÀIÀÀÀÀAAÀAAAAIÀÀÀÀ@FFFFFFFFImproved Storyline"
 		sound=""
 		fontSize="12"
 		time="6" />
@@ -583,7 +583,7 @@
 	<string
 		id="15"
 		modelName="mask_hero"
-		value="It seems that this is the last one... Now the people of the Sowth can now breathe a sigh of relief."
+		value="It seems that this was the last one... Now the people of the Sowth can breathe a sigh of relief."
 		sound=""
 		time="7" />
 
@@ -594,7 +594,7 @@
 
 	<string
 		id="90001"
-		value="Improved Storyline v1.1||Before starting the game, it is highly recommended to read the mod manual.|@00FFFFFFA"
+		value="Improved Storyline||Before starting the game, it is highly recommended to read the mod manual.|@00FFFFFFA"
 		numButtons="1" />
 
 	<string
@@ -606,7 +606,7 @@
 		modelName="mask_father"
 		modelSkin="1"
 		modelSlot="1"
-		value="Can you believe it? It was only yesterday that he was running from city to city, trying to figure out what was going on. Today he is already in the desert... How fast time flies..."
+		value="Can you believe it? It was only yesterday that he was running from town to town, trying to figure out what was going on. Today he is already in the desert... How fast time flies..."
 		sound=""
 		time="14" />
 
@@ -686,7 +686,7 @@
 		modelName="mask_father"
 		modelSkin="0"
 		modelSlot="1"
-		value="FATHER|Son, you're taking a long time. Did Sergo accept the parsel? Were there any difficulties on the way?"
+		value="FATHER|Son, it took you too long. Did Sergo accept the parsel? Were there any difficulties on the way?"
 		sound=""
 		time="7" />
 
@@ -707,7 +707,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@ffffa600Developer studio «Targem Games»| | | |@ffffa600Internal producer||@ffffffffStanislav «scorp» Skorb| | |@ffffa600Technical director||@ffffffffAlexey Skriabin| | |@ffffa600Project manager||@ffffffffEvgeniy «Hrrr» Khrunov| | |@ffffa600Writer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead programmer||@ffffffffAnton «anger» Savin| | |@ffffa600Lead designer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead artist||@ffffffffAlexander «Alex ML» Magrushin| | |@ffffa600Designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffAlexey «Razaz» Anufriev|@ffffffffStanislav «scorp» Skorb|@ffffffffBoris «borg» Smirnov| | |@ffffa600Programmers||@ffffffffElena «SoftKitty» Evdokimova|@ffffffffIvan «Vano» Vlasov|@ffffffffIlya «phosgen» Ruzakov|@ffffffffMaxim «Shadow» Sarmanov|@ffffffffSergey «Ice Cat» Kluchkovsky|@ffffffffIgor «Goryh» Dyagterev| | |@ffffa600Artists||@ffffffffAlexander «Alex ML» Magrushin|@ffffffffIvan Snigirev|@ffffffffEvgeny «Dzhin» Goltsov|@ffffffffVladimir «Price» Seleznev|@ffffffffStanislav «Staz» Cherva|@ffffffffRustam «Rychi» Turey|@ffffffffEvgeny  Tokarev|@ffffffffSergey «Sega» Mitryaev|@ffffffffViktor «isymbosi» Koryakin|@ffffffffRoman Latynov| | |@ffffa600Level designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffArtem «solo» Solovev|@ffffffffDaniil «HiKiller» Kondratiev|@ffffffffStanislav «Staz» Cherva| | |@ffffa600Interface designer||@ffffffffMikhail «Rai» Matvienko| | |@ffffa600FX||@ffffffffAlexey «Hal» Lobanov| | |@ffffa600Sound director||@ffffffffAnton Popov|@ffffffffEkaterina Shvemmer| | |@ffffa600Quality assurance||@ffffffffVyacheslav «ls» Avdeev| | |@ffffa600PR-manager||@ffffffffSvetlana «Crystal» Tchestnikh| | |@ffffa600The soundtrack includes tracks|@ffffa600of the music contest winners||@ffffffffAlexander Chekster|@ffffffffBoris Vedensky|@ffffffffAlexander Treger|@ffffffffMikhail Sidorov|@ffffffffAlexander Lisenkov|@ffffffffParalaxeen|@ffffffffIgor Belousov| | |@ffffa600Special thanks to||@ffffffffConstantine Sokharev - programming|@ffffffffSvyatoslav Patashnikov - management|@ffffffffAlexey Andruschenko – web design"
+		value="@ffffa600Developer studio «Targem Games»| | | |@ffffa600Internal producer||@ffffffffStanislav «scorp» Skorb| | |@ffffa600Technical director||@ffffffffAlexey Skriabin| | |@ffffa600Project manager||@ffffffffEvgeniy «Hrrr» Khrunov| | |@ffffa600Writer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead programmer||@ffffffffAnton «anger» Savin| | |@ffffa600Lead designer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead artist||@ffffffffAlexander «Alex ML» Margushin| | |@ffffa600Designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffAlexey «Razaz» Anufriev|@ffffffffStanislav «scorp» Skorb|@ffffffffBoris «borg» Smirnov| | |@ffffa600Programmers||@ffffffffElena «SoftKitty» Evdokimova|@ffffffffIvan «Vano» Vlasov|@ffffffffIlya «phosgen» Ruzakov|@ffffffffMaxim «Shadow» Sarmanov|@ffffffffSergey «Ice Cat» Kluchkovsky|@ffffffffIgor «Goryh» Dyagterev| | |@ffffa600Artists||@ffffffffAlexander «Alex ML» Margushin|@ffffffffIvan Snigirev|@ffffffffEvgeny «Dzhin» Goltsov|@ffffffffVladimir «Price» Seleznev|@ffffffffStanislav «Staz» Cherva|@ffffffffRustam «Rychi» Turey|@ffffffffEvgeny  Tokarev|@ffffffffSergey «Sega» Mitryaev|@ffffffffViktor «isymbosi» Koryakin|@ffffffffRoman Latynov| | |@ffffa600Level designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffArtem «solo» Solovev|@ffffffffDaniil «HiKiller» Kondratiev|@ffffffffStanislav «Staz» Cherva| | |@ffffa600Interface designer||@ffffffffMikhail «Rai» Matvienko| | |@ffffa600FX||@ffffffffAlexey «Hal» Lobanov| | |@ffffa600Sound director||@ffffffffAnton Popov|@ffffffffEkaterina Shvemmer| | |@ffffa600Quality assurance||@ffffffffVyacheslav «ls» Avdeev| | |@ffffa600PR-manager||@ffffffffSvetlana «Crystal» Tchestnikh| | |@ffffa600The soundtrack includes tracks|@ffffa600of the music contest winners||@ffffffffAlexander Chekster|@ffffffffBoris Vedensky|@ffffffffAlexander Treger|@ffffffffMikhail Sidorov|@ffffffffAlexander Lisenkov|@ffffffffParalaxeen|@ffffffffIgor Belousov| | |@ffffa600Special thanks to||@ffffffffConstantine Sokharev - programming|@ffffffffSvyatoslav Patashnikov - management|@ffffffffAlexey Andruschenko – web design"
 		sound=""
 		fontSize="18"
 		scrollSpeed="2.25"
@@ -731,7 +731,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@ffffa600«Improved Storyline v1.1»| | | |@ffffa600Imported from other mods| |@ffffffffBooster Mod - maps, textures, icons|@ffffffffKraycity - fully implemented|@ffffffffSteel Dawn - icons| | |@ffffa600OST| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffCephei - Futuro|@ffffffffCephei - Farewell, Atlantis|@ffffffffCephei - Celebration of Life|@ffffffffCephei - When the loved ones return| | |@ffffa600Special thanks to| |@ffffffffLynne for the locomotive model|@ffffffffSuslo Red for the model of the CD medal|@ffffffffVarisane for numerous text edits|@ffffffffOverLine for the winter lightmaps| |@ffffffffAnd also to all testers, bug reporters| @ffffffffand those who just helped with advice"
+		value="@ffffa600«Improved Storyline»| | | |@ffffa600Imported from other mods| |@ffffffffBooster Mod - maps, textures, icons|@ffffffffKraycity - fully implemented|@ffffffffSteel Dawn - icons| | |@ffffa600OST| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffCephei - Futuro|@ffffffffCephei - Farewell, Atlantis|@ffffffffCephei - Celebration of Life|@ffffffffCephei - When the loved ones return| | |@ffffa600Special thanks to| |@ffffffffLynne for the locomotive model|@ffffffffSuslo Red for the model of the CD medal|@ffffffffVarisane for numerous text edits|@ffffffffOverLine for the winter lightmaps| |@ffffffffAnd also to all testers, bug reporters| @ffffffffand those who just helped with advice"
 		sound=""
 		fontSize="18"
 		scrollSpeed="2.55"
@@ -767,7 +767,7 @@
 
 	<string
 		id="5983"
-		value="Do you want to travel to Hel immediately?"
+		value="Do you wish to teleport to Hel?"
 		numButtons="2" />
 
 	<string
@@ -797,7 +797,7 @@
 		id="5987"
 		modelName="mask_lisa"
 		modelSlot="1"
-		value="LISA|And then we can build another window here, and then it will be just perfect..."
+		value="LISA|And we can build another window here, and then it will be just perfect..."
 		sound=""
 		time="5" />
 
@@ -839,7 +839,7 @@
 
 	<string
 		id="5993"
-		value="|@FF000000AAAAA.AAAAAAAAAAAAAA@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000AAAAAIAAAAAAIAAAAAAAAAAAA@FFFFFFFFImproved Storyline v1.1"
+		value="|@FF000000AAAAA.AAAAAAAAAAAAAA@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000AAAAAIAAAAAAIAAAAAAAAAAAA@FFFFFFFFImproved Storyline"
 		sound=""
 		fontSize="12"
 		time="6" />
@@ -851,7 +851,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@ffffa600Developer studio «Targem Games»| | | |@ffffa600Internal producer||@ffffffffStanislav «scorp» Skorb| | |@ffffa600Technical director||@ffffffffAlexey Skriabin| | |@ffffa600Project manager||@ffffffffEvgeniy «Hrrr» Khrunov| | |@ffffa600Writer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead programmer||@ffffffffAnton «anger» Savin| | |@ffffa600Lead designer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead artist||@ffffffffAlexander «Alex ML» Magrushin| | |@ffffa600Designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffAlexey «Razaz» Anufriev|@ffffffffStanislav «scorp» Skorb|@ffffffffBoris «borg» Smirnov| | |@ffffa600Programmers||@ffffffffElena «SoftKitty» Evdokimova|@ffffffffIvan «Vano» Vlasov|@ffffffffIlya «phosgen» Ruzakov|@ffffffffMaxim «Shadow» Sarmanov|@ffffffffSergey «Ice Cat» Kluchkovsky|@ffffffffIgor «Goryh» Dyagterev| | |@ffffa600Artists||@ffffffffAlexander «Alex ML» Magrushin|@ffffffffIvan Snigirev|@ffffffffEvgeny «Dzhin» Goltsov|@ffffffffVladimir «Price» Seleznev|@ffffffffStanislav «Staz» Cherva|@ffffffffRustam «Rychi» Turey|@ffffffffEvgeny  Tokarev|@ffffffffSergey «Sega» Mitryaev|@ffffffffViktor «isymbosi» Koryakin|@ffffffffRoman Latynov| | |@ffffa600Level designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffArtem «solo» Solovev|@ffffffffDaniil «HiKiller» Kondratiev|@ffffffffStanislav «Staz» Cherva| | |@ffffa600Interface designer||@ffffffffMikhail «Rai» Matvienko| | |@ffffa600FX||@ffffffffAlexey «Hal» Lobanov| | |@ffffa600Sound director||@ffffffffAnton Popov|@ffffffffEkaterina Shvemmer| | |@ffffa600Quality assurance||@ffffffffVyacheslav «ls» Avdeev| | |@ffffa600PR-manager||@ffffffffSvetlana «Crystal» Tchestnikh| | |@ffffa600The soundtrack includes tracks|@ffffa600of the music contest winners||@ffffffffAlexander Chekster|@ffffffffBoris Vedensky|@ffffffffAlexander Treger|@ffffffffMikhail Sidorov|@ffffffffAlexander Lisenkov|@ffffffffParalaxeen|@ffffffffIgor Belousov| | |@ffffa600Special thanks to||@ffffffffConstantine Sokharev - programming|@ffffffffSvyatoslav Patashnikov - management|@ffffffffAlexey Andruschenko – web design"
+		value="@ffffa600Developer studio «Targem Games»| | | |@ffffa600Internal producer||@ffffffffStanislav «scorp» Skorb| | |@ffffa600Technical director||@ffffffffAlexey Skriabin| | |@ffffa600Project manager||@ffffffffEvgeniy «Hrrr» Khrunov| | |@ffffa600Writer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead programmer||@ffffffffAnton «anger» Savin| | |@ffffa600Lead designer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead artist||@ffffffffAlexander «Alex ML» Margushin| | |@ffffa600Designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffAlexey «Razaz» Anufriev|@ffffffffStanislav «scorp» Skorb|@ffffffffBoris «borg» Smirnov| | |@ffffa600Programmers||@ffffffffElena «SoftKitty» Evdokimova|@ffffffffIvan «Vano» Vlasov|@ffffffffIlya «phosgen» Ruzakov|@ffffffffMaxim «Shadow» Sarmanov|@ffffffffSergey «Ice Cat» Kluchkovsky|@ffffffffIgor «Goryh» Dyagterev| | |@ffffa600Artists||@ffffffffAlexander «Alex ML» Margushin|@ffffffffIvan Snigirev|@ffffffffEvgeny «Dzhin» Goltsov|@ffffffffVladimir «Price» Seleznev|@ffffffffStanislav «Staz» Cherva|@ffffffffRustam «Rychi» Turey|@ffffffffEvgeny  Tokarev|@ffffffffSergey «Sega» Mitryaev|@ffffffffViktor «isymbosi» Koryakin|@ffffffffRoman Latynov| | |@ffffa600Level designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffArtem «solo» Solovev|@ffffffffDaniil «HiKiller» Kondratiev|@ffffffffStanislav «Staz» Cherva| | |@ffffa600Interface designer||@ffffffffMikhail «Rai» Matvienko| | |@ffffa600FX||@ffffffffAlexey «Hal» Lobanov| | |@ffffa600Sound director||@ffffffffAnton Popov|@ffffffffEkaterina Shvemmer| | |@ffffa600Quality assurance||@ffffffffVyacheslav «ls» Avdeev| | |@ffffa600PR-manager||@ffffffffSvetlana «Crystal» Tchestnikh| | |@ffffa600The soundtrack includes tracks|@ffffa600of the music contest winners||@ffffffffAlexander Chekster|@ffffffffBoris Vedensky|@ffffffffAlexander Treger|@ffffffffMikhail Sidorov|@ffffffffAlexander Lisenkov|@ffffffffParalaxeen|@ffffffffIgor Belousov| | |@ffffa600Special thanks to||@ffffffffConstantine Sokharev - programming|@ffffffffSvyatoslav Patashnikov - management|@ffffffffAlexey Andruschenko – web design"
 		sound=""
 		fontSize="18"
 		scrollSpeed="2.48"
@@ -875,7 +875,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@ffffa600«Improved Storyline v1.1»| | | |@ffffa600Imported from other mods| |@ffffffffBooster Mod - maps, textures, icons|@ffffffffKraycity - fully implemented|@ffffffffSteel Dawn - icons| | |@ffffa600OST| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffCephei - Futuro|@ffffffffCephei - Farewell, Atlantis|@ffffffffCephei - Celebration of Life|@ffffffffCephei - When the loved ones return| | |@ffffa600Special thanks to| |@ffffffffLynne for the locomotive model|@ffffffffSuslo Red for the model of the CD medal|@ffffffffVarisane for numerous text edits|@ffffffffOverLine for the winter lightmaps| |@ffffffffAnd also to all testers, bug reporters| @ffffffffand those who just helped with advice"
+		value="@ffffa600«Improved Storyline»| | | |@ffffa600Imported from other mods| |@ffffffffBooster Mod - maps, textures, icons|@ffffffffKraycity - fully implemented|@ffffffffSteel Dawn - icons| | |@ffffa600OST| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffCephei - Futuro|@ffffffffCephei - Farewell, Atlantis|@ffffffffCephei - Celebration of Life|@ffffffffCephei - When the loved ones return| | |@ffffa600Special thanks to| |@ffffffffLynne for the locomotive model|@ffffffffSuslo Red for the model of the CD medal|@ffffffffVarisane for numerous text edits|@ffffffffOverLine for the winter lightmaps| |@ffffffffAnd also to all testers, bug reporters| @ffffffffand those who just helped with advice"
 		sound=""
 		fontSize="18"
 		scrollSpeed="3.2"
@@ -895,9 +895,9 @@
 
 	<string
 		id="9999"
-		value="Improved Storyline v1.1||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+		value="Improved Storyline||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
 
 	<string
 		id="9998"
-		value="Improved Storyline v1.1||This version of Improved Storyline is designed to work with Community Patch/Remaster only.||Please install these two mods correctly and try again.|" />
+		value="Improved Storyline||This version of Improved Storyline is designed to work with Community Patch/Remaster only.||Please install these two mods correctly and try again.|" />
 </resource>

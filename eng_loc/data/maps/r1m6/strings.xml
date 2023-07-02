@@ -231,7 +231,7 @@
 	<string
 		id="27"
 		modelName=""
-		value="||@FF000000AAAAAAAAAAAAAAAAAAA@FFFFFFFFA few hours later"
+		value="||@FF000000AAAAAAAAAAAAAAAA.AAAAAA@FFFFFFFFA few hours later"
 		sound=""
 		fontSize="18"
 		time="6" />
@@ -376,7 +376,7 @@
 		id="43"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="What?! You couldn't tell me before?!"
+		value="What?! You couldn't tell me that before?!"
 		sound=""
 		time="4" />
 
@@ -453,7 +453,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAPHIMA|I got you. Thank you, Dimitry, keep me informed. But you'd better hold off on escaping for now. I'll contact you later and explain more."
+		value="SERAPHIMA|I got it. Thank you, Dimitry, keep me informed. But you'd better hold off on escaping for now. I'll contact you later and explain more."
 		time="9" />
 
 	<string
@@ -481,7 +481,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAPHIMA|I'll explain along the way. I found what I was looking for, now it was time to change vehicles."
+		value="SERAPHIMA|I'll explain along the way. I found what I was looking for, now it is time to change vehicles."
 		time="7" />
 
 	<string
@@ -1039,7 +1039,7 @@
 	<string
 		id="117"
 		modelName=""
-		value="||@FF000000AAAAAA AAAAAAAAAAAAAAAAAA@FFFFFFFFA few hours later"
+		value="||@FF000000AAAAAA AAAAAAAAAAAAAAA.AAAAA@FFFFFFFFA few hours later"
 		sound=""
 		fontSize="18"
 		time="6" />

@@ -39,11 +39,11 @@
 
 	<Object
 		Name="TheOilVillage"
-		FullName="LA BELL" />
+		FullName="LA BELLE" />
 
 	<Object
 		Name="TheOilVillage_enter"
-		FullName="LA BELL" />
+		FullName="LA BELLE" />
 
 	<Object
 		Name="TheOilVillage_Shop"

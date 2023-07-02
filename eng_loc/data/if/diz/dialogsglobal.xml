@@ -2,7 +2,7 @@
 <DialogsResource>
 	<Reply
 		name="Dlg_npc_002712"
-		text="Comrades, this moment has finally arrived. We've been waiting for you for a long time. Tell those filthy bloodsuckers that we will never agree to their terms. They'd better come in here and kill us. That's the only thing that'll satisfy them..."
+		text="Comrades, this moment has finally arrived. We've been waiting for you for a long time. Tell those filthy bloodsuckers that we will never agree to their terms. They'd better come here and kill us. That's the only thing that'll satisfy them..."
 		role="NPC"
 		scriptCondition="QuestStatus('FindLocals')==Q_TAKEN"
 		scriptResult="CompleteQuest('FindLocals')"
@@ -52,7 +52,7 @@
 
 	<Reply
 		name="Dlg_npc_002720"
-		text="In a few words, we were attacked by our neighbors. We had a very strained relationship before, but recently everything collapsed overnight."
+		text="In a few words, we were attacked by our neighbors. We had a very strained relationship before, but recently everything collapsed entirely."
 		role="NPC"
 		nextReplies="Dlg_pl_002721" />
 
@@ -70,19 +70,19 @@
 
 	<Reply
 		name="Dlg_pl_002723"
-		text="So now you're at war with them?"
+		text="So you're at war with them?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002724" />
 
 	<Reply
 		name="Dlg_npc_002724"
-		text="We are in hiding. We can't fight a war. We don't have the strength or the resources to do so. They keep sending us emissaries asking us to surrender, but we always refuse. I don't think it can go on much longer. Everyone here knows they will be here soon. It's only a matter of time."
+		text="We are hiding. We can't fight with them. We don't have the strength or the resources to do so. They keep sending emissaries asking us to surrender, but we always refuse. I don't think it can go on much longer. Everyone here knows they will be here soon. It's only a matter of time."
 		role="NPC"
 		nextReplies="Dlg_pl_002725" />
 
 	<Reply
 		name="Dlg_pl_002725"
-		text="But you can't just sit here and wait for these Adepts to show up and kill you all!"
+		text="But you can't just sit here and wait for these murderers to show up and kill you all!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002726" />
 
@@ -106,13 +106,13 @@
 
 	<Reply
 		name="Dlg_pl_002729"
-		text="Well, at least I tried. And yes, dare I ask: can you open the gate for my friend? Since you don't care now. "
+		text="Well, at least I tried. And yes, I dare to ask: can you open the gate for my friend? Since you don't care now. "
 		role="PLAYER"
 		nextReplies="Dlg_npc_002730" />
 
 	<Reply
 		name="Dlg_npc_002730"
-		text="We care, none of us want to die. But we are ready to do it. I don't know why, but I believe you. We will open the gate to your friend. But the key to that gate was left in Malinovka. We left this village for fear of an attack; it was all very messy, and we left quite a lot of valuable supplies there. You'll have to go there first."
+		text="We care, none of us want to die. But we are ready for it. I don't know why, but I believe you. We will open the gate for your friend. But the key to that gate was left in Malinovka. We left this village for fear of an attack; it was all very messy, and we left quite a lot of valuable supplies there. You'll have to go there first."
 		role="NPC"
 		nextReplies="Dlg_pl_002731" />
 
@@ -162,7 +162,7 @@
 
 	<Reply
 		name="Dlg_npc_002742"
-		text="Yes, that's right, Ivan. He was passing through here about twenty years ago and was also looking for a composite. I sent him to the wise men who lived in the mountains, and he passed all their tests and came back with the material. At that time, of course, it was much calmer here than it is now, and the bridge to the wise men's lands was open."
+		text="Yes, that's right, Ivan. He was passing through here about twenty years ago and was also looking for a composite. I sent him to the wise men who lived in the mountains, and he passed all their challenges and came back with the material. At that time, of course, it was much calmer here than it is now, and the bridge to the wise men's lands was open."
 		role="NPC"
 		nextReplies="Dlg_pl_002743" />
 
@@ -230,13 +230,13 @@
 
 	<Reply
 		name="Dlg_pl_002753"
-		text="And what you're doing in captured cities doesn't seem to confuse your command."
+		text="And what you're doing in captured cities doesn't seem to bother your command."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002754" />
 
 	<Reply
 		name="Dlg_npc_002754"
-		text="Let's just say they don't mind. And sometimes they're very much in favor of it. But I've already said too much, so that's all you'll get out of me. So, I'll continue. It's more undesirable for us to kill civilians as part of our military operation, but you... You don't have to follow orders, you have nothing to do with the locals, and you're practically impossible to be court-martialed. And your friend's with us. You never know what could happen to her..."
+		text="Let's just say they don't mind. And sometimes they're very much in favor of it. But I've already said too much, so that's all you'll get from me. So, I'll continue. It's very undesirable for us to kill civilians as part of our military operation, but you... You don't have to follow orders, you have nothing to do with the locals, and you're practically impossible to be court-martialed. And we got your girlfriend. You never know what could happen to her..."
 		role="NPC"
 		nextReplies="Dlg_pl_002755 Dlg_pl_002758" />
 
@@ -373,7 +373,7 @@
 
 	<Reply
 		name="Dlg_npc_002775"
-		text="If we could get some details, we could rebuild the engines and use those boats to ferry people and provisions to that battleship over there and then sail as far away as possible. But everything we could use is in Moska."
+		text="If we could get some details, we could repair the engines and use those boats to ferry people and provisions to that battleship over there and then sail as far away as possible. But everything we could use is in Moska."
 		role="NPC"
 		nextReplies="Dlg_pl_002776" />
 
@@ -533,7 +533,7 @@
 
 	<Reply
 		name="Dlg_npc_002799"
-		text="Your friend told me about the situation in the adept capital."
+		text="Your friend told me about the situation in the Adept's capital."
 		role="NPC"
 		scriptCondition="QuestStatus('DefendVillageBack')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_002801" />
@@ -573,7 +573,7 @@
 
 	<Reply
 		name="Dlg_npc_002805"
-		text="Everyone in Moska is on their ears after the capture of Kateberg. They've got so many weapons in the ground depots there, we'll never get them. We couldn't even get close to them."
+		text="Everyone in Moska is on their ears after the capture of Kateberg. They've got so many weapons in the ground depots there, that we'll never get them. We couldn't even get close to them."
 		role="NPC"
 		nextReplies="Dlg_pl_002806" />
 
@@ -609,7 +609,7 @@
 
 	<Reply
 		name="Dlg_npc_002811"
-		text="Well, look. Their pillboxes shoot at all unknown vehicles. They'll shoot at your car, any local car. But not mine. They know me. All the more so if the guns are taken off. We'll load more explosives in the car and activate the detonator when it's inside the city."
+		text="Well, look. Their pillboxes shoot at all unknown vehicles. They'll shoot at your car, any local car. But not mine. They know me. All the more so if the guns are taken off. We'll load explosives in my car and activate the detonator when it's inside the city."
 		role="NPC"
 		nextReplies="Dlg_pl_002812" />
 
@@ -633,7 +633,7 @@
 
 	<Reply
 		name="Dlg_npc_002815"
-		text="Velimir will drive it."
+		text="Velimir will."
 		role="NPC"
 		nextReplies="Dlg_pl_002816" />
 
@@ -694,7 +694,7 @@
 
 	<Reply
 		name="Dlg_npc_002832"
-		text="With Dimitry's help, I managed to get the blueprints of Mosca and Keitberg, and with your help we now have the grader. Our chances of success increase considerably, don't they?"
+		text="With Dimitry's help, I managed to get the blueprints of Moska and Kateberg, and with your help we now have the grader. Our chances of success increase considerably, don't they?"
 		role="NPC"
 		nextReplies="Dlg_pl_002833" />
 
@@ -718,7 +718,7 @@
 
 	<Reply
 		name="Dlg_npc_002836"
-		text="I will tell Dimitry that she should run away exactly when you hit Kateberg. There will be turmoil in Moska, and it will be much easier to escape under such conditions."
+		text="I will tell Dimitry that she should run away exactly when we hit Kateberg. There will be turmoil in Moska, and it will be much easier to escape under such conditions."
 		role="NPC"
 		nextReplies="Dlg_pl_002837" />
 
@@ -744,7 +744,7 @@
 
 	<Reply
 		name="Dlg_npc_002843"
-		text="Dimitry helped me. Not only did he tell me exactly when to run, but he also fixed the car, otherwise I wouldn't have been able to start it!"
+		text="Dimitry helped me. Not only did he tell me exactly when to run, but he also fixed my car, otherwise I wouldn't have been able to start it!"
 		role="NPC"
 		nextReplies="Dlg_pl_002844" />
 
@@ -1209,7 +1209,7 @@
 
 	<Reply
 		name="Dlg_npc_002981"
-		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him come back. I was like, &quot;Why the hell would he want to go there, there's nothing there but an abandoned farmhouse,&quot; but I didn't think much of it."
+		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him come back. I was like, &quot;Why the hell would he want to go there, there's nothing but an abandoned farmhouse,&quot; but I didn't think much of it."
 		role="NPC"
 		nextReplies="Dlg_pl_002982" />
 
@@ -1321,7 +1321,7 @@
 
 	<Reply
 		name="Dlg_npc_003182"
-		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him come back. I was like, &quot;Why the hell would he want to go there, there's nothing there but an abandoned farmhouse,&quot; but I didn't think much of it."
+		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him come back. I was like, &quot;Why the hell would he want to go there, there's nothing but an abandoned farmhouse,&quot; but I didn't think much of it."
 		role="NPC"
 		nextReplies="Dlg_pl_003183" />
 
@@ -1891,7 +1891,7 @@
 
 	<Reply
 		name="Dlg_npc_003311"
-		text="Have mercy, good man! My my eyes are no longer the same, legs are no longer walking and the truck is falling apart - what would I do in the dazzling mountain snow?"
+		text="Have mercy, good man! My eyes are no longer the same, legs are no longer walking and the truck is falling apart - what would I do in the dazzling mountain snow?"
 		role="NPC"
 		nextReplies="Dlg_pl_003312 Dlg_pl_003313" />
 
@@ -1903,7 +1903,7 @@
 
 	<Reply
 		name="Dlg_pl_003312"
-		text="I have a feeling that you're not telling the whole truth. But all right, I'll bring you what you're asking for. Where can I find your parts?"
+		text="I have a feeling that you're not telling me the whole truth. But all right, I'll bring you what you're asking for. Where can I find your parts?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003314" />
 
@@ -1976,7 +1976,7 @@
 
 	<Reply
 		name="Dlg_pl_003325"
-		text="That's why you decided to lia to an unsuspecting stranger."
+		text="That's why you decided to lie to an unsuspecting stranger."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003326" />
 
@@ -2286,7 +2286,7 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N09"
-		text="Workers died under the wheels of machinery, three leading researchers committed suicide in two days of research. But the worst thing happened when they opened the sealed chamber in the central compartment..."
+		text="Workers died under the wheels of machinery, three leading scientists committed suicide in two days of research. But the worst thing happened when they opened the sealed chamber in the central compartment..."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N10" />
 
@@ -2328,7 +2328,7 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N16"
-		text="But then what are you doing here? And what are these people standing in front of the ship?"
+		text="But then what are you doing here? And who are these people standing in front of the ship?"
 		role="PLAYER"
 		nextReplies="r4m2_Bar_Scientist_2_N17" />
 
@@ -2364,7 +2364,7 @@
 
 	<Reply
 		name="Dlg_pl_003080"
-		text="You're lying! You can't not remember Ivan! Why else would you have attacked Minin and burned down the house in Hel?"
+		text="You're lying! You know exactly who is Ivan! Why else would you have attacked Minin and burned down the house in Hel?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003081" />
 
@@ -2735,13 +2735,13 @@
 
 	<Reply
 		name="Dlg_pl_002408"
-		text="I have a witness to the attack who saw your car at the scene of the crime! You were there!"
+		text="I have a witness of the attack who saw your car at the scene of the crime! You were there!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002409" />
 
 	<Reply
 		name="Dlg_npc_002409"
-		text="I don't understand... Me? But I never left these parts... That village... The screams, the flames... And the blood... But it was a dream. Yes, it couldn't have been real! It was just a bad dream. Only madmen are real. You are one of them. Prepare to die!"
+		text="I don't understand... Me? But I never left the desert... That village... The screams, the flames... And the blood... But it was a dream. Yes, it couldn't have been real! It was just a bad dream. Only madmen are real. You are one of them. Prepare to die!"
 		role="NPC"
 		nextReplies="Dlg_pl_002410" />
 
@@ -2827,7 +2827,7 @@
 
 	<Reply
 		name="Dlg_npc_002359"
-		text="Unfortunately... Try asking at Kef, it's further down the road."
+		text="I don't know... Try asking at Kef, it's further down the road."
 		role="NPC"
 		nextReplies="Dlg_pl_002360" />
 
@@ -2902,7 +2902,7 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N07"
-		text="War. The constant attacks have exhausted us, made us forget about beauty and reverence for our ancestors. Now all our energies go into surviving.|But is it worth living when beauty is gone? You've hurt my soul, stranger!"
+		text="Because of war. The constant attacks have exhausted us, made us forget about beauty and reverence for our ancestors. Now all our energies go into surviving.|But is it worth living when beauty is gone? You've hurt my soul, stranger!"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N08" />
 
@@ -2914,7 +2914,7 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_1_N09"
-		text="With the goddamn rakshases of Gadad, they won't let us go a step without a fight!"
+		text="With the goddamn rakshases from Gadad, they won't let us make a step without a fight!"
 		role="NPC"
 		nextReplies="Kef_Bar_Customer1_1_N10" />
 
@@ -3164,7 +3164,7 @@
 
 	<Reply
 		name="Dlg_pl_002376"
-		text="Lisa! Think straight! They'll give me a light-armed truck at most. And I'll leave you here with a heavily armed vehicle. You know how to drive and shoot. Just think, if something happens, where will you be safer? My car or theirs?"
+		text="Lisa! Think straight! They'll give me a light-armed truck at most. And I'll leave you here in my heavily armed vehicle. You know how to drive and shoot. Just think, if something happens, where will you be safer? My car or theirs?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002377" />
 
@@ -3491,7 +3491,7 @@
 
 	<Reply
 		name="Dlg_npc_002399"
-		text="Absolutely. I remember the unusual design of his car very well. And the body number. It's definitely him!"
+		text="Absolutely. I remember the unusual design of his car very well. And the cargo number. It's definitely him!"
 		role="NPC"
 		nextReplies="Dlg_pl_002400" />
 
@@ -7077,7 +7077,7 @@
 
 	<Reply
 		name="Dlg_npc_002557"
-		text="How do you imagine it? A few minutes. It will take at least 24 hours to restart the station after the emergency shutdown. However, it's just in time for preventive maintenance. All right, go find your aliens."
+		text="How do you imagine it? A few minutes. It will take at least 24 hours to restart the station after the emergency shutdown. However, it's just time for preventive maintenance. All right, go find your aliens."
 		role="NPC"
 		nextReplies="Dlg_pl_002558" />
 
@@ -7096,7 +7096,7 @@
 
 	<Reply
 		name="Dlg_npc_000647"
-		text="How do you imagine it? A few minutes. It will take at least 24 hours to restart the station after the emergency shutdown. However, it's just in time for preventive maintenance. All right, go find your aliens."
+		text="How do you imagine it? A few minutes. It will take at least 24 hours to restart the station after the emergency shutdown. However, it's just time for preventive maintenance. All right, go find your aliens."
 		role="NPC"
 		nextReplies="Dlg_pl_000651" />
 
@@ -15307,7 +15307,7 @@
 
 	<Reply
 		name="Dlg_pl_002463"
-		text="No, I'm not. To be honest, I didn't trust both the Oracle and the aliens. I just chose the least evil. If the aliens really wanted to invade us, they would have done so long ago. There was nothing we could do to stop them. "
+		text="No, I'm not. To be honest, I didn't trust both the Oracle and the aliens. I just chose the least evil. If the aliens really wanted to invade us, they would have done it many decades ago. There was nothing we could do to stop them. "
 		role="PLAYER"
 		scriptCondition="IsQuestComplete('r4m2_BlokiratorToUFO')"
 		nextReplies="Dlg_npc_002465" />
@@ -15472,7 +15472,7 @@
 
 	<Reply
 		name="Dlg_npc_002478"
-		text="And when we got to Argen, we said goodbye to the old men, and I went straight here!"
+		text="And when we got to Argen, I said goodbye to the elders, and I went straight here!"
 		role="NPC"
 		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 3 "
 		nextReplies="Dlg_pl_002479" />
@@ -15510,7 +15510,7 @@
 
 	<Reply
 		name="Dlg_npc_002484"
-		text="Who cares! To me, both options were risky, but you were right - there's no turn back from now on."
+		text="Who cares! To me, both options were risky, but you are right - there's no turn back from now on."
 		role="NPC"
 		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 4 "
 		nextReplies="Dlg_pl_002485" />
@@ -15542,7 +15542,7 @@
 
 	<Reply
 		name="Dlg_pl_002489"
-		text="I don't think so. I've done what I wanted, learned about Ivan's fate, and I've had enough of all these long drives. I guess I'll go back to Krai. The bartender there offered me a house in Gugulino. I would settle there and live a quiet farm life."
+		text="I don't think so. I've done what I wanted, learned about Ivan's fate, and I've had enough of all these long drives. I guess I'll go back to Krai. The bartender there offered me a house in Gugulino. I would settle there and live a quiet life of a farmer."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002490" />
 
@@ -15560,7 +15560,7 @@
 
 	<Reply
 		name="Dlg_npc_002492"
-		text="I thought about it. But to tell you the truth, I was sick of it all. The endless nomadic life, gathering of information, intrigues, thefts... I just looked at myself from the outside, and what I saw scared the hell out of me."
+		text="I thought about it. But to tell you the truth, I'm sick of it all. The endless nomadic life, gathering of information, intrigues, thefts... I just looked at myself from the outside, and what I saw scared the hell out of me."
 		role="NPC"
 		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 5 "
 		nextReplies="Dlg_pl_002493" />
@@ -16665,7 +16665,7 @@
 
 	<Reply
 		name="Dlg_npc_002211"
-		text="Okay, but it's really now worth it at all. Even though I have no idea what it was myself. So, as soon as we crossed the mountains..."
+		text="Okay, but it's really not worth it at all. Even though I have no idea what it was myself. So, as soon as we crossed the mountains..."
 		role="NPC"
 		scriptCondition="IsQuestComplete('TalkBeforeDesert') and GetCurNpc():GetSpokenCount() == 1 "
 		nextReplies="Dlg_pl_002212" />

@@ -15,7 +15,7 @@
 
 	<QuestInfo
 		questName="ATKordan_Quest"
-		briefDiz="Visit Kordan"
+		briefDiz="Visit Cordan"
 		isMainQuest="1">
 		<Map
 			name="r1m4"
@@ -44,7 +44,7 @@
 	<QuestInfo
 		questName="AnanagaTech_Quest"
 		briefDiz="Obtain an ananaga production technology"
-		fullDiz="A drunkard from Kordan offered to give me the ananaga making technology if I show him Petro's recipe."
+		fullDiz="A drunkard from Cordan offered to give me the ananaga making technology if I show him Petro's recipe."
 		isMainQuest="0" />
 
 	<QuestInfo
@@ -117,7 +117,7 @@
 
 	<QuestInfo
 		questName="BenMZ2_Quest"
-		briefDiz="Kill the raiders who took over the warehouse"
+		briefDiz="Kill the raiders who took over the stash"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -1731,7 +1731,7 @@
 	<QuestInfo
 		questName="PeregDie"
 		briefDiz="Ask the oilman what to do next"
-		fullDiz="Now that all the old men are dead, I have no more clues about Ivan's fate. The only thing left is to go back to the oilman."
+		fullDiz="Now that all the elders are dead, I have no more clues about Ivan's fate. The only thing left is to go back to the oilman."
 		isMainQuest="1">
 		<Map
 			name="r4m1"
@@ -4965,7 +4965,7 @@
 	<QuestInfo
 		questName="r4m1_FPR_MeetWithOldMan"
 		briefDiz="Meet the people of Bukhara"
-		fullDiz="At Kef they told me that the old men were last seen in the old ship cemetery. Finally I would know where Ivan was going!"
+		fullDiz="At Kef they told me that the elders were last seen in the old ship cemetery. Finally I would know where Ivan was going!"
 		isMainQuest="1">
 		<Map
 			name="r4m1"

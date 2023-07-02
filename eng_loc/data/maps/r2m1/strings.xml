@@ -319,7 +319,7 @@
 		id="100"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_100_hero.ogg"
-		value="Who are you and why are you hiding here when my people are suffering? "
+		value="Who are you and why are you hiding here when my race are suffering? "
 		time="4" />
 
 	<string
@@ -392,7 +392,7 @@
 		modelName="boss04dronegun"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_109_njeri.ogg"
-		value="NJERI|There is no telling what effect the sudden change in the information field will have on the survivors. It could be the last straw and kill everyone. But humanity's resource is not limitless, and after a while even the most resilient among you will no longer be able to exist."
+		value="NJERI|It is unpredictable what effect the sudden change in the information field will have on the survivors. It could be the last straw and kill everyone. But humanity's resource is not limitless, and after a while even the most resilient among you will no longer be able to exist."
 		time="8" />
 
 	<string
@@ -440,7 +440,7 @@
 		id="114"
 		modelName="mask_hero"
 		sound=""
-		value="I don't believe a word you say! And now that you have revealed yourself, I will disrupt your plans!"
+		value="I don't believe a word you say! And now when you have revealed yourself, I will disrupt your plans!"
 		time="9" />
 
 	<string

@@ -5,7 +5,7 @@
 		id="1"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="Wow, not only did the mine collapse, but its entrance was also blocked with snow. How long ago did this happen?"
+		value="Wow, not only did the mine collapse, but its entrance is also blocked with snow. How long ago did this happen?"
 		sound=""
 		time="10" />
 
@@ -20,7 +20,7 @@
 	<string
 		id="3"
 		modelName=""
-		value="||@FF000000AAAAAAAAAAAAAAAAA@FFFFFFFFSome time later..."
+		value="||@FF000000AAAAAAAAAAAAAAAAAAAAAA@FFFFFFFFSome time later..."
 		sound=""
 		time="5" />
 
@@ -52,7 +52,7 @@
 		id="7"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="Same here. It's a good time to ask in Volozh if they passed through town."
+		value="Same here. Time to ask in Volozh if they passed through town."
 		sound=""
 		time="10" />
 
@@ -88,7 +88,7 @@
 		modelSkin="4"
 		modelCfg="84"
 		modelSlot="1"
-		value="TIKHOMIR|Kind and friendly... Of course... They are walking silhouettes with no thoughts or goals of their own, ruled by a quintet of these monsters. But I will get Dobroslava out of this place. I must save her at least."
+		value="TIKHOMIR|Kind and friendly... Of course... They are walking silhouettes with no thoughts or goals of their own, ruled by a quintet of these monsters. But I will get Dobroslava out of this place. I must save at least her."
 		sound=""
 		time="13.5" />
 
@@ -249,7 +249,7 @@
 	<string
 		id="27"
 		modelName=""
-		value="||@FF000000AAAAAAAAAAAA..AAAAAAAAAA@FFFFFFFFSome time later..."
+		value="||@FF000000AAAAAAAAAAAA..AAAAAAAAAAAAA@FFFFFFFFSome time later..."
 		sound=""
 		time="5" />
 

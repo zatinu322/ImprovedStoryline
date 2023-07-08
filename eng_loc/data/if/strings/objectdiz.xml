@@ -241,6 +241,10 @@
 		value="Road to Zarmek" />
 
 	<string
+		id="r4m2_ToR4M1_diz"
+		value="Road to Vahat" />
+
+	<string
 		id="r1m2_Esting_diz"
 		value="Border town, surrounded by fields" />
 

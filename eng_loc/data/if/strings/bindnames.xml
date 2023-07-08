@@ -778,15 +778,15 @@
 
 	<string
 		id="KEY_LBUTTON"
-		value="Left mouse button" />
+		value="Left mouse b." />
 
 	<string
 		id="KEY_RBUTTON"
-		value="Right mouse button" />
+		value="Right mouse b." />
 
 	<string
 		id="KEY_MBUTTON"
-		value="Middle mouse button" />
+		value="Middle mouse b." />
 
 	<string
 		id="KEY_MOUSE_MOVE"

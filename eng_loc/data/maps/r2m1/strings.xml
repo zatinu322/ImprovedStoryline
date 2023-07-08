@@ -65,7 +65,7 @@
 		id="14"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_14_hero.ogg"
-		value="How I hate this bandit scum!"
+		value="I hate this bandit scum so much!"
 		time="4" />
 
 	<string
@@ -82,7 +82,7 @@
 		modelCfg="326"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_16_CIT_soldier.ogg"
-		value="CIT SOLDIER|You did a good job. Go back to base. You'll be rewarded and given a new assignment."
+		value="CIT SOLDIER|You did a good job. Go back to the base. You'll be rewarded and given a new assignment."
 		time="4" />
 
 	<string
@@ -96,7 +96,7 @@
 		id="18"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_18_hero.ogg"
-		value="These people are suffering. I feel that my actions help them."
+		value="These people are suffering. I feel that my actions is helping them."
 		time="4" />
 
 	<string
@@ -110,7 +110,7 @@
 		id="20"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_20_hero.ogg"
-		value="Now not only bandits can go through the tunnel, but all free people! I'll go back to headquarters with a report. Let them to send their men to arrange everything here in a new way."
+		value="Now not only bandits can go through the tunnel, but all free people! I'll go back to headquarters with a report. Let them send their men to arrange everything here in a new way."
 		time="11" />
 
 	<string

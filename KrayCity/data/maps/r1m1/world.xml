@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="76483164">
+	LastId="76483237">
 	<Node
 		name="Object3"
 		class="SgAnimatedModelNode"
@@ -8003,7 +8003,7 @@
 	<Node
 		name="Object4892"
 		class="SgAnimatedModelNode"
-		org="1045.450 0.000 3663.737"
+		org="1032.156 -1.624 3630.840"
 		orgRel="1"
 		rot="0.0000 0.1919 0.0000 0.9814"
 		id="electro_stolb3"
@@ -8012,7 +8012,7 @@
 	<Node
 		name="Object4893"
 		class="SgAnimatedModelNode"
-		org="1132.937 0.000 3878.952"
+		org="1141.954 -0.642 3905.039"
 		orgRel="1"
 		rot="0.0000 0.1919 0.0000 0.9814"
 		id="electro_stolb3"

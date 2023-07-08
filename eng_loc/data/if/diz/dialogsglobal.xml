@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='windows-1251'?>
-<DialogsResource>
+<DialogsResource><!--Root--><!--Root/r1m1--><!--Root/r1m2--><!--Root/r1m3--><!--Root/r1m4--><!--Root/r2m1--><!--Root/r2m2--><!--Root/r3m1--><!--Root/r3m2--><!--Root/r4m1--><!--Root/r4m2--><!--Root/r5m1-->
 	<Reply
 		name="Dlg_npc_002712"
 		text="Comrades, this moment has finally arrived. We've been waiting for you for a long time. Tell those filthy bloodsuckers that we will never agree to their terms. They'd better come here and kill us. That's the only thing that'll satisfy them..."
@@ -52,7 +52,7 @@
 
 	<Reply
 		name="Dlg_npc_002720"
-		text="In a few words, we were attacked by our neighbors. We had a very strained relationship before, but recently everything collapsed entirely."
+		text="In a few words, we were attacked by our neighbors. We had a very strained relationship before, but recently everything collapsed entirely. And the main driving force of this attack was their best militarized clan, the Adepts of the Red Torch. Madmen and murderers who will fight with anyone for money."
 		role="NPC"
 		nextReplies="Dlg_pl_002721" />
 
@@ -311,7 +311,7 @@
 
 	<Reply
 		name="Dlg_npc_002765"
-		text="Yes. We'll send a messenger to the locals and ask them to meet us there. I don't think they'll go there armed to the teeth, so it won't be at all difficult to capture them. Then we will pay a visit to their village and ask them to surrender. If they surrender, you get Lisa and the way to the mountains."
+		text="Yes. We'll send a messenger to the locals and ask them to meet us at this spot. I don't think they'll go there armed to the teeth, so it won't be difficult at all to capture them. Then we will pay a visit to their village and ask them to surrender. If they surrender, you get Lisa and the way to the mountains."
 		role="NPC"
 		nextReplies="Dlg_pl_002766" />
 
@@ -789,7 +789,7 @@
 
 	<Reply
 		name="Dlg_pl_002845"
-		text="It's like I'm doing it of my own free will."
+		text="You sound like I'm doing it of my own free will."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002846" />
 
@@ -954,7 +954,7 @@
 		text="[What a bastard...]"
 		role="PLAYER"
 		scriptResult="TActivate('FSSRolikStart'); EndConversation()" />
-
+<!--Root/r5m2--><!--Root/r5m2/При въезде-->
 	<Reply
 		name="Dlg_npc_002883"
 		text="Greetings, fellow traveler! Come in, make yourself at home!"
@@ -1016,7 +1016,7 @@
 		text="Thank you for your help."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r5m2/Волож-->
 	<Reply
 		name="Dlg_npc_002884"
 		text="Hello, dear guest."
@@ -1366,7 +1366,7 @@
 		text="And I'm going to go check out that farm."
 		role="PLAYER"
 		scriptResult="TActivate('CreateTikhomirCar'); TActivate('VyezdRolik3Start'); SetTolerance(1100,1050,RS_ALLY); EndConversation()" />
-
+<!--Root/r5m2/Ринольск-->
 	<Reply
 		name="Dlg_npc_002885"
 		text="Hello, traveler! Make yourself at home!"
@@ -1466,7 +1466,7 @@
 		text="Great, two of three towns done. There's only one left."
 		role="PLAYER"
 		scriptResult="RemoveQuestItem('quest_labelle_scrap'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_labelle_scrap'); EndConversation()" />
-
+<!--Root/r5m2/Ла Белль-->
 	<Reply
 		name="Dlg_npc_002886"
 		text="Good day, traveler!"
@@ -1580,7 +1580,7 @@
 		text="Goodbye, good luck to you!"
 		role="PLAYER"
 		scriptResult="AddQuestItem('quest_labelle_scrap'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_labelle_scrap'); SetWeather(1); EndConversation()" />
-
+<!--Root/r5m2/Поиски Доброславы-->
 	<Reply
 		name="Dlg_npc_002945"
 		text="My respects, fellow traveler! What are you looking for in our village?"
@@ -1752,7 +1752,7 @@
 		text="Well, as you wish. Now it's time for me to have a word with the Supreme Wise Man."
 		role="PLAYER"
 		scriptResult="RemoveQuestItem('Dobroslava_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Dobroslava_P'); EndConversation()" />
-
+<!--Root/r5m2/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003017"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 25000 coins."
@@ -1772,7 +1772,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 25000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-25000); EndConversation()" />
-
+<!--Root/r5m2/Знаки на полях-->
 	<Reply
 		name="Dlg_npc_003060"
 		text="Hello, fellow traveler!"
@@ -1839,7 +1839,7 @@
 		text="Let's see what it is this time."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('RPGSigns_Quest'); TActivate('RPGSignsRolik1'); EndConversation()" />
-
+<!--Root/r5m2/Ананага-->
 	<Reply
 		name="Dlg_npc_003303"
 		text="Hey, kid, don't pass by. Help a good man!"
@@ -2176,7 +2176,7 @@
 		text="No problem. I don't like to be taken for a fool."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m5_AnanagaBetrayal_Quest'); EndConversation()" />
-
+<!--Root/r5m2/Решаем судьбу Тихомира-->
 	<Reply
 		name="Dlg_npc_003253"
 		text="What to do?"
@@ -2195,7 +2195,7 @@
 		text="Let Tikhomir and Dobroslava go."
 		role="PLAYER"
 		scriptResult="SetVar('Tikhomir', 1); TActivate('trVRRolikContinue'); EndConversation()" />
-
+<!--Root/r4m2/Сюжетные--><!--Root/r4m2/Сюжетные/У ученого-->
 	<Reply
 		name="r4m2_Bar_Scientist_1_N01"
 		text="Come in, make yourself comfortable. We have a very long conversation ahead of us."
@@ -2490,14 +2490,26 @@
 
 	<Reply
 		name="Dlg_npc_003167"
-		text="Be careful. And may you be successful where others have failed. It's unlikely that we'll see each other again. Here, take this - it's a duplicate of the device you used to activate the Sea Gate in different parts of the world. I don't need it anyway, but you obviously will."
+		text="Wait! Here, take this - it's a duplicate of the device you used to activate the Sea Gate in different parts of the world. I don't need it anyway, but you obviously will.|By the way, it was very noble of you to give it to that engineer from Kef."
 		role="NPC"
 		scriptCondition="QuestStatus('PeregReturn')==Q_COMPLETED"
 		nextReplies="Dlg_pl_003169" />
 
 	<Reply
 		name="Dlg_pl_003169"
-		text="Thank you, goodbye."
+		text="What?! How do you know about that?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_003402" />
+
+	<Reply
+		name="Dlg_npc_003402"
+		text="This is my lands, after all. It is my duty to know what goes on here.|Be careful. And may you be successful where others have failed. It's unlikely that we'll see each other again."
+		role="NPC"
+		nextReplies="Dlg_pl_003403" />
+
+	<Reply
+		name="Dlg_pl_003403"
+		text="Goodbye."
 		role="PLAYER"
 		scriptResult="TActivate('SergoAivenTalk1'); AddQuestItem('quest_key_for_submarine1'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_submarine1'); EndConversation()" />
 
@@ -2513,7 +2525,7 @@
 		text="Goodbye."
 		role="PLAYER"
 		scriptResult="TActivate('SergoAivenTalk1'); EndConversation()" />
-
+<!--Root/r4m1/Сюжетные--><!--Root/r4m1/Опциональные--><!--Root/r4m1/Разговоры о книгах-->
 	<Reply
 		name="Gadad_Bar_CrazyBook1_1_N01"
 		text="Foreigner! You have not yielded to the great call, so I want to give you one thing."
@@ -2538,7 +2550,7 @@
 		text="Stop, you madman! Where are you running..."
 		role="PLAYER"
 		scriptResult="AddBook('r4_book_Scarytail1'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
-
+<!--Root/r4m1/Опциональные/Гонки-->
 	<Reply
 		name="r4_Racers_Men_1_N01"
 		text="Today is the ultra-fast car championship. Anyone can take part!"
@@ -2563,31 +2575,7 @@
 		name="r4_Racers_Men_1_N03a"
 		text="You have to pay a fee of 10000 coins, of which 5000 is the deposit for the car."
 		role="NPC"
-		nextReplies="r4_Racers_Men_1_N04aa r4_Dlg_pl_000158" />
-
-	<Reply
-		name="r4_Dlg_pl_000158"
-		text="I have special insurance, so I'm not giving you my car."
-		role="PLAYER"
-		scriptCondition="GetVar('Strahovka').AsInt==1"
-		nextReplies="r4_Dlg_npc_000164" />
-
-	<Reply
-		name="r4_Dlg_npc_000164"
-		text="Hmm, really. All the easier for us and for you. "
-		role="NPC"
-		nextReplies="r4_Dlg_pl_000165" />
-
-	<Reply
-		name="r4_Dlg_pl_000165"
-		text="..."
-		role="PLAYER"
-		nextReplies="r4_Dlg_npc_000166" />
-
-	<Reply
-		name="r4_Dlg_npc_000166"
-		text="..."
-		role="NPC" />
+		nextReplies="r4_Racers_Men_1_N04aa" />
 
 	<Reply
 		name="r4_Racers_Men_1_N04aa"
@@ -2632,7 +2620,7 @@
 		text="I got it. LET'S GO!"
 		role="PLAYER"
 		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi');  EndConversation()" />
-
+<!--Root/r4m1/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_002580"
 		text="Oh, you made it to the desert already! Things are going pretty fast, I can't even keep up with you."
@@ -2693,7 +2681,7 @@
 		text="And yet he’s not real. Yeah, well, he can’t be real. Nonsense."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
+<!--Root/r4m1/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003032"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 30000 coins."
@@ -2713,7 +2701,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 30000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-30000); EndConversation()" />
-
+<!--Root/r4m1/Сюжетные/Танкисты-->
 	<Reply
 		name="r4_Dlg_npc_000007"
 		text="What have we done to you, stranger? Why are you following us?"
@@ -2750,7 +2738,7 @@
 		text="I will gladly terminate your worthless existence!"
 		role="PLAYER"
 		scriptResult="TActivate('TANKIBATTLE'); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
-
+<!--Root/r4m1/Сюжетные/Поиски людей-->
 	<Reply
 		name="Gadad_Bar_Customer1_01_N01"
 		text="We are glad to see you in our beautiful city, dear guests! What can I do for you?"
@@ -2861,7 +2849,7 @@
 		text="Of course. You don't have to ask me twice."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_LisaGadad'); EndConversation()" />
-
+<!--Root/r4m1/Сюжетные/Нефть-->
 	<Reply
 		name="Kef_Bar_Customer1_1_N01"
 		text="Good afternoon, traveler! What are you looking for in this faraway land?"
@@ -3084,7 +3072,7 @@
 
 	<Reply
 		name="Kef_Bar_Customer1_1a_N01"
-		text="You dare to do that?! Will you bring us oil?"
+		text="You dare to do that? Will you bring us oil?"
 		role="NPC"
 		scriptCondition="(GetCurNpc():GetSpokenCount( ) == 1) and QuestStatus('r4m1_Kef_NeedOil')==Q_CANBEGIVEN and IsQuestComplete('r4m1_LisaKef')"
 		nextReplies="Kef_Bar_Customer1_1a_N02" />
@@ -3179,7 +3167,7 @@
 		text="Sure. I'll try not to stay too long."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_LisaKef'); RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Lisa_P'); EndConversation()" />
-
+<!--Root/r4m1/Сюжетные/Поиски нефтянника-->
 	<Reply
 		name="r4m1_SomeWhere_Man1_1_N01"
 		text="What are you looking for?"
@@ -3381,7 +3369,7 @@
 		text="Yes. And so are you. Now get going before those madmen find you."
 		role="PLAYER"
 		scriptResult="CompleteQuest('PeregReturn'); TakeQuest('r4m1_GotoAivenGo');  RemoveQuestItem('quest_key_for_submarine'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_key_for_submarine'); GetPlayerVehicle():SetCustomLinearVelocity(0); EndConversation()" />
-
+<!--Root/r4m1/Сюжетные/Вернулся в Кеф (после поисков)-->
 	<Reply
 		name="Kef_Bar_Customer1_3_N01"
 		text="I don't see an engineer with you, did you find him?"
@@ -3542,7 +3530,7 @@
 		text="You're right, the elders aren't going anywhere, and these guys can give us important information. Let's follow them."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m1_LisaKef2'); TActivate('trTankistyRolikStart'); LeaveTown()" />
-
+<!--Root/r4m1/Сюжетные/Приехал в Бухару-->
 	<Reply
 		name="Buhara_Outside_Leader_1_N01"
 		text="They found us, run for your lives!"
@@ -3716,7 +3704,7 @@
 		text="All right, then go with them. I'll see you at Ben's."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
-
+<!--Root/r3m2/Проехать к оракулу-->
 	<Reply
 		name="r3m1_NearOracle_ODefenders_1_N01"
 		text="Stop, you infidel! Why have you come to the blessed land of the Oracle?"
@@ -4017,7 +4005,7 @@
 		text="Damned fanatics, they won't let me go a step further! Well, you asked for it!"
 		role="PLAYER"
 		scriptResult="SetTolerance(1100, 1021, RS_ENEMY); GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
-
+<!--Root/r3m2/Оракул 1 раз-->
 	<Reply
 		name="r3m2_Oracle_Oracle_1_N01"
 		text="I've been waiting for you, human. Your desire to reach me is commendable. But you don't look like the kind of man who usually brings me gifts. You don't believe I'm a god, do you?"
@@ -4287,10 +4275,10 @@
 		text="It might be worth another visit to my father's house. Thank you for your help!"
 		role="PLAYER"
 		scriptResult="TakeQuest('r3m2_RideToFatherRoomAfterOracul'); GetCurNpc():SetSpokenCount(3); TActivate('OracleVrataClose'); AddHistory( 'r3_Oracle_NeedDisc2' ) AddFadingMsgId( 'fm_history_got' );  EndConversation()" />
-
+<!--Root/r3m2/принесли 2ой диск-->
 	<Reply
 		name="r3m2_Oracle_Oracle_5_N01"
-		text="You came back with a key."
+		text="You came back."
 		role="NPC"
 		scriptCondition="QuestStatus('Disk2OrakulLisa')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 3"
 		nextReplies="r3m2_Oracle_Oracle_5_N02" />
@@ -4361,7 +4349,7 @@
 		text="You tricked me after all! At least I got the information I needed..."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Disk2OrakulLisa'); TakeQuest('r3m2_TalkWithLisa'); TActivate('OracleVrataClose'); AddFadingMsgId( 'fm_history_got' ); RemoveQuestItem( 'quest_disk_1' ); RemoveQuestItem( 'quest_disk_2' ); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_disk_1'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_disk_2'); GetCurNpc():SetSpokenCount(4); EndConversation()" />
-
+<!--Root/r3m2/У друида и знаки-->
 	<Reply
 		name="r3m2_AloneDruid1_2_N01"
 		text="It's been a long time since anyone came to see me. What brings you here?"
@@ -4515,7 +4503,7 @@
 		text="I agree!"
 		role="PLAYER"
 		scriptResult="AddPlayerMoney(-(GetPlayerMoney()*0.15)); SetTolerance(1100, 1021, RS_NEUTRAL); EndConversation()" />
-
+<!--Root/r3m2/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003029"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 15000 coins."
@@ -4535,7 +4523,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 15000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-15000); EndConversation()" />
-
+<!--Root/r3m1/Очистить стоухендж-->
 	<Reply
 		name="Fist_ambush_guard2_1_N01"
 		text="Don't shoot! Who are you and why did you come to these lands?"
@@ -4769,7 +4757,7 @@
 		text="I need to think about it some more."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r3m1/Выманить друида-->
 	<Reply
 		name="Uluc_Bar_Customer1_1_N01"
 		text="You have come riding on a beast of steel. We welcome you, friend."
@@ -4793,7 +4781,7 @@
 
 	<Reply
 		name="Uluc_Bar_Customer1_1_N03"
-		text="We are very different! These willful Druids constantly teach us how to live, impose their vile religion, and do not recognize our Gods! But one day it will be our turn to repress! By the way, what are you doing here?"
+		text="We are very different! These willful Druids constantly teach us how to live, impose their vile religion, and do not acknowledge our Gods! But one day it will be our turn to repress! By the way, what are you doing here?"
 		role="NPC"
 		scriptResult="CompleteQuestIfTaken('r3m1_FindNative'); CompleteQuestIfTaken('r3m1_FindMoreNative'); if QuestStatus('r3m1_FindMoreNative')==Q_TAKEN then     AddHistory( 'r3_Fist_Fight_1' );     AddFadingMsgId( 'fm_history_got' ); else      AddHistory( 'r3_v2_Uluk_FirstTime_1' );     AddFadingMsgId( 'fm_history_got' ); end"
 		nextReplies="Uluc_Bar_Customer1_1_P04" />
@@ -4965,7 +4953,7 @@
 		text="Follow me."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r3m1/Узнать что случилось с Улуком-->
 	<Reply
 		name="Set_Bar_Customer1_1_N01"
 		text="Stranger, won't you help the Druid commune? "
@@ -5100,7 +5088,7 @@
 		text="Thank you, too. I'm glad there are still people who live in harmony with nature."
 		role="PLAYER"
 		scriptResult="TActivate('trRescueEnd'); TDeactivate('trRescArmyDie2'); SetVar('BezhenAlive', 0); EndConversation();" />
-
+<!--Root/r3m1/С лисой у разбойников-->
 	<Reply
 		name="RazVill_Bar_Lisa_1_N01"
 		text="Oh, you're back already? What's up? What did the Oracle tell you? Do you know what happened to Ivan?"
@@ -5196,7 +5184,7 @@
 
 	<Reply
 		name="Dlg_pl_002207"
-		text="I know him. I've done a couple of jobs for him, so I think he and I can make a deal."
+		text="I know him. I've done a couple of jobs for him, so I think we can make a deal."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002208" />
 
@@ -5230,7 +5218,7 @@
 		text="Okay. Well, I'm off!"
 		role="PLAYER"
 		scriptResult="TakeQuest('r3m2_ReadyToTravel'); EndConversation()" />
-
+<!--Root/r3m1/Проведать друида-->
 	<Reply
 		name="Set_Bar_Druid3_1_N01"
 		text="You're the stranger who destroyed the robots in our sanctuary!"
@@ -5273,7 +5261,7 @@
 		text="Don't worry. I'll give him both your regards and the package."
 		role="PLAYER"
 		scriptResult="TakeQuest('q_VisitDruid'); AddQuestItem('quest_druid_package'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_druid_package'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
-
+<!--Root/r3m1/Книга-->
 	<Reply
 		name="Uluk_Hram_Zrec_1_N01"
 		text="Traveller, I see that you are a good man. Take this book with our story."
@@ -5328,7 +5316,7 @@
 		text="Thank you, goodbye. "
 		role="PLAYER"
 		scriptResult="AddBook('r3_book_transformer'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
-
+<!--Root/r3m1/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003026"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 12000 coins."
@@ -5348,7 +5336,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 12000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-12000); EndConversation()" />
-
+<!--Root/r2m2/Сюжетные--><!--Root/r2m2/Опциональные--><!--Root/r2m2/Опциональные/Деревенщина со Знаками-->
 	<Reply
 		name="Aborigen_hellodlg0"
 		text="You demons! First my crops, and then you want to take me, too! I won't be taken so easily!"
@@ -5379,10 +5367,10 @@
 		text="Don't worry, good man, the power of science will drive the demons from your fields. I've seen it before."
 		role="PLAYER"
 		scriptResult="TakeQuest('r2m2_Znaki2_Quest');   GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
+<!--Root/r2m2/Опциональные/Монах-->
 	<Reply
 		name="SektantMain_hellodlg0"
-		text="Greetings, lost soul. I see in you an emptiness and spiritlessness. Help our church and you would get back on the right path."
+		text="Greetings, lost soul. I see an emptiness and spiritlessness in you. Help our church and you would get back on the right path."
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and QuestStatus('d_GetSupportOneOfTheBands1_Quest')==Q_COMPLETED and not(QuestStatus('d_FindVerbInAM_Quest')==Q_COMPLETED) and not(QuestStatus('Disk2OrakulLisa')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001133" />
@@ -5443,10 +5431,10 @@
 		text="Thanks."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r2m2_ReturnHeadsQuest');  RemoveQuestItem('quest_shaman_head1');  RemoveQuestItem('quest_shaman_head2'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_shaman_head1'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_shaman_head2');  GetCurNpc():SetSpokenCount( 2 );  AddPlayerMoney( 1000 );  EndConversation()" />
-
+<!--Root/r2m2/Опциональные/Мусорщик с движком-->
 	<Reply
 		name="TrashFarmer_hellodlg0"
-		text="Hey, driver! Could you drop some junk off at the village, it's not far from here. You give this junk to my friend, and he'll pay you well. I could do it myself, but there's too much work to be done - I've got to keep collecting trophies left over from the bandits' battlefields."
+		text="Hey, driver! Could you drop some junk off at the village, it's not far from here. You give this stuff to my friend, and he'll pay you well. I could do it myself, but there's too much work to be done - I've got to keep collecting trophies left over from the bandits' battlefields."
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and not(QuestStatus('Disk2OrakulLisa')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001135 Dlg_pl_001259" />
@@ -5531,7 +5519,7 @@
 		text="That's clever."
 		role="PLAYER"
 		scriptResult=" GetCurNpc():SetSpokenCount( 3 );  AddPlayerMoney( -25000 );  EndConversation()" />
-
+<!--Root/r2m2/Опциональные/Претендент номер 2-->
 	<Reply
 		name="NewMechanik_hellodlg0"
 		text="And there's the engine I've been waiting for. Here is your reward, stranger."
@@ -5560,10 +5548,10 @@
 
 	<Reply
 		name="Dlg_pl_001257"
-		text="I don't care what I do, as long as I get paid."
+		text="I don't care what to do, as long as I get paid."
 		role="PLAYER"
 		scriptResult="TakeQuest('r2m2_OldDvigatel2_Quest');  AddQuestItem('quest_old_digital'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_old_digital');  GetCurNpc():SetSpokenCount( 2 );  EndConversation()" />
-
+<!--Root/r2m2/Опциональные/Мистер Шляпа 3-->
 	<Reply
 		name="Dlg_npc_002176"
 		text="Hello again!"
@@ -5636,7 +5624,7 @@
 		text="He disappeared again... This kind of talk is starting to bother me. I hope it's a stress hallucination after all."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
+<!--Root/r2m2/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003023"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 20000 coins."
@@ -5656,7 +5644,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 20000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-20000); EndConversation()" />
-
+<!--Root/r2m2/Сюжетные/Вербовщик в АР-->
 	<Reply
 		name="RecruiterInAR_hellodlg0"
 		text="What do you want?"
@@ -6013,68 +6001,7 @@
 		text="That's great."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Ozhidanie2_Quest'); TActivate('Ending5_begin'); EndConversation()" />
-
-	<Reply
-		name="Monah_hellodlg0out"
-		text="Hello, my son. You have recently performed many glorious acts in the name of our common cause that have not escaped our attention. We decided to get to know you better."
-		role="NPC"
-		scriptCondition="QuestStatus('r2m2_FindROMinCastle')==Q_TAKEN and QuestStatus('d_SinFather_Quest')==Q_COMPLETED and not(IsQuestTaken('r2m2_FightFelix'))"
-		nextReplies="Dlg_pl_000482" />
-
-	<Reply
-		name="Dlg_pl_000482"
-		text="I don't really understand what you're talking about..."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000483" />
-
-	<Reply
-		name="Dlg_npc_000483"
-		text="A lost traveler came to us and said he knew you well..."
-		role="NPC"
-		nextReplies="Dlg_pl_000484" />
-
-	<Reply
-		name="Dlg_pl_000484"
-		text="Who is this? I don't know what you're talking about."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000485" />
-
-	<Reply
-		name="Dlg_npc_000485"
-		text="And that you swore to exterminate all the bandits in the world..."
-		role="NPC"
-		nextReplies="Dlg_pl_000486" />
-
-	<Reply
-		name="Dlg_pl_000486"
-		text="That's a lie! I... I love bandits, I'm a bandit myself."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000487" />
-
-	<Reply
-		name="Dlg_npc_000487"
-		text="I believe you, my son. But such accusations are quite serious, and we must find out which of you is right. May God judge you ... in a battle to the death in the arena! Whoever survives is right."
-		role="NPC"
-		nextReplies="Dlg_pl_000490" />
-
-	<Reply
-		name="Dlg_pl_000490"
-		text="But who is my opponent?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000491" />
-
-	<Reply
-		name="Dlg_npc_000491"
-		text="Old Man Felix."
-		role="NPC"
-		nextReplies="Dlg_pl_000492" />
-
-	<Reply
-		name="Dlg_pl_000492"
-		text="What? Felix?!"
-		role="PLAYER"
-		scriptResult="TakeQuest('r2m2_FightFelix');  TActivate('FELIXMONAX');  EndConversation()" />
-
+<!--Root/r2m2/Сюжетные/Монах-->
 	<Reply
 		name="Monah_hellodlg1"
 		text="Hello, my son. You have recently performed many glorious acts in the name of our common cause that have not escaped our attention. We decided to get to know you better."
@@ -6225,11 +6152,11 @@
 
 	<Reply
 		name="Dlg_pl_000539"
-		text="With Axel's failure, your power is over. If I don't, others will burn the place down. I'm gonna count to three and start the attack. One... Two..."
+		text="With Axel's failure, your power is over. If I won't, the others will burn this place down. I'm gonna count to three and start the attack. One... Two..."
 		role="PLAYER"
 		scriptCondition="IsQuestComplete('d_GetAkselBandit_Quest')"
 		nextReplies="Dlg_npc_002172" />
-
+<!--Root/r2m2/Сюжетные/Повстанец в лагере-->
 	<Reply
 		name="LagerGuardian_hellodlg0"
 		text="Who are you, stranger, and what do you want?"
@@ -6359,7 +6286,7 @@
 		text="Then there's no time to talk! Hurry up and hop in my truck!"
 		role="PLAYER"
 		scriptResult="TActivate('trShpionGuards'); CompleteQuest('Shpion1_Quest'); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P'); EndConversation()" />
-
+<!--Root/r2m2/Сюжетные/Агент в Тоскане-->
 	<Reply
 		name="Agent_hellodlg0"
 		text="The night is long..."
@@ -6479,7 +6406,7 @@
 
 	<Reply
 		name="Dlg_pl_002166"
-		text="I will. Now it's time for me to put an end to the war!"
+		text="I will. Now it's time for me to put an end to this war!"
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken( 'r2m2_MoveToZeonToAlex' );  CompleteQuestIfTaken( 'd_GetAkselBandit_Quest' ); TakeQuest( 'r2m2_FightWithAxelInArena_Quest' );  TActivate('AXELARENA'); TActivate('OhranaAxel');  EndConversation()" />
 
@@ -6507,7 +6434,7 @@
 		text="The enemy will be defeated."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Eretik_Toskana'); TActivate('trEretikPreSave'); EndConversation()" />
-
+<!--Root/r2m2/Сюжетные/Аксель в Зионе-->
 	<Reply
 		name="Axel_hellodlg0"
 		text="There you are! You did so much for our victory over the enemy, and for that your name will be immortalized forever in our history! And now accept from me this medal for special services."
@@ -6556,7 +6483,7 @@
 		text="Well, since there's no other way...|To the arena!"
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken( 'r2m2_MoveToZeonToAlex' );  CompleteQuestIfTaken( 'd_GetAkselBandit_Quest' ); TakeQuest( 'r2m2_FightWithAxelInArena_Quest' );  TActivate('AXELARENA'); AddQuestItem('quest_crimson_medal'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_crimson_medal');  EndConversation()" />
-
+<!--Root/r2m2/Сюжетные/Еретик-->
 	<Reply
 		name="Dlg_npc_002315"
 		text="Do you want something?"
@@ -6717,7 +6644,7 @@
 		text="All right, thanks for the information. Don't be rude to these gentlemen, and no one will kill you. And I need to discuss further plans with the headquarters."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r2m2_ToLisaToMonastir'); TakeQuest('ReturnQuest'); SetTolerance(1100,1017,RS_ALLY); SetTolerance(1100,1015,RS_ALLY); SetTolerance(1100, 1043, RS_ALLY); SetTolerance(1100,1016,RS_ENEMY); TActivate('MarezziaOpen'); EndConversation()" />
-
+<!--Root/r2m1/Сюжетные--><!--Root/r2m1/Опциональные--><!--Root/r2m1/Опциональные/Эстет-->
 	<Reply
 		name="Estet_hellodlg0"
 		text="Would you like to make some money? I could use your skills."
@@ -6779,7 +6706,7 @@
 		text="Here's your precious."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r2m1_ArtViva_Quest');  RemoveQuestItem('quest_art_masterpice'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_art_masterpice');  AddPlayerMoney(1000);  EndConversation()" />
-
+<!--Root/r2m1/Опциональные/Антипод Эстета-->
 	<Reply
 		name="AntipodEstet_hellodlg0"
 		text="We-e-ell!"
@@ -6823,7 +6750,7 @@
 		text="Here it is. Now give me my money."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r2m1_ArtViva_Quest');  RemoveQuestItem('quest_art_masterpice'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_art_masterpice');  AddPlayerMoney(1500);  EndConversation()" />
-
+<!--Root/r2m1/Опциональные/Ограбить караван-->
 	<Reply
 		name="Gulik_hellodlg0"
 		text="My sources inform me that a rich transport will pass almost unguarded to the south. It's a sure thing. I get you information, you get me half the loot. Deal? "
@@ -6854,7 +6781,7 @@
 		text="I'll be back soon."
 		role="PLAYER"
 		scriptResult="TActivate ('Trigger_NarcotikCaravan');  TakeQuest('r2m1_TakeNarcotics_Quest');  GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
+<!--Root/r2m1/Опциональные/Убить Босса-->
 	<Reply
 		name="Gulik_hellodlg1"
 		text="What's that? Why did you bring it here?! Are you trying to kill us?! Take it off the table right now!"
@@ -6909,7 +6836,7 @@
 		text="All right, I'll check it out. If I find him there, I'll kill him. If not, let's hope he doesn't find us."
 		role="PLAYER"
 		scriptResult=" TActivate ('Trigger_NarcotikBoss');  CompleteQuest('r2m1_ReturnNarcotics_Quest'); RemoveQuestItem('quest_mafia_narcotik'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_mafia_narcotik');  EndConversation()" />
-
+<!--Root/r2m1/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_002537"
 		text="Well, what's your excuse?"
@@ -6971,7 +6898,7 @@
 		text="You're welcome. Good luck with your further research."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); TActivate('ToR2M1AfterBoss'); EndConversation()" />
-
+<!--Root/r2m1/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003020"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 20000 coins."
@@ -6991,7 +6918,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 20000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-20000); EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Гражданин в Сели-->
 	<Reply
 		name="SelCitizen_hellodlg0"
 		text="What would you like, liberator?"
@@ -7105,7 +7032,7 @@
 		text="You did an invaluable service to the world!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('r2m1_TW_SellsCivilian'); TakeQuest('r2m1_TW_AlienInShip'); TActivate('RolikBegin_UFO'); LeaveTown()" />
-
+<!--Root/r2m1/Сюжетные/Бармен из Селя-->
 	<Reply
 		name="SelBarmen_hellodlg0"
 		text="I haven't seen you here before."
@@ -7178,7 +7105,7 @@
 		text="I'll think about what you said."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); CompleteQuest('FigureOutWhatsGoingOn_Quest'); TakeQuest('d_GetSupportOneOfTheBands1_Quest'); TakeQuest('d_FindVerbInAR_Quest'); TakeQuest('d_FindVerbInSNG_Quest'); TakeQuest('d_FindVerbInAM_Quest'); AddBook('r1_book_sng_flyer');  EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Вербовщик в Тузе-->
 	<Reply
 		name="TuzVerb_hellodlg0"
 		text="Are you ready to join our army?"
@@ -7317,7 +7244,7 @@
 
 	<Reply
 		name="TuzVerb_hellodlg2"
-		text="People owe their lives to you! You really are a fearless warrior. I'm sorry we didn't send you on a real mission right away, but we needed to test you to see what you could do."
+		text="People owe their lives to you! You really are a fearless warrior. I'm sorry we didn't send you on a real mission right away, but we needed to test you to see what you are capable of."
 		role="NPC"
 		scriptCondition="(IsQuestTaken('d_ReturnTuzz_Quest'))  and  not(IsQuestComplete('d_ReturnTuzz_Quest'))"
 		nextReplies="Dlg_pl_xyz504" />
@@ -7330,7 +7257,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz505"
-		text="Keep it up, and you'll get that opportunity. In the meantime, the common people need your protection. We need to send humanitarian aid shipments to tvillages from time to time to keep the level of life. Your job is to protect the transport!"
+		text="Keep it up, and you'll get that opportunity. In the meantime, the common people need your protection. We need to send humanitarian aid shipments to villages from time to time to keep the level of life. Your job is to protect the transport!"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz506" />
 
@@ -7397,7 +7324,7 @@
 
 	<Reply
 		name="Dlg_pl_xyz516"
-		text="Yes... that's the way it was... They're not as simple as I thought."
+		text="Yes... That's the way it was... They're not as simple as I thought."
 		role="PLAYER"
 		nextReplies="Dlg_npc_xyz517" />
 
@@ -7412,10 +7339,10 @@
 		text="It's not my first time. Get my medals ready!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_ReturnToTuzzAfterCaravan_Quest');  TActivate ('trCaravanRemove');  TActivate ('TUNELFIGHT');  EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Сенат-->
 	<Reply
 		name="Senat_hellodlg0"
-		text="Your successes against our common enemy have not gone unnoticed. By your successful actions you have disrupted the military plans of the bandits. The time has come to entrust you with a task that could turn the course of the war in our favor!"
+		text="Your progress against our common enemy have not gone unnoticed. By your successful actions you have disrupted the military plans of the bandits. The time has come to entrust you with a task that could turn the course of the war in our favor!"
 		role="NPC"
 		scriptCondition="(IsQuestTaken('d_FromTuzzToGelvetcia_Quest'))  and  not(IsQuestComplete('d_FromTuzzToGelvetcia_Quest'))"
 		nextReplies="Dlg_pl_000432" />
@@ -7464,7 +7391,7 @@
 
 	<Reply
 		name="Senat_hellodlg1"
-		text="The rebel you rescued gave us very important information. One of Axel's generals will be passing through this point with a small guard. Capturing him alive will give us a source of valuable information about the enemy."
+		text="The rebel you rescued gave us very important information. One of Axel's generals will be passing through this place with a small guard. Capturing him alive will give us a source of valuable information about the enemy."
 		role="NPC"
 		scriptCondition="(IsQuestTaken('d_MoveLeaderInGelvetcia_Quest')   and   not(IsQuestComplete('d_MoveLeaderInGelvetcia_Quest')))   or   (IsQuestTaken('r2m2_HelpAllSNGPeople')   and   not(IsQuestComplete('r2m2_HelpAllSNGPeople')))"
 		nextReplies="Dlg_pl_000438" />
@@ -7477,7 +7404,7 @@
 
 	<Reply
 		name="Dlg_npc_000439"
-		text="We had thought of that - military vehicles are already on their way to the place of the ambush. Once you capture the general, take him to Rotorsk, as there is a good chance that Helvetia and Tuzz will be attacked by Axel's best men, who are tasked with freeing the general."
+		text="We had thought of that - military vehicles are already on their way to the place of the ambush. Once you capture the general, take him to Rotorsk, as there is a good chance that Helvetia and Tuzz will be attacked by Axel's best men, who would be tasked with freeing the general."
 		role="NPC"
 		nextReplies="Dlg_pl_000440" />
 
@@ -7523,7 +7450,7 @@
 		text="Let's do it!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_MoveWithGeneralToGelvetcia_Quest');  AddHistory(  'r2_Before_Axel_00'  );  AddFadingMsgId( 'fm_history_got' ); RemoveQuestItem('ARGeneral_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ARGeneral_P');  EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Антимилитаристы--><!--Root/r2m1/Сюжетные/Сражение с тарелкой-->
 	<Reply
 		name="Dlg_npc_003391"
 		text="What will I choose?"
@@ -7543,7 +7470,7 @@
 		text="Deliver the blocker."
 		role="PLAYER"
 		scriptResult="TakeQuest('r2m1_DeployBloks'); TActivate('trUFODIOLOG_cam10'); EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Старая Сибилла-->
 	<Reply
 		name="Dlg_npc_002230"
 		text="Well-well, people like you are a rarity in these lands. Usually people come here either to kill for money or for ideological reasons."
@@ -7805,7 +7732,7 @@
 		text="You don't have to ask me twice."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Podderzhka3_Quest'); TakeQuest('Zashita_Quest'); TActivate('trBeforeCaravanAM'); RemoveQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_them_poput', 'MarezziaEscapist_P') EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Эвакуация из Туза-->
 	<Reply
 		name="Dlg_npc_003363"
 		text="There must be some mistake! I'm a completely useless fighter, what good would I do on the battlefield? I'm an ordinary mechanical engineer! Everyone else here is just a common workers, not a military men."
@@ -7869,7 +7796,7 @@
 		text="You have. But I bet it's never been more obvious in your life."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Podderzhka1_Quest'); TActivate('trTuzzEscapistsCarsCreate'); GetCurNpc():SetSpokenCount(2); AddQuestItem('TuzzEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_many_poput', 'TuzzEscapist_P'); EndConversation()" />
-
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Эвакуация из Марецции-->
 	<Reply
 		name="Dlg_npc_003373"
 		text="Good man, help us! Get us out of the town!"
@@ -7921,7 +7848,7 @@
 		text="Run after me, my car is right at the gate!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('Podderzhka2_Quest'); TActivate('MarezziaClose'); TActivate('trMarezziaHuksExit'); SetVar('MarezziaCutscene', 1); GetCurNpc():SetSpokenCount(2); AddQuestItem('MarezziaEscapist_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_many_poput', 'MarezziaEscapist_P'); LeaveTown()" />
-
+<!--Root/r2m1/Сюжетные/Антимилитаристы/Новая Сибилла-->
 	<Reply
 		name="Dlg_npc_002295"
 		text="Are you that brave soldier who took people out of Argen risking your life? Hmm, I imagined you to be more... big."
@@ -8010,7 +7937,7 @@
 
 	<Reply
 		name="Dlg_npc_002343"
-		text="Guys, you hear him? Mistake! What a joke! You see, the CIT assholes don't want an end to the war. They won't stop until they take over Argen completely. And now, with the devastation there, they have every chance of succeeding. And yes, you can't go to Helvetia now. Almost all CIT forces are now focused on locating us."
+		text="Guys, you hear him? Mistake! What a joke! You see, the CIT assholes don't want an end to this war. They won't stop until they take over Argen completely. And now, with the devastation there, they have every chance of succeeding. And yes, you can't go to Helvetia now. Almost all CIT forces are now focused on locating us."
 		role="NPC"
 		nextReplies="Dlg_pl_002344" />
 
@@ -8043,7 +7970,7 @@
 		text="Got it. Our victory is close."
 		role="PLAYER"
 		scriptResult="CompleteQuest('ReturnQuest'); TActivate('TUNELFIGHT'); EndConversation()" />
-
+<!--Root/r1m4/Случайные-->
 	<Reply
 		name="r1m4_UnknownBar_Customer1_1_N01"
 		text="What do you want?"
@@ -8209,7 +8136,7 @@
 		text="Okay-okay..."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
+<!--Root/r1m4/Опциональные--><!--Root/r1m4/Сюжетные--><!--Root/r1m4/Сюжетные/Разговоры с Гомером-->
 	<Reply
 		name="r1m4Random_Bar_Gomer1_N03"
 		text="In that case, you found him."
@@ -8581,7 +8508,7 @@
 		text="Allright, have a good day."
 		role="PLAYER"
 		scriptResult="AddPlayerMoney(-2500); EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/В Ольме-->
 	<Reply
 		name="Olme_Bar_Customer1_1_N01"
 		text="What brings you to this swamp?"
@@ -8655,7 +8582,7 @@
 		text="Thank you, I will."
 		role="PLAYER"
 		scriptResult="CompleteQuest('MorskieVrata2_Quest'); EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/Поиски гомера-->
 	<Reply
 		name="r1m4_UnknownBar_Customer5_1_N01"
 		text="How do you get around here?"
@@ -8768,7 +8695,7 @@
 		text="Thanks for your help."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/Маркизыч-->
 	<Reply
 		name="Dlg_npc_002677"
 		text="I see you're looking for someone."
@@ -8842,7 +8769,7 @@
 		text="I think I understand you. Thank you, goodbye."
 		role="PLAYER"
 		scriptResult="CompleteQuest('GomerSaliniom'); EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/Освобождение склада-->
 	<Reply
 		name="Olme_Bar_Customer2_1_N01"
 		text="Need anything?"
@@ -9151,7 +9078,7 @@
 		text="I will. Well, I got to go."
 		role="PLAYER"
 		scriptResult="TActivate('RolikOdezhdaBegin'); RemoveQuestItem('ExtLeader_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ExtLeader_P'); SetTolerance(1100,1014,RS_ALLY); SetTolerance(1100,1084,RS_ALLY); SetTolerance(1100,1010,RS_ENEMY); if QuestStatus('Zachisti3_Quest')==Q_COMPLETED then SetTolerance(1100, 1012, RS_ENEMY) end; AddHistory( 'r5_SkladRybaki' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
-
+<!--Root/r1m4/Сюжетные/Айвен Го-->
 	<Reply
 		name="Dlg_npc_003103"
 		text="I'm very glad we finally met. I really am. I wish it had happened under different circumstances, but alas, that is not possible. I'm very proud that you made the right choice."
@@ -9296,7 +9223,7 @@
 		role="NPC"
 		scriptCondition="QuestStatus('ATKordan_Quest')==Q_TAKEN and QuestStatus('WaitTillEnd')==Q_COMPLETED"
 		nextReplies="Dlg_pl_003142" />
-
+<!--Root/r1m4/Опциональные/Поиски муженька--><!--Root/r1m4/Опциональные/Мистер Шляпа 2-->
 	<Reply
 		name="Dlg_npc_001952"
 		text="It's good to see you. Again."
@@ -9381,7 +9308,7 @@
 		text="Disappeared...|What the hell is going on here?!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
+<!--Root/r1m4/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003014"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 10000 coins."
@@ -9401,7 +9328,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 10000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-10000); EndConversation()" />
-
+<!--Root/r1m4/Опциональные/Тихомир-->
 	<Reply
 		name="Dlg_npc_003256"
 		text="Oh, it's you..."
@@ -9450,7 +9377,7 @@
 		text="Goodbye."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); CompleteQuest('ToCordanToTikhomir_Quest'); EndConversation()" />
-
+<!--Root/r1m4/Опциональные/Неил-->
 	<Reply
 		name="Dlg_npc_001927"
 		text="It's sad here."
@@ -9574,7 +9501,7 @@
 		text="Good luck finding a job!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
-
+<!--Root/r1m4/Опциональные/Ананага-->
 	<Reply
 		name="r1m4_UnknownBar_Customer3_1_N01"
 		text="Hi. Sit down and have a shot of ananaga with me."
@@ -9715,7 +9642,7 @@
 		text="Good day to you too!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); TakeQuest('AnanagaTech_Quest'); CompleteQuest('AnanagaTech_Quest'); AddBook('r1_ananaga_technology'); EndConversation()" />
-
+<!--Root/r1m4/Опциональные/Поиски муженька/Аллушка-->
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_1_N01"
 		text="Young man, I'm in trouble."
@@ -9762,7 +9689,7 @@
 
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_1_N07a"
-		text="Oh, of course! His name is Filimon. Curly, with a bandage on his forehead. He likes to say &quot;get up and out of here,&quot; and he is also attracted to pink blouses."
+		text="Oh, of course! His name is Filimon. Curly, with a bandage on his forehead. He likes to say &quot;get up and out of here&quot;, and he is also attracted to pink blouses."
 		role="NPC"
 		nextReplies="r1m4_SomeWhere_OldWomen1_1_N09a" />
 
@@ -9819,7 +9746,7 @@
 		text="Thank you. Goodbye."
 		role="PLAYER"
 		scriptResult="CompleteQuest('q_FH2'); RemoveQuestItem('Filimon_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'Filimon_P'); EndConversation();" />
-
+<!--Root/r1m4/Опциональные/Поиски муженька/Фермер Дик-->
 	<Reply
 		name="Dlg_npc_002623"
 		text="You again! I hope you didn't come all this way just to get that money out of me."
@@ -10014,7 +9941,7 @@
 		scriptCondition="GetPlayerMoney() &gt; 1500"
 		scriptResult="AddPlayerMoney(-1500)"
 		nextReplies="Dlg_npc_002683" />
-
+<!--Root/r1m4/Опциональные/Поиски муженька/Филимон-->
 	<Reply
 		name="r1m4_SomeWhere_Husbent1_1_N01"
 		text="What do you want from me, dear man?"
@@ -10094,7 +10021,7 @@
 		text="I didn't expect more from you. Give it to me."
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken('q_FH3'); AddPlayerMoney(500); FailQuest('q_FindHusbent'); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные--><!--Root/r1m3/Опциональные--><!--Root/r1m3/Опциональные/Кони и Блайд-->
 	<Reply
 		name="KonnyBlide_hellodlg0"
 		text="Young man, don't pass by, help two good people in trouble."
@@ -10193,7 +10120,7 @@
 		text="Bastards..."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m3_BonnyAndKlideQuest');  AddPlayerMoney( -GetPlayerMoney()); GetPlayerVehicle():TakeOffAllGuns();  EndConversation()" />
-
+<!--Root/r1m3/Опциональные/Безумец в Пеште-->
 	<Reply
 		name="CrazyMan_hellodlg0"
 		text="Hey, man, you interested in gambling?"
@@ -10238,7 +10165,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 150"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TakeQuest('r1m3_CrazyManQuest'); AddPlayerMoney(-150);  EndConversation()" />
-
+<!--Root/r1m3/Опциональные/Архитектор в Минине-->
 	<Reply
 		name="ArchitectorMinin_hellodlg0"
 		text="Young man, could you do me a favor and help an old man? "
@@ -10347,7 +10274,7 @@
 		text="Thank you, too. Good luck with your research."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m3_ArchHelp2'); EndConversation()" />
-
+<!--Root/r1m3/Опциональные/Про лабиринт-->
 	<Reply
 		name="Labirint_hellodlg0"
 		text="Are you a bounty hunter?"
@@ -10489,7 +10416,7 @@
 		text="Yes, I'm on it!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TActivate ('TriggerLabirintCarCreate2');  EndConversation()" />
-
+<!--Root/r1m3/Опциональные/Цирк-->
 	<Reply
 		name="Circus_hellodlg1"
 		text="Sorry, buddy... You probably came here to have fun and win money at our Entertainment Center, but it's not going to work out... The local gangsters lost a lot of money and started smashing everything up so that no stone was left unturned... All the bandits had already been killed, but unfortunately my Entertainment Center wasn't rebuilt from that..."
@@ -10649,7 +10576,7 @@
 		text="That's okay, I think I'll go."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m3/Опциональные/Отбить Пешт-->
 	<Reply
 		name="Dlg_npc_003193"
 		text="Hello again. So, did you find what you were looking for up north?"
@@ -10753,7 +10680,7 @@
 		text="No, I'll pass. Solve your own problems."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m3/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003011"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 7000 coins."
@@ -10773,7 +10700,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 7000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-7000); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Охрана Пешта-->
 	<Reply
 		name="PeshtGuardian_hellodlg0"
 		text="The passage is closed!"
@@ -10950,7 +10877,7 @@
 		text="Thanks for that, though. Well, I'm off!"
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'd_MoveToPesht_Quest' ); TActivate ('tr_OpenTownAndShowButtonInPesht'); TDeactivate('trQuickWay');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Бандит перед мостом-->
 	<Reply
 		name="BaseGuardian_hellodlg0"
 		text="Look who's here!"
@@ -10966,7 +10893,7 @@
 
 	<Reply
 		name="Dlg_npc_den192"
-		text="Ha-ha-ha, that's funny! That means that you couldn't pass through Pesgt. So they're afraid! They're right to be afraid. Soon Pesht will belong to us!"
+		text="Ha-ha-ha, that's funny! That means that you couldn't pass through Pesht. So they're afraid! They're right to be afraid. Soon Pesht will belong to us!"
 		role="NPC"
 		nextReplies="Dlg_pl_den193" />
 
@@ -11029,7 +10956,7 @@
 
 	<Reply
 		name="Dlg_npc_dd2200"
-		text="What's stopping us from just taking your money and burying your corpse?"
+		text="But what's stopping us from taking all your money and killing you?"
 		role="NPC"
 		nextReplies="Dlg_pl_dd2201" />
 
@@ -11070,7 +10997,7 @@
 		text="The price is too high for me."
 		role="PLAYER"
 		scriptResult="GetPlayerVehicle():SetCustomLinearVelocity(0);  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Бандит в Пеште-->
 	<Reply
 		name="BanditPeshtGuardian_hellodlg0"
 		text="Bah, who do I see! Boy, your considerable monetary contribution helped us a lot! As you can see, we managed to buy the necessary equipment, and we blocked a major thoroughfare for the local merchants!"
@@ -11095,7 +11022,7 @@
 		text="Enjoy it while you can. Nothing lasts forever!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TActivate ('tr_OpenTownAndShowButtonInPesht');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Продавец взрывчатки в Асгарде-->
 	<Reply
 		name="NonBomber_hellodlg0"
 		text="I am listening to you carefully."
@@ -11168,7 +11095,7 @@
 		text="All right, all right, I'll go out myself."
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'd_BombInAsgard_Quest' ); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Шахтер со взрывчаткой для моста -->
 	<Reply
 		name="Bomber_hellodlg0"
 		text="Sorry, buddy, all the jobs are busy at the moment. Come back later."
@@ -11266,7 +11193,7 @@
 		text="Thanks again. You don't have to worry about the sheriff. No one is going to mourn these people."
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'd_BombShahtsReturn_Quest' ); FailQuestIfTaken('d_RideAcrossBase_Quest'); SetTolerance(1100, 1012, RS_ENEMY); TeamCreate('OhranaBridge',1012,CVector(5365,224,1440),{'r1m3_bug01', 'r1m3_molokovoz01'}, nil, 1); TakeQuest('d_DestroyBridge_Quest');  AddQuestItem('quest_explosive'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_explosive');  TActivate('preBOOOM');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Мер Минина-->
 	<Reply
 		name="MininMer_hellodlg0"
 		text="Another one! When are you going to stop! What do you want?"
@@ -11315,7 +11242,7 @@
 		text="All right, take it easy! Consider me gone."
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_TalkMerAboutOilMineAttack_Quest');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1--><!--Root/r1m3/Сюжетные/Рабочий Минина 2-->
 	<Reply
 		name="MininWorker2_hellodlg0"
 		text="There you are! We have already prepared the truck, all that's left is to load the oil barrels into it. We'll leave as soon as we finish loading. Follow the caravan and you won't get lost."
@@ -11474,10 +11401,10 @@
 		role="PLAYER"
 		scriptCondition="IsQuestTaken('Zachisti4_Quest') and not(IsQuestComplete('Zachisti4_Quest')) "
 		scriptResult="CompleteQuest('Zachisti4_Quest'); TakeQuest('r1m3_MoveToOraculAfterThief'); TActivate('TRIGGER_LISAAFTERTHIEF'); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Наемный рабочий-->
 	<Reply
 		name="WorkerForMoney_hellodlg0"
-		text="Are you looking for a hired force?"
+		text="Are you looking for a wage labor?"
 		role="NPC"
 		scriptCondition="IsQuestTaken('d_PayWorkersMoney_Quest')  and  not(IsQuestComplete('d_PayWorkersMoney_Quest'))  and  not(IsQuestTaken('d_TrueAboutMer_Quest')) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_d3d251" />
@@ -11540,7 +11467,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 2500"
 		scriptResult="AddPlayerMoney( -2500 );  CompleteQuest('d_PayWorkersMoney_Quest');  FailQuest('d_FindWorkersToOilMine_Quest');  TakeQuest('d_MoveFreelancersToOilMine_Quest'); AddQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Brigada_P');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Рабочий на нефтянной скважине-->
 	<Reply
 		name="OilMineWorker_hellodlg0"
 		text="Is it you I have to thank for having a job again?"
@@ -11577,7 +11504,7 @@
 		text="Well, good, then I'm off."
 		role="PLAYER"
 		scriptResult="CompleteQuestIfTaken('d_MoveWorkersToOilMine_Quest');  CompleteQuestIfTaken('d_MoveFreelancersToOilMine_Quest');  TakeQuest('d_MoveCanistraToMinin_Quest'); RemoveQuestItem('Brigada_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Brigada_P');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Бармен Асгарда--><!--Root/r1m3/Сюжетные/Незнакомец из Тоннеля-->
 	<Reply
 		name="UnknownFromTunel_hellodlg0"
 		text="What do you want? Well, it doesn't matter. Buy me a drink, then we'll talk!"
@@ -11729,7 +11656,7 @@
 		text="You now what, I'll choose the third option. Prepare to die!"
 		role="PLAYER"
 		scriptResult="SetVar('ZasadaAR',0); SetTolerance(1100,1046,RS_ENEMY); TActivate('trZasadaAR_Create'); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Разговор о воре-->
 	<Reply
 		name="AboutThief_hellodlg0"
 		text="Did something happen?"
@@ -11839,7 +11766,7 @@
 		text="So I'll have to follow him. That's not good... "
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m3_FindThiefFromFatherHouse'); TakeQuest('r1m3_TalkWithThiefFromFatherHouse'); SetTolerance(1100,1012,RS_NEUTRAL); SetVar('QuickWayAlt',1); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Диалог с Вором-->
 	<Reply
 		name="Thief_hellodlg0"
 		text="And who are you? I don't know you!"
@@ -11876,7 +11803,7 @@
 		text="Sir, you are a dead man."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r1m3_TalkWithThiefFromFatherHouse');  TActivate('TRIGGER_THIEFWAR');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Бандит с вышки-->
 	<Reply
 		name="BanditVyshkadlg"
 		text="Stop, don't shoot! I surrender!"
@@ -11937,7 +11864,7 @@
 		text="No way! Don't forget you tried to shoot me a minute ago, and there's no guarantee you won't do it again! Now shut up and get in the truck!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); AddQuestItem('OilBandit_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'OilBandit_P'); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Зачистка базы-->
 	<Reply
 		name="Dlg_npc_002069"
 		text="How did it go?"
@@ -11986,7 +11913,7 @@
 		text="All right, I'll go see him."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Zachisti3_Quest'); SetTolerance( 1100, 1012, RS_ALLY ); AddPlayerMoney(50000); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Искать Лису в Пеште-->
 	<Reply
 		name="Dlg_npc_002079"
 		text="You look worried. Looking for someone?"
@@ -12059,7 +11986,7 @@
 		text="No time! So long!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('LisaVPeshte'); TakeQuest('LisaUBena'); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Финальный выбор-->
 	<Reply
 		name="Dlg_npc_002425"
 		text="So, what's my choice?"
@@ -12079,7 +12006,7 @@
 		text="Attack the Oracle."
 		role="PLAYER"
 		scriptResult="TActivate('trORACLEAGRESSOR_cam03'); GetCurNpc():SetSpokenCount( 2 ); EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Айвен Го-->
 	<Reply
 		name="Dlg_pl_003127"
 		text="Bartender, bring me ananaga! Will you have some?"
@@ -12242,7 +12169,7 @@
 		role="NPC"
 		scriptCondition="QuestStatus('ATMinin_Quest')==Q_TAKEN and QuestStatus('WaitTillEnd')==Q_COMPLETED"
 		nextReplies="Dlg_pl_003152" />
-
+<!--Root/r1m3/Сюжетные/Бармен Асгарда/Про шахтёрский посёлок-->
 	<Reply
 		name="AsgardBarman_hellodlg0"
 		text="Is there anything you're interested in?"
@@ -12361,7 +12288,7 @@
 		text="So close?! Eh, I should have looked for it myself!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_BombInAsgard2_Quest');  AddPlayerMoney( -7000 );  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Бармен Асгарда/Про ключ к тоннелю-->
 	<Reply
 		name="AsgardBarman_hellodlg2"
 		text="Changed your mind? In case you forgot, the price for the key is 15000."
@@ -12518,7 +12445,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 15000"
 		scriptResult="CompleteQuest('d_FindKeyInTunel_Quest'); FailQuestIfTaken('d_FindZasadaInTunel_Quest');  TakeQuest('d_OpenTunel_Quest');  TDeactivate ('ZASADATUNEL');  AddPlayerMoney( -15000 );  AddQuestItem('quest_key_for_tunnel'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_key_for_tunnel');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1/Про дом Айвена-->
 	<Reply
 		name="MininWorker_hellodlg0"
 		text="You've come a long way, I see! Are you here on business or looking for adventure?"
@@ -12655,7 +12582,7 @@
 		text="I'll pay you later."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1/Интрига с мэром-->
 	<Reply
 		name="MininWorker_hellodlg1"
 		text="So, what do you think of Ivan's shack? By the way, what do you need it for? After all these years?"
@@ -12818,7 +12745,7 @@
 
 	<Reply
 		name="Dlg_pl_001841"
-		text="You don't have to. The tower is free of bandits now, and I'm sure there are plenty of people who want to work there. You stay here with your strike. But just keep in mind, soon there won't be any work to do at all."
+		text="You don't have to. The tower is free of bandits now, and I'm sure there are plenty of people who want to work there. You stay here with your strike. But just keep in mind that soon there won't be any work for you to do at all."
 		role="PLAYER"
 		scriptResult="FailQuestIfTaken('d_MoveToMer_Quest'); CompleteQuest('d_ReturntoMerOfMinin_Quest'); FailQuestIfTaken('d_FindWorkersToOilMine_Quest'); TakeQuest('d_PayWorkersMoney_Quest'); EndConversation()" />
 
@@ -12907,7 +12834,7 @@
 		text="Okay, let's start with the bandits, and then we'll see what to do."
 		role="PLAYER"
 		scriptResult=" TActivate('ATTACKOILMINE'); CompleteQuest('d_TalkSharkiAfterMer_Quest');  EndConversation()" />
-
+<!--Root/r1m3/Сюжетные/Рабочий Минина 1/Про Лиденклауд-->
 	<Reply
 		name="Dlg_npc_003039"
 		text="You again. What brings you here this time?"
@@ -13010,7 +12937,7 @@
 		text="Not yet."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m2/Сюжетные--><!--Root/r1m2/Опциональные--><!--Root/r1m2/Опциональные/Археолог в Порто-->
 	<Reply
 		name="Anticwar_hellodlg0"
 		text="Would you like to help a group of archaeologists? "
@@ -13041,7 +12968,7 @@
 		text="I'll deal with him."
 		role="PLAYER"
 		scriptResult="TActivate('ANTICWAR'); EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Бандит в деревне рядом с Порто-->
 	<Reply
 		name="Antisincer_hellodlg0"
 		text="Hey, buddy, you interested in an easy, but dirty job?"
@@ -13115,7 +13042,7 @@
 		text="So long. I hope you're not going to kill him."
 		role="PLAYER"
 		scriptResult="CompleteQuest('DestroyRuins_Quest2'); RemoveQuestItem('ArchProrab_P'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'ArchProrab_P'); EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Организаторы шоу-->
 	<Reply
 		name="Kollizey1_hellodlg0"
 		text="Greetings. Who do you want to bet on?"
@@ -13190,7 +13117,7 @@
 		text="That'd be very kind of you."
 		role="PLAYER"
 		scriptResult="CompleteQuest('EastTalkKollizey_Quest'); EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Профессор в Мидгарде-->
 	<Reply
 		name="Professor_hellodlg0"
 		text="Young man, you wanted to see me?"
@@ -13376,7 +13303,7 @@
 		text="You're welcome. Always happy to help. And especially for the reward."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Знаки в деревне-->
 	<Reply
 		name="Signer_hellodlg0"
 		text="What, you come to see the lost one, too? Well, look! Here I am! Marked by the devil!"
@@ -13431,7 +13358,7 @@
 		text="No, it's too shady. Deal with your problems yourself."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Директор Коллизея-->
 	<Reply
 		name="Director_hellodlg0"
 		text="Young man, I have a business proposition for you."
@@ -13589,7 +13516,7 @@
 		text="I'm glad you didn't lie to me."
 		role="PLAYER"
 		scriptResult="AddPlayerMoney( 50000 ); GetCurNpc():SetSpokenCount( 6 ); EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_001613"
 		text="I'm glad you finally came."
@@ -13682,7 +13609,7 @@
 		text="I hope not."
 		role="PLAYER"
 		scriptResult="TakeQuest('MrShlyapa1_Quest'); CompleteQuest('MrShlyapa1_Quest'); GetCurNpc():SetSpokenCount( 1 ); StopPlayingCustomMusic(); EndConversation()" />
-
+<!--Root/r1m2/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003007"
 		text="Hello, traveler. Would you like to buy a detailed map of the surrounding lands from me? Only 5000 coins. "
@@ -13702,7 +13629,7 @@
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 5000"
 		scriptResult="GetCurNpc():SetSpokenCount(1); ShowMap(); SetVar('KnownMap',1); AddPlayerMoney(-5000); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Фермер в Восточном-->
 	<Reply
 		name="Fermer_hellodlg0"
 		text="What the heck do you want from me, punk?"
@@ -13823,7 +13750,7 @@
 		text="Apparently, he wasn't joking after all..."
 		role="PLAYER"
 		scriptResult="CompleteQuest('BenEast_Quest');  EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Караванщик в Порто-->
 	<Reply
 		name="Karavanshik_hellodlg0"
 		text="You have no idea how grateful we are to you. With the help of this equipment we will finally be able to establish shipping trade. I don't know what Midgard promised you for this, but here's 200 coins personally from me."
@@ -13862,7 +13789,7 @@
 		role="NPC"
 		scriptCondition="(IsQuestTaken('d_CaravanToPortoBen_Quest'))  and  not(IsQuestComplete('d_CaravanToPortoBen_Quest'))  and  GetCurNpc():GetSpokenCount() &gt; 0"
 		nextReplies="Dlg_pl_xyz313 Dlg_pl_xyz314" />
-
+<!--Root/r1m2/Сюжетные/Гражданин Мидгарда-->
 	<Reply
 		name="Citizen_hellodlg0"
 		text="Hey, hey! What are you doing here, weirdo? "
@@ -13965,7 +13892,7 @@
 		text="So long!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('d_FindBenInMidgard_Quest');  EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Бен и Лиса--><!--Root/r1m2/Сюжетные/Завхоз в Мидгарде-->
 	<Reply
 		name="Citizen_hellodlg1"
 		text="Our city is extremely grateful to you for your help. Here's your money. And I managed to find out where Ben lives now. Let me mark it on your map."
@@ -14101,7 +14028,7 @@
 		text="Wait, what about Ben's place?!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TActivate ('RolikBegin_OutOfMidgard'); TActivate ('trMidgardCloses'); TActivate('tr_THEBEN'); CompleteQuest('CaravDead_Quest'); TakeQuest ('FindBenMZ_Quest'); LeaveTown()" />
-
+<!--Root/r1m2/Сюжетные/Старуха-->
 	<Reply
 		name="Staruha_hellodlg0"
 		text="Who knocks at my door?"
@@ -14285,7 +14212,7 @@
 		text="It feels kind of weird..."
 		role="PLAYER"
 		scriptResult=" LeaveTown(true)" />
-
+<!--Root/r1m2/Сюжетные/Умелец в Мидгарде про редкий материал-->
 	<Reply
 		name="Umelec_hellodlg0"
 		text="Good afternoon."
@@ -14519,7 +14446,7 @@
 		text="Thank you. Well, there's no reason to wait, I have to go. Lisa, get in the cab! And I think we should stop at Sowth before the desert."
 		role="PLAYER"
 		scriptResult="CompleteQuest('ZashitaGotova'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Гладиаторша с материалом-->
 	<Reply
 		name="Fighter1_hellodlg0"
 		text="Well, what a hero! Do you want to fight and win?"
@@ -14563,7 +14490,7 @@
 		text="I'm not interested in arena fights. Good day to you."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Гладиатор без материала-->
 	<Reply
 		name="Fighter2_hellodlg0"
 		text="What do you want? You want to fight me in the Arena?!"
@@ -14588,7 +14515,7 @@
 		text="Thanks."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Помириться с бабкой-->
 	<Reply
 		name="Dlg_npc_001565"
 		text="Can I talk to you for a minute?"
@@ -14741,7 +14668,7 @@
 		text="Of course."
 		role="PLAYER"
 		scriptResult="CompleteQuest('Pomiritsa_Quest'); TakeQuest('VYar_Quest'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_Valeriy_package'); AddQuestItem('quest_Valeriy_package'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/В Яре-->
 	<Reply
 		name="Dlg_npc_001597"
 		text="Looking for someone?"
@@ -14838,7 +14765,7 @@
 		text="Okay, I'll think about it. Take care."
 		role="PLAYER"
 		scriptResult="CompleteQuest('VYar_Quest'); TakeQuest('Chifir_Quest'); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_Valeriy_package'); RemoveQuestItem('quest_Valeriy_package'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Малая Земля-->
 	<Reply
 		name="Dlg_npc_001641"
 		text="What did you do to piss off the Midgard guards so much that they threw you out?"
@@ -14880,7 +14807,7 @@
 
 	<Reply
 		name="Dlg_pl_001648"
-		text="Just one glass. I still have work to do. Although I don't think I can do anything now since the road to Midgard is forbidden."
+		text="Just one mug. I still have work to do. Although I don't think I can do anything now since the road to Midgard is forbidden."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001649" />
 
@@ -14971,7 +14898,7 @@
 
 	<Reply
 		name="Dlg_npc_001663"
-		text="Yes, that's exactly where it's from. You can't find them anywhere else. Okay, good. And now one more task."
+		text="Yes, that's exactly from it. You can't find them anywhere else. Okay, good. And now one more task."
 		role="NPC"
 		nextReplies="Dlg_pl_001664" />
 
@@ -15098,7 +15025,7 @@
 
 	<Reply
 		name="Dlg_pl_001699"
-		text="I need skilled masters, but the way to Midgard is closed to me because of that incident in the museum. Something must be done about that."
+		text="I need skilled masters, but the way to Midgard is closed for me because of that incident in the museum. Something must be done about that."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001700" />
 
@@ -15116,7 +15043,7 @@
 
 	<Reply
 		name="Dlg_npc_001702"
-		text="But you'll have to wait until morning. I need to prepare the tools, and the break-in itself is best done at night."
+		text="But you'll have to wait until morning. I need to prepare the tools, and the break-in itself is best to do at night."
 		role="NPC"
 		nextReplies="Dlg_pl_001703" />
 
@@ -15174,7 +15101,7 @@
 		text="I'll think about it. And now I have to go."
 		role="PLAYER"
 		scriptResult="CompleteQuest('OpenMid2_Quest'); TakeQuest('r1m2_NoCompositeFast_Quest'); TActivate('trMidgardOpens'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Римская-->
 	<Reply
 		name="Dlg_npc_001642"
 		text="You looking for me?"
@@ -15235,7 +15162,7 @@
 		text="Well, I think I should first find out if the caravan has reached its destination. I'll ask around the town."
 		role="PLAYER"
 		scriptResult="CompleteQuest('BenRim_Quest'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Порто-->
 	<Reply
 		name="Dlg_npc_001683"
 		text="Young man, what do you want?"
@@ -15272,7 +15199,7 @@
 		text="Most likely. All right, I won't bother you any further."
 		role="PLAYER"
 		scriptResult="CompleteQuest('BenRim2_Quest');  TActivate('PLENLISA'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Нормальная концовка-->
 	<Reply
 		name="NormalEndingDlg"
 		text="You're back! Come on, tell me what happened to you."
@@ -15444,7 +15371,7 @@
 		text="...immediately the other one begins. I understand. Well, see you later, Ben! I'll be stopping by, you'll see!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 6 ); TActivate('NormalEndCin'); EndConversation() " />
-
+<!--Root/r1m2/Сюжетные/Отличная концовка-->
 	<Reply
 		name="GoodEndingDlg"
 		text="You're finally back! How glad I am that you are alive and well!"
@@ -15799,7 +15726,7 @@
 		text="Ha-ha-ha, don't worry, I'll be sure to tell you."
 		role="PLAYER"
 		scriptResult="CompleteQuest('VisitBarmen'); TActivate('GoodEndAlmostHere'); SetGameTime(9,0); SetWeather(0); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/СпецКонцовка-->
 	<Reply
 		name="Dlg_npc_002576"
 		text="No more tea for you. The time has come."
@@ -15824,7 +15751,7 @@
 		text="Hey, what the..."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('FollowMrShlyapa'); TActivate('cinAfterChifir2'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Плохая концовка-->
 	<Reply
 		name="Dlg_npc_003170"
 		text="What would you like?"
@@ -16039,7 +15966,7 @@
 		text="I'll try as fast as I can."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r4m2_LisaDieBen');  StopPlayingCustomMusic(); RemoveQuestItem('Lisa_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Lisa_P'); GetCurNpc():SetSpokenCount(4); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Бен и Лиса/Первый приезд-->
 	<Reply
 		name="Ben_hellodlg0"
 		text="How can I help you?"
@@ -16241,7 +16168,7 @@
 		text="I leave immediately. Now I have hope."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); TakeQuest('d_FindRealFatherRoom_Quest');  AddHistory(  'r1_After_Ben_00'  );  AddFadingMsgId( 'fm_history_got' );  StopPlayingCustomMusic();  EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Бен и Лиса/Когда Лиса украла диск-->
 	<Reply
 		name="Dlg_npc_002081"
 		text="Oh, you're back already? Did you succeed in finding the Oracle? Did he tell you where to look for Ivan?"
@@ -16374,7 +16301,7 @@
 		text="So am I. Well, now I have to go!"
 		role="PLAYER"
 		scriptResult="CompleteQuest('LisaUBena'); TakeQuest('r1m3_ToLisaToAsgard'); StopPlayingCustomMusic(); AddHistory( 'r1_Lisa_Thief_00' ); AddFadingMsgId( 'fm_history_got' ); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Бен и Лиса/Перед зимой-->
 	<Reply
 		name="Dlg_npc_002604"
 		text="That was fast, wasn't it? Did the Midgard master take the order?"
@@ -16587,7 +16514,7 @@
 		text="Yes, we all should. Tomorrow begins a new adventure."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(3); StopPlayingCustomMusic(); TActivate('NextDayTr'); EndConversation()" />
-
+<!--Root/r1m2/Сюжетные/Бен и Лиса/После зимы-->
 	<Reply
 		name="Ben_hellodlg2"
 		text="You're finally back!"
@@ -16675,7 +16602,7 @@
 		text="[Go away to rest]."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 2 ); TakeQuest('ZashitaGotova'); TActivate('trToMidgardForComposite'); EndConversation()" />
-
+<!--Root/r1m1/Сюжетные--><!--Root/r1m1/Опциональные--><!--Root/r1m1/Опциональные/Революционер-->
 	<Reply
 		name="CS_hellodlg0"
 		text="Finally, some new people in this shitty little tavern! Boy, can I offer you a glass of ananaga?"
@@ -16935,7 +16862,7 @@
 		text="As soon as possible. All the best!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); CompleteQuest('BackToTroickoe'); AddBook('r1_ananaga_recipe'); EndConversation()" />
-
+<!--Root/r1m1/Опциональные/Предприниматель в Южном-->
 	<Reply
 		name="WorkGiver_hellodlg0"
 		text="Hey, driver, there's a job to do!"
@@ -17040,7 +16967,7 @@
 		text="Damn it! Fooled me..."
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'WorkGiver_Quest1' ); AddFadingMsgByStrIdFormatted( 'fm_player_rem_poput', 'FarmerDik_P'); RemoveQuestItem('FarmerDik_P');   EndConversation()" />
-
+<!--Root/r1m1/Опциональные/Казуал в деревне про Госпиталь-->
 	<Reply
 		name="Medik_hellodlg0"
 		text="Hey man, interested in easy money?"
@@ -17056,7 +16983,7 @@
 
 	<Reply
 		name="Dlg_npc_001434"
-		text="There's an abandoned hospital in the surrounding area that I'm sure has something valuable. In fact, I even know a man who would be happy to buy back any item you find there."
+		text="There's an abandoned hospital in the surrounding area that I'm sure has something valuable. In fact, I even know a man who would be happy to buy any item you find there."
 		role="NPC"
 		nextReplies="Dlg_pl_001435" />
 
@@ -17080,7 +17007,7 @@
 
 	<Reply
 		name="Dlg_npc_001438"
-		text="Boy, I don't even have a truck! I'm just a country boy who sells information for a living. If you don't want to, don't pay, I'm not forcing you to!"
+		text="Man, I don't even have a truck! I'm just a country boy who sells information for a living. If you don't want to, don't pay, I'm not forcing you to!"
 		role="NPC"
 		nextReplies="Dlg_pl_001439 Dlg_pl_001440 Dlg_pl_001527" />
 
@@ -17099,7 +17026,7 @@
 
 	<Reply
 		name="Dlg_npc_001443"
-		text="What a fool. He's offered a dandy job, and he's looking for a trick everywhere. Well, anyway, have a nice day. I'm out of here."
+		text="I'm offering a dandy job, and you're looking for a trick in it. Which one of us is a fool?|Well, anyway, have a nice day. I'm out of here."
 		role="NPC"
 		nextReplies="Dlg_pl_001444" />
 
@@ -17139,7 +17066,7 @@
 		text="All right, goodbye!"
 		role="PLAYER"
 		scriptResult="AddPlayerMoney( -250 );  GetCurNpc():SetSpokenCount(1);  TakeQuest( 'r1m1_Hospital_Quest' ); TakeQuest('r1m1_Botanik_Quest'); EndConversation()" />
-
+<!--Root/r1m1/Опциональные/Старый солдат-->
 	<Reply
 		name="Oldsolder_hellodlg0"
 		text="Hey, rookie! Don't you want to hear an old soldier's tales? And buy me a drink while you're at it?"
@@ -17273,7 +17200,7 @@
 		text="Okay, thanks anyway. All the best to you!"
 		role="PLAYER"
 		scriptResult=" GetCurNpc():SetSpokenCount(1);  EndConversation()" />
-
+<!--Root/r1m1/Опциональные/Ботаник-отшельник-->
 	<Reply
 		name="Botanik_hellodlg0"
 		text="Hello, stranger! I rarely see new faces! How did you even get here?"
@@ -17399,7 +17326,7 @@
 		text="Nothing so far."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Серго в Южном-->
 	<Reply
 		name="Buyer_hellodlg0"
 		text="I'm listening, young man. Is there something you want?"
@@ -17485,7 +17412,7 @@
 		text="I'll be sure to tell him."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/''Отец''-->
 	<Reply
 		name="Father_hellodlg0"
 		text="You haven't left yet?"
@@ -17564,7 +17491,7 @@
 		text="I'll manage one and a half. See you later!"
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Бармен с пушкой для феликса-->
 	<Reply
 		name="HaveBigBoom_hellodlg0"
 		text="Do you want something?"
@@ -17645,7 +17572,7 @@
 		role="PLAYER"
 		scriptResult="AddPlayerItemsWithBox( 'kord01', 1, 0, CVector(3229,319,1254))"
 		nextReplies="Dlg_npc_001428" />
-
+<!--Root/r1m1/Сюжетные/Бармен Южного-->
 	<Reply
 		name="HurdTrucker_hellodlg0"
 		text="What happened?"
@@ -18006,7 +17933,7 @@
 		text="Goodbye! I don't know if we will ever see each other again, but I will always remember my homeland."
 		role="PLAYER"
 		scriptResult="CompleteQuest('BackToSouth_Quest'); TakeQuest('BenEast_Quest'); GetCurNpc():SetSpokenCount( 1 );  EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Лиса-->
 	<Reply
 		name="Lisa_hellodlg0"
 		text="Excuse me, could you help me?"
@@ -18200,7 +18127,7 @@
 		text="Thanks. I'll meet you at the gate."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); CompleteQuest('LisaAtSouth'); AddPlayerMoney(250); TActivate('LISAACTIVE'); AddHistory(  'r1_Yes_Lisa_History_01'  ); AddFadingMsgId( 'fm_history_got' ); TActivate('trZapretGluhoeStart');  EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Василий-->
 	<Reply
 		name="Vasily1"
 		text="Oh, hello! Let me guess - a trip to the Sowth and back on your father's wreck. Look, it gets more and more damaged every day. So this time, it's 100 coins."
@@ -18274,7 +18201,7 @@
 		text="Hop in the car. Let's check out that noise."
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'TalkToVasily' ); TDeactivate( 'triggerExitToMap41' ); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'Vasily_P'); AddQuestItem('Vasily_P'); TActivate('SpawnAnalDestroyers'); EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Капитан Жуков-->
 	<Reply
 		name="Dlg_npc_002546"
 		text="Man, you got here just in time!"
@@ -18344,7 +18271,7 @@
 		text="Good luck to you."
 		role="PLAYER"
 		scriptResult="CompleteQuest('DefendSowth_Quest5'); TakeQuest('r3m2_FindInfoAboutFather'); TActivate('AivenRolikStart'); SetWeather(0); EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Караванщик Мадс-->
 	<Reply
 		name="Dlg_npc_003264"
 		text="Oh, here you are! Remember me?"
@@ -18393,7 +18320,7 @@
 		text="Thank you. Well, I have to go now. See you."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount(1); AddPlayerMoney(5000); EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Деньги для Феликса-->
 	<Reply
 		name="Dlg_npc_002592"
 		text="Give the money to Felix?"
@@ -18412,7 +18339,7 @@
 		text="Yes."
 		role="PLAYER"
 		scriptResult="SetVar('FelixChoise',3); TActivate('FelixPayRolik1'); AddPlayerMoney( -1000 ); EndConversation()" />
-
+<!--Root/r1m1/Сюжетные/Айвен Го-->
 	<Reply
 		name="Dlg_npc_003106"
 		text="Now you've seen everything. Do you still have any doubts?"

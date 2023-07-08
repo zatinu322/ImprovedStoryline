@@ -855,7 +855,7 @@
 		id="95"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="Let me deal with it!"
+		value="Let me deal with them!"
 		sound=""
 		time="4" />
 
@@ -866,7 +866,7 @@
 		modelCfg="180"
 		modelSlot="1"
 		sound=""
-		value="ADEPT|We killed them, but they won't stop trying to take her away from us. Go to Moska: the locals won't reach it, and they'll interrogate her according to all the rules!"
+		value="ADEPT|We killed them, but they won't stop trying to take her away from us. Go to Moska: the locals won't reach it, and they'll interrogate her properly!"
 		time="12" />
 
 	<string

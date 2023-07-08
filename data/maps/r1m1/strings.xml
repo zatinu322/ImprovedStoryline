@@ -561,21 +561,21 @@
 
 	<string
 		id="11"
-		value="||@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFFFFFñîâìåñòíî ñ èçäàòåëüñòâîì @FFFFA600&quot;Áóêà&quot;"
+		value="||@FF000000ÀÀÀÀÀÀAÀÀÀÀÀÀÀÀ@FFFFFFFFñîâìåñòíî ñ èçäàòåëüñòâîì @FFFFA600&quot;Áóêà&quot;"
 		sound=""
 		fontSize="12"
 		time="5" />
 
 	<string
 		id="12"
-		value="||@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFFFFFïðåäñòàâëÿþò"
+		value="||@FF000000ÀÀÀÀÀÀÀ.ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFFFFFïðåäñòàâëÿþò"
 		sound=""
 		fontSize="12"
 		time="10" />
 
 	<string
 		id="13"
-		value="|@FF000000ÀÀÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000ÀÀÀÀÀIÀÀÀÀÀAIÀÀÀÀ@FFFFFFFFImproved Storyline v1.1"
+		value="|@FF000000ÀAAÀ.ÀÀÀÀÀÀÀÀÀÀ@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000ÀÀÀÀÀIÀÀÀÀAAÀAAIÀÀÀÀ@FFFFFFFFImproved Storyline v1.1"
 		sound=""
 		fontSize="12"
 		time="6" />

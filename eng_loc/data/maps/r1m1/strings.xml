@@ -88,7 +88,7 @@
 		modelSkin="0"
 		modelCfg="172"
 		modelSlot="1"
-		value="BANDIT FELIX|Okay, you got lucky this time. Next time stay out of my sight, or you won't get off that easy. Now get out of here!"
+		value="BANDIT FELIX|Okay, you got lucky for now. Next time stay out of my sight, or you won't get off that easy. Now get out of here!"
 		sound=""
 		time="11" />
 
@@ -839,7 +839,7 @@
 
 	<string
 		id="5993"
-		value="|@FF000000AAAAA.AAAAAAAAAAAAAA@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000AAAAAIAAAAAAIAAAAAAAAAAAA@FFFFFFFFImproved Storyline"
+		value="|@FF000000AAAAA.AAAAAAAAAAAAAA@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000AAAAAIAAAAAAIAAAAAAAAAAAAAA@FFFFFFFFImproved Storyline"
 		sound=""
 		fontSize="12"
 		time="6" />

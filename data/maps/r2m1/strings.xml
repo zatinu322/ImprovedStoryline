@@ -1,55 +1,5 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <resource>
-	<string
-		id="1"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_1_hero.ogg"
-		value="День добрый. Я ищу Акселя. Вы не слышали про такого?"
-		time="4" />
-
-	<string
-		id="2"
-		modelName="r2_woman"
-		modelSkin="1"
-		modelCfg="59"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_2_stranger.ogg"
-		value="НЕЗНАКОМЕЦ|Аксель - это величайший из живущих, наш вождь и кормилец, альфа и омега! Он ведет нас к победе добра и справедливости во всем мире!"
-		time="8" />
-
-	<string
-		id="3"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_3_hero.ogg"
-		value="Ничего себе... Сразу видно: большой человек. Могу ли я повстречаться с этим «кормильцем»?"
-		time="4" />
-
-	<string
-		id="4"
-		modelName="r2_woman"
-		modelSkin="1"
-		modelCfg="59"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_4_stranger.ogg"
-		value="НЕЗНАКОМЕЦ|Так ты что, не агитатор? Черт, я уж подумал, что тебя к нам подослали проверить боевой дух. Хотя мне бояться нечего. Я честный вояка!"
-		time="8" />
-
-	<string
-		id="5"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_5_hero.ogg"
-		value="Я много наслышан о вашем лидере. И очень хотел бы пожать его мужественную руку."
-		time="4" />
-
-	<string
-		id="6"
-		modelName="r2_woman"
-		modelSkin="1"
-		modelCfg="59"
-		modelSlot="1"
-		sound="data\sounds\Speech\r2m1\r2m1_6_stranger.ogg"
-		value="НЕЗНАКОМЕЦ|Кто попало не может с ним встретиться. Только тот, кто совершит подвиг, будет допущен в его тайное жилище. Но тебе это явно не грозит."
-		time="8" />
 
 	<string
 		id="7"
@@ -494,13 +444,6 @@
 		time="9" />
 
 	<string
-		id="131"
-		modelName="mask_hero"
-		sound="data\sounds\Speech\r2m1\r2m1_131_hero.ogg"
-		value="Скоро мир будет очищен от скверны, и люди смогут снова дышать воздухом!"
-		time="4" />
-
-	<string
 		id="135"
 		modelName="r2_man"
 		modelSkin="0"
@@ -800,22 +743,13 @@
 	<string
 		id="8805"
 		value="Пароль для бонусной концовки: **********m****|Более подробная информация содержится в мануале к моду." />
-	
-	<string
-		id="8806"
-		value="ВНИМАНИЕ!|Если у вас произошёл баг, из-за которого не уничтожаются источники питания НЛО, то просто сохранитесь и перезапустите игру. После этого с большой вероятностью данный баг исчезнет." />
-	
+		
 	<string
 		id="8807"
 		modelName="mask_hero"
 		sound=""
 		value="Я не позволю им обрекать на голод ни в чём не повинных людей!"
 		time="7" />
-
-	<string
-		id="8808"
-		value="Вы желаете перенестись сразу в Риджин?"
-		numButtons="2" />
 
 	<string
 		id="8809"

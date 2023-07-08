@@ -331,3 +331,11 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
   </a>
 
 </div>
+
+# Licensing:
+
+This project is distributed in its entirety only on Github.com. Distribution of files on other sites by unauthorized people is not allowed.
+
+The source code of the project is licensed under an MIT-like license (excluding commercial use) and can be freely used as the basis for creating your own mods. Please remember to keep the license text and link to the project if you use parts of it.
+
+For details, please see the complete license in the `LICENSE` file.

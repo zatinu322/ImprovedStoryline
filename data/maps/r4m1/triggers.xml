@@ -9,7 +9,6 @@
 			SetVar("CountCar",8)
 			SetVar("PlayerCarNameRace",0)
 			SetVar("Gonka",0)
-			SetVar("Strahovka",0)
 			SetVar("KnownMap",0)
 			SetVar("Tankisty", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end

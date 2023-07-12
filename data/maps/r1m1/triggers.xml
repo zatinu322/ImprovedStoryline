@@ -649,35 +649,7 @@
 
 			CompleteQuest("DefendSowth_Quest2")
 
-			TActivate("Const_mis_Attack")
-
-			trigger:Deactivate()
-		</script>
-	</trigger>
-
-
-	<trigger Name="Const_mis_Attack" active="0">
-		<event 	timeout="0.01" eventid="GE_TIME_PERIOD" />
-		<script>
-
-			PlayCustomMusic("Passage03")
-
-			TeamCreate("CMBandits1",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
-
-			local FVehicle = GetEntityByName("CMBandits1_vehicle_0")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits1_vehicle_1")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits1_vehicle_2")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits1_vehicle_3")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits1_vehicle_4")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-
-			TakeQuest("DefendSowth_Quest3")
-
-			TActivate("Const_mis_Attack2")
+			TActivate("trSowthDefendRolikBegin")
 
 			trigger:Deactivate()
 		</script>
@@ -689,22 +661,7 @@
 
 			CompleteQuest("DefendSowth_Quest3")
 
-			TeamCreate("CMBandits2",1002,CVector(2141, 293, 3374),{"BelazTSPP","TSPFighter","Cruiser01","TSPFighter","TSPFighter"}, CVector(1549, 288, 3185), 1)
-
-			local FVehicle = GetEntityByName("CMBandits2_vehicle_0")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits2_vehicle_1")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits2_vehicle_2")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits2_vehicle_3")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-			local FVehicle = GetEntityByName("CMBandits2_vehicle_4")
-			if FVehicle then FVehicle:SetCruisingSpeed(130) end
-
-			TakeQuest("DefendSowth_Quest4")
-
-			TActivate("Const_mis_complete")
+			TActivate("trSowthDefend2ndWaveRolikBegin")
 
 			trigger:Deactivate()
 		</script>

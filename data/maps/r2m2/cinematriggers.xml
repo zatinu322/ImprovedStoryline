@@ -530,6 +530,7 @@
 				vehEret:SetGamePositionOnGround( CVector(2787.482, 263.969, 508.595))
 				vehEret:SetRotation(Quaternion(0.004, -0.889, -0.009, 0.458))
 			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -545,9 +546,7 @@
 			TActivate("EretFriend")
 			
 			local vehEret = GetEntityByName("EretikCar_vehicle_0")
-			if vehEret then
-				vehEret:Remove()
-			end
+			if vehEret then vehEret:setImmortalMode(1) end
 			
 			AddQuestItem("Heretik_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "Heretik_P")
@@ -656,6 +655,9 @@
 			StopPlayingCustomMusic()
 			
 			CompleteQuest("Eretik_Friend")
+
+			local vehEret = GetEntityByName("EretikCar_vehicle_0")
+			if vehEret then vehEret:Remove() end
 			
 			RemoveQuestItem("Heretik_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "Heretik_P")

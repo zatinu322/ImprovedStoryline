@@ -1015,7 +1015,98 @@
 			if newController3 and ArmyVeh3 then
 				newController3:setVehicleUnderControl(ArmyVeh3)
 			end
+
+			dot_coord = {
+				CVector(5893.282, 236.321, 1453.755), 
+				CVector(5778.772, 239.527, 1480.352), 
+				CVector(5738.480, 257.445, 1314.289), 
+				CVector(5682.809, 220.918, 1462.096)	
+			}
+
+			for num = 1,4 do
+				local oldgun = getObj("staticAutoGun"..num*111)
+				if oldgun then oldgun:Remove() end
+			end
 			
+			for num = 1,4 do
+				local autogun = getObj("staticAutoGun_Quest_"..num)
+				if autogun then autogun:SetPosition(dot_coord[num]) end
+			end
+
+			for tr = 1,4 do
+				TActivate("trBrigadeDotDead_"..tr)
+			end
+
+			TDeactivate("ArmiaTSPPreparationFade")
+			
+			CompleteQuest( "Zachisti1_Quest" )
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- ”ничтожили все доты возле моста Ѕригады -->
+	<trigger Name="trBDDRolikStart" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local dots_killed_fin = GetVar("DotsDestroyed").AsInt
+			if dots_killed_fin == 4 then
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				local Plf = GetPlayerVehicle()
+				local PlfID = GetPlayerVehicleId()
+				local PlfCoor = Plf:GetPosition()
+				PlfCoor.y = PlfCoor.y + 5
+				PlfCoor.z = PlfCoor.z - 15
+
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+
+				FlyAround(-1, 0, 25, 9, PlfCoor, PlfID, 1, 1)
+				StartCinematic()
+
+				AddCinematicMessage(39, 1 )
+
+				TActivate("trBDDRolikEnd")
+			
+				trigger:Deactivate()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="trBDDRolikEnd" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			RestoreAllToleranceStatus()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetGamePositionOnGround( CVector(5957.113, 255.629, 1363.887))
+				Plf:SetRotation(Quaternion(0.050, -0.787, -0.056, -0.613))
+			end
+
+			local ally1 = getObj("ArmiaTSP_vehicle_0")
+			local ally2 = getObj("ArmiaTSP_vehicle_1")
+			local ally3 = getObj("ArmiaTSP_vehicle_2")
+
+			if ally1 then
+				ally1:SetGamePositionOnGround( CVector(5920.883, 249.384, 1373.300))
+				ally1:SetRotation(Quaternion(0.041, -0.788, -0.078, -0.609))
+			end
+
+			if ally2 then
+				ally2:SetGamePositionOnGround( CVector(5914.361, 249.685, 1346.942))
+				ally2:SetRotation(Quaternion(0.033, -0.811, -0.064, -0.580))
+			end
+
+			if ally3 then
+				ally3:SetGamePositionOnGround( CVector(5949.877, 253.475, 1389.002))
+				ally3:SetRotation(Quaternion(0.070, -0.828, -0.044, -0.555))
+			end
+
 			local bteam = TeamCreate("ThiefCar",1012,CVector(6899.570, 293.374, 1170.380),{"BrigadaCruiser", "BrigadaVoz", "UralShot"}, nil, 0, Quaternion(0.052, -0.409, 0.021, 0.911))
 			if bteam then
 				bteam:GetVehicle(1):SetGamePositionOnGround(CVector(7103.667, 310.447, 1029.983))
@@ -1024,11 +1115,12 @@
 				bteam:GetVehicle(2):SetRotation(Quaternion(-0.000, -0.554, 0.003, 0.833))
 			end
 
+			SetCameraBehindPlayerVehicle()
+
 			TActivate("TRIGGER_THIEFDIE")
-			TDeactivate("ArmiaTSPPreparationFade")
-			
-			CompleteQuest( "Zachisti1_Quest" )
-			
+
+			CompleteQuest("Zachisti2_Quest")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -2466,6 +2558,7 @@
 				vehPlayer:PlaceToEndOfPath("PlBuhPath")
 				vehPlayer:SetGamePositionOnGround( CVector(3164.853, 276.464, 5750.153))
 				vehPlayer:SetRotation(Quaternion(0.005, 0.989, -0.006, -0.148))
+				vehPlayer:UnlimitMaxSpeed()
 			end
 
 			StopPlayingCustomMusic()

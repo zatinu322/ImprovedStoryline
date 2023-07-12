@@ -482,8 +482,13 @@ end
 function SpawnArtefacts()
 	local art1 = CreateNewSgNodeObject( "artefact1", "or_artefact1", -1, -1, CVector(2753.203, 263.639, 3132.953), Quaternion(0, 0, 0, 1), 1)
 	local art2 = CreateNewSgNodeObject( "artefact2", "or_artefact2", -1, -1, CVector(2929.175, 260.962, 3046.081), Quaternion(0, 0, 0, 1), 0.35)
-	local art3 = CreateNewSgNodeObject( "mikro", "or_artefact3", -1, -1, CVector(3132.679, 260.963, 3485.378), Quaternion(0, 0, 0, 1), 1)
+	local art3 = CreateNewSgNodeObject( "mikro", "or_artefact3", -1, -1, CVector(3131.798, 260.963, 3488.884), Quaternion(0, 0, 0, 1), 1)
 	local art4 = CreateNewSgNodeObject( "rabochee_oborudovanie", "or_artefact4", -1, -1, CVector(3130.698, 260.000, 3303.874), Quaternion(0, 0, 0, 1), 1)
+end
+
+function SwitchInfectionBelong(ZoneName, Belong)
+	local zone = getObj(ZoneName)
+	if zone then zone:SetProperty("Belong", Belong) end
 end
 
 function TeamCreate(Name, Belong, CreatePos, ListOfVehicle, WalkPos, IsWares, Rotate)

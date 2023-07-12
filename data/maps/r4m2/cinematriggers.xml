@@ -487,16 +487,55 @@
 		<script>
 			StopPlayingCustomMusic()
 
-			RestoreAllToleranceStatus()
+			local hum = getObj("PlayerHuman")
+			if hum then hum:Remove() end
+			local hum2 = getObj("PlayerHuman3")
+			if hum2 then hum2:Remove() end
 
 			SpawnMessageBox( "8901" )
 			SpawnMessageBox( "8902" )
 
-			ShowDeathMenu()
+			local pl_hol = CreateVehicleEx("Bug01", "placeholder_car1", CVector(0, 10000, 0), 1100, Quaternion(0,0,0,1))
 
-			CheckPlayerVehicle()
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:setGodMode(1)
+				vehPlayer:setImmortalMode(1)
+				if pl_hol then
+					SaveWeaponGroups()
+					CapturePlayerVehicle(0, "garage")
+					g_Player:AddChild(pl_hol)
+				end
+			end
+
+			AddPlayerNewVehicle("AivenJrPlate01")
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetPosition( CVector(2912.622, 226.699, 2349.013))
+				vehPlayer:SetRotation(Quaternion(0.041, 0.009, -0.019, 0.999))
+			end
+
+			AllowSave(false)
+
+			TActivate("trCheckPlayerPrototype")
 			
 			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trCheckPlayerPrototype" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				local prot = Plf:GetProperty("Prototype").AsString
+				if prot ~= "AivenJrPlate01" then
+					ShowDeathMenu()
+				end
+			else
+				ShowDeathMenu()
+			end
 		</script>
 	</trigger>
 

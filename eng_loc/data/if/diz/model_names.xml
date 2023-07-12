@@ -1152,6 +1152,21 @@
 		value="Lorry" />
 
 	<Item
+		id="VelimirMolok"
+		locForm="0"
+		value="Velimir" />
+
+	<Item
+		id="UralMikolka"
+		locForm="0"
+		value="Mikolka" />
+
+	<Item
+		id="AivenJrPlate01"
+		locForm="0"
+		value=" " />
+
+	<Item
 		id="DemoUral1"
 		locForm="0"
 		value="Ural" />

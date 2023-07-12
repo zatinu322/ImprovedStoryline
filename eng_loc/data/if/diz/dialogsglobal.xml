@@ -2619,7 +2619,7 @@
 		name="r4_Racers_Men_1_N08aaa"
 		text="I got it. LET'S GO!"
 		role="PLAYER"
-		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi');  EndConversation()" />
+		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi'); GetPlayerVehicle():SetCustomLinearVelocity(0);  EndConversation()" />
 <!--Root/r4m1/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_002580"
@@ -8892,7 +8892,7 @@
 		name="Dlg_pl_002708"
 		text="Do what you want, I don't want anything to do with it.|[Hell with it, I'll free their leader! Just have to act fast!]"
 		role="PLAYER"
-		scriptResult="EndConversation()" />
+		scriptResult="TActivate('trNearCaravanLeader');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002705"

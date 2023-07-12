@@ -588,6 +588,20 @@
 		time="7" />
 
 	<string
+		id="16"
+		modelName="mask_hero"
+		value="The pillboxes are built. Now it's time to deal with the bandits."
+		sound=""
+		time="7" />
+
+	<string
+		id="17"
+		modelName="mask_hero"
+		value="We have repelled this attack, but it's not over yet. Their reinforcements are about to arrive here in any minute."
+		sound=""
+		time="7" />
+
+	<string
 		id="90000"
 		value="Would you like to disable Mr. Hat? |(&quot;Yes&quot; is recommended if this is your first time playing the mod)"
 		numButtons="2" />

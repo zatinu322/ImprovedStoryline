@@ -3415,18 +3415,6 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 
 		<Prototype
 			Class		= "Town"
-			Name		= "r1m2_BenHouse"
-			ModelFile	= "point"
-			NodeScale	= "1 1 1" 
-
-			GateModelFile 	= ""
-
-			IsIntersecting		= "true"
-			LookRadius			= "200"
-			IntersectionRadius	= "25" />
-
-		<Prototype
-			Class		= "Town"
 			Name		= "r1m3_Circus"
 			ModelFile	= "point"
 			NodeScale	= "1 1 1" 
@@ -3440,6 +3428,19 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 		<Prototype
 			Class		= "Town"
 			Name		= "r4_Buhara"
+			ModelFile	= "point"
+			NodeScale	= "1 1 1" 
+
+			MusicName		= "bar"
+			GateModelFile 	= ""
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50" />
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5_Malinovka"
 			ModelFile	= "point"
 			NodeScale	= "1 1 1" 
 

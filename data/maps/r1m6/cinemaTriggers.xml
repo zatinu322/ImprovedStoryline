@@ -1185,7 +1185,7 @@
 				vehSera:SetRotation(Quaternion(-0.002, 0.667, 0.006, -0.745))
 			end
 			
-			local doz = CreateVehicleEx("Traktor01","Dozz", CVector(1446.528, 255.827, 2801.617), 1100)
+			local doz = CreateVehicleEx("Traktor01","Dozz", CVector(1446.528, 255.827, 2801.617), 1088)
 			if doz then
 				doz:SetRotation(Quaternion(0.001, 0.849, 0.002, -0.529))
 				doz:setGodMode(1)
@@ -2245,7 +2245,7 @@
 			
 			PlayCustomMusic("IntenseDialogue01")
 
-			local l_warr = CreateVehicleEx("OL_Ural","LocalsWarrior1",CVector(0, 2000, 0), 1088)
+			local l_warr = CreateVehicleEx("UralMikolka","LocalsWarrior1",CVector(0, 2000, 0), 1088)
 			local l_warrID = l_warr:GetId()
 			local l_adept = CreateVehicleEx("AKF_Belaz2", "AdeptCar1", CVector(1687.917, 255.640, 480.811), 1091)
 			local l_adeptID = l_adept:GetId()
@@ -2343,7 +2343,7 @@
 			local ll2 = GetEntityByName("LocalsWarrior2")
 			if ll2 then ll2:Remove() end
 
-			local l_warr = TeamCreate("LocalsArmy",1088,CVector(1630.805, 258.311, 761.970),{"OL_Ural", "DemoMolokovoz3"}, nil, nil, Quaternion(-0.024, 0.995, -0.053, 0.086))
+			local l_warr = TeamCreate("LocalsArmy",1088,CVector(1630.805, 258.311, 761.970),{"UralMikolka", "DemoMolokovoz3"}, nil, nil, Quaternion(-0.024, 0.995, -0.053, 0.086))
 			if l_warr then
 				l_warr:GetVehicle(0):SetSkin(wskin1)
 				l_warr:GetVehicle(1):SetGamePositionOnGround(CVector(1622.323, 257.913, 762.121)) end
@@ -2473,7 +2473,7 @@
 			
 			SetCameraBehindPlayerVehicle()
 
-			TeamCreate("LocalsDef",1088,CVector(581.969, 256.068, 2619.852),{"DemoMolokovoz3", "OL_Belaz"})
+			TeamCreate("LocalsDef",1088,CVector(581.969, 256.068, 2619.852),{"VelimirMolok", "OL_Belaz"})
 
 			local ld1 = GetEntityByName("LocalsDef_vehicle_0")
 			if ld1 then
@@ -2601,7 +2601,7 @@
 			
 			SetCameraBehindPlayerVehicle()
 
-			TeamCreate("LocalsDef1",1088,CVector(2877.652, 256.067, 1188.209),{"OL_Belaz", "r1m1_bug02"})
+			TeamCreate("LocalsDef1",1088,CVector(2877.652, 256.067, 1188.209),{"OL_Belaz", "SeraFighter01"})
 
 			local ld1 = GetEntityByName("LocalsDef1_vehicle_0")
 			if ld1 then

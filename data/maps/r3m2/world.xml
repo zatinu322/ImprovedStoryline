@@ -2,7 +2,7 @@
 <World
 	name="Object16"
 	class="SgNode"
-	LastId="76476039">
+	LastId="76476106">
 	<Node
 		name="ET_PS_AUTOCANNON_STAND"
 		class="SgNode"
@@ -18946,7 +18946,7 @@
 	<Node
 		name="Object205784003"
 		class="SgAnimatedModelNode"
-		org="3041.067 8.332 3321.144"
+		org="3041.690 8.709 3324.770"
 		orgRel="1"
 		rot="-0.2272 -0.7670 0.1704 0.5754"
 		scale="0.899 0.899 0.899"
@@ -23157,5 +23157,41 @@
 		orgRel="1"
 		rot="-0.1035 0.8909 0.0509 -0.4393"
 		id="metal_plate1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476100"
+		class="SgAnimatedModelNode"
+		org="3014.805 2.978 3320.627"
+		orgRel="1"
+		rot="0.0000 0.9476 0.0000 0.3194"
+		id="rr_vagon2"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476101"
+		class="SgAnimatedModelNode"
+		org="3011.963 1.739 3313.026"
+		orgRel="1"
+		rot="0.0000 0.8725 0.0000 0.4886"
+		id="rr_vagon1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476102"
+		class="SgAnimatedModelNode"
+		org="2983.639 0.000 3225.022"
+		orgRel="1"
+		rot="0.0043 -0.1110 -0.0005 0.9938"
+		id="factory_box"
+		ndmAction="0" />
+
+	<Node
+		name="Object76476105"
+		class="SgAnimatedModelNode"
+		org="2987.543 0.000 3230.971"
+		orgRel="1"
+		rot="0.0000 0.3441 0.0000 0.9389"
+		id="factory_conteiner"
 		ndmAction="0" />
 </World>

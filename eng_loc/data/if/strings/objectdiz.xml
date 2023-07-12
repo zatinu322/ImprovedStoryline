@@ -57,10 +57,6 @@
 		value="This gas station offers some very useful services at a reasonable price. " />
 
 	<string
-		id="r1m2_r1m2_BenHouse_1_diz"
-		value="A small shack on the outskirts, where Ben Throttle moved after a conflict with the administration of Midgard." />
-
-	<string
 		id="r1m3_PetrolStationTown1_diz"
 		value="This gas station offers some very useful services at a reasonable price. " />
 
@@ -579,6 +575,10 @@
 	<string
 		id="r4m1_r4_Buhara_1_diz"
 		value="Ancient port at the shore of the dead sea. Dozens of ships that will never see the ocean again rot here. " />
+
+	<string
+		id="r1m6_r5_Malinovka_1_diz"
+		value="Formerly the largest village of Lidencloud. Today it's just a bunch of abandoned stone houses left by their owners in a hurry after the Adepts attack." />
 
 	<string
 		id="r4m1_TheOilCity_diz"

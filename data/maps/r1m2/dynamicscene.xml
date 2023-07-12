@@ -55682,22 +55682,6 @@
 	</Object>
 
 	<Object
-		Name="r1m2_BenHouse_1"
-		Belong="1080"
-		Prototype="r1m2_BenHouse"
-		Pos="3775.048 116.119 1808.081"
-		Rot="0.000 1.000 0.000 -0.002"
-		MaxDefenders="0"
-		PointOfViewInInterface="50.000 50.000 50.000"
-		CaravansDest="">
-		<Parts />
-
-		<EntryPath />
-
-		<ExitPath />
-	</Object>
-
-	<Object
 		Belong="1100"
 		Prototype="someRecollection" />
 

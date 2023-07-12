@@ -85,8 +85,8 @@
 		Name="Thing3_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="3132.679 258.000 3485.378"
-		Radius="10.000" />
+		Pos="3129.039 258.000 3488.937"
+		Radius="7.000" />
 
 	<Object
 		Flags="21"
@@ -20921,12 +20921,11 @@
 		Name="r3m2_OracleComplex_1"
 		Belong="1080"
 		Prototype="r3m2_OracleComplex"
-		Pos="695.848 269.089 3230.995"
+		Pos="695.848 465.494 3230.995"
 		Rot="0.000 1.000 0.000 -0.002"
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
-
 		<Parts />
 
 		<EntryPath />

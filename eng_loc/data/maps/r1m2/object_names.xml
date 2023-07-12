@@ -429,10 +429,6 @@
 		FullName="Pharmacist Nolan" />
 
 	<Object
-		Name="r1m2_BenHouse_1"
-		FullName="Ben's hut" />
-
-	<Object
 		Name="Librarian"
 		FullName="Old man Dod" />
 

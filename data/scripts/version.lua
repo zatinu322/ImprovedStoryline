@@ -1,0 +1,7 @@
+if ISL_VERSION == nil then
+    ISL_TYPE = "HD"
+
+    ISL_VERSION = "110-230621a-"..ISL_TYPE
+
+    LOG("IMPROVED STORYLINE V1.1 "..ISL_TYPE.." BUILD 230621a")
+end

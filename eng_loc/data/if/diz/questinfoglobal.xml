@@ -2304,6 +2304,48 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="Zachisti1_1_Quest"
+		briefDiz="Destroy the pillboxes on the approach to the base"
+		fullDiz="At first I must destroy the pillboxes guarding the Bridage's bridge to prevent a strike from the rear."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest1"
+		briefDiz="Destroy the first pillbox"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest2"
+		briefDiz="Destroy the second pillbox"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest3"
+		briefDiz="Destroy the third pillbox"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest4"
+		briefDiz="Destroy the fourth pillbox"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_4" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="Zachisti1_Quest"
 		briefDiz="Meet the trader's army near the bandit base"
 		fullDiz="The leader of the trader's army suspended the mopping-up operation so that I could participate myself. I need to meet them at the arranged location"

@@ -2768,8 +2768,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="FreeExtremistLeader_Quest2"
-			OnTake='TActivate("trFreeExtremistLeader_Take")' />
+			PrecedingQuests="FreeExtremistLeader_Quest2" />
 
 		<quest
 			Name="FreeExtremistLeader_Quest4"
@@ -3416,7 +3415,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="d_FindRealFatherRoom_Quest"
 		OnComplete="AddPlayerMoney(1000)"
-		OnTake='ShowCircleOnMinimap("r1m2", CVector(2535.255, 120.893, 315.064)); ShowCircleOnMinimap("r2m1", CVector(2114.268, 235.762, 5967.831))' />
+		OnTake='ShowCircleOnMinimap("r1m2", CVector(2535.255, 120.893, 315.064));' />
 <!--Root/r1m3/Сюжетные/Найти рабочих на скважину В Минине-->
 	<quest
 		Name="d_FindWorkersToOilMine_Quest"
@@ -3465,11 +3464,11 @@
 
 	<quest
 		Name="Zachisti2_Quest"
-		Automatic="1"
+		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="Zachisti1_Quest"
+		PrecedingQuests="Zachisti1_1_Quest"
 		OnTake='ShowCircleOnMinimapByName("TheBase")' />
 
 	<quest
@@ -3489,6 +3488,46 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="Zachisti3_Quest"
 		OnTake='ShowCircleOnMinimapByName("Minin")' />
+
+	<quest
+		Name="Zachisti1_1_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Zachisti1_Quest">
+		<quest
+			Name="Zachisti1_1_Quest1"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Zachisti1_1_Quest" />
+
+		<quest
+			Name="Zachisti1_1_Quest2"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Zachisti1_1_Quest" />
+
+		<quest
+			Name="Zachisti1_1_Quest3"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Zachisti1_1_Quest" />
+
+		<quest
+			Name="Zachisti1_1_Quest4"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Zachisti1_1_Quest" />
+	</quest>
 <!--Root/r1m3/Сюжетные/Поиски Лисы с диском-->
 	<quest
 		Name="LisaVPeshte"

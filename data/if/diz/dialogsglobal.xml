@@ -2497,13 +2497,13 @@
 
 	<Reply
 		name="Dlg_pl_003169"
-		text="Что?! Откуда ты знаешь об этом? "
+		text="Что?! Откуда ты знаешь об этом?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003402" />
 
 	<Reply
 		name="Dlg_npc_003402"
-		text="Это мои владения как-никак. Знать о том, что в них происходит - мой долг. Но что-то мы заговорились.| Будь осторожен. И пусть тебе повезёт там, где другие не справились. Вряд ли мы увидимся с тобой снова."
+		text="Это мои владения как-никак. Знать о том, что в них происходит - мой долг. Но что-то мы заговорились.|Будь осторожен. И пусть тебе повезёт там, где другие не справились. Вряд ли мы увидимся с тобой снова."
 		role="NPC"
 		nextReplies="Dlg_pl_003403" />
 
@@ -2575,7 +2575,7 @@
 		name="r4_Racers_Men_1_N03a"
 		text="Ты должен заплатить взнос в 10000 монет, из них 5000 - залог за машину"
 		role="NPC"
-		nextReplies="r4_Racers_Men_1_N04aa r4_Dlg_pl_000158" />
+		nextReplies="r4_Racers_Men_1_N04aa" />
 
 	<Reply
 		name="r4_Racers_Men_1_N04aa"
@@ -2619,7 +2619,7 @@
 		name="r4_Racers_Men_1_N08aaa"
 		text="Все понятно. ПОЕХАЛИ!"
 		role="PLAYER"
-		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi');  EndConversation()" />
+		scriptResult="TActivate('trA'); SetVar('Gonka',1); PlayCustomMusic('nochnoi'); GetPlayerVehicle():SetCustomLinearVelocity(0);  EndConversation()" />
 <!--Root/r4m1/Опциональные/Мистер Шляпа-->
 	<Reply
 		name="Dlg_npc_002580"
@@ -4278,7 +4278,7 @@
 <!--Root/r3m2/принесли 2ой диск-->
 	<Reply
 		name="r3m2_Oracle_Oracle_5_N01"
-		text="Ты вернулся с ключом."
+		text="Ты вернулся."
 		role="NPC"
 		scriptCondition="QuestStatus('Disk2OrakulLisa')==Q_COMPLETED and GetCurNpc():GetSpokenCount() == 3"
 		nextReplies="r3m2_Oracle_Oracle_5_N02" />
@@ -5790,8 +5790,7 @@
 		name="Dlg_pl_000474"
 		text="Трудности меня не пугают!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromVillage'); 
- EndConversation()" />
+		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromVillage'); EndConversation()" />
 
 	<Reply
 		name="RecruiterInAR_hellodlg3"
@@ -5828,8 +5827,7 @@
 		name="Dlg_pl_000480"
 		text="Слушаюсь!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromKaravanSNG'); 
- EndConversation()" />
+		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromKaravanSNG'); EndConversation()" />
 
 	<Reply
 		name="RecruiterInAR_hellodlg4"
@@ -8894,7 +8892,7 @@
 		name="Dlg_pl_002708"
 		text="Делайте что хотите, я не хочу иметь к этому никакого отношения.|[К чёрту всё, я освобожу их лидера! Только нужно действовать быстро!]"
 		role="PLAYER"
-		scriptResult="EndConversation()" />
+		scriptResult="TActivate('trNearCaravanLeader');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_002705"

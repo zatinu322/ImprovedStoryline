@@ -1274,6 +1274,7 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<script>
 			RestoreAllToleranceStatus()
+
 			SetTolerance( 1100, 1015, RS_ENEMY )
 			SetTolerance( 1016, 1015, RS_ENEMY )
 
@@ -1281,6 +1282,11 @@
 
 			AddQuestItem("ARGeneral_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_add_poput", "ARGeneral_P")
+
+			for car = 0,1 do
+				local sng_fighter = getObj("SNGTeamFighters_vehicle_"..car)
+				if sng_fighter then sng_fighter:Remove() end
+			end
 
 			trigger:Deactivate() 
 		</script>

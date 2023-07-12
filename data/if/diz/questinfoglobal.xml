@@ -2304,6 +2304,48 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="Zachisti1_1_Quest"
+		briefDiz="”ничтожить доты на подъезде к базе"
+		fullDiz="—начала необходимо уничтожить доты, охран€ющие мост Ѕригады, чтобы исключить удар с тыла."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest1"
+		briefDiz="”ничтожить первый дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest2"
+		briefDiz="”ничтожить второй дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest3"
+		briefDiz="”ничтожить третий дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest4"
+		briefDiz="”ничтожить четвЄртый дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_4" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="Zachisti1_Quest"
 		briefDiz="¬стретитьс€ с армией торговцев возле базы бандитов"
 		fullDiz="–уководитель армией торговцев приостановил операцию зачистки, чтобы € мог сам поучаствовать. ћне необходимо встреитьс€ с ними в условленном месте."

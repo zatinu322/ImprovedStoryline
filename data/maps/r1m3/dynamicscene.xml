@@ -1752,6 +1752,62 @@
 		</Object>
 
 		<Object
+			Name="staticAutoGun_Quest_1"
+			Belong="1012"
+			Prototype="staticAutoGun04_spec"
+			Pos="372.953 311.519 7349.996">
+			<Parts>
+				<DOT
+					present="1"
+					Name="staticAutoGun111DOT_Quest"
+					Belong="1012"
+					Prototype="heavy_dot4" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun_Quest_2"
+			Belong="1012"
+			Prototype="staticAutoGun04_spec"
+			Pos="373.040 313.906 7335.318">
+			<Parts>
+				<DOT
+					present="1"
+					Name="staticAutoGun222DOT_Quest"
+					Belong="1012"
+					Prototype="heavy_dot4" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun_Quest_3"
+			Belong="1012"
+			Prototype="staticAutoGun03_spec"
+			Pos="372.338 309.614 7361.645">
+			<Parts>
+				<DOT
+					present="1"
+					Name="staticAutoGun333DOT_Quest"
+					Belong="1012"
+					Prototype="heavy_dot1" />
+			</Parts>
+		</Object>
+
+		<Object
+			Name="staticAutoGun_Quest_4"
+			Belong="1012"
+			Prototype="staticAutoGun03_spec"
+			Pos="373.356 316.001 7321.628">
+			<Parts>
+				<DOT
+					present="1"
+					Name="staticAutoGun444DOT_Quest"
+					Belong="1012"
+					Prototype="heavy_dot1" />
+			</Parts>
+		</Object>
+
+		<Object
 			Name="TheBase_Workshop"
 			Belong="1012"
 			Prototype="workshop" />
@@ -60810,6 +60866,14 @@
 		MaxDefenders="0"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravansDest="">
+		<Object
+			Flags="21"
+			Name="r1m3_Circus_1_enter"
+			Belong="1080"
+			Prototype="genericLocation"
+			Pos="3793.429 234.853 864.729"
+			Rot="0.000 0.791 0.000 0.612"
+			Radius="50.000" />
 
 		<Parts />
 

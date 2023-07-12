@@ -1257,6 +1257,44 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		</Wheels>
 	</Prototype>
 
+	<!-- Player model for Zarmek ending -->
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "AivenJrPlate"
+		ResourceType		= "VEHICLE"
+	
+		HitForce			= "50"
+		CameraHeight          	= "3"
+		CameraMaxDist		= "5"
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius			= "250.0"
+		IntersectionRadius	= "6"
+		TakingRadius		= "30.0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		MassSize			= "6 6 6"
+		MassTranslation		= "0 0 0"		
+		Abstract 			= "true"
+		PhysicsDisabled		= "true">
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "BUG_CHASSIS">
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"	Prototype = "AivenJrPlateBase" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class		= "Vehicle"
+		Name		= "AivenJrPlate01"
+		ParentPrototype = "AivenJrPlate">
+		<Parts />
+	</Prototype>
+
 	<!-- Child prototypes -->
 	<!-- Robots -->
 	<Prototype
@@ -2566,7 +2604,18 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 		Name			= "DemoMolokovoz3"
 		ParentPrototype 	= "Molokovoz">
 		<Parts>
-			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "VelimirMolok"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
 			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
 			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
 		</Parts>
@@ -2629,6 +2678,7 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 			<Part id = "CABIN"			Prototype = "molokovozCab03" />
 			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
 			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />
+			<Part id = "BASKET_SMALL_GUN_0" Prototype = "rapier01" />
 		</Parts>
 	</Prototype>
 
@@ -2804,6 +2854,20 @@ $Id: Vehicles.xml,v 1.122 2005/11/11 14:58:52 lena Exp $
 	<Prototype
 		Class			= "Vehicle"
 		Name			= "OL_Ural"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab05" />
+			<Part id = "BASKET"			Prototype = "uralCargo03" />
+			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "kpvt01" /> 
+			<Part id = "BASKET_GIANT_GUN"	Prototype = "hammer01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "flag01" /> 
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "rainmetal01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "UralMikolka"
 		ParentPrototype 	= "Ural">
 		<Parts>
 			<Part id = "CABIN"			Prototype = "uralCab05" />

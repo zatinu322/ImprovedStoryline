@@ -451,6 +451,18 @@ $Id: VehicleParts.xml,v 1.79 2005/11/17 06:42:59 anton Exp $
 				/>
 		</Prototype>
 
+		<Prototype
+			Class		= "Chassis"
+			Name		= "AivenJrPlateBase"
+			ModelFile	= "dweller_player"
+			ResourceType	= "BUG_CHASSIS"
+			NodeScale	= "1 1 1"
+
+			RepairCoef	= "0.2"
+			Mass		= "100.0" 
+			MaxHealth	= "1">
+		</Prototype>
+
 	</Folder>
 
 	<Folder Name = "Cabins"> 

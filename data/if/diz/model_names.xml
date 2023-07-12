@@ -1150,6 +1150,21 @@
 		id="DemoMolokovoz3"
 		locForm="0"
 		value="Молоковоз" />
+	
+	<Item
+		id="VelimirMolok"
+		locForm="0"
+		value="Велимир" />
+
+	<Item
+		id="UralMikolka"
+		locForm="0"
+		value="Миколка" />
+
+	<Item
+		id="AivenJrPlate01"
+		locForm="0"
+		value="" />
 
 	<Item
 		id="DemoUral1"

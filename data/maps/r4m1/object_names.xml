@@ -350,5 +350,13 @@
 
 	<Object
 		Name="r4_Buhara_1"
-		FullName="Áóõàðà" />
+		FullName="ÁÓÕÀÐÀ" />
+
+	<Object
+		Name="r4_Buhara_1_enter"
+		FullName="ÁÓÕÀÐÀ" />
+
+	<Object
+		Name="r4_Buhara_1_Workshop"
+		FullName="Ìàñòåðñêàÿ" />
 </ObjectNames>

@@ -30,9 +30,9 @@
 			tp1:SetOpenGateToPlayer( false )
 			
 			SetConditionalClosingForTown( "TheOilVillage", "r1m6", true )
-			
-			local town = GetEntityByName ("PetrolStationTown5")
-			if town then town:SetRuined(true) end
+
+			local malin = getObj("r5_Malinovka_1")
+			if malin then malin:SetRuined(true) end
 			
 			TActivate("trKateberg_create")
 			
@@ -581,6 +581,10 @@
 		<script>
 			CompleteQuest("KillStar1_Quest1")
 
+			for zone = 1,16 do
+				SwitchInfectionBelong("InfectionZone"..zone, 1088)
+			end
+
 			TActivate("KLRolikBegin")
 
 			trigger:Deactivate()
@@ -675,6 +679,10 @@
 			for gate = 1,4 do
 				local g = GetEntityByName("gate"..gate)
 				if g then g:Remove() end
+			end
+
+			for zone = 1,16 do
+				SwitchInfectionBelong("InfectionZone"..zone, 1005)
 			end
 
 			trigger:Deactivate()

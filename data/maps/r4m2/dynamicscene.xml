@@ -786,7 +786,22 @@
 					PosY="0"
 					Flags="16"
 					Prototype="UralForSale">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -796,7 +811,22 @@
 					PosY="0"
 					Flags="16"
 					Prototype="BelazForSale">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="belazCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="belazCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="belazChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -806,7 +836,22 @@
 					PosY="0"
 					Flags="16"
 					Prototype="MirotvorecForSale">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -846,115 +891,6 @@
 		Prototype="genericLocation"
 		Pos="2050.363 298.992 1126.533"
 		Radius="144.885" />
-
-	<Object
-		Name="Vragi1"
-		Belong="1062"
-		Prototype="InfectionZone"
-		InfectionTeamPrototypeName="r4_BanditesTeam"
-		DropOutTimeOut="20.000"
-		InfectionLair="r4_BanditesTeam"
-		HadPlayerInside="0">
-		<Polygon>
-			<Point
-				x="150.689"
-				y="3871.601" />
-
-			<Point
-				x="277.144"
-				y="3768.460" />
-
-			<Point
-				x="461.188"
-				y="3570.228" />
-
-			<Point
-				x="568.129"
-				y="3463.386" />
-
-			<Point
-				x="647.482"
-				y="3504.010" />
-
-			<Point
-				x="744.201"
-				y="3449.315" />
-
-			<Point
-				x="772.103"
-				y="3286.813" />
-
-			<Point
-				x="564.079"
-				y="3275.681" />
-
-			<Point
-				x="470.065"
-				y="3294.914" />
-
-			<Point
-				x="384.572"
-				y="3381.205" />
-
-			<Point
-				x="221.771"
-				y="3469.929" />
-
-			<Point
-				x="64.199"
-				y="3547.160" />
-
-			<Point
-				x="39.611"
-				y="3623.875" />
-
-			<Point
-				x="64.555"
-				y="3853.569" />
-		</Polygon>
-
-		<DropOut>
-			<Point
-				x="226.533"
-				y="3516.496" />
-
-			<Point
-				x="449.246"
-				y="3422.582" />
-
-			<Point
-				x="650.458"
-				y="3304.644" />
-
-			<Point
-				x="631.922"
-				y="3382.792" />
-
-			<Point
-				x="476.415"
-				y="3370.709" />
-
-			<Point
-				x="474.550"
-				y="3508.565" />
-
-			<Point
-				x="288.092"
-				y="3517.010" />
-
-			<Point
-				x="361.424"
-				y="3591.446" />
-
-			<Point
-				x="696.149"
-				y="3396.615" />
-
-			<Point
-				x="584.461"
-				y="3318.670" />
-		</DropOut>
-	</Object>
 
 	<Object
 		Name="Vragi2"
@@ -1104,14 +1040,6 @@
 				y="2422.940" />
 
 			<Point
-				x="706.660"
-				y="3207.570" />
-
-			<Point
-				x="785.782"
-				y="2802.874" />
-
-			<Point
 				x="979.761"
 				y="2769.924" />
 
@@ -1120,28 +1048,8 @@
 				y="2459.621" />
 
 			<Point
-				x="666.594"
-				y="3189.680" />
-
-			<Point
 				x="609.001"
 				y="3135.919" />
-
-			<Point
-				x="699.324"
-				y="3054.385" />
-
-			<Point
-				x="643.380"
-				y="2979.633" />
-
-			<Point
-				x="699.594"
-				y="2966.648" />
-
-			<Point
-				x="744.772"
-				y="2832.264" />
 
 			<Point
 				x="995.183"
@@ -2671,7 +2579,7 @@
 		Name="lamppost1327"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2390.534 295.144 1036.291"
+		Pos="2390.534 295.091 1036.291"
 		Rot="0.000 0.706 0.000 0.709">
 		<Object
 			Belong="-1"
@@ -2684,14 +2592,14 @@
 		Name="lamppost1328"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2373.333 295.129 983.175"
+		Pos="2373.333 295.076 983.175"
 		Rot="0.000 0.892 0.000 0.452" />
 
 	<Object
 		Name="lamppost1329"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2407.752 295.062 998.166"
+		Pos="2407.752 295.029 998.166"
 		Rot="0.000 -0.792 0.000 0.611" />
 
 	<Object
@@ -2726,7 +2634,7 @@
 		Name="lamppost1334"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2378.888 295.086 894.876"
+		Pos="2378.888 295.033 894.876"
 		Rot="0.000 -0.373 0.000 0.928" />
 
 	<Object
@@ -2781,14 +2689,14 @@
 		Name="lamppost1341"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2251.216 295.147 1264.316"
+		Pos="2251.216 295.093 1264.316"
 		Rot="0.000 0.698 0.000 0.716" />
 
 	<Object
 		Name="lamppost1342"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2251.305 295.124 1232.600"
+		Pos="2251.305 295.070 1232.600"
 		Rot="0.000 0.698 0.000 0.716" />
 
 	<Object
@@ -2809,21 +2717,21 @@
 		Name="lamppost1345"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2250.277 295.151 1312.916"
+		Pos="2250.277 295.097 1312.916"
 		Rot="0.000 0.389 0.000 0.921" />
 
 	<Object
 		Name="lamppost1346"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2249.925 295.147 1331.735"
+		Pos="2249.925 295.094 1331.735"
 		Rot="0.000 0.920 0.000 0.391" />
 
 	<Object
 		Name="lamppost1347"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2249.808 295.149 1363.124"
+		Pos="2249.808 295.096 1363.124"
 		Rot="0.000 0.707 0.000 0.707" />
 
 	<Object
@@ -2837,7 +2745,7 @@
 		Name="lamppost1349"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="2250.928 295.154 1452.337"
+		Pos="2250.928 295.101 1452.337"
 		Rot="0.000 0.710 0.000 0.704" />
 
 	<Object
@@ -3135,7 +3043,7 @@
 		Name="r4_desert_palma_2389"
 		Belong="-1"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="2375.646 295.112 880.316"
+		Pos="2375.646 295.058 880.316"
 		Rot="0.000 -0.035 0.000 0.999" />
 
 	<Object
@@ -3643,7 +3551,7 @@
 		Name="stolb1457"
 		Belong="-1"
 		Prototype="Breakable_Stolb1"
-		Pos="3298.971 255.740 1856.836"
+		Pos="3298.971 255.739 1856.836"
 		Rot="0.001 -0.040 0.017 0.999"
 		NodeScale="1.400" />
 
@@ -3838,7 +3746,7 @@
 		Name="lamppost1483"
 		Belong="-1"
 		Prototype="lamppost1"
-		Pos="3192.001 237.149 2104.939" />
+		Pos="3192.001 237.095 2104.939" />
 
 	<Object
 		Name="lamppost2484"
@@ -4211,7 +4119,7 @@
 		Name="factory_box542"
 		Belong="-1"
 		Prototype="factory_box"
-		Pos="2315.521 295.136 952.799"
+		Pos="2315.521 295.104 952.799"
 		Rot="0.000 0.808 0.000 -0.590" />
 
 	<Object

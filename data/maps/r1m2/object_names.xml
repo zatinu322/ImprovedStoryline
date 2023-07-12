@@ -429,10 +429,6 @@
 		FullName="Аптекарь Нолан" />
 
 	<Object
-		Name="r1m2_BenHouse_1"
-		FullName="Хижина Бена" />
-
-	<Object
 		Name="Librarian"
 		FullName="Старик Дод" />
 

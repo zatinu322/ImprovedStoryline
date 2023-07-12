@@ -29312,8 +29312,8 @@
 		Rot="-0.008 -0.155 0.052 0.987" />
 
 	<Object
-		Name="InfectionZone001"
-		Belong="1005"
+		Name="InfectionZone1"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -29425,8 +29425,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone002"
-		Belong="1005"
+		Name="InfectionZone2"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -29510,8 +29510,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone003"
-		Belong="1005"
+		Name="InfectionZone3"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -29695,8 +29695,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone004"
-		Belong="1005"
+		Name="InfectionZone4"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -29844,8 +29844,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone005"
-		Belong="1005"
+		Name="InfectionZone5"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -29933,8 +29933,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone006"
-		Belong="1005"
+		Name="InfectionZone6"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -30038,8 +30038,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone007"
-		Belong="1005"
+		Name="InfectionZone7"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -30139,8 +30139,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone008"
-		Belong="1005"
+		Name="InfectionZone8"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -30236,8 +30236,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone009"
-		Belong="1005"
+		Name="InfectionZone9"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -30353,8 +30353,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone010"
-		Belong="1005"
+		Name="InfectionZone10"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -30466,8 +30466,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone011"
-		Belong="1005"
+		Name="InfectionZone11"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -30571,8 +30571,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone012"
-		Belong="1005"
+		Name="InfectionZone12"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -32317,8 +32317,8 @@
 		NodeScale="0.310" />
 
 	<Object
-		Name="InfectionZone013"
-		Belong="1005"
+		Name="InfectionZone13"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -32450,8 +32450,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone014"
-		Belong="1005"
+		Name="InfectionZone14"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -32551,8 +32551,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone015"
-		Belong="1005"
+		Name="InfectionZone15"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -32648,8 +32648,8 @@
 	</Object>
 
 	<Object
-		Name="InfectionZone016"
-		Belong="1005"
+		Name="InfectionZone16"
+		Belong="1089"
 		Prototype="InfectionZone"
 		InfectionTeamPrototypeName="r5_BanditsGang"
 		DropOutTimeOut="20.000"
@@ -34075,6 +34075,22 @@
 			ModelName="mask_snowlisa"
 			helloReplyNames="Dlg_npc_002838"
 			SpokenCount="0" />
+	</Object>
+
+	<Object
+		Name="r5_Malinovka_1"
+		Belong="1088"
+		Prototype="r5_Malinovka"
+		Pos="1135.245 285.525 521.329"
+		MaxDefenders="0"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravansDest="">
+
+		<Parts />
+
+		<EntryPath />
+
+		<ExitPath />
 	</Object>
 
 	<Object

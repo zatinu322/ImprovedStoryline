@@ -14,6 +14,7 @@
 			SetVar("Cemetery", 0)
 			SetVar("AutoSaveCount", 0)
 			SetVar("StrangerSkin", 0)
+			SetVar("DotsDestroyed", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			CreateNewDummyObject("rr_barrier3", "mininBarrier", -1, -1, CVector(6718.542, 230.886, 5747.152), Quaternion(-0.3620, 0.5734, 0.2916, 0.6747), 0)
@@ -741,6 +742,63 @@
 
 				TActivate( "ArmiaTSPPreparationBegin" )
 			end
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- ”ничтожение дотов у моста Ѕригады -->
+	<trigger Name="trBrigadeDotDead_1" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="staticAutoGun_Quest_1" />
+		<script>
+			CompleteQuest("Zachisti1_1_Quest1")
+
+			local dots_killed = GetVar("DotsDestroyed").AsInt
+			SetVar("DotsDestroyed", dots_killed+1)
+
+			TActivate("trBDDRolikStart")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBrigadeDotDead_2" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="staticAutoGun_Quest_2" />
+		<script>
+			CompleteQuest("Zachisti1_1_Quest2")
+
+			local dots_killed = GetVar("DotsDestroyed").AsInt
+			SetVar("DotsDestroyed", dots_killed+1)
+
+			TActivate("trBDDRolikStart")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBrigadeDotDead_3" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="staticAutoGun_Quest_3" />
+		<script>
+			CompleteQuest("Zachisti1_1_Quest3")
+
+			local dots_killed = GetVar("DotsDestroyed").AsInt
+			SetVar("DotsDestroyed", dots_killed+1)
+
+			TActivate("trBDDRolikStart")
+			
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger Name="trBrigadeDotDead_4" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="staticAutoGun_Quest_4" />
+		<script>
+			CompleteQuest("Zachisti1_1_Quest4")
+
+			local dots_killed = GetVar("DotsDestroyed").AsInt
+			SetVar("DotsDestroyed", dots_killed+1)
+
+			TActivate("trBDDRolikStart")
 			
 			trigger:Deactivate()
 		</script>

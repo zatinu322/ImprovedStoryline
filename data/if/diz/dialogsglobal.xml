@@ -1579,7 +1579,7 @@
 		name="Dlg_pl_002944"
 		text="Прощайте, удачи вам!"
 		role="PLAYER"
-		scriptResult="AddQuestItem('quest_labelle_scrap'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_labelle_scrap'); SetWeather(1); EndConversation()" />
+		scriptResult="AddQuestItem('quest_labelle_scrap'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_labelle_scrap'); SetWeather(0); EndConversation()" />
 <!--Root/r5m2/Поиски Доброславы-->
 	<Reply
 		name="Dlg_npc_002945"

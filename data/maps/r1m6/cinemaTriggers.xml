@@ -371,7 +371,12 @@
 			
 			local humL = GetEntityByName("humLisa")
 			if humL then humL:Remove() end
-			
+
+			for h = 1,3 do
+				local hum = getObj("hum0"..h)
+				if hum then hum:Remove() end
+			end
+
 			CreateVehicleEx("LisaCar","CARLISA1", CVector(242.475, 258.255, 1695.805), 1042)
 			
 			local vehLisa = GetEntityByName("CARLISA1")
@@ -2601,7 +2606,7 @@
 			
 			SetCameraBehindPlayerVehicle()
 
-			TeamCreate("LocalsDef1",1088,CVector(2877.652, 256.067, 1188.209),{"OL_Belaz", "SeraFighter01"})
+			TeamCreate("LocalsDef1",1088,CVector(2877.652, 256.067, 1188.209),{"OL_Belaz", "r1m1_bug02"})
 
 			local ld1 = GetEntityByName("LocalsDef1_vehicle_0")
 			if ld1 then

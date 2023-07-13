@@ -5040,7 +5040,7 @@
 		name="r3m1_NearUluk_Civilian1_1_P041"
 		text="Я помогу им. Пусть и тебе сопутствует удача! Прощай."
 		role="PLAYER"
-		scriptResult="TakeQuest('r3m1_RescueUlukCivil'); TActivate('trRescArmyPlace'); TActivate('trWentCivCamp'); SetTolerance(1100,1064,RS_ALLY); SetTolerance(1019,1064,RS_ALLY); GetCurNpc():SetSpokenCount(1); SetVar('BezhenAlive', 0); EndConversation();" />
+		scriptResult="TakeQuest('r3m1_RescueUlukCivil'); TActivate('trWentCivCamp'); SetTolerance(1100,1064,RS_ALLY); SetTolerance(1019,1064,RS_ALLY); GetCurNpc():SetSpokenCount(1); SetVar('BezhenAlive', 0); EndConversation();" />
 
 	<Reply
 		name="Set_Bar_Customer1_2_N01"

@@ -51,8 +51,8 @@
 			CreateNewBreakableObject( "heavy_dot4_octopus","dot05", 1089, CVector(1750.201, 415.697, 2199.539), Quaternion(0.000, 0.781, 0.000, 0.624),0 )
 			CreateNewBreakableObject( "heavy_dot4_octopus","dot06", 1089, CVector(1745.949, 405.337, 2244.130), Quaternion(0.000, 0.685, 0.000, 0.728),0 )
 			CreateNewBreakableObject( "heavy_dot4_octopus","dot07", 1089, CVector(1724.353, 401.912, 2287.687), Quaternion(0.000, 0.248, 0.000, 0.969),0 )
-			CreateNewBreakableObject( "heavy_dot4_vulcan","dot08", 1089, CVector(1670.741, 406.471, 2297.174), Quaternion(0.000, -0.139, 0.000, 0.990),0 )
-			CreateNewBreakableObject( "heavy_dot4_rapier","dot09", 1089, CVector(1630.407, 410.537, 2280.801), Quaternion(0.000, -0.146, 0.000, 0.989),0 )
+			CreateNewBreakableObject( "heavy_dot4_octopus","dot08", 1089, CVector(1670.741, 406.471, 2297.174), Quaternion(0.000, -0.139, 0.000, 0.990),0 )
+			CreateNewBreakableObject( "heavy_dot4_octopus","dot09", 1089, CVector(1630.407, 410.537, 2280.801), Quaternion(0.000, -0.146, 0.000, 0.989),0 )
 			
 			CreateNewDummyObject( "house1", "town1", -1, -1, CVector(1722.091, 404.671, 2279.759), Quaternion(0.0000, -0.9517, 0.0000, 0.3069), 0)
 			CreateNewDummyObject( "house3", "town2", -1, -1, CVector(1714.477, 404.160, 2284.157), Quaternion(0.0000, 0.9837, 0.0000, -0.1801 ), 0)

@@ -5195,7 +5195,7 @@
 		isMainQuest="1">
 		<Map
 			name="r4m1"
-			targetObjName="Buharers" />
+			targetObjName="Buharers_vehicle_0" />
 	</QuestInfo>
 
 	<QuestInfo

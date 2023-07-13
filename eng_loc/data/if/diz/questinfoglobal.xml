@@ -2,7 +2,7 @@
 <QuestInfoResource>
 	<QuestInfo
 		questName="ATGloohoe_Quest"
-		briefDiz="Come to Gloohoe"
+		briefDiz="Come to Glukhoe"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -439,7 +439,7 @@
 
 	<QuestInfo
 		questName="DefendSowth_Quest1"
-		briefDiz="Deliver materials to the first point"
+		briefDiz="Deliver materials to the first position"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -448,7 +448,7 @@
 
 	<QuestInfo
 		questName="DefendSowth_Quest2"
-		briefDiz="Deliver materials to the second point"
+		briefDiz="Deliver materials to the second position"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -1320,7 +1320,7 @@
 	<QuestInfo
 		questName="KillTankistov"
 		briefDiz="Kill attackers"
-		fullDiz="Kill the tank men who attacked Gloohoe."
+		fullDiz="Kill the tank men who attacked Glukhoe."
 		isMainQuest="1">
 		<Map
 			name="r4m1"
@@ -5195,7 +5195,7 @@
 		isMainQuest="1">
 		<Map
 			name="r4m1"
-			targetObjName="Buharers" />
+			targetObjName="Buharers_vehicle_0" />
 	</QuestInfo>
 
 	<QuestInfo

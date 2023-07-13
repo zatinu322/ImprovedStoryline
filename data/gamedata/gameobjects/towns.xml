@@ -3260,7 +3260,7 @@ $Id: Towns.xml,v 1.70 2005/11/24 09:45:19 anton Exp $
 				Export   			= "TRUE"
 				PriceDynamic 			= "1"
 				MinCount			= "0"
-				MaxCount			= "45"
+				MaxCount			= "1"
 				RegenerationPeriod		= "400"
 			/>
 

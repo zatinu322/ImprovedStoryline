@@ -782,7 +782,7 @@
 
 	<Reply
 		name="Dlg_npc_002824"
-		text="So you're the enterprising volunteer who helps us smoke out the locals? Well, you're not bad."
+		text="So you're the enterprising volunteer who is helping us to smoke out the locals? Well, you're not bad."
 		role="NPC"
 		scriptCondition="QuestStatus('TortSera_Quest3')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_002845" />
@@ -831,7 +831,7 @@
 
 	<Reply
 		name="Dlg_npc_002825"
-		text="Masterfully done. And how he slowly went to the bottom - look at that beautifulness!"
+		text="Masterfully done. And how slowly it went to the bottom - look at that beautifulness!"
 		role="NPC"
 		scriptCondition="QuestStatus('KillStar2_Quest6')==Q_TAKEN"
 		scriptResult="CompleteQuest('KillStar2_Quest6');"
@@ -845,7 +845,7 @@
 
 	<Reply
 		name="Dlg_npc_002853"
-		text="There she is, alive and well. Take our thanks and 150000 coins as a reward. We've opened the bridge, the pillboxes won't attack you. I don't know what you want to find there, but good luck! I hope you do not regret your efforts."
+		text="There she is, alive and well. Take our thanks and 150000 coins as a reward. We've opened the bridge, the pillboxes won't attack you. I don't know what you want to find there, but good luck! I hope you won't regret your efforts."
 		role="NPC"
 		nextReplies="Dlg_pl_002854" />
 
@@ -883,7 +883,7 @@
 
 	<Reply
 		name="Dlg_npc_002858"
-		text="My life?! I had a plan of escape worked out from the very first day I was in this town! I had everything under control, I would have had help from the locals who were disgruntled with the Adept regime! But you killed them all. What can I say, good for you, you solved the problem! I'm disgusted to even look at you!"
+		text="Lesser evil?! I had a plan of escape worked out from the very first day I was in this town! I had everything under control, I would have had help from the locals who were disgruntled with the Adept regime! But you killed them all. What can I say, good for you, you solved the problem! I'm disgusted to even look at you!"
 		role="NPC"
 		nextReplies="Dlg_pl_002859" />
 
@@ -895,7 +895,7 @@
 
 	<Reply
 		name="Dlg_npc_002860"
-		text="Shut up! That's enough of that. My car won't start, I think a component of the engine is out of order becouse of the cold, so I'll go with you. I need to think it over, so don't even try to talk to me, I still haven't forgiven you. And I don't think I ever will... Finish your mug and come over. I'll be waiting for you in the car."
+		text="Shut up! That's enough of that. My car won't start, I think some component of the engine is out of order becouse of the cold, so I'll go with you. I need to think it over, so don't even try to talk to me, I still haven't forgiven you. And I don't think I ever will... Finish your mug and come over. I'll be waiting for you in the car."
 		role="NPC"
 		nextReplies="Dlg_pl_002861" />
 
@@ -939,7 +939,7 @@
 
 	<Reply
 		name="Dlg_pl_002867"
-		text="What?! Are you serious?! I have enough trouble deciding to kill unarmed and innocent people, and now you want me to drown them"
+		text="What?! Are you serious?! I have enough trouble deciding to kill unarmed and innocent people, and now you want me to drown them?!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002868" />
 
@@ -1209,7 +1209,7 @@
 
 	<Reply
 		name="Dlg_npc_002981"
-		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him come back. I was like, &quot;Why the hell would he want to go there, there's nothing but an abandoned farmhouse,&quot; but I didn't think much of it."
+		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him coming back. I was like, &quot;Why the hell would he want to go there, there's nothing but an abandoned farmhouse,&quot; but I didn't think much of it."
 		role="NPC"
 		nextReplies="Dlg_pl_002982" />
 
@@ -1303,7 +1303,7 @@
 
 	<Reply
 		name="Dlg_pl_003179"
-		text="How's that? Krai, Gloohoe, Lisa... You and me on the road..."
+		text="How's that? Krai, Glukhoe, Lisa... You and me on the road..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003180" />
 
@@ -1321,7 +1321,7 @@
 
 	<Reply
 		name="Dlg_npc_003182"
-		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him come back. I was like, &quot;Why the hell would he want to go there, there's nothing but an abandoned farmhouse,&quot; but I didn't think much of it."
+		text="Let me remember. I think Tikhomir passed in that direction two days ago, but I didn't see him coming back. I was like, &quot;Why the hell would he want to go there, there's nothing but an abandoned farmhouse,&quot; but I didn't think much of it."
 		role="NPC"
 		nextReplies="Dlg_pl_003183" />
 
@@ -1579,7 +1579,7 @@
 		name="Dlg_pl_002944"
 		text="Goodbye, good luck to you!"
 		role="PLAYER"
-		scriptResult="AddQuestItem('quest_labelle_scrap'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_labelle_scrap'); SetWeather(1); EndConversation()" />
+		scriptResult="AddQuestItem('quest_labelle_scrap'); AddFadingMsgByStrIdFormatted( 'fm_player_add_thing', 'quest_labelle_scrap'); SetWeather(0); EndConversation()" />
 <!--Root/r5m2/Поиски Доброславы-->
 	<Reply
 		name="Dlg_npc_002945"
@@ -2155,7 +2155,7 @@
 
 	<Reply
 		name="Dlg_npc_003354"
-		text="I knew he was still doing it! You didn't help him, did you?"
+		text="I knew that he is still doing it! You didn't help him, did you?"
 		role="NPC"
 		nextReplies="Dlg_pl_003355" />
 
@@ -2388,7 +2388,7 @@
 
 	<Reply
 		name="Dlg_pl_003084"
-		text="What about the attack on Gloohoe? Was it your order?"
+		text="What about the attack on Glukhoe? Was it your order?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003085" />
 
@@ -5790,7 +5790,7 @@
 		name="Dlg_pl_000474"
 		text="Difficulties don't scare me!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromVillage');   EndConversation()" />
+		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromVillage'); EndConversation()" />
 
 	<Reply
 		name="RecruiterInAR_hellodlg3"
@@ -5827,7 +5827,7 @@
 		name="Dlg_pl_000480"
 		text="Yes, sir!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromKaravanSNG');   EndConversation()" />
+		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromKaravanSNG'); EndConversation()" />
 
 	<Reply
 		name="RecruiterInAR_hellodlg4"
@@ -16726,7 +16726,7 @@
 
 	<Reply
 		name="Dlg_pl_001483"
-		text="What a nonsense! And what if a person isn't ready yet? Like one of my friends in Gloohoe! It's his fortieth fall, and still no mind, no responsibility!"
+		text="What a nonsense! And what if a person isn't ready yet? Like one of my friends in Glukhoe! It's his fortieth fall, and still no mind, no responsibility!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001484" />
 
@@ -17348,7 +17348,7 @@
 
 	<Reply
 		name="Buyer_hellodlg0_P1"
-		text="Good afternoon, Sergo. I have this package for you. Regular delivery from the Gloohoe village."
+		text="Good afternoon, Sergo. I have this package for you. Regular delivery from the Glukhoe village."
 		role="PLAYER"
 		nextReplies="Buyer_hellodlg0_1" />
 
@@ -17594,7 +17594,7 @@
 
 	<Reply
 		name="HurdTrucker_hellodlg0_P1"
-		text="Gloohoe... There was a terrible massacre. No one survived."
+		text="Glukhoe... There was a terrible massacre. No one survived."
 		role="PLAYER"
 		nextReplies="HurdTrucker_hellodlg0_1" />
 
@@ -17720,13 +17720,13 @@
 
 	<Reply
 		name="Dlg_npc_001403"
-		text="A local gangster authority, Felix. I saw him and his fighters passing in the direction of Gloohoe."
+		text="A local gangster authority, Felix. I saw him and his fighters passing in the direction of Glukhoe."
 		role="NPC"
 		nextReplies="Dlg_pl_001404 Dlg_pl_003003" />
 
 	<Reply
 		name="Dlg_pl_003003"
-		text="Felix... I ran into him near the big stone archway as he was coming back from Gloohoe. Yesterday I had helped a stranger girl to go around all the local villages, and he didn't like it very much. He demanded a fee from me, and I had to give him the money. Maybe he was the one who attacked my village before that."
+		text="Felix... I ran into him near the big stone archway as he was coming back from Glukhoe. Yesterday I had helped a stranger girl to go around all the local villages, and he didn't like it very much. He demanded a fee from me, and I had to give him the money. Maybe he was the one who attacked my village before that."
 		role="PLAYER"
 		scriptCondition="GetVar('FelixChoise').AsInt==3"
 		scriptResult="SetVar('FelixChoise',4)"
@@ -17740,7 +17740,7 @@
 
 	<Reply
 		name="Dlg_pl_001404"
-		text="Felix... I ran into him near the big stone archway as he was coming back from Gloohoe. Yesterday I had helped a stranger girl to go around all the local villages, and he didn't like it very much. He demanded a fee from me, and when I refused to pay, he attacked me. I managed to overpower him, but he said he would have his revenge."
+		text="Felix... I ran into him near the big stone archway as he was coming back from Glukhoe. Yesterday I had helped a stranger girl to go around all the local villages, and he didn't like it very much. He demanded a fee from me, and when I refused to pay, he attacked me. I managed to overpower him, but he said he would have his revenge."
 		role="PLAYER"
 		scriptCondition="GetVar('FelixChoise').AsInt==0"
 		scriptResult="SetVar('FelixChoise',3)"
@@ -17900,13 +17900,13 @@
 
 	<Reply
 		name="HurdTrucker_hellodlg2_P1"
-		text="You were right, Felix had nothing to do with the destruction of Gloohoe. I didn't kill him, but he won't bother you anymore. Thank you especially for the weapon. I wouldn't survive without it."
+		text="You were right, Felix had nothing to do with the destruction of Glukhoe. I didn't kill him, but he won't bother you anymore. Thank you especially for the weapon. I wouldn't survive without it."
 		role="PLAYER"
 		nextReplies="HurdTrucker_hellodlg2_1" />
 
 	<Reply
 		name="HurdTrucker_hellodlg2_P1_1"
-		text="I don't know. My father's last words were about not letting hate rule your actions. But Felix told me that the only witness of the Gloohoe attack had gone north. I could follow her and find out who is really to blame."
+		text="I don't know. My father's last words were about not letting hate rule your actions. But Felix told me that the only witness of the Glukhoe attack had gone north. I could follow her and find out who is really to blame."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001419" />
 

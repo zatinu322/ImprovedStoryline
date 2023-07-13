@@ -153,7 +153,7 @@
 		<script>
 			if IsQuestItemPresent( "quest_explosion_stone" ) then
 				RemoveQuestItem( "quest_explosion_stone" )
-				AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_explosion_stone")
+				AddFadingMsgByStrIdFormatted( "fm_player_use_thing", "quest_explosion_stone")
 				local zrb=getObj("ZoneRobots")
 				if zrb then
 					zrb:Remove()

@@ -61,13 +61,13 @@
 
 	<!-- Ролик подьезда к конвою лидера экстримистов -->
 	<Path Name = "Caravan_cam00">                         
-		<Point  coord="10.000 6.500 -20.000"/>
-		<Point  coord="10.000 7.500 -10.000"/>
+		<Point  coord="10.000 6.500 -30.000"/>
+		<Point  coord="10.000 7.500 -20.000"/>
 	</Path>
 
 	<Path Name = "Caravan_cam01">                         
-		<Point  coord="10.000 4.500 -30.000"/>
-		<Point  coord="10.000 5.500 -20.000"/>
+		<Point  coord="-10.000 4.500 -30.000"/>
+		<Point  coord="-10.000 5.500 -20.000"/>
 	</Path>
 
 	<Path Name = "Caravan_cam02">                         
@@ -76,8 +76,8 @@
 	</Path>
 
 	<Path Name = "Caravan_cam03">                         
-		<Point  coord="4.000 9.500 -30.000"/>
-		<Point  coord="4.000 3.000 -20.000"/>
+		<Point  coord="-30.000 9.500 -30.000"/>
+		<Point  coord="-30.000 5.000 -20.000"/>
 	</Path>
 
 	<!-- Перед захватом Склада вместе с ТСП -->

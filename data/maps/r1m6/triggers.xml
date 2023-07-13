@@ -327,7 +327,7 @@
 	</trigger>
 
 	<trigger Name="trCaravanToHomeINPLACE" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="SerHome_loc" />
+		<event eventid="GE_TARGET_REACHED" ObjName="Serafima"/>
 		<script>
 			TDeactivate( "trCaravanToHomeDIE" )
 			TDeactivate( "trCaravanToHomeLength" )

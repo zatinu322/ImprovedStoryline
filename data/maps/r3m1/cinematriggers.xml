@@ -872,6 +872,17 @@
 	<trigger Name="trRescuePeople_cam01" active="0">
  		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
+			local RescVeh = CreateTeam('RescueCars',1064,CVector(getPos('RescueCiv_loc')),{'DemoMolokovoz1','r1m1_bug02'})
+			
+			if RescVeh:GetVehicle(0) then
+				RescVeh:GetVehicle(0):SetGamePositionOnGround( CVector(1790.302, 249.817, 1177.060))
+				RescVeh:GetVehicle(0):SetRotation(Quaternion(-0.000, 0.689, 0.000, 0.725))
+			end
+			
+			if RescVeh:GetVehicle(1) then
+				RescVeh:GetVehicle(1):SetGamePositionOnGround( CVector(1838.534, 256.242, 1208.368))
+				RescVeh:GetVehicle(1):SetRotation(Quaternion(-0.082, 0.990, -0.103, 0.053))
+			end
 
 			local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
 			local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
@@ -1023,6 +1034,7 @@
 			TDeactivate("trRescuePeople_cam03")
 			TDeactivate("trShootingOnPeople")
 			TDeactivate("trShooting")
+			TActivate("trRescArmyDie")
 			SetCameraBehindPlayerVehicle()
 			RestoreAllToleranceStatus()
 			TakeQuest("r3m1_RescueUlukCivil_RepelAttack")

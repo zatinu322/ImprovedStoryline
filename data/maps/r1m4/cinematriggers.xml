@@ -474,9 +474,9 @@
 			local LiderID = Lider:GetId()
 
 			FlyLinked( "Caravan_cam00", BandID , 7, 1, 0, vehPID, nil, true, nil, nil )
-			FlyLinked( "Caravan_cam01", vehPID , 6, 0, 0, LiderID, nil, true, nil, true )
-			FlyLinked("Caravan_cam02", LiderID, 17, 0, 0, LiderID, nil, true, nil, true )
-			FlyLinked("Caravan_cam03", vehPID, 18, 0, 1, vehPID, nil, true, nil, true )
+			FlyLinked( "Caravan_cam01", vehPID , 6, 0, 0, LiderID, nil, true, nil, nil )
+			FlyLinked("Caravan_cam02", LiderID, 17, 0, 0, LiderID, nil, true, nil, nil )
+			FlyLinked("Caravan_cam03", vehPID, 18, 0, 1, LiderID, nil, true, nil, nil )
 			StartCinematic()
 
 			AddCinematicMessage( 4, 1 )

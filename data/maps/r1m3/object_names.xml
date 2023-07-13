@@ -386,5 +386,9 @@
 
 	<Object
 		Name="r1m3_Circus_1"
-		FullName="Öåíòð Ðàçâëå÷åíèé" />
+		FullName="ÖÅÍÒÐ ÐÀÇÂËÅ×ÅÍÈÉ" />
+
+	<Object
+		Name="r1m3_Circus_1_enter"
+		FullName="ÖÅÍÒÐ ÐÀÇÂËÅ×ÅÍÈÉ" />
 </ObjectNames>

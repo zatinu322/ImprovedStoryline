@@ -386,5 +386,9 @@
 
 	<Object
 		Name="r1m3_Circus_1"
-		FullName="Entertainment Center" />
+		FullName="ENTERTAINMENT CENTER" />
+
+	<Object
+		Name="r1m3_Circus_1_enter"
+		FullName="ENTERTAINMENT CENTER" />
 </ObjectNames>

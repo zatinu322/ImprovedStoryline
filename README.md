@@ -19,6 +19,7 @@
 - [Известные проблемы и способы их решения](#bugs_rus)
 - [Предыдущие версии](#previous_versions_rus)
 - [Контакты автора](#contacts_rus)
+- [Лицензирование](#licensing_rus)
 
 <a id="description_rus"></a>
 
@@ -167,6 +168,8 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 </div>
 
+<a id="licensing_rus"></a>
+
 # Лицензирование:
 
 Проект распространяется в полном виде только на Github.com. Распространение файлов на других сайтах посторонними людьми не разрешено.
@@ -196,6 +199,7 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 - [Troubleshooting](#bugs_eng)
 - [Previous versions](#previous_versions_eng)
 - [Contacts](#contacts_eng)
+- [Licensing](#licensing_eng)
 
 <a id="description_eng"></a>
 
@@ -331,6 +335,8 @@ Special thanks to [Suslo Red](https://github.com/SusloRed), [Varisane](https://g
   </a>
 
 </div>
+
+<a id="licensing_eng"></a>
 
 # Licensing:
 

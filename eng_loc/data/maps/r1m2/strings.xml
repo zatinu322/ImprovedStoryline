@@ -19,8 +19,8 @@
 
 	<string
 		id="21"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|You saved me, stranger!!"
@@ -36,8 +36,8 @@
 
 	<string
 		id="23"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|Thank him? For the fact that he, knowing about these bandits, still sent me on a trip? No way!"
@@ -53,8 +53,8 @@
 
 	<string
 		id="25"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|What were you promised for my survival?"
@@ -70,8 +70,8 @@
 
 	<string
 		id="27"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|Ben, is it? In that case, Stryga fooled you. Anyone who lives around these area knows about his place!"
@@ -87,8 +87,8 @@
 
 	<string
 		id="29"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|Sure. Go down the hill where Midgard stands, and you'll see a little hut. That's Ben's place. There's only one house there, so you can't miss it."
@@ -104,8 +104,8 @@
 
 	<string
 		id="211"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|You're welcome. It's the least I can do for saving my life."
@@ -121,8 +121,8 @@
 
 	<string
 		id="213"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|All of it. But that's not your problem anymore. Not even mine. I think this is my last trip for this trader."
@@ -138,8 +138,8 @@
 
 	<string
 		id="215"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|I'm going to try my luck in the Eastern. They say there will soon be regular caravans from there to the Sowth. It would be foolish to miss such an opportunity."
@@ -155,8 +155,8 @@
 
 	<string
 		id="217"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|If I ever get into the Sowth, I'll be sure to tell them how you saved my life."
@@ -172,8 +172,8 @@
 
 	<string
 		id="219"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="CARAVANNER MADS|I will. All right, I'll take it from here."
@@ -244,7 +244,7 @@
 		id="88056"
 		modelName="mask_hero"
 		sound=""
-		value="What?! How did I get here?! The last thing I remember was drinking tea at Grandma's house..."
+		value="What?! How did I get here?! The last thing I remember is that I was drinking tea at Grandma's house..."
 		time="7" />
 
 	<string
@@ -372,7 +372,7 @@
 
 	<string
 		id="5964"
-		value="Password for the bonus ending: **w************|For more information, read the mod's manual." />
+		value="Password for the bonus ending: **w************|For more information, read the mod's manual on GitHub." />
 	<string
 		id="5963"
 		modelName="mask_hero"
@@ -448,7 +448,7 @@
 	
 	<string
 		id="5970"
-		value="Password for the bonus ending: ***x***********|For more information, read the mod's manual." />
+		value="Password for the bonus ending: ***x***********|For more information, read the mod's manual on GitHub." />
 
     <string
 		id="5971"

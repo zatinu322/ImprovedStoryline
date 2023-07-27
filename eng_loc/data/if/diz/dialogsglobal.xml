@@ -397,7 +397,7 @@
 
 	<Reply
 		name="Dlg_npc_002779"
-		text="Thank you so much for saving Seraphima! They didn't manage to hurt her and she's fine. The fact that she found the blueprints is wonderful! But there's some bad news as well..."
+		text="Thank you so much for saving Serafima! They didn't manage to hurt her and she's fine. The fact that she found the blueprints is wonderful! But there's some bad news as well..."
 		role="NPC"
 		scriptCondition="QuestStatus('SerafimaHome2')==Q_TAKEN and GetVar('Serafima').AsInt == 1"
 		scriptResult="CompleteQuest('SerafimaHome2')"
@@ -669,7 +669,7 @@
 
 	<Reply
 		name="Dlg_npc_002821"
-		text="And we will do it. The plan is as follows: first he arrives in Moska in my car and activates the detonator, and then you and the locals clean up the surviving soldiers of the adepts. Don't worry about the captured civilians: tonight Dimitry and Seraphima will evacuate all the civilians and prisoners. We leave tomorrow. In the meantime, we'd better get some rest."
+		text="And we will do it. The plan is as follows: first he arrives in Moska in my car and activates the detonator, and then you and the locals clean up the surviving soldiers of the adepts. Don't worry about the captured civilians: tonight Dimitry and Serafima will evacuate all the civilians and prisoners. We leave tomorrow. In the meantime, we'd better get some rest."
 		role="NPC"
 		nextReplies="Dlg_pl_002822" />
 
@@ -4482,13 +4482,13 @@
 
 	<Reply
 		name="Dlg_pl_003246"
-		text="I've got a problem: I fell out with Oracle Disciple's clan..."
+		text="I've got a problem: I fell out with Oracle's Disciples clan..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003247" />
 
 	<Reply
 		name="Dlg_npc_003247"
-		text="You did a hard job making Oracle Disciple's hate you! I have a couple of acquaintances among them so I may be able to improve your reputation a bit for mere 15 percent of your money."
+		text="You did a hard job making Oracle's Disciples hate you! I have a couple of acquaintances among them so I may be able to improve your reputation a bit for mere 15 percent of your money."
 		role="NPC"
 		nextReplies="Dlg_pl_003248 Dlg_pl_003249" />
 
@@ -5654,7 +5654,7 @@
 
 	<Reply
 		name="Dlg_pl_000452"
-		text="I was told that here I could find work and answers to my questions."
+		text="I was told that here I can find work and answers to my questions."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000453" />
 
@@ -5666,7 +5666,7 @@
 
 	<Reply
 		name="Dlg_pl_000454"
-		text="I am new here, coming from the east. I have been told much of the exploits of your leader, Axel."
+		text="I am new here, come from the east. I have been told much of the exploits of your leader, Axel."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000455" />
 
@@ -6029,7 +6029,7 @@
 
 	<Reply
 		name="Dlg_npc_000495"
-		text="We sre having some doubts: you're bringing big changes with you. Some people are suggesting that you should be killed right now. But I think you should live. In other words, opinions are divided. "
+		text="We are having some doubts: you're bringing big changes with you. Some people are suggesting that you should be killed right now. But I think you should live. In other words, opinions are divided. "
 		role="NPC"
 		nextReplies="Dlg_pl_000496" />
 
@@ -6128,7 +6128,7 @@
 
 	<Reply
 		name="Dlg_npc_002172"
-		text="Don't anger the gods, we don't have her! When she learned that the war would soon be over, she hurriedly packed her things and left."
+		text="Don't anger the gods, we don't have her! When she found out that the war would soon be over, she hurriedly packed her things and left."
 		role="NPC"
 		nextReplies="Dlg_pl_002173" />
 
@@ -6146,7 +6146,7 @@
 
 	<Reply
 		name="Dlg_pl_002175"
-		text="Sel, you say... Well, now she can't hide from me!"
+		text="Sel, you say... Well, now she won't hide from me!"
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'r2m2_ToLisaToMonastir' ); TakeQuest( 'r2m2_FindLisAfterAxelAndFatherDie_Quest' );   EndConversation()" />
 
@@ -6252,7 +6252,7 @@
 
 	<Reply
 		name="Dlg_pl_000516"
-		text="I no longer belong in the Crimson Dawn. I am a fugitive now too. Get in, I'll take you to your allies."
+		text="I no longer belong to Crimson Dawn. I am a fugitive now too. Get in, I'll take you to your allies."
 		role="PLAYER"
 		scriptResult="FailQuest( 'r2m2_ToKillAllSNGPeople' ); TActivate('LAGERNOWAR'); GetCurNpc():SetSpokenCount( 1 ); AddQuestItem('SNGSpy_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'SNGSpy_P'); EndConversation()" />
 
@@ -6308,7 +6308,7 @@
 
 	<Reply
 		name="Dlg_pl_000522"
-		text="This information is too important to entrust to a mere agent. There are traitors everywhere: I can only trust the most important people. What I know will decide the outcome of the war!"
+		text="This information is too important to entrust to a mere agent. There are traitors everywhere: I can only trust the most important people. What I know will decide the result of the war!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000523" />
 
@@ -10296,7 +10296,7 @@
 
 	<Reply
 		name="Dlg_pl_003005"
-		text="The Entertainment Center?! But I was told in Pesht that it was working! I also paid money to have the way there drawn on the map."
+		text="The Entertainment Center?! But I was told in Pesht that it is working! I also paid money for the way there drawn on my map."
 		role="PLAYER"
 		scriptCondition="QuestStatus('r1m3_CrazyManQuest')==Q_TAKEN"
 		nextReplies="Dlg_npc_003006" />

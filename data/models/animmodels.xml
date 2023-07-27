@@ -535,6 +535,14 @@
 		trans="0"
 		composite="0" />
 
+	<model
+		id="r5_man"
+		file="data\models\Masks\Region1\man\r5_man.gam"
+		shadow="1"
+		windwavy="0"
+		trans="0"
+		composite="0" />
+
 
 
 

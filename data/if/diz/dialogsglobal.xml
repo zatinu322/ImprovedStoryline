@@ -15399,7 +15399,7 @@
 
 	<Reply
 		name="Dlg_npc_002478"
-		text="» когда мы доплыли до јржана, мы со стариками попрощались, и € сразу поехала к сюда!"
+		text="» когда мы доплыли до јржана, мы со стариками попрощались, и € сразу поехала сюда!"
 		role="NPC"
 		scriptCondition="IsQuestComplete('BenGoodEnd') and GetCurNpc():GetSpokenCount() == 3 "
 		nextReplies="Dlg_pl_002479" />

@@ -15,7 +15,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_2_cd_officer_radio.ogg"
-		value="RADIO|Then we'll strike another place. Remember, your job is to hold out as long as possible, not burn down the village. Do it."
+		value="RADIO|Then we'll strike another place. Remember, your job is to endure as long as possible, not burn down the village. Do it."
 		time="8" />
 
 	<string
@@ -408,11 +408,11 @@
 
 	<string
 		id="8809"
-		value="Password for the bonus ending: ***********a***|For more information, read the mod's manual." />
+		value="Password for the bonus ending: ***********a***|For more information, read the mod's manual on GitHub." />
 
 	<string
 		id="8812"
-		value="Password for the bonus ending: ************T**|For more information, read the mod's manual." />
+		value="Password for the bonus ending: ************T**|For more information, read the mod's manual on GitHub." />
 	
 	<string
 		id="8813"

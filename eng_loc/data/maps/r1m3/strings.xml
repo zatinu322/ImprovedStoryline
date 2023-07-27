@@ -363,7 +363,7 @@
 		id="378"
 		modelName="mask_hero"
 		sound=""
-		value="It says about some place at the end... An iron bird on the swamps... I think I saw something like that out of the corner of my eye when I drove to the Sea Gate. Thanks for the info!"
+		value="It says about some place at the end... An iron bird on the swamps... I think I saw something like that out of the corner of my eye when I drove to the Sea Gate. Thanks for the information!"
 		time="12" />
 
 	<string
@@ -614,7 +614,7 @@
 		id="8810"
 		modelName="mask_hero"
 		sound=""
-		value="Damn it, the Oracle isn't inside. It seems to be just one of its remote modules. I need to get the blocker to the Overlord as soon as possible! I'll better sail through Argen, it'll be much faster."
+		value="Damn it, the Oracle isn't inside. It seems to be just one of it's remote modules. I need to get the blocker to the Overlord as soon as possible! I'll better sail through Argen, it'll be much faster."
 		time="15" />
 
 	<string
@@ -663,11 +663,11 @@
 
 	<string
 		id="5966"
-		value="Password for the bonus ending: ****X**********|For more information, read the mod's manual." />
+		value="Password for the bonus ending: ****X**********|For more information, read the mod's manual on GitHub." />
 		
 	<string
 		id="5967"
-		value="Password for the bonus ending: *****c*********|For more information, read the mod's manual." />
+		value="Password for the bonus ending: *****c*********|For more information, read the mod's manual on GitHub." />
 
 	<string
 		id="9999"

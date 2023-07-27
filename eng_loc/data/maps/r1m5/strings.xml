@@ -66,8 +66,8 @@
 
 	<string
 		id="9"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="84"
 		modelSlot="1"
 		value="TIKHOMIR|No way! We won't go back to them! We'd better die!"
@@ -84,8 +84,8 @@
 
 	<string
 		id="11"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="84"
 		modelSlot="1"
 		value="TIKHOMIR|Kind and friendly... Of course... They are walking silhouettes with no thoughts or goals of their own, ruled by a quintet of these monsters. But I will get Dobroslava out of this place. I must save at least her."
@@ -102,8 +102,8 @@
 
 	<string
 		id="13"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="84"
 		modelSlot="1"
 		value="TIKHOMIR|I didn't expect you to understand. You're an outsider. You only see what you want to see. And what they let you see."
@@ -120,8 +120,8 @@
 
 	<string
 		id="15"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="84"
 		modelSlot="1"
 		value="TIKHOMIR|I'm looking at your car and realising that I can't beat you. But I won't give up without a fight! I'll do anything to protect her. Let this murder be on your conscience, but I will die without regret."
@@ -138,8 +138,8 @@
 
 	<string
 		id="17"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="84"
 		modelSlot="1"
 		value="TIKHOMIR|I tried... I really tried... May the gods protect me... Fight!"
@@ -172,8 +172,8 @@
 
 	<string
 		id="20"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="84"
 		modelSlot="1"
 		value="TIKHOMIR|Thank you, stranger. I don't know who you are and what you're looking for in these cursed places, but I hope you find it. Farewell, and may the gods protect you."

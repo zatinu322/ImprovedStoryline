@@ -91,14 +91,14 @@
 	<string
 		id="12"
 		modelName="mask_hero"
-		value="I made a deal with your men that I would free you in exchange for the one thing I needed. And they had better hold up their part of the bargain!"
+		value="I made a deal with your men that I would free you in exchange for the one thing I need. And they had better hold up their part of the bargain!"
 		sound="data\sounds\Speech\r1m4\r1m4_12_hero.ogg"
 		time="4" />
 
 	<string
 		id="13"
 		modelName="mask_hero"
-		value="Unfortunately, the prisoner's trailer got exploded in the heat of the moment. He's dead, and I have nothing to offer the extremists..."
+		value="Unfortunately, the prisoner's trailer got exploded in the heat of the moment. He's dead, and I have nothing to offer to the extremists..."
 		sound="data\sounds\Speech\r1m4\r1m4_13_hero.ogg"
 		time="4" />
 
@@ -499,13 +499,13 @@
 
 	<string
 		id="5963"
-		value="Password for the bonus ending: ******z********|For more information, read the mod's manual." />
+		value="Password for the bonus ending: ******z********|For more information, read the mod's manual on GitHub." />
 	<string
 		id="5964"
-		value="Password for the bonus ending: *******Q*******|For more information, read the mod's manual." />
+		value="Password for the bonus ending: *******Q*******|For more information, read the mod's manual on GitHub." />
 	<string
 		id="5965"
-		value="Password for the bonus ending: ********v******|For more information, read the mod's manual." />
+		value="Password for the bonus ending: ********v******|For more information, read the mod's manual on GitHub." />
 
 	<string
 		id="5968"

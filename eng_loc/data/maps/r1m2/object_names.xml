@@ -274,7 +274,7 @@
 
 	<Object
 		Name="Director"
-		FullName="Collosseum Director" />
+		FullName="Colosseum Director" />
 
 	<Object
 		Name="Antisincer"
@@ -430,9 +430,9 @@
 
 	<Object
 		Name="Librarian"
-		FullName="Old man Dod" />
+		FullName="Old Man Dod" />
 
 	<Object
 		Name="Librarian1"
-		FullName="Old man Dod" />
+		FullName="Old Man Dod" />
 </ObjectNames>

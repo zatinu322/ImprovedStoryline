@@ -994,7 +994,7 @@
 	<Item
 		id="SeraFighter01"
 		locForm="0"
-		value="Seraphima" />
+		value="Serafima" />
 
 	<Item
 		id="Fighter01"
@@ -1059,7 +1059,7 @@
 	<Item
 		id="SeraTraktor01"
 		locForm="0"
-		value="Seraphima" />
+		value="Serafima" />
 
 	<Item
 		id="Tank01"
@@ -1955,7 +1955,7 @@
 	<Item
 		id="StarDod_P"
 		locForm="0"
-		value="Old man Dod" />
+		value="Old Man Dod" />
 
 	<Item
 		id="KonniBlade_P"
@@ -2025,7 +2025,7 @@
 	<Item
 		id="Odett_hunter"
 		locForm="0"
-		value="Odett" />
+		value="Odette" />
 
 	<Item
 		id="Belaz"

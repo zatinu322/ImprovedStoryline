@@ -233,9 +233,6 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(1517.705, 292, 2445.091), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(1526.627, 292, 2444.976), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 
-			local fuelst = GetEntityByName("PetrolStationTown2")
-			if fuelst then fuelst:SetRuined( true ) end
-
 			CreateNewDummyObject("segments_big_02", "FStRuins2", -1, -1, CVector(1521.933, 292.000, 2432.144), Quaternion(0.0000, -0.2143, 0.0000, 0.9768), 0)
 			CreateNewDummyObject("segments_big_03", "FStRuins3", -1, -1, CVector(1487.419, 291.801, 2391.893), Quaternion(0.0187, 0.0447, 0.2582, 0.9649), 0)
 			CreateNewDummyObject("segments_big_04", "FStRuins4", -1, -1, CVector(1534.876, 292.019, 2411.714), Quaternion(0, 0, 0, 1), 0)
@@ -271,6 +268,16 @@
 			TActivate("EretFriendDIE")
 
 			TakeQuest("Eretik_Friend")
+
+			local fuelst = GetEntityByName("PetrolStationTown2")
+			if fuelst then fuelst:SetRuined( true ) end
+
+			-- SetRuined не работает на _enter заправок, поэтому костылим вот это
+			local fuel_ent = GetEntityByName("PetrolStationTown64_enter")
+			if fuel_ent then
+				fuel_ent:SetProperty("Pos", "1490.003 294.029 2411.334")
+				fuel_ent:SetProperty("Radius", "0.1")
+			end
 
 			trigger:Deactivate()
 		</script>

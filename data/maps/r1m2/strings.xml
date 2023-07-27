@@ -19,8 +19,8 @@
 
 	<string
 		id="21"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Ты спас меня, незнакомец!!"
@@ -36,8 +36,8 @@
 
 	<string
 		id="23"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Благодарить? За то, что он, зная про этих бандитов, всё равно отправил меня в рейс? Ни за что!"
@@ -53,8 +53,8 @@
 
 	<string
 		id="25"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Что тебе пообещали за моё спасение?"
@@ -70,8 +70,8 @@
 
 	<string
 		id="27"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Бена, что ли? В таком случае Стрыга тебя обдурил. Да о его жилище любой житель этих краёв знает!"
@@ -87,8 +87,8 @@
 
 	<string
 		id="29"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Конечно. Спустись со склона, на котором стоит Мидгард, и увидишь маленькую хижину. Это и есть жилище Бена. Домик там один, не перепутаешь."
@@ -104,8 +104,8 @@
 
 	<string
 		id="211"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Не за что. Это меньшее, что я могу сделать за моё спасение."
@@ -121,8 +121,8 @@
 
 	<string
 		id="213"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Да, ничего не уцелело. Но это уже не твоя проблема. И даже не моя. Думаю, это мой последний рейс для этого торговца."
@@ -138,8 +138,8 @@
 
 	<string
 		id="215"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Попытаю счастья в Восточном. Говорят, что скоро оттуда будут регулярно ходить караваны в Южный. Было бы глупо упускать такую возможность."
@@ -155,8 +155,8 @@
 
 	<string
 		id="217"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Значит, если меня занесёт в Южный, я обязательно расскажу им, как ты спас мне жизнь."
@@ -172,8 +172,8 @@
 
 	<string
 		id="219"
-		modelName="r1_man"
-		modelSkin="4"
+		modelName="r5_man"
+		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
 		value="КАРАВАНЩИК МАДС|Обязательно. Ну всё, дальше я сам."
@@ -372,7 +372,7 @@
 
 	<string
 		id="5964"
-		value="Пароль для бонусной концовки: **w************|Более подробная информация содержится в мануале к моду." />
+		value="Пароль для бонусной концовки: **w************|Более подробная информация содержится в мануале к моду на GitHub." />
 	<string
 		id="5963"
 		modelName="mask_hero"
@@ -448,7 +448,7 @@
 	<!-- Нормальная концовка -->
 	<string
 		id="5970"
-		value="Пароль для бонусной концовки: ***x***********|Более подробная информация содержится в мануале к моду." />
+		value="Пароль для бонусной концовки: ***x***********|Более подробная информация содержится в мануале к моду на GitHub." />
 
     <string
 		id="5971"

@@ -3212,8 +3212,8 @@
 				Name="BratislavVolozh"
 				Belong="1090"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
+				ModelName="r5_man"
+				skin="0"
 				cfg="142"
 				helloReplyNames="Dlg_npc_003342"
 				SpokenCount="0" />
@@ -3222,8 +3222,8 @@
 				Name="IeronimFarm"
 				Belong="1090"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="5"
+				ModelName="r5_man"
+				skin="2"
 				cfg="12"
 				helloReplyNames="Dlg_npc_003060"
 				SpokenCount="0" />
@@ -3728,8 +3728,8 @@
 				Name="Muzhik3"
 				Belong="1090"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
+				ModelName="r5_man"
+				skin="1"
 				cfg="22"
 				helloReplyNames="Dlg_npc_002945"
 				SpokenCount="0" />
@@ -3743,8 +3743,8 @@
 				Name="DobroslavaFather"
 				Belong="1090"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
+				ModelName="r5_man"
+				skin="1"
 				cfg="190"
 				helloReplyNames="Dlg_npc_002951 Dlg_npc_002963"
 				SpokenCount="0" />
@@ -9345,8 +9345,8 @@
 				Name="BratislavRinolsk"
 				Belong="1090"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
+				ModelName="r5_man"
+				skin="0"
 				cfg="142"
 				helloReplyNames="Dlg_npc_003303 Dlg_npc_003318"
 				SpokenCount="0" />
@@ -9767,7 +9767,7 @@
 				ModelName="r1_woman"
 				skin="1"
 				cfg="92"
-				helloReplyNames="Dlg_npc_002886 Dlg_npc_002933 Dlg_npc_002939"
+				helloReplyNames="Dlg_npc_002886 Dlg_npc_002933"
 				SpokenCount="0" />
 		</Object>
 

@@ -1228,6 +1228,10 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
+			id="r5_man"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="mine_01"
 			file="data\models\AnimModels.xml" />
 

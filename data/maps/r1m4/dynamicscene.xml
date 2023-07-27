@@ -80,8 +80,8 @@
 				Name="TikhomirInSorrow1"
 				Belong="1010"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
+				ModelName="r5_man"
+				skin="1"
 				cfg="84"
 				helloReplyNames="Dlg_npc_003256"
 				SpokenCount="0" />
@@ -90,8 +90,8 @@
 				Name="Kartograph1"
 				Belong="1010"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
+				ModelName="r5_man"
+				skin="0"
 				cfg="180"
 				helloReplyNames="Dlg_npc_003014"
 				SpokenCount="0" />
@@ -646,8 +646,8 @@
 				Name="Olme_Bar_Customer3"
 				Belong="1085"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="5"
+				ModelName="r5_man"
+				skin="2"
 				cfg="110"
 				helloReplyNames="Dlg_npc_002677 Dlg_npc_002692"
 				SpokenCount="0" />
@@ -1091,8 +1091,8 @@
 				Name="TikhomirInSorrow"
 				Belong="1085"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
+				ModelName="r5_man"
+				skin="1"
 				cfg="84"
 				helloReplyNames="Dlg_npc_003256"
 				SpokenCount="0" />

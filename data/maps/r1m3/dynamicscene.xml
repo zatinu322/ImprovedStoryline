@@ -155,8 +155,8 @@
 			Name="BanditVyshka"
 			Belong="1100"
 			Prototype="NPC"
-			ModelName="r1_man"
-			skin="5"
+			ModelName="r5_man"
+			skin="2"
 			cfg="86"
 			helloReplyNames="BanditVyshkadlg"
 			SpokenCount="0" />
@@ -285,8 +285,8 @@
 				Name="Kartograph2"
 				Belong="1011"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
+				ModelName="r5_man"
+				skin="0"
 				cfg="60"
 				helloReplyNames="Dlg_npc_003011"
 				SpokenCount="0" />
@@ -600,8 +600,8 @@
 				Name="Kartograph1"
 				Belong="1011"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
+				ModelName="r5_man"
+				skin="0"
 				cfg="60"
 				helloReplyNames="Dlg_npc_003011"
 				SpokenCount="0" />
@@ -816,8 +816,8 @@
 				Name="Kartograph3"
 				Belong="1010"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
+				ModelName="r5_man"
+				skin="0"
 				cfg="60"
 				helloReplyNames="Dlg_npc_003011"
 				SpokenCount="0" />

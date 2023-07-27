@@ -2354,6 +2354,10 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
+			id="r5_man"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="mask_ben"
 			file="data\models\AnimModels.xml" />
 

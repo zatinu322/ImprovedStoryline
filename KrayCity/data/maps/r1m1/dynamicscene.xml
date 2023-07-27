@@ -49,8 +49,8 @@
 			Name="Vasily"
 			Belong="1100"
 			Prototype="NPC"
-			ModelName="r1_man"
-			skin="4"
+			ModelName="r5_man"
+			skin="1"
 			cfg="46"
 			helloReplyNames="Vasily6"
 			SpokenCount="0" />
@@ -419,8 +419,8 @@
 				Name="TraiderAfterStryga"
 				Belong="1008"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
+				ModelName="r5_man"
+				skin="1"
 				cfg="94"
 				helloReplyNames="Dlg_npc_003264"
 				SpokenCount="0" />
@@ -755,8 +755,8 @@
 				Name="VasilyBar"
 				Belong="1008"
 				Prototype="NPC"
-				ModelName="r1_man"
-				skin="4"
+				ModelName="r5_man"
+				skin="1"
 				cfg="46"
 				helloReplyNames="Vasily1"
 				SpokenCount="0" />

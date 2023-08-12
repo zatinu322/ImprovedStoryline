@@ -29,6 +29,10 @@
 		FullName="Oracle Guard's outpost" />
 
 	<Object
+		Name="NearOracul_Workshop"
+		FullName="Workshop" />
+
+	<Object
 		Name="ToR3M1"
 		FullName="Road to Druid Grove" />
 

@@ -27,6 +27,10 @@
 	<Object
 		Name="NearOraculBuilding"
 		FullName="Пост стражей Оракула" />
+	
+	<Object
+		Name="NearOracul_Workshop"
+		FullName="Мастерская" />
 
 	<Object
 		Name="ToR3M1"

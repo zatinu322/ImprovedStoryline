@@ -1257,6 +1257,11 @@
 		value="Ф.Г." />
 
 	<Item
+		id="Mirotvorec"
+		locForm="0"
+		value="Миротворец" />
+
+	<Item
 		id="Formula01"
 		locForm="0"
 		value="Турбо GT" />

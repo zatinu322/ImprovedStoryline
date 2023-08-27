@@ -43,7 +43,7 @@ compatible_minor_versions: false
 compatible_patch_versions: false
  
 # installator compatibility
-patcher_version_requirement: "1.14"
+patcher_version_requirement: "2.0.9"
 
 # community patch requirements
 prerequisites:

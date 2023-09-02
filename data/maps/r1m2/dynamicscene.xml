@@ -369,7 +369,22 @@
 					Flags="16"
 					Prototype="BugForSale"
 					Pos="0.000 111.522 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="bugCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="bugCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="bugChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -380,7 +395,22 @@
 					Flags="16"
 					Prototype="MolokovozForSale"
 					Pos="0.000 111.656 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="molokovozCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="molokovozCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="molokovozChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -1141,7 +1171,22 @@
 					Flags="16"
 					Prototype="BugForSale"
 					Pos="0.000 111.522 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="bugCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="bugCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="bugChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -1152,7 +1197,22 @@
 					Flags="16"
 					Prototype="MolokovozForSale"
 					Pos="0.000 111.656 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="molokovozCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="molokovozCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="molokovozChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -1440,7 +1500,22 @@
 					Flags="16"
 					Prototype="MolokovozForSale"
 					Pos="0.000 111.656 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="molokovozCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="molokovozCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="molokovozChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -1810,7 +1885,6 @@
 				Belong="1008"
 				Prototype="NPC"
 				ModelName="r5_man"
-				skin="0"
 				cfg="14"
 				helloReplyNames="Dlg_npc_001597"
 				SpokenCount="0" />
@@ -52223,13 +52297,6 @@
 		Rot="0.000 -0.301 0.000 0.954" />
 
 	<Object
-		Name="Breakable_BrickWall26140"
-		Belong="1001"
-		Prototype="Breakable_BrickWall2"
-		Pos="6707.194 103.595 4104.125"
-		Rot="0.000 -0.706 0.000 0.709" />
-
-	<Object
 		Name="E_InfectionZone1"
 		Belong="1002"
 		Prototype="InfectionZone"
@@ -55639,7 +55706,7 @@
 		<Post
 			ServerObjName="stolb15275"
 			NodesNameHierarchy=""
-			PostTiePos="3110.287 70.243 1354.713"
+			PostTiePos="3110.287 70.243 1354.712"
 			LpName="LP_PART02" />
 
 		<Post
@@ -55677,13 +55744,9 @@
 		<Post
 			ServerObjName="stolb15275"
 			NodesNameHierarchy=""
-			PostTiePos="3110.287 70.243 1354.713"
+			PostTiePos="3110.287 70.243 1354.712"
 			LpName="LP_PART02" />
 	</Object>
-
-	<Object
-		Belong="1100"
-		Prototype="someRecollection" />
 
 	<Object
 		Belong="-1"
@@ -55697,7 +55760,7 @@
 		<Post
 			ServerObjName="stolb25512"
 			NodesNameHierarchy=""
-			PostTiePos="1514.377 85.788 5274.253"
+			PostTiePos="1514.377 85.788 5274.254"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -55713,7 +55776,7 @@
 		<Post
 			ServerObjName="stolb25512"
 			NodesNameHierarchy=""
-			PostTiePos="1515.291 85.414 5273.312"
+			PostTiePos="1515.290 85.414 5273.312"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -55723,13 +55786,13 @@
 		<Post
 			ServerObjName="stolb25512"
 			NodesNameHierarchy=""
-			PostTiePos="1514.377 85.788 5274.253"
+			PostTiePos="1514.377 85.788 5274.254"
 			LpName="LP_PART01" />
 
 		<Post
 			ServerObjName="stolb25511"
 			NodesNameHierarchy=""
-			PostTiePos="1538.195 83.788 5313.076"
+			PostTiePos="1538.246 83.788 5313.062"
 			LpName="LP_PART01" />
 	</Object>
 
@@ -55739,13 +55802,13 @@
 		<Post
 			ServerObjName="stolb25512"
 			NodesNameHierarchy=""
-			PostTiePos="1515.291 85.414 5273.312"
+			PostTiePos="1515.290 85.414 5273.312"
 			LpName="LP_PART02" />
 
 		<Post
 			ServerObjName="stolb25511"
 			NodesNameHierarchy=""
-			PostTiePos="1539.265 83.414 5312.316"
+			PostTiePos="1539.316 83.414 5312.302"
 			LpName="LP_PART02" />
 	</Object>
 
@@ -55755,7 +55818,7 @@
 		<Post
 			ServerObjName="stolb25511"
 			NodesNameHierarchy=""
-			PostTiePos="1538.195 83.788 5313.076"
+			PostTiePos="1538.246 83.788 5313.062"
 			LpName="LP_PART01" />
 
 		<Post
@@ -55771,7 +55834,7 @@
 		<Post
 			ServerObjName="stolb25511"
 			NodesNameHierarchy=""
-			PostTiePos="1539.265 83.414 5312.316"
+			PostTiePos="1539.316 83.414 5312.302"
 			LpName="LP_PART02" />
 
 		<Post
@@ -55844,4 +55907,8 @@
 			PostTiePos="5054.304 163.598 749.737"
 			LpName="LP_PART02" />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="someRecollection" />
 </DynamicScene>

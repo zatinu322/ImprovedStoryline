@@ -6,14 +6,14 @@ installment: exmachina
 # main human readable info
 display_name: Improved Storyline
 version: "1.2 HD"
-build: "230827a"
+build: "230902a"
 description: |
   Сюжетная модификация, главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 authors: pavlikrpg
  
 # optional human readable info
 logo: assets/isl1-1.jpg
-release_date: "27.08.2023"
+release_date: "02.09.2023"
 link: https://github.com/zatinu322/ImprovedStoryline/
 trailer_url: https://www.youtube.com/watch?v=c7kZsW94dWY
 tags: [story]

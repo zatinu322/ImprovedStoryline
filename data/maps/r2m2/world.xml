@@ -2,7 +2,7 @@
 <World
 	name="Object16"
 	class="SgNode"
-	LastId="76473958">
+	LastId="76474012">
 	<Node
 		name="Object12"
 		class="SgAnimatedModelNode"
@@ -1586,7 +1586,7 @@
 	<Node
 		name="Object908"
 		class="SgAnimatedModelNode"
-		org="1408.887 0.000 3671.235"
+		org="1408.887 -1.361 3671.235"
 		orgRel="1"
 		id="r2_substation_barrel"
 		ndmAction="0" />

@@ -2507,6 +2507,11 @@
 				CreateVehicleEx("DemoUral1","Buhar1",CVector(3146.185, 277.446, 5717.556), 1026, Quaternion(-0.001, -0.187, -0.005, -0.982))
 				CreateVehicleEx("DemoMolokovoz1","Buhar2",CVector(3151.739, 276.337, 5714.316), 1026, Quaternion(0.005, -0.187, 0.011, -0.982))
 
+				for car = 1,2 do
+					local veh = getObj("Buhar"..car)
+					if veh then veh:SetSkin(car) end
+				end
+
 				local vehPlayer = GetPlayerVehicle()
 				if vehPlayer then
 					vehPlayer:PlaceToEndOfPath("PlBuhPath")

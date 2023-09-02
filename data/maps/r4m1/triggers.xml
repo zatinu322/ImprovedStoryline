@@ -337,11 +337,13 @@
 		</script>
 	</trigger>
 
-	<!-- Создание огня на кладбище кораблей -->
+	<!-- Уничтожение Бухары -->
 	<trigger Name="BUHARAFIRE" active="0">
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
-		
+			local buh = getObj("r4_Buhara_1")
+			if buh then buh:SetRuined(true) end
+			
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(1814.698, 228.209, 6631.276), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(1270, 209, 6189), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(1676, 228, 6302), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))

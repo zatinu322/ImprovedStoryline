@@ -2,7 +2,7 @@
 <World
 	name="îÄa"
 	class="SgNode"
-	LastId="76480681">
+	LastId="76480733">
 	<Node
 		name="Object21"
 		class="SgAnimatedModelNode"
@@ -21594,9 +21594,9 @@
 	<Node
 		name="Object14727"
 		class="SgAnimatedModelNode"
-		org="6693.769 0.000 4081.606"
+		org="6704.495 0.213 4086.253"
 		orgRel="1"
-		rot="0.0000 0.1305 0.0000 -0.9914"
+		rot="0.0000 0.4384 0.0000 -0.8988"
 		scale="0.783 0.783 0.783"
 		id="brick_debris2"
 		ndmAction="0" />
@@ -21604,7 +21604,7 @@
 	<Node
 		name="Object14728"
 		class="SgAnimatedModelNode"
-		org="6712.760 0.000 4113.803"
+		org="6712.760 0.199 4113.803"
 		orgRel="1"
 		rot="0.0000 0.9613 0.0000 0.2756"
 		scale="0.829 0.829 0.829"
@@ -21644,7 +21644,7 @@
 	<Node
 		name="Object14732"
 		class="SgAnimatedModelNode"
-		org="6723.085 0.000 4132.396"
+		org="6723.085 0.100 4132.396"
 		orgRel="1"
 		rot="0.0000 0.6157 0.0000 -0.7880"
 		scale="0.929 0.929 0.929"
@@ -21684,7 +21684,7 @@
 	<Node
 		name="Object14737"
 		class="SgAnimatedModelNode"
-		org="6719.872 0.000 4095.367"
+		org="6719.872 0.056 4095.367"
 		orgRel="1"
 		rot="0.0000 0.2164 0.0000 0.9763"
 		scale="0.903 0.903 0.903"
@@ -21774,7 +21774,7 @@
 	<Node
 		name="Object14746"
 		class="SgAnimatedModelNode"
-		org="6711.428 0.000 4097.697"
+		org="6711.428 0.287 4097.697"
 		orgRel="1"
 		rot="0.0000 0.9367 0.0000 0.3502"
 		scale="0.780 0.780 0.780"
@@ -21784,7 +21784,7 @@
 	<Node
 		name="Object14747"
 		class="SgAnimatedModelNode"
-		org="6714.882 0.000 4097.743"
+		org="6714.882 0.303 4097.743"
 		orgRel="1"
 		rot="0.0000 0.9890 0.0000 0.1478"
 		scale="0.826 0.826 0.826"

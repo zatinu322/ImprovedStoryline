@@ -8,7 +8,7 @@ display_name: Improved Storyline
 version: "1.2 HD"
 build: "230902a"
 description: |
-  Сюжетная модификация, главная цель которой - переосмысление и разнообразие сюжета оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, а также новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
+  Сюжетная модификация, главная цель которой - переосмыслить и разнообразить сюжет оригинальной игры. В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 authors: pavlikrpg
  
 # optional human readable info
@@ -18,8 +18,8 @@ link: https://github.com/zatinu322/ImprovedStoryline/
 trailer_url: https://www.youtube.com/watch?v=c7kZsW94dWY
 tags: [story]
 change_log: assets/change_list_ru.md
-# not done yet
-# other_info: faq.md
+
+other_info: assets/faq_rus.md
 screenshots:
   - img: assets/screen_0.jpg
     text: Новый зимний регион, состоящий из трёх локаций.
@@ -33,8 +33,8 @@ screenshots:
     text: Система отображения текущих попутчиков игрока.
   - img: assets/screen_5.jpg
     text: Катсцена в начале нового второстепенного квеста.
-#disabled, does not work properly
-# translations: [eng]
+
+translations: [eng]
  
 # installation configuration
 no_base_content: false

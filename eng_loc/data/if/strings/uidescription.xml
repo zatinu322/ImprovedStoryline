@@ -245,20 +245,12 @@
 		value="Increases armor. Feel like an actual tank. |Armor +20%" />
 
 	<string
-		id="additional_durability3_diz"
-		value="Created by wise men from a mysterious superalloy, these armor plates will provide your vehicle with increased resistance to all types of damage. | Armor +30%" />
-
-	<string
 		id="add_speed_and_torque_diz"
 		value="Increases speed and torque of your truck. |Speed +15% |Torque +15%" />
 
 	<string
 		id="add_stability_and_speed_diz"
 		value="&quot;Sagitta&quot; system includes an improved reduction drive that stabilizes the transmission increasing reliability. |Construction +75 |Speed +20%" />
-
-	<string
-		id="add_stability_and_speed2_diz"
-		value="The &quot;Sagitta 2.0&quot; system is an improvement of the regular &quot;Sagitta&quot; system by ice mountain dwellers. In addition to a small increase in reliability of the transmission, it gives a significant increase in speed. Great for drivers of heavy trade trucks. | Construction +150 | Speed +35%" />
 
 	<string
 		id="add_torque_and_stability_diz"
@@ -497,10 +489,6 @@
 		value="This cabin contains the highest number of upgrades. Armor, armament, torque, speed." />
 
 	<string
-		id="uralCab06_diz"
-		value="Improved by the residents of the winter region Knight cabin. There are rumors that mechanic Svyatogor started working on this improvement only because he did not want to drive a Belaz. And we can't blame him for that." />
-
-	<string
 		id="belazCab01_diz"
 		value="The cheapest and simplest cabin for Belaz. It is possible to put a small gun and a couple of gadgets." />
 
@@ -583,10 +571,6 @@
 	<string
 		id="uralCargo05_diz"
 		value="It is a top model among bodies for Ural. Fighting is its direct purpose. Good firepower and impenetrable armor." />
-
-	<string
-		id="uralCargo06_diz"
-		value="Improved by the inhabitants of the winter region Cruiser cargo. There are rumors that mechanic Svyatogor started working on this improvement only because he did not want to drive a Belaz. And we can't blame him for that." />
 
 	<string
 		id="belazCargo01_diz"
@@ -684,16 +668,6 @@
 		value="I hope the Oracle will find this device useful. I don't want to come back to the factory." />
 
 	<string
-		id="quest_magic_thing3_diz"
-		locForm="0"
-		value="It looks very technological, but I have no idea what it is. I hope this item will be of some value to the Oracle." />
-
-	<string
-		id="quest_magic_thing4_diz"
-		locForm="0"
-		value="I'm already so sick and tired of driving around this factory that I'll just take this incomprehensible thing and tell the Oracle that I thought this piece of metal was of great technological value." />
-
-	<string
 		id="quest_explosion_stone_diz"
 		locForm="0"
 		value="The druids say this stone can bring the wrath of mother Earth down on the heads of the wicked. It seems to be an explosive of some sort, so I'd better stay away when the spell takes force." />
@@ -727,46 +701,6 @@
 		id="quest_medicine_box_diz"
 		locForm="0"
 		value="A box of medicine found in the ruins of an ancient hospital." />
-
-	<string
-		id="quest_crimson_medal_diz"
-		locForm="0"
-		value="This medal was given to me personally by Axel for leading the Crimson Dawn to victory." />
-
-	<string
-		id="quest_thief_package_diz"
-		locForm="0"
-		value="The boxes from Salvatore's hideout that the bandits haven't gotten to yet. I need to get them to him as proof that his stash is now free." />
-
-	<string
-		id="quest_babka_package_diz"
-		locForm="0"
-		value="A package from Ben that he asked me to drop off to Grandma Paula at Locus." />
-
-	<string
-		id="quest_ananaga_bottle_diz"
-		locForm="0"
-		value="A terrific ananaga, made with Petro's recipe, aged with Matvey's technology, and rested on the highest slope of the Mountains of the Wise. Definitely the best ananaga in the world today." />
-
-	<string
-		id="quest_chehly_box_diz"
-		locForm="0"
-		value="The box with the covers for the radiation protection of the cabin. It should be given to the master in Midgard." />
-
-	<string
-		id="quest_bratislav_component1_diz"
-		locForm="0"
-		value="The first detail for the mysterious Bratislav's machine, which, according to his own words, is vital to him." />
-
-	<string
-		id="quest_bratislav_component2_diz"
-		locForm="0"
-		value="The second detail for the mysterious Bratislav's machine, which, according to his own words, is vital to him." />
-
-	<string
-		id="quest_bratislav_component3_diz"
-		locForm="0"
-		value="The third detail for the mysterious Bratislav's machine, which, according to his own words, is vital to him." />
 
 	<string
 		id="quest_explosive_diz"
@@ -824,15 +758,127 @@
 		value="This sophisticated device is somehow connected with the sea travel." />
 
 	<string
+		id="quest_key_for_tunnel_diz"
+		locForm="0"
+		value="The key to the tunnel that leads through the mountains." />
+
+	<string
+		id="Smoke_diz"
+		locForm="0"
+		value="Smoke screen will not allow enemies to catch you too fast." />
+
+	<string
+		id="anti_missile_system_diz"
+		locForm="0"
+		value="Anti-missile system will protect you from enemy missiles by confusing their sensors." />
+<!-- Improved Storyline -->
+	<!-- Gadgets -->
+	<string
+		id="additional_durability3_diz"
+		value="Created by wise men from a mysterious superalloy, these armor plates will provide your vehicle with increased resistance to all types of damage. | Armor +30%" />
+	
+	<string
+		id="add_stability_and_speed2_diz"
+		value="The &quot;Sagitta 2.0&quot; system is an improvement of the regular &quot;Sagitta&quot; system by ice mountain dwellers. In addition to a small increase in reliability of the transmission, it gives a significant increase in speed. Great for drivers of heavy trade trucks. | Construction +150 | Speed +35%" />
+	<!-- Cabins and baskets -->
+	<string
+		id="uralCab06_diz"
+		value="Improved by the residents of the winter region Knight cabin. There are rumors that mechanic Svyatogor started working on this improvement only because he did not want to drive a Belaz. And we can't blame him for that." />
+	
+	<string
+		id="uralCargo06_diz"
+		value="Improved by the inhabitants of the winter region Cruiser cargo. There are rumors that mechanic Svyatogor started working on this improvement only because he did not want to drive a Belaz. And we can't blame him for that." />
+	<!-- Questitems -->
+	<string
+		id="quest_magic_thing3_diz"
+		locForm="0"
+		value="It looks very technological, but I have no idea what it is. I hope this item will be of some value to the Oracle." />
+
+	<string
+		id="quest_magic_thing4_diz"
+		locForm="0"
+		value="I'm already so sick and tired of driving around this factory that I'll just take this incomprehensible thing and tell the Oracle that I thought this piece of metal was of great technological value." />
+	
+	<string
+		id="quest_crimson_medal_diz"
+		locForm="0"
+		value="This medal was given to me personally by Axel for leading the Crimson Dawn to victory." />
+
+	<string
+		id="quest_thief_package_diz"
+		locForm="0"
+		value="The boxes from Salvatore's hideout that the bandits haven't gotten to yet. I need to get them to him as proof that his stash is now free." />
+
+	<string
+		id="quest_babka_package_diz"
+		locForm="0"
+		value="A package from Ben that he asked me to drop off to Grandma Paula at Locus." />
+
+	<string
+		id="quest_ananaga_bottle_diz"
+		locForm="0"
+		value="A terrific ananaga, made with Petro's recipe, aged with Matvey's technology, and rested on the highest slope of the Mountains of the Wise. Definitely the best ananaga in the world today." />
+
+	<string
+		id="quest_chehly_box_diz"
+		locForm="0"
+		value="The box with the covers for the radiation protection of the cabin. It should be given to the master in Midgard." />
+
+	<string
+		id="quest_bratislav_component1_diz"
+		locForm="0"
+		value="The first detail for the mysterious Bratislav's machine, which, according to his own words, is vital to him." />
+
+	<string
+		id="quest_bratislav_component2_diz"
+		locForm="0"
+		value="The second detail for the mysterious Bratislav's machine, which, according to his own words, is vital to him." />
+
+	<string
+		id="quest_bratislav_component3_diz"
+		locForm="0"
+		value="The third detail for the mysterious Bratislav's machine, which, according to his own words, is vital to him." />
+
+	<string
 		id="quest_key_for_submarine1_diz"
 		locForm="0"
 		value="This sophisticated device is somehow connected with the sea travels." />
 
 	<string
-		id="quest_key_for_tunnel_diz"
+		id="quest_blokirator_diz"
 		locForm="0"
-		value="The key to the tunnel that leads through the mountains." />
+		value="A mysterious device that is supposed to reduce the level of emission from the &quot;Overlord&quot;." />
 
+	<string
+		id="quest_druid_package_diz"
+		locForm="0"
+		value="A parcel from Fionius to his friend in Ignott." />
+
+	<string
+		id="quest_boat_digital_diz"
+		locForm="0"
+		value="Boat engines found in an armored warehouse below Moska. With their help, the inhabitants of Lidencloud will be able to transport clothes and food to the ship." />
+
+	<string
+		id="quest_Valeriy_package_diz"
+		locForm="0"
+		value="The package Marco gave me from Locus. I have to deliver it to Valeriy in Yar, and in return Marco will try to resolve my conflict with Grandma Paula." />
+
+	<string
+		id="quest_labelle_scrap_diz"
+		locForm="0"
+		value="The last batch of metal mined by the La Belle miners." />
+
+	<string
+		id="quest_key_for_station_diz"
+		locForm="0"
+		value="The key given to me by the Supreme Wise Man from Volozh. With it, I can open the secret tunnel, unlock the control panel at the Wise Men's Station, and travel to the final test site." />
+
+	<string
+		id="quest_lisa_narcotik_diz"
+		locForm="0"
+		value="Medications for Lisa that might help her wake up." />
+	<!-- Companions -->
 	<string
 		id="FarmerDik_P_diz"
 		locForm="0"
@@ -892,32 +938,7 @@
 		id="Vasily_P_diz"
 		locForm="0"
 		value="A hired worker from my home village." />
-
-	<string
-		id="quest_blokirator_diz"
-		locForm="0"
-		value="A mysterious device that is supposed to reduce the level of emission from the &quot;Overlord&quot;." />
-
-	<string
-		id="quest_druid_package_diz"
-		locForm="0"
-		value="A parcel from Fionius to his friend in Ignott." />
-
-	<string
-		id="Smoke_diz"
-		locForm="0"
-		value="Smoke screen will not allow enemies to catch you too fast." />
-
-	<string
-		id="anti_missile_system_diz"
-		locForm="0"
-		value="Anti-missile system will protect you from enemy missiles by confusing their sensors." />
-
-	<string
-		id="quest_boat_digital_diz"
-		locForm="0"
-		value="Boat engines found in an armored warehouse below Moska. With their help, the inhabitants of Lidencloud will be able to transport clothes and food to the ship." />
-
+	
 	<string
 		id="StarDod_P_diz"
 		locForm="0"
@@ -929,34 +950,14 @@
 		value="A strange married couple who asked me to drive them to a village that is not on any map." />
 
 	<string
-		id="quest_Valeriy_package_diz"
-		locForm="0"
-		value="The package Marco gave me from Locus. I have to deliver it to Valeriy in Yar, and in return Marco will try to resolve my conflict with Grandma Paula." />
-
-	<string
-		id="quest_labelle_scrap_diz"
-		locForm="0"
-		value="The last batch of metal mined by the La Belle miners." />
-
-	<string
 		id="Dobroslava_P_diz"
 		locForm="0"
 		value="Vsevolod's daughter from Mikhailovka, who was kidnapped by some strange guy. I must get her home to her father." />
 
 	<string
-		id="quest_key_for_station_diz"
-		locForm="0"
-		value="The key given to me by the Supreme Wise Man from Volozh. With it, I can open the secret tunnel, unlock the control panel at the Wise Men's Station, and travel to the final test site." />
-
-	<string
 		id="AivenGo_P_diz"
 		locForm="0"
 		value="My real father." />
-
-	<string
-		id="quest_lisa_narcotik_diz"
-		locForm="0"
-		value="Medications for Lisa that might help her wake up." />
 
 	<string
 		id="Homer_P_diz"
@@ -972,5 +973,4 @@
 		id="MarezziaEscapist_P_diz"
 		locForm="0"
 		value="A group of oppositionists from Marezzia, whom I miraculously saved from the repression of the Crimson Dawn." />
-
 </resource>

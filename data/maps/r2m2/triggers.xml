@@ -275,7 +275,7 @@
 			-- SetRuined не работает на _enter заправок, поэтому костылим вот это
 			local fuel_ent = GetEntityByName("PetrolStationTown64_enter")
 			if fuel_ent then
-				fuel_ent:SetProperty("Pos", "1490.003 294.029 2411.334")
+				fuel_ent:SetProperty("Pos", "3990.106 219.678 192.414")
 				fuel_ent:SetProperty("Radius", "0.1")
 			end
 

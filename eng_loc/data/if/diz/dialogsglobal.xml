@@ -8363,7 +8363,7 @@
 		name="r1m4_RandomBar_Gomer_1_N01"
 		text="If you came here to ruin my catch, you'd better go right away!"
 		role="NPC"
-		scriptCondition="QuestStatus('FindGomerNearBereg_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		scriptCondition="QuestStatus('FindGomerNearBereg_Quest1')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="r1m4Random_Bar_Gomer1_P02" />
 
 	<Reply

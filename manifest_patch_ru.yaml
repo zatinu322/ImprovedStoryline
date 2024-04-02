@@ -34,7 +34,7 @@ screenshots:
   - img: assets/screen_5.jpg
     text: Катсцена в начале нового второстепенного квеста.
 
-# translations: [eng] TODO: add
+translations: [eng]
  
 # installation configuration
 no_base_content: false

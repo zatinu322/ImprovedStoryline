@@ -55,15 +55,15 @@ prerequisites:
 
 # optional mod content
 optional_content:
-  - name: Icons
+  - name: icons
     display_name: Иконки
     description: |
       Улучшенные иконки для радара из модификации Steel Dawn.
-  - name: Snowfall
+  - name: snowfall
     display_name: Улучшенный снегопад
     description: |
       Более интенсивный и красивый снегопад в зимних локациях. Значительно влияет на производительность и не рекомендуется к установке людям со слабыми ПК.
-  - name: KrayCity
-    display_name: KrayCity
+  - name: kraycity
+    display_name: Kraycity
     description: Модификация от OverLine (Rock), добавляющая пять новых деревень на территорию локации Край.
     default_option: skip

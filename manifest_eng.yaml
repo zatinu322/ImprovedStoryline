@@ -60,12 +60,12 @@ prerequisites:
 
 # optional mod content
 optional_content:
-  - name: Snowfall
+  - name: snowfall
     display_name: Improved snowfall
     description: |
       More intense and beautiful snowfall in winter locations. Significantly affects performance and is not recommended for people with weak PCs.
-  - name: KrayCity
-    display_name: KrayCity
+  - name: kraycity
+    display_name: Kraycity
     description: Modification from OverLine (Rock) that adds five new villages to Krai map.
     default_option: skip
   - name: english_localization

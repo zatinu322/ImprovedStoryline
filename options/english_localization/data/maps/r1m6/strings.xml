@@ -1,0 +1,1059 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Br-r-r, it's a lot colder than I thought it would be. Without these clothes, we'd freeze before we got out of the tunnel."
+		sound=""
+		time="9" />
+
+	<string
+		id="2"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Well, at least the warehouse ordeal was worth your effort. But now we face another problem."
+		sound=""
+		time="9" />
+
+	<string
+		id="3"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Apparently, the locals don't like visitors at all, since they built this wall. Do you have any explosives left?"
+		sound=""
+		time="8" />
+
+	<string
+		id="4"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|No, we used up everything on those boulders."
+		sound=""
+		time="5" />
+	<string
+		id="5"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Look, there's a small hole here, but my car won't pass through it for sure."
+		sound=""
+		time="6" />
+
+	<string
+		id="6"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|But mine will pass with ease."
+		sound=""
+		time="5" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Wait, you want to go alone? Into uncharted territory?"
+		sound=""
+		time="6" />
+
+	<string
+		id="8"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Well, yeah. I somehow did without you before we met in Librium. "
+		sound=""
+		time="6" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Still, it's kind of risky."
+		sound=""
+		time="5" />
+
+	<string
+		id="10"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|We don't have any other options anyway. Let's do the following: I crawl into this hole, find the locals, explain the situation, and then in the best case scenario they give me the key, and I open this gate for you."
+		sound=""
+		time="15" />
+
+	<string
+		id="11"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="And what about worst case scenario?"
+		sound=""
+		time="4" />
+
+	<string
+		id="12"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|I don't even want to think about it. Besides, we have no choice anyway. Turn the car's heating on full blast and wait for me here. I'll try not to be too long."
+		sound=""
+		time="9" />
+
+	<string
+		id="13"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Oh, I don't like this at all."
+		sound=""
+		time="5" />
+
+	<string
+		id="14"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Here comes the first fork. Well, time to try my luck. Let's say it's to the right."
+		sound=""
+		time="9" />
+
+	<string
+		id="15"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Yeah, the village really looks like it was abandoned in just a few minutes. Such a mess."
+		sound=""
+		time="10" />
+
+	<string
+		id="16"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Okay, that should be enough. I found the key, too."
+		sound=""
+		time="7" />
+
+	<string
+		id="17"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="SENTINEL|Pull over! Get out of the car and raise your hands! Or we'll start shooting!"
+		time="8" />
+
+	<string
+		id="18"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Damn it! It's those Adepts. I could have escaped them if not for the rocket launchers - they are probably already aiming for my car."
+		sound=""
+		time="13" />
+
+	<string
+		id="19"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="SENTINEL|I count to three, and then we open fire! One! Two!"
+		time="8" />
+
+	<string
+		id="20"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Don't shoot! I surrender..."
+		sound=""
+		time="5" />
+
+	<string
+		id="21"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What's taking her so long?! And the weather is already starting to deteriorate, soon even the heating won't save me..."
+		sound=""
+		time="9" />
+
+	<string
+		id="22"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|Hello, is anyone there? Your friend Lisa sent us to open the gate for you."
+		time="8" />
+
+	<string
+		id="23"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Yes, I'm here! I could use some help, because I'm going to freeze to death here."
+		sound=""
+		time="8" />
+
+	<string
+		id="24"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|Get away from the gates, I'm going to blow the hinges."
+		time="6" />
+
+	<string
+		id="25"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Thank you for your help! Where is Lisa? Why didn't she come with you?"
+		sound=""
+		time="9" />
+
+	<string
+		id="26"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|We'll explain everything to you, but first let's get to the village. It looks like a snowstorm is about to start."
+		time="8" />
+
+	<string
+		id="27"
+		modelName=""
+		value="||@FF000000AAAAAAAAAAAAAAAA.AAAAAA@FFFFFFFFA few hours later"
+		sound=""
+		fontSize="18"
+		time="6" />
+
+	<string
+		id="28"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="354"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|I see you decided not to take the sin on your soul after all. You think your help will lead them to victory? Even if you kill all of us, the locals won't be safe. And yes, you can say goodbye to your girlfriend, you'll definitely never see her again."
+		time="17" />
+
+	<string
+		id="29"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="On the way here I wondered whether to kill you all or spare half of you, but after what you said, I made the final decision. You won't have time to report back to base! Die!"
+		sound=""
+		time="14" />
+
+	<string
+		id="30"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|Thank you! Thank you! Thank you so much! If it weren't for you, I would have found my death there!"
+		time="7" />
+
+	<string
+		id="31"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Serafima, right?"
+		sound=""
+		time="3" />
+
+	<string
+		id="32"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|Yes, I am Serafima. And who are you? I've never seen you before."
+		time="6" />
+
+	<string
+		id="33"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Your father sent me. It's a long story, I'll tell you on the way. Now let's get out of here before the Adepts figure out what happened."
+		sound=""
+		time="9" />
+
+	<string
+		id="34"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|Wait! Let's go to my house first. I have something there that might be very useful to us."
+		time="9" />
+
+	<string
+		id="35"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="All right, show me the way."
+		sound=""
+		time="3" />
+
+	<string
+		id="36"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What is this place?"
+		sound=""
+		time="4" />
+
+	<string
+		id="37"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|An old abandoned station. There is a control panel inside, but the entrance is protected by some strange mechanism, which no one has been able to open so far..."
+		time="11" />
+
+	<string
+		id="38"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Sounds like the plot of a second-rate legend."
+		sound=""
+		time="6" />
+
+	<string
+		id="39"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|That's probably true. I'm pretty sure there's nothing but junk inside. That's enough time to waste, let's move on."
+		time="9" />
+
+	<string
+		id="40"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|Here's my house. Or rather, what's left of it. Now we have to find my hiding place in this ruin. I don't think the adepts could find it."
+		time="12" />
+
+	<string
+		id="41"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Need help?"
+		sound=""
+		time="3" />
+
+	<string
+		id="42"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|No, I can do it myself. In the meantime, make sure no one gets near us. We're right next door to Moska."
+		time="7" />
+
+	<string
+		id="43"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What?! You couldn't tell me that before?!"
+		sound=""
+		time="4" />
+
+	<string
+		id="44"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|No. Otherwise you wouldn't have agreed to come here."
+		time="4" />
+
+	<string
+		id="45"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="There's someone looming on the horizon. A small car, armed. It's coming this way."
+		sound=""
+		time="6" />
+
+	<string
+		id="46"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|Don't shoot! It's a friend. He lives in Moska and leaks information to us about what's going on there. If he showed up here, he must have something new."
+		time="10" />
+
+	<string
+		id="47"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="241"
+		modelSlot="1"
+		sound=""
+		value="DIMITRY|Serafima, you are not alone..."
+		time="4" />
+
+	<string
+		id="48"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|He's not the enemy, he saved my life, so you can talk in his presence."
+		time="6" />
+
+	<string
+		id="49"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="241"
+		modelSlot="1"
+		sound=""
+		value="DIMITRY|Okay. Recently, there was a prisoner in Moska, and not one of yours. I think her name is Lisa. She somehow managed to steal the keys from the guards without being seen. I want to help her escape."
+		time="14" />
+
+	<string
+		id="50"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Lisa, what a devil! Even from such a situation she could find a way out! Please help her! I won't remain indebted to you."
+		sound=""
+		time="9" />
+
+	<string
+		id="51"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|I got it. Thank you, Dimitry, keep me informed. But you'd better hold off on escaping for now. I'll contact you later and explain more."
+		time="9" />
+
+	<string
+		id="52"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="241"
+		modelSlot="1"
+		sound=""
+		value="DIMITRY|Okay. Good luck to you."
+		time="4" />
+
+	<string
+		id="53"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What are you up to? Why shouldn't she run right away?"
+		sound=""
+		time="6" />
+
+	<string
+		id="54"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|I'll explain along the way. I found what I was looking for, now it is time to change vehicles."
+		time="7" />
+
+	<string
+		id="55"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What the hell is it?!"
+		sound=""
+		time="3" />
+
+	<string
+		id="56"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|The grader. Unarmed, but we'll fix that in Severka. You'll have to be my bodyguard one more time."
+		time="9" />
+
+	<string
+		id="57"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I don't think you'll need my services with all that armor."
+		sound=""
+		time="6" />
+
+	<string
+		id="58"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|You never know what could go wrong. All right, no more wasting time. Let's go!"
+		time="7" />
+
+	<string
+		id="59"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|There you are! We've been doing a little recon. There are two ways to get close to Kateberg: either attack head-on, or try to attack from the factory. In both cases we risk a lot, but there's nowhere to retreat to."
+		time="17" />
+
+	<string
+		id="60"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What's the plan?"
+		sound=""
+		time="3" />
+
+	<string
+		id="61"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|Our main task is to destroy the pillboxes and the outer guards of the city, the rest will be done by another group. You choose tactics, we will follow you. Good luck to all, and may the higher powers protect us!"
+		time="13" />
+
+	<string
+		id="62"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I can't believe it! We did it! Kateberg is now ours!"
+		sound=""
+		time="5" />
+
+	<string
+		id="63"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|Velimir has something important to tell you, he's already here in Kateberg. You'd better hurry!"
+		time="9" />
+
+	<string
+		id="64"
+		modelName="r5_man"
+		modelSkin="2"
+		modelCfg="14"
+		modelSlot="1"
+		sound=""
+		value="GAVRILA|Thanks for chasing them away! They thought we had your friend, turned the place upside down!"
+		time="9" />
+
+	<string
+		id="65"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Damn! That means Lisa's not here! I need to check the second village right away!"
+		sound=""
+		time="7" />
+
+	<string
+		id="66"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|We did it! Yes! Moska has fallen!"
+		time="6" />
+
+	<string
+		id="67"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What about engine parts?"
+		sound=""
+		time="5" />
+
+	<string
+		id="68"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|The warehouse is unharmed, and all the engine parts are still there. The Adepts have left our land, but they'll be back with reinforcements soon, so we need to act quickly. Take the parts to Severka, that's the last thing we ask of you."
+		time="16" />
+
+	<string
+		id="69"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I'll do it."
+		sound=""
+		time="7" />
+	
+	<string
+		id="691"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|In the meantime, we'll launch preemptive strikes against the ice wasteland. If we fire every missile we have here, it'll take a long, long time for the Adepts to get here again."
+		time="11" />
+
+	<string
+		id="70"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|There you are. Let me tell you the plan of action. Velimir is already in place, but you'd better not disturb him, he wants to be alone right now. The operation will begin as soon as he moves."
+		time="14" />
+
+	<string
+		id="71"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I got it. I can't even imagine what it's like for Serafima right now..."
+		sound=""
+		time="8" />
+
+	<string
+		id="72"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|She stayed in Kateberg. She says she can't watch it with her own eyes, but she respects her father's decision and is very proud of him. As soon as the detonator is triggered, we move out to finish off the rest of the adepts. Is everyone ready?"
+		time="16" />
+
+	<string
+		id="73"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Ready!"
+		sound=""
+		time="5" />
+
+	<string
+		id="74"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|Thank you for everything, stranger. Thanks to you, we have survived and can leave these troubled lands. Velimir would be proud of you."
+		time="10" />
+
+	<string
+		id="75"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|He did a truly heroic act. He sacrificed his own life to save everyone else's. Without him, we wouldn't have made it."
+		time="11" />
+
+	<string
+		id="76"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Where are you going?"
+		sound=""
+		time="5" />
+
+	<string
+		id="77"
+		modelName="r1_woman"
+		modelSkin="0"
+		modelCfg="248"
+		modelSlot="1"
+		sound=""
+		value="SERAFIMA|To the big ship anchored in the Moska River. And then to Le Canada. Maybe it would be quieter there."
+		time="11" />
+
+	<string
+		id="78"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Le Canada? I've never heard of it. I hope you'll finally find peace there!"
+		sound=""
+		time="7" />
+
+	<string
+		id="79"
+		modelName="mask_thief"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		sound=""
+		value="MIKOLKA|And yes, we've deactivated all the turrets on the bridge, so you can now enter the Wise Men's lands unhindered. I hope you find what you came here for. Farewell. And thank you for your help!"
+		time="14" />
+
+	<string
+		id="80"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I hope they have no trouble getting to dry land..."
+		sound=""
+		time="6" />
+
+	<string
+		id="81"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|While you were fighting in Kateberg, I helped them get their clothes and food on the ship, so you don't have to worry - they have everything they need for the journey."
+		sound=""
+		time="13" />
+
+	<string
+		id="82"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="That's good to hear. Well, now to the wise men's lands."
+		sound=""
+		time="7" />
+
+	<string
+		id="83"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I'm at the spot. I don't see any of the locals."
+		sound=""
+		time="6" />
+
+	<string
+		id="84"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|Well, it looks like they realized it was a trap. But that's okay, we know they all are in the Severka, they have nowhere else to hide."
+		time="11" />
+
+	<string
+		id="85"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Are you suggesting that I go alone to Severka and fight them?"
+		sound=""
+		time="7" />
+
+	<string
+		id="86"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|Don't worry beforehand - they have two weak pillboxes and no weapons at all. You'll have no problem dealing with them."
+		time="10" />
+
+	<string
+		id="87"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Good to know. Over and out."
+		sound=""
+		time="6" />
+
+	<string
+		id="88"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I'm in Severka. Destroyed two of their pillboxes, but I don't see anyone else here. Not a single native."
+		sound=""
+		time="9" />
+
+	<string
+		id="89"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|It's very strange. Are you sure you checked all the houses?"
+		time="6" />
+
+	<string
+		id="90"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Absolutely. The village is empty."
+		sound=""
+		time="5" />
+
+	<string
+		id="91"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|Okay, that changes the whole thing. Go back to Kateberg and we'll discuss our future plans. Over and out."
+		time="8" />
+
+	<string
+		id="92"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|Stay where you are! Who are you?!"
+		time="5" />
+
+	<string
+		id="93"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I was sent by our leadership to conduct an interrogation."
+		sound=""
+		time="6" />
+
+	<string
+		id="94"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|The interrogation will have to wait. Look over there - I think they're going to take our prisoner away from us."
+		time="8" />
+
+	<string
+		id="95"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Let me deal with them!"
+		sound=""
+		time="4" />
+
+	<string
+		id="96"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="180"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|We killed them, but they won't stop trying to take her away from us. Go to Moska: the locals won't reach it, and they'll interrogate her properly!"
+		time="12" />
+
+	<string
+		id="97"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Sounds like a good idea."
+		sound=""
+		time="5" />
+
+	<string
+		id="98"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Here comes the first village! Not a bad hiding place!"
+		sound=""
+		time="7" />
+
+	<string
+		id="99"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="And here is their final hiding place! Just a little more, and I can make my way to the wise men's lands!"
+		sound=""
+		time="9" />
+
+	<string
+		id="100"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="354"
+		modelSlot="1"
+		sound=""
+		value="ADEPT|Everybody get ready for the explosion! 3! 2! 1!"
+		time="8" />
+
+	<string
+		id="101"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="All of those who resisted were killed, and the rest were captured. It is time to return to Moska."
+		sound=""
+		time="11" />
+
+	<string
+		id="102"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="The first village is destroyed! Now it's turn for the second!"
+		sound=""
+		time="7" />
+
+	<string
+		id="103"
+		modelName=""
+		value="You failed to protect Serafima, and because of that the locals no longer want anything to do with you. Now you won't be able to save Lisa and clear the way to the wise men's lands."
+		sound="data\sounds\speech\rolik\ending8.ogg"
+		fontSize="18"
+		time="12" />
+
+	<string
+		id="104"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Wow, this station looks a lot more technologically advanced on the inside than it does on the outside. But what am I supposed to do with this key?"
+		sound=""
+		time="9" />
+
+	<string
+		id="105"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Look, there's some kind of control panel. It's messed up, but a few of the buttons seem to work. Maybe you need the key for it."
+		sound=""
+		time="11" />
+
+	<string
+		id="106"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Let's check it out."
+		sound=""
+		time="4" />
+
+	<string
+		id="107"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="It's strange, nothing happened. Wait, I hear something, though. I think it's coming from outside."
+		sound=""
+		time="8" />
+
+	<string
+		id="108"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|Let me check."
+		sound=""
+		time="3" />
+
+	<string
+		id="109"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|What the hell is that?! Come here, you've got to see this for sure!"
+		sound=""
+		time="11" />
+
+	<string
+		id="110"
+		modelName="mask_snowlisa"
+		modelSkin="0"
+		modelSlot="1"
+		value="LISA|I can't believe it... It's a working train, constructed back in the Old World! But how is that possible?!"
+		sound=""
+		time="9" />
+
+	<string
+		id="111"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="These are very strange places, Lisa. The impossible things are not impossible here."
+		sound=""
+		time="8" />
+
+	<string
+		id="112"
+		modelName="mask_snowlisa"
+		modelSkin="1"
+		value="What do you mean?"
+		sound=""
+		time="3" />
+
+	<string
+		id="113"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I'll tell you about it later. In the meantime, we have to figure out what to do with this thing."
+		sound=""
+		time="6" />
+
+	<string
+		id="114"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="The door to the cabin is open... Yep, there's some kind of book in here! &quot;Operator's Manual,&quot; whatever that means... It's supposed to tell us how to drive this thing, I guess."
+		sound=""
+		time="13" />
+
+	<string
+		id="115"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Reversing handle, throttle handle and locomotive brake. Seems simple enough. We'll have to leave the car here, but I think the pillboxes can protect it. Well, onward into the unknown!"
+		sound=""
+		time="15" />
+
+	<string
+		id="116"
+		modelName="mask_snowlisa"
+		modelSkin="1"
+		value="I don't know where this road leads, so I'll stay here."
+		sound=""
+		time="6" />
+
+	
+	<string
+		id="117"
+		modelName=""
+		value="||@FF000000AAAAAA AAAAAAAAAAAAAAA.AAAAA@FFFFFFFFA few hours later"
+		sound=""
+		fontSize="18"
+		time="6" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="8803"
+		value="Password for the bonus ending: *********u*****|For more information, read the mod's manual on GitHub." />
+
+	<string
+		id="9999"
+		value="Improved Storyline||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+</resource>

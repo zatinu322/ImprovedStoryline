@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="1"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_1_cd_officer_radio.ogg"
+		value="RADIO|Not far from you is an almost defenseless village. If you attack now, the enemy will have to draw forces away from more important targets."
+		time="8" />
+
+	<string
+		id="2"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_2_cd_officer_radio.ogg"
+		value="RADIO|Then we'll strike another place. Remember, your job is to endure as long as possible, not burn down the village. Do it."
+		time="8" />
+
+	<string
+		id="3"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_3_cd_officer_radio.ogg"
+		value="RADIO|Retreat. You have done your job."
+		time="4" />
+
+	<string
+		id="4"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_4_felix.ogg"
+		value="BANDIT FELIX|Well-well, our paths have crossed. I told you we'd meet again. Now I'm ready for the fight, and you won't get out of here alive!"
+		time="8" />
+
+	<string
+		id="8810"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_5_felix.ogg"
+		value="BANDIT FELIX|Well-well, our paths have crossed again..."
+		time="2" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_5_hero.ogg"
+		value="You stand between me and my goal. I will not hesitate to destroy you."
+		time="4" />
+
+	<string
+		id="6"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_6_felix.ogg"
+		value="BANDIT FELIX|You are... really stronger than me..."
+		time="4" />
+
+	<string
+		id="7"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_7_cd_officer_radio.ogg"
+		value="RADIO|You proved your loyalty to the common cause.  On the corpse of one traitor we found a note saying that he would soon meet with CIT agents."
+		time="8" />
+
+	<string
+		id="8"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_8_cd_officer_radio.ogg"
+		value="RADIO|You will meet with him instead of the rebel and find out all you can. You have to act according to the circumstances. The meeting is in the Toskana's bar. Password: &quot;The night is long&quot;, recall: &quot;But the dawn is near&quot;."
+		time="8" />
+
+	<string
+		id="9"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_9_hero.ogg"
+		value="I got it. Our victory is close."
+		time="4" />
+
+	<string
+		id="10"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_10_cd_officer_radio.ogg"
+		value="The enemies are defeated! Without their leaders, they cannot stand against us! You have brought the glorious hour of victory closer and will be generously rewarded. Zion, the secret city of Axel, awaits you."
+		time="8" />
+
+	<string
+		id="11"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_11_axel.ogg"
+		value="AXEL|Stop, don't shoot! What do you want from me? You're not even from around here."
+		time="4" />
+
+	<string
+		id="15"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_15_axel.ogg"
+		value="AXEL|Lisa? Pretty girl with a fast car and dangerous connections?"
+		time="2" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_16_hero.ogg"
+		value="Yeah. You described her very accurately."
+		time="3" />
+
+	<string
+		id="25"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_25_axel.ogg"
+		value="AXEL|Stop, don't shoot! What do you want from me? You don't look like an ordinary CIT soldier."
+		time="6" />
+
+	<string
+		id="26"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_26_hero.ogg"
+		value="What insight! I admit I don't care much for your local squabbles. I just want to get to Lisa!"
+		time="10" />
+
+	<string
+		id="27"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_27_axel.ogg"
+		value="AXEL|Ha-ha-ha! You can get in line! So she's managed to mess with you, too. What a hellcat!"
+		time="8" />
+
+	<string
+		id="28"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_28_hero.ogg"
+		value="What are you talking about?"
+		time="1" />
+
+	<string
+		id="29"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_29_axel.ogg"
+		value="AXEL|She came to me seeking protection from her enemies, so she said. I took her into my home, and she stole from me and fled. She used my resources and my people for her own purposes. And I almost loved her..."
+		time="15" />
+
+	<string
+		id="30"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_30_hero.ogg"
+		value="Goddamn it! So I came all this way for nothing?! Wait, I know for a fact that Lisa is around here somewhere! I followed her to the borders of this region."
+		time="14" />
+
+	<string
+		id="31"
+		modelName="mask_axel"
+		modelSlot="1"
+		sound="data\sounds\Speech\r2m2\r2m2_31_axel.ogg"
+		value="AXEL|I also got a report that she had returned to our territory... She was last seen near the monastery. I was about to pay her a visit when you interrupted me so unceremoniously."
+		time="12" />
+
+	<string
+		id="32"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_32_hero.ogg"
+		value="Well, now the villain won't escape me! To the monastery! And let no one stand in my way!"
+		time="9" />
+
+	<string
+		id="33"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_33_axel.ogg"
+		value="I will spare you. But your reign is over. Let the people decide for themselves how to live their lives."
+		time="6" />
+
+	<string
+		id="50"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_50_hero.ogg"
+		value="Wow! Curious natural phenomenon. I think scientists in Midgard would be interested in it!"
+		time="4" />
+
+	<string
+		id="51"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r2m2\r2m2_51_hero.ogg"
+		value="Now you're going to die!"
+		time="4" />
+
+	<string
+		id="52"
+		modelName="mask_hero"
+		sound=""
+		value="Who are you? I was told that Axel would meet me here!"
+		time="5" />
+
+	<string
+		id="53"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="CD's EXECUTIONER|Ha-ha-ha, and you seriously expected to see Axel here? You know, that rebel you brought in told me a lot of interesting things about you during the interrogation!"
+		time="8.5" />
+
+	<string
+		id="54"
+		modelName="mask_hero"
+		sound=""
+		value="And you believed him? He's a dirty traitor, he was willing to say anything to get you to let him go!"
+		time="7" />
+		
+	<string
+		id="55"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="CD's EXECUTIONER|Yeah, that's what we thought, too. Then one of the sergeants remembered where he'd seen you. You were at the battle of Petropavlovsk, and not on our side."
+		time="10.5" />
+
+	<string
+		id="56"
+		modelName="mask_hero"
+		sound=""
+		value="Who cares what happened before?! I'm on your side now! You see, I suddenly realized that my interests in this war are somewhat different from the plans of my former allies."
+		time="11" />
+		
+	<string
+		id="57"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="CD's EXECUTIONER|Well, the CIT code of honor may allow for betrayal and defection, but we don't respect such things here. Any disloyalty is punishable by death. Under wartime law, the sentence will be carried out immediately!"
+		time="15.5" />
+
+	<string
+		id="58"
+		modelName="mask_hero"
+		sound=""
+		value="Barely made it... I have to get out of these lands before they start a full-fledged hunt for me!"
+		time="7.5" />
+
+	<string
+		id="59"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="HERETIC|Damn it! We're too late..."
+		time="5" />
+
+	<string
+		id="60"
+		modelName="mask_hero"
+		sound=""
+		value="It's impossible to save everyone..."
+		time="4" />
+
+	<string
+		id="61"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="HERETIC|Their nonexistent God knows, I meant well! I was going to pull off the overthrow of their clergy asses without bloodshed, but since holy men are no strangers to such methods, I'm not going to either!"
+		time="13" />
+
+	<string
+		id="62"
+		modelName="mask_hero"
+		sound=""
+		value="What are you going to do?"
+		time="3" />
+
+	<string
+		id="63"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="HERETIC|To signal to my supporters that it is time to act. The popes have no idea what force they're up against. I'll take his car, and you alert my men in Saraevo and Astria. You tell them it's time to start. They know what to do."
+		time="16" />
+
+	<string
+		id="64"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="92"
+		modelSlot="1"
+		sound=""
+		value="RECRUITER HOOKS|Pursue them! Catch them and bring them back!"
+		time="5" />
+
+	<string
+		id="67"
+		modelName="mask_hero"
+		sound=""
+		value="I was sent from..."
+		time="3" />
+
+	<string
+		id="68"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="HERETIC|It wasn't easy this time... The damned monks somehow found out where I was hiding and came to take me out. But I will repay them a hundredfold!"
+		time="10" />
+
+	<string
+		id="69"
+		modelName="mask_hero"
+		sound=""
+		value="Out of the frying pan into the fire, huh? Well, all the better for me!"
+		time="6" />
+
+	<string
+		id="70"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="330"
+		modelSlot="1"
+		sound=""
+		value="HERETIC|I don't care where you're from! The main thing is that we are pursuing the same goals. And now we must hurry, if I was attacked, my companion is also in trouble! My car won't start, so we'll take yours. Come on, hop behind the wheel, and I'll show you where to steer!"
+		time="15" />
+
+	<string
+		id="71"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="CD's EXECUTIONER|Yeah, that's what we thought, too. Then one of the sergeants remembered where he'd seen you. You recently came to our city and helped this bunch of opposition rats escape!"
+		time="10.5" />
+
+	<string
+		id="72"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="228"
+		modelSlot="1"
+		sound=""
+		value="CD's EXECUTIONER|Well, the anti-militarist code of honor may allow for betrayal and defection, but we don't respect such things here. Any disloyalty is punishable by death. Under wartime law, the sentence will be carried out immediately!"
+		time="15.5" />
+
+	<string
+		id="8800"
+		value="Do you wish to leave Argen and sail to Vahat?"
+		numButtons="2" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="It's a strange place. I'd better stay away from here."
+		time="3" />
+
+	<string
+		id="8804"
+		modelName=""
+		value="Your attempted double play failed, and your allies no longer attempted to infiltrate enemy territory. The war dragged on, and in the turmoil you would never find Lisa again."
+		sound="data\sounds\speech\rolik\ending7.ogg"
+		time="15" />	
+
+	<string
+		id="8807"
+		modelName="mask_hero"
+		sound=""
+		value="Well, I must drive along the shore and right into the ravine. Why am I even doing all this?"
+		time="10" />
+
+	<string
+		id="8808"
+		modelName="mask_hero"
+		sound=""
+		value="Wow, who on earth thought to build a truck out of cobblestones here? It looks good, but why is this strange man showing me all this?"
+		time="17" />
+
+	<string
+		id="8809"
+		value="Password for the bonus ending: ***********a***|For more information, read the mod's manual on GitHub." />
+
+	<string
+		id="8812"
+		value="Password for the bonus ending: ************T**|For more information, read the mod's manual on GitHub." />
+	
+	<string
+		id="8813"
+		modelName=""
+		value="You failed to protect the Heretic, and now no one can help you overthrow Axel and the Church of Enlightenment. Your mission is deadlocked, and no more anti-militarists have tried to enter enemy territory. The war dragged on, and in the turmoil you would never find Lisa again."
+		sound="data\sounds\speech\rolik\ending72.ogg"
+		time="18" />
+
+	<string
+		id="8811"
+		modelName="mask_hero"
+		sound=""
+		value="Damn, I see the church thugs got here first! I have to protect him, or I'll never overthrow Axel."
+		time="10" />
+
+	<string
+		id="9999"
+		value="Improved Storyline||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+</resource>

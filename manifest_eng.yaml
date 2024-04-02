@@ -1,0 +1,74 @@
+# common info
+name: improved_storyline_hd
+language: eng
+installment: exmachina
+ 
+# main human readable info
+display_name: Improved Storyline [ComRemaster]
+description: |
+  Storyline modification, the main purpose of which is to improve and diversify the story of the original game. This modification features redesigned dialogues that more fully reveal the characters and the game's world itself, as well as new plot twists, more varied game endings, and other quality story enhancements.
+authors: pavlikrpg
+ 
+# optional human readable info
+logo: assets/logo.jpg
+release_date: "02.04.2024"
+link: https://github.com/zatinu322/ImprovedStoryline/
+trailer_url: https://www.youtube.com/watch?v=c7kZsW94dWY
+tags: [story]
+change_log: assets/change_list_eng.md
+other_info: assets/faq_eng.md
+
+screenshots:
+  - img: assets/screen_0.jpg
+    text: A new winter region consisting of three locations.
+  - img: assets/screen_1.jpg
+    text: One of the many reworked in-game dialogues.
+  - img: assets/screen_2.jpg
+    text: Extended game intro - Lisa is talking to Felix at his base.
+  - img: assets/screen_3.jpg
+    text: Cutscene with the submarine in Hel with the main character's cut phrases restored.
+  - img: assets/screen_4.jpg
+    text: A system for displaying the player's current companions.
+  - img: assets/screen_5.jpg
+    text: Cutscene at the beginning of a new secondary quest.
+ 
+# installation configuration
+no_base_content: false
+strict_requirements: true
+compatible_minor_versions: false
+compatible_patch_versions: false
+
+data_dirs:
+  - data
+  - data_hd
+
+options_base_dir: options
+ 
+# installator compatibility
+patcher_version_requirement: "2.1"
+
+# community patch requirements
+prerequisites:
+  - name: [community_remaster]
+    versions: 
+     - "1.14.1"
+    optional_content:
+     - hd_gun_models
+     - hd_vehicle_models
+     - ost_remaster
+     - english_localization
+
+# optional mod content
+optional_content:
+  - name: Snowfall
+    display_name: Improved snowfall
+    description: |
+      More intense and beautiful snowfall in winter locations. Significantly affects performance and is not recommended for people with weak PCs.
+  - name: KrayCity
+    display_name: KrayCity
+    description: Modification from OverLine (Rock) that adds five new villages to Krai map.
+    default_option: skip
+  - name: english_localization
+    display_name: English Localization
+    forced_option: True
+    description: Full text-only localization of Improved Storyline.

@@ -1,0 +1,917 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="1"
+		modelName="mask_father"
+		modelSlot="1"
+		value="FATHER|Wake up, lazybones! I've been waiting for an hour to tell you something very important, and you're sleeping like a groundhog again..."
+		sound="data\sounds\Speech\r1m1\r1m1_1_father.ogg"
+		time="11" />
+
+	<string
+		id="2"
+		modelName="mask_hero"
+		value="|Good morning to you, too. What are you so nervous about?"
+		sound="data\sounds\Speech\r1m1\r1m1_2_hero.ogg"
+		time="3" />
+
+	<string
+		id="3"
+		modelName="mask_father"
+		modelSlot="1"
+		value="FATHER|Okay, take it easy. There you go. Today's a big day in your life. You've always been a great help to me and hopefully you've learned a lot in that time... So, I've decided it's time for your coming of age."
+		sound="data\sounds\Speech\r1m1\r1m1_3_father.ogg"
+		time="17" />
+
+	<string
+		id="31"
+		modelName="mask_father"
+		modelSlot="1"
+		value="FATHER|You're a real man now and can do whatever you want, even start a family... Heh, although it would be better to ask for permission first, of course."
+		sound="data\sounds\Speech\r1m1\r1m1_31_father.ogg"
+		time="12" />
+
+	<string
+		id="4"
+		modelName="mask_hero"
+		value="|Is this the day?! I began to wonder if I'm going to be stuck on this farm till my old age!"
+		sound="data\sounds\Speech\r1m1\r1m1_4_hero.ogg"
+		time="6" />
+
+	<string
+		id="41"
+		modelName="mask_hero"
+		value="|I mean, I wanted to say, thank you very much, I'll try to live up to the trust you put in me, sir!"
+		sound="data\sounds\Speech\r1m1\r1m1_41_hero.ogg"
+		time="6" />
+
+	<string
+		id="5"
+		modelName="mask_father"
+		modelSlot="1"
+		value="FATHER|You're being sarcastic again, and I have so much to say to you..."
+		sound="data\sounds\Speech\r1m1\r1m1_5_father.ogg"
+		time="5" />
+
+	<string
+		id="6"
+		modelName="mask_hero"
+		value="|What, I can get in right away and go wherever I want?"
+		sound="data\sounds\Speech\r1m1\r1m1_6_hero.ogg"
+		time="4" />
+
+	<string
+		id="7"
+		modelName="mask_father"
+		modelSlot="1"
+		value="FATHER|Well, if you're in such a hurry to get behind the wheel, head down to Sowth and deliver Sergo this package. We'll talk when you get back."
+		sound="data\sounds\Speech\r1m1\r1m1_7_father.ogg"
+		time="12" />
+
+	<string
+		id="8"
+		modelName="mask_hero"
+		value="|Ho-oo-ray!!! I'll be right back! Take care, old man!"
+		sound="data\sounds\Speech\r1m1\r1m1_8_hero.ogg"
+		time="4" />
+
+	<string
+		id="5963"
+		modelName="mask_hero"
+		value="All right, all right, here's the money, just don't touch me!"
+		sound=""
+		time="5" />
+
+	<string
+		id="5964"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|Okay, you got lucky for now. Next time stay out of my sight, or you won't get off that easy. Now get out of here!"
+		sound=""
+		time="11" />
+
+	<string
+		id="1111"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|Wait here while I finish my business."
+		sound="data\sounds\Speech\r1m1\r1m1_1111_lisa.ogg"
+		time="3" />
+
+	<string
+		id="1112"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|Done. Let's get going."
+		sound="data\sounds\Speech\r1m1\r1m1_1112_lisa.ogg"
+		time="3" />
+
+	<string
+		id="1121"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|Gosh, what a waste of time! I know he's around here somewhere! Boy, are you sure we've covered all the settlements around here?"
+		sound="data\sounds\Speech\r1m1\r1m1_1121_lisa.ogg"
+		time="7" />
+
+	<string
+		id="1122"
+		modelName="mask_hero"
+		value="|Yes, all the villages, just like you said. Although, there's one village left, Glukhoe."
+		sound="data\sounds\Speech\r1m1\r1m1_1122_hero.ogg"
+		time="5" />
+
+	<string
+		id="1123"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|So why are you wasting my time? How do I get there?"
+		sound="data\sounds\Speech\r1m1\r1m1_1123_lisa.ogg"
+		time="4" />
+
+	<string
+		id="1124"
+		modelName="mask_hero"
+		value="|It's actually north of here over the mountains, not far at all, but there's no direct road. We'll have to go through Sowth..."
+		sound="data\sounds\Speech\r1m1\r1m1_1124_hero.ogg"
+		time="7" />
+
+	<string
+		id="1125"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|This is where we part ways: I'm tired of following your clunker. Besides, where there is no road for you, my car will pass easily. You've kept your end of the bargain. Here's your money."
+		sound="data\sounds\Speech\r1m1\r1m1_1125_lisa.ogg"
+		time="11" />
+
+	<string
+		id="1126"
+		modelName="mask_hero"
+		value="|So what was she looking for? It's time for me to head home, too. Time to find out what father was so worried about."
+		sound="data\sounds\Speech\r1m1\r1m1_1126_hero.ogg"
+		time="7" />
+
+	<string
+		id="1131"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|And here's our troublemaker. My sources tell me that you've become Lisa's assistant, and she's a generous girl... For a little contribution of 1000 coins you can continue your dirty business and even count on our support."
+		sound="data\sounds\Speech\r1m1\r1m1_1131_felix.ogg"
+		time="19" />
+
+	<string
+		id="1132"
+		modelName="mask_hero"
+		value="|What are you going on about? I don't have that kind of money! And who are you people anyway?"
+		sound="data\sounds\Speech\r1m1\r1m1_1132_hero.ogg"
+		time="5" />
+
+	<string
+		id="1133"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|Then we'll have to sell your car for parts to compensate us the moral damage. Get him!"
+		sound="data\sounds\Speech\r1m1\r1m1_1133_felix.ogg"
+		time="7" />
+
+	<string
+		id="1134"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|We'll meet again, you fool! Mark my words: you will regret messing with Felix!"
+		sound="data\sounds\Speech\r1m1\r1m1_1134_felix.ogg"
+		time="8" />
+
+	<string
+		id="1151"
+		modelName="mask_hero"
+		value="|I will avenge my father's death!"
+		sound="data\sounds\Speech\r1m1\r1m1_1151_hero.ogg"
+		time="3" />
+
+	<string
+		id="1152"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|Bah, all the familiar faces. Teach this cheeky bastard a lesson!"
+		sound="data\sounds\Speech\r1m1\r1m1_1152_felix.ogg"
+		time="6" />
+
+	<string
+		id="1153"
+		modelName="mask_hero"
+		value="|Is that all you've got? Come out and fight like a man!"
+		sound="data\sounds\Speech\r1m1\r1m1_1153_hero.ogg"
+		time="5" />
+
+	<string
+		id="11540"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|The guy's pretty good... Where did he get that kind of weaponry? All right, you want something done right - you do it yourself. Step aside."
+		sound="data\sounds\Speech\r1m1\r1m1_1154_felix.ogg"
+		time="10" />
+
+	<string
+		id="1155"
+		modelName="mask_hero"
+		value="|Now you will die for your crimes!"
+		sound="data\sounds\Speech\r1m1\r1m1_1155_hero.ogg"
+		time="3" />
+
+	<string
+		id="1156"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|Wait, I haven't killed anyone in years. We had a deal with the locals! You're the one who barged into my home and attacked my men."
+		sound="data\sounds\Speech\r1m1\r1m1_1156_felix.ogg"
+		time="10" />
+
+	<string
+		id="1157"
+		modelName="mask_hero"
+		value="|Only you have the manpower and audacity to burn down an entire village!"
+		sound="data\sounds\Speech\r1m1\r1m1_1157_hero.ogg"
+		time="5" />
+
+	<string
+		id="1158"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|Oh, so you're from Glukhoe! Believe me, it wasn't us, but some bandits from neighboring regions!"
+		sound="data\sounds\Speech\r1m1\r1m1_1158_felix.ogg"
+		time="8" />
+
+	<string
+		id="1159"
+		modelName="mask_hero"
+		value="|You are lying!"
+		sound="data\sounds\Speech\r1m1\r1m1_1159_hero.ogg"
+		time="1" />
+
+	<string
+		id="11510"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|I swear on my father's grave! Ask your newfound friend Lisa. She saw everything."
+		sound="data\sounds\Speech\r1m1\r1m1_11510_felix.ogg"
+		time="7" />
+
+	<string
+		id="11511"
+		modelName="mask_hero"
+		value="|How do you know?"
+		sound="data\sounds\Speech\r1m1\r1m1_11511_hero.ogg"
+		time="2" />
+
+	<string
+		id="11512"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|That's what she told us. And then she ran off to the north. Towards Pesht."
+		sound="data\sounds\Speech\r1m1\r1m1_11512_felix.ogg"
+		time="6" />
+
+	<string
+		id="11513"
+		modelName="mask_hero"
+		value="|Lisa... I feel she had something to do with all this... All right, Felix, I will spare your life. Pack up and get the hell outta here. But don't you ever show up around here ever again!"
+		sound="data\sounds\Speech\r1m1\r1m1_11513_hero.ogg"
+		time="14" />
+
+	<string
+		id="11514"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="172"
+		modelSlot="1"
+		value="BANDIT FELIX|You won. But we will meet again, and I will be better prepared then."
+		sound="data\sounds\Speech\r1m1\r1m1_11514_felix.ogg"
+		time="5" />
+
+	<string
+		id="11515"
+		modelName="mask_hero"
+		value="|So long!"
+		sound="data\sounds\Speech\r1m1\r1m1_11515_hero.ogg"
+		time="2" />
+
+	<string
+		id="2222"
+		modelName="r1_man"
+		modelSkin="0"
+		modelCfg="70"
+		modelSlot="1"
+		value="DRUNKARD PETRO|Great, we've shown these rascals who's boss here!"
+		sound="data\sounds\Speech\r1m1\r1m1_2222_ed.ogg"
+		time="4" />
+
+	<string
+		id="33330"
+		modelName="mask_father"
+		value="FATHER|...son...!"
+		modelSlot="1"
+		sound="data\sounds\Speech\r1m1\r1m1_33330_father.ogg"
+		time="3" />
+
+	<string
+		id="33331"
+		modelName="mask_hero"
+		value="|Oh god, father! What happened here? Who did it?"
+		sound="data\sounds\Speech\r1m1\r1m1_33331_hero.ogg"
+		time="6" />
+
+	<string
+		id="33332"
+		modelName="mask_father"
+		modelSlot="1"
+		value="FATHER|Listen carefully. You are my adopted son. These are your real father's things. Find Ben The Throttle. He's an explorer. He can help... Son... don't let the hate... poison your... so... ul..."
+		sound="data\sounds\Speech\r1m1\r1m1_33332_father.ogg"
+		time="30" />
+
+	<string
+		id="33333"
+		modelName="mask_hero"
+		value="|My life... What should I do next? After all, I have nobody left... and nothing... Only this letter..."
+		sound="data\sounds\Speech\r1m1\r1m1_33333_hero.ogg"
+		time="12" />
+
+	<string
+		id="33334"
+		modelAutosized="true"
+		modelName="quest_letter"
+		modelSlot="1"
+		value="LETTER | &quot;...Son, if you are reading this letter, it means I couldn't go back and raise you myself. I know that Peter has brought you up nicely. I can almost see you, so young and full of strength, and my heart is filled with tears...&quot;"
+		sound="data\sounds\Speech\r1m1\r1m1_33334_letter.ogg"
+		time="19" />
+
+	<string
+		id="33335"
+		modelAutosized="true"
+		modelName="quest_letter"
+		modelSlot="1"
+		value="LETTER | &quot;...I blame myself for not being around when you were growing up. And this is my terrible punishment. But you must know that I couldn't do it any other way. I have the task of a lifetime ahead of me...&quot;"
+		sound="data\sounds\Speech\r1m1\r1m1_33335_letter.ogg"
+		time="14" />
+
+	<string
+		id="33336"
+		modelAutosized="true"
+		modelName="quest_letter"
+		modelSlot="1"
+		value="LETTER|&quot;...Only by doing what I had planned I could find peace and feel like a human being again.  If not... then I don't deserve to live.  This letter is an apology. Forgive me if you can. You are always in my heart, son.&quot;"
+		sound="data\sounds\Speech\r1m1\r1m1_33336_letter.ogg"
+		time="20" />
+
+	<string
+		id="33337"
+		modelName="mask_hero"
+		value="|Is that all? No explanation... How can I forgive someone I never knew? There's nothing left for me to do here. I'm going to search for Ben. Whoever that is, I hope he can help me find myself. Maybe somebody heard of him in Sowth?"
+		sound="data\sounds\Speech\r1m1\r1m1_33337_hero.ogg"
+		time="22" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
+		value="|I don't know where this road leads, so I'll stay here."
+		time="3" />
+
+	<string
+		id="8803"
+		modelName="mask_hero"
+		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
+		value="|It's a strange place. I'd better stay away from here."
+		time="3" />
+
+	
+	<string
+		id="77771"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_up.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffffff|    History has not kept an exact record of the dark times immediately following the Catastrophe. All that is known is that people survived the poisoned air by wearing protective masks. This creation of an unknown inventor equaled everyone. The thin barrier that stood in the way of imminent death became a symbol of the new humanity. The masks united the people and gave them strength to fight for a place under the sun.||    New settlements emerged away from the old cities, which had become mass graves. Little by little, connections were formed between the disparate groups of survivors. Farmers, miners, traders - a return to simple activities seemed to be only beneficial to the distraught people.||    But nothing can change the nature of man. There were those who retained the ancient wisdom to share with the world. There were also those who chose destruction over creation."
+		sound="data\sounds\Speech\rolik\r1m1_969_narrator.ogg"
+		fontSize="18"
+		scrollSpeed="0.57"
+		time="68" />
+
+	
+	<string
+		id="77772"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_up.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffffff|    History has not kept an exact record of the dark times immediately following the Catastrophe. All that is known is that people survived the poisoned air by wearing protective masks. This creation of an unknown inventor equaled everyone. The thin barrier that stood in the way of imminent death became a symbol of the new humanity. The masks united the people and gave them strength to fight for a place under the sun.||    New settlements emerged away from the old cities, which had become mass graves. Little by little, connections were formed between the disparate groups of survivors. Farmers, miners, traders - a return to simple activities seemed to be only beneficial to the distraught people.||    But nothing can change the nature of man. There were those who retained the ancient wisdom to share with the world. There were also those who chose destruction over creation."
+		sound="data\sounds\Speech\rolik\r1m1_969_narrator.ogg"
+		fontSize="18"
+		scrollSpeed="0.65"
+		time="68" />
+		
+	<string
+		id="77773"
+		value="You have been in Glukhoe for too long, and you were killed along with all its inhabitants. Now you will never know the whole truth about you and this world."
+		sound="data\sounds\speech\rolik\ending3.ogg"
+		fontSize="12"
+		scrollSpeed="0.5"
+		time="11" />
+
+	
+	<string
+		id="77776"
+		modelName=""
+		value="The destruction of the Njeri outpost, the aliens from other worlds, unleashed the Oracle. The first thing he did was to take control of the orbital weaponry and launch a nuclear attack on Zarmek. When the source of the contamination was destroyed, many experienced a shock from which not all could recover."
+		sound="data\sounds\Speech\rolik\ending21.ogg"
+		fontSize="18"
+		time="22" />
+	<string
+		id="77777"
+		modelName=""
+		value="The mysterious radiation was too deeply rooted in human nature. In an attempt to rectify the evil caused, the supercomputer slowly began to extend itself into all areas of human life. From its blueprints, numerous useful devices were rebuilt."
+		sound="data\sounds\Speech\rolik\ending22.ogg"
+		fontSize="18"
+		time="20" />
+	<string
+		id="77778"
+		modelName=""
+		value="All sorts of robotic assistants were assigned to each survivor to help them with everything. The people, however, did not accept the change. Many gave up the Oracle's gifts and returned to simple activities. And increasingly, some regretted the disappearance of the voice that incessantly whispered of ascension."
+		sound="data\sounds\Speech\rolik\ending23.ogg"
+		fontSize="18"
+		time="25" />
+
+	
+	<string
+		id="77779"
+		modelName=""
+		value="For the first time in many years, peace has prevailed in Vaterland. The Brigade clan, who constantly terrorized the northern traders, has been completely destroyed, and the weapons found at their base are now used to protect their caravans."
+		sound="data\sounds\speech\rolik\narator_r1m3_g.ogg"
+		fontSize="18"
+		time="14" />
+	<string
+		id="77780"
+		modelName=""
+		value="The new mayor of Minin not only established oil supplies to all the surrounding villages, but also turned the city into the largest trading zone, where every free trader can profitably sell his goods."
+		sound="data\sounds\speech\rolik\narator_r1m3_g2.ogg"
+		fontSize="18"
+		time="12" />
+
+	
+	<string
+		id="77781"
+		modelName=""
+		value="Calm has returned to the Druid Grove. With the rescue of the rebels from Uluk, the Druids were able to prevent the assassination of the Main Druid and completely suppress the rebellion of the Children of Iron. Now all the towns in the Grove live in harmony and the steel monsters no longer trouble anyone."
+		sound="data\sounds\speech\rolik\narator_r3m1_g.ogg"
+		fontSize="18"
+		time="19" />
+
+	
+	<string
+		id="77782"
+		modelName=""
+		value="After the victory of the anti-militarist movement, the CIT and CD stopped their existence. Now Argen and Librium are united under the Union of Liberated Countries - a faction created by anti-militarist leaders after the victory in the war."
+		sound="data\sounds\speech\rolik\narator_r2m1_g.ogg"
+		fontSize="18"
+		time="16" />
+	<string
+		id="77783"
+		modelName=""
+		value="It is too early to tell, but it is all but certain that the Union of Liberated Countries will be the first faction to make such significant progress in governing the country."
+		sound="data\sounds\speech\rolik\narator_r2m1_g2.ogg"
+		fontSize="18"
+		time="11" />
+
+	
+	<string
+		id="77784"
+		modelName=""
+		value="As for the main character, he can only be envied. Tired of the eternal road and saving of the world, he settled down in Gugulino with Lisa and going to live the rest of his life in peace and happiness. But have his adventures ended there? Well, we'll see."
+		sound="data\sounds\speech\rolik\narator_pl_g.ogg"
+		fontSize="18"
+		time="19" />
+
+	
+	<string
+		id="77791"
+		modelName=""
+		value="Despite the closing of the borders and a considerable military force, the northern merchants eventually lost the war with the fishermen and returned back to the Vatherland. Peace and tranquility now returned to Hel."
+		sound="data\sounds\speech\rolik\narator_r1m4_g.ogg"
+		fontSize="18"
+		time="13" />
+
+	
+	<string
+		id="77792"
+		modelName=""
+		value="With outside help, the people of Lidencloud managed to fight off the Adepts and leave these troubled lands in time. They successfully made it to Le Canada and started a new life there, while the Adepts returned to their lands and never attacked anyone again."
+		sound="data\sounds\speech\rolik\narator_r1m6_g.ogg"
+		fontSize="18"
+		time="15" />
+
+	
+	<string
+		id="77793"
+		modelName=""
+		value="Despite all the bandits' attempts to take over the Sowth, it stood firm. The timely help of one brave and concerned traveler literally saved the entire Krai."
+		sound="data\sounds\speech\rolik\narator_r1m1_g.ogg"
+		fontSize="18"
+		time="11" />
+
+	<string
+		id="77794"
+		modelName=""
+		value="After such a powerful repulse, the bandits dropped all attempts to occupy the town and returned to robbery and looting, doing which is becoming more and more difficult every day."
+		sound="data\sounds\speech\rolik\narator_r1m1_g2.ogg"
+		fontSize="18"
+		time="12" />
+
+
+	<string
+		id="10"
+		value="||@FF000000AAAAAAAAAAAAAAAA.AAAAAA@FFFFA600&quot;Targem Games&quot;"
+		sound=""
+		fontSize="12"
+		time="5" />
+
+	<string
+		id="11"
+		value="||@FF000000AAAAAAAAAAA@FFFFFFFFin cooperation with @FFFFA600&quot;Buka&quot; @FFFFFFFFPublishing House"
+		sound=""
+		fontSize="12"
+		time="5" />
+
+	<string
+		id="12"
+		value="||@FF000000AAAAAAAAAAAAAAAAAAAAAAAAAA@FFFFFFFFpresent"
+		sound=""
+		fontSize="12"
+		time="10" />
+
+	<string
+		id="13"
+		value="|@FF000000АAAА.АААААААААА@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000АААААIААААAAАAAAAIАААА@FFFFFFFFImproved Storyline"
+		sound=""
+		fontSize="12"
+		time="6" />
+	
+	<string
+		id="15"
+		modelName="mask_hero"
+		value="It seems that this was the last one... Now the people of the Sowth can breathe a sigh of relief."
+		sound=""
+		time="7" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		value="The pillboxes are built. Now it's time to deal with the bandits."
+		sound=""
+		time="7" />
+
+	<string
+		id="17"
+		modelName="mask_hero"
+		value="We have repelled this attack, but it's not over yet. Their reinforcements are about to arrive here in any minute."
+		sound=""
+		time="7" />
+
+	<string
+		id="90000"
+		value="Would you like to disable Mr. Hat? |(&quot;Yes&quot; is recommended if this is your first time playing the mod)"
+		numButtons="2" />
+
+	<string
+		id="90001"
+		value="Improved Storyline||You can get all the detailed information about the mod and it's walkthrough in the mod manual on GitHub.| |https://github.com/zatinu322/ImprovedStoryline/wiki|@00FFFFFFA"
+		numButtons="1" />
+
+	<string
+		id="5976"
+		value="Password for the bonus ending: K**************|For more information, read the mod's manual on GitHub." />
+
+	<string
+		id="5965"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Can you believe it? It was only yesterday that he was running from town to town, trying to figure out what was going on. Today he is already in the desert... How fast time flies..."
+		sound=""
+		time="14" />
+
+	<string
+		id="5966"
+		modelName="r4_man"
+		modelSkin="1"
+		modelCfg="111"
+		modelSlot="1"
+		value="SERGO|&quot;Time flies&quot;, you say? It's funny to hear that from you."
+		sound=""
+		time="7" />
+
+	<string
+		id="5967"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Why are you still here?"
+		sound=""
+		time="5" />
+
+	<string
+		id="5968"
+		modelName="r4_man"
+		modelSkin="1"
+		modelCfg="111"
+		modelSlot="1"
+		value="SERGO|Don't worry, I can get to the Overlord before him."
+		sound=""
+		time="7" />
+
+	<string
+		id="5969"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="I wish I could believe it. There's too much at stake. You remember what you shouldn't tell him about, don't you?"
+		sound=""
+		time="10" />
+
+	<string
+		id="5970"
+		modelName="r4_man"
+		modelSkin="1"
+		modelCfg="111"
+		modelSlot="1"
+		value="SERGO|Yes, I do."
+		sound=""
+		time="5" />
+
+	<string
+		id="5971"
+		modelName="mask_father"
+		modelSkin="1"
+		modelSlot="1"
+		value="Great. I hope he'll make the right choice."
+		sound=""
+		time="6" />
+
+	<string
+		id="5972"
+		modelName="mask_hero"
+		value="I don't think there's any point in showing Glukhoe to Lisa. The man she's looking for can not be there anyway."
+		sound=""
+		time="7" />
+
+	<string
+		id="5973"
+		modelName="mask_hero"
+		value="What the hell..."
+		sound=""
+		time="4" />
+
+	<string
+		id="5974"
+		modelName="mask_father"
+		modelSkin="0"
+		modelSlot="1"
+		value="FATHER|Son, it took you too long. Did Sergo accept the parsel? Were there any difficulties on the way?"
+		sound=""
+		time="7" />
+
+	<string
+		id="5975"
+		modelName="mask_hero"
+		value="No... I don't want to see you! Get gone! You're dead!"
+		sound=""
+		time="6" />
+
+	<string
+		id="5977"
+		value="Password for the bonus ending: *4*************|For more information, read the mod's manual on GitHub." />
+
+	<string
+		id="5978"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Developer studio «Targem Games»| | | |@ffffa600Internal producer||@ffffffffStanislav «scorp» Skorb| | |@ffffa600Technical director||@ffffffffAlexey Skriabin| | |@ffffa600Project manager||@ffffffffEvgeniy «Hrrr» Khrunov| | |@ffffa600Writer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead programmer||@ffffffffAnton «anger» Savin| | |@ffffa600Lead designer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead artist||@ffffffffAlexander «Alex ML» Margushin| | |@ffffa600Designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffAlexey «Razaz» Anufriev|@ffffffffStanislav «scorp» Skorb|@ffffffffBoris «borg» Smirnov| | |@ffffa600Programmers||@ffffffffElena «SoftKitty» Evdokimova|@ffffffffIvan «Vano» Vlasov|@ffffffffIlya «phosgen» Ruzakov|@ffffffffMaxim «Shadow» Sarmanov|@ffffffffSergey «Ice Cat» Kluchkovsky|@ffffffffIgor «Goryh» Dyagterev| | |@ffffa600Artists||@ffffffffAlexander «Alex ML» Margushin|@ffffffffIvan Snigirev|@ffffffffEvgeny «Dzhin» Goltsov|@ffffffffVladimir «Price» Seleznev|@ffffffffStanislav «Staz» Cherva|@ffffffffRustam «Rychi» Turey|@ffffffffEvgeny  Tokarev|@ffffffffSergey «Sega» Mitryaev|@ffffffffViktor «isymbosi» Koryakin|@ffffffffRoman Latynov| | |@ffffa600Level designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffArtem «solo» Solovev|@ffffffffDaniil «HiKiller» Kondratiev|@ffffffffStanislav «Staz» Cherva| | |@ffffa600Interface designer||@ffffffffMikhail «Rai» Matvienko| | |@ffffa600FX||@ffffffffAlexey «Hal» Lobanov| | |@ffffa600Sound director||@ffffffffAnton Popov|@ffffffffEkaterina Shvemmer| | |@ffffa600Quality assurance||@ffffffffVyacheslav «ls» Avdeev| | |@ffffa600PR-manager||@ffffffffSvetlana «Crystal» Tchestnikh| | |@ffffa600The soundtrack includes tracks|@ffffa600of the music contest winners||@ffffffffAlexander Chekster|@ffffffffBoris Vedensky|@ffffffffAlexander Treger|@ffffffffMikhail Sidorov|@ffffffffAlexander Lisenkov|@ffffffffParalaxeen|@ffffffffIgor Belousov| | |@ffffa600Special thanks to||@ffffffffConstantine Sokharev - programming|@ffffffffSvyatoslav Patashnikov - management|@ffffffffAlexey Andruschenko – web design"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.25"
+		time="67" />
+
+	<string
+		id="5979"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Publisher «Buka Entertainment»| | | |@ffffa600Producer||@ffffffffIvan Bunakov| | |@ffffa600Senior executive producer||@ffffffffIvan Moroz| | |@ffffa600Sales managers||@ffffffffYouriy Virich|@ffffffffAlexey Pisklukov| | |@ffffa600Technical expert||@ffffffffKirill Bestemyanov| | |@ffffa600Sound expert||@ffffffffRuslan Dmitriev| | |@ffffa600Cover designers||@ffffffffSanan Ushanov|@ffffffffDaniella Klimashevskaya| | |@ffffa600PR manager||@ffffffffAlexey Pastushenko| | |@ffffa600PR manager’s assistant||@ffffffffOleg Morozov| | |@ffffa600Producer’s assistant||@ffffffffAlexey Peshekhonov|@ffffffffNikolay Safronov| | |@ffffa600Manager of new teams||@ffffffffNikolay Safronov| | |@ffffa600Executive producer||@ffffffffAlexander Pak| | |@ffffa600QA supervisor||@ffffffffEvgeny Popov|@ffffffffIvan Rid| | |@ffffa600QA team||@ffffffffAnton Epishin|@ffffffffDmitry Lesin|@ffffffffAlexander Poloshin|@ffffffffEvgeny Popov|@ffffffffIvan Raynov|@ffffffffIvan Rid|@ffffffffAlexey Chebotarev| | |@ffffa600External testing||@ffffffffPeter Beliaev|@ffffffffAlexey Bunak|@ffffffffIgor Dmitriev|@ffffffffMichael Matushov|@ffffffffDenis Sokolov|@ffffffffIgor Peshekhontsev|@ffffffffDmitry Chichikov|@ffffffffAlexey Shekhovtsev|@ffffffffIlia Yusipov|@ffffffffTimur Yusipov| | |@ffffa600Sales department||@ffffffffMaxim O. Alexeev|@ffffffffMaxim U. Alexeev|@ffffffffMaxim A. Alexeev|@ffffffffNatalia Ankundinova|@ffffffffElena Antonova|@ffffffffIlia Brovchenko|@ffffffffPavel Grigoriev|@ffffffffVictoria Kiseleva|@ffffffffAlexander Kochetkov|@ffffffffPavel Kruglov|@ffffffffAndrey Osipov|@ffffffffAlexandr Petrinsky|@ffffffffOlga Polkovnikova|@ffffffffLarisa Savelieva|@ffffffffEvgeny Samsonov|@ffffffffSvetlana Samsonova|@ffffffffValery Tikhvonski|@ffffffffSergey Fedosof| | |@ffffa600Marketing||@ffffffffTatiana Vasekina| | |@ffffa600Community manager||@ffffffffAlexander Kovalev| | |@ffffa600Experts’ council||@ffffffffVladimir Miniaev|@ffffffffMaxim N. Mikhalev|@ffffffffIvan Moroz|@ffffffffSergey Rudenko|@ffffffffVitaly Kharitonenko| | |@ffffa600Juridical support||@ffffffffGeorgy Vitaliev| | |@ffffa600Technical support||@ffffffffEvgeny Dmitriev| | |@ffffa600CEO||@ffffffffAlexander Mikhailov| | |@ffffa600CFO||@ffffffffMarina Ravoon| | |@ffffa600Marketing department’s head||@ffffffffMaxim N. Mikhalev| | |@ffffa600Sales department’s head||@ffffffffTatiana Ustinova| | |@ffffa600Development department’s head||@ffffffffIvan Bunalov| | |@ffffa600Special thanks||@ffffffffYoulia Belova|@ffffffffSergey Bobkov|@ffffffffIlia Brovchenko|@ffffffffDmitry Zakharov|@ffffffffDmitry Kuleshov|@ffffffffDmitry Lesin|@ffffffffVladimir Miniaev|@ffffffffIvan Moroz|@ffffffffMarina Ravoon|@ffffffffIvan Rid|@ffffffffInna Sutsepina|@ffffffffIgor Ustinov|@ffffffffIrina Tsareva|@ffffffffVictoria Enns| | |@ffffa600Thanks for playing!"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.17"
+		time="98" />
+
+	<string
+		id="5980"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600«Improved Storyline»| | | |@ffffa600Imported from other mods| |@ffffffffBooster Mod - maps, textures, icons|@ffffffffKraycity - fully implemented|@ffffffffSteel Dawn - icons| | |@ffffa600OST| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffCephei - Futuro|@ffffffffCephei - Farewell, Atlantis|@ffffffffCephei - Celebration of Life|@ffffffffCephei - When the loved ones return| | |@ffffa600Special thanks to| |@ffffffffLynne for the locomotive model|@ffffffffSuslo Red for the model of the CD medal|@ffffffffVarisane for numerous text edits|@ffffffffOverLine for the winter lightmaps| |@ffffffffAnd also to all testers, bug reporters| @ffffffffand those who just helped with advice"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.55"
+		time="23" />
+	
+	<string
+		id="5981"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value=""
+		sound=""
+		fontSize="18"
+		scrollSpeed="0.5"
+		time="1" />
+
+	<string
+		id="5998"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Community Patch / Remaster| | | |@ffffa600Aleksandr «Seel» Parfenenkov||@ffffffffproject manager, tools, design| | |@ffffa600Aleksandr «ThePlain» Fateev||@fffffffftools, graphics, 3D modeling| | |@ffffa600Alexei «__nEmPoBu4__» Smirnov||@ffffffff3D modeling, scripting, quests| | |@ffffa600Anna Zhukova||@ffffffffgraphic design| | |@ffffa600Anton Popov||@ffffffffmusic| | |@ffffa600Vladislav «OverLine» Kurochkin||@ffffffffcontent design, level design| | |@ffffa600Dmitry «Gnome» Saschenko||@ffffffffscripting, quests, 3D modeling| | |@ffffa600Ivan «ICAS-14» Cherepanov||@ffffffff3D modeling| | |@ffffa600Leonid «KoYoT» Kochetov||@ffffffffbugfixes| | |@ffffa600Maxim «Spok» Berdnikov||@ffffffff3D modeling| | |@ffffa600Mark «Apocalypse007» Malygin||@fffffffftext proofreading| | |@ffffa600Nick «BIBIKUZ» Kononenko||@ffffffff3D modeling| | |@ffffa600Pavel «pavlikrpg» Ivanov||@ffffffffscripting, quests| | |@ffffa600Serafim «Varisane» Shagin||@ffffffffcontent design| | |@ffffa600Expert’s council||@ffffffffBuba|@ffffffffOracle|@ffffffffRusya_27|@ffffffffTraygen|@ffffffffSemimahov| | |@ffffa600Testing||@ffffffffSuslo Red|@ffffffffIvan «MrKarfen» Atamanov|@ffffffffSemen «Omezera» Ozeritsky|@ffffffffPushistik_7977|@ffffffffAnarxolis|@ffffffffScorpyX|@ffffffffAlexander192|@ffffffffTerorchat| | |@ffffa600Special thanks to||@ffffffffDeus Ex Machina community|@ffffffffdiscord.gg/qKK2Efx||@ffffffffEM2ch community|@ffffffffvk.com/em2ch||@ffffffffEx Machina VK public page|@ffffffffvk.com/exmachina2||@ffffffff«Павлик RPG»’s channel viewers||@ffffffffOur wifes, girlfriends, husbands, relatives and cats,|@ffffffffwho tolerated us during the development||@ffffffffTo all of those who waited for and supported this project"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.55"
+		time="54" />
+
+	<string
+		id="5982"
+		value="You skip credits - you don't get a password." />
+
+	<string
+		id="5983"
+		value="Do you wish to teleport to Hel?"
+		numButtons="2" />
+
+	<string
+		id="5984"
+		modelName="mask_hero"
+		value="I think he was talking about this house. Well, it's not much, but it'll do for a while."
+		sound=""
+		time="6" />
+	
+	<string
+		id="5985"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|If we renew it's exterior, it'll be as good as new. But it'd be better to clean it inside first..."
+		sound=""
+		time="6" />
+
+	<string
+		id="5986"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|Look, we can demolish this room here and move the furniture from there..."
+		sound=""
+		time="6" />
+
+	<string
+		id="5987"
+		modelName="mask_lisa"
+		modelSlot="1"
+		value="LISA|And we can build another window here, and then it will be just perfect..."
+		sound=""
+		time="5" />
+
+	<string
+		id="5988"
+		modelName="mask_hero"
+		value="Yeah, I guess that's the life I've always dreamed of."
+		sound=""
+		time="5" />
+
+	<string
+		id="5989"
+		modelName="mask_hero"
+		value="Wow... What did he mix in there? All right, well, I need to focus... Damn, this is gonna be harder than I thought. Well, Godspeed!"
+		sound=""
+		time="11" />
+
+
+	<string
+		id="5990"
+		value="||@FF000000AAAAAAAAAAAAAAAAAAAAAAAAAAI@FFFFA600&quot;Targem Games&quot;"
+		sound=""
+		fontSize="12"
+		time="5" />
+
+	<string
+		id="5991"
+		value="||@FF000000AAAAAAAAAAAAAAAIA@FFFFFFFFin cooperation with @FFFFA600&quot;Buka&quot; @FFFFFFFFPublishing House"
+		sound=""
+		fontSize="12"
+		time="5" />
+
+	<string
+		id="5992"
+		value="||@FF000000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@FFFFFFFFpresent"
+		sound=""
+		fontSize="12"
+		time="10" />
+
+	<string
+		id="5993"
+		value="|@FF000000AAAAA.AAAAAAAAAAAAAA@FFFFA600Ex Machina / Hard Truck Apocalypse||@FF000000AAAAAIAAAAAAIAAAAAAAAAAAAAA@FFFFFFFFImproved Storyline"
+		sound=""
+		fontSize="12"
+		time="6" />
+
+	
+	<string
+		id="5994"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Developer studio «Targem Games»| | | |@ffffa600Internal producer||@ffffffffStanislav «scorp» Skorb| | |@ffffa600Technical director||@ffffffffAlexey Skriabin| | |@ffffa600Project manager||@ffffffffEvgeniy «Hrrr» Khrunov| | |@ffffa600Writer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead programmer||@ffffffffAnton «anger» Savin| | |@ffffa600Lead designer||@ffffffffAlexey «Alex TG» Tchestnikh| | |@ffffa600Lead artist||@ffffffffAlexander «Alex ML» Margushin| | |@ffffa600Designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffAlexey «Razaz» Anufriev|@ffffffffStanislav «scorp» Skorb|@ffffffffBoris «borg» Smirnov| | |@ffffa600Programmers||@ffffffffElena «SoftKitty» Evdokimova|@ffffffffIvan «Vano» Vlasov|@ffffffffIlya «phosgen» Ruzakov|@ffffffffMaxim «Shadow» Sarmanov|@ffffffffSergey «Ice Cat» Kluchkovsky|@ffffffffIgor «Goryh» Dyagterev| | |@ffffa600Artists||@ffffffffAlexander «Alex ML» Margushin|@ffffffffIvan Snigirev|@ffffffffEvgeny «Dzhin» Goltsov|@ffffffffVladimir «Price» Seleznev|@ffffffffStanislav «Staz» Cherva|@ffffffffRustam «Rychi» Turey|@ffffffffEvgeny  Tokarev|@ffffffffSergey «Sega» Mitryaev|@ffffffffViktor «isymbosi» Koryakin|@ffffffffRoman Latynov| | |@ffffa600Level designers||@ffffffffDenis «mif2000» Galanin|@ffffffffSergey «JSinx» Udurminskiy|@ffffffffArtem «solo» Solovev|@ffffffffDaniil «HiKiller» Kondratiev|@ffffffffStanislav «Staz» Cherva| | |@ffffa600Interface designer||@ffffffffMikhail «Rai» Matvienko| | |@ffffa600FX||@ffffffffAlexey «Hal» Lobanov| | |@ffffa600Sound director||@ffffffffAnton Popov|@ffffffffEkaterina Shvemmer| | |@ffffa600Quality assurance||@ffffffffVyacheslav «ls» Avdeev| | |@ffffa600PR-manager||@ffffffffSvetlana «Crystal» Tchestnikh| | |@ffffa600The soundtrack includes tracks|@ffffa600of the music contest winners||@ffffffffAlexander Chekster|@ffffffffBoris Vedensky|@ffffffffAlexander Treger|@ffffffffMikhail Sidorov|@ffffffffAlexander Lisenkov|@ffffffffParalaxeen|@ffffffffIgor Belousov| | |@ffffa600Special thanks to||@ffffffffConstantine Sokharev - programming|@ffffffffSvyatoslav Patashnikov - management|@ffffffffAlexey Andruschenko – web design"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.48"
+		time="67" />
+
+	<string
+		id="5995"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Publisher «Buka Entertainment»| | | |@ffffa600Producer||@ffffffffIvan Bunakov| | |@ffffa600Senior executive producer||@ffffffffIvan Moroz| | |@ffffa600Sales managers||@ffffffffYouriy Virich|@ffffffffAlexey Pisklukov| | |@ffffa600Technical expert||@ffffffffKirill Bestemyanov| | |@ffffa600Sound expert||@ffffffffRuslan Dmitriev| | |@ffffa600Cover designers||@ffffffffSanan Ushanov|@ffffffffDaniella Klimashevskaya| | |@ffffa600PR manager||@ffffffffAlexey Pastushenko| | |@ffffa600PR manager’s assistant||@ffffffffOleg Morozov| | |@ffffa600Producer’s assistant||@ffffffffAlexey Peshekhonov|@ffffffffNikolay Safronov| | |@ffffa600Manager of new teams||@ffffffffNikolay Safronov| | |@ffffa600Executive producer||@ffffffffAlexander Pak| | |@ffffa600QA supervisor||@ffffffffEvgeny Popov|@ffffffffIvan Rid| | |@ffffa600QA team||@ffffffffAnton Epishin|@ffffffffDmitry Lesin|@ffffffffAlexander Poloshin|@ffffffffEvgeny Popov|@ffffffffIvan Raynov|@ffffffffIvan Rid|@ffffffffAlexey Chebotarev| | |@ffffa600External testing||@ffffffffPeter Beliaev|@ffffffffAlexey Bunak|@ffffffffIgor Dmitriev|@ffffffffMichael Matushov|@ffffffffDenis Sokolov|@ffffffffIgor Peshekhontsev|@ffffffffDmitry Chichikov|@ffffffffAlexey Shekhovtsev|@ffffffffIlia Yusipov|@ffffffffTimur Yusipov| | |@ffffa600Sales department||@ffffffffMaxim O. Alexeev|@ffffffffMaxim U. Alexeev|@ffffffffMaxim A. Alexeev|@ffffffffNatalia Ankundinova|@ffffffffElena Antonova|@ffffffffIlia Brovchenko|@ffffffffPavel Grigoriev|@ffffffffVictoria Kiseleva|@ffffffffAlexander Kochetkov|@ffffffffPavel Kruglov|@ffffffffAndrey Osipov|@ffffffffAlexandr Petrinsky|@ffffffffOlga Polkovnikova|@ffffffffLarisa Savelieva|@ffffffffEvgeny Samsonov|@ffffffffSvetlana Samsonova|@ffffffffValery Tikhvonski|@ffffffffSergey Fedosof| | |@ffffa600Marketing||@ffffffffTatiana Vasekina| | |@ffffa600Community manager||@ffffffffAlexander Kovalev| | |@ffffa600Experts’ council||@ffffffffVladimir Miniaev|@ffffffffMaxim N. Mikhalev|@ffffffffIvan Moroz|@ffffffffSergey Rudenko|@ffffffffVitaly Kharitonenko| | |@ffffa600Juridical support||@ffffffffGeorgy Vitaliev| | |@ffffa600Technical support||@ffffffffEvgeny Dmitriev| | |@ffffa600CEO||@ffffffffAlexander Mikhailov| | |@ffffa600CFO||@ffffffffMarina Ravoon| | |@ffffa600Marketing department’s head||@ffffffffMaxim N. Mikhalev| | |@ffffa600Sales department’s head||@ffffffffTatiana Ustinova| | |@ffffa600Development department’s head||@ffffffffIvan Bunalov| | |@ffffa600Special thanks||@ffffffffYoulia Belova|@ffffffffSergey Bobkov|@ffffffffIlia Brovchenko|@ffffffffDmitry Zakharov|@ffffffffDmitry Kuleshov|@ffffffffDmitry Lesin|@ffffffffVladimir Miniaev|@ffffffffIvan Moroz|@ffffffffMarina Ravoon|@ffffffffIvan Rid|@ffffffffInna Sutsepina|@ffffffffIgor Ustinov|@ffffffffIrina Tsareva|@ffffffffVictoria Enns| | |@ffffa600Thanks for playing!"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.31"
+		time="98" />
+
+	<string
+		id="5996"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600«Improved Storyline»| | | |@ffffa600Imported from other mods| |@ffffffffBooster Mod - maps, textures, icons|@ffffffffKraycity - fully implemented|@ffffffffSteel Dawn - icons| | |@ffffa600OST| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffCephei - Futuro|@ffffffffCephei - Farewell, Atlantis|@ffffffffCephei - Celebration of Life|@ffffffffCephei - When the loved ones return| | |@ffffa600Special thanks to| |@ffffffffLynne for the locomotive model|@ffffffffSuslo Red for the model of the CD medal|@ffffffffVarisane for numerous text edits|@ffffffffOverLine for the winter lightmaps| |@ffffffffAnd also to all testers, bug reporters| @ffffffffand those who just helped with advice"
+		sound=""
+		fontSize="18"
+		scrollSpeed="3.2"
+		time="23" />
+	
+	<string
+		id="5997"
+		msgType="SCROLL"
+		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
+		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
+		value="@ffffa600Community Patch / Remaster| | | |@ffffa600Aleksandr «Seel» Parfenenkov||@ffffffffproject manager, tools, design| | |@ffffa600Aleksandr «ThePlain» Fateev||@fffffffftools, graphics, 3D modeling| | |@ffffa600Alexei «__nEmPoBu4__» Smirnov||@ffffffff3D modeling, scripting, quests| | |@ffffa600Anna Zhukova||@ffffffffgraphic design| | |@ffffa600Anton Popov||@ffffffffmusic| | |@ffffa600Vladislav «OverLine» Kurochkin||@ffffffffcontent design, level design| | |@ffffa600Dmitry «Gnome» Saschenko||@ffffffffscripting, quests, 3D modeling| | |@ffffa600Ivan «ICAS-14» Cherepanov||@ffffffff3D modeling| | |@ffffa600Leonid «KoYoT» Kochetov||@ffffffffbugfixes| | |@ffffa600Maxim «Spok» Berdnikov||@ffffffff3D modeling| | |@ffffa600Mark «Apocalypse007» Malygin||@fffffffftext proofreading| | |@ffffa600Nick «BIBIKUZ» Kononenko||@ffffffff3D modeling| | |@ffffa600Pavel «pavlikrpg» Ivanov||@ffffffffscripting, quests| | |@ffffa600Serafim «Varisane» Shagin||@ffffffffcontent design| | |@ffffa600Expert’s council||@ffffffffBuba|@ffffffffOracle|@ffffffffRusya_27|@ffffffffTraygen|@ffffffffSemimahov| | |@ffffa600Testing||@ffffffffSuslo Red|@ffffffffIvan «MrKarfen» Atamanov|@ffffffffSemen «Omezera» Ozeritsky|@ffffffffPushistik_7977|@ffffffffAnarxolis|@ffffffffScorpyX|@ffffffffAlexander192|@ffffffffTerorchat| | |@ffffa600Special thanks to||@ffffffffDeus Ex Machina community|@ffffffffdiscord.gg/qKK2Efx||@ffffffffEM2ch community|@ffffffffvk.com/em2ch||@ffffffffEx Machina VK public page|@ffffffffvk.com/exmachina2||@ffffffff«Павлик RPG»’s channel viewers||@ffffffffOur wifes, girlfriends, husbands, relatives and cats,|@ffffffffwho tolerated us during the development||@ffffffffTo all of those who waited for and supported this project"
+		sound=""
+		fontSize="18"
+		scrollSpeed="2.8"
+		time="54" />
+
+	<string
+		id="9999"
+		value="Improved Storyline||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+
+	<string
+		id="9998"
+		value="Improved Storyline||This version of Improved Storyline is designed to work with Community Patch/Remaster only.||Please install these two mods correctly and try again.|" />
+</resource>

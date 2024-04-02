@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+
+	<string
+		id="1"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Wow, not only did the mine collapse, but its entrance is also blocked with snow. How long ago did this happen?"
+		sound=""
+		time="10" />
+
+	<string
+		id="2"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="And how am I supposed to clean it up? All right, I'll do it the old-fashioned way - with the shovel in my hands!"
+		sound=""
+		time="10" />
+
+	<string
+		id="3"
+		modelName=""
+		value="||@FF000000AAAAAAAAAAAAAAAAAAAAAA@FFFFFFFFSome time later..."
+		sound=""
+		time="5" />
+
+	<string
+		id="4"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Phew, I think I'm done... Hard work, but someone had to do it. Time to get back to La Belle."
+		sound=""
+		time="10" />
+
+	<string
+		id="5"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="That seems to be all of them. Where did so many bandits come from in these parts? I shall ask about it on occasion. Oh, the others are coming back already..."
+		sound=""
+		time="14" />
+
+	<string
+		id="6"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Right, it's blocked off. It's unlikely the kidnapper can fly, so there's no way he could have taken this road. Let's check the second exit."
+		sound=""
+		time="13" />
+
+	<string
+		id="7"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Same here. Time to ask in Volozh if they passed through town."
+		sound=""
+		time="10" />
+
+	<string
+		id="8"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Hey, you there! I know you're in there! Free Dobroslava and get the hell out of here! Let's resolve this conflict without violence!"
+		sound=""
+		time="11" />
+
+	<string
+		id="9"
+		modelName="r5_man"
+		modelSkin="1"
+		modelCfg="84"
+		modelSlot="1"
+		value="TIKHOMIR|No way! We won't go back to them! We'd better die!"
+		sound=""
+		time="5.5" />
+
+	<string
+		id="10"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What are you talking about? I've never met such kind and friendly people as here. Free the girl, and I won't hurt you."
+		sound=""
+		time="9" />
+
+	<string
+		id="11"
+		modelName="r5_man"
+		modelSkin="1"
+		modelCfg="84"
+		modelSlot="1"
+		value="TIKHOMIR|Kind and friendly... Of course... They are walking silhouettes with no thoughts or goals of their own, ruled by a quintet of these monsters. But I will get Dobroslava out of this place. I must save at least her."
+		sound=""
+		time="13.5" />
+
+	<string
+		id="12"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I don't understand you. The things you say have nothing to do with reality."
+		sound=""
+		time="6.5" />
+
+	<string
+		id="13"
+		modelName="r5_man"
+		modelSkin="1"
+		modelCfg="84"
+		modelSlot="1"
+		value="TIKHOMIR|I didn't expect you to understand. You're an outsider. You only see what you want to see. And what they let you see."
+		sound=""
+		time="9" />
+
+	<string
+		id="14"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="You say very strange things. But on the other hand, the strange behavior of Lisa, the weird hermits who are always attacking me. Maybe there is really something very wrong with this place."
+		sound=""
+		time="13" />
+
+	<string
+		id="15"
+		modelName="r5_man"
+		modelSkin="1"
+		modelCfg="84"
+		modelSlot="1"
+		value="TIKHOMIR|I'm looking at your car and realising that I can't beat you. But I won't give up without a fight! I'll do anything to protect her. Let this murder be on your conscience, but I will die without regret."
+		sound=""
+		time="14" />
+
+	<string
+		id="16"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I don't believe you! Get out of the house and give me Dobroslava! Immediately!"
+		sound=""
+		time="7" />
+
+	<string
+		id="17"
+		modelName="r5_man"
+		modelSkin="1"
+		modelCfg="84"
+		modelSlot="1"
+		value="TIKHOMIR|I tried... I really tried... May the gods protect me... Fight!"
+		sound=""
+		time="8" />
+
+	<string
+		id="171"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="What a tragic death... But I couldn't let the girl run away with that madman."
+		sound=""
+		time="7" />
+
+	<string
+		id="18"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I really don't understand what you're talking about, and I don't think I will. But I believe you. Something really bad is going on here. There's a tunnel in Lidencloud that leads to warmer lands. It's the only way for you to escape."
+		sound=""
+		time="14" />
+
+	<string
+		id="19"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Just be careful. Bad people are ruling in Lidencloud now. Very bad people."
+		sound=""
+		time="6" />
+
+	<string
+		id="20"
+		modelName="r5_man"
+		modelSkin="1"
+		modelCfg="84"
+		modelSlot="1"
+		value="TIKHOMIR|Thank you, stranger. I don't know who you are and what you're looking for in these cursed places, but I hope you find it. Farewell, and may the gods protect you."
+		sound=""
+		time="9" />
+
+	<string
+		id="21"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="It seems that Vsevolod will never see his daughter again."
+		sound=""
+		time="5" />
+
+	<string
+		id="22"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Listen, your father sent me to take you to him."
+		sound=""
+		time="6" />
+
+	<string
+		id="23"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="108"
+		modelSlot="1"
+		sound=""
+		value="DOBROSLAVA|All right, let's go."
+		time="3" />
+
+	<string
+		id="24"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="[Surprising passivity. It's easier for me, though.]"
+		sound=""
+		time="5" />
+
+	<string
+		id="26"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="And the signs just keep getting more and more beautiful. I think Midgard's scientists would be interested in this."
+		sound=""
+		time="9" />
+	
+	<string
+		id="261"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="There you go! Nice hiding place!"
+		sound=""
+		time="5" />
+
+	<string
+		id="262"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="Okay, well, that was pretty easy."
+		sound=""
+		time="5" />
+
+	<string
+		id="263"
+		modelName="mask_hero"
+		modelSkin="1"
+		value="I've been having nightmares about this damn pipes since Ignott."
+		sound=""
+		time="5" />
+
+	<string
+		id="27"
+		modelName=""
+		value="||@FF000000AAAAAAAAAAAA..AAAAAAAAAAAAA@FFFFFFFFSome time later..."
+		sound=""
+		time="5" />
+
+	<string
+		id="8801"
+		value="Do you wish to leave this area?"
+		numButtons="2" />
+
+	<string
+		id="9999"
+		value="Improved Storyline||This save is incompatible with the current version of Improved Storyline.||Please start a new game.|" />
+</resource>

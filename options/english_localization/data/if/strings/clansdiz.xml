@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<resource>
+	<string
+		id="Belong_1100"
+		value="Player" />
+
+	<string
+		id="Belong_1100_abb"
+		value="Friend" />
+
+	<string
+		id="Belong_1002"
+		value="Vagabonds" />
+
+	<string
+		id="Belong_1002_abb"
+		value="Vagabond" />
+
+	<string
+		id="Belong_1002_diz"
+		value="Nothing is sacred to these wandering bandits. Anyone can become a victim of their attack, whether it will be a lone traveler or an armed caravan." />
+
+	<string
+		id="Belong_1003"
+		value="Adventurers" />
+
+	<string
+		id="Belong_1003_abb"
+		value="Adventurer" />
+
+	<string
+		id="Belong_1003_diz"
+		value="They ride around the world in search of thrills, as if life were not dangerous enough. During a sudden skirmish, they can join both attackers or defenders." />
+
+	<string
+		id="Belong_1004"
+		value="Explorers" />
+
+	<string
+		id="Belong_1004_abb"
+		value="Explorer" />
+
+	<string
+		id="Belong_1004_diz"
+		value="There are very few of them left these days, but if you manage to meet an Explorer, you can always count on a pleasant conversation and help in any trouble." />
+
+	<string
+		id="Belong_1005"
+		value="Nomads" />
+
+	<string
+		id="Belong_1005_abb"
+		value="Nomad" />
+
+	<string
+		id="Belong_1005_diz"
+		value="A nomadic clan of marauders and murderers. They do not stay in one place for long and constantly move around the world in small groups, staging ambushes and burning small villages." />
+
+	<string
+		id="Belong_1008"
+		value="Farmers' Union" />
+
+	<string
+		id="Belong_1008_abb"
+		value="FU" />
+
+	<string
+		id="Belong_1008_diz"
+		value="Farmers work the land as their ancestors once did. Since everyone needs food at all times, and there is nothing else to take from them, they quietly exist in a world full of danger." />
+
+	<string
+		id="Belong_1009"
+		value="Technicians" />
+
+	<string
+		id="Belong_1009_abb"
+		value="Techno" />
+
+	<string
+		id="Belong_1009_diz"
+		value="Ordinary people do not like this clan, because the Technicians, collecting knowledge of the ancient world, share it only for a high price. In addition, they most often act with the hands of mercenaries, preferring to remain under the protection of their walls." />
+
+	<string
+		id="Belong_1010"
+		value="North Path Traders" />
+
+	<string
+		id="Belong_1010_abb"
+		value="NPT" />
+
+	<string
+		id="Belong_1010_diz"
+		value="Honest traders who created their first capital by trading oil. Then they managed to gain a foothold in the harsh northern region of Hel and build an entire city there, leading the group to even greater enrichment. Their rivals are jealous of them and sabotage them." />
+
+	<string
+		id="Belong_1011"
+		value="Traders’ Alliance" />
+
+	<string
+		id="Belong_1011_abb"
+		value="TA" />
+
+	<string
+		id="Belong_1011_diz"
+		value="Detractors call them the Secret Alliance for some past misdeeds and for their connections with various gangs and mercenaries. It is not unreasonable to believe that the Alliance is buying up stolen goods and is unashamedly trafficking in contraband." />
+
+	<string
+		id="Belong_1012"
+		value="Brigade" />
+
+	<string
+		id="Belong_1012_abb"
+		value="Brigade" />
+
+	<string
+		id="Belong_1012_diz"
+		value="One of the many gangs wishing to take over the Vaterland. The situation is complicated by the fact that they managed to find an ancient military base and gain the real power to carry out their plans." />
+
+	<string
+		id="Belong_1013"
+		value="Felix’s gang" />
+
+	<string
+		id="Belong_1013_abb"
+		value="FG" />
+
+	<string
+		id="Belong_1013_diz"
+		value="Small crooks who have settled on the fertile plains of the Krai and collect «taxes» from the farmers in exchange for their «protection». This situation has lasted for several years and suits everyone." />
+
+	
+	<string
+		id="Belong_1014"
+		value="Fishermen" />
+
+	<string
+		id="Belong_1014_abb"
+		value="Fisher" />
+
+	<string
+		id="Belong_1014_diz"
+		value="It is unknown what they manage to catch in the dead cold waters, but these people live comfortably. Sometimes they trade with strangers, but more often they simply attack foreigners without warning." />
+
+	<string
+		id="Belong_1015"
+		value="Crimson dawn" />
+
+	<string
+		id="Belong_1015_abb"
+		value="CD" />
+
+	<string
+		id="Belong_1015_diz"
+		value="Inspired by the charismatic leader Axel, the inhabitants of Argen have risen to fight their neighbors, who once offended them, and are quite successful in expanding their area of influence, forcing more and more villages under their control. They do not shy away from the services of mercenaries and cutthroats of all stripes." />
+
+	<string
+		id="Belong_1016"
+		value="Commonwealth of Independent Towns" />
+
+	<string
+		id="Belong_1016_abb"
+		value="CIT" />
+
+	<string
+		id="Belong_1016_diz"
+		value="The invasion of once loyal neighbors united the people of Librium, and, following the precepts of their ancestors, they decided to fight for their independence. In warfare, espionage and sabotage are used more often than brute force." />
+
+	<string
+		id="Belong_1017"
+		value="Church of Enlightenment" />
+
+	<string
+		id="Belong_1017_abb"
+		value="COE" />
+
+	<string
+		id="Belong_1017_diz"
+		value="This mysterious organization has followers all over the world. Although the active promotion of the CD has somewhat damaged their reputation as seekers of truth, the influence of the Church is significant." />
+
+	<string
+		id="Belong_1019"
+		value="Druids" />
+
+	<string
+		id="Belong_1019_abb"
+		value="Druid" />
+
+	<string
+		id="Belong_1019_diz"
+		value="These children of nature live in peace with the universe, growing wondrous trees and performing rituals at their roots, they celebrate life in all its forms. They do not like foreigners, considering them to be spoiled human beings." />
+
+	<string
+		id="Belong_1020"
+		value="Children of Iron" />
+
+	<string
+		id="Belong_1020_abb"
+		value="IC" />
+
+	<string
+		id="Belong_1020_diz"
+		value="Former Druids, frustrated in their faith, have begun to worship metal idols, which increasingly appear in the Druid Grove. They are loyal to strangers from across the sea and trade willingly with them. The Children of Iron expect to someday have stainless steel bodies as strong as the idols they worship themselves." />
+
+	<string
+		id="Belong_1021"
+		value="Oracle’s disciples" />
+
+	<string
+		id="Belong_1021_abb"
+		value="Disciple" />
+
+	<string
+		id="Belong_1021_diz"
+		value="A small cult that lives near the Oracle's tower and worships him as a god." />
+
+	<string
+		id="Belong_1022"
+		value="Steel Giants" />
+
+	<string
+		id="Belong_1022_abb"
+		value="SG" />
+
+	<string
+		id="Belong_1022_diz"
+		value="Mysterious creatures of hellfire, capable of crushing rocks and breaking down huge trees. Encountering any of them brings fast death. Only the Children of Iron could find common ground with them." />
+
+	<string
+		id="Belong_1023"
+		value="Harakat" />
+
+	<string
+		id="Belong_1023_abb"
+		value="Harakat" />
+
+	<string
+		id="Belong_1023_diz"
+		value="Native inhabitants of Vahat, who are trying to rebuild what was destroyed by a long war. But for some reason they never manage to finish what they started..." />
+
+	<string
+		id="Belong_1025"
+		value="Al’faran" />
+
+	<string
+		id="Belong_1025_abb"
+		value="Al’faran" />
+
+	<string
+		id="Belong_1025_diz"
+		value="People exhausted by the constant attacks of an unknown enemy. But for some reason they never manage to win..." />
+
+	<string
+		id="Belong_1026"
+		value="Serseri" />
+
+	<string
+		id="Belong_1026_abb"
+		value="Serseri" />
+
+	<string
+		id="Belong_1026_diz"
+		value="Also known as the Keepers of the Memory, the old people left towns and are hiding from everybody." />
+
+	<string
+		id="Belong_1030"
+		value="Njeri" />
+
+	<string
+		id="Belong_1030_abb"
+		value="Njeri" />
+
+	<string
+		id="Belong_1030_diz"
+		value="A mysterious race of aliens from distant space whose flying machine was shot down by Earth defense forces. Their motives and goals remain unknown even today." />
+
+	<string
+		id="Belong_1053"
+		value="Powerplant" />
+
+	<string
+		id="Belong_1053_abb"
+		value="NPP" />
+
+	<string
+		id="Belong_1053_diz"
+		value="The inhabitants of Sel maintain neutrality and supply power to both opposing countries. No one but them can maintain the power plant, so they are still not attacked." />
+
+	<string
+		id="Belong_1060"
+		value="Desert dwellers" />
+
+	<string
+		id="Belong_1060_abb"
+		value="DD" />
+	
+	<string
+		id="Belong_1060_diz"
+		value="Residents of the city of Kazif. Control almost all the oil in the region." />
+
+	<string
+		id="Belong_1062"
+		value="Crazy militarists" />
+
+	<string
+		id="Belong_1062_abb"
+		value="Madman" />
+
+	<string
+		id="Belong_1062_diz"
+		value="These people are totally insane." />
+
+	<string
+		id="Belong_1080"
+		value="Refuelers" />
+
+	<string
+		id="Belong_1080_abb"
+		value="Refueler" />
+
+	<string
+		id="Belong_1080_diz"
+		value="No one ever attacks a refuelers: not bandits, not militant factions, not free explorers. That is the main rule. In return, the refuelers maintain neutrality and serve everyone, regardless of their affiliation or actions." />
+
+	<string
+		id="Belong_1083"
+		value="Anti-militarists" />
+
+	<string
+		id="Belong_1083_abb"
+		value="AM" />
+
+	<string
+		id="Belong_1083_diz"
+		value="Citizens of the CIT who want to end the war with CD with minimal casualties." />
+
+	<string
+		id="Belong_1088"
+		value="Lidencloud locals" />
+
+	<string
+		id="Belong_1088_abb"
+		value="LL" />
+
+	<string
+		id="Belong_1088_diz"
+		value="People living in Lidencloud. Recently have been fighting for survival with the Red Torch Adepts." />
+
+	<string
+		id="Belong_1089"
+		value="Red Torch Adepts" />
+
+	<string
+		id="Belong_1089_abb"
+		value="RTA" />
+
+	<string
+		id="Belong_1089_diz"
+		value="Mysterious mercenaries, who arrived from the frozen abyss with the only purpose of destroying the locals of Lidencloud. Their goals and motivation are unknown." />
+
+	<string
+		id="Belong_1090"
+		value="Wise Men" />
+
+	<string
+		id="Belong_1090_abb"
+		value="Wise" />
+
+	<string
+		id="Belong_1090_diz"
+		value="The inhabitants of cold and snow-covered mountains, possessing secret knowledge that they share only with the most limited circle of people. In order to gain their trust, you will have to work hard." />
+
+	<string
+		id="Belong_1092"
+		value="Hermits" />
+
+	<string
+		id="Belong_1092_abb"
+		value="Hermit" />
+
+	<string
+		id="Belong_1092_diz"
+		value="The mysterious cult that attacks civilians in the Mountains of the Wise." />
+
+
+	
+	<string
+		id="Belong_1018"
+		value="Boss' army" />
+
+	<string
+		id="Belong_1018_abb"
+		value="Minion" />
+
+	
+	<string
+		id="Belong_1031"
+		value="Al’faran" />
+
+	<string
+		id="Belong_1031_abb"
+		value="Al’faran" />
+
+	
+	<string
+		id="Belong_1032"
+		value="Archaeologists" />
+
+	<string
+		id="Belong_1032_abb"
+		value="Archaeologist" />
+
+	
+	<string
+		id="Belong_1033"
+		value="Oil engineer" />
+
+	<string
+		id="Belong_1033_abb"
+		value="DD" />
+
+	
+	<string
+		id="Belong_1034"
+		value="Priest of Uluk" />
+
+	<string
+		id="Belong_1034_abb"
+		value="IC" />
+
+	
+	<string
+		id="Belong_1035"
+		value="Sowth" />
+
+	<string
+		id="Belong_1035_abb"
+		value="Vagabond" />
+
+	
+	<string
+		id="Belong_1040"
+		value="Rebels" />
+
+	<string
+		id="Belong_1040_abb"
+		value="Rebel" />
+
+	
+	<string
+		id="Belong_1041"
+		value="Axel" />
+
+	<string
+		id="Belong_1041_abb"
+		value="CD" />
+
+	
+	<string
+		id="Belong_1042"
+		value="Lisa" />
+
+	<string
+		id="Belong_1042_abb"
+		value="Explorer" />
+
+	
+	<string
+		id="Belong_1043"
+		value="Zion" />
+
+	<string
+		id="Belong_1043_abb"
+		value="CD" />
+
+	
+	<string
+		id="Belong_1044"
+		value="Brigade" />
+
+	<string
+		id="Belong_1044_abb"
+		value="Brigade" />
+
+	
+	<string
+		id="Belong_1045"
+		value="Mayor of Minin" />
+
+	<string
+		id="Belong_1045_abb"
+		value="NPT" />
+
+	
+	<string
+		id="Belong_1046"
+		value="Stranger from the tunnel" />
+
+	<string
+		id="Belong_1046_abb"
+		value="CD" />
+
+	
+	<string
+		id="Belong_1047"
+		value="Oil derrick" />
+
+	<string
+		id="Belong_1047_abb"
+		value="NPT" />
+
+	
+	<string
+		id="Belong_1048"
+		value="Crimson Dawn" />
+
+	<string
+		id="Belong_1048_abb"
+		value="CD" />
+
+	
+	<string
+		id="Belong_1049"
+		value="Oracle" />
+
+	<string
+		id="Belong_1049_abb"
+		value="Disciple" />
+
+	
+	<string
+		id="Belong_1051"
+		value="Farmers' Union" />
+
+	<string
+		id="Belong_1051_abb"
+		value="FU" />
+
+	
+	<string
+		id="Belong_1063"
+		value="City of Hideout" />
+
+	<string
+		id="Belong_1063_abb"
+		value="Rogue" />
+
+	<string
+		id="Belong_1063_diz"
+		value="They are tired of robbery, only isolation in the jungle helps their souls." />
+
+	
+	<string
+		id="Belong_1064"
+		value="Refugees from Uluk" />
+
+	<string
+		id="Belong_1064_abb"
+		value="IC" />
+	
+	
+	<string
+		id="Belong_1084"
+		value="Fishermen's storage" />
+
+	<string
+		id="Belong_1084_abb"
+		value="Fisherman" />
+
+	
+	<string
+		id="Belong_1085"
+		value="Fishermen's villages" />
+
+	<string
+		id="Belong_1085_abb"
+		value="Fisherman" />
+
+	
+	<string
+		id="Belong_1091"
+		value="City of Kateberg" />
+
+	<string
+		id="Belong_1091_abb"
+		value="RTA" />
+
+	
+	<string
+		id="Belong_1093"
+		value="Tikhomir" />
+
+	<string
+		id="Belong_1093_abb"
+		value="Hermit" />
+
+	
+	<string
+		id="Belong_1094"
+		value="Sectarian" />
+
+	<string
+		id="Belong_1094_abb"
+		value="AM" />
+
+
+	<string
+		id="Belong_1006"
+		value="Bounty hunters" />
+
+	<string
+		id="Belong_1006_abb"
+		value="BH" />
+
+	<string
+		id="Belong_1006_diz"
+		value="This respected guild includes the most dangerous fighters in the civilized world. They fight on the side of those who pay and respect the code of honor." />
+
+	<string
+		id="Belong_1007"
+		value="Doom bringers" />
+
+	<string
+		id="Belong_1007_abb"
+		value="DB" />
+
+	<string
+		id="Belong_1007_diz"
+		value="In troubled times, harbingers of disaster appear everywhere, often contributing to its approach." />
+
+	<string
+		id="Belong_1024"
+		value="Kurtadam" />
+
+	<string
+		id="Belong_1024_abb"
+		value="Kurtadam" />
+
+	<string
+		id="Belong_1024_diz"
+		value="Indigenous people of Vahat." />
+	
+	<string
+		id="Belong_1027"
+		value="Militarists" />
+
+	<string
+		id="Belong_1027_abb"
+		value="Militarist" />
+
+	<string
+		id="Belong_1028"
+		value="Trappers" />
+
+	<string
+		id="Belong_1028_abb"
+		value="Trapper" />
+
+	<string
+		id="Belong_1029"
+		value="Bears" />
+
+	<string
+		id="Belong_1029_abb"
+		value="Bear" />
+
+	<string
+		id="Belong_1050"
+		value="Sinks" />
+
+	<string
+		id="Belong_1050_abb"
+		value="Vagabond" />
+
+	<string
+		id="Belong_1050_diz"
+		value="Wanderer Sinks. Doesn't have a permanent home. And in general, a strange guy." />
+
+	<string
+		id="Belong_1052"
+		value="Technicians" />
+
+	<string
+		id="Belong_1052_abb"
+		value="Techno" />
+
+	<string
+		id="Belong_1054"
+		value="Commonwealth of Independent Towns" />
+
+	<string
+		id="Belong_1054_abb"
+		value="CIT" />
+
+	<string
+		id="Belong_1061"
+		value="Scientist’s defenders" />
+
+	<string
+		id="Belong_1061_abb"
+		value="Defender" />
+
+	<string
+		id="Belong_1061_diz"
+		value="People, living deep in the desert and studying its mysteries." />
+
+	<string
+		id="Belong_1065"
+		value="Evil Bandits" />
+
+	<string
+		id="Belong_1065_abb"
+		value="Bandit" />
+
+	<string
+		id="Belong_1065_diz"
+		value="The gang that wages war with the traders. Probably, they are allied with the Fishermen." />
+
+	<string
+		id="Belong_1081"
+		value="Bandit" />
+
+	<string
+		id="Belong_1081_abb"
+		value="Bandit" />
+</resource>

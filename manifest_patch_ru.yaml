@@ -1,10 +1,10 @@
 # common info
-name: improved_storyline_hd
+name: improved_storyline_sd
 language: ru
 installment: exmachina
  
 # main human readable info
-display_name: Improved Storyline [ComRemaster]
+display_name: Improved Storyline [ComPatch]
 version: "1.2"
 build: "240402a"
 description: |
@@ -34,18 +34,13 @@ screenshots:
   - img: assets/screen_5.jpg
     text: Катсцена в начале нового второстепенного квеста.
 
-variants: [patch]
-translations: [eng]
+# translations: [eng] TODO: add
  
 # installation configuration
 no_base_content: false
 strict_requirements: true
 compatible_minor_versions: false
 compatible_patch_versions: false
-
-data_dirs:
-  - data
-  - data_hd
 
 options_base_dir: options
  
@@ -54,16 +49,16 @@ patcher_version_requirement: "2.1"
 
 # community patch requirements
 prerequisites:
-  - name: [community_remaster]
+  - name: [community_patch]
     versions: 
      - "1.14.1"
-    optional_content:
-     - hd_gun_models
-     - hd_vehicle_models
-     - ost_remaster
 
 # optional mod content
 optional_content:
+  - name: Icons
+    display_name: Иконки
+    description: |
+      Улучшенные иконки для радара из модификации Steel Dawn.
   - name: Snowfall
     display_name: Улучшенный снегопад
     description: |

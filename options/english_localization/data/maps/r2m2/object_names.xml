@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="LagerGuardian"
+		FullName="Rebel" />
+
+	<Object
+		Name="Monastery"
+		FullName="MONASTERY" />
+
+	<Object
+		Name="Monastery_Bar"
+		FullName="Refectory" />
+
+	<Object
+		Name="Monastery_Bar_Barman"
+		FullName="Sinner Daria" />
+
+	<Object
+		Name="Monastery_Cell"
+		FullName="Cell" />
+
+	<Object
+		Name="Monastery_Shop"
+		FullName="Tribune" />
+
+	<Object
+		Name="MrShlyapa1"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="MrShlyapa2"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="MrShlyapa3"
+		FullName="Mr. Hat" />
+
+	<Object
+		Name="MrShlyapaEmpty"
+		FullName=" " />
+
+	<Object
+		Name="Ateist1"
+		FullName="Peasant Alessandra" />
+
+	<Object
+		Name="Ateist2"
+		FullName="Refueler Flavio" />
+		
+	<Object
+		Name="Eretik"
+		FullName="Heretic" />
+	
+	<Object
+		Name="Eretik_1"
+		FullName="Heretic" />
+
+	<Object
+		Name="Monah"
+		FullName="Nun Johanna" />
+
+	<Object
+		Name="SektantMain"
+		FullName="Abbess" />
+
+	<Object
+		Name="Marezzia"
+		FullName="MAREZZIA" />
+
+	<Object
+		Name="Marezzia_Shtab"
+		FullName="CD Headquarters" />
+
+	<Object
+		Name="Marezzia_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Marezzia_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Marezzia_Bar"
+		FullName="Bar &quot;Cornflower&quot;" />
+
+	<Object
+		Name="Marezzia_Bar_Barman"
+		FullName="Waiter Antonio" />
+
+	<Object
+		Name="RecruiterInAR"
+		FullName="Recruiter Hooks" />
+
+	<Object
+		Name="CaptainInAR"
+		FullName="Captain of the Guard" />
+
+	<Object
+		Name="TrashFarmer"
+		FullName="Scavenger Suxx" />
+
+	<Object
+		Name="TrashFarmer1"
+		FullName="Scavenger Suxx" />
+
+	<Object
+		Name="Zeon"
+		FullName="ZION" />
+
+	<Object
+		Name="Zeon_CentralHouse"
+		FullName="Bunker" />
+
+	<Object
+		Name="Axel"
+		FullName="Axel" />
+
+	<Object
+		Name="Zeon_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Zeon_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Toskana"
+		FullName="TOSKANA" />
+
+	<Object
+		Name="Toskana_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Toskana_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Toskana_Bar"
+		FullName="Cafe &quot;Nostalgia&quot;" />
+
+	<Object
+		Name="Toskana_Bar_Barman"
+		FullName="Bartender Villy" />
+
+	<Object
+		Name="Agent"
+		FullName="Agent Khrunovich" />
+
+	<Object
+		Name="GranicaVillage"
+		FullName="FRONTIER" />
+
+	<Object
+		Name="GranicaVillage_Bar"
+		FullName="Dining room" />
+
+	<Object
+		Name="GranicaVillage_Bar_Barman"
+		FullName="Bartender" />
+
+	<Object
+		Name="GranicaVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="GranicaVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="ZnakiVillage"
+		FullName="SARAEVO" />
+
+	<Object
+		Name="ZnakiVillage_Bar"
+		FullName="House in the village" />
+
+	<Object
+		Name="ZnakiVillage_Bar_Barman"
+		FullName="Headman" />
+
+	<Object
+		Name="ZnakiVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="ZnakiVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="Aborigen"
+		FullName="Hillbilly Serge" />
+
+	<Object
+		Name="NewVillage"
+		FullName="ASTRIA" />
+
+	<Object
+		Name="NewVillage_Bar"
+		FullName="Bar &quot;Lost&quot;" />
+
+	<Object
+		Name="NewVillage_Bar_Barman"
+		FullName="Headman" />
+
+	<Object
+		Name="NewVillage_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="NewVillage_Shop"
+		FullName="Shop" />
+
+	<Object
+		Name="NewMechanik"
+		FullName="Mechanic Zhers" />
+
+	<Object
+		Name="PetrolStationTown1"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown1_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown2"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown2_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="PetrolStationTown3"
+		FullName="GAS STATION" />
+
+	<Object
+		Name="PetrolStationTown3_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="Toskana_enter"
+		FullName="TOSKANA" />
+
+	<Object
+		Name="ZnakiVillage_enter"
+		FullName="SARAEVO" />
+
+	<Object
+		Name="NewVillage_enter"
+		FullName="ASTRIA" />
+
+	<Object
+		Name="EnterToSubmarine_loc"
+		FullName="Port to Vahat" />
+
+	<Object
+		Name="ToR2M1"
+		FullName="Road to Librium" />
+
+	<Object
+		Name="ToR2M1small"
+		FullName="Trail to Librium" />
+
+	<Object
+		Name="u1"
+		FullName="Sam" />
+
+	<Object
+		Name="u2"
+		FullName="Price" />
+
+	<Object
+		Name="u3"
+		FullName="Cleaner" />
+
+	<Object
+		Name="u4"
+		FullName="Fedot" />
+
+	<Object
+		Name="u5"
+		FullName="Puntus" />
+
+	<Object
+		Name="u6"
+		FullName="Piko" />
+
+	<Object
+		Name="u7"
+		FullName="Chu" />
+
+	<Object
+		Name="u8"
+		FullName="Phosgene" />
+
+	<Object
+		Name="u9"
+		FullName="Jean" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="Kartograph2"
+		FullName="Cartographer" />
+
+	<Object
+		Name="WorkerEscapist"
+		FullName="Oppositionist Alex" />
+
+	<Object
+		Name="RecruiterInAR1"
+		FullName="Recruiter Hooks" />
+</ObjectNames>

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<ObjectNames>
+	<Object
+		Name="OracleDefendersVil"
+		FullName="APULKO" />
+
+	<Object
+		Name="OracleDefendersVil_Shop"
+		FullName="Thief's shop" />
+
+	<Object
+		Name="OracleDefendersVil_WorkShop"
+		FullName="Workshop" />
+
+	<Object
+		Name="AloneDruid"
+		FullName="Lone Druid" />
+
+	<Object
+		Name="AloneDruidBuilding"
+		FullName="Druid's Hut" />
+	
+	<Object
+		Name="AloneDruid_Bar"
+		FullName="Gazebo by the hut" />
+
+	<Object
+		Name="NearOraculBuilding"
+		FullName="Oracle Guard's outpost" />
+
+	<Object
+		Name="NearOracul_Workshop"
+		FullName="Workshop" />
+
+	<Object
+		Name="ToR3M1"
+		FullName="Road to Druid Grove" />
+
+	<Object
+		Name="Monster_loc"
+		FullName="Scary monster" />
+
+	<Object
+		Name="VK1_loc"
+		FullName="Computing complex 1" />
+
+	<Object
+		Name="VK2_loc"
+		FullName="Computing complex 2" />
+
+	<Object
+		Name="VK3_loc"
+		FullName="Computing complex 3" />
+
+	<Object
+		Name="Factory_loc"
+		FullName="Abandoned factory" />
+
+	<Object
+		Name="Oracle_loc"
+		FullName="ORACLE" />
+
+	<Object
+		Name="OracleNPC"
+		FullName="Oracle" />
+
+	<Object
+		Name="OracleGuardian_1"
+		FullName="Oracle Defender" />
+
+	<Object
+		Name="OracleGuardian_2"
+		FullName="Oracle Defender" />
+
+	<Object
+		Name="AloneDruid_Workshop"
+		FullName="Druid's workshop" />
+
+	<Object
+		Name="heavy_dot3_vulcan1"
+		FullName="Pillbox" />
+
+	<Object
+		Name="sack_dot2_kord2"
+		FullName="Pillbox" />
+
+	<Object
+		Name="urod1"
+		FullName="Tidus" />
+
+	<Object
+		Name="urod2"
+		FullName="Mikko" />
+
+	<Object
+		Name="urod3"
+		FullName="Borg" />
+
+	<Object
+		Name="urod4"
+		FullName="Alex" />
+
+	<Object
+		Name="urod5"
+		FullName="Scorpion" />
+
+	<Object
+		Name="urod6"
+		FullName="Gaya" />
+
+	<Object
+		Name="urod7"
+		FullName="Sherman" />
+
+	<Object
+		Name="urod8"
+		FullName="Hrrr" />
+
+	<Object
+		Name="urod9"
+		FullName="Uncle Fu" />
+
+	<Object
+		Name="NearOracul_Bar"
+		FullName="Security post" />
+
+	<Object
+		Name="Kartograph1"
+		FullName="Cartographer" />
+
+	<Object
+		Name="r3m2_OracleComplex_1"
+		FullName="Oracle Science Complex" />
+</ObjectNames>

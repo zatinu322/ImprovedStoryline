@@ -1,0 +1,5337 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<QuestInfoResource>
+	<QuestInfo
+		questName="ATGloohoe_Quest"
+		briefDiz="Приехать в Глухое"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ZapterGluhoe_Loc" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ATKordan_Quest"
+		briefDiz="Посетить Кордан"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="FVCordan" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ATMinin_Quest"
+		briefDiz="Посетить Минин"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="AivenTravels_Quest"
+		briefDiz="Понять, что происходит"
+		fullDiz="Я не могу просто поверить в то, что рассказал мне мой отец. Мне нужно лично во всём этом убедиться."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="AnanagaTech_Quest"
+		briefDiz="Получить технологию производства ананаги"
+		fullDiz="Один пьяница из Кордана предложил отдать мне технологию настаивания ананаги, если я покажу ему рецепт от Петро."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="BackToSouth_Quest"
+		briefDiz="Рассказать о судьбе Феликса бармену Южного"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BackToTroickoe"
+		briefDiz="Вернуться в Троицкое"
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="TheFreedom" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenBadEnd"
+		briefDiz="Вернуться к Бену"
+		fullDiz="Лекарства я купил, теперь осталось отдать их Бену и надеяться на лучшее."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenEast_Quest"
+		briefDiz="Продолжить поиски в Восточном"
+		fullDiz="Бармен Южного убедил меня, что нужно не следовать за Лисой, а сосредоточиться на поисках Бена. Логичнее всего будет начать с города Восточный."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m2"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenGoodEnd"
+		briefDiz="Рассказать обо всём Лисе и Бену"
+		fullDiz="Теперь, когда мои приключения подошли к концу, самое время рассказать о них Лисе и Бену и решить, что же мне теперь делать дальше."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenMZ2_Quest"
+		briefDiz="Убить рейдеров, захвативших склад"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="CarOfRaider" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenMZ3_Quest"
+		briefDiz="Вернуться к Сальваторе"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheRace" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenMZ_Quest"
+		briefDiz="Попытать счастья в баре Малой Земли"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheRace" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenNormalEnd"
+		briefDiz="Рассказать обо всём Лисе и Бену"
+		fullDiz="Теперь, когда мои приключения подошли к концу, самое время рассказать о них Лисе и Бену и решить, что же мне теперь делать дальше."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r4m1"
+			targetObjName="ToR1M1" />
+
+		<Map
+			name="r4m2"
+			targetObjName="ToR4M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenRim2_Quest"
+		briefDiz="Спросить в Порто про караван"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Porto" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenRim3_Quest"
+		briefDiz="Проверить лагерь бандитов"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="LisaInBanditPlen" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenRim4_Quest"
+		briefDiz="Уничтожить грабителей"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="LisaInBanditDen" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenRim_Quest"
+		briefDiz="Помочь Стрыге"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheOlimp" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenSouth_Quest"
+		briefDiz="Узнать, кто такой Бен Дроссель"
+		fullDiz="Вся моя жизнь перевернулась. Чтобы обрести себя, я должен найти своего настоящего отца во что бы то ни стало! Единственная зацепка – имя Бен Дроссель. Может быть, в Южном слышали о нём?"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenStaruha_Quest"
+		briefDiz="Встретиться с деревенской ведьмой"
+		fullDiz="Механик в Восточном страшно перепугался, когда узнал, что Бен Дроссель был исследователем, и сказал мне искать деревенскую ведьму, потому что только она может знать, где находится его жилище. Звучит безумно, но других зацепок у меня не осталось."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheArtefact" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BenZima_Quest"
+		briefDiz="Спросить Бена про Айвена и композит"
+		fullDiz="Мастер из Мидгарда рассказал мне, что много лет назад некто с инициалами А и Г также заказывал в их мастерской броню на кабину. Может, Бен знает, где Айвен смог раздобыть столь редкий материал?"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="BuyKollizey_Quest"
+		briefDiz="Стать совладельцем Колизея"
+		fullDiz="У меня появилась возможность стать совладельцем Колизея. За свой взнос я получу долю акций и стабильную прибыль."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="TheTickets" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Buyer_Quest1"
+		briefDiz="Отвезти пакет в город"
+		fullDiz="Нужно отвезти пакет в Южный. У торговца Серго есть какие-то дела с моим отцом. "
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CaptureKatebergBefore"
+		briefDiz="Подготовиться к атаке"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="PreKateberg_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CaptureKatebergFight"
+		briefDiz="Уничтожить остатки адептов"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="AdeptArmy1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CaptureKateberg_Quest"
+		briefDiz="Уничтожить Моску"
+		fullDiz="Захватить Моску не получится. А если что-то не удаётся захватить, то самое верное решение - взорвать это к чертям. Именно это мы и сделаем с Моской."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="CaptureMoskaAfter"
+		briefDiz="Поговорить со старостой"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CaptureMoskaBefore"
+		briefDiz="Подъехать к Кейтбергу"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="MoskaBattle_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CaptureMoskaDuring"
+		briefDiz="Атаковать Кейтберг"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="AdeptArmy" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CaptureMoska_Quest"
+		briefDiz="Захватить Кейтберг"
+		fullDiz="Пусть мы и не обладаем численным превосходством и значительными силами, но ударить по Кейтбергу - это единственное, что мы можем. Надеюсь, удача будет на нашей стороне."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="CaravDead_Quest"
+		briefDiz="Рассказать в Мидгарде о неудаче"
+		fullDiz="Я не смог защитить караван из Мидгарда, и теперь мне нужно рассказать в городе, что машина уничтожена. Надеюсь, это не испортит наши отношения."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CheckTheEast"
+		briefDiz="Найти источник шума"
+		fullDiz="С дороги на восток доносится какой-то шум. Мы c Василием решили проверить, что там происходит."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="BezummecCars" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Chehly_Quest"
+		briefDiz="Достать чехлы для радиационной защиты"
+		fullDiz="Мастер из Мидгарда очень сильно рискует, заказывая контрабандный товар, поэтому забирать закладку торговца в Фатерлянде придётся лично мне."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Chifir_Quest"
+		briefDiz="Вернуться к бабушке"
+		fullDiz="Теперь, когда Марко замолвил за меня словечко, бабушка должна меня простить."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheArtefact" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CivilOrAdept1"
+		briefDiz="Отправиться в Кейтберг"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CivilOrAdept2"
+		briefDiz="Согласиться работать на адептов"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CivilOrAdept3"
+		briefDiz="Предупредить местных"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheDreenorVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CivilOrAdept_Quest"
+		briefDiz="Отправиться на переговоры с адептами"
+		fullDiz="Адепты похитили Лису, и теперь я должен придумать, как её вызволить оттуда. Для начала стоит понять, какие мотивы ими движут."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="CombatInKollizey_Quest"
+		briefDiz="Показательное выступление"
+		fullDiz="Я должен устроить в Колизее показательное сражение, чтобы привлечь публику."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="CombatInKollizey_Quest1"
+		briefDiz="Приехать на Арену"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Kolizey_location" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CombatInKollizey_Quest2"
+		briefDiz="Победить в поединке"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Gladiator1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="CureForLisa_Quest"
+		briefDiz="Найти лекарство для Лисы"
+		fullDiz="Бен составил мне список лекарств, которые я должен купить в Мидгарде. Надеюсь, они помогут Лисе очнуться."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DecideWay"
+		briefDiz="Найти местных жителей"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Dir_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest"
+		briefDiz="Защитить Южный"
+		fullDiz="Чтобы помочь жителям Южного в обороне города, мне необходимо доставить материалы для постройки двух дотов, которые примут на себя основной удар в битве с бандитами, а после сразиться с этой напастью в первых рядах."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="DefendSowth_Quest1"
+		briefDiz="Доставить материалы на первую точку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ConstructionPlace01" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest2"
+		briefDiz="Доставить материалы на вторую точку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ConstructionPlace02" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest3"
+		briefDiz="Отразить первое нападение"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="CMBandits1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest4"
+		briefDiz="Отразить второе нападение"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="CMBandits2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendSowth_Quest5"
+		briefDiz="Вернуться в Южный"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillage1"
+		briefDiz="Защитить Рязанское"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="AdeptArmyVil1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillage2"
+		briefDiz="Защитить Чугуевку"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="AdeptArmyVil2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillageBack"
+		briefDiz="Вернуться в Кейтберг"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillagePre1"
+		briefDiz="Добраться до Рязанского"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Village1_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillagePre2"
+		briefDiz="Добраться до Чугуевки"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Village2_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DefendVillages_Quest"
+		briefDiz="Защитить деревни от адептов"
+		fullDiz="Поступила информация, что адепты громят деревни местных жителей в поисках сбежавшей пленницы. Скорее всего, это Лисе удалось от них сбежать. Я должен защитить эти деревни и заодно добраться до Лисы раньше них."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="DestroyRuins_Quest"
+		briefDiz="Ограбить археологов"
+		fullDiz="Говорят, археологи выкопали что-то интересное и достаточно дорогое. На охрану они поскупились, так что можно похитить их главного и в качестве выкупа потребовать их находку."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="DestroyRuins_Quest1"
+		briefDiz="Захватить в плен главного археолога"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="CarOfSiencer" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="DestroyRuins_Quest2"
+		briefDiz="Привезти пленника в убежище"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="KidnapProrab" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Disk2OrakulLisa"
+		briefDiz="Отвезти диск №2 к Оракулу"
+		fullDiz="Теперь, когда у меня есть второй диск, я смогу, наконец, расшифровать дневник отца. Конечно, для этого потребуется отправиться к Оракулу в Игнотт."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Oracle_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Dynamic_Convoy_0"
+		briefDiz="Сопроводить транспорт до объекта %2n"
+		fullDiz="Селение %1n просит вас сопроводить транспорт с ценным грузом до объекта %2n за %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Convoy_1"
+		briefDiz="Защитить транспорт"
+		fullDiz="Житель города %1n попросил меня защитить транспорт по дороге в селение %2n и обещал заплатить %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Convoy_2"
+		briefDiz="Обеспечить безопасность транспорта"
+		fullDiz="Город %1n просит вас сопроводить транспорт с ценным грузом до объекта %2n. Если все пройдет гладко, я получу %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Convoy_3"
+		briefDiz="Сопроводить транспорт до объекта %2n"
+		fullDiz="Транспорт из города %1n отправляется по торговому маршруту в селение %2n. В последнее время участились нападения на одинокие грузовики, так что я согласился защищать его за скромное вознаграждение в %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Destroy_0"
+		briefDiz="Уничтожить врага"
+		fullDiz="Город %1n просит вас уничтожить врага за вознаграждение в %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Destroy_1"
+		briefDiz="Обезвредить бандита"
+		fullDiz="Жители поселения %1n подвергаются частым атакам хитрого бандита. Я помогу им избавиться от угрозы за %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Destroy_2"
+		briefDiz="Выследить агрессора"
+		fullDiz="Я получу %3d, когда избавлю окрестности города %1n от присутствия одного негодяя."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Hunt_0"
+		briefDiz="Сезон охоты"
+		fullDiz="Город %1n заплатит за уничтожение каждого бандита, который мне встретится, %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Hunt_1"
+		briefDiz="Проучить бандитов"
+		fullDiz="Бандиты потеряли всякий стыд! Надо преподать им хороший урок. Тем более что город %1n платит за уничтожение каждого бандита %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Hunt_2"
+		briefDiz="Зачистка территории"
+		fullDiz="Власти города %1n начали борьбу за безопасность дорог. В качестве главного мероприятия – операция Зачистка. Уничтожение каждой враждебной машины принесёт мне %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Peace_0"
+		briefDiz="Помириться с группировкой %2b"
+		fullDiz="За умеренный процент от моих денег группировка %2b готова со мной помириться."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Reach_0"
+		briefDiz="Отвезти образцы в селение %2n"
+		fullDiz="Город %1n просит вас отвезти кое-какие исследовательские образцы в поселение %2n. По прибытии я получу %3d."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Reach_1"
+		briefDiz="Доставить посылку в селение %2n"
+		fullDiz="Я получу %3d, когда доставлю посылку в селение %2n. Там ее ждут, но за такие смешные деньги я не собираюсь уж очень торопиться."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="Dynamic_Reach_2"
+		briefDiz="Добраться до селения %2n"
+		fullDiz="Один чудак из города %1n готов заплатить %3d, если я передам привет его другу, живущему в поселении %2n."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="EastTalkKollizey_Quest"
+		briefDiz="Сообщить в Восточный"
+		fullDiz="Рассказать об открытии Колизея жителям Восточного. "
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Eretik_Astria"
+		briefDiz="Сообщить о начале революции в Астрию"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="NewVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Eretik_Friend"
+		briefDiz="Спасти друга еретика"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="EretFriendKillers" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Eretik_Meet"
+		briefDiz="Встретиться с еретиком у монастыря"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="EretikMeet_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Eretik_Quest"
+		briefDiz="Развалить Аржан изнутри"
+		fullDiz="Необходимо свергнуть Церковь Света с правящего трона"
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Eretik_Saraevo"
+		briefDiz="Сообщить о начале революции в Сараево"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="ZnakiVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Eretik_Save"
+		briefDiz="Встретиться с революционером"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="EretikPreSave_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Eretik_Toskana"
+		briefDiz="Встретиться со шпионом в Тоскане"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Toskana" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="EroticDefend"
+		briefDiz="Защитить Еретика от нападающих"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="EretikKillers" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="EscapeArzhan"
+		briefDiz="Бежать из Аржана"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FightForPesht"
+		briefDiz="Отбить Пешт"
+		fullDiz="Из-за моих неосмотрительных действий в прошлом бандиты из Бригады захватили Пешт. Я должен помочь торговцам отбить его."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="FightForPesht1"
+		briefDiz="Добраться до союзников"
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="locFightForPesht" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FightForPesht2"
+		briefDiz="Уничтожить оборону города"
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="ArmiaBrigada" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FigureOutWhatsGoingOn_Quest"
+		briefDiz="Разобраться, что происходит"
+		fullDiz="Как только я выехал из тоннеля, на меня сразу же напал неизвестный, и после того, как я его победил, предложил мне отправиться в их штаб. Мне определённо точно нужно понять, что такое здесь происходит."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheSel" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FinalBattle_Quest"
+		briefDiz="Прикончить главнокомандующих СНГ"
+		fullDiz="Верхушка власти СНГ держит оборону в Роторске. Нужно ехать туда и штурмовать город."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FinalBattle_Quest1"
+		briefDiz="Добраться до Роторска"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="Prebattle_Loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FinalBattle_Quest2"
+		briefDiz="Убить всех главнокомандующих СНГ"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="SNGLeaders" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindBen2_Quest"
+		briefDiz="Разыскать Бена"
+		fullDiz="Мне повезло: Бен Дроссель живет неподалеку. Я должен встретиться с ним и выяснить, как он связан со мной и с недавними событиями."
+		isMainQuest="1">
+		<Map
+			name="r1m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindBenMZ_Quest"
+		briefDiz="Продолжить поиски Бена"
+		fullDiz="Теперь, когда путь в Мидгард мне заказан, необходимо найти другой способ узнать про жилище Бена. Может, в деревеньке рядом с Мидгардом мне смогут помочь?"
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FindDaughter_Quest"
+		briefDiz="Помочь посёлку Михайловка"
+		fullDiz="Осталось последнее поселение, в котором я ещё не был. Думаю, там тоже кому-нибудь требуется помощь."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FindDaughter_Quest1"
+		briefDiz="Поговорить с барменом"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="PetrolStationTown1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindDaughter_Quest2"
+		briefDiz="Поговорить со Всеволодом"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="PetrolStationTown1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindDaughter_Quest3"
+		briefDiz="Проверить первый выезд"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Vyezd1_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindDaughter_Quest4"
+		briefDiz="Проверить второй выезд"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Vyezd2_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindDaughter_Quest5"
+		briefDiz="Спросить в Воложе про подозрительных путников"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindDaughter_Quest6"
+		briefDiz="Проверить заброшенную ферму"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Vyezd3_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindGomer2_Quest"
+		briefDiz="Узнать путь в заснеженные земли"
+		fullDiz="Наиболее вероятно, что путь в заснеженные земли должен начинаться где-то в Хеле, а я знаю только одного человека в этом регионе, который может что-то об этом знать. Настало время вновь навестить Гомера, но перед этим не помешает заехать к Шарки."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FindGomerA_Quest1"
+		briefDiz="Найти Гомера"
+		fullDiz="Гомер наверняка отсиживается в баре одного из рыбацких поселков. Найти его будет несложно."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FindGomerNearBereg_Quest"
+		briefDiz="Получить информацию от Гомера"
+		fullDiz="Маркизыч рассказал мне, что Гомер рыбачит недалеко от Салиниома. Надо поискать вдоль побережья."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FindGomerNearBereg_Quest1"
+		briefDiz="Искать Гомера вдоль побережья"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="HomerRyba_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindGomerNearBereg_Quest2"
+		briefDiz="Подвезти Гомера до Салиниома"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="FVOnOcean" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindLocals"
+		briefDiz="Забрать вещи из брошеной деревни"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheDreenorVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindVolozh_Quest"
+		briefDiz="Найти мудрецов"
+		fullDiz="Теперь, когда я прибыл в Горы Мудрецов, нужно выяснить, где живут мудрецы."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="FindVolozh_Quest1"
+		briefDiz="Спросить про мудрецов в Ермаково"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TheContraVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindVolozh_Quest2"
+		briefDiz="Отправиться в Волож"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FindVolozh_Quest3"
+		briefDiz="Поговорить с Лисой"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FirstTimePlay"
+		briefDiz="Взять грузовик отца"
+		fullDiz="Не могу поверить,что отец отпустил меня в одиночку в город. Нужно скорее взять из гаража его грузовик, пока он не передумал!"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="FollowMrShlyapa"
+		briefDiz="Поговорить с Мистером Шляпой"
+		fullDiz="Наконец-то этот тип расскажет мне, что за чертовщина здесь происходит."
+		isMainQuest="1">
+		<Map
+			name="r1m8"
+			targetObjName="SpecEndingBegin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest1"
+		briefDiz="Освободить лидера Рыбаков"
+		fullDiz="Склад заняли Рыбаки. Если я освобожу их лидера из плена, они позволят мне забрать со склада всё, что нужно для путешествия в Лиденклауд."
+		isMainQuest="1">
+		<Map
+			name="r1m4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest2"
+		briefDiz="Узнать в Ольме, где держат лидера"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="TheOlme_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest3"
+		briefDiz="Перехватить транспорт с лидером"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			coordinate="2348.362 249.000 2963.589" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest3_1"
+		briefDiz="Уничтожить охрану"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="LeaderGuardTeam" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest3_2"
+		briefDiz="Разоружить головную машину"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="LeaderCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest4"
+		briefDiz="Отвезти лидера к его бойцам"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="StorageVil_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="FreeExtremistLeader_Quest5"
+		briefDiz="Искать тёплую одежду на складе"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="SlkadOdezhdaLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoBackToHel_Quest"
+		briefDiz="Вернуться в Хель"
+		fullDiz="Теперь у меня есть композит, поэтому меня больше ничто не держит в этих ледяных землях."
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="ToR1M6" />
+
+		<Map
+			name="r1m6"
+			targetObjName="ToR1M4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoBackWithoutDobr_Quest"
+		briefDiz="Вернуться ко Всеволоду"
+		fullDiz="Придётся сказать Всеволоду, что Доброслава к нему больше не вернётся. Надеюсь, он не убьёт меня на месте после этих слов."
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="PetrolStationTown1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToLiden_Quest"
+		briefDiz="Отправиться в Лиденклауд"
+		fullDiz="Теперь, когда нам удалось достать тёплую одежду, только каменный завал отделяет меня от места, где можно найти композит."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="GoToLiden_Quest2"
+		briefDiz="Расчистить въезд в тоннель"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="KamexpLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToLiden_Quest3"
+		briefDiz="Проехать по тоннелю"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M6" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToMudr_Quest"
+		briefDiz="Отправиться в горы"
+		fullDiz="Теперь, когда больше мне ничто не мешает пересечь мост, нужно отправиться к мудрецам и узнать у них, где мне искать композит."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="GoToMudr_Quest1"
+		briefDiz="Поговорить с Лисой в баре Моски"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToMudr_Quest2"
+		briefDiz="Отправиться к мудрецам"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="ToR1M5" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToMudrec1"
+		briefDiz="Отвезти лодочные двигатели в Северку"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Uplyli_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToMudrec2"
+		briefDiz="Отправиться к мудрецам"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="ToR1M5" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GoToMudrec_Quest"
+		briefDiz="Эвакуировать местных и отправиться к мудрецам"
+		fullDiz="Теперь, когда адепты покинули Лиденклауд, необходимо эвакуировать местных."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="GomerOlme"
+		briefDiz="Искать Гомера в Ольме"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="TheOlme" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GomerSaliniom"
+		briefDiz="Искать Гомера в Салиниоме"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r1m4"
+			targetObjName="FVOnOcean" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GomerSklad"
+		briefDiz="Поговорить с представителем ТСП"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="TheOlme" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="GrabItems"
+		briefDiz="Вернуться к местным"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Trap_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="HelpRuins_Quest"
+		briefDiz="Помочь археологам"
+		fullDiz="Бандиты досаждают ученым-археологам, которые ведут раскопки неподалеку. Я согласился защитить их от нападок бандитов, которые покушаются на откопанные сокровища."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="CarOfAntiSiencer" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="HelpVillages_Quest"
+		briefDiz="Помочь людям в трёх поселениях"
+		fullDiz="Для того, чтобы завоевать доверие мудрецов, мне нужно помочь трём людям из разных городов."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="KillPalach"
+		briefDiz="Убить палача АР"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Palach" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar1_Quest"
+		briefDiz="Убить местных жителей"
+		fullDiz="Наёмники поставили мне условие, что отпустят Лису и откроют мост, только если я помогу им уничтожить местных жителей. Я согласился."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="KillStar1_Quest1"
+		briefDiz="Встретиться с местными в условленной области"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Zasada_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar1_Quest2"
+		briefDiz="Напасть на Северку"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheDreenorVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar1_Quest3"
+		briefDiz="Вернуться в Кейтберг"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest"
+		briefDiz="Уничтожить последние силы местного сопротивления"
+		fullDiz="Палачу в Моске удалось выбить из дочери старосты информацию о военной технике и местоположении деревень местных жителей. Осталось только спалить их дотла."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="KillStar2_Quest1"
+		briefDiz="Уничтожить Грейдер"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Dozz" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest2"
+		briefDiz="Уничтожить Чугуевку"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="LocalsDef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest2_0"
+		briefDiz="Добраться до Чугуевки"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="BurnVil1_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest3"
+		briefDiz="Уничтожить Рязанское"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="LocalsDef1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest3_0"
+		briefDiz="Добраться до Рязанского"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="BurnVil2_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest4"
+		briefDiz="Вернуться в Моску"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest5"
+		briefDiz="Активировать детонатор"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Zasada2_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillStar2_Quest6"
+		briefDiz="Вернуться в Моску"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillTankistov"
+		briefDiz="Убить нападающих"
+		fullDiz="Убить танкистов, которые напали на Глухое."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Tankisty2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillTikhomir_Quest"
+		briefDiz="Вернуть Доброславу домой"
+		fullDiz="Тихомиру не удастся меня одурачить! Я убью его, а Доброславу доставлю домой в целости и сохранности."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="KillTikhomir_Quest1"
+		briefDiz="Убить Тихомира"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TikhomirAgressor" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="KillTikhomir_Quest2"
+		briefDiz="Отвезти Доброславу ко Всеволоду"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="PetrolStationTown1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Kollizey_Quest"
+		briefDiz="Помочь организовать работу Колизея"
+		fullDiz="Предприниматели хотят снова открыть Колизей. К сожалению, рекламный бюджет у них просто неприлично мал. Да и опыта кот наплакал. Но я все равно согласился помочь им в этом нелегком деле."
+		isMainQuest="0">
+		<Map
+			name="r1m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Kontsovka5_Quest"
+		briefDiz="Встретиться с Акселем в условленном месте"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Ending5_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest"
+		briefDiz="Помочь Ла Беллю"
+		fullDiz="Помимо Ринольска, есть ещё один городок, жители которого нуждаются в помощи."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest1"
+		briefDiz="Узнать, что произошло в Ла Белле"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TheOilVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest2"
+		briefDiz="Вытащить тела погибших шахтёров из-под завала"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Shahta_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest3"
+		briefDiz="Вернуться в Ла Белль"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TheOilVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest4"
+		briefDiz="Отбить первую волну нападающих"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="LBBandits1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest5"
+		briefDiz="Отбить вторую волну нападающих"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="LBBandits2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest6"
+		briefDiz="Отбить третью волну нападающих"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="LBBandits3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest7"
+		briefDiz="Отбить чертвёртую волну нападающих"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="LBBandits4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LaBelleHelp_Quest8"
+		briefDiz="Отбить пятую волну нападающих"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="LBBandits5" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LastIspytanie_Quest"
+		briefDiz="Пройти последнее испытание."
+		fullDiz="Осталось всего одно испытание, отделяющее меня от композита."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="LastIspytanie_Quest1"
+		briefDiz="Вернуться в Волож"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LastIspytanie_Quest2"
+		briefDiz="Доехать до поезда"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="ToR1M6JD" />
+
+		<Map
+			name="r1m6"
+			targetObjName="ToR1M5" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LastIspytanie_Quest21"
+		briefDiz="Поговорить с Лисой в баре Воложа"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LastIspytanie_Quest3"
+		briefDiz="Пройти лабиринт"
+		isMainQuest="1">
+		<Map
+			name="r1m7"
+			targetObjName="LabExit_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LastIspytanie_Quest4"
+		briefDiz="Вернуться в Волож"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LisaAtSouth"
+		briefDiz="Поговорить с Лисой в баре Южного"
+		fullDiz="Загадочная девушка предложила мне показать ей местность. Необходимо поговорить с ней, прежде чем что-либо решать."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LisaUBena"
+		briefDiz="Спросить у Бена, где может прятаться Лиса"
+		fullDiz="После Пешта следы Лисы теряются. Думаю, стоит спросить у Бена, где она может прятаться."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LisaVPeshte"
+		briefDiz="Искать Лису в Пеште"
+		fullDiz="Лиса украла диск отца! Необходимо срочно догнать её, пока след ещё не остыл. Она не могла покинуть эти земли, не проехав через Пешт, так что следует начать поиски оттуда."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Pesht" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="LookAtAivenCar"
+		briefDiz="Посмотреть на машину отца"
+		fullDiz="В Зармеке я наткнулся на остов машины с крайне знакомым логотипом. Нужно осмотреть эту машину получше."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="MidgardTalkKollizey_Quest"
+		briefDiz="Сообщить в Мидгард"
+		fullDiz="Рассказать о Колизее в Мидгарде. Там наверняка будут рады узнать о появлении нового центра развлечений."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="MidgardProfessor" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="MorskieVrata2_Quest"
+		briefDiz="Спросить в Ольме про Морские врата"
+		fullDiz="Ольм - последний город торговцев на Севере. Может, там люди знают что-нибудь про Морские врата."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r1m4"
+			targetObjName="TheOlme_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="MrShlyapa1_Quest"
+		briefDiz="Поговорить с Мистером Шляпой"
+		fullDiz="Чертовщина какая-то. Померещится же такое..."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="MrShlyapa2_Quest"
+		briefDiz="Проверить место, которое указал Мистер Шляпа"
+		fullDiz="Может, я схожу с ума, но в баре я повстречал загадочного человека без головы, который указал мне место, которое я должен посетить. Это очень глупо, но я туда съезжу."
+		isMainQuest="0">
+		<Map
+			name="r1m4"
+			targetObjName="Mishlen_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="MrShlyapa3_Quest"
+		briefDiz="Проверить место, о котором говорил Мистер Шляпа"
+		fullDiz="Человек без головы продолжает меня преследовать. Он опять хочет, чтобы я съездил в одно место и посетил загадочное ущелье. Не уверен, нужно ли мне это..."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="MrShlyapa3_Quest1"
+		briefDiz="Приехать на побережье"
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="Shlyapa3_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="MrShlyapa3_Quest2"
+		briefDiz="Проехать дальше"
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="Shlyapa31_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="MrShlyapa4_Quest"
+		briefDiz="Проверить место, которое указал Мистер Шляпа"
+		fullDiz="Мне уже порядком поднадоело мотаться по округе и выполнять задания этого сказочного существа, но что-то мне подсказывает, что я должен узнать, что же там такое."
+		isMainQuest="0">
+		<Map
+			name="r4m1"
+			targetObjName="HumanSkala_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="MrShlyapaSecret"
+		briefDiz="Поговорить с Мистером Шляпой под горой в Либриуме"
+		fullDiz="Как он вообще там оказался?"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="NorilskHelp_Quest"
+		briefDiz="Помочь людям в Ринольске"
+		fullDiz="Думаю, для начала стоит попытать счастья в крупном городе. Наверняка среди его жителей найдётся тот, кому требуется какая-нибудь помощь."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="NorilskHelp_Quest1"
+		briefDiz="Спросить в городе, требуется ли помощь"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="NorilskHelp_Quest2"
+		briefDiz="Узнать, что случилось в Ла Белле"
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="NorilskHelp_Quest3"
+		briefDiz="Вернуться в Ринольск"
+		isMainQuest="1">
+		<Map
+			name="r1m5"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="OdettIsDead_Quest"
+		briefDiz="У вас не оказалось медикаментов для Одетт"
+		fullDiz="Возможно, будь у вас ящик с Медикаментами, всё могло бы пойти иначе?"
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="OpenMid11_Quest"
+		briefDiz="Узнать в Колизее про композит"
+		fullDiz="Сальваторе собирается проникнуть в Мидгард и уничтожить информацию обо мне. А я пока могу позаниматься другими не менее полезными делами."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheTickets" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="OpenMid2_Quest"
+		briefDiz="Узнать у Сальваторе об успехе взлома"
+		fullDiz="Прошла ночь и Сальваторе уже вернулся. Надо спросить у него, как всё прошло."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheRace" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="OpenMid_Quest"
+		briefDiz="Обратиться к Сальваторе"
+		fullDiz="Во всём Риджине я знаю только одного человека, способного незаметно проникнуть в крупный город с серьёзной охраной и украсть то, что мне нужно."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheRace" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Ozhidanie1_Quest"
+		briefDiz="Подождать окончания допроса"
+		isMainQuest="1">
+		<Map
+			name="r2m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Ozhidanie2_Quest"
+		briefDiz="Поговорить с начальником охраны в Марреции"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="PeregDie"
+		briefDiz="Спросить у перегонщика, что делать дальше"
+		fullDiz="Теперь, когда все старики мертвы, у меня не осталось больше зацепок относительно судьбы Айвена. Единственное, что остаётся, - вернуться к перегонщику."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Pereg_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="PeregReturn"
+		briefDiz="Вернуться к перегонщику"
+		fullDiz="Теперь, когда известен путь эвакуации, стоит немедленно сообщить об этом перегонщику. Надеюсь, местные пока не обнаружили его убежище."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Pereg_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="PlayForLisa_Quest"
+		briefDiz="Открыть ворота"
+		fullDiz="Из нас двоих только у Лисы машина позволяет проехать в обход громадных ворот, которые отделяют меня от земель Лиденклауда."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Podderzhka1_1_Quest"
+		briefDiz="Доставить беженцев из Туза к транспорту Антимилитаристов"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TuzzEscapists_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Podderzhka1_Quest"
+		briefDiz="Эвакуировать людей из Туза"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheTuzz" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Podderzhka2_Quest"
+		briefDiz="Эвакуировать людей из Марецции"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Podderzhka3_Quest"
+		briefDiz="Вернуться на базу"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheOldSibilla" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Podderzhka_Quest"
+		briefDiz="Спасти мирных людей от отправки на войну"
+		fullDiz="В Тузе и Марецции идёт настоящая охота на обычных граждан и неугодных власти деятелей. Я не могу остановить это безумие, но могу попробовать спасти от этого как можно больше людей."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Pomiritsa_Quest"
+		briefDiz="Помириться с бабулей"
+		fullDiz="Необходимо попросить прощения у бабушки за то, что назвал её ведьмой. Но как мне это сделать, если она не открывает мне дверь? Спрошу об этом в баре."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheArtefact" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="PortoTalkKollizey_Quest"
+		briefDiz="Сообщить в Порто"
+		fullDiz="Рассказать о Колизее в Порто. Скоро народ из всех крупных городов повалит туда на происки развлечений."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Porto" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="PredatSNG_Quest"
+		briefDiz="Привезти лидера повстанцев в Маррецию"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="QuickFindBen"
+		briefDiz="Найти Бена"
+		fullDiz="Я нашёл Бена."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="RPGSigns_Quest"
+		briefDiz="Разобраться со знаками на полях"
+		fullDiz="Даже столь отдалённые земли, как Горы Мудрецов, не обошёл стороной загадочный феномен знаков на полях."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="RPGSigns_Quest1"
+		briefDiz="Осмотреть поле"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="RPGSigns_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="RPGSigns_Quest2"
+		briefDiz="Доложить в Мидгард"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4" />
+
+		<Map
+			name="r1m5"
+			targetObjName="ToR1M6" />
+
+		<Map
+			name="r1m6"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ReturnQuest"
+		briefDiz="Вернуться в штаб"
+		fullDiz="Теперь, когда Церковь Света более не управляет Аржаном, война фактически закончилась. Остаётся только вернуться в штаб с докладом."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheNewSibilla" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ReturnToDirector2_Quest"
+		briefDiz="Вернуться к владельцу Колизея"
+		fullDiz="Я выполнил свою часть сделки. Теперь нужно получить заслуженную награду."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="TheTickets" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ReturnToDirector_Quest"
+		briefDiz="Вернуться к владельцу Колизея"
+		fullDiz="Я выполнил свою часть сделки. Теперь нужно получить заслуженную награду."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="TheTickets" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="RevealTheMask_Quest"
+		briefDiz="Снять маску"
+		fullDiz="Теперь, когда вся истина мне открылась, остался только один шаг. Я готов к этому."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r1m4"
+			targetObjName="HomerRyba_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="RybakToOlm_Quest"
+		briefDiz="Подвезти рыбака до Ольма"
+		fullDiz="Рыбак из деревни Салиниом хочет, чтобы я подвёз его до Ольма, где он бы смог записаться в охрану для торговых караванов."
+		isMainQuest="0">
+		<Map
+			name="r1m4"
+			targetObjName="RybakLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="SaveSerafimaCome"
+		briefDiz="Доехать до завода"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="SerafimaFight_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="SaveSerafimaFight"
+		briefDiz="Убить похитителей"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="PohititAd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="SaveSerafima_Quest"
+		briefDiz="Найти Серафиму"
+		fullDiz="Дочь старосты отправилась на заброшенный завод искать там запчасти для лодочных двигателей и до сих пор не вернулась. Нужно проверить, не добрались ли до неё адепты."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="SeeSigns_Quest"
+		briefDiz="Осмотреть знаки"
+		fullDiz="Люди жалуются на появление загадочных знаков на полях. Надо разобраться."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Sign_location" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="SerafimaHome1"
+		briefDiz="Сопроводить Серафиму к её дому"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="Serafima" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="SerafimaHome2"
+		briefDiz="Сопроводить Серафиму в деревню"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="SeraDoz1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="SerafimaHome_Quest"
+		briefDiz="Защищать Серафиму"
+		fullDiz="Прежде чем отправиться в деревню, Серафима хочет забрать какие-то вещи из своего дома. Надеюсь, это что-то действительно важное."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="SharkyVyshka"
+		briefDiz="Заехать к Шарки"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="TheBanditOilMine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Shpion1_Quest"
+		briefDiz="Уничтожить охрану"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Lager" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Shpion2_Quest"
+		briefDiz="Отвезти шпиона на базу"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheNewSibilla" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Signs_Quest"
+		briefDiz="Знаки на полях"
+		fullDiz="Люди жалуются на появление загадочных знаков на полях. Возможно, в их появлении есть какая-то логика."
+		isMainQuest="0">
+		<Map
+			name="r1m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="StartCalmLife"
+		briefDiz="Начать спокойную жизнь"
+		fullDiz="Теперь, когда мой поиск закончен, следует завершить все дела и затем погрузиться в скучный и неторопливый быт."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="TalkBeforeDesert"
+		briefDiz="Поговорить с Беном и Лисой о предстоящем путешествии"
+		fullDiz="Я добыл для мастера в Мидгарде все необходимые материалы, и он принялся за работу. Теперь мне необходимо как-нибудь скоротать время. Думаю, стоит заехать к Бену."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TalkProfessor_Quest"
+		briefDiz="Рассказать ученым о знаках"
+		fullDiz="Ума не приложу, что могло вызвать это странное явление. Ученые в Мидгарде могут разобраться, что здесь на самом деле происходит."
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="MidgardProfessor" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TalkToBarmenBeforeDesert"
+		briefDiz="Заехать в Южный"
+		fullDiz="Перед тем, как отправиться в пустыню, я бы хотел заехать в Южный и узнать, как там дела."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TalkToLisaArtefact"
+		briefDiz="Поговорить с Лисой в Локусе"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheArtefact" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TalkToVasily"
+		briefDiz="Поговорить с наёмником Василием"
+		fullDiz="Что-то мне перехотелось рисковать жизнью и ехать самому в Южный. Лучше заплатить местному наёмнику Василию. Целее буду."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheGloohoe" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TalkWithFather_Quest"
+		briefDiz="Вернуться домой"
+		fullDiz="Самое время вернуться домой после успешной сделки."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheGloohoe" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ToAivenToHel_Quest"
+		briefDiz="Осмотреть болота в Хеле"
+		fullDiz="Согласно книге, которую отдал бухарцам Айвен, я найду ответы на все свои вопросы возле железной птицы, упавшей где-то на болотах Хеля. Надо бы получше осмотреть ту местность."
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r1m4" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR1M4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ToCordanToTikhomir_Quest"
+		briefDiz="Проведать знакомого"
+		fullDiz="Надо бы заехать в одно поселение в Хеле. Кто знает, вдруг я там встречу кого-нибудь знакомого."
+		isMainQuest="0">
+		<Map
+			name="r1m4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TortSera_Quest"
+		briefDiz="Допросить пленницу"
+		fullDiz="Адепты захватили в плен дочку старосты местных и собираются её допросить на территории заброшенного завода. Я должен отправиться туда и добыть нужную нам информацию."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="TortSera_Quest1"
+		briefDiz="Приехать на завод"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="SerafimaFight_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TortSera_Quest2"
+		briefDiz="Отбить нападение местных"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="LocalsArmy" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TortSera_Quest3"
+		briefDiz="Отвезти пленницу в Моску"
+		isMainQuest="1">
+		<Map
+			name="r1m6"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="TraiderStorage_Quest1"
+		briefDiz="Поговорить с захватчиками склада"
+		fullDiz="Склад торговцев, в котором хранятся необходимые мне тёплые вещи, заняли местные жители. Должен быть какой-то способ изгнать их оттуда."
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="StorageVil_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Tunnel_Quest"
+		briefDiz="Разбить войска СНГ возле тоннеля"
+		fullDiz="Когда войска СНГ на границе будут разбиты, будет задействован протокол безопасности. Это позволит нам устранить всю верхушку разом."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Tunnel_Quest1"
+		briefDiz="Добраться до тоннеля"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TunnelAttackLocation" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Tunnel_Quest2"
+		briefDiz="Разбить охрану тоннеля"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TunelTeamFighters" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="VYar_Quest"
+		briefDiz="Отвезти свёрток в Яр"
+		fullDiz="Местный житель Локуса согласился оправдать меня в глазах бабули, если я доставлю посылку его другу в деревне Яр."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheSign" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="VisitBabka"
+		briefDiz="Передать Бабе Поле подарок от Бена"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheArtefact" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="VisitBarmen"
+		briefDiz="Поговорить с барменом Дронном в Южном"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheTown" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="VisitTroick"
+		briefDiz="Осмотреть дом в Гугулино"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheContraVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="WaitTillEnd"
+		briefDiz="Помочь торговцам зачистить склад"
+		fullDiz="Я отказался от идеи нападать на тюремный караван торговцев, и теперь должен помочь им зачистить склад. Только в этом случае я получу доступ к содержимому склада."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="WaitTillEnd1"
+		briefDiz="Встретиться со штурмовой группой"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="KillSkladGuys_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="WaitTillEnd2"
+		briefDiz="Атаковать склад"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ArmiaRybakov" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="WaitTillEnd3"
+		briefDiz="Забрать тёплую одежду со склада"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="SlkadOdezhdaLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="WorkGiver_Quest1"
+		briefDiz="Отвезти Богатого фермера"
+		fullDiz="Местный гоповатый предприниматель попросил меня доставить его на заправку. Скрепя сердце, я согласился."
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="TheOilVillageQ2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest"
+		briefDiz="Уничтожить доты на подъезде к базе"
+		fullDiz="Сначала необходимо уничтожить доты, охраняющие мост Бригады, чтобы исключить удар с тыла."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest1"
+		briefDiz="Уничтожить первый дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest2"
+		briefDiz="Уничтожить второй дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest3"
+		briefDiz="Уничтожить третий дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_1_Quest4"
+		briefDiz="Уничтожить четвёртый дот"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="staticAutoGun_Quest_4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti1_Quest"
+		briefDiz="Встретиться с армией торговцев возле базы бандитов"
+		fullDiz="Руководитель армией торговцев приостановил операцию зачистки, чтобы я мог сам поучаствовать. Мне необходимо встреиться с ними в условленном месте."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="locArmiaTSP" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti2_Quest"
+		briefDiz="Зачистить базу от бандитов"
+		fullDiz="С такой огневой поддержкой, которую предоставили мне торговцы, я смогу зачистить базу бандитов и вернуть себе диск, принадлежащий отцу."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ThiefCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti3_Quest"
+		briefDiz="Отчитаться об успехе операции полковнику"
+		fullDiz="Операция захвата военной базы прошла успешно, теперь мне нужно вернуться в Минин и отчитаться перед полковником."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zachisti4_Quest"
+		briefDiz="Поговорить с караванщиком"
+		fullDiz="Полковник Гиббонс сказал мне, что караванщик Минина хотел о чём-то мне рассказать."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="ZashitaGotova"
+		briefDiz="Установить готовую защиту на кабину"
+		fullDiz="Наверняка защита для кабины уже готова, теперь её осталось только установить."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zashita_Quest"
+		briefDiz="Защитить караван"
+		fullDiz="Поступила информация, что АР собираются напасть на караван с гуманитарной помощью. Я обязан этому помешать."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="Zashita_Quest1"
+		briefDiz="Доехать до места засады"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="BeforeCaravan_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="Zashita_Quest2"
+		briefDiz="Защитить караван"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ARKillers" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_ArriveAtFelixBase_Quest"
+		briefDiz="Приехать на базу бандитов"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="FelixBaseLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BarForTunel_Quest"
+		briefDiz="Поговорить с барменом в Асгарде"
+		fullDiz="Судя по всему, жители этого города знают, как проехать через горы на запад. "
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Asgard" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BarInGelvetcia_Quest"
+		briefDiz="Приехать в бар и назвать пароль"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Toskana" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BombInAsgard2_Quest"
+		briefDiz="Спросить бармена Асгарда про другие магазины со взрывчаткой"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Asgard" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BombInAsgard_Quest"
+		briefDiz="Купить в Асгарде взрывчатку"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Asgard" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BombInShahts_Quest"
+		briefDiz="Купить взрывчатку в шахтерском поселке"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="TheShahts" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BombShahtsAtakBandits_Quest"
+		briefDiz="Отбить атаку бандитов"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ShahtsBoss" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_BombShahtsReturn_Quest"
+		briefDiz="Вернуться в посёлок"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="TheShahts" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_CaravanFromTuzzToVillage_Quest"
+		briefDiz="Сопроводить транспорт по деревням"
+		fullDiz="Моя задача - обеспечить безопасность транспорта. Груз должен быть доставлен любой ценой."
+		isMainQuest="1">
+		<Map
+			name="r2m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_CaravanToMidgardBen_Quest"
+		briefDiz="Вернуться с транспортом в Мидгард"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="KARAVANMIDGARD_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_CaravanToPortoBen_Quest"
+		briefDiz="Помочь сопроводить груз в Порто"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="KARAVANPORTO_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_DestroyBridge_Quest"
+		briefDiz="Заложить бомбу"
+		fullDiz="У меня есть взрывчатка. Осталось только заминировать мост."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_DestroyBridge_Quest1"
+		briefDiz="Нейтрализовать охрану моста"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="OhranaBridge" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_DestroyBridge_Quest2"
+		briefDiz="Взорвать мост"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="BaseGuardian_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_DriveBanditFromOilMine_Quest"
+		briefDiz="Освободить скважину от бандитов"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="OilMineBoss" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FatherRoomInMinin_Quest"
+		briefDiz="Обыскать дом отца"
+		isMainQuest="1">
+		<Map
+			name="r1m2" />
+
+		<Map
+			name="r1m3"
+			targetObjName="HouseLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindBanditBaseOfOilMine_Quest"
+		briefDiz="Найти и уничтожить лагерь бандитов"
+		fullDiz="Последний противник убегает. Я могу проследить за ним до базы бандитов и уничтожить это паучье гнездо."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="d_FindBanditBaseOfOilMine_Quest1"
+		briefDiz="Проследить за бандитом"
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="OilMineRuner" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindBanditBaseOfOilMine_Quest2"
+		briefDiz="Уничтожить всех бандитов на базе"
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="OilMineBaseBoss" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindBenInMidgard_Quest"
+		briefDiz="Последний раз Бена видели в Мидгарде"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindDoorInTunel_Quest"
+		briefDiz="Найти вход в тоннель"
+		fullDiz="Теперь я знаю, где находится тоннель. Надеюсь, что не возникнет никаких трудностей с проездом по нему."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindHouseOfBen_Quest"
+		briefDiz="Поговорить с Беном в его хижине"
+		fullDiz="Скоро я увижусь с Беном Дросселем и узнаю правду о своем происхождении."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindKeyInTunel_Quest"
+		briefDiz="Поговорить с барменом"
+		fullDiz="Скорее всего, у него есть ключ от тоннеля, и он его сможет продать. Ну, если я правильно понимаю законы рынка..."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Asgard" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindLisaInGelvetcia_Quest"
+		briefDiz="Догнать Лису в Гельвеции"
+		fullDiz="Догнать Лису в Гельвеции."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheGelvetcia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindOracul_Quest"
+		briefDiz="Найти Оракула"
+		fullDiz="На далеком северном острове, по слухам, живёт Оракул. След, оставленный моим отцом, ведет туда."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindRealFatherRoom_Quest"
+		briefDiz="Найти жилище отца"
+		fullDiz="Мой отец еще может быть жив! Я посвящу свою жизнь его поискам.|Думаю, для начала нужно посетить его жилище в Минине."
+		isMainQuest="1">
+		<Map
+			name="r1m2" />
+
+		<Map
+			name="r1m3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindVerbInAM_Quest"
+		briefDiz="Найти базу антимилитаристов"
+		fullDiz="Барменша из Селя рассказала мне, что помимо СНГ и АР существует и третья сторона, которая желает урегулировать конфликт без кровопролития. Говорят, они обосновались где-то на севере. Может быть, стоит поискать их базу?"
+		isMainQuest="1">
+		<Map
+			name="r2m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindVerbInAR_Quest"
+		briefDiz="Найти в Марецции вербовщика в АР"
+		fullDiz="Алый Рассвет ищет новых бойцов. Стать одним из них – это шанс приблизиться к Акселю."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindVerbInSNG_Quest"
+		briefDiz="Найти в Тузе вербовщика в СНГ"
+		fullDiz="Независимые Города нуждаются в помощи в борьбе с Акселем. Вместе мы сможем сокрушить тирана."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheTuzz" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindVrata_Quest"
+		briefDiz="Найти Морские Врата"
+		fullDiz="Где-то далеко на севере находятся Морские врата. Караван из Минина покажет мне правильный путь."
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r1m4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindWorkersToOilMine_Quest"
+		briefDiz="Договориться с работниками в Минине"
+		fullDiz="Работники со скважины сидят в баре Минина. Надо с ними договориться, чтобы они вернулись на работу."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FindZasadaInTunel_Quest"
+		briefDiz="Найти место для засады"
+		fullDiz="Наверняка рано или поздно кто-то выедет из туннеля. У него-то я и экспроприирую ключ. Главное – дождаться. "
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ZasadaLocQ" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FirstVillage_Quest"
+		briefDiz="Следовать за караваном до деревни Генденбургск"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="KARAVANvvt_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FreeTunel_Quest"
+		briefDiz="Освободить тоннель"
+		fullDiz="До сих пор АР получает ресурсы и наемников через тоннель. Захватив его, СНГ обрубит захватчикам важную артерию. Чтобы сделать это, придется убить всех охранников."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_FreeTunel_Quest1"
+		briefDiz="Добраться до тоннеля"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TunnelAttackLocation" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FreeTunel_Quest2"
+		briefDiz="Уничтожить бойцов АР"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TunelTeamFighters" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_FromTuzzToGelvetcia_Quest"
+		briefDiz="Отправиться в Гельвецию"
+		fullDiz="Мои поступки были оценены по заслугам, и я буду представлен верховному командованию СНГ."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheGelvetcia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_GetAkselBandit_Quest"
+		briefDiz="Добраться до Акселя"
+		fullDiz="Момент истины близок. Скоро я смогу посмотреть Акселю в глаза."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2small" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Toskana" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_GetBigBoom_Quest"
+		briefDiz="Найти мощное оружие в Заимке"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheOilVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_GetBomb_Quest"
+		briefDiz="Добыть взрывчатку"
+		fullDiz="Чтобы жители Пешта пропустили меня, я должен устранить угрозу нападения бандитов. Самый простой способ сделать это - взорвать мост, ведущий к их базе."
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_GetHelpWorkersInMinin_Quest"
+		briefDiz="Освободить скважину от бандитов"
+		fullDiz="Чтобы проехать дальше на север, мне нужно наладить добычу нефти. Тогда я смогу путешествовать вместе с торговым караваном."
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_GetSupportOneOfTheBands1_Quest"
+		briefDiz="Заручиться поддержкой крупной группировки"
+		fullDiz="Плохие новости. Лиса - подружка какого-то местного авторитета. Вряд ли я смогу в одиночку подобраться к нему. Придется искать союзников."
+		isMainQuest="1">
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r2m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_GiveMoneyToBase_Quest"
+		briefDiz="Собрать денег за проезд"
+		fullDiz="Бандиты согласны пропустить меня через свои земли за 10000."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="BaseGuardian_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_HelpSideVillageSNG_Quest"
+		briefDiz="Защитить пограничную деревню"
+		fullDiz="Небольшие поселения постоянно повергаются атакам головорезов Алого Рассвета. Я могу предотвратить нападение, и я сделаю это. "
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_HelpSideVillageSNG_Quest1"
+		briefDiz="Добраться до деревни"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheUnderAttaks" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_HelpSideVillageSNG_Quest2"
+		briefDiz="Отразить атаку АР"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="Razboy" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_IntrigaOfMerMinin_Quest"
+		briefDiz="Разобраться в интригах"
+		fullDiz="Выживший бандит рассказал о том, что к захвату Нефтяной вышки причастен сам мэр. Нужно проследить за ним, чтобы подтвердить или опровергнуть это подозрения."
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_KillCarTunel_Quest"
+		briefDiz="Уничтожить машину из тоннеля"
+		fullDiz="Слежка не удалась. Теперь мне необходимо уничтожить этот автомобиль."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Pioneer" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_KillFelixGuards_Quest"
+		briefDiz="Убить охрану Феликса"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="FelixBanditCars2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_KillFelix_Quest"
+		briefDiz="Убить Феликса"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="FelixBanditCars3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Lisa_Quest"
+		briefDiz="Показать Лисе местность"
+		fullDiz="После продолжительного разговора с Лисой в баре я согласился показать ей местность."
+		isMainQuest="1">
+		<Map
+			name="r1m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Lisa_Quest_NoKC"
+		briefDiz="Показать Лисе местность"
+		fullDiz="После продолжительного разговора с Лисой в баре я согласился показать ей местность."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_MeetLeaderGelvetcia_Quest"
+		briefDiz="Встретиться с лидером сопротивления"
+		isMainQuest="1">
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Lager" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MeetWithGelvetciaSopr_Quest"
+		briefDiz="Связаться с сопротивлением в Тоскане"
+		fullDiz="А вот и возможность подобраться поближе к Акселю. Я должен встретиться с повстанцами в Тоскане и выяснить все, что они сочтут возможным сообщить."
+		isMainQuest="1">
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r2m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveCanistraToMinin_Quest"
+		briefDiz="Вернуться в Минин"
+		fullDiz="Теперь, когда нефтяная вышка, наконец, заработала, я смогу проехать дальше на север."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveFreelancersToOilMine_Quest"
+		briefDiz="Отвезти наемных работников на скважину"
+		fullDiz="Как только я привезу рабочих на скважину, они сразу начнут работать. А значит, моя поездка на север состоится совсем скоро."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="TheBanditOilMine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveInParis_Quest"
+		briefDiz="На побережье"
+		fullDiz="Мне нужно найти вход в подводный тоннель, ведущий на остров Оракула."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ParisLocation" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveLeaderInGelvetcia_Quest"
+		briefDiz="Доставить лидера в Туз"
+		fullDiz="После всего, что случилось, лидер повстанцев просто обязан сообщить важные сведения."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheTuzz" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveToMer_Quest"
+		briefDiz="Проследить за мэром"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="MerCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveToMinin_Quest"
+		briefDiz="Приехать в Минин"
+		isMainQuest="1">
+		<Map
+			name="r1m2" />
+
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveToPesht_Quest"
+		briefDiz="Проехать через Пешт"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="Pesht" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveWithGeneralToGelvetcia_Quest"
+		briefDiz="Доставить генерала АР в Роторск"
+		fullDiz="Операция прошла успешно. Мне удалось захватить генерала АР. В Роторске его заставят рассказать все, что он знает."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheVill2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_MoveWorkersToOilMine_Quest"
+		briefDiz="Отвезти работников на скважину"
+		fullDiz="Теперь рабочие - сами хозяева своей судьбы. И они согласились вновь работать на скважине."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="TheBanditOilMine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_OpenTunel_Quest"
+		briefDiz="Открыть тоннель ключом"
+		fullDiz="Ключ от тоннеля у меня. Осталось только открыть его."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_PatrulSideSNG_Quest"
+		briefDiz="Патрулировать границу"
+		fullDiz="Мое первое задание - патрулировать границу на предмет машин противника."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="SideLine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_PayWorkersMoney_Quest"
+		briefDiz="Нанять работников со стороны"
+		fullDiz="Наверняка в соседней деревне можно договориться с работниками. За небольшие подъемные они наверняка согласятся работать на шахте."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="TheVozleMinin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_PunishBandits_Quest"
+		briefDiz="Проучить бандитов"
+		fullDiz="Хорошенечко надравшись, Петро решил, что самое время наказать бандита, который плохо относится к местным девушкам. Я просто обязан ему в этом помочь!"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="d_PunishBandits_Quest1"
+		briefDiz="Атаковать базу бандитов"
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="Terrorists" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_ReturnToTuzzAfterCaravan_Quest"
+		briefDiz="Вернуться с транспортом в Туз и отчитаться"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="KARAVANvvt_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_ReturnTuzz_Quest"
+		briefDiz="Вернуться в Туз"
+		fullDiz="Вернуться в Туз"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheTuzz" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_ReturntoMerOfMinin_Quest"
+		briefDiz="Доложить Шарки"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_RideAcrossBase_Quest"
+		briefDiz="Попробовать пересечь реку в другом месте"
+		fullDiz="Мне необходимо попасть на ту сторону реки. Сделать это можно только в Пеште или на территории бандитов..."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="BaseGuardian_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_SecondVillage_Quest"
+		briefDiz="Следовать за караваном до деревни Роторск"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="KARAVANvvt_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_SerchCarTunel_Quest"
+		briefDiz="Проследить за машиной"
+		fullDiz="Я могу проследить за машиной из тоннеля и попробовать забрать ключ, когда водитель выйдет из нее."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Pioneer" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_SinFather_Quest"
+		briefDiz="Отомстить за смерть отца"
+		fullDiz="Где бы ни прятался убийца, я найду его и накажу за преступления!"
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_SkladMidgardBen_Quest"
+		briefDiz="Зайти на склад в Мидгарде"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_TakeGeneralOfBandits_Quest"
+		briefDiz="Захватить генерала бандитов"
+		fullDiz="Вместе с несколькими машинами СНГ я должен захватить генерала АР."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_TakeGeneralOfBandits_Quest1"
+		briefDiz="Прибыть к месту встречи"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="BossARLocation" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_TakeGeneralOfBandits_Quest2"
+		briefDiz="Захватить генерала АР"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="BossARCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_TalkAboutVrataInMinin_Quest"
+		briefDiz="Узнать про Морские Врата"
+		fullDiz="Кто-нибудь в Минине наверняка знает про Морские Врата."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_TalkMerAboutOilMineAttack_Quest"
+		briefDiz="Поговорить с мэром"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_TalkSharkiAfterMer_Quest"
+		briefDiz="Вернуться в бар к Шарки"
+		fullDiz="Раз уж мэр Минина не заинтересован в решении проблем города, придётся вновь поговорить с Шарки."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_TrueAboutMer_Quest"
+		briefDiz="Сообщить о преступлении мэра"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village1_NoKC_Quest"
+		briefDiz="Показать Заимку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheOilVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village1_Quest"
+		briefDiz="Показать Ржавенск"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="Svalka" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village2_NoKC_Quest"
+		briefDiz="Показать Гугулино"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheContraVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village2_Quest"
+		briefDiz="Показать Сосновку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="Sosnovka" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village3_NoKC_Quest"
+		briefDiz="Показать Троицкое"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheFreedom" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village3_Quest"
+		briefDiz="Показать Чеснокойл"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="Lukoil" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village4_Quest"
+		briefDiz="Показать Заимку"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheOilVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village5_Quest"
+		briefDiz="Показать Старый посёлок"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="Ruin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village6_Quest"
+		briefDiz="Показать Гугулино"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheContraVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village7_Quest"
+		briefDiz="Показать Серп и Молот"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="Kolhoz" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_Village8_Quest"
+		briefDiz="Показать Троицкое"
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="TheFreedom" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_WinLisaInBattle_Quest"
+		briefDiz="Победить Лису в поединке"
+		fullDiz="Наконец-то я могу сразиться с обманщицей Лисой в честном поединке!"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="LisaInCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_chehol1"
+		briefDiz="Подъехать к руинам в Фатерлянде"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="Chehly1_loc" />
+
+		<Map
+			name="r1m4" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="d_chehol2"
+		briefDiz="Найти коробку с чехлами"
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="d_chehol3"
+		briefDiz="Отвезти чехлы в Мидгард"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="preEretik_Quest"
+		briefDiz="Вырвать шпиона из рук АР"
+		fullDiz="Разведка сообщает, что одного из людей антимилитаристов раскрыли и ищут по всему Аржану. Я должен срочно отправиться туда и спасти его."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="q_FH1"
+		briefDiz="Поискать по округе"
+		fullDiz="Филимон, скорее всего, пьёт в баре одного из рыбацких посёлков. А может и нет..."
+		isMainQuest="0">
+		<Map
+			name="r1m4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="q_FH2"
+		briefDiz="Вернуть Филимона домой"
+		fullDiz="Я нашёл Филимона, теперь осталось вернуть его домой."
+		isMainQuest="0">
+		<Map
+			name="r1m4"
+			targetObjName="FVPerch_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="q_FH3"
+		briefDiz="Отправиться на Священный холм"
+		fullDiz="Пьяница из Калиса рассказал, что Филимон отправился водить хороводы вокруг ели на Священном холме."
+		isMainQuest="0">
+		<Map
+			name="r1m4"
+			targetObjName="FilimonLoc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="q_FindHusbent"
+		briefDiz="Найти мужа"
+		fullDiz="Женщина попросила меня вернуть мужа домой. Он немного не в себе, к тому же любит пропустить стаканчик-другой."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="q_PWS1"
+		briefDiz="Приехать на поле"
+		isMainQuest="0">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="SignPlace_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="q_PWS2"
+		briefDiz="Сообщить в Мидгард ученым о знаках"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="MidgardProfessor" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="q_PlaceWithSign"
+		briefDiz="Странные знаки на поле"
+		fullDiz="Друид сказал, что на его поле появились странные знаки. Стоит посмотреть, что же он имел в виду."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="q_VisitDruid"
+		briefDiz="Проведать друида"
+		fullDiz="Одинокий друид, наверное, скучает по своим. Нужно ему передать гостинец от старого друга."
+		isMainQuest="0">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="AloneDruidBuilding" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m1_Botanik_Quest"
+		briefDiz="Привезти ботанику какую-нибудь редкость"
+		fullDiz="Интересно, где можно достать редкости? Может, стоит поискать в развалинах больницы?"
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="BotanicHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m1_FindBotanik_Quest"
+		briefDiz="Найти ученого ботаника"
+		fullDiz="Старый солдат много говорил. По-моему, информация о ботанике - это единственное, что он сказал по делу."
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="BotanicHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m1_Hospital_Quest"
+		briefDiz="Обыскать заброшенную больницу"
+		fullDiz="Мне рассказали, что неподалеку есть заброшенная больница. Думаю, там можно найти что-нибудь интересное."
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="Hospital_Loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m2_Glagiators_Quest"
+		briefDiz="Победить Сару на Арене"
+		fullDiz="Несмотря на то, что в Колизее не оказалось нужного мне материала, я не смог отказаться от предложенного поединка."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="r1m2_Glagiators_Quest1"
+		briefDiz="Добраться до Арены"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Kolizey_location" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m2_Glagiators_Quest2"
+		briefDiz="Одолеть Сару"
+		isMainQuest="0">
+		<Map
+			name="r1m2"
+			targetObjName="Gladiator2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m2_MovemineralToMidgard_Quest"
+		briefDiz="Рассказать мастеру в Мидгарде о неудаче"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m4" />
+
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r3m1" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m2_NoCompositeFast_Quest"
+		briefDiz="Поговорить с мастером в Мидгарде"
+		fullDiz="Теперь, когда путь в Мидгард открыт, я наконец-то смогу подготовить свой грузовик к суровым условиям Пустыни."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m2_RedkiyMineral_Quest"
+		briefDiz="Спросить про редкий материал"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="TheTickets" />
+
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r3m1" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m2_TalkAboutRedkiyMineral_Quest"
+		briefDiz="Приехать в Мидгард"
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_ArchHelp"
+		briefDiz="Отвезти старого археолога к руинам Старого мира"
+		fullDiz="Старик попросил отвезти его к руинам, где бы он мог заняться своими исследованиями."
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="TheLibrary" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_ArchHelp2"
+		briefDiz="Отвезти старого археолога в Мидгард"
+		fullDiz="Нужно отвезти уже знакомого мне старика-археолога в Мидгард, где он поделится своими наблюдениями с коллегами."
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m2"
+			targetObjName="Midragd" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_ArchVisit"
+		briefDiz="Проведать археолога"
+		fullDiz="По пути в Фатерлянд я вспомнил, как подвозил старого археолога к старым руинам. Интересно, он всё ещё там?"
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="TheLibrary" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_BonnyAndKlideQuest"
+		briefDiz="Помочь Конни и Блайду"
+		fullDiz="Надо отвезти странную молодую семью домой. И всё-таки есть в них что-то подозрительное..."
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="TheTrap" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_CrazyManQuest"
+		briefDiz="Найти Центр Развлечений"
+		fullDiz="Центр Развлечений - просто рай какой-то, если верить рекламным лозунгам бармена из бара в Пеште."
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="r1m3_Circus_1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_DestroyOracle"
+		briefDiz="Уничтожить Оракула"
+		fullDiz="Мои глаза открылись: Оракул безумен. Он пытается уничтожить Источник и все его тайны. Но я этого не допущу! "
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_FightWithThief"
+		briefDiz="Отобрать второй диск у вора"
+		fullDiz="Этот вор еще не знает, с кем связался! Диск будет моим любой ценой. Только смерть одного из нас может разрешить эту проблему."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ThiefCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_FindThiefFromFatherHouse"
+		briefDiz="Узнать про разгром"
+		fullDiz="В доме отца все перевернуто вверх дном. Возможно, кто-то из людей видел, что здесь произошло. Надо спросить в баре."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="Minin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_FindVrata_KnowPlace"
+		briefDiz="Узнать где находятся Врата"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r1m4" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_LisaWithOberegAndDisk_Quest"
+		briefDiz="Искать Лису в Либриуме"
+		fullDiz="Лиса украла оберег и диски! Надо ее догнать, пока она совсем не пропала."
+		isMainQuest="1">
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r2m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_MoveToOraculAfterThief"
+		briefDiz="Доставить диск 2 Оракулу"
+		fullDiz="Теперь, когда у меня есть оба диска, я смогу наконец узнать о судьбе отца. Надеюсь, содержимое дневника поможет мне проследовать по его стопам. Конечно, для этого потребуется отправиться в Игнотт к Оракулу."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Oracle_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_OldTownOutsiderCar2_Quest"
+		briefDiz="Поймать беглеца в заброшенном городе"
+		fullDiz='Жители села "Забытое" заплатят мне, если я убью лидера бандитов, разрушивших местный Центр Развлечений.'
+		isMainQuest="0">
+		<Map
+			name="r1m3"
+			targetObjName="OldTownOutsiderCar2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_TW_OralceAboutAlien"
+		briefDiz="Поговорить с Оракулом"
+		fullDiz="Оракул должен знать, где найти достаточно мощное оружие, чтобы уничтожить Повелителя. Это страшное место нужно выжечь на сотню километров вокруг! "
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r4m1"
+			targetObjName="ToR1M1" />
+
+		<Map
+			name="r4m2"
+			targetObjName="ToR4M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_TalkWithThiefFromFatherHouse"
+		briefDiz="Найти вора"
+		fullDiz="Скорее всего, вор скрывается на Базе 51. Он попытается сбыть краденое там, где собирается всякий сброд."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="TheBase" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m3_ToLisaToAsgard"
+		briefDiz="Догнать Лису"
+		fullDiz="Я должен торопиться! Надо узнать в Асгарде про тоннель, куда поехала Лиса."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="Asgard" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m4_FindVrata_GotoToGate"
+		briefDiz="Добраться до Врат"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m4_OvercomeMirras"
+		briefDiz="Преодолеть болото"
+		fullDiz="Путь к Вратам преграждает болото, Нужно найти мелкое место или тропу, чтобы перебраться на другую сторону."
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="MorassRoad_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaBetrayal_Quest"
+		briefDiz="Донести на Братислава Верховному Мудрецу"
+		fullDiz='Полдня я ковырялся по пояс в снегу, только чтобы потом узнать, что "жизненно важным" агрегатом является обычный ананаговый аппарат. '
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest"
+		briefDiz='Найти детали для "агрегата"'
+		fullDiz="Довольно странный человек из Ринольска попросил меня найти три спрятанных детали для какого-то агрегата, который ему жизненно необходим."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest1"
+		briefDiz="Найти первую деталь"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			coordinate="2082.000 255.000 1349.000" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest2"
+		briefDiz="Найти вторую деталь"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			coordinate="700.000 277.000 3201.000" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest3"
+		briefDiz="Найти третью деталь"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			coordinate="3418.000 400.000 3562.000" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaFind_Quest4"
+		briefDiz="Вернуться к Братиславу"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="TheTown" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaWait_Quest"
+		briefDiz="Подождать, пока Братислав сделает свою лучшую ананагу"
+		fullDiz="Оказалось, что запчасти Братиславу нужны были для починки его ананагового аппарата, а скрыл он это от меня потому, что боялся гнева Верховного Мудреца. Я согласился его не выдавать, если он сделает ананагу по моим рецептам."
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="r1m5_AnanagaWait_Quest1"
+		briefDiz="Заняться другими делами, пока Братислав делает ананагу"
+		isMainQuest="0">
+		<Map
+			name="r1m5" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r1m5_AnanagaWait_Quest2"
+		briefDiz="Забрать готовую ананагу"
+		isMainQuest="0">
+		<Map
+			name="r1m5"
+			targetObjName="Esting" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_ArtAntipod_Quest"
+		briefDiz="Поговорить с ценителем старины"
+		fullDiz="Кто-то украл у Эстета ценный шедевр – образец древнего искусства. Ниточка ведет к некоему ценителю старины."
+		isMainQuest="0">
+		<Map
+			name="r2m1"
+			targetObjName="TheDoubtful" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_ArtGulik_Quest"
+		briefDiz="Забрать шедевр у Жулика"
+		fullDiz="Виновник всего этого безобразия – некоторый Жулик. Надо его догнать и отобрать шедевр. Силой, если понадобится."
+		isMainQuest="0">
+		<Map
+			name="r2m1"
+			targetObjName="GulikCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_ArtViva_Quest"
+		briefDiz="Вернуть шедевр"
+		fullDiz="Чтобы получить награду, надо вернуть шедевр Эстету. Хотя можно и подумать. Ведь есть и еще заинтересованные лица."
+		isMainQuest="0">
+		<Map
+			name="r2m1"
+			targetObjName="TheSel" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_DeployBloks"
+		briefDiz="Установить блокиратор"
+		fullDiz="Устройство Ньери сможет блокировать смертоносное излучение Источника. Но только если я установлю его в непосредственной близости от упавшего корабля."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="r2m1_DeployBloks1"
+		briefDiz="Попробовать проехать через Фатерлянд"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="OraculEndLoc" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_DeployBloks2"
+		briefDiz="Добраться до Вахата морем"
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="EnterToSubmarine_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_DestroyAlienShip"
+		briefDiz="Уничтожить базу пришельцев"
+		fullDiz="Боевой корабль пришельцев появился неизвестно откуда. Именно он испускает волны, блокирующие сигналы Оракула. Враг должен быть уничтожен во имя спасения человечества."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			coordinate="1184.729 428.760 1479.850" />
+
+		<Map
+			name="r2m1_bossfight"
+			coordinate="1184.729 428.760 1479.850" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_KillGodFather_Quest"
+		briefDiz="Ликвидировать Босса мафии"
+		fullDiz="Босс мафии может причинить мне много проблем, когда узнает, что я украл его товар. Надо убить его, прежде чем это произойдёт."
+		isMainQuest="0">
+		<Map
+			name="r2m1"
+			targetObjName="BossNarcotikCar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_KillNarcoticsCaravan_Quest"
+		briefDiz="Забрать груз у транспорта"
+		isMainQuest="0">
+		<Map
+			name="r2m1"
+			targetObjName="CaravanWithNarcotikCars" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_ReturnNarcotics_Quest"
+		briefDiz="Вернуться с товаром к Жулику"
+		isMainQuest="0">
+		<Map
+			name="r2m1"
+			targetObjName="TheGelvetcia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_TW_AlienInShip"
+		briefDiz="Поговорить с пришельцами"
+		fullDiz="Какая удача! Из-за неполадок на станции пришельцы выдали местонахождение своей базы. Теперь я смогу поговорить с ними."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			coordinate="1184.729 428.760 1479.850" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_TW_SellsCivilian"
+		briefDiz="Поговорить с жителями Селя"
+		fullDiz="Где-то в окрестностях этого города-электростанции находится источник излучения, блокирующий сигналы Оракула. Необходимо выяснить, с чем мы имеем дело."
+		isMainQuest="1">
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r2m1"
+			targetObjName="TheSel" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m1_TakeNarcotics_Quest"
+		briefDiz="Перехватить груз"
+		fullDiz="К югу отсюда скоро отправится транспорт с грузом, который можно выгодно продать. Он попытается проехать незамеченным, но только не для меня."
+		isMainQuest="0">
+		<Map
+			name="r2m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_AferaARSNG"
+		briefDiz="Выдать себя за борца сопротивления"
+		fullDiz="Моя задача – проникнуть в ряды сопротивления, прикинувшись агентом СНГ. Я знаю явку и пароль. Этого должно быть достаточно."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Toskana" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_AfterAfera"
+		briefDiz="Доложить в Марецции"
+		fullDiz="Пора возвращаться в Мареццию за наградой и за новым заданием."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_BetrateAMorSNG"
+		briefDiz="Перейти на сторону Алого Рассвета"
+		fullDiz="Чем пытаться вывести шпиона из пекла войны, я решил, что гораздо проще будет отдать его Акселю и получить нужную мне информацию из первых уст."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="r2m2_DestroySNGKaravan"
+		briefDiz="Нарушить тыловое снабжение врага"
+		fullDiz="Моя задача - уничтожить транспорт. Все, что смогу украсть, - мое."
+		isMainQuest="1">
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r2m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FightFelix"
+		briefDiz="Победить Феликса"
+		fullDiz="Феликс снова встал у меня на пути. На этот раз я не пощажу его!"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Arena" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FightFelix1"
+		briefDiz="Добраться до Арены"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Arena" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FightFelix2"
+		briefDiz="Победить Феликса"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="FelixCars" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FightWithAxelInArena_Quest"
+		briefDiz="Драться с Акселем"
+		fullDiz="Я сражусь с Акселем на арене и заставлю его рассказать мне все."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="r2m2_FightWithAxelInArena_Quest1"
+		briefDiz="Добраться до Арены"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Arena" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FightWithAxelInArena_Quest2"
+		briefDiz="Победить Акселя"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="AxelCarWar" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FindLisAfterAxelAndFatherDie_Quest"
+		briefDiz="Искать Лису в Сели"
+		fullDiz="В монастыре мне рассказали, что не так давно Лиса покинула Аржан и отправилась на электростанцию города Сель. Нужно спешить, пока она опять от меня не улизнула!"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheSel" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FindROMinCastle"
+		briefDiz="Приехать в монастырь"
+		fullDiz="Есть что-то подозрительное в простом задании привезти вино из монастыря..."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Monastery" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_FindSNGKaravan"
+		briefDiz="Напасть на транспорт"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="KaravanSNGTill" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_GiveBardakToEnemy"
+		briefDiz="Внести сумятицу в ряды противника"
+		fullDiz="Пора начать психологическую атаку. Для начала я должен уничтожить несколько патрульных машин северян."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="SNGProviantRiders" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_GiveBardakToSideVillage"
+		briefDiz="Напасть на деревню"
+		fullDiz="Жители этой деревни были замечены в связях с врагом. Я нападу на нее, чтобы оттянуть силы СНГ с основного направления атаки."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="r2m2_GiveBardakToSideVillage1"
+		briefDiz="Уничтожить оборону деревни"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="SNGInVill1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_GiveBardakToSideVillage2"
+		briefDiz="Разобраться с подкреплением"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="SNGInVill2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_GoToR2M1"
+		briefDiz="Проникнуть в Либриум"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_Head1HunterQuest"
+		briefDiz="Убить язычника"
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="ShamanCar1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_Head2HunterQuest"
+		briefDiz="Убить еретика"
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="ShamanCar2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_HeadsHunterQuest"
+		briefDiz="Поручение Настоятельницы"
+		fullDiz="Настоятельница Монастыря предложила мне поохотиться на сектантов. Почему бы и нет."
+		isMainQuest="0">
+		<Map
+			name="r2m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_HelpAllSNGPeople"
+		briefDiz="Спасти лидера"
+		fullDiz="Лидер повстанцев должен остаться в живых. Он может сообщить важные сведения о планах врага."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="TheTuzz" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_KillMrPresidentAndOther"
+		briefDiz="Убить лидеров СНГ во время переговоров"
+		fullDiz="Если я прекращу эту войну, то наверняка получу награду из рук Акселя."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="LeadersSNG" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_MoveToZeonToAlex"
+		briefDiz="Встретиться с Акселем"
+		fullDiz="Настало время получить награду из рук Акселя. Это мой единственный шанс приблизиться к нему на расстояние выстрела."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Zeon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_OldDvigatel1_Quest"
+		briefDiz="Отвезти хлам в деревню неподалеку"
+		fullDiz="Непыльная работенка - перевезти груз из одного места в другое. Это не очень увлекательно, но за это мне платят неплохие деньги."
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="NewVillage" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_OldDvigatel2_Quest"
+		briefDiz="Отвезти хлам обратно в Мареццию"
+		fullDiz="История с перевозкой старого двигателя становится интересной. Не успел я отдать его в деревне, как мне вернули его обратно с просьбой вернуть обратно в Мареццию."
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ReturnHeadsQuest"
+		briefDiz="Вернуться в Монастырь"
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="Monastery" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ReturnToMarecciaFromCastle"
+		briefDiz="Вернуться в Мареццию"
+		fullDiz="Пора возвращаться в Мареццию за наградой и за новым заданием."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ReturnToMarecciaFromKaravanSNG"
+		briefDiz="Вернуться в Мареццию"
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR2M2" />
+
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ReturnToMarecciaFromVillage"
+		briefDiz="Вернуться в Мареццию"
+		fullDiz="Пора возвращаться в Мареццию за наградой и за новым заданием."
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Marezzia" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ToKillAllSNGPeople"
+		briefDiz="Уничтожить лагерь повстанцев"
+		fullDiz="Мой приказ - убить беззащитных повстанцев. Меня терзают сомнения, ведь это настоящее злодеяние."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="r2m2_ToKillAllSNGPeople1"
+		briefDiz="Приехать в лагерь"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Lager" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ToKillAllSNGPeople2"
+		briefDiz="Казнить предателей"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="LagerCarrrs" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_ToLisaToMonastir"
+		briefDiz="Узнать о Лисе в Монастыре"
+		fullDiz="По последним сведениям, Лиса прячется в Монастыре. Там я ее и настигну!"
+		isMainQuest="1">
+		<Map
+			name="r2m2"
+			targetObjName="Monastery" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_Znaki2Midgard_Quest"
+		briefDiz="Рассказать про знаки в Мидгарде"
+		fullDiz="Ученых в Мидгарде заинтересует такая информация. Возможно, мне даже удастся на этом подзаработать деньжат."
+		isMainQuest="0">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m2"
+			targetObjName="MidgardProfessor" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r2m2_Znaki2_Quest"
+		briefDiz="Взглянуть на поле"
+		fullDiz="Стоит посмотреть, что же так пугает крестьян на полях."
+		isMainQuest="0">
+		<Map
+			name="r2m2"
+			targetObjName="ZnakiLoc2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_ClearSanctuary"
+		briefDiz="Очистить святилище"
+		fullDiz="Чтобы завоевать доверие друидов, я должен очистить их святилище от Стальных чудовищ"
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_ClearSanctuary_Arrive"
+		briefDiz="Добраться до святилища"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="NearStoneHendj_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_ClearSanctuary_DestroyOut"
+		briefDiz="Завалить выход из логова монстров"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ExitFromDung_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_ClearSanctuary_KillMonster"
+		briefDiz="Уничтожить монстров"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="TeamLoggers" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_ClearSanctuary_ReturnDruid"
+		briefDiz="Вернуться в Сет"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="Set_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_ClearSanctuary_ReturnDruid2"
+		briefDiz="Вернуться в Сет"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="Set_enter" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_FindMoreNative"
+		briefDiz="Найти мирных аборигенов"
+		fullDiz="Встреченные жители оказались весьма негостеприимны. Нужно поискать другие селения, где меня лучше встретят. "
+		isMainQuest="1">
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_FindNative"
+		briefDiz="Отыскать местных жителей"
+		fullDiz="Я в первый раз в этих землях. Нужно найти местных жителей и узнать у них, где искать Оракула."
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_FindNative_2"
+		briefDiz="Найти местных жителей"
+		fullDiz="Я в первый раз в этих землях. Нужно найти местных жителей и узнать у них, где искать Оракула."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_GoToOracle"
+		briefDiz="Последовать к Оракулу"
+		fullDiz="Наконец-то мне удалось найти путь к Оракулу."
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Oracle_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_KnowAboutUluk"
+		briefDiz="Узнать, что случилось с Улуком"
+		fullDiz="Из Улука давно не поступало новостей. Друиды просят меня узнать, что случилось с его жителями."
+		isMainQuest="0">
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_KnowAboutUluk_GotoSet"
+		briefDiz="Сообщить Астериску"
+		isMainQuest="0">
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_KnowAboutUluk_GotoUluk"
+		briefDiz="Приехать в Улук"
+		isMainQuest="0">
+		<Map
+			name="r3m1"
+			targetObjName="TheUluk" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_LureMainDriud"
+		briefDiz="Выманить Верховного Друида"
+		fullDiz="Машинопоклонники хотят свергнуть друидов и захватить власть. Поэтому они хотят убить Верховного друида. Если я помогу им, то узнаю, как проехать к Оракулу."
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_LureMainDriud_Ambush"
+		briefDiz="Привести друида в место засады"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="UlukAmush_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_LureMainDriud_Talk"
+		briefDiz="Поговорить с друидом"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="TheSet" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_LureMainDriud_Uluk"
+		briefDiz="Приехать в Улук"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="TheUluk" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_RescueUlukCivil"
+		briefDiz="Спасти жителей Улука"
+		fullDiz="Не все жители Улука подались в религию машин. Те, кто остались верны вере Друидов, подвергаются гонениям. Я просто не могу оставить их на верную смерть."
+		isMainQuest="0">
+		<Map
+			name="r3m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_RescueUlukCivil_GotoVillage"
+		briefDiz="Доехать до временного убежища"
+		isMainQuest="0">
+		<Map
+			name="r3m1"
+			targetObjName="RescueCiv_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_RescueUlukCivil_RepelAttack"
+		briefDiz="Отразить нападение машин"
+		isMainQuest="0">
+		<Map
+			name="r3m1"
+			targetObjName="UlukArmy" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_RescueUlukCivil_TakeToSet"
+		briefDiz="Сопроводить беженцев до Сета"
+		isMainQuest="0">
+		<Map
+			name="r3m1"
+			targetObjName="BezhenVeh2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m1_TalkWithMainDruid"
+		briefDiz="Связаться с Верховным друидом"
+		fullDiz="Верховный Друид живет в Сете. Скорее всего, он знает, где искать Оракула."
+		isMainQuest="1">
+		<Map
+			name="r1m4"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="TheSet" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_FindInfoAboutFather"
+		briefDiz="Найти информацию об отце"
+		fullDiz="Дневник пролил свет на судьбу отца. Теперь я точно знаю, что искать его следует по ту сторону Пустыни смерти."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR4M1" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M1" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_MonterHead"
+		briefDiz="Принести голову чудища"
+		fullDiz="Защитники Оракула пропустят меня, если чудище будет убито. В качестве доказательства нужно принести его голову."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="r3m2_MonterHead1"
+		briefDiz="Отыскать Город Мёртвых"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Monster_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_MonterHead2"
+		briefDiz="Уничтожить монстра"
+		isMainQuest="1">
+		<Map
+			name="r3m2"
+			targetObjName="TeamBigMonster" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_MonterHead3"
+		briefDiz="Вернуться на аванпост Служителей Оракула"
+		isMainQuest="1">
+		<Map
+			name="r3m2"
+			targetObjName="OracleDefenders_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_OracleMemory"
+		briefDiz="Вернуть Оракулу память"
+		fullDiz="Похоже, что Оракул вовсе не такой всезнающий, каким был прежде. Чтобы вернуть ему память, нужно отвезти ремонтников в указанные места."
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_OracleMemory_1"
+		briefDiz="Доставить робота-настройщика"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="VK1_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_OracleMemory_2"
+		briefDiz="Доставить робота-помощника"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="VK2_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_OracleMemory_3"
+		briefDiz="Доставить робота-ремонтника"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="VK3_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_OracleMemory_Return"
+		briefDiz="Вернуться к Оракулу"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Oracle_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_OvercomeOracleGuard"
+		briefDiz="Преодолеть защитников Оракула"
+		fullDiz="На пути к Оракулу стоят его стражи, нужно преодолеть это препятствие."
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="OracleDefenders" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_ReadyToTravel"
+		briefDiz="Подготовиться к путешествию в пустыню"
+		fullDiz="Машину надо модернизировать, чтобы я смог на ней пересечь пустыню. У меня есть чертеж, так что нужно найти мастера, который выполнит работу."
+		isMainQuest="1">
+		<Map
+			name="r1m2" />
+
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r1m4" />
+
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r3m1" />
+
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_RideToFatherRoomAfterOracul"
+		briefDiz="Вернуться в дом отца"
+		fullDiz="Возможно, второй диск находится в доме отца. Я мог пропустить что-то, когда был там в первый раз, но теперь-то я точно знаю, что искать."
+		isMainQuest="1">
+		<Map
+			name="r1m3"
+			targetObjName="HouseLoc" />
+
+		<Map
+			name="r1m4"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m1"
+			targetObjName="ToR1M3" />
+
+		<Map
+			name="r2m2"
+			targetObjName="ToR2M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="ToR1M4" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TalkWithLisa"
+		briefDiz="Поговорить с Лисой"
+		fullDiz="Теперь, когда стало ясно, куда отправился мой отец, самое время вернуться к Лисе и обсудить с ней наши дальнейшие планы."
+		isMainQuest="1">
+		<Map
+			name="r2m1"
+			targetObjName="ToR3M1" />
+
+		<Map
+			name="r3m1"
+			targetObjName="TheRazboynik" />
+
+		<Map
+			name="r3m2"
+			targetObjName="ToR3M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing"
+		briefDiz="Принести Оракулу четыре артефакта"
+		fullDiz="Оракул согласился мне помочь, но только если я ему принесу четыре артефакта с заброшенного завода."
+		isMainQuest="1">
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing_Factory"
+		briefDiz="Приехать к заводу"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Factory_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing_FindThing"
+		briefDiz="Найти первый артефакт"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing_FindThing_2"
+		briefDiz="Найти второй артефакт"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing_FindThing_3"
+		briefDiz="Найти третий артефакт"
+		isMainQuest="1">
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing_FindThing_4"
+		briefDiz="Найти четвёртый артефакт"
+		isMainQuest="1">
+		<Map
+			name="r3m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r3m2_TwoMagicThing_Return"
+		briefDiz="Вернуться к Оракулу"
+		isMainQuest="1">
+		<Map
+			name="r3m1"
+			targetObjName="ToR3M2" />
+
+		<Map
+			name="r3m2"
+			targetObjName="Oracle_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_EnginAliham"
+		briefDiz="Спросить о перегонщике в Алихаме"
+		fullDiz="Пропавшего перегонщика из Кефа последний раз видели в районе деревни Алихам. Думаю, стоит начать поиски оттуда."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="r4_AlihamVil" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_FPR_MeetWithOldMan"
+		briefDiz="Встретиться с жителями Бухары"
+		fullDiz="В Кефе мне рассказали, что последний раз стариков видели на кладбище старых кораблей. Наконец-то я узнаю, куда направился Айвен!"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Buhara_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_FRP_GotoKef"
+		briefDiz="Съездить в Кеф"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="TheKef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_FRP_HelpKef"
+		briefDiz="Обеспечить Кеф нефтью"
+		isMainQuest="1">
+		<Map
+			name="r4m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_FindNative"
+		briefDiz="Найти мастерскую"
+		fullDiz="Мне удалось пересечь Пустыню смерти! Теперь было бы неплохо найти мастерскую. Остается лишь надеяться, что не все местные жители агрессивны."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR4M1" />
+
+		<Map
+			name="r4m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_FindResponsiblePeople"
+		briefDiz="Отыскать вменяемых людей"
+		fullDiz="В этой пустыне живут странные люди. Я ничего не могу от них добиться. Нужно найти хоть кого-то, кто сможет ответить на мои вопросы."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR4M1" />
+
+		<Map
+			name="r4m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_GotoAivenGo"
+		briefDiz="Последовать за отцом"
+		fullDiz="Отец поехал в этом направлении - больше ничего не известно. Я последую за ним и выясню, что с ним произошло."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR4M1" />
+
+		<Map
+			name="r1m2"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m3"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r4m1"
+			targetObjName="ToR4M2" />
+
+		<Map
+			name="r4m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_KNO_BringOil"
+		briefDiz="Привезти нефть в Кеф"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="VehChange_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_KNO_FindSpecialist"
+		briefDiz="Догнать специалиста по перегонке"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="LostEngineer_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_KNO_GotoOiler"
+		briefDiz="Съездить за нефтью на скважину"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Oil_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_KNO_ReportToKef"
+		briefDiz="Рассказать в Кефе о неудаче"
+		fullDiz="Нужно рассказать жителям Кефа, что инженера-нефтегонщика они больше никогда не увидят."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="TheKef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_KNO_ReportToKefAboutOil"
+		briefDiz="Поговорить с Марио"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="TheKef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_KNO_TakeCar"
+		briefDiz="Забрать грузовик-цистерну"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="VehChange_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_Kef_NeedOil"
+		briefDiz="Кеф нуждается в нефти"
+		fullDiz="Без нефти жители Кефа как без рук. Я помогу им привезти груз нефти. Все равно ждать, пока не вернулась экспедиция."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR4M1" />
+
+		<Map
+			name="r4m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_LisaGadad"
+		briefDiz="Поговорить с Лисой в баре Гадада"
+		fullDiz="Кажется, Лиса хочет что-то мне сказать."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="TheGadad" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_LisaKef"
+		briefDiz="Поговорить с Лисой в баре Кефа"
+		fullDiz="Нужно убедить Лису, что ей будет безопаснее остаться в городе, чем поехать со мной."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="TheKef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_LisaKef2"
+		briefDiz="Поговорить с Лисой в баре Кефа"
+		fullDiz="Кажется, Лиса хочет мне что-то сказать."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="TheKef" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_RBC_DefendCountry"
+		briefDiz="Защитить деревню от нападения"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="BuharsAttackers" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_RBC_Evacuate"
+		briefDiz="Эвакуировать людей Бухары в порт"
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Buharers_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_RescueBuharsCivilian"
+		briefDiz="Спасти жителей Бухары"
+		fullDiz="Если я помогу эти людям спастись от преследования, то смогу рассчитывать на их помощь. "
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR4M1" />
+
+		<Map
+			name="r4m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m1_Tankisty"
+		briefDiz="Проследить за танкистами"
+		fullDiz="Лиса узнала убийц моего отчима: это были люди на танках, которые живут в Кефе. Нужно за ними проследить."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="Tankisty" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m2_BlokiratorToUFO"
+		briefDiz="Привезти блокиратор к упавшей тарелке"
+		fullDiz="Устройство Ньери сможет блокировать смертоносное излучение Источника, но только если я установлю его в непосредственной близости от упавшего корабля."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="ToR4M2" />
+
+		<Map
+			name="r4m2"
+			targetObjName="TarelkaEnd_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m2_DestroyPlate"
+		briefDiz="Уничтожить упавшую тарелку"
+		fullDiz="Тарелка является источником излучения, которое разрушило наш мир. Она должна быть уничтожена!"
+		isMainQuest="1">
+		<Map
+			name="r1m1" />
+
+		<Map
+			name="r1m2" />
+
+		<Map
+			name="r1m3" />
+
+		<Map
+			name="r1m4" />
+
+		<Map
+			name="r2m1" />
+
+		<Map
+			name="r2m2" />
+
+		<Map
+			name="r3m1" />
+
+		<Map
+			name="r3m2" />
+
+		<Map
+			name="r4m1" />
+
+		<Map
+			name="r4m2" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m2_FightWithCrazy"
+		briefDiz="Очистить местность от безумцев"
+		fullDiz="Все следы указывают на военную базу. Мне нужно хорошенько здесь все осмотреть. Но я не думаю, что эти ребята настроены дружелюбно. Даже если это и ложный путь, я хотя бы очищу это место от безумцев, терроризирующих страну."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="ToR4M2" />
+
+		<Map
+			name="r4m2"
+			targetObjName="MilitaryBase_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m2_InvestigationPlate"
+		briefDiz="Исследовать Источник"
+		fullDiz="Серго попросил меня осмотреть одно место, прежде чем он расскажет мне всю правду об отце. Что ж, можно и осмотреть, я никуда не тороплюсь."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="ToR4M2" />
+
+		<Map
+			name="r4m2"
+			targetObjName="PlateRadiation_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m2_LisaDieBen"
+		briefDiz="Отвезти Лису к Бену"
+		fullDiz="Надеюсь, Лиса очнётся, если я вывезу её из пустыни."
+		isMainQuest="1">
+		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
+			name="r1m2"
+			targetObjName="TheBen_House" />
+
+		<Map
+			name="r4m1"
+			targetObjName="ToR1M1" />
+
+		<Map
+			name="r4m2"
+			targetObjName="ToR4M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r4m2_TalkWithScientific"
+		briefDiz="Поговорить с Серго об Источнике"
+		fullDiz="Я увидел это ужасное место и еле унес ноги. Страшная сила влекла меня прямо к сердцу излучения. Туда, где уже стояли парализованные люди. Что-то нужно предпринять! Возможно, Серго знает, как остановить это безумие."
+		isMainQuest="1">
+		<Map
+			name="r4m1"
+			targetObjName="ToR4M2" />
+
+		<Map
+			name="r4m2"
+			targetObjName="ScientiferVillage" />
+	</QuestInfo>
+</QuestInfoResource>

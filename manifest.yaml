@@ -62,6 +62,13 @@ prerequisites:
      - hd_vehicle_models
      - ost_remaster
 
+# restrict installation on english comrem
+incompatible:
+  - name: community_remaster
+    versions: []
+    optional_content:
+    - english_localization
+
 # optional mod content
 optional_content:
   - name: snowfall

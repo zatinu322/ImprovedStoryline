@@ -1,1 +1,7 @@
 All information, installation guide and walkthrough tips can be found in mod's [web manual](https://github.com/zatinu322/ImprovedStoryline/wiki).
+
+- [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
+- [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
+- [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
+- [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
+- [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)

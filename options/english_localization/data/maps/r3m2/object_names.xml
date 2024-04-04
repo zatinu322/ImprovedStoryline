@@ -6,7 +6,7 @@
 
 	<Object
 		Name="OracleDefendersVil_Shop"
-		FullName="Thief's shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="OracleDefendersVil_WorkShop"
@@ -18,7 +18,7 @@
 
 	<Object
 		Name="AloneDruidBuilding"
-		FullName="Druid's Hut" />
+		FullName="DRUID'S HUT" />
 	
 	<Object
 		Name="AloneDruid_Bar"
@@ -26,7 +26,7 @@
 
 	<Object
 		Name="NearOraculBuilding"
-		FullName="Oracle Guard's outpost" />
+		FullName="ORACLE GUARD'S OUTPOST" />
 
 	<Object
 		Name="NearOracul_Workshop"
@@ -38,23 +38,23 @@
 
 	<Object
 		Name="Monster_loc"
-		FullName="Scary monster" />
+		FullName="Fearful monster" />
 
 	<Object
 		Name="VK1_loc"
-		FullName="Computing complex 1" />
+		FullName="First Menhir" />
 
 	<Object
 		Name="VK2_loc"
-		FullName="Computing complex 2" />
+		FullName="Second Menhir" />
 
 	<Object
 		Name="VK3_loc"
-		FullName="Computing complex 3" />
+		FullName="Third Menhir" />
 
 	<Object
 		Name="Factory_loc"
-		FullName="Abandoned factory" />
+		FullName="Town of the dead" />
 
 	<Object
 		Name="Oracle_loc"
@@ -66,15 +66,15 @@
 
 	<Object
 		Name="OracleGuardian_1"
-		FullName="Oracle Defender" />
+		FullName="Oracle’s defender" />
 
 	<Object
 		Name="OracleGuardian_2"
-		FullName="Oracle Defender" />
+		FullName="Oracle’s defender" />
 
 	<Object
 		Name="AloneDruid_Workshop"
-		FullName="Druid's workshop" />
+		FullName="Workshop" />
 
 	<Object
 		Name="heavy_dot3_vulcan1"
@@ -90,11 +90,11 @@
 
 	<Object
 		Name="urod2"
-		FullName="Mikko" />
+		FullName="Mickey" />
 
 	<Object
 		Name="urod3"
-		FullName="Borg" />
+		FullName="Gomez" />
 
 	<Object
 		Name="urod4"
@@ -102,23 +102,23 @@
 
 	<Object
 		Name="urod5"
-		FullName="Scorpion" />
+		FullName="Scorp" />
 
 	<Object
 		Name="urod6"
-		FullName="Gaya" />
+		FullName="Hutch" />
 
 	<Object
 		Name="urod7"
-		FullName="Sherman" />
+		FullName="Shaun" />
 
 	<Object
 		Name="urod8"
-		FullName="Hrrr" />
+		FullName="Pillox" />
 
 	<Object
 		Name="urod9"
-		FullName="Uncle Fu" />
+		FullName="Wonza" />
 
 	<Object
 		Name="NearOracul_Bar"
@@ -130,5 +130,5 @@
 
 	<Object
 		Name="r3m2_OracleComplex_1"
-		FullName="Oracle Science Complex" />
+		FullName="ORACLE SCIENCE COMPLEX" />
 </ObjectNames>

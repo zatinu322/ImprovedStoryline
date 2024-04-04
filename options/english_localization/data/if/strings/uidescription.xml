@@ -38,7 +38,7 @@
 
 	<string
 		id="denscoutCab_diz"
-		value="Ñab of Alice’s car . A modified cab model from the regular Scout." />
+		value="Ñab of Lisa’s car . A modified cab model from the regular Scout." />
 
 	<string
 		id="scoutCab01_diz"
@@ -745,12 +745,12 @@
 	<string
 		id="quest_disk_1_diz"
 		locForm="0"
-		value="The disk that used to belong to Ivan Go. Surely this item must be of great value." />
+		value="The disc that used to belong to Ivan Go. Surely this item must be of great value." />
 
 	<string
 		id="quest_disk_2_diz"
 		locForm="0"
-		value="This piece of plastic contains the code to Ivan Go's diary. With both disks, I can finally learn his fate." />
+		value="This piece of plastic contains the code to Ivan Go's diary. With both discs, I can finally learn his fate." />
 
 	<string
 		id="quest_key_for_submarine_diz"
@@ -862,7 +862,7 @@
 	<string
 		id="quest_Valeriy_package_diz"
 		locForm="0"
-		value="The package Marco gave me from Locus. I have to deliver it to Valeriy in Yar, and in return Marco will try to resolve my conflict with Grandma Paula." />
+		value="The package Marco gave me from Locus. I have to deliver it to Valeriy in Yarr, and in return Marco will try to resolve my conflict with Grandma Paula." />
 
 	<string
 		id="quest_labelle_scrap_diz"
@@ -917,7 +917,7 @@
 	<string
 		id="ARGeneral_P_diz"
 		locForm="0"
-		value="General of the Crimson Dawn, captured by CIT forces. He must urgently be taken to Rotorsk to be interrogated there." />
+		value="General of the Crimson Dawn, captured by CIT forces. He must urgently be taken to Egalite to be interrogated there." />
 
 	<string
 		id="Heretik_P_diz"

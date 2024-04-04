@@ -14,7 +14,7 @@
 
 	<Object
 		Name="Asgard_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="Asgard_Bar"
@@ -50,7 +50,7 @@
 
 	<Object
 		Name="AsgardBarman"
-		FullName="Bartender Pavlo" />
+		FullName="Barman Pablo" />
 
 	<Object
 		Name="UnknownFromTunel"
@@ -70,7 +70,7 @@
 
 	<Object
 		Name="Pesht_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="Pesht_Bar"
@@ -82,11 +82,11 @@
 
 	<Object
 		Name="CrazyRoadRiders"
-		FullName="Bore Maxim" />
+		FullName="Dreary Maxim" />
 
 	<Object
 		Name="TheForgotten"
-		FullName="FORGOTTEN" />
+		FullName="LOST" />
 
 	<Object
 		Name="TheForgotten_Workshop"
@@ -94,7 +94,7 @@
 
 	<Object
 		Name="TheForgotten_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheForgotten_Bar"
@@ -106,7 +106,7 @@
 
 	<Object
 		Name="LabirintMan"
-		FullName="Combiner Mikha" />
+		FullName="Combiner Mike" />
 
 	<Object
 		Name="Minin"
@@ -118,7 +118,7 @@
 
 	<Object
 		Name="Minin_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="Minin_Bar"
@@ -126,7 +126,7 @@
 
 	<Object
 		Name="Mer_House"
-		FullName="City Hall" />
+		FullName="Town Hall" />
 
 	<Object
 		Name="Minin_Bar_Barman"
@@ -138,7 +138,7 @@
 
 	<Object
 		Name="MininMer"
-		FullName="Mayor of Minin" />
+		FullName="Minin’s Mayor" />
 
 	<Object
 		Name="MininWorker2"
@@ -146,11 +146,11 @@
 
 	<Object
 		Name="Librarian"
-		FullName="Old Man Dod" />
+		FullName="Old man Dod" />
 
 	<Object
 		Name="Librarian1"
-		FullName="Old Man Dod" />
+		FullName="Old man Dod" />
 
 	<Object
 		Name="AboutThief"
@@ -162,7 +162,7 @@
 
 	<Object
 		Name="TheShahts"
-		FullName="MINING SHAFTS" />
+		FullName="QUARRY" />
 
 	<Object
 		Name="TheShahts_Workshop"
@@ -170,7 +170,7 @@
 
 	<Object
 		Name="TheShahts_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheShahts_Bar"
@@ -178,7 +178,7 @@
 
 	<Object
 		Name="TheShahts_Bar_Barman"
-		FullName="Employer" />
+		FullName="Employer Duff" />
 
 	<Object
 		Name="Bomber"
@@ -186,7 +186,7 @@
 
 	<Object
 		Name="TheVozleMinin"
-		FullName="PODNEBESNOE" />
+		FullName="CELEST" />
 
 	<Object
 		Name="TheVozleMinin_Workshop"
@@ -194,11 +194,11 @@
 
 	<Object
 		Name="TheVozleMinin_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheVozleMinin_Bar"
-		FullName="Bar" />
+		FullName="Bar ‘’Sky‘’" />
 
 	<Object
 		Name="TheVozleMinin_Bar_Barman"
@@ -218,7 +218,7 @@
 
 	<Object
 		Name="TheBanditOilMine_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheBanditOilMine_Bar"
@@ -238,7 +238,7 @@
 
 	<Object
 		Name="TheBase_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheBase_Bar"
@@ -306,11 +306,11 @@
 
 	<Object
 		Name="TheForgotten_enter"
-		FullName="FORGOTTEN" />
+		FullName="LOST" />
 
 	<Object
 		Name="TheShahts_enter"
-		FullName="MINING SHAFTS" />
+		FullName="QUARRY" />
 
 	<Object
 		Name="ToR1M1"
@@ -330,11 +330,11 @@
 
 	<Object
 		Name="u1"
-		FullName="Rup" />
+		FullName="Raoul" />
 
 	<Object
 		Name="u2"
-		FullName="Donna" />
+		FullName="Don" />
 
 	<Object
 		Name="u3"
@@ -342,7 +342,7 @@
 
 	<Object
 		Name="u4"
-		FullName="Myth" />
+		FullName="Drake" />
 
 	<Object
 		Name="u5"

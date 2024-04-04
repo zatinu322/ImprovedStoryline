@@ -3,14 +3,14 @@
 	<string
 		id="101"
 		modelName="mask_hero"
-		value="I have to drive through this base to achieve my goal. That looks dangerous."
+		value="I have to drive through this base to achieve my goal. Looks dangerous."
 		sound="data\sounds\Speech\r4m2\r4m2_101_hero.ogg"
 		time="1" />
 
 	<string
 		id="201"
 		modelName="mask_hero"
-		value="I feel as if I know this truck. This symbol, I've seen it somewhere before... "
+		value="I feel as if I know this truck. This symbol, I've seen it somewhere before..."
 		sound="data\sounds\Speech\r4m2\r4m2_201_hero.ogg"
 		time="1" />
 
@@ -24,7 +24,7 @@
 	<string
 		id="203"
 		modelName="mask_hero"
-		value="His body is not inside, so he went further on foot."
+		value="His body is not inside, so he walked the rest of the way."
 		sound="data\sounds\Speech\r4m2\r4m2_203_hero.ogg"
 		time="1" />
 
@@ -38,7 +38,7 @@
 	<string
 		id="301"
 		modelName="mask_hero"
-		value="Oh gods! What is this cursed place?"
+		value="Oh my gods! What is this cursed place?"
 		sound="data\sounds\Speech\r4m2\r4m2_301_hero.ogg"
 		time="1" />
 
@@ -80,7 +80,7 @@
 	<string
 		id="401"
 		modelName="mask_hero"
-		value="Damn, there are so many bandits here! And more and more! "
+		value="Damn, there are so many bandits here! And more and more!"
 		sound="data\sounds\Speech\r4m2\r4m2_401_hero.ogg"
 		time="1" />
 
@@ -115,14 +115,14 @@
 	<string
 		id="501"
 		modelName="mask_hero"
-		value="I feel the power beckoning me to the Overlord."
+		value="I feel the power beckoning me to the saucer."
 		sound="data\sounds\Speech\r4m2\r4m2_501_hero.ogg"
 		time="1" />
 
 	<string
 		id="502"
 		modelName="mask_hero"
-		value="Faster! How slowly this vehicle moves! Argh, hell with it!"
+		value="Faster! How slow can this machine go! Argh, to hell with it!"
 		sound="data\sounds\Speech\r4m2\r4m2_502_hero.ogg"
 		time="1" />
 
@@ -189,7 +189,7 @@
 
 	<string
 		id="8801"
-		value="Do you wish to leave this area?"
+		value="Do you wish to travel to another region?"
 		numButtons="2" />
 
 	<string
@@ -199,7 +199,7 @@
 
 	<string
 		id="8901"
-		value="You came too close to the Overlord and were consumed by its power, as were many before you. And who knows how long people will have to wait for a new hero..." />
+		value="You came too close to the Source and were consumed by its power, like so many before you. And who knows how long humanity will have to wait for a new hero..." />
 
 	<string
 		id="8902"

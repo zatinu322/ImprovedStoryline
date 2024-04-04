@@ -18,7 +18,7 @@
 
 	<string
 		id="Belong_1002_diz"
-		value="Nothing is sacred to these wandering bandits. Anyone can become a victim of their attack, whether it will be a lone traveler or an armed caravan." />
+		value="Nothing is sacred to these wandering bandits. Anyone can fall victim to their attacks, be it a lone traveler or an armed caravan." />
 
 	<string
 		id="Belong_1003"
@@ -30,7 +30,7 @@
 
 	<string
 		id="Belong_1003_diz"
-		value="They ride around the world in search of thrills, as if life were not dangerous enough. During a sudden skirmish, they can join both attackers or defenders." />
+		value="Traveling the world in search of adventures, as if life is not dangerous enough, they may easily become foes or allies, depending on the situation." />
 
 	<string
 		id="Belong_1004"
@@ -42,7 +42,7 @@
 
 	<string
 		id="Belong_1004_diz"
-		value="There are very few of them left these days, but if you manage to meet an Explorer, you can always count on a pleasant conversation and help in any trouble." />
+		value="Nowadays their numbers grew thin. But if you happen to meet an Explorer, you can count on a pleasant conversation and help in any trouble." />
 
 	<string
 		id="Belong_1005"
@@ -58,7 +58,7 @@
 
 	<string
 		id="Belong_1008"
-		value="Farmers' Union" />
+		value="Farmers’ Union" />
 
 	<string
 		id="Belong_1008_abb"
@@ -78,7 +78,7 @@
 
 	<string
 		id="Belong_1009_diz"
-		value="Ordinary people do not like this clan, because the Technicians, collecting knowledge of the ancient world, share it only for a high price. In addition, they most often act with the hands of mercenaries, preferring to remain under the protection of their walls." />
+		value="The common people dislike this group, because the Technicians, who collect knowledge of the ancient world, share it only for a high price. Furthermore, they mostly operate with the hands of mercenaries, preferring to stay behind the security of their walls." />
 
 	<string
 		id="Belong_1010"
@@ -90,7 +90,7 @@
 
 	<string
 		id="Belong_1010_diz"
-		value="Honest traders who created their first capital by trading oil. Then they managed to gain a foothold in the harsh northern region of Hel and build an entire city there, leading the group to even greater enrichment. Their rivals are jealous of them and sabotage them." />
+		value="Honest traders who built their initial capital by trading oil. They then managed to establish a foothold in the inhospitable northern region of Hel and built an entire city there, leading the faction to even greater fortunes. Unscrupulous competitors often engage in sabotage against them." />
 
 	<string
 		id="Belong_1011"
@@ -102,7 +102,7 @@
 
 	<string
 		id="Belong_1011_diz"
-		value="Detractors call them the Secret Alliance for some past misdeeds and for their connections with various gangs and mercenaries. It is not unreasonable to believe that the Alliance is buying up stolen goods and is unashamedly trafficking in contraband." />
+		value="Detractors call them Secret Alliance for some past misdeeds and for their ties to various gangs and mercenaries. It is not without reason that the Alliance is believed to have been buying up stolen goods and not being shy about dealing in contraband." />
 
 	<string
 		id="Belong_1012"
@@ -114,7 +114,7 @@
 
 	<string
 		id="Belong_1012_diz"
-		value="One of the many gangs wishing to take over the Vaterland. The situation is complicated by the fact that they managed to find an ancient military base and gain the real power to carry out their plans." />
+		value="One of the many local gangs, willing to take control over the Vaterland. The situation is complicated by the fact that they managed to get into an ancient military base and get hold of the real power to accomplish what they set out to do." />
 
 	<string
 		id="Belong_1013"
@@ -126,7 +126,7 @@
 
 	<string
 		id="Belong_1013_diz"
-		value="Small crooks who have settled on the fertile plains of the Krai and collect «taxes» from the farmers in exchange for their «protection». This situation has lasted for several years and suits everyone." />
+		value="Small-time criminals who have settled on the fruitful lands of the Krai and collect rent from farmers in exchange for &quot;protection&quot; from other gangs. This situation has been going on for several years now, and seems to be acceptable to everyone." />
 
 	
 	<string
@@ -139,11 +139,11 @@
 
 	<string
 		id="Belong_1014_diz"
-		value="It is unknown what they manage to catch in the dead cold waters, but these people live comfortably. Sometimes they trade with strangers, but more often they simply attack foreigners without warning." />
+		value="It is unknown what they manage to catch in the freezing dead waters, but these folk live a prosperous life. Sometimes they trade with outsiders, but more often they just attack foreigners without warning." />
 
 	<string
 		id="Belong_1015"
-		value="Crimson dawn" />
+		value="Crimson Dawn" />
 
 	<string
 		id="Belong_1015_abb"
@@ -151,7 +151,7 @@
 
 	<string
 		id="Belong_1015_diz"
-		value="Inspired by the charismatic leader Axel, the inhabitants of Argen have risen to fight their neighbors, who once offended them, and are quite successful in expanding their area of influence, forcing more and more villages under their control. They do not shy away from the services of mercenaries and cutthroats of all stripes." />
+		value="Inspired by the charismatic leader Axel, the inhabitants of Argen have risen in unison to fight their neighbors, who once wronged them, and are quite successful in expanding their zone of influence, taking under their control all the new villages. They are not shy of using the services of mercenaries and cutthroats of all stripes." />
 
 	<string
 		id="Belong_1016"
@@ -163,7 +163,7 @@
 
 	<string
 		id="Belong_1016_diz"
-		value="The invasion of once loyal neighbors united the people of Librium, and, following the precepts of their ancestors, they decided to fight for their independence. In warfare, espionage and sabotage are used more often than brute force." />
+		value="The sudden attack of once friendly neighbors united the people of Librium, and following the testaments of their ancestors, they decided to fight for their independence. In waging war, they resort more often to espionage and sabotage than to brute force." />
 
 	<string
 		id="Belong_1017"
@@ -175,7 +175,7 @@
 
 	<string
 		id="Belong_1017_diz"
-		value="This mysterious organization has followers all over the world. Although the active promotion of the CD has somewhat damaged their reputation as seekers of truth, the influence of the Church is significant." />
+		value="This mysterious organization has adepts all over the world. Although the active support of Crimson Dawn has somewhat tarnished their reputation as seekers of truth and order, the Church's influence is considerable." />
 
 	<string
 		id="Belong_1019"
@@ -187,7 +187,7 @@
 
 	<string
 		id="Belong_1019_diz"
-		value="These children of nature live in peace with the universe, growing wondrous trees and performing rituals at their roots, they celebrate life in all its forms. They do not like foreigners, considering them to be spoiled human beings." />
+		value="These children of nature live in peace with the universe, growing unseen trees and performing rituals at their roots, they celebrate life in all its manifestations. They do not fancy foreigners, considering them to be depraved people." />
 
 	<string
 		id="Belong_1020"
@@ -195,11 +195,11 @@
 
 	<string
 		id="Belong_1020_abb"
-		value="IC" />
+		value="CI" />
 
 	<string
 		id="Belong_1020_diz"
-		value="Former Druids, frustrated in their faith, have begun to worship metal idols, which increasingly appear in the Druid Grove. They are loyal to strangers from across the sea and trade willingly with them. The Children of Iron expect to someday have stainless steel bodies as strong as the idols they worship themselves." />
+		value="The ex-Druids, disillusioned with their faith, have begun worshipping metal idols, which keep appearing in the Druid Grove. They are friendly to the newcomers from across the sea and willingly trade with them. The Children of Iron themselves are hoping to someday have stainless steel bodies as strong as the idols they worship." />
 
 	<string
 		id="Belong_1021"
@@ -211,7 +211,7 @@
 
 	<string
 		id="Belong_1021_diz"
-		value="A small cult that lives near the Oracle's tower and worships him as a god." />
+		value="A small sect that lives near the Oracle's tower and honors him as a god." />
 
 	<string
 		id="Belong_1022"
@@ -223,19 +223,19 @@
 
 	<string
 		id="Belong_1022_diz"
-		value="Mysterious creatures of hellfire, capable of crushing rocks and breaking down huge trees. Encountering any of them brings fast death. Only the Children of Iron could find common ground with them." />
+		value="Mysterious creations of hellfire, capable of shattering huge rocks and toppling giant trees. An encounter with any of their tribe brings swift death. Only the Children of Iron were able to find common language with them." />
 
 	<string
 		id="Belong_1023"
-		value="Harakat" />
+		value="Harakhat" />
 
 	<string
 		id="Belong_1023_abb"
-		value="Harakat" />
+		value="Harakhat" />
 
 	<string
 		id="Belong_1023_diz"
-		value="Native inhabitants of Vahat, who are trying to rebuild what was destroyed by a long war. But for some reason they never manage to finish what they started..." />
+		value="The natives of Vahat, who are trying to rebuild what the long war destroyed. But for some reason, they can't seem to finish what they started..." />
 
 	<string
 		id="Belong_1025"
@@ -247,7 +247,7 @@
 
 	<string
 		id="Belong_1025_diz"
-		value="People exhausted by the constant attacks of an unknown enemy. But for some reason they never manage to win..." />
+		value="A people tormented by the constant attacks of an unknown enemy. But for some reason they can never win..." />
 
 	<string
 		id="Belong_1026"
@@ -283,7 +283,7 @@
 
 	<string
 		id="Belong_1053_diz"
-		value="The inhabitants of Sel maintain neutrality and supply power to both opposing countries. No one but them can maintain the power plant, so they are still not attacked." />
+		value="The people of Seil remain neutral and supply power to both warring sides. No one but them can maintain the power plant, so they have not been attacked so far." />
 
 	<string
 		id="Belong_1060"
@@ -295,7 +295,7 @@
 	
 	<string
 		id="Belong_1060_diz"
-		value="Residents of the city of Kazif. Control almost all the oil in the region." />
+		value="Residents of Kazif. They control most of the oil production of the region." />
 
 	<string
 		id="Belong_1062"
@@ -307,7 +307,7 @@
 
 	<string
 		id="Belong_1062_diz"
-		value="These people are totally insane." />
+		value="A group of madmen haunts the desert. They only seek death to others or to themselves." />
 
 	<string
 		id="Belong_1080"
@@ -466,7 +466,7 @@
 	
 	<string
 		id="Belong_1043"
-		value="Zion" />
+		value="Zeon" />
 
 	<string
 		id="Belong_1043_abb"
@@ -546,7 +546,7 @@
 
 	<string
 		id="Belong_1063_diz"
-		value="They are tired of robbery, only isolation in the jungle helps their souls." />
+		value="Tired from the crimes, these bandits found peace in the middle of the jungle." />
 
 	
 	<string
@@ -613,7 +613,7 @@
 
 	<string
 		id="Belong_1006_diz"
-		value="This respected guild includes the most dangerous fighters in the civilized world. They fight on the side of those who pay and respect the code of honor." />
+		value="Most dangerous warriors of the new world form this esteemed guild. They fight for money, but abide by strict code of honor." />
 
 	<string
 		id="Belong_1007"
@@ -625,7 +625,7 @@
 
 	<string
 		id="Belong_1007_diz"
-		value="In troubled times, harbingers of disaster appear everywhere, often contributing to its approach." />
+		value=" In turbulent times, heralds of disaster appear everywhere, often themselves contributing to its imminent arrival." />
 
 	<string
 		id="Belong_1024"
@@ -665,7 +665,7 @@
 
 	<string
 		id="Belong_1050"
-		value="Sinks" />
+		value="Sinx" />
 
 	<string
 		id="Belong_1050_abb"
@@ -673,7 +673,7 @@
 
 	<string
 		id="Belong_1050_diz"
-		value="Wanderer Sinks. Doesn't have a permanent home. And in general, a strange guy." />
+		value="Sinx. A strange fellow, who has no permanent residence." />
 
 	<string
 		id="Belong_1052"

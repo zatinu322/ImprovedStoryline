@@ -6,7 +6,7 @@
 
 	<Object
 		Name="TheTown_Workshop"
-		FullName="Garage" />
+		FullName="Workshop" />
 
 	<Object
 		Name="TheTown_Shop"
@@ -14,7 +14,7 @@
 
 	<Object
 		Name="TheTown_Bar"
-		FullName="Bar 'Long Way'" />
+		FullName="Bar ''Last Journey''" />
 
 	<Object
 		Name="TheTown_Bar_Barman"
@@ -46,7 +46,7 @@
 
 	<Object
 		Name="TheGloohoeVillage_Bar"
-		FullName="Bar 'On the Edge'" />
+		FullName="Bar ''On the Edge''" />
 
 	<Object
 		Name="TheGloohoe_Bar_Barman"
@@ -98,7 +98,7 @@
 
 	<Object
 		Name="TheOilVillage_Bar"
-		FullName="Snack bar 'Yat'" />
+		FullName="Bar ''Led Zeppelin''" />
 
 	<Object
 		Name="TheOilVillage_Bar_Barman"
@@ -130,7 +130,7 @@
 
 	<Object
 		Name="TheFreedom"
-		FullName="TROITSKOE" />
+		FullName="TROYITSKOE" />
 
 	<Object
 		Name="TheFreedom_Workshop"
@@ -142,7 +142,7 @@
 
 	<Object
 		Name="TheFreedom_Bar"
-		FullName="Diner 'Crab'" />
+		FullName="Bar ''Crab''" />
 
 	<Object
 		Name="TheFreedom_Bar_Barman"
@@ -154,7 +154,7 @@
 
 	<Object
 		Name="Botanik"
-		FullName="Botanist Lukk" />
+		FullName="Botanist Luke" />
 
 	<Object
 		Name="Medik"
@@ -210,11 +210,11 @@
 
 	<Object
 		Name="TheFreedom_enter"
-		FullName="TROITSKOE" />
+		FullName="TROYITSKOE" />
 
 	<Object
 		Name="TheFreedom_deploy"
-		FullName="TROITSKOE" />
+		FullName="TROYITSKOE" />
 
 	<Object
 		Name="TheOilVillage_enter"
@@ -222,7 +222,7 @@
 
 	<Object
 		Name="u1"
-		FullName="Chukcha Joe" />
+		FullName="Joe" />
 
 	<Object
 		Name="u2"
@@ -250,7 +250,7 @@
 
 	<Object
 		Name="u8"
-		FullName="Mo" />
+		FullName="Moe" />
 
 	<Object
 		Name="u9"

@@ -26,7 +26,7 @@
 
 	<Object
 		Name="TheGelvetcia_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheOldSibilla_Shop"
@@ -42,7 +42,7 @@
 
 	<Object
 		Name="TheGelvetcia_Bar"
-		FullName="Restaurant" />
+		FullName="Jigger" />
 
 	<Object
 		Name="TheOldSibilla_Bar"
@@ -90,7 +90,7 @@
 
 	<Object
 		Name="TheSel"
-		FullName="SEL" />
+		FullName="SEIL" />
 
 	<Object
 		Name="TheSel_Workshop"
@@ -98,7 +98,7 @@
 
 	<Object
 		Name="TheSel_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheSel_House"
@@ -106,7 +106,7 @@
 
 	<Object
 		Name="TheSel_Bar"
-		FullName="Bar &quot;Lavin&quot;" />
+		FullName="Bar 'LaVine'" />
 
 	<Object
 		Name="TheSel_Bar_Barman"
@@ -134,19 +134,19 @@
 
 	<Object
 		Name="TheTuzz_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheTuzz_House"
-		FullName="Recruitment headquarters" />
+		FullName="Recruiting center" />
 
 	<Object
 		Name="TheTuzz_Bar"
-		FullName="Dining room" />
+		FullName="Canteen" />
 
 	<Object
 		Name="TheTuzz_Bar_Barman"
-		FullName="Agitator Bo" />
+		FullName="Agitator Boe" />
 
 	<Object
 		Name="TuzVerb"
@@ -158,7 +158,7 @@
 
 	<Object
 		Name="TheDoubtful"
-		FullName="RAZDOLNOE" />
+		FullName="LIBERTE" />
 
 	<Object
 		Name="TheDoubtful_Workshop"
@@ -166,7 +166,7 @@
 
 	<Object
 		Name="TheDoubtful_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheDoubtful_Bar"
@@ -174,7 +174,7 @@
 
 	<Object
 		Name="TheDoubtful_Bar_Barman"
-		FullName="Barmaid" />
+		FullName="Barman" />
 
 	<Object
 		Name="AntipodEstet"
@@ -182,7 +182,7 @@
 
 	<Object
 		Name="TheUnderAttaks"
-		FullName="PETROPAVLOVSK" />
+		FullName="FRATERNITE" />
 
 	<Object
 		Name="TheUnderAttaks_Workshop"
@@ -190,7 +190,7 @@
 
 	<Object
 		Name="TheUnderAttaks_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheUnderAttaks_Bar"
@@ -198,11 +198,11 @@
 
 	<Object
 		Name="TheUnderAttaks_Bar_Barman"
-		FullName="Barmaid" />
+		FullName="Barman" />
 
 	<Object
 		Name="TheVill2"
-		FullName="ROTORSK" />
+		FullName="EGALITE" />
 
 	<Object
 		Name="TheVill2_Workshop"
@@ -210,7 +210,7 @@
 
 	<Object
 		Name="TheVill2_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheVill2_Bar"
@@ -218,11 +218,11 @@
 
 	<Object
 		Name="TheVill2_Bar_Barman"
-		FullName="Barmaid" />
+		FullName="Barman" />
 
 	<Object
 		Name="TheVill1"
-		FullName="GENDENBURGSK" />
+		FullName="GENDENBURG" />
 
 	<Object
 		Name="TheVill1_Workshop"
@@ -230,7 +230,7 @@
 
 	<Object
 		Name="TheVill1_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheVill1_Bar"
@@ -238,7 +238,7 @@
 
 	<Object
 		Name="TheVill1_Bar_Barman"
-		FullName="Barmaid" />
+		FullName="Barman" />
 
 	<Object
 		Name="PetrolStationTown1"
@@ -286,7 +286,7 @@
 
 	<Object
 		Name="TheSel_enter"
-		FullName="SEL" />
+		FullName="SEIL" />
 
 	<Object
 		Name="TheTuzz_enter"
@@ -294,19 +294,19 @@
 
 	<Object
 		Name="TheDoubtful_enter"
-		FullName="RAZDOLNOE" />
+		FullName="LIBERTE" />
 
 	<Object
 		Name="TheUnderAttaks_enter"
-		FullName="PETROPAVLOVSK" />
+		FullName="FRATERNITE" />
 
 	<Object
 		Name="TheVill1_enter"
-		FullName="GENDENBURGSK" />
+		FullName="GENDENBURG" />
 
 	<Object
 		Name="TheVill2_enter"
-		FullName="ROTORSK" />
+		FullName="EGALITE" />
 
 	<Object
 		Name="ToR1M3"
@@ -330,35 +330,35 @@
 
 	<Object
 		Name="u2"
-		FullName="Pete" />
+		FullName="Dr.Pit" />
 
 	<Object
 		Name="u3"
-		FullName="Richie" />
+		FullName="Ryche" />
 
 	<Object
 		Name="u4"
-		FullName="Gin" />
+		FullName="Jinn" />
 
 	<Object
 		Name="u5"
-		FullName="Mira" />
+		FullName="Mirra" />
 
 	<Object
 		Name="u6"
-		FullName="Ray" />
+		FullName="Grey" />
 
 	<Object
 		Name="u7"
-		FullName="Shadow" />
+		FullName="Sadow" />
 
 	<Object
 		Name="u8"
-		FullName="Phosgene" />
+		FullName="Phosgen" />
 
 	<Object
 		Name="u9"
-		FullName="Jean" />
+		FullName="Jan" />
 
 	<Object
 		Name="Kartograph1"

@@ -15,14 +15,14 @@
 		modelCfg="59"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_8_stranger.ogg"
-		value="STRANGER|Wait, who are you anyway? How did you get through the tunnel? "
+		value="STRANGER|Wait, who are you anyway? How did you get through the tunnel?"
 		time="4" />
 
 	<string
 		id="9"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_9_hero.ogg"
-		value="What business is it of yours? I'm a free wanderer: I go wherever I want!"
+		value="Why would you give a damn about that? I'm a free wanderer: I go wherever I want!"
 		time="4" />
 
 	<string
@@ -32,7 +32,7 @@
 		modelCfg="59"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_10_stranger.ogg"
-		value="STRANGER|I protect my country from people like you: spies and provocateurs! "
+		value="STRANGER|I protect my country from people like you: spies and instigators!"
 		time="4" />
 
 	<string
@@ -42,7 +42,7 @@
 		modelCfg="59"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_11_stranger.ogg"
-		value="STRANGER|You're a tough guy, I see.  If you need a job, go to Marezzia, we have headquarters there."
+		value="STRANGER|You're a tough guy, I see. If you need a job, go to Marezzia, we have headquarters there."
 		time="8" />
 
 	<string
@@ -58,7 +58,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_13_CIT_officer_radio.ogg"
-		value="RADIO|Soldier! The enemy is attacking the village and your car is the closest to the hot spot. Protect the villagers until reinforcements arrive!"
+		value="RADIO|Soldier! The enemy is attacking the village and your car is the closest to the attack site. Protect the villagers until reinforcements arrive!"
 		time="8" />
 
 	<string
@@ -96,7 +96,7 @@
 		id="18"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_18_hero.ogg"
-		value="These people are suffering. I feel that my actions is helping them."
+		value="These people are suffering. I can feel that my actions help them."
 		time="4" />
 
 	<string
@@ -110,7 +110,7 @@
 		id="20"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_20_hero.ogg"
-		value="Now not only bandits can go through the tunnel, but all free people! I'll go back to headquarters with a report. Let them send their men to arrange everything here in a new way."
+		value="Now not only bandits can go through the tunnel, but all free people! I'll go back to headquarters with a report. Now they'll send their people to set up the place in a new way."
 		time="11" />
 
 	<string
@@ -119,7 +119,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_2012_CIT_officer_radio.ogg"
-		value="RADIO|You are a true hero, and our leaders want to entrust you with a mission that even I don't know about. Go straight to Helvetia. Transmitting coordinates. Over."
+		value="RADIO|You are a true hero, and our leaders want to entrust you with a critical mission that even I know nothing about. Go straight to Helvetia. Transmitting coordinates. Over."
 		time="13" />
 
 	<string
@@ -129,7 +129,7 @@
 		modelCfg="326"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_21_CIT_soldier.ogg"
-		value="CIT SOLDIER|We'll deal with the guards, and you'll capture CD General. He rides in a personal car, you'll recognize him right away."
+		value="CIT SOLDIER|We'll deal with the guards, and you'll capture CD General. He rides in a personal vehicle, you'll recognize him right away."
 		time="4" />
 
 	<string
@@ -143,14 +143,14 @@
 		id="23"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_23_hero.ogg"
-		value="Now Lisa won't run away from me! All that remains is to find out from the locals where she is hiding."
+		value="Now Lisa won't run away from me! All that remains is to find out where her hiding place is from the locals."
 		time="4" />
 
 	<string
 		id="24"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_24_hero.ogg"
-		value="Hi! Do you know a girl named Lisa? Can you tell me where to find her?"
+		value="Hi! Do you know a girl named Lisa? Would you tell me where to find her?"
 		time="4" />
 
 	<string
@@ -160,14 +160,14 @@
 		modelCfg="59"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_25_stranger.ogg"
-		value="STRANGER|Who doesn't know Lisa! But it's going to be hard to get to her. She's friends with Axel, our commander."
+		value="STRANGER|Who doesn't know Lisa! But it's going to be pretty hard to get to her. She's friends with Axel, our commander."
 		time="8" />
 
 	<string
 		id="26"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_26_hero.ogg"
-		value="So I should have a heart-to-heart talk with him then."
+		value="Then I'm going to have a face-to-face talk with him."
 		time="4" />
 
 	<string
@@ -177,14 +177,14 @@
 		modelCfg="59"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_27_stranger.ogg"
-		value="STRANGER|Ha-ha-ha! That's funny! There's no chance for you to see him! Only those who perform a feat can get a reward from his hands. But you obviously can't."
+		value="STRANGER|Ha-ha-ha! That's funny! There's no chance for you to evern see him! Only those who perform a feat can get a reward from his hands. But that's clearly not something that can happen to you."
 		time="8" />
 
 	<string
 		id="29"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_29_hero.ogg"
-		value="Lisa! I got you, you liar! Now I won't let you go so easily! You'll answer for everything!"
+		value="Lisa! I got you, you grifter! Now I won't let you go so easily! You'll answer for everything!"
 		time="4" />
 
 	<string
@@ -200,14 +200,14 @@
 		modelName="mask_lisa"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_39_alice.ogg"
-		value="LISA|Many have tried to find him, but no one has succeeded. For years I searched for clues, until just recently I managed to get information about Ivan's old friend. Then I went to the city of Sowth to find him..."
+		value="LISA|Many have tried to find him, but no one has succeeded. For years I searched for clues, until just recently I managed to get information about Ivan's old friend. Then I went to Sowth to find him..."
 		time="13" />
 
 	<string
 		id="40"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_40_hero.ogg"
-		value="But you didn't know exactly where to look. So you put on this charade for me to show you all the local villages!"
+		value="But you didn't know exactly where to look. And you put on this charade so I'd show you all the local villages!"
 		time="8" />
 
 	<string
@@ -222,7 +222,7 @@
 		id="42"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_42_hero.ogg"
-		value="To kill the last witness, someone destroyed an entire village. My village! What kind of man would do such a thing?! Ivan must have discovered something very important, and now someone is trying to cover up all traces. I must find out who's behind all this!"
+		value="To kill the last witness, someone destroyed an entire village. My village! What kind of man would do such a thing?! Ivan must have discovered something very important, and now someone is trying to cover up all traces. I must find out who's standing behind all of this!"
 		time="23" />
 
 	<string
@@ -245,7 +245,7 @@
 		modelName="mask_lisa"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_50_alice.ogg"
-		value="LISA|There is an underground passage leading to Oracle Island nearby. Only it seems to be guarded."
+		value="LISA|There's an underground passage that leads to Oracle island. Except it appears to be guarded."
 		time="6" />
 
 	<string
@@ -312,14 +312,14 @@
 		id="60"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_60_hero.ogg"
-		value="The job is done! The caravan is stopped. I can go back to base."
+		value="The job is done! The caravan is stopped. I may return to the base."
 		time="4" />
 
 	<string
 		id="100"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_100_hero.ogg"
-		value="Who are you and why are you hiding here when my race are suffering? "
+		value="Who are you and why are you hiding here when my people are suffering?"
 		time="4" />
 
 	<string
@@ -328,7 +328,7 @@
 		modelName="boss04dronegun"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_101_njeri.ogg"
-		value="NJERI|We are Njeri, guests from distant worlds. By the will of fate, our eternal path crossed the trajectory of your planet. And it has brought only sorrow to all."
+		value="NJERI|We are Njeri, guests from distant worlds. By the will of fate, our eternal path crossed the trajectory of your planet. And it has brought only sorrow to all of us."
 		time="8" />
 
 	<string
@@ -344,7 +344,7 @@
 		modelName="boss04dronegun"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_103_njeri.ogg"
-		value="NJERI|A cargo transport was hit by an Earth weapon and crashed to the planet's surface. While we were planning a rescue operation, a device designed to operate in open space away from living matter was turned on by Earthlings."
+		value="NJERI|A cargo transport was hit by a weapon from Earth and crashed to the planet's surface. While we were planning a rescue operation, a device designed to operate in open space away from living matter was turned on by Earthlings."
 		time="10" />
 
 	<string
@@ -392,7 +392,7 @@
 		modelName="boss04dronegun"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_109_njeri.ogg"
-		value="NJERI|It is unpredictable what effect the sudden change in the information field will have on the survivors. It could be the last straw and kill everyone. But humanity's resource is not limitless, and after a while even the most resilient among you will no longer be able to exist."
+		value="NJERI|It can not be predicted what effect the sudden change in the information field will have on the survivors. It could be the last straw and kill everyone. But humanity's resource is not limitless, and after a while even the most resilient among you will no longer be able to exist."
 		time="8" />
 
 	<string
@@ -417,14 +417,14 @@
 		modelName="boss04dronegun"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_1111_njeri.ogg"
-		value="NJERI|It needs to be positioned near the downed ship, but neither we nor our equipment can get within the right distance."
+		value="NJERI|It needs to be positioned near the shot down ship, but neither we nor our equipment can get within the right distance."
 		time="9" />
 
 	<string
 		id="112"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m1\r2m1_112_hero.ogg"
-		value="Everything is clear. I was already there, and nothing happened to me. So I can deliver your blocker."
+		value="Everything is clear. I was there before, and nothing happened to me. So I can deliver your blocker."
 		time="7" />
 
 	<string
@@ -433,7 +433,7 @@
 		modelName="boss04dronegun"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m1\r2m1_113_njeri.ogg"
-		value="NJERI|We hoped for your help. You are the last resort of mankind."
+		value="NJERI|We hoped for your help. You are mankind's last hope."
 		time="8" />
 
 	<string
@@ -518,7 +518,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound=""
-		value="RADIO|Nice work. According to the latest intel, the CIT Senator is holding the fort in Rotorsk, and all of our troops are already moving there. Your presence there is also very desirable. We pay 100000 coins for the success of the operation."
+		value="RADIO|Nice work. According to the latest intel, the CIT Senator is holding the fort in Egalite, and all of our troops are already moving there. Your presence there is also very desirable. We pay 100000 coins for the success of the operation."
 		time="14" />
 
 	<string

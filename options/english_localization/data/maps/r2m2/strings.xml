@@ -15,7 +15,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_2_cd_officer_radio.ogg"
-		value="RADIO|Then we'll strike another place. Remember, your job is to endure as long as possible, not burn down the village. Do it."
+		value="RADIO|Then we'll strike another place. Remember, your job is to hold for as long as possible, not burn down the village. Do it."
 		time="8" />
 
 	<string
@@ -24,7 +24,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_3_cd_officer_radio.ogg"
-		value="RADIO|Retreat. You have done your job."
+		value="RADIO|Retreat. You've done your job."
 		time="4" />
 
 	<string
@@ -70,7 +70,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_7_cd_officer_radio.ogg"
-		value="RADIO|You proved your loyalty to the common cause.  On the corpse of one traitor we found a note saying that he would soon meet with CIT agents."
+		value="RADIO|You proved your loyalty to the common cause. On the corpse of one traitor we found a note saying that he was supposed to meet with CIT agents."
 		time="8" />
 
 	<string
@@ -79,7 +79,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_8_cd_officer_radio.ogg"
-		value="RADIO|You will meet with him instead of the rebel and find out all you can. You have to act according to the circumstances. The meeting is in the Toskana's bar. Password: &quot;The night is long&quot;, recall: &quot;But the dawn is near&quot;."
+		value="RADIO|You'll meet him in place of the rebel and find out all you can. Act based on the circumstances. The meeting is in the Toskana's bar. Password is &quot;The night is long&quot;, recall: &quot;But the dawn is near&quot;."
 		time="8" />
 
 	<string
@@ -95,7 +95,7 @@
 		modelName="gadget_12"
 		modelSlot="1"
 		sound="data\sounds\Speech\r2m2\r2m2_10_cd_officer_radio.ogg"
-		value="The enemies are defeated! Without their leaders, they cannot stand against us! You have brought the glorious hour of victory closer and will be generously rewarded. Zion, the secret city of Axel, awaits you."
+		value="The enemies are defeated! Without their leaders, they cannot stand against us! You have brought the glorious hour of victory closer and will be generously rewarded. Zeon, the secret city of Axel, awaits you."
 		time="8" />
 
 	<string
@@ -118,7 +118,7 @@
 		id="16"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m2\r2m2_16_hero.ogg"
-		value="Yeah. You described her very accurately."
+		value="Yeah. You described her fairly accurately."
 		time="3" />
 
 	<string
@@ -133,7 +133,7 @@
 		id="26"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r2m2\r2m2_26_hero.ogg"
-		value="What insight! I admit I don't care much for your local squabbles. I just want to get to Lisa!"
+		value="How insightful! I admit I don't care much for your local squabbles. I just want to get to Lisa!"
 		time="10" />
 
 	<string
@@ -233,7 +233,7 @@
 		modelCfg="228"
 		modelSlot="1"
 		sound=""
-		value="CD's EXECUTIONER|Yeah, that's what we thought, too. Then one of the sergeants remembered where he'd seen you. You were at the battle of Petropavlovsk, and not on our side."
+		value="CD's EXECUTIONER|Yeah, that's what we thought, too. Then one of the sergeants remembered where he'd seen you. You were at the battle of Fraternite, and not on our side."
 		time="10.5" />
 
 	<string
@@ -370,12 +370,12 @@
 
 	<string
 		id="8800"
-		value="Do you wish to leave Argen and sail to Vahat?"
+		value="Do you want to leave Argen for Vahat?"
 		numButtons="2" />
 
 	<string
 		id="8801"
-		value="Do you wish to leave this area?"
+		value="Do you wish to travel to another region?"
 		numButtons="2" />
 
 	<string

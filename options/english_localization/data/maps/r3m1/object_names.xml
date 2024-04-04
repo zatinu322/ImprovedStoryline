@@ -2,11 +2,11 @@
 <ObjectNames>
 	<Object
 		Name="TheSet"
-		FullName="SET" />
+		FullName="SETH" />
 
 	<Object
 		Name="Set_Bar"
-		FullName="Cafeteria &quot;At the Oak&quot;" />
+		FullName="Cafe ‘’Old Oak’’" />
 
 	<Object
 		Name="Set_Bar_Barman"
@@ -26,7 +26,7 @@
 
 	<Object
 		Name="Set_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="Set_Workshop"
@@ -38,7 +38,7 @@
 
 	<Object
 		Name="Fist_Bar"
-		FullName="Bar &quot;Rock&quot;" />
+		FullName="Bar &quot;The Rock&quot;" />
 
 	<Object
 		Name="Fist_Bar_Barman"
@@ -50,7 +50,7 @@
 
 	<Object
 		Name="Fist_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="TheUluk"
@@ -62,7 +62,7 @@
 
 	<Object
 		Name="Uluk_Bar_Barman"
-		FullName="Karter" />
+		FullName="Carter" />
 
 	<Object
 		Name="Uluk_Bar_Leader"
@@ -70,7 +70,7 @@
 
 	<Object
 		Name="Uluk_Bar_Customer1"
-		FullName="Carb" />
+		FullName="Curb" />
 
 	<Object
 		Name="Uluk_Workshop"
@@ -78,15 +78,15 @@
 
 	<Object
 		Name="Uluk_Shop"
-		FullName="Shop &quot;Bob's&quot;" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="r3m1_NearFist_Guard1"
-		FullName="Fist Guard" />
+		FullName="Fist’ Guard" />
 
 	<Object
 		Name="r3m1_NearFist_Guard2"
-		FullName="Fist Guard" />
+		FullName="Fist’ Guard" />
 
 	<Object
 		Name="r3m1_NearUluk_RescueMan1"
@@ -98,19 +98,19 @@
 
 	<Object
 		Name="TheRazboynik_Bar"
-		FullName="Blue nose" />
+		FullName="Bar ‘’Gasoline’’" />
 
 	<Object
 		Name="TheRazboynik_Workshop"
-		FullName="AutoMedic" />
+		FullName="AutoHealer" />
 
 	<Object
 		Name="Razboynik_Bar_Barman"
-		FullName="Bartender" />
+		FullName="Barman" />
 
 	<Object
 		Name="TheRazboynik_Shop"
-		FullName="At the decibel" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="Raz_Bar_Lisa"
@@ -126,7 +126,7 @@
 
 	<Object
 		Name="UlukAmush_loc"
-		FullName="Ambush site" />
+		FullName="Ambush place" />
 
 	<Object
 		Name="ToR1M4"
@@ -134,7 +134,7 @@
 
 	<Object
 		Name="r3_FarVillage"
-		FullName="Elminst" />
+		FullName="ELMINST" />
 
 	<Object
 		Name="Razboynic_Bar_Customer1"
@@ -254,11 +254,11 @@
 
 	<Object
 		Name="urod1"
-		FullName="Krowd" />
+		FullName="Claude" />
 
 	<Object
 		Name="urod2"
-		FullName="Shkvol" />
+		FullName="Squall" />
 
 	<Object
 		Name="urod3"
@@ -266,15 +266,15 @@
 
 	<Object
 		Name="urod4"
-		FullName="Mukhlik" />
+		FullName="Mux" />
 
 	<Object
 		Name="urod5"
-		FullName="Dan" />
+		FullName="Denis" />
 
 	<Object
 		Name="urod6"
-		FullName="Gaya" />
+		FullName="Gaia" />
 
 	<Object
 		Name="urod7"
@@ -282,7 +282,7 @@
 
 	<Object
 		Name="urod8"
-		FullName="Hrrr" />
+		FullName="Horror" />
 
 	<Object
 		Name="urod9"

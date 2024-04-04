@@ -4162,7 +4162,7 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_2_P081"
-		text="I didn't come empty-handed. This disk belonged to my father. They say you can read it. Maybe what's on it will show you the right direction."
+		text="I didn't come empty-handed. This disc belonged to my father. They say you can read it. Maybe what's on it will show you the right direction."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001995" />
 
@@ -4218,7 +4218,7 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N031"
-		text="This disk really belonged to Ivan Go. It is a diary containing a great amount of data about the modern world, very curious blueprints and useful notes."
+		text="This disc really belonged to Ivan Go. It is a diary containing a great amount of data about the modern world, very curious blueprints and useful notes."
 		role="NPC"
 		nextReplies="r3m2_Oracle_Oracle_4_N041" />
 
@@ -4254,7 +4254,7 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N091"
-		text="With a 96.7% probability, there is another disk that contains the missing information."
+		text="With a 96.7% probability, there is another disc that contains the missing information."
 		role="NPC"
 		nextReplies="r3m2_Oracle_Oracle_4_N101" />
 
@@ -4266,7 +4266,7 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_4_N111"
-		text="I don't have that information. It is most likely that this disk is hidden among Ivan's things."
+		text="I don't have that information. It is most likely that this disc is hidden among Ivan's things."
 		role="NPC"
 		nextReplies="r3m2_Oracle_Oracle_4_N121" />
 
@@ -4303,7 +4303,7 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_5_N05b"
-		text="I managed to read the contents of the disk. It really is your father's diary. It will take me some time to analyze the full amount of information, but I can answer the main questions now."
+		text="I managed to read the contents of the disc. It really is your father's diary. It will take me some time to analyze the full amount of information, but I can answer the main questions now."
 		role="NPC"
 		scriptResult="AddHistory( 'r3_Oracle_BringDisc2' ); AddFadingMsgId( 'fm_history_got' )"
 		nextReplies="r3m2_Oracle_Oracle_5_N06b" />
@@ -4328,7 +4328,7 @@
 
 	<Reply
 		name="r3m2_Oracle_Oracle_5_N09a"
-		text="The disk contains a blueprint that you can use to prepare your truck for the harsh desert weather conditions. I'll make a copy. Show it to a specialist and he will recreate this device."
+		text="The disc contains a blueprint that you can use to prepare your truck for the harsh desert weather conditions. I'll make a copy. Show it to a specialist and he will recreate this device."
 		role="NPC"
 		nextReplies="r3m2_Oracle_Oracle_5_N10a" />
 
@@ -4360,7 +4360,7 @@
 
 	<Reply
 		name="r3m2_AloneDruid1_2_N02"
-		text="Your old friend from Set asked me to give you this package. "
+		text="Your old friend from Seth asked me to give you this package. "
 		role="PLAYER"
 		nextReplies="r3m2_AloneDruid1_2_N03" />
 
@@ -4563,7 +4563,7 @@
 
 	<Reply
 		name="Fist_ambush_guard1_1_N07"
-		text="The High Druid lives in the city of Set. Let me mark it on your map."
+		text="The High Druid lives in the city of Seth. Let me mark it on your map."
 		role="NPC"
 		nextReplies="Fist_ambush_guard1_1_P08" />
 
@@ -4837,7 +4837,7 @@
 
 	<Reply
 		name="Dlg_npc_002005"
-		text="Try to lure the High Druid out of Set and bring him here. We'll ambush him, catch him, and make him reveal everything he knows about the Oracle!"
+		text="Try to lure the High Druid out of Seth and bring him here. We'll ambush him, catch him, and make him reveal everything he knows about the Oracle!"
 		role="NPC"
 		nextReplies="Dlg_pl_002006" />
 
@@ -4867,7 +4867,7 @@
 
 	<Reply
 		name="Dlg_pl_002011"
-		text="Well, time to go to Set."
+		text="Well, time to go to Seth."
 		role="PLAYER"
 		scriptResult="TakeQuest('r3m1_LureMainDriud'); GetCurNpc():SetSpokenCount( 1 ); EndConversation();" />
 
@@ -5013,7 +5013,7 @@
 
 	<Reply
 		name="r3m1_NearUluk_Civilian1_1_N01"
-		text="Hey, foreigner, listen: the town is dying and the inhabitants are suffering. Not everyone has gone mad, many people are against this change, but they fear the wrath of these monsters. All who could, have gone, but they alone cannot reach Set. I beg you, help these people."
+		text="Hey, foreigner, listen: the town is dying and the inhabitants are suffering. Not everyone has gone mad, many people are against this change, but they fear the wrath of these monsters. All who could, have gone, but they alone cannot reach Seth. I beg you, help these people."
 		role="NPC"
 		scriptCondition="QuestStatus('r3m1_KnowAboutUluk_GotoSet')==Q_TAKEN and QuestStatus('r3m1_RescueUlukCivil')==Q_CANBEGIVEN and GetVar('BezhenAlive').AsInt==5 and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="r3m1_NearUluk_Civilian1_1_P02" />
@@ -5246,7 +5246,7 @@
 
 	<Reply
 		name="Set_Bar_Druid3_1_N05a"
-		text="Not really. I heard he's settled in a house down by the old road. Can you stop by and give him this parcel? And tell him that his friend Fionius from Set sends his regards."
+		text="Not really. I heard he's settled in a house down by the old road. Can you stop by and give him this parcel? And tell him that his friend Fionius from Seth sends his regards."
 		role="NPC"
 		nextReplies="Set_Bar_Druid3_1_N06a Dlg_pl_001998" />
 
@@ -6140,13 +6140,13 @@
 
 	<Reply
 		name="Dlg_npc_002174"
-		text="She said something about a power plant in Librium. And there's only one power plant there, the town of Sel."
+		text="She said something about a power plant in Librium. And there's only one power plant there, the town of Seil."
 		role="NPC"
 		nextReplies="Dlg_pl_002175" />
 
 	<Reply
 		name="Dlg_pl_002175"
-		text="Sel, you say... Well, now she won't hide from me!"
+		text="Seil, you say... Well, now she won't hide from me!"
 		role="PLAYER"
 		scriptResult="CompleteQuest( 'r2m2_ToLisaToMonastir' ); TakeQuest( 'r2m2_FindLisAfterAxelAndFatherDie_Quest' );   EndConversation()" />
 
@@ -6678,7 +6678,7 @@
 
 	<Reply
 		name="Dlg_npc_002553"
-		text="A green jewelry box with a gold frame. And he lives in the village of Razdolnoe, not far from here."
+		text="A green jewelry box with a gold frame. And he lives in the village of Liberte, not far from here."
 		role="NPC"
 		nextReplies="Dlg_pl_002554" />
 
@@ -7404,7 +7404,7 @@
 
 	<Reply
 		name="Dlg_npc_000439"
-		text="We had thought of that - military vehicles are already on their way to the place of the ambush. Once you capture the general, take him to Rotorsk, as there is a good chance that Helvetia and Tuzz will be attacked by Axel's best men, who would be tasked with freeing the general."
+		text="We had thought of that - military vehicles are already on their way to the place of the ambush. Once you capture the general, take him to Egalite, as there is a good chance that Helvetia and Tuzz will be attacked by Axel's best men, who would be tasked with freeing the general."
 		role="NPC"
 		nextReplies="Dlg_pl_000440" />
 
@@ -9689,7 +9689,7 @@
 
 	<Reply
 		name="r1m4_SomeWhere_OldWomen1_1_N07a"
-		text="Oh, of course! His name is Filimon. Curly, with a bandage on his forehead. He likes to say &quot;get up and out of here&quot;, and he is also attracted to pink blouses."
+		text="Oh, of course! His name is Philemon. Curly, with a bandage on his forehead. He likes to say &quot;get up and out of here&quot;, and he is also attracted to pink blouses."
 		role="NPC"
 		nextReplies="r1m4_SomeWhere_OldWomen1_1_N09a" />
 
@@ -9756,7 +9756,7 @@
 
 	<Reply
 		name="Dlg_pl_002624"
-		text="Money? What money?|Ah, I remember you. No, shove those coins in your... under your mask, I'm not here about that. Do you know where Filimon is?"
+		text="Money? What money?|Ah, I remember you. No, shove those coins in your... under your mask, I'm not here about that. Do you know where Philemon is?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002628" />
 
@@ -9769,7 +9769,7 @@
 
 	<Reply
 		name="Dlg_pl_002626"
-		text="I'm looking for Filimon."
+		text="I'm looking for Philemon."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002628" />
 
@@ -9830,14 +9830,14 @@
 
 	<Reply
 		name="Dlg_pl_002632"
-		text="Here you are. Now tell me where Filimon is!"
+		text="Here you are. Now tell me where Philemon is!"
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 700"
 		nextReplies="Dlg_npc_002683" />
 
 	<Reply
 		name="Dlg_npc_002683"
-		text="Filimon was indeed here, drank a bottle of the local ananaga, and afterwards left for the sacred hill to lead a round dance near the fir tree. "
+		text="Philemon was indeed here, drank a bottle of the local ananaga, and afterwards left for the sacred hill to lead a round dance near the fir tree. "
 		role="NPC"
 		nextReplies="Dlg_pl_002684" />
 
@@ -9893,7 +9893,7 @@
 
 	<Reply
 		name="Dlg_npc_003288"
-		text="So what's up with Filimon? Ha-ha-ha!"
+		text="So what's up with Philemon? Ha-ha-ha!"
 		role="NPC"
 		scriptCondition="QuestStatus('q_FH1')==Q_TAKEN and GetVar('FarmerDickRejection').AsInt==1"
 		nextReplies="Dlg_pl_003289 Dlg_pl_003290" />
@@ -9924,7 +9924,7 @@
 
 	<Reply
 		name="Dlg_npc_003293"
-		text="And that's just so you don't show off too much. You want to find Filimon, you pay. You don't, you know where the exit is."
+		text="And that's just so you don't show off too much. You want to find Philemon, you pay. You don't, you know where the exit is."
 		role="NPC"
 		nextReplies="Dlg_pl_003294 Dlg_pl_003295" />
 
@@ -9952,7 +9952,7 @@
 
 	<Reply
 		name="r1m4_SomeWhere_Husbent1_1_N02"
-		text="Filimon, your wife is looking for you, and you're doing the round dance here!"
+		text="Philemon, your wife is looking for you, and you're doing the round dance here!"
 		role="PLAYER"
 		nextReplies="r1m4_SomeWhere_Husbent1_1_N03" />
 
@@ -12146,7 +12146,7 @@
 
 	<Reply
 		name="Dlg_npc_003153"
-		text="Now let's wait until the caravan arrives from Forgotten. It is from this village that Minin gets his food."
+		text="Now let's wait until the caravan arrives from Lost village. It is from this village that Minin gets his food."
 		role="NPC"
 		nextReplies="Dlg_pl_003154" />
 
@@ -14635,7 +14635,7 @@
 
 	<Reply
 		name="Dlg_npc_001577"
-		text="There's a little village not far from Eastern, called Yar. A friend of mine, Valery, lives there. I need you to give him this package. Can you do that?"
+		text="There's a little village not far from Eastern, called Yarr. A friend of mine, Valery, lives there. I need you to give him this package. Can you do that?"
 		role="NPC"
 		nextReplies="Dlg_pl_001578" />
 
@@ -15997,7 +15997,7 @@
 
 	<Reply
 		name="Dlg_pl_xyz325"
-		text="I'm sorry, but I don't know who you're talking about. My father... my stepfather... he was killed. Before he died, he gave me this disk and this letter and told me to find you. So now I stand here and I don't know what to do next."
+		text="I'm sorry, but I don't know who you're talking about. My father... my stepfather... he was killed. Before he died, he gave me this disc and this letter and told me to find you. So now I stand here and I don't know what to do next."
 		role="PLAYER"
 		nextReplies="Dlg_npc_xyz326" />
 
@@ -16117,7 +16117,7 @@
 
 	<Reply
 		name="Dlg_pl_001743"
-		text="Thank you very much. One more thing: I didn't take it into account at first, but before my village was attacked, I met a mysterious girl in a fast car. She was looking for an object that looked a lot like this disk. She said it would help her in her search for some explorer. Could it be that she was talking about Ivan? "
+		text="Thank you very much. One more thing: I didn't take it into account at first, but before my village was attacked, I met a mysterious girl in a fast car. She was looking for an object that looked a lot like this disc. She said it would help her in her search for some explorer. Could it be that she was talking about Ivan? "
 		role="PLAYER"
 		nextReplies="Dlg_npc_001744" />
 
@@ -16190,7 +16190,7 @@
 
 	<Reply
 		name="Dlg_pl_002094"
-		text="Do you know where Lisa is right now? Is she here? Ben, if she's here, tell her I'm not mad, I just want the damn disk!"
+		text="Do you know where Lisa is right now? Is she here? Ben, if she's here, tell her I'm not mad, I just want the damn disc!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002095" />
 
@@ -17045,7 +17045,7 @@
 
 	<Reply
 		name="Dlg_npc_001441"
-		text="Do you know the village of Troitskoe? Well, there is a path next to it that leads to the hills. Go straight ahead and turn right at the crossroads. If you don't get it wrong, you'll come to a huge ruin. That's the abandoned hospital. Just keep in mind that the bandits know about this place too, so stay alert. You can sell what you find to the hermit who lives on the mountain near the road to Vaterland."
+		text="Do you know the village of Troyitskoe? Well, there is a path next to it that leads to the hills. Go straight ahead and turn right at the crossroads. If you don't get it wrong, you'll come to a huge ruin. That's the abandoned hospital. Just keep in mind that the bandits know about this place too, so stay alert. You can sell what you find to the hermit who lives on the mountain near the road to Vaterland."
 		role="NPC"
 		nextReplies="Dlg_pl_001442" />
 
@@ -18082,7 +18082,7 @@
 
 	<Reply
 		name="Dlg_npc_001367"
-		text="My life's work. I am searching for one legendary explorer, and this disk probably will help me a lot."
+		text="My life's work. I am searching for one legendary explorer, and this disc probably will help me a lot."
 		role="NPC"
 		nextReplies="Dlg_pl_001368" />
 

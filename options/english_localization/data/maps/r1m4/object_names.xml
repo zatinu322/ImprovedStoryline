@@ -10,11 +10,11 @@
 
 	<Object
 		Name="Olme_Bar"
-		FullName="On the outskirts" />
+		FullName="Bar ‘’On the outskirts’’" />
 
 	<Object
 		Name="Olme_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="Olme_Workshop"
@@ -38,15 +38,17 @@
 	<Object
 		Name="Bar_Gomer1"
 		FullName="Homer" />
+
 	<Object
 		Name="Olme_Bar_Customer3"
-		FullName="Markizych" />
+		FullName="Markeezytch" />
+
 	<Object
 		Name="WorkGiver"
 		FullName="Farmer Dick" />
 	<Object
 		Name="Olme_Bar_Barman"
-		FullName="Bartender" />
+		FullName="Barman" />
 
 	<Object
 		Name="FVOnOcean"
@@ -54,11 +56,11 @@
 
 	<Object
 		Name="FVOnOcean_Bar"
-		FullName="Near the sea" />
+		FullName="Seashore" />
 
 	<Object
 		Name="FVOnOcean_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="FVOnOcean_Workshop"
@@ -94,7 +96,7 @@
 
 	<Object
 		Name="FVNearOlme_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="FVNearOlme_Workshop"
@@ -110,11 +112,11 @@
 
 	<Object
 		Name="FVNearOlme_Bar_Barman"
-		FullName="Bartender" />
+		FullName="Barman" />
 
 	<Object
 		Name="FVCalis"
-		FullName="CALYS" />
+		FullName="CALIS" />
 
 	<Object
 		Name="FVCalis_Bar"
@@ -138,7 +140,7 @@
 
 	<Object
 		Name="FVCalis_Bar_Barman"
-		FullName="Bartender" />
+		FullName="Barman" />
 
 	<Object
 		Name="FVCordan"
@@ -146,11 +148,11 @@
 
 	<Object
 		Name="FVCordan_Bar"
-		FullName="Shark's Mouth" />
+		FullName="Jaws" />
 
 	<Object
 		Name="FVCordan_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="FVCordan_Workshop"
@@ -170,11 +172,11 @@
 
 	<Object
 		Name="FVPerch_Bar"
-		FullName="Goldmine" />
+		FullName="Gold vein" />
 
 	<Object
 		Name="FVPerch_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="FVPerch_Workshop"
@@ -182,11 +184,11 @@
 
 	<Object
 		Name="FVPerch_Bar_Customer2"
-		FullName="Daren" />
+		FullName="Darren" />
 
 	<Object
 		Name="FVPerch_Bar_Barman"
-		FullName="Barmaid" />
+		FullName="Barman" />
 
 	<Object
 		Name="FVBerko"
@@ -194,11 +196,11 @@
 
 	<Object
 		Name="FVBerko_Bar"
-		FullName="Corner" />
+		FullName="Bar ‘’Crouch end’’" />
 
 	<Object
 		Name="FVBerko_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="FVBerko_Workshop"
@@ -206,15 +208,15 @@
 
 	<Object
 		Name="FVBerko_Bar_Customer2"
-		FullName="Neil" />
+		FullName="Nail" />
 	
 	<Object
 		Name="FVBerko_Bar_Customer2_1"
-		FullName="Neil" />
+		FullName="Nail" />
 
 	<Object
 		Name="FVBerko_Bar_Barman"
-		FullName="Barmaid" />
+		FullName="Barman" />
 
 	<Object
 		Name="StorageVil"
@@ -226,7 +228,7 @@
 
 	<Object
 		Name="StorageVil_Shop"
-		FullName="Salesman's booth" />
+		FullName="Sellers’ booth" />
 
 	<Object
 		Name="r1m4_Storage_Guard1"
@@ -246,7 +248,7 @@
 
 	<Object
 		Name="FVCalis_Bar_Husbent1"
-		FullName="Filimon" />
+		FullName="Philemon" />
 
 	<Object
 		Name="LookingWife1"
@@ -270,23 +272,23 @@
 
 	<Object
 		Name="bigboss1"
-		FullName="Boss" />
+		FullName="Claw" />
 
 	<Object
 		Name="urod1"
-		FullName="Vinnie" />
+		FullName="Winnie" />
 
 	<Object
 		Name="urod2"
-		FullName="Don" />
+		FullName="Node" />
 
 	<Object
 		Name="urod3"
-		FullName="Yucca" />
+		FullName="Iuka" />
 
 	<Object
 		Name="urod4"
-		FullName="Daisy" />
+		FullName="Dais" />
 
 	<Object
 		Name="urod5"
@@ -294,11 +296,11 @@
 
 	<Object
 		Name="urod6"
-		FullName="Folco" />
+		FullName="Folko" />
 
 	<Object
 		Name="urod7"
-		FullName="Bortan" />
+		FullName="Botan" />
 
 	<Object
 		Name="urod8"

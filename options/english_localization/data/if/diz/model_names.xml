@@ -4,7 +4,7 @@
 	<Item
 		id="cooling_system_guns"
 		locForm="0"
-		value="Water cooling system for guns" />
+		value="Water cooling system for bullet projectile weapons" />
 
 	<Item
 		id="cooling_system_energy"
@@ -14,12 +14,12 @@
 	<Item
 		id="cooling_system_explosion"
 		locForm="0"
-		value="Water cooling system for artillery" />
+		value="Water cooling system for weapons with explosive projectiles" />
 
 	<Item
 		id="firing_rate_guns"
 		locForm="0"
-		value="Optimized mechanical trigger" />
+		value="Optimised mechanical trigger" />
 
 	<Item
 		id="firing_range_guns"
@@ -29,17 +29,17 @@
 	<Item
 		id="firing_rate_energy"
 		locForm="0"
-		value="Low resistance cable" />
+		value="Low impedance cable" />
 
 	<Item
 		id="add_damage_guns"
 		locForm="0"
-		value="Semi-free shutter" />
+		value="Delayed blowback" />
 
 	<Item
 		id="add_damage_energy"
 		locForm="0"
-		value="Mirror silver light resonator" />
+		value="Silver-mirror light resonator" />
 
 	<Item
 		id="add_damage_explosion"
@@ -54,22 +54,22 @@
 	<Item
 		id="cooling_system_guns2"
 		locForm="0"
-		value="Machine gun air cooling system" />
+		value="Air cooling system for bullet weapons" />
 
 	<Item
 		id="cooling_system_energy2"
 		locForm="0"
-		value="Laser gun air cooling system" />
+		value="Air cooling system for energy weapons" />
 
 	<Item
 		id="cooling_system_explosion2"
 		locForm="0"
-		value="Artillery air cooling system" />
+		value="Air cooling system for weapons with explosive projectiles" />
 
 	<Item
 		id="firing_rate_guns2"
 		locForm="0"
-		value="Electric trigger" />
+		value="Solenoid actuator" />
 
 	<Item
 		id="firing_rate_energy2"
@@ -79,12 +79,12 @@
 	<Item
 		id="grouping_angle_guns2"
 		locForm="0"
-		value="Optical sight with coated optics and anti-reflective protection" />
+		value="Optical sight with anti-reflective coating" />
 
 	<Item
 		id="add_damage_guns2"
 		locForm="0"
-		value="Floating coupling free bolt" />
+		value="Blowback system with floating coupling" />
 
 	<Item
 		id="add_damage_energy2"
@@ -94,7 +94,7 @@
 	<Item
 		id="add_damage_explosion2"
 		locForm="0"
-		value="Magnetic catapult based on a vortex field generator" />
+		value="Magnetic catapult based on vortex field generator" />
 
 	<Item
 		id="cooling_system_guns_and_firing_rate_guns"
@@ -104,7 +104,7 @@
 	<Item
 		id="cooling_system_energy_and_firing_rate_energy"
 		locForm="0"
-		value="&quot;Algor&quot; complex" />
+		value="&quot;Algor&quot; system" />
 
 	<Item
 		id="cooling_system_explosion_and_firing_rate_explosion"
@@ -114,17 +114,17 @@
 	<Item
 		id="firing_rate_guns_and_add_damage_guns"
 		locForm="0"
-		value="Electromechanical &quot;Spheno&quot; complex" />
+		value="Electromechanical complex &quot;Spheno&quot;" />
 
 	<Item
 		id="firing_rate_energy_and_add_damage_energy"
 		locForm="0"
-		value="Magneto-optical &quot;Kvazar&quot;system" />
+		value="Magnetic-optical system &quot;Quasar&quot;" />
 
 	<Item
 		id="firing_rate_explosion_and_add_damage_explosion"
 		locForm="0"
-		value="Electromechanical &quot;Firestorm&quot; complex" />
+		value="Electromechanical complex &quot;Firestorm&quot;" />
 
 	<Item
 		id="add_damage_guns_and_grouping_angle_guns"
@@ -139,12 +139,12 @@
 	<Item
 		id="add_damage_explosion_firing_rate_explosion"
 		locForm="0"
-		value="Electromechanical &quot;David&quot; complex" />
+		value="Electromechanical complex &quot;Dawid&quot;" />
 
 	<Item
 		id="additional_fuel_tank"
 		locForm="0"
-		value="Additional fuel tank" />
+		value="Regular fuel canister" />
 
 	<Item
 		id="additional_torque"
@@ -154,7 +154,7 @@
 	<Item
 		id="additional_durability"
 		locForm="0"
-		value="Rolled armor plates" />
+		value="Rolled armour plates for the cabin hull" />
 
 	<Item
 		id="additional_stability"
@@ -164,7 +164,7 @@
 	<Item
 		id="additional_fuel_tank2"
 		locForm="0"
-		value="Big additional fuel tank" />
+		value="Big fuel canister" />
 
 	<Item
 		id="additional_torque2"
@@ -174,7 +174,7 @@
 	<Item
 		id="additional_durability2"
 		locForm="0"
-		value="Rolled armor plates with additional cementation" />
+		value="Rolled armour plates with additional cementing" />
 
 	<Item
 		id="additional_durability3"
@@ -184,7 +184,7 @@
 	<Item
 		id="add_speed_and_torque"
 		locForm="0"
-		value="Electronic injection system" />
+		value="Electronic injector system" />
 
 	<Item
 		id="add_stability_and_speed"
@@ -264,7 +264,7 @@
 	<Item
 		id="quest_potato"
 		locForm="0"
-		value="A packet for Sergo" />
+		value="A packet" />
 
 	<Item
 		id="quest_medicine_box"
@@ -319,7 +319,7 @@
 	<Item
 		id="quest_wine_barrels"
 		locForm="0"
-		value="Barrel of vine" />
+		value="Barrels of wine" />
 
 	<Item
 		id="quest_komp_splav"
@@ -354,12 +354,12 @@
 	<Item
 		id="quest_disk_1"
 		locForm="0"
-		value="The disk" />
+		value="The disc" />
 
 	<Item
 		id="quest_disk_2"
 		locForm="0"
-		value="The second disk" />
+		value="The second disc" />
 
 	<Item
 		id="quest_key_for_submarine"
@@ -379,17 +379,17 @@
 	<Item
 		id="quest_repair_robot3"
 		locForm="0"
-		value="Robo-tuner" />
+		value="Tuning robot" />
 
 	<Item
 		id="quest_repair_robot1"
 		locForm="0"
-		value="Robo-helper" />
+		value="Helper robot" />
 
 	<Item
 		id="quest_repair_robot2"
 		locForm="0"
-		value="Robo-repairer" />
+		value="Repair robot" />
 
 	<Item
 		id="quest_explosion_stone"
@@ -424,7 +424,7 @@
 	<Item
 		id="someTurboAccelerationPusher"
 		locForm="0"
-		value="Turbo accelerator" />
+		value="Turbo" />
 
 	<Item
 		id="engineOilPusher"
@@ -569,7 +569,7 @@
 	<Item
 		id="bugCargo03"
 		locForm="0"
-		value="Borg" />
+		value="Grob" />
 
 	<Item
 		id="uralCab01"
@@ -654,7 +654,7 @@
 	<Item
 		id="MolokovozCargo04"
 		locForm="0"
-		value="Trailer ready Bolt" />
+		value="Box with a trailer" />
 
 	<Item
 		id="mirotvorecCab01"
@@ -799,7 +799,7 @@
 	<Item
 		id="fagot01"
 		locForm="0"
-		value="Fagot" />
+		value="Fagotto" />
 
 	<Item
 		id="kpvt01"
@@ -1044,7 +1044,7 @@
 	<Item
 		id="DozerEnemySpawn"
 		locForm="0"
-		value="Bulldozer" />
+		value="Dozer" />
 
 	<Item
 		id="Dozer01"
@@ -1054,7 +1054,7 @@
 	<Item
 		id="Traktor01"
 		locForm="0"
-		value="Tractor" />
+		value="Dozer" />
 
 	<Item
 		id="SeraTraktor01"
@@ -1910,7 +1910,7 @@
 	<Item
 		id="Filimon_P"
 		locForm="0"
-		value="Filimon" />
+		value="Philemon" />
 
 	<Item
 		id="ExtLeader_P"

@@ -22,15 +22,15 @@
 
 	<Object
 		Name="Esting_Bar"
-		FullName="Pub &quot;Happy&quot;" />
+		FullName="Pub ''Happy''" />
 
 	<Object
 		Name="Esting_Bar_Barman"
-		FullName="Bartender Spike" />
+		FullName="Barman Spike" />
 
 	<Object
 		Name="Fermer"
-		FullName="Farmer Jose" />
+		FullName="Farmer Joseph" />
 
 	<Object
 		Name="MainSigner"
@@ -162,7 +162,7 @@
 
 	<Object
 		Name="TheSign"
-		FullName="YAR" />
+		FullName="YARR" />
 
 	<Object
 		Name="TheSign_Workshop"
@@ -178,7 +178,7 @@
 
 	<Object
 		Name="TheSign_Bar_Barman"
-		FullName="Headman Bob" />
+		FullName="Elder Bob" />
 
 	<Object
 		Name="Signer"
@@ -226,7 +226,7 @@
 
 	<Object
 		Name="TheRace_Bar_Barman"
-		FullName="Barmaid Leoni" />
+		FullName="Barmaid Leony" />
 
 	<Object
 		Name="TheOlimp"
@@ -246,7 +246,7 @@
 
 	<Object
 		Name="TheOlimp_Bar_Barman"
-		FullName="Headman Zeus" />
+		FullName="Elder Zeus" />
 
 	<Object
 		Name="TheTickets"
@@ -262,7 +262,7 @@
 
 	<Object
 		Name="TheTickets_Bar"
-		FullName="Bar &quot;Gambling&quot;" />
+		FullName="Bar &quot;Atomic&quot;" />
 
 	<Object
 		Name="TheTickets_ZAO"
@@ -354,7 +354,7 @@
 
 	<Object
 		Name="TheSign_enter"
-		FullName="YAR" />
+		FullName="YARR" />
 
 	<Object
 		Name="TheRace_enter"
@@ -382,7 +382,7 @@
 
 	<Object
 		Name="u2"
-		FullName="Musk" />
+		FullName="Mad Mask" />
 
 	<Object
 		Name="u3"
@@ -390,7 +390,7 @@
 
 	<Object
 		Name="u4"
-		FullName="Myth" />
+		FullName="Mif" />
 
 	<Object
 		Name="u5"
@@ -402,7 +402,7 @@
 
 	<Object
 		Name="u7"
-		FullName="Sefer OT" />
+		FullName="Sephir OT" />
 
 	<Object
 		Name="u8"

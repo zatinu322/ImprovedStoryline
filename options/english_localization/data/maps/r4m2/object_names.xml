@@ -10,7 +10,7 @@
 
 	<Object
 		Name="ScientiferVillage_Shop"
-		FullName="Shop" />
+		FullName="Marketplace" />
 
 	<Object
 		Name="ScientiferVillage_WorkShop"
@@ -26,7 +26,7 @@
 
 	<Object
 		Name="MilitaryBase_loc"
-		FullName="Military base" />
+		FullName="Military Base" />
 
 	<Object
 		Name="PlateRadiation_loc"
@@ -46,37 +46,37 @@
 
 	<Object
 		Name="urod1"
-		FullName="Tidus" />
+		FullName="Klatz" />
 
 	<Object
 		Name="urod2"
-		FullName="Shaman" />
+		FullName="Fedor" />
 
 	<Object
 		Name="urod3"
-		FullName="Borg" />
+		FullName="Bonza" />
 
 	<Object
 		Name="urod4"
-		FullName="Alex" />
+		FullName="Lead" />
 
 	<Object
 		Name="urod5"
-		FullName="Scorp" />
+		FullName="Pony" />
 
 	<Object
 		Name="urod6"
-		FullName="Gaya" />
+		FullName="Ghoul" />
 
 	<Object
 		Name="urod7"
-		FullName="Sherman" />
+		FullName="Richter" />
 
 	<Object
 		Name="urod8"
-		FullName="Hrrr" />
+		FullName="Lucky" />
 
 	<Object
 		Name="urod9"
-		FullName="Uncle Fu" />
+		FullName="Doctor Who" />
 </ObjectNames>

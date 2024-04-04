@@ -3491,16 +3491,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r1m1_FindBotanik_Quest"
-		briefDiz="Find the botanist"
-		fullDiz="Find the botanist that lives in this area."
-		isMainQuest="0">
-		<Map
-			name="r1m1"
-			targetObjName="BotanicHouse" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r1m1_Hospital_Quest"
 		briefDiz="Find ancient hospital"
 		fullDiz="I've been told there's an derelict hospital nearby. I think I might find something interesting there."

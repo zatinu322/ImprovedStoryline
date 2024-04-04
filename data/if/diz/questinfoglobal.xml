@@ -3491,16 +3491,6 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r1m1_FindBotanik_Quest"
-		briefDiz="Найти ученого ботаника"
-		fullDiz="Старый солдат много говорил. По-моему, информация о ботанике - это единственное, что он сказал по делу."
-		isMainQuest="0">
-		<Map
-			name="r1m1"
-			targetObjName="BotanicHouse" />
-	</QuestInfo>
-
-	<QuestInfo
 		questName="r1m1_Hospital_Quest"
 		briefDiz="Обыскать заброшенную больницу"
 		fullDiz="Мне рассказали, что неподалеку есть заброшенная больница. Думаю, там можно найти что-нибудь интересное."

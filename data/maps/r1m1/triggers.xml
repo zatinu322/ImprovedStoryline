@@ -893,16 +893,6 @@
 		</script>
 	</trigger>
 
-	<!-- Игрок подъезжает к дому ботаника -->
-	<trigger Name="BOTANIK" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="BotanicHouse" />
-		<script>
-			CompleteQuestIfTaken( "r1m1_FindBotanik_Quest" )
-
-			trigger:Deactivate() 
-		</script>
-	</trigger>
-
 	<!-- Создание врагов на разных этапах сюжета -->
 	<trigger Name="ZASADA_2" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VeryBigFun1_Loc" />

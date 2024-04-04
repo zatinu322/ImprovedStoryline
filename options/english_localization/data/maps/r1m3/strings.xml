@@ -44,7 +44,7 @@
 		modelAutosized="true"
 		modelName="gadget_12"
 		modelSlot="1"
-		value="RADIO|It is said that an Oracle lives on an island lost in the ocean. Whoever passes all the challenges on the way to his dwelling will get an answer to any question he may have."
+		value="RADIO|It is said that an Oracle lives on an island lost in the ocean. Whoever passes all the challenges on the way to his dwelling will get an answer to any question he may have. Naturally, all of this is fiction. However, there are reasons to believe that this legend has an entirely scientific basis."
 		sound="data\sounds\Speech\r1m3\r1m3_404_ben_radio.ogg"
 		time="14" />
 
@@ -53,8 +53,8 @@
 		modelAutosized="true"
 		modelName="gadget_12"
 		modelSlot="1"
-		value="RADIO|Naturally, all of this is fiction. However, there are reasons to believe that this legend has an entirely scientific basis. And the key that you are now wearing around your neck is clear evidence of this."
-		sound="data\sounds\Speech\r1m3\r1m3_4044_ben_radio.ogg"
+		value="RADIO|And the key that you are now wearing around your neck is clear evidence of this."
+		sound="data\sounds\Speech\r1m3\r1m3_4041_ben_radio.ogg"
 		time="14" />
 
 	<string

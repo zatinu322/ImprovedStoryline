@@ -4165,17 +4165,6 @@
 		OnComplete="AddPlayerMoney(50)"
 		OnTake='ShowCircleOnMinimapByName("BotanicHouse")'
 		Levels="r1m1" />
-<!--Root/r1m1/Опциональные/Найти ботаника-->
-	<quest
-		Name="r1m1_FindBotanik_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all taken"
-		PrecedingQuests="Buyer_Quest1"
-		OnComplete="AddPlayerMoney(30)"
-		OnTake='ShowCircleOnMinimapByName("BotanicHouse")'
-		Levels="r1m1" />
 <!--Root/r1m1/Опциональные/Защитить Южный-->
 	<quest
 		Name="TalkToBarmenBeforeDesert"

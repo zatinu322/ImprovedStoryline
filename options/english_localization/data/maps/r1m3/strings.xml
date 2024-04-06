@@ -46,7 +46,7 @@
 		modelSlot="1"
 		value="RADIO|It is said that an Oracle lives on an island lost in the ocean. Whoever passes all the challenges on the way to his dwelling will get an answer to any question he may have. Naturally, all of this is fiction. However, there are reasons to believe that this legend has an entirely scientific basis."
 		sound="data\sounds\Speech\r1m3\r1m3_404_ben_radio.ogg"
-		time="14" />
+		time="12" />
 
 	<string
 		id="4044"
@@ -55,7 +55,7 @@
 		modelSlot="1"
 		value="RADIO|And the key that you are now wearing around your neck is clear evidence of this."
 		sound="data\sounds\Speech\r1m3\r1m3_4041_ben_radio.ogg"
-		time="14" />
+		time="6" />
 
 	<string
 		id="405"

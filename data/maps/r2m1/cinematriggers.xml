@@ -709,6 +709,8 @@
 		<script>
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
+			PlayCustomMusic("Passage03")
+
 			local Plf = GetPlayerVehicle()
 			local PlfID = GetPlayerVehicleId()
 			local PlfCoor = Plf:GetPosition()

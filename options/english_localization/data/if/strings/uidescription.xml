@@ -775,7 +775,7 @@
 	<!-- Gadgets -->
 	<string
 		id="additional_durability3_diz"
-		value="Created by wise men from a mysterious superalloy, these armor plates will provide your vehicle with increased resistance to all types of damage. | Armor +30%" />
+		value="Created by some sage from a mysterious superalloy, these armor plates will provide your vehicle with increased resistance to all types of damage. | Armor +30%" />
 	
 	<string
 		id="add_stability_and_speed2_diz"
@@ -817,7 +817,7 @@
 	<string
 		id="quest_ananaga_bottle_diz"
 		locForm="0"
-		value="A terrific ananaga, made with Petro's recipe, aged with Matvey's technology, and rested on the highest slope of the Mountains of the Wise. Definitely the best ananaga in the world today." />
+		value="A terrific ananaga, made with Petro's recipe, aged with Matvey's technology, and rested on the highest slope of Sage Mountains. Definitely the best ananaga in the world today." />
 
 	<string
 		id="quest_chehly_box_diz"
@@ -872,7 +872,7 @@
 	<string
 		id="quest_key_for_station_diz"
 		locForm="0"
-		value="The key given to me by the Supreme Wise Man from Volozh. With it, I can open the secret tunnel, unlock the control panel at the Wise Men's Station, and travel to the final test site." />
+		value="The key given to me by Supreme Sage from Volozh. With it, I can open the secret tunnel, unlock the control panel at the Sage's Station, and travel to the final test site." />
 
 	<string
 		id="quest_lisa_narcotik_diz"

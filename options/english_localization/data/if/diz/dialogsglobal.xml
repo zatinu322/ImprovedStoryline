@@ -162,7 +162,7 @@
 
 	<Reply
 		name="Dlg_npc_002742"
-		text="Yes, that's right, Ivan. He was passing through here about twenty years ago and was also looking for a composite. I sent him to the wise men who lived in the mountains, and he passed all their challenges and came back with the material. At that time, of course, it was much calmer here than it is now, and the bridge to the wise men's lands was open."
+		text="Yes, that's right, Ivan. He was passing through here about twenty years ago and was also looking for a composite. I sent him to the sages who lived in the mountains, and he passed all their challenges and came back with the material. At that time, of course, it was much calmer here than it is now, and the bridge to the sage's lands was open."
 		role="NPC"
 		nextReplies="Dlg_pl_002743" />
 
@@ -242,7 +242,7 @@
 
 	<Reply
 		name="Dlg_pl_002758"
-		text="If I do this, in addition to freeing Lisa, you will also open a bridge to the Mountains of the Wise."
+		text="If I do this, in addition to freeing Lisa, you will also open a bridge to the Sage Mountains."
 		role="PLAYER"
 		scriptResult="TakeQuest('CivilOrAdept2')"
 		nextReplies="Dlg_npc_002759" />
@@ -343,7 +343,7 @@
 
 	<Reply
 		name="Dlg_pl_002770"
-		text="They agreed to let Lisa go and free the way to the Mountains of the Wise. But only if I lured you into their ambush. I couldn't agree to that."
+		text="They agreed to let Lisa go and free the way to the Sage Mountains. But only if I lured you into their ambush. I couldn't agree to that."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002771" />
 
@@ -1001,13 +1001,13 @@
 
 	<Reply
 		name="Dlg_pl_002893"
-		text="Okay. |I would like to ask the wise men a question. I need to find one thing, and they can help me a lot."
+		text="Okay. |I would like to ask the sages a question. I need to find one thing, and they can help me a lot."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002894" />
 
 	<Reply
 		name="Dlg_npc_002894"
-		text="Our wise men can do anything. But will they help you? It's only up to them. Go to Volozh, that's where they live."
+		text="Our sages can do anything. But will they help you? It's only up to them. Go to Volozh, that's where they live."
 		role="NPC"
 		nextReplies="Dlg_pl_002895" />
 
@@ -1027,13 +1027,13 @@
 
 	<Reply
 		name="Dlg_pl_002896"
-		text="Hello. I would like to talk to some of the wise men."
+		text="Hello. I would like to talk to some of the sages."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002897" />
 
 	<Reply
 		name="Dlg_npc_002897"
-		text="Some wise man is standing in front of you. What do you want to know?"
+		text="Some sage is standing in front of you. What do you want to know?"
 		role="NPC"
 		nextReplies="Dlg_pl_002898" />
 
@@ -1165,7 +1165,7 @@
 
 	<Reply
 		name="Dlg_pl_002974"
-		text="I have finished all the errands of the wise men except the last one, for which I will have to go to Lidencloud. Will you come with me, or will you stay here?"
+		text="I have finished all the errands of Supreme Sage except the last one, for which I will have to go to Lidencloud. Will you come with me, or will you stay here?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002975" />
 
@@ -1377,7 +1377,7 @@
 
 	<Reply
 		name="Dlg_pl_002913"
-		text="Greetings. One of the wise men ordered me to help each of the towns near Volozh."
+		text="Greetings. Supreme Sage ordered me to help each of the towns near Volozh."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002914" />
 
@@ -1457,7 +1457,7 @@
 
 	<Reply
 		name="Dlg_npc_002931"
-		text="Wonderful news! Now you have helped our town, too. I will send a messenger to Volozh right now to inform the Supreme Wise Man about it."
+		text="Wonderful news! Now you have helped our town, too. I will send a messenger to Volozh right now to inform Supreme Sage about it."
 		role="NPC"
 		nextReplies="Dlg_pl_002932" />
 
@@ -1477,7 +1477,7 @@
 
 	<Reply
 		name="Dlg_pl_002922"
-		text="Same to you. One of the wise men told me to help the settlements around here. I heard that you had stopped supplying raw materials to Rinolsk, and I came here to find out what had happened."
+		text="Same to you. Supreme Sage told me to help the settlements around here. I heard that you had stopped supplying raw materials to Rinolsk, and I came here to find out what had happened."
 		role="PLAYER"
 		nextReplies="Dlg_npc_002923" />
 
@@ -1559,7 +1559,7 @@
 
 	<Reply
 		name="Dlg_npc_002941"
-		text="I can't tell you that; you'd better ask in Volozh. The wise men will decide for themselves whether to share this information with you or not."
+		text="I can't tell you that; you'd better ask in Volozh. The sages will decide for themselves whether to share this information with you or not."
 		role="NPC"
 		nextReplies="Dlg_pl_002942" />
 
@@ -1571,7 +1571,7 @@
 
 	<Reply
 		name="Dlg_npc_002943"
-		text="Here, take it - we brought some ore from our husbands' last shift. Take it to Rinolsk; it's not right for such large factories to stand idle. And we'll tell the Supreme Wise Man that you helped us."
+		text="Here, take it - we brought some ore from our husbands' last shift. Take it to Rinolsk; it's not right for such large factories to stand idle. And we'll tell the Supreme Sage that you helped us."
 		role="NPC"
 		nextReplies="Dlg_pl_002944" />
 
@@ -1717,7 +1717,7 @@
 
 	<Reply
 		name="Dlg_pl_003252"
-		text="Helped?! But I didn't even...|Well, all right then. Good luck to you. It's time for me to have a word with the Supreme Wise Man."
+		text="Helped?! But I didn't even...|Well, all right then. Good luck to you. It's time for me to have a word with the Supreme Sage."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
 
@@ -1749,7 +1749,7 @@
 
 	<Reply
 		name="Dlg_pl_002990"
-		text="Well, as you wish. Now it's time for me to have a word with the Supreme Wise Man."
+		text="Well, as you wish. Now it's time for me to have a word with Supreme Sage."
 		role="PLAYER"
 		scriptResult="RemoveQuestItem('Dobroslava_P'); AddFadingMsgByStrIdFormatted( 'fm_player_fem_poput', 'Dobroslava_P'); EndConversation()" />
 <!--Root/r5m2/Торговец картой-->
@@ -1940,13 +1940,13 @@
 
 	<Reply
 		name="Dlg_pl_003319"
-		text="I did. Here, take it. I don't know why you need them, and I don't want to know actually, but tell the Supreme Wise Man that I helped you."
+		text="I did. Here, take it. I don't know why you need them, and I don't want to know actually, but tell Supreme Sage that I helped you."
 		role="PLAYER"
 		nextReplies="Dlg_npc_003320" />
 
 	<Reply
 		name="Dlg_npc_003320"
-		text="S-s-supreme Wise Man? M-maybe I can do something else?"
+		text="S-s-supreme Sage? M-maybe I can do something else?"
 		role="NPC"
 		nextReplies="Dlg_pl_003321" />
 
@@ -1989,7 +1989,7 @@
 
 	<Reply
 		name="Dlg_pl_003329"
-		text="No way! First you make me search waist-deep in the snow for your scrap, and now you dare ask me to silently tolerate it? The Supreme Wise Man will know about this immediately!"
+		text="No way! First you make me search waist-deep in the snow for your scrap, and now you dare ask me to silently tolerate it? Supreme Sage will know about this immediately!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003340" />
 

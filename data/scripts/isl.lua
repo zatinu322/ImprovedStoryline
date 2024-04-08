@@ -1,4 +1,4 @@
--- Special settings for ISL (ComPatch version)
+-- Special settings for ISL
 
 -- версия
 EXECUTE_SCRIPT "data\\scripts\\version.lua"
@@ -20,6 +20,14 @@ function CorrectSkippingMode()
 	end
 
 	return true
+end
+
+-- безопасное удаление объекта, который может уже не существовать
+function SafeRemove(object)
+	if object ~= nil then
+		object:Remove()
+		object = nil
+	end
 end
 
 -- отладочные команды

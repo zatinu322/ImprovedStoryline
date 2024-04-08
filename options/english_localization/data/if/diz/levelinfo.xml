@@ -109,7 +109,7 @@
 	<LevelInfo
 		name="r1m5"
 		file="data\maps\r1m5.ssl"
-		fullName="Mountains of the Wise"
+		fullName="Sage Mountains"
 		diz0=""
 		diz1=""
 		north="0 0 1"
@@ -133,7 +133,7 @@
 	<LevelInfo
 		name="r1m7"
 		file="data\maps\r1m7.ssl"
-		fullName="Labyrinth of the Wise"
+		fullName="Sage Labyrinth"
 		diz0=""
 		diz1=""
 		north="0 0 1"

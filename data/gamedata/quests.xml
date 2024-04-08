@@ -3690,7 +3690,7 @@
 		ConditionToGive="all complete"
 		PrecedingQuests="TalkWithFather_Quest"
 		OnComplete="AddPlayerMoney(350)"
-		OnFail='TDeactivate("RUINSWAR"); RemoveQuestItem("ArchProrab_P");'
+		OnFail='TDeactivate("RUINSWAR"); RemoveQuestItem("ArchProrab_P"); SafeRemove(getObj("CarOfSiencer_vehicle_0"))'
 		OnTake='ShowCircleOnMinimap( "r1m2", CVector(7468.556, 173.296, 5213.779), 100 )'
 		Levels="r1m2">
 		<quest

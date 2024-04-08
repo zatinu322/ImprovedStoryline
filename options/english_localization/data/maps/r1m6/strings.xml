@@ -719,7 +719,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|And yes, we've deactivated all the turrets on the bridge, so you can now enter the Wise Men's lands unhindered. I hope you find what you came here for. Farewell. And thank you for your help!"
+		value="MIKOLKA|And yes, we've deactivated all the turrets on the bridge, so you can now enter the sage's lands unhindered. I hope you find what you came here for. Farewell. And thank you for your help!"
 		time="14" />
 
 	<string
@@ -743,7 +743,7 @@
 		id="82"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="That's good to hear. Well, now to the wise men's lands."
+		value="That's good to hear. Well, now to the sage's lands."
 		sound=""
 		time="7" />
 
@@ -889,7 +889,7 @@
 		id="99"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="And here is their final hiding place! Just a little more, and I can make my way to the wise men's lands!"
+		value="And here is their final hiding place! Just a little more, and I can make my way to the sage's lands!"
 		sound=""
 		time="9" />
 
@@ -922,7 +922,7 @@
 	<string
 		id="103"
 		modelName=""
-		value="You failed to protect Serafima, and because of that the locals no longer want anything to do with you. Now you won't be able to save Lisa and clear the way to the wise men's lands."
+		value="You failed to protect Serafima, and because of that the locals no longer want anything to do with you. Now you won't be able to save Lisa and clear the way to the sage's lands."
 		sound="data\sounds\speech\rolik\ending8.ogg"
 		fontSize="18"
 		time="12" />

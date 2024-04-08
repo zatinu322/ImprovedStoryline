@@ -931,13 +931,13 @@
 
 	<QuestInfo
 		questName="FindVolozh_Quest"
-		briefDiz="Find the Wise Men"
-		fullDiz="Now that I have arrived in the Mountains of the Wise, I need to find out where the wise men live."
+		briefDiz="Find the sages"
+		fullDiz="Now that I have arrived in Sage Mountains, I need to find out where the sages live."
 		isMainQuest="1" />
 
 	<QuestInfo
 		questName="FindVolozh_Quest1"
-		briefDiz="Ask about the Wise Men in Ermakovo"
+		briefDiz="Ask about the sages in Ermakovo"
 		isMainQuest="1">
 		<Map
 			name="r1m5"
@@ -1092,7 +1092,7 @@
 	<QuestInfo
 		questName="GoToMudr_Quest"
 		briefDiz="Go to the mountains"
-		fullDiz="Now that nothing else prevents me from crossing the bridge, I must go to the wise men and find out from them where I can find the composite."
+		fullDiz="Now that nothing else prevents me from crossing the bridge, I must go to the sages and find out from them where I can find the composite."
 		isMainQuest="1" />
 
 	<QuestInfo
@@ -1106,7 +1106,7 @@
 
 	<QuestInfo
 		questName="GoToMudr_Quest2"
-		briefDiz="Go to the Wise Men"
+		briefDiz="Go to the sages"
 		isMainQuest="1">
 		<Map
 			name="r1m6"
@@ -1124,7 +1124,7 @@
 
 	<QuestInfo
 		questName="GoToMudrec2"
-		briefDiz="Go to the Wise Men"
+		briefDiz="Go to the sages"
 		isMainQuest="1">
 		<Map
 			name="r1m6"
@@ -1133,7 +1133,7 @@
 
 	<QuestInfo
 		questName="GoToMudrec_Quest"
-		briefDiz="Evacuate the locals and go to the Wise Men"
+		briefDiz="Evacuate the locals and go to the sages"
 		fullDiz="Now that the adepts have left Lidencloud, it is necessary to evacuate the locals."
 		isMainQuest="1" />
 
@@ -1194,7 +1194,7 @@
 	<QuestInfo
 		questName="HelpVillages_Quest"
 		briefDiz="Help people in three settlements"
-		fullDiz="In order to gain the trust of the wise men, I need to help three people from different places."
+		fullDiz="In order to gain the trust of the sages, I need to help three people from different places."
 		isMainQuest="1" />
 
 	<QuestInfo
@@ -1842,7 +1842,7 @@
 	<QuestInfo
 		questName="RPGSigns_Quest"
 		briefDiz="Deal with the signs in the fields"
-		fullDiz="Even lands as remote as the Mountains of the Wise have not been unaffected by the mysterious phenomenon of signs in the fields."
+		fullDiz="Even lands as remote as Sage Mountains have not been unaffected by the mysterious phenomenon of signs in the fields."
 		isMainQuest="0" />
 
 	<QuestInfo
@@ -3855,7 +3855,7 @@
 
 	<QuestInfo
 		questName="r1m5_AnanagaBetrayal_Quest"
-		briefDiz="Report on Bratislav to the Supreme Wise Man"
+		briefDiz="Report on Bratislav to Supreme Sage"
 		fullDiz="I spent half a day digging waist-deep in the snow, only to find out later that the &quot;vital&quot; aggregate was a regular ananaga moonshiner."
 		isMainQuest="0">
 		<Map
@@ -3908,7 +3908,7 @@
 	<QuestInfo
 		questName="r1m5_AnanagaWait_Quest"
 		briefDiz="Wait for Bratislav to make his best ananaga"
-		fullDiz="It turned out that Bratislav needed parts to repair his ananaga moonshiner, and he was hiding it from me because he was afraid of the Supreme Wise Man's wrath. I agreed not to report on him away if he would make ananaga according to my recipes."
+		fullDiz="It turned out that Bratislav needed parts to repair his ananaga moonshiner, and he was hiding it from me because he was afraid of Supreme Sage's wrath. I agreed not to report on him away if he would make ananaga according to my recipes."
 		isMainQuest="0" />
 
 	<QuestInfo

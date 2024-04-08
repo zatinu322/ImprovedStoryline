@@ -2176,7 +2176,7 @@
 				Belong="1009"
 				Prototype="NPC"
 				ModelName="r1_man"
-				cfg="111"
+				cfg="110"
 				NpcType="BARMAN"
 				SpokenCount="0" />
 

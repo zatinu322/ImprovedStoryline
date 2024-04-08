@@ -359,11 +359,11 @@
 
 	<string
 		id="Belong_1090"
-		value="Wise Men" />
+		value="Sages" />
 
 	<string
 		id="Belong_1090_abb"
-		value="Wise" />
+		value="Sages" />
 
 	<string
 		id="Belong_1090_diz"
@@ -379,9 +379,7 @@
 
 	<string
 		id="Belong_1092_diz"
-		value="The mysterious cult that attacks civilians in the Mountains of the Wise." />
-
-
+		value="The mysterious cult that attacks civilians in Sage Mountains." />
 	
 	<string
 		id="Belong_1018"

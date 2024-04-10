@@ -142,14 +142,14 @@
 		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
-		value="CARAVANNER MADS|I'm going to try my luck in the Eastern. They say there will soon be regular caravans from there to the Sowth. It would be foolish to miss such an opportunity."
+		value="CARAVANNER MADS|I'm going to try my luck in Eastern. They say there will soon be regular caravans from there to Sowth. It would be foolish to miss such an opportunity."
 		sound=""
 		time="9" />
 
 	<string
 		id="2150"
 		modelName="mask_hero"
-		value="Yeah, it's been hard to find any traveling traders in the Sowth lately. I'm from that region myself, so I know what I'm talking about."
+		value="Yeah, it's been hard to find any traveling traders in Sowth lately. I'm from that region myself, so I know what I'm talking about."
 		sound=""
 		time="12" />
 
@@ -159,7 +159,7 @@
 		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
-		value="CARAVANNER MADS|If I ever get into the Sowth, I'll be sure to tell them how you saved my life."
+		value="CARAVANNER MADS|If I ever get into Sowth, I'll be sure to tell them how you saved my life."
 		sound=""
 		time="7" />
 
@@ -308,7 +308,7 @@
 		id="226"
 		modelName="mask_hero"
 		sound=""
-		value="Lisa... Even though I wanted to kill you when you stole my father's disks, I always knew you are a good person. Even then, in the Sowth, when my common sense told me to refuse, I agreed to help you."
+		value="Lisa... Even though I wanted to kill you when you stole my father's disks, I always knew you are a good person. Even then, in Sowth, when my common sense told me to refuse, I agreed to help you."
 		time="15" />
 
 	<string
@@ -717,7 +717,7 @@
 	<string
 		id="77798"
 		modelName=""
-		value="Despite all the bandits' attempts to take over the Sowth, it stood firm. The timely help of one brave and concerned traveler literally saved the entire Krai."
+		value="Despite all the bandits' attempts to take over Sowth, it stood firm. The timely help of one brave and concerned traveler literally saved the entire Krai."
 		sound="data\sounds\speech\rolik\narator_r1m1_g.ogg"
 		fontSize="18"
 		time="11" />

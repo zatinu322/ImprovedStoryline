@@ -282,7 +282,7 @@
 
 	<Object
 		Name="Lukoil"
-		FullName="CHESNOKOIL" />
+		FullName="TCHESTNOKOIL" />
 
 	<Object
 		Name="Lukoil_Shop"
@@ -302,7 +302,7 @@
 
 	<Object
 		Name="Lukoil_enter"
-		FullName="CHESNOKOIL" />
+		FullName="TCHESTNOKOIL" />
 
 	<Object
 		Name="Svalka"

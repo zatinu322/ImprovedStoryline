@@ -2250,7 +2250,7 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N03"
-		text="If you don't mind, I'll start this story from the beginning. A long time ago, at the very end of 2011, on December 31st, the Gadad City Military Command Center detected an unidentified flying object slowly approaching our planet. After a short meeting, the leadership of the center decided to launch a missile strike on the object."
+		text="If you don't mind, I'll start this story from the beginning. A long time ago, at the very end of 2011, on December 31st, Gadad City Military Command Center detected an unidentified flying object slowly approaching our planet. After a short meeting, the leadership of the center decided to launch a missile strike on the object."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N04" />
 
@@ -2400,7 +2400,7 @@
 
 	<Reply
 		name="Dlg_pl_003086"
-		text="And why did you have to pretend to be a trader in the Sowth?"
+		text="And why did you have to pretend to be a trader in Sowth?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003087" />
 
@@ -12146,7 +12146,7 @@
 
 	<Reply
 		name="Dlg_npc_003153"
-		text="Now let's wait until the caravan arrives from Lost village. It is from this village that Minin gets his food."
+		text="Now let's wait until the caravan arrives from Lost. It is from this village that Minin gets his food."
 		role="NPC"
 		nextReplies="Dlg_pl_003154" />
 
@@ -13108,7 +13108,7 @@
 
 	<Reply
 		name="Kollizey3_hellodlg0_P1_1"
-		text="I want to tell you about the opening of the Colosseum. The arena behind the Olympic will soon begin to perform battles again."
+		text="I want to tell you about the opening of the Colosseum. The arena behind Olympic will soon begin to perform battles again."
 		role="PLAYER"
 		nextReplies="Kollizey3_hellodlg0_1" />
 
@@ -13663,7 +13663,7 @@
 
 	<Reply
 		name="Dlg_pl_xyz280"
-		text="I need to find someone, and your friend in the Sowth said you could help me with that."
+		text="I need to find someone, and your friend in Sowth said you could help me with that."
 		role="PLAYER"
 		nextReplies="Dlg_npc_xyz281" />
 
@@ -16708,7 +16708,7 @@
 
 	<Reply
 		name="Dlg_npc_001480"
-		text="Well! I did it myself! And before that, my Grandma made it! This ain't the crap they serve in the Sowth! This is... what's it called... a family recipe... That's it! Cheers!"
+		text="Well! I did it myself! And before that, my Grandma made it! This ain't the crap they serve in Sowth! This is... what's it called... a family recipe... That's it! Cheers!"
 		role="NPC"
 		nextReplies="Dlg_pl_001481" />
 
@@ -16946,7 +16946,7 @@
 
 	<Reply
 		name="Dlg_npc_000559"
-		text="Money? What money? Did I say one word to you in the Sowth's bar about money?"
+		text="Money? What money? Did I say one word to you in Sowth's bar about money?"
 		role="NPC"
 		nextReplies="Dlg_pl_000557" />
 
@@ -17342,13 +17342,13 @@
 
 	<Reply
 		name="Buyer_hellodlg0_2"
-		text="Yeah, about the next deals... Unfortunately, today is the last time I'm in the Sowth. You and your father will have to find another trader."
+		text="Yeah, about the next deals... Unfortunately, today is the last time I'm in Sowth. You and your father will have to find another trader."
 		role="NPC"
 		nextReplies="Buyer_hellodlg0_P1_2" />
 
 	<Reply
 		name="Buyer_hellodlg0_P1"
-		text="Good afternoon, Sergo. I have this package for you. Regular delivery from the Glukhoe village."
+		text="Good afternoon, Sergo. I have this package for you. Regular delivery from Glukhoe village."
 		role="PLAYER"
 		nextReplies="Buyer_hellodlg0_1" />
 
@@ -17531,7 +17531,7 @@
 
 	<Reply
 		name="Dlg_npc_001415"
-		text="Wait, wait, no need to overreact. Someone tried to contact me on the radio this morning. The voice really sounded like my comrade from the Sowth. And now you show up and ask for a gun. Okay, I'll believe you. Storm or Kord?"
+		text="Wait, wait, no need to overreact. Someone tried to contact me on the radio this morning. The voice really sounded like my comrade from Sowth. And now you show up and ask for a gun. Okay, I'll believe you. Storm or Kord?"
 		role="NPC"
 		nextReplies="Dlg_pl_001416" />
 
@@ -17624,7 +17624,7 @@
 
 	<Reply
 		name="Dlg_npc_001386"
-		text="Listen, I guess you don't have a place to live now. I have an empty house in the Gugulino. How about if you settle down there for a while, and then we'll find you a job."
+		text="Listen, I guess you don't have a place to live now. I have an empty house in Gugulino. How about if you settle down there for a while, and then we'll find you a job."
 		role="NPC"
 		nextReplies="Dlg_pl_001387" />
 
@@ -17696,7 +17696,7 @@
 
 	<Reply
 		name="Dlg_npc_001399"
-		text="Try the Eastern. It will be the first big town on your way. The people there aren't very friendly, but I know a farmer from there. He spends all his spare time in a bar. Tell him I sent you, and he'll help. Probably."
+		text="Try Eastern. It will be the first big town on your way. The people there aren't very friendly, but I know a farmer from there. He spends all his spare time in a bar. Tell him I sent you, and he'll help. Probably."
 		role="NPC"
 		nextReplies="Dlg_pl_001400" />
 
@@ -17851,7 +17851,7 @@
 
 	<Reply
 		name="Dlg_npc_001423"
-		text="At the Zaimka. Ask Quentin. He owes me a little debt, so he'll pay me back with a gun for you. But he probably won't believe that I've sent you."
+		text="At Zaimka. Ask Quentin. He owes me a little debt, so he'll pay me back with a gun for you. But he probably won't believe that I've sent you."
 		role="NPC"
 		nextReplies="Dlg_pl_001424" />
 
@@ -17906,7 +17906,7 @@
 
 	<Reply
 		name="HurdTrucker_hellodlg2_P1_1"
-		text="I don't know. My father's last words were about not letting hate rule your actions. But Felix told me that the only witness of the Glukhoe attack had gone north. I could follow her and find out who is really to blame."
+		text="I don't know. My father's last words were about not letting hate rule your actions. But Felix told me that the only witness of Glukhoe attack had gone north. I could follow her and find out who is really to blame."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001419" />
 
@@ -18130,7 +18130,7 @@
 <!--Root/r1m1/Сюжетные/Василий-->
 	<Reply
 		name="Vasily1"
-		text="Oh, hello! Let me guess - a trip to the Sowth and back on your father's wreck. Look, it gets more and more damaged every day. So this time, it's 100 coins."
+		text="Oh, hello! Let me guess - a trip to Sowth and back on your father's wreck. Look, it gets more and more damaged every day. So this time, it's 100 coins."
 		role="NPC"
 		scriptCondition="QuestStatus('TalkToVasily')==Q_TAKEN"
 		nextReplies="Vasily1_P1" />
@@ -18192,7 +18192,7 @@
 
 	<Reply
 		name="Vasily5"
-		text="Wait...|Hear that? It's rumbling. Sounded like heavy equipment, coming from the east."
+		text="Wait...|Hear that? It's rumbling. Sounds like heavy equipment, coming from the east."
 		role="NPC"
 		nextReplies="Vasily5_P5" />
 

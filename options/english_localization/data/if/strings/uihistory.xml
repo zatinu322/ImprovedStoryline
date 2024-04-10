@@ -2,7 +2,7 @@
 <resource>
 	<string
 		id="r1_Firsy_History_00"
-		value="We’ve been taking our vegetables to the Sowth’s market for years. I’m not a bad driver, but father never let me go there on my own until today. But today is my birthday: I can do whatever I want! I bet dad is preparing a surprise for me and wants me to be out of his way for now. Well, I'm going to dive into big city life then!" />
+		value="We’ve been taking our vegetables to Sowth’s market for years. I’m not a bad driver, but father never let me go there on my own until today. But today is my birthday: I can do whatever I want! I bet dad is preparing a surprise for me and wants me to be out of his way for now. Well, I'm going to dive into big city life then!" />
 
 	<string
 		id="r1_Yes_Lisa_History_01"
@@ -42,7 +42,7 @@
 
 	<string
 		id="r1_Kill_Felix_00"
-		value="The bandits' base lies in ruins, Felix has fled with his tail between his legs. He wasn't the one responsible for my father's death, so I didn't have the guts to kill him in cold blood. He may be evil, but who am I to be his judge? The men who had destroyed the Glukhoe were far more powerful than this pack of scum. I realized it myself when I attacked their hideout, and the leader's words only confirmed my thinking. The only witness to the horrible crime was Lisa, a visitor from the north. Perhaps I should follow her? I'll talk to the bartender about it." />
+		value="The bandits' base lies in ruins, Felix has fled with his tail between his legs. He wasn't the one responsible for my father's death, so I didn't have the guts to kill him in cold blood. He may be evil, but who am I to be his judge? The men who had destroyed Glukhoe were far more powerful than this pack of scum. I realized it myself when I attacked their hideout, and the leader's words only confirmed my thinking. The only witness to the horrible crime was Lisa, a visitor from the north. Perhaps I should follow her? I'll talk to the bartender about it." />
 
 	<string
 		id="r1_Father_Room_00"

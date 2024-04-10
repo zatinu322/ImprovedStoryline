@@ -135,7 +135,7 @@
 
 	<QuestInfo
 		questName="BenMZ_Quest"
-		briefDiz="Take a chance at Small Land's bar"
+		briefDiz="Take a chance at the Small Land's bar"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -225,7 +225,7 @@
 	<QuestInfo
 		questName="BenStaruha_Quest"
 		briefDiz="Meet the village witch"
-		fullDiz="The mechanic at the Eastern was frightened when he found out that Ben The Throttle was an explorer, and told me to look for the village witch, because only she could know where his house is. Sounds crazy, but I had no other clues."
+		fullDiz="The mechanic at Eastern was frightened when he found out that Ben The Throttle was an explorer, and told me to look for the village witch, because only she could know where his house is. Sounds crazy, but I had no other clues."
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -433,7 +433,7 @@
 
 	<QuestInfo
 		questName="DefendSowth_Quest"
-		briefDiz="Protect the Sowth"
+		briefDiz="Protect Sowth"
 		fullDiz="To help the people of South in the defense of the city, I need to deliver materials to build two pillboxes, which will take the major strike in the battle with the bandits, and then to fight this attack in the first ranks."
 		isMainQuest="1" />
 
@@ -1504,7 +1504,7 @@
 
 	<QuestInfo
 		questName="LisaAtSouth"
-		briefDiz="Talk to Lisa in the Sowth's bar"
+		briefDiz="Talk to Lisa in Sowth's bar"
 		fullDiz="The mysterious girl asked me to show her the countryside. It is necessary to talk to her before deciding anything."
 		isMainQuest="1">
 		<Map
@@ -1529,7 +1529,7 @@
 	<QuestInfo
 		questName="LisaVPeshte"
 		briefDiz="Look for Lisa in Pesht"
-		fullDiz="Lisa has stolen my father's disc! It is urgent to find her before the trail goes cold. She could not have left these lands without passing through the Pesht, so I should start the search from there."
+		fullDiz="Lisa has stolen my father's disc! It is urgent to find her before the trail goes cold. She could not have left these lands without passing through Pesht, so I should start the search from there."
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -2082,7 +2082,7 @@
 
 	<QuestInfo
 		questName="TalkToBarmenBeforeDesert"
-		briefDiz="Drive to the Sowth"
+		briefDiz="Drive to Sowth"
 		fullDiz="Before I go into the desert, I'd like to stop at Sowth and see how things are going there."
 		isMainQuest="1">
 		<Map
@@ -2240,7 +2240,7 @@
 
 	<QuestInfo
 		questName="VisitBarmen"
-		briefDiz="Talk to bartender Dronn in the Sowth"
+		briefDiz="Talk to bartender Dronn in Sowth"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -3149,7 +3149,7 @@
 
 	<QuestInfo
 		questName="d_SkladMidgardBen_Quest"
-		briefDiz="Talk to the Midgard's steward"
+		briefDiz="Talk to the Midgard's supply manager"
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -3813,7 +3813,7 @@
 	<QuestInfo
 		questName="r1m3_TalkWithThiefFromFatherHouse"
 		briefDiz="Follow the thief"
-		fullDiz="The thief has nowhere to go, but to the Base 51. He'll try to sell the stolen goods somewhere where the scum hang out."
+		fullDiz="The thief has nowhere to go, but to Base 51. He'll try to sell the stolen goods somewhere where the scum hang out."
 		isMainQuest="1">
 		<Map
 			name="r1m3"
@@ -4179,7 +4179,7 @@
 
 	<QuestInfo
 		questName="r2m2_FindROMinCastle"
-		briefDiz="Go to the Monastery"
+		briefDiz="Go to Monastery"
 		fullDiz="I need to deliver some wine from the monastery. But I think there's something shady about this simple task..."
 		isMainQuest="1">
 		<Map
@@ -4322,7 +4322,7 @@
 
 	<QuestInfo
 		questName="r2m2_ReturnHeadsQuest"
-		briefDiz="Return to the Monastery"
+		briefDiz="Return to Monastery"
 		isMainQuest="0">
 		<Map
 			name="r2m2"
@@ -4389,7 +4389,7 @@
 	<QuestInfo
 		questName="r2m2_ToLisaToMonastir"
 		briefDiz="Ask in Monastery about Lisa"
-		fullDiz="I heard the Monastery nuns know more than they say. And if they are really hiding Lisa, she won’t escape this time!"
+		fullDiz="I heard that the monastery nuns know more than they say. And if they are really hiding Lisa, she won’t escape this time!"
 		isMainQuest="1">
 		<Map
 			name="r2m2"

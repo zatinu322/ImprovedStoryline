@@ -538,7 +538,7 @@
 	<string
 		id="77793"
 		modelName=""
-		value="Despite all the bandits' attempts to take over the Sowth, it stood firm. The timely help of one brave and concerned traveler literally saved the entire Krai."
+		value="Despite all the bandits' attempts to take over Sowth, it stood firm. The timely help of one brave and concerned traveler literally saved the entire Krai."
 		sound="data\sounds\speech\rolik\narator_r1m1_g.ogg"
 		fontSize="18"
 		time="11" />
@@ -583,7 +583,7 @@
 	<string
 		id="15"
 		modelName="mask_hero"
-		value="It seems that this was the last one... Now the people of the Sowth can breathe a sigh of relief."
+		value="It seems that this was the last one... Now the people of Sowth can breathe a sigh of relief."
 		sound=""
 		time="7" />
 

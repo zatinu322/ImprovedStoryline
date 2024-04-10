@@ -111,7 +111,7 @@
 
 	<Object
 		Name="Serrafima"
-		FullName="Serafima" />
+		FullName="Seraphima" />
 
 	<Object
 		Name="Voevoda"
@@ -139,11 +139,11 @@
 
 	<Object
 		Name="SerafimaHouse"
-		FullName="SERAFIMA'S HOUSE" />
+		FullName="SERAPHIMA'S HOUSE" />
 
 	<Object
 		Name="TheSerafimaHouse_Workshop"
-		FullName="SERAFIMA'S HOUSE" />
+		FullName="SERAPHIMA'S HOUSE" />
 
 	<Object
 		Name="LisaPlen1"

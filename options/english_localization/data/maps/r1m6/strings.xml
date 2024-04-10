@@ -261,14 +261,14 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|Thank you! Thank you! Thank you so much! If it weren't for you, I would have found my death there!"
+		value="SERAPHIMA|Thank you! Thank you! Thank you so much! If it weren't for you, I would have found my death there!"
 		time="7" />
 
 	<string
 		id="31"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="Serafima, right?"
+		value="Seraphima, right?"
 		sound=""
 		time="3" />
 
@@ -279,7 +279,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|Yes, I am Serafima. And who are you? I've never seen you before."
+		value="SERAPHIMA|Yes, I am Seraphima. And who are you? I've never seen you before."
 		time="6" />
 
 	<string
@@ -297,7 +297,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|Wait! Let's go to my house first. I have something there that might be very useful to us."
+		value="SERAPHIMA|Wait! Let's go to my house first. I have something there that might be very useful to us."
 		time="9" />
 
 	<string
@@ -323,7 +323,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|An old abandoned station. There is a control panel inside, but the entrance is protected by some strange mechanism, which no one has been able to open so far..."
+		value="SERAPHIMA|An old abandoned station. There is a control panel inside, but the entrance is protected by some strange mechanism, which no one has been able to open so far..."
 		time="11" />
 
 	<string
@@ -341,7 +341,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|That's probably true. I'm pretty sure there's nothing but junk inside. That's enough time to waste, let's move on."
+		value="SERAPHIMA|That's probably true. I'm pretty sure there's nothing but junk inside. That's enough time to waste, let's move on."
 		time="9" />
 
 	<string
@@ -351,7 +351,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|Here's my house. Or rather, what's left of it. Now we have to find my hiding place in this ruin. I don't think the adepts could find it."
+		value="SERAPHIMA|Here's my house. Or rather, what's left of it. Now we have to find my hiding place in this ruin. I don't think the adepts could find it."
 		time="12" />
 
 	<string
@@ -369,7 +369,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|No, I can do it myself. In the meantime, make sure no one gets near us. We're right next door to Moska."
+		value="SERAPHIMA|No, I can do it myself. In the meantime, make sure no one gets near us. We're right next door to Moska."
 		time="7" />
 
 	<string
@@ -387,7 +387,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|No. Otherwise you wouldn't have agreed to come here."
+		value="SERAPHIMA|No. Otherwise you wouldn't have agreed to come here."
 		time="4" />
 
 	<string
@@ -405,7 +405,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|Don't shoot! It's a friend. He lives in Moska and leaks information to us about what's going on there. If he showed up here, he must have something new."
+		value="SERAPHIMA|Don't shoot! It's a friend. He lives in Moska and leaks information to us about what's going on there. If he showed up here, he must have something new."
 		time="10" />
 
 	<string
@@ -415,7 +415,7 @@
 		modelCfg="241"
 		modelSlot="1"
 		sound=""
-		value="DIMITRY|Serafima, you are not alone..."
+		value="DIMITRY|Seraphima, you are not alone..."
 		time="4" />
 
 	<string
@@ -425,7 +425,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|He's not the enemy, he saved my life, so you can talk in his presence."
+		value="SERAPHIMA|He's not the enemy, he saved my life, so you can talk in his presence."
 		time="6" />
 
 	<string
@@ -453,7 +453,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|I got it. Thank you, Dimitry, keep me informed. But you'd better hold off on escaping for now. I'll contact you later and explain more."
+		value="SERAPHIMA|I got it. Thank you, Dimitry, keep me informed. But you'd better hold off on escaping for now. I'll contact you later and explain more."
 		time="9" />
 
 	<string
@@ -481,7 +481,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|I'll explain along the way. I found what I was looking for, now it is time to change vehicles."
+		value="SERAPHIMA|I'll explain along the way. I found what I was looking for, now it is time to change vehicles."
 		time="7" />
 
 	<string
@@ -499,7 +499,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|The grader. Unarmed, but we'll fix that in Severka. You'll have to be my bodyguard one more time."
+		value="SERAPHIMA|The grader. Unarmed, but we'll fix that in Severka. You'll have to be my bodyguard one more time."
 		time="9" />
 
 	<string
@@ -517,7 +517,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|You never know what could go wrong. All right, no more wasting time. Let's go!"
+		value="SERAPHIMA|You never know what could go wrong. All right, no more wasting time. Let's go!"
 		time="7" />
 
 	<string
@@ -644,7 +644,7 @@
 		id="71"
 		modelName="mask_hero"
 		modelSkin="1"
-		value="I got it. I can't even imagine what it's like for Serafima right now..."
+		value="I got it. I can't even imagine what it's like for Seraphima right now..."
 		sound=""
 		time="8" />
 
@@ -683,7 +683,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|He did a truly heroic act. He sacrificed his own life to save everyone else's. Without him, we wouldn't have made it."
+		value="SERAPHIMA|He did a truly heroic act. He sacrificed his own life to save everyone else's. Without him, we wouldn't have made it."
 		time="11" />
 
 	<string
@@ -701,7 +701,7 @@
 		modelCfg="248"
 		modelSlot="1"
 		sound=""
-		value="SERAFIMA|To the big ship anchored in the Moska River. And then to Le Canada. Maybe it would be quieter there."
+		value="SERAPHIMA|To the big ship anchored in the Moska River. And then to Le Canada. Maybe it would be quieter there."
 		time="11" />
 
 	<string
@@ -922,7 +922,7 @@
 	<string
 		id="103"
 		modelName=""
-		value="You failed to protect Serafima, and because of that the locals no longer want anything to do with you. Now you won't be able to save Lisa and clear the way to the sage's lands."
+		value="You failed to protect Seraphima, and because of that the locals no longer want anything to do with you. Now you won't be able to save Lisa and clear the way to the sage's lands."
 		sound="data\sounds\speech\rolik\ending8.ogg"
 		fontSize="18"
 		time="12" />

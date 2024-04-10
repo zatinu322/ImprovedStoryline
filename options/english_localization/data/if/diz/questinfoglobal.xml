@@ -1968,7 +1968,7 @@
 
 	<QuestInfo
 		questName="SaveSerafima_Quest"
-		briefDiz="Find Serafima"
+		briefDiz="Find Seraphima"
 		fullDiz="The Velimir's daughter went to an abandoned factory to look for parts for boat engines and hasn't returned yet. I should check if the adepts got to her."
 		isMainQuest="1" />
 
@@ -1984,7 +1984,7 @@
 
 	<QuestInfo
 		questName="SerafimaHome1"
-		briefDiz="Escort Serafima to her home"
+		briefDiz="Escort Seraphima to her home"
 		isMainQuest="1">
 		<Map
 			name="r1m6"
@@ -1993,7 +1993,7 @@
 
 	<QuestInfo
 		questName="SerafimaHome2"
-		briefDiz="Escort Serafima to the village"
+		briefDiz="Escort Seraphima to the village"
 		isMainQuest="1">
 		<Map
 			name="r1m6"
@@ -2002,8 +2002,8 @@
 
 	<QuestInfo
 		questName="SerafimaHome_Quest"
-		briefDiz="Protect Serafima"
-		fullDiz="Before going to Severka, Serafima wants to collect some things from her house. I hope it's something really important."
+		briefDiz="Protect Seraphima"
+		fullDiz="Before going to Severka, Seraphima wants to collect some things from her house. I hope it's something really important."
 		isMainQuest="1" />
 
 	<QuestInfo

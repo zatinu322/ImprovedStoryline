@@ -385,7 +385,7 @@
 
 	<Reply
 		name="Dlg_npc_002777"
-		text="We looked almost everywhere. A day ago, Serafima, my only daughter, went to check out the last place, an abandoned industrial plant, but she still hasn't come back. Do me a favor and see if she's had any trouble."
+		text="We looked almost everywhere. A day ago, Seraphima, my only daughter, went to check out the last place, an abandoned industrial plant, but she still hasn't come back. Do me a favor and see if she's had any trouble."
 		role="NPC"
 		nextReplies="Dlg_pl_002778" />
 
@@ -397,7 +397,7 @@
 
 	<Reply
 		name="Dlg_npc_002779"
-		text="Thank you so much for saving Serafima! They didn't manage to hurt her and she's fine. The fact that she found the blueprints is wonderful! But there's some bad news as well..."
+		text="Thank you so much for saving Seraphima! They didn't manage to hurt her and she's fine. The fact that she found the blueprints is wonderful! But there's some bad news as well..."
 		role="NPC"
 		scriptCondition="QuestStatus('SerafimaHome2')==Q_TAKEN and GetVar('Serafima').AsInt == 1"
 		scriptResult="CompleteQuest('SerafimaHome2')"
@@ -669,7 +669,7 @@
 
 	<Reply
 		name="Dlg_npc_002821"
-		text="And we will do it. The plan is as follows: first he arrives in Moska in my car and activates the detonator, and then you and the locals clean up the surviving soldiers of the adepts. Don't worry about the captured civilians: tonight Dimitry and Serafima will evacuate all the civilians and prisoners. We leave tomorrow. In the meantime, we'd better get some rest."
+		text="And we will do it. The plan is as follows: first he arrives in Moska in my car and activates the detonator, and then you and the locals clean up the surviving soldiers of the adepts. Don't worry about the captured civilians: tonight Dimitry and Seraphima will evacuate all the civilians and prisoners. We leave tomorrow. In the meantime, we'd better get some rest."
 		role="NPC"
 		nextReplies="Dlg_pl_002822" />
 

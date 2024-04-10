@@ -1,6 +1,6 @@
 if ISL_VERSION == nil then
     ISL_TYPE = "SD"
-    ISL_BUILD = "240406a"
+    ISL_BUILD = "240412a"
 
     ISL_VERSION = "120-"..ISL_BUILD.."-"..ISL_TYPE
 

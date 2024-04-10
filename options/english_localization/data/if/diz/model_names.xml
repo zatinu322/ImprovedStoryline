@@ -994,7 +994,7 @@
 	<Item
 		id="SeraFighter01"
 		locForm="0"
-		value="Serafima" />
+		value="Seraphima" />
 
 	<Item
 		id="Fighter01"
@@ -1059,7 +1059,7 @@
 	<Item
 		id="SeraTraktor01"
 		locForm="0"
-		value="Serafima" />
+		value="Seraphima" />
 
 	<Item
 		id="Tank01"

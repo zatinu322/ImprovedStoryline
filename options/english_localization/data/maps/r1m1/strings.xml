@@ -379,7 +379,7 @@
 		modelAutosized="true"
 		modelName="quest_letter"
 		modelSlot="1"
-		value="LETTER|&quot;...Only by doing what I had planned I could find peace and feel like a human being again.  If not... then I don't deserve to live.  This letter is an apology. Forgive me if you can. You are always in my heart, son.&quot;"
+		value="LETTER|&quot;...Only by doing what I had planned I could find peace and feel like a human being again.  If not... then I don't deserve to live. This letter is an apology. Forgive me if you can. You are always in my heart, son.&quot;"
 		sound="data\sounds\Speech\r1m1\r1m1_33336_letter.ogg"
 		time="20" />
 

@@ -690,17 +690,17 @@
 	<string
 		id="quest_start_father_letter_diz"
 		locForm="0"
-		value="If you are reading this letter, it means I didn't manage to come back. Sad but true. I know Peter well and have no worriers about your education. My heart hurts by the thought of you becoming a man, while I am far away. It is a real torment. But you must know that I had no other choice, but to leave. Too much is at stake. I have to right the wrong. Only by achieving my goal can I prove myself worthy of being called father... and husband. I am sorry, son. Forgive me, if you can." />
+		value="Son, if you are reading this letter, it means I couldn't go back and raise you myself. I know that Peter has brought you up nicely. I can almost see you, so young and full of strength, and my heart is filled with tears.|I blame myself for not being around when you were growing up. And this is my terrible punishment. But you must know that I couldn't do it any other way. I have the task of a lifetime ahead of me.|Only by doing what I had planned I could find peace and feel like a human being again. If not... then I don't deserve to live. This letter is an apology. Forgive me if you can. You are always in my heart, son." />
 
 	<string
 		id="quest_potato_diz"
 		locForm="0"
-		value="This shipment needs to be delivered to a neighboring city to complete my first independent trade deal." />
+		value="This packet needs to be delivered to Sowth to complete my first independent trade deal." />
 
 	<string
 		id="quest_medicine_box_diz"
 		locForm="0"
-		value="A box of medicine found in the ruins of an ancient hospital." />
+		value="The box of medicine found in the ruins of an ancient hospital." />
 
 	<string
 		id="quest_explosive_diz"
@@ -745,7 +745,7 @@
 	<string
 		id="quest_disk_1_diz"
 		locForm="0"
-		value="The disc that used to belong to Ivan Go. Surely this item must be of great value." />
+		value="The disc made of thin plastic. Surely this item must be of great value." />
 
 	<string
 		id="quest_disk_2_diz"
@@ -882,7 +882,7 @@
 	<string
 		id="FarmerDik_P_diz"
 		locForm="0"
-		value="A very rude farmer from Sowth whom I agreed to take to the gas station." />
+		value="Very rude farmer from Sowth whom I agreed to take to the gas station." />
 
 	<string
 		id="ArchProrab_P_diz"
@@ -922,7 +922,7 @@
 	<string
 		id="Heretik_P_diz"
 		locForm="0"
-		value="Heretic is a man who has been actively fighting the dictatorship of the Church of Enlightenment in Argen for several years. It is necessary to deliver him to the house of his friend." />
+		value="Heretic is a man who has been actively fighting the dictatorship of the Church of Enlightenment in Argen for several years. I need to deliver him to his friend's hiding spot." />
 
 	<string
 		id="Lisa_P_diz"

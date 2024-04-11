@@ -215,7 +215,7 @@
 	<QuestInfo
 		questName="BenSouth_Quest"
 		briefDiz="Find out who Ben The Throttle is"
-		fullDiz="My whole life has been turned upside down. To find myself, I have to find my real father, no matter what! The only clue was the name Ben The Throttle. Maybe someone at Sowth had heard of him?"
+		fullDiz="My whole life has been turned upside down. To find myself, I must find my real father, no matter what! The only clue is the name Ben The Throttle. Maybe someone at Sowth had heard of him?"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -255,7 +255,7 @@
 	<QuestInfo
 		questName="Buyer_Quest1"
 		briefDiz="Deliver package to Sowth"
-		fullDiz="I need to deliver a package to Sowth. Merchant Sergo has some business with my father."
+		fullDiz="I need to deliver this package to Sowth. Merchant Sergo has some business with my father."
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -1134,7 +1134,7 @@
 	<QuestInfo
 		questName="GoToMudrec_Quest"
 		briefDiz="Evacuate the locals and go to the sages"
-		fullDiz="Now that the adepts have left Lidencloud, it is necessary to evacuate the locals."
+		fullDiz="Now that the adepts have left Lidencloud, I must evacuate the locals."
 		isMainQuest="1" />
 
 	<QuestInfo
@@ -1505,7 +1505,7 @@
 	<QuestInfo
 		questName="LisaAtSouth"
 		briefDiz="Talk to Lisa in Sowth's bar"
-		fullDiz="The mysterious girl asked me to show her the countryside. It is necessary to talk to her before deciding anything."
+		fullDiz="The mysterious girl asked me to show her the countryside. I need to talk to her before deciding anything."
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -2296,7 +2296,7 @@
 	<QuestInfo
 		questName="WorkGiver_Quest1"
 		briefDiz="Bring rich farmer to the gas station"
-		fullDiz="A local, gnarly businessman asked me to take him to a gas station. I agreed, reluctantly."
+		fullDiz="One local, gnarly businessman asked me to take him to the gas station. I agreed, reluctantly."
 		isMainQuest="0">
 		<Map
 			name="r1m1"
@@ -3072,7 +3072,7 @@
 	<QuestInfo
 		questName="d_PunishBandits_Quest"
 		briefDiz="Teach bandits a lesson"
-		fullDiz="After a good drinking, Petro decided it was time to punish the bandit who had been mistreating the local girls. I must help him do it!"
+		fullDiz="After a good drinking, Petro decided it is time to punish the bandit who had been mistreating the local girls. I must help him do it!"
 		isMainQuest="0" />
 
 	<QuestInfo
@@ -3269,7 +3269,7 @@
 
 	<QuestInfo
 		questName="d_Village3_Quest"
-		briefDiz="Show Chesnokoil"
+		briefDiz="Show Tchestnokoil"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -4049,7 +4049,7 @@
 	<QuestInfo
 		questName="r2m1_TW_SellsCivilian"
 		briefDiz="Talk to the Seil people"
-		fullDiz="Somewhere in the surrounding area of this power plant city is a source of emissions that is blocking the Oracle's signals. It is necessary to find out what we are dealing with."
+		fullDiz="Somewhere in the surrounding area of this power plant city is a source of emissions that is blocking the Oracle's signals. I must find out what we are dealing with."
 		isMainQuest="1">
 		<Map
 			name="r1m2"

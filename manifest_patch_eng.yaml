@@ -20,17 +20,17 @@ other_info: assets/faq_en.md
 
 screenshots:
   - img: assets/screen_0.jpg
-    text: A new winter region consisting of three locations.
-  - img: assets/screen_1.jpg
+    text: New winter region consisting of three locations.
+  - img: assets/screen_1_en.jpg
     text: One of the many reworked in-game dialogues.
   - img: assets/screen_2.jpg
     text: Extended game intro - Lisa is talking to Felix at his base.
-  - img: assets/screen_3.jpg
+  - img: assets/screen_3_en.jpg
     text: Cutscene with the submarine in Hel with the main character's cut phrases restored.
-  - img: assets/screen_4.jpg
-    text: A system for displaying the player's current companions.
-  - img: assets/screen_5.jpg
-    text: Cutscene at the beginning of a new secondary quest.
+  - img: assets/screen_4_en.jpg
+    text: System for displaying the player's current companions.
+  - img: assets/screen_5_en.jpg
+    text: Cutscene at the beginning of the new secondary quest.
 
 # translations: [eng] TODO: add
  

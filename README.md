@@ -80,8 +80,8 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Скачать
 
-* ## Для Community Patch/Remaster v1.14
-  * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a) [RUS]
+* ## Для Community Patch/Remaster v1.14.1
+  * [Improved Storyline v1.2]() [RUS/EN]
 
 * ## Для оригинальной игры (steam, v1.02)
   * [Improved Storyline v1.0.5.3](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
@@ -96,6 +96,9 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 <a id="previous_versions_rus"></a>
 
 # Предыдущие версии
+
+* Для Community Patch/Remaster v1.14
+  * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a) [RUS]
 
 * Для Community Patch/Remaster v1.13
   * [Improved Storyline v1.1 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
@@ -177,8 +180,8 @@ More information about all changes and innovations can be found in the mod's [we
 
 # Download Links
 
-* ## For Community Patch/Remaster v1.14
-  * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
+* ## For Community Patch/Remaster v1.14.1
+  * [Improved Storyline v1.2]() [RUS/EN]
 
 * ## For original vanilla game (steam, v1.02)
   * [Improved Storyline v1.0.5.3](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
@@ -192,6 +195,10 @@ More information about all changes and innovations can be found in the mod's [we
 <a id="previous_versions_eng"></a>
 
 # Previous versions
+
+* For Community Patch/Remaster v1.14
+  * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
+
 * For Community Patch/Remaster v1.13
   * [Improved Storyline v1.1 for Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
   * [Improved Storyline v1.1 for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]

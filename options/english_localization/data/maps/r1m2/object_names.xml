@@ -74,11 +74,11 @@
 
 	<Object
 		Name="Kollizey2"
-		FullName="Cashier Kristin" />
+		FullName="Cashier Christine" />
 	
 	<Object
 		Name="Kollizey2_1"
-		FullName="Cashier Kristin" />
+		FullName="Cashier Christine" />
 
 	<Object
 		Name="Citizen"
@@ -158,7 +158,7 @@
 
 	<Object
 		Name="Ben"
-		FullName="Ben The Throttle" />
+		FullName="Ben Throttle" />
 
 	<Object
 		Name="TheSign"
@@ -202,7 +202,7 @@
 
 	<Object
 		Name="Ben2"
-		FullName="Ben The Throttle" />
+		FullName="Ben Throttle" />
 
 	<Object
 		Name="Stryga"

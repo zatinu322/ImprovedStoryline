@@ -14567,7 +14567,7 @@
 
 	<Reply
 		name="Dlg_npc_001573"
-		text="Да. 1000000 монет."
+		text="Да. Миллион монет."
 		role="NPC"
 		nextReplies="Dlg_pl_001574 Dlg_pl_003232" />
 
@@ -14617,7 +14617,7 @@
 
 	<Reply
 		name="Dlg_pl_001574"
-		text="Сколько??!"
+		text="Сколько?!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001575" />
 

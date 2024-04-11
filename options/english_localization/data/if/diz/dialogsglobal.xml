@@ -2274,7 +2274,7 @@
 
 	<Reply
 		name="r4m2_Bar_Scientist_2_N07"
-		text="As soon as the downed object hit the ground, the most developed nations sent their research teams to the crash site. When they managed to get inside the alien ship - and it was undoubtedly the alien ship - there was euphoria. What prospects awaited us: new medicines, heavy-duty materials, revolutionary technology ... But all we found was death."
+		text="As soon as the downed object hit the ground, the most developed nations sent their research teams to the crash site. When they managed to get inside the alien ship - and it was undoubtedly the alien ship - there was euphoria. What prospects awaited us: new medicines, heavy-duty materials, revolutionary technologies ... But all we found was death."
 		role="NPC"
 		nextReplies="r4m2_Bar_Scientist_2_N08" />
 
@@ -12953,7 +12953,7 @@
 
 	<Reply
 		name="Dlg_npc_001729"
-		text="We're not rich people, but we'll pay for the work. One rascal doesn't want us to excavate a mountain range not far from the city, he keeps showing up and asking for a fee. Every day he becomes more and more insistent, and very soon he will turn to aggressive actions."
+		text="We're not rich people, but we'll pay for the work. One rascal doesn't want us to excavate a mountain range not far from this town, he keeps showing up and asking for a fee. Every day he becomes more and more insistent, and very soon he will turn to aggressive actions."
 		role="NPC"
 		nextReplies="Dlg_pl_001730 Dlg_pl_001731" />
 
@@ -12996,7 +12996,7 @@
 
 	<Reply
 		name="Dlg_npc_001734"
-		text="No, of course not! Why go to such extremes? Destroy their transport and capture their leader, then take him here. Hand him over to me and you'll get your share."
+		text="No, of course not! Why go to such extremes? Destroy their transport and capture their leader, then take him to this spot. Hand him over to me and you'll get your share."
 		role="NPC"
 		nextReplies="Dlg_pl_001735 Dlg_pl_002588" />
 
@@ -13139,7 +13139,7 @@
 
 	<Reply
 		name="Professor_hellodlg0_P1_1"
-		text="Mysterious signs appeared in the field near Aeterna, residents of the nearby village are frightened."
+		text="Mysterious signs appeared in the fields near Aeterna, residents of the nearby village are frightened."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001712" />
 
@@ -13306,7 +13306,7 @@
 <!--Root/r1m2/Опциональные/Знаки в деревне-->
 	<Reply
 		name="Signer_hellodlg0"
-		text="What, you come to see the lost one, too? Well, look! Here I am! Marked by the devil!"
+		text="What, come to see the cursed one, too? Well, look! Here I am! Marked by the devil!"
 		role="NPC"
 		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and IsQuestTaken('Chifir_Quest') and not(QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED)"
 		nextReplies="Signer_hellodlg0_P1" />
@@ -13319,13 +13319,13 @@
 
 	<Reply
 		name="Signer_hellodlg0_2"
-		text="Mysterious signs have reappeared in my field! This is the second time! I don't know what to do anymore... Maybe you can at least dare to go and see what is there?"
+		text="Mysterious signs have appeared in my field! This is the second time! I don't know what to do anymore... Maybe you can at least dare to go and see what is there?"
 		role="NPC"
 		nextReplies="Signer_hellodlg0_P1_3" />
 
 	<Reply
 		name="Signer_hellodlg0_P1"
-		text="I don't know what you're talking about. I was told you had some kind of problem with the fields here."
+		text="I don't know what you're talking about. I was told you had some kind of problem with your fields here."
 		role="PLAYER"
 		nextReplies="Signer_hellodlg0_1" />
 
@@ -13349,7 +13349,7 @@
 
 	<Reply
 		name="Dlg_pl_001711"
-		text="Sounds good, let me see what exactly do you have in your field."
+		text="Sounds good, let me see what exactly do you have in your fields."
 		role="PLAYER"
 		scriptResult="GetCurNpc():SetSpokenCount( 1 );  TakeQuest('Signs_Quest');  EndConversation()" />
 
@@ -13398,7 +13398,7 @@
 
 	<Reply
 		name="Dlg_npc_001720"
-		text="Visit the three nearest major cities - Porto, Midgard and Aeterna - and tell the locals about the opening of the Colosseum. Come back here, when you've done."
+		text="Visit the three nearest major towns - Porto, Midgard and Aeterna - and tell the locals about the opening of the Colosseum. Come back here, when you've done."
 		role="NPC"
 		nextReplies="Dlg_pl_001721 Dlg_pl_001722" />
 
@@ -13435,7 +13435,7 @@
 
 	<Reply
 		name="Dlg_npc_001723"
-		text="Brilliant! We already have another participant. I'll call the audience right away. Go to the arena, it's all ready!"
+		text="Brilliant! We already have another participant. I'll call the crowd right away. Go to the arena, it's all ready!"
 		role="NPC"
 		nextReplies="Dlg_pl_001724" />
 
@@ -13447,7 +13447,7 @@
 
 	<Reply
 		name="Director_hellodlg2"
-		text="Wow, man, you're a born warrior. How about becoming a regular fighter in the Colosseum? A steady salary and comfortable home is guaranteed!"
+		text="Wow, man, you're a born warrior. How about becoming a regular fighter in the Colosseum? A steady salary and comfortable house is guaranteed!"
 		role="NPC"
 		scriptCondition="IsQuestTaken('ReturnToDirector2_Quest')   and   not(IsQuestComplete('ReturnToDirector2_Quest'))   and   not(IsQuestFailed('ReturnToDirector2_Quest'))   and   not(IsQuestComplete('Disk2OrakulLisa'))"
 		nextReplies="Director_hellodlg2_P1_1" />
@@ -13669,7 +13669,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz281"
-		text="Holy moly! Dronn himself sent you! Haven't seen him in ages, how is he?"
+		text="Holy moly! Dronn himself sent you! Haven't seen him in years, how is he?"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz282" />
 
@@ -13699,7 +13699,7 @@
 
 	<Reply
 		name="Dlg_pl_001530"
-		text="Ben The Throttle. He's an explorer."
+		text="Ben Throttle. He's an explorer."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001531" />
 
@@ -13717,7 +13717,7 @@
 
 	<Reply
 		name="Dlg_npc_001533"
-		text="These explorers... There is a rumor that they are in the service of the devil, and that demons and witches serve them!"
+		text="These explorers... Rumors say that they are in the service of the devil, and that demons and witches serve them!"
 		role="NPC"
 		nextReplies="Dlg_pl_001534" />
 
@@ -13908,7 +13908,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz317"
-		text="I hope you'll find what you're looking for. And if you ever need anything special, you should know that the most advanced technology is only in our city. All right, now go."
+		text="I hope you'll find what you're looking for. And if you ever need anything special, you should know that the most advanced technologies is only in our city. All right, now go."
 		role="NPC"
 		nextReplies="Dlg_pl_xyz319" />
 
@@ -13933,19 +13933,19 @@
 
 	<Reply
 		name="Dlg_npc_xyz307"
-		text="Damn it, he's at it again... How many times have I told him to do something useful, and he's still like a brick wall. All right, young man, I'll take care of it. Anything else?"
+		text="Damn it, he came there again... How many times have I told him to do something useful, and he's still like a brick wall. All right, young man, I'll take care of it. Anything else?"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz308" />
 
 	<Reply
 		name="Dlg_pl_xyz308"
-		text="Yes. I'm looking for one man, Ben The Throttle. I was told he used to live here. "
+		text="Yes. I'm looking for one man, Ben Throttle. I was told he used to live here. "
 		role="PLAYER"
 		nextReplies="Dlg_npc_xyz309" />
 
 	<Reply
 		name="Dlg_npc_xyz309"
-		text="Ben The Throttle... That name sounds familiar. As compensation for the inconvenience, I'll make inquiries about him. In the meantime, could you help the town? Not for free, of course."
+		text="Ben Throttle... That name sounds familiar. As compensation for the inconvenience, I'll make inquiries about him. In the meantime, could you help the town? Not for free, of course."
 		role="NPC"
 		nextReplies="Dlg_pl_xyz310" />
 
@@ -13957,7 +13957,7 @@
 
 	<Reply
 		name="Dlg_npc_001636"
-		text="It is urgent to deliver a load of high-tech equipment to Porto. We will transport it in a separate car. Your job is to escort this car to the port and back, destroying anyone who decides to interfere. I think 700 coins would be a fair price for such a risk."
+		text="It is urgent to deliver a load of high-tech equipment to Porto. We will transport it in a separate truck. Your job is to escort this vehicle to the port and back here, destroying anyone who decides to interfere. I think 700 coins would be a fair price for such a risk."
 		role="NPC"
 		nextReplies="Dlg_pl_001637" />
 
@@ -14044,7 +14044,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz293"
-		text="You little punk! Get out of here, and I never come to my house again!"
+		text="You little punk! Get out of here, and never come to my house ever again!"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz294" />
 
@@ -14070,7 +14070,7 @@
 
 	<Reply
 		name="Dlg_npc_001541"
-		text="Oh, honey, Marco told me everything. I'm so ashamed of my behavior! Come in quick, let me make you my special tea. "
+		text="Oh, honey, Marco told me everything. I'm so ashamed of my behavior! Come in, let me make you my special tea. "
 		role="NPC"
 		nextReplies="Dlg_pl_001542" />
 
@@ -14148,13 +14148,13 @@
 
 	<Reply
 		name="Dlg_npc_001551"
-		text="Once upon a time, fifty winters ago, I lived in Midgard, the capital of the region. The world was not yet what it is today. Everyone in that town was trying to make it a better place, from the common laborer to the best explorer. And there was one man that everyone respected. Ben The Throttle. He had a last name, of course, but almost everyone called him Throttle. After the device he'd rebuilt from old blueprints."
+		text="Once upon a time, fifty winters ago, I lived in Midgard, the capital of the region. The world was not yet what it is today. Everyone in that town was trying to make it a better place, from the common laborer to the best explorer. And there was one man that everyone respected. Ben Throttle. He had a last name, of course, but almost everyone called him Throttle. After the device he'd rebuilt from old blueprints."
 		role="NPC"
 		nextReplies="Dlg_pl_001552" />
 
 	<Reply
 		name="Dlg_pl_001552"
-		text="Wait, so Ben The Throttle lives in Midgard?"
+		text="Wait, so Ben Throttle lives in Midgard?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001553" />
 
@@ -14555,7 +14555,7 @@
 
 	<Reply
 		name="Dlg_npc_001571"
-		text="I could help you make up with her. I'll go over there and tell her that it was all a big misunderstanding, that you didn't mean to hurt nobody, and that you really want to drink her special strong tea. That's a necessary condition. Otherwise, you won't be forgiven, trust me."
+		text="I could help you make up with her. I'll go over there and tell her that it was all a big misunderstanding, that you didn't mean to insult her, and that you really want to drink her special strong tea. That's a necessary condition. Otherwise, you won't be forgiven, trust me."
 		role="NPC"
 		nextReplies="Dlg_pl_001572" />
 
@@ -14567,7 +14567,7 @@
 
 	<Reply
 		name="Dlg_npc_001573"
-		text="Exactly. 1000000 coins."
+		text="Exactly. One million coins."
 		role="NPC"
 		nextReplies="Dlg_pl_001574 Dlg_pl_003232" />
 
@@ -14599,7 +14599,7 @@
 
 	<Reply
 		name="Dlg_pl_003236"
-		text="So what are we going to do?"
+		text="So what are we going to do about it?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_003237" />
 
@@ -14617,7 +14617,7 @@
 
 	<Reply
 		name="Dlg_pl_001574"
-		text="How much??!"
+		text="How much?!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001575" />
 
@@ -14744,7 +14744,7 @@
 
 	<Reply
 		name="Dlg_npc_001609"
-		text="You'll be nervous when that kind of nonsense is going on with the fields."
+		text="You'll be nervous when that kind of nonsense is going on with your fields."
 		role="NPC"
 		nextReplies="Dlg_pl_001610" />
 
@@ -14819,7 +14819,7 @@
 
 	<Reply
 		name="Dlg_pl_001650"
-		text="Find out where one explorer lives. Ben The Throttle."
+		text="Find out where one explorer lives. Ben Throttle."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001651" />
 
@@ -15977,27 +15977,27 @@
 
 	<Reply
 		name="Dlg_pl_002622"
-		text="I'm sorry to bother you, but I'm looking for someone... Ben... Ben The Throttle. He's an explorer and lives somewhere around here..."
+		text="I'm sorry to bother you, but I'm looking for someone... Ben... Ben Throttle. He's an explorer and lives somewhere around here..."
 		role="PLAYER"
 		scriptCondition="not(IsQuestComplete('d_FindHouseOfBen_Quest'))"
 		nextReplies="Dlg_npc_xyz324" />
 
 	<Reply
 		name="Dlg_pl_xyz322"
-		text="Are you Ben The Throttle?"
+		text="Are you Ben Throttle?"
 		role="PLAYER"
 		scriptCondition="IsQuestComplete('d_FindHouseOfBen_Quest')"
 		nextReplies="Dlg_npc_xyz324" />
 
 	<Reply
 		name="Dlg_npc_xyz324"
-		text="Yes, Ben The Throttle, that's me... You sound very familiar... No, it can't be! Ivan?! You?!"
+		text="Yes, Ben Throttle, that's me... You sound very familiar... No, it can't be! Ivan?! You?!"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz325" />
 
 	<Reply
 		name="Dlg_pl_xyz325"
-		text="I'm sorry, but I don't know who you're talking about. My father... my stepfather... he was killed. Before he died, he gave me this disc and this letter and told me to find you. So now I stand here and I don't know what to do next."
+		text="I'm sorry, but I don't know who you're talking about. My father... my stepfather... he was killed. Before he died, he gave me this disc and this letter and told me to find you. So here I am, standing here and not knowing what to do next."
 		role="PLAYER"
 		nextReplies="Dlg_npc_xyz326" />
 
@@ -16075,7 +16075,7 @@
 
 	<Reply
 		name="Dlg_npc_xyz338"
-		text="No. But that's what made him take you to the edge of the world. He did everything he could to make sure you'd never know where he was going. And believe me, for a reason. What he found out changed him. He literally became obsessed with it. He left you at Peter's, said goodbye to me after that, and no one ever saw him again."
+		text="No. But that's what made him take you to the edge of the world. He did everything he could to make sure you'd never know where he was going. And believe me, for a reason. His discovery changed him. He literally became obsessed with it. He left you at Peter's, said goodbye to me after that, and no one ever saw him again."
 		role="NPC"
 		nextReplies="Dlg_pl_xyz339" />
 
@@ -16087,13 +16087,13 @@
 
 	<Reply
 		name="Dlg_npc_xyz340"
-		text="No. And I really don't want you to try to find out. If Ivan chose to protect you from all this, there must have been a very, very good reason for it. Are you ready for that truth to be revealed to you?"
+		text="No. And I really don't want you to try to find out. If Ivan chose to protect you from all of this, there must have been a very, very good reason for it. Are you ready for that truth to be revealed to you?"
 		role="NPC"
 		nextReplies="Dlg_pl_xyz341" />
 
 	<Reply
 		name="Dlg_pl_xyz341"
-		text="Ben, I have nothing left now. Just a few days ago I had a house, a job, friends, even girl I liked. And in an instant, I've lost everything. I need purpose. Meaning. Something worth living for. And now you're telling me to give it all up and stay away. No, it doesn't work like this!"
+		text="Ben, I have nothing left now. Just a few days ago I had a house, a job, friends, even girl I liked. And in a moment  I've lost everything. I need a purpose. A goal. Something worth living for. And now you're telling me to give it all up and stay away. No, it doesn't work like this!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001740" />
 
@@ -16117,7 +16117,7 @@
 
 	<Reply
 		name="Dlg_pl_001743"
-		text="Thank you very much. One more thing: I didn't take it into account at first, but before my village was attacked, I met a mysterious girl in a fast car. She was looking for an object that looked a lot like this disc. She said it would help her in her search for some explorer. Could it be that she was talking about Ivan? "
+		text="Thank you very much. One more thing: I didn't take it into account at first, but before my village was attacked, I met a mysterious girl on a fast car. She was looking for an object that looked a lot like this disc. She said it would help her in her search for some explorer. Could it be that she was talking about Ivan? "
 		role="PLAYER"
 		nextReplies="Dlg_npc_001744" />
 
@@ -16159,7 +16159,7 @@
 
 	<Reply
 		name="Dlg_npc_001750"
-		text="I will. Now give me the map so I can show you where your father lived.|Here. Ask in this town. They should still remember him."
+		text="I will. Now give me your map so I can show you where your father lived.|Here. Ask in this town. They should still remember him."
 		role="NPC"
 		nextReplies="Dlg_pl_001751" />
 
@@ -17642,7 +17642,7 @@
 
 	<Reply
 		name="Dlg_pl_001389"
-		text="My... my father told me about Ben The Throttle before he died. I need to find him. Father said that he is an explorer."
+		text="My... my father told me about Ben Throttle before he died. I need to find him. Father said that he is an explorer."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001391" />
 
@@ -17797,7 +17797,7 @@
 
 	<Reply
 		name="Dlg_npc_002600"
-		text="Your father was a wise man. I spoke to the mayor, and he promised me that he would increase the security of all the villages in the region, so that if your father's killers ever come to our land again, they won't get away. We'll take care of everything. And you go south and look for your Ben The Throttle. "
+		text="Your father was a wise man. I spoke to the mayor, and he promised me that he would increase the security of all the villages in the region, so that if your father's killers ever come to our land again, they won't get away. We'll take care of everything. And you go south and look for your Ben Throttle. "
 		role="NPC"
 		nextReplies="Dlg_pl_002601" />
 
@@ -17912,7 +17912,7 @@
 
 	<Reply
 		name="Dlg_npc_001419"
-		text="Your father was a wise man. I spoke to the mayor, and he promised me that he would increase the security of all the villages in the region, so that if your father's killers ever come to our land again, they won't get away. We'll take care of everything. And you go south and look for your Ben The Throttle. "
+		text="Your father was a wise man. I spoke to the mayor, and he promised me that he would increase the security of all the villages in the region, so that if your father's killers ever come to our land again, they won't get away. We'll take care of everything. And you go south and look for your Ben Throttle. "
 		role="NPC"
 		nextReplies="Dlg_pl_001420" />
 

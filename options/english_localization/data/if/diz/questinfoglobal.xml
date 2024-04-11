@@ -214,8 +214,8 @@
 
 	<QuestInfo
 		questName="BenSouth_Quest"
-		briefDiz="Find out who Ben The Throttle is"
-		fullDiz="My whole life has been turned upside down. To find myself, I must find my real father, no matter what! The only clue is the name Ben The Throttle. Maybe someone at Sowth had heard of him?"
+		briefDiz="Find out who Ben Throttle is"
+		fullDiz="My whole life has been turned upside down. To find myself, I must find my real father, no matter what! The only clue is the name Ben Throttle. Maybe someone at Sowth had heard of him?"
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -225,7 +225,7 @@
 	<QuestInfo
 		questName="BenStaruha_Quest"
 		briefDiz="Meet the village witch"
-		fullDiz="The mechanic at Aeterna was frightened when he found out that Ben The Throttle was an explorer, and told me to look for the village witch, because only she could know where his house is. Sounds crazy, but I had no other clues."
+		fullDiz="The mechanic at Aeterna was frightened when he found out that Ben Throttle is an explorer, and told me to look for the village witch, because only she could know where his house is. Sounds crazy, but I had no other clues."
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -536,7 +536,7 @@
 	<QuestInfo
 		questName="DestroyRuins_Quest"
 		briefDiz="Rob archeologists"
-		fullDiz="Rumour has it the archaeologists have dug up something interesting. They didn't spend much on guards, so I can kidnap their leader and demand their discovery as a ransom."
+		fullDiz="Rumours say that the archaeologists have dug up something interesting. They didn't spend much on guards, so me and my new criminal companion Dan can kidnap their leader and demand their discovery as a ransom."
 		isMainQuest="0" />
 
 	<QuestInfo
@@ -1184,7 +1184,7 @@
 	<QuestInfo
 		questName="HelpRuins_Quest"
 		briefDiz="Help archeologists"
-		fullDiz="Local raiders are obstructing work of archeologists at a nearby dig site. I agreed to protect them from the bandits attempting to steal the unearthed treasure."
+		fullDiz="One local raider is obstructing work of archeologists at a nearby dig site. I agreed to protect them from this bandit attempting to steal the unearthed treasure."
 		isMainQuest="0">
 		<Map
 			name="r1m2"
@@ -2222,7 +2222,7 @@
 	<QuestInfo
 		questName="VYar_Quest"
 		briefDiz="Take the package to Yarr"
-		fullDiz="A citizen of Locus agreed to justify me in the eyes of Grandma if I will deliver a parcel to his friend in Yarr."
+		fullDiz="One resident of Locus agreed to justify me in the eyes of Grandma if I will deliver a parcel to his friend in Yarr."
 		isMainQuest="1">
 		<Map
 			name="r1m2"

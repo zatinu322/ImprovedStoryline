@@ -3,7 +3,7 @@
 	<string
 		id="1"
 		modelName="mask_hero"
-		value="What a strange thing... It's like a mark. No wonder people are afraid: I'm feeling uneasy here myself. I'd better go and report this phenomenon to Midgard."
+		value="What a strange thing... It's like a mark. No wonder people are afraid - I'm feeling nervous here myself. I'd better go and report this phenomenon to Midgard."
 		sound="data\sounds\Speech\r1m2\r1m2_1_hero.ogg"
 		time="12" />
 
@@ -64,7 +64,7 @@
 	<string
 		id="26"
 		modelName="mask_hero"
-		value="Information. I'm looking for an explorer who lives in the middle of nowhere."
+		value="Information. I'm looking for the explorer who lives in the middle of nowhere."
 		sound=""
 		time="11" />
 
@@ -159,7 +159,7 @@
 		modelSkin="1"
 		modelCfg="94"
 		modelSlot="1"
-		value="CARAVANNER MADS|If I ever get into Sowth, I'll be sure to tell them how you saved my life."
+		value="CARAVANNER MADS|If I ever get to Sowth, I'll be sure to tell them how you saved my life."
 		sound=""
 		time="7" />
 

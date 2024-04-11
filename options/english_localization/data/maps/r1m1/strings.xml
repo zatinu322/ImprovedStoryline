@@ -11,7 +11,7 @@
 	<string
 		id="2"
 		modelName="mask_hero"
-		value="|Good morning to you, too. What are you so nervous about?"
+		value="Good morning to you, too. What are you so nervous about?"
 		sound="data\sounds\Speech\r1m1\r1m1_2_hero.ogg"
 		time="3" />
 
@@ -34,14 +34,14 @@
 	<string
 		id="4"
 		modelName="mask_hero"
-		value="|Is this the day?! I began to wonder if I'm going to be stuck on this farm till my old age!"
+		value="Is this the day?! I began to wonder if I'm going to be stuck on this farm till my old age!"
 		sound="data\sounds\Speech\r1m1\r1m1_4_hero.ogg"
 		time="6" />
 
 	<string
 		id="41"
 		modelName="mask_hero"
-		value="|I mean, I wanted to say, thank you very much, I'll try to live up to the trust you put in me, sir!"
+		value="I mean, I wanted to say, thank you very much, I'll try to live up to the trust you put in me, sir!"
 		sound="data\sounds\Speech\r1m1\r1m1_41_hero.ogg"
 		time="6" />
 
@@ -56,7 +56,7 @@
 	<string
 		id="6"
 		modelName="mask_hero"
-		value="|What, I can get in right away and go wherever I want?"
+		value="What, I can get in right away and go wherever I want?"
 		sound="data\sounds\Speech\r1m1\r1m1_6_hero.ogg"
 		time="4" />
 
@@ -71,7 +71,7 @@
 	<string
 		id="8"
 		modelName="mask_hero"
-		value="|Ho-oo-ray!!! I'll be right back! Take care, old man!"
+		value="Ho-oo-ray! I'll be right back! Take care, old man!"
 		sound="data\sounds\Speech\r1m1\r1m1_8_hero.ogg"
 		time="4" />
 
@@ -119,7 +119,7 @@
 	<string
 		id="1122"
 		modelName="mask_hero"
-		value="|Yes, all the villages, just like you said. Although, there's one village left, Glukhoe."
+		value="Yes, all the villages, just like you said. Although, there's one village left, Glukhoe."
 		sound="data\sounds\Speech\r1m1\r1m1_1122_hero.ogg"
 		time="5" />
 
@@ -134,7 +134,7 @@
 	<string
 		id="1124"
 		modelName="mask_hero"
-		value="|It's actually north of here over the mountains, not far at all, but there's no direct road. We'll have to go through Sowth..."
+		value="It's actually north of here over the mountains, not far at all, but there's no direct road. We'll have to go through Sowth..."
 		sound="data\sounds\Speech\r1m1\r1m1_1124_hero.ogg"
 		time="7" />
 
@@ -149,7 +149,7 @@
 	<string
 		id="1126"
 		modelName="mask_hero"
-		value="|So what was she looking for? It's time for me to head home, too. Time to find out what father was so worried about."
+		value="So what was she looking for? It's time for me to head home, too. Time to find out what father was so worried about."
 		sound="data\sounds\Speech\r1m1\r1m1_1126_hero.ogg"
 		time="7" />
 
@@ -159,14 +159,14 @@
 		modelSkin="0"
 		modelCfg="172"
 		modelSlot="1"
-		value="BANDIT FELIX|And here's our troublemaker. My sources tell me that you've become Lisa's assistant, and she's a generous girl... For a little contribution of 1000 coins you can continue your dirty business and even count on our support."
+		value="BANDIT FELIX|And here's our troublemaker. My sources tell me that you've become Lisa's assistant, and she's a generous girl... For a little contribution of a thousand coins you can continue your dirty business and even count on our support."
 		sound="data\sounds\Speech\r1m1\r1m1_1131_felix.ogg"
 		time="19" />
 
 	<string
 		id="1132"
 		modelName="mask_hero"
-		value="|What are you going on about? I don't have that kind of money! And who are you people anyway?"
+		value="What are you talking about? I don't have that much money! And who are you people anyway?"
 		sound="data\sounds\Speech\r1m1\r1m1_1132_hero.ogg"
 		time="5" />
 
@@ -176,7 +176,7 @@
 		modelSkin="0"
 		modelCfg="172"
 		modelSlot="1"
-		value="BANDIT FELIX|Then we'll have to sell your car for parts to compensate us the moral damage. Get him!"
+		value="BANDIT FELIX|Then we'll have to sell your truck parts to compensate us the moral damage. Get him!"
 		sound="data\sounds\Speech\r1m1\r1m1_1133_felix.ogg"
 		time="7" />
 
@@ -193,7 +193,7 @@
 	<string
 		id="1151"
 		modelName="mask_hero"
-		value="|I will avenge my father's death!"
+		value="I will avenge my father's death!"
 		sound="data\sounds\Speech\r1m1\r1m1_1151_hero.ogg"
 		time="3" />
 
@@ -210,7 +210,7 @@
 	<string
 		id="1153"
 		modelName="mask_hero"
-		value="|Is that all you've got? Come out and fight like a man!"
+		value="Is that all you've got? Come out and fight like a man!"
 		sound="data\sounds\Speech\r1m1\r1m1_1153_hero.ogg"
 		time="5" />
 
@@ -227,7 +227,7 @@
 	<string
 		id="1155"
 		modelName="mask_hero"
-		value="|Now you will die for your crimes!"
+		value="Now you will die for your crimes!"
 		sound="data\sounds\Speech\r1m1\r1m1_1155_hero.ogg"
 		time="3" />
 
@@ -244,7 +244,7 @@
 	<string
 		id="1157"
 		modelName="mask_hero"
-		value="|Only you have the manpower and audacity to burn down an entire village!"
+		value="Only you have the manpower and audacity to burn down an entire village!"
 		sound="data\sounds\Speech\r1m1\r1m1_1157_hero.ogg"
 		time="5" />
 
@@ -261,7 +261,7 @@
 	<string
 		id="1159"
 		modelName="mask_hero"
-		value="|You are lying!"
+		value="You are lying!"
 		sound="data\sounds\Speech\r1m1\r1m1_1159_hero.ogg"
 		time="1" />
 
@@ -278,7 +278,7 @@
 	<string
 		id="11511"
 		modelName="mask_hero"
-		value="|How do you know?"
+		value="How do you know?"
 		sound="data\sounds\Speech\r1m1\r1m1_11511_hero.ogg"
 		time="2" />
 
@@ -295,7 +295,7 @@
 	<string
 		id="11513"
 		modelName="mask_hero"
-		value="|Lisa... I feel she had something to do with all this... All right, Felix, I will spare your life. Pack up and get the hell outta here. But don't you ever show up around here ever again!"
+		value="Lisa... I feel she had something to do with all this... All right, Felix, I will spare your life. Pack up and get the hell outta here. And you better not show up around here ever again!"
 		sound="data\sounds\Speech\r1m1\r1m1_11513_hero.ogg"
 		time="14" />
 
@@ -305,14 +305,14 @@
 		modelSkin="0"
 		modelCfg="172"
 		modelSlot="1"
-		value="BANDIT FELIX|You won. But we will meet again, and I will be better prepared then."
+		value="BANDIT FELIX|You won. But we will meet again, and that time I will be better prepared."
 		sound="data\sounds\Speech\r1m1\r1m1_11514_felix.ogg"
 		time="5" />
 
 	<string
 		id="11515"
 		modelName="mask_hero"
-		value="|So long!"
+		value="So long!"
 		sound="data\sounds\Speech\r1m1\r1m1_11515_hero.ogg"
 		time="2" />
 
@@ -337,7 +337,7 @@
 	<string
 		id="33331"
 		modelName="mask_hero"
-		value="|Oh god, father! What happened here? Who did it?"
+		value="Oh god, father! What happened here? Who did it?"
 		sound="data\sounds\Speech\r1m1\r1m1_33331_hero.ogg"
 		time="6" />
 
@@ -352,7 +352,7 @@
 	<string
 		id="33333"
 		modelName="mask_hero"
-		value="|My life... What should I do next? After all, I have nobody left... and nothing... Only this letter..."
+		value="My life... What should I do next? After all, I have nobody left... and nothing... Only this letter..."
 		sound="data\sounds\Speech\r1m1\r1m1_33333_hero.ogg"
 		time="12" />
 
@@ -386,7 +386,7 @@
 	<string
 		id="33337"
 		modelName="mask_hero"
-		value="|Is that all? No explanation... How can I forgive someone I never knew? There's nothing left for me to do here. I'm going to search for Ben. Whoever that is, I hope he can help me find myself. Maybe somebody heard of him in Sowth?"
+		value="Is that all? No explanation... How can I forgive someone I never knew? There's nothing left for me to do here. I'm going to search for Ben. Whoever that is, I hope he can help me find myself. Maybe somebody heard of him in Sowth?"
 		sound="data\sounds\Speech\r1m1\r1m1_33337_hero.ogg"
 		time="22" />
 
@@ -399,14 +399,14 @@
 		id="8802"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r3m1\r3m1_8802_hero.ogg"
-		value="|I don't know where this road leads, so I'll stay here."
+		value="I don't know where this road leads, so I'll stay here."
 		time="3" />
 
 	<string
 		id="8803"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r3m1\r3m1_8803_hero.ogg"
-		value="|It's a strange place. I'd better stay away from here."
+		value="It's a strange place. I'd better stay away from here."
 		time="3" />
 
 	

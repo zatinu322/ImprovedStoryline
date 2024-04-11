@@ -12883,7 +12883,7 @@
 
 	<Reply
 		name="Dlg_pl_003042"
-		text='Да. Вот, держи 1000 монет, должно хватить на "хорошенечко выпить".'
+		text='Да. Вот, держи тысячу монет, должно хватить на "хорошенечко выпить".'
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() >= 1000"
 		scriptResult="CompleteQuest('SharkyVyshka')"

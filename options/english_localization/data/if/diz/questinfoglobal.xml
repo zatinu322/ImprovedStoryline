@@ -85,8 +85,8 @@
 
 	<QuestInfo
 		questName="BenEast_Quest"
-		briefDiz="Continue searching in Eastern"
-		fullDiz="The bartender from Sowth convinced me not to follow Lisa, but to focus on finding Ben. The most logical place to start would be the city of Eastern."
+		briefDiz="Continue searching in Aeterna"
+		fullDiz="The bartender from Sowth convinced me not to follow Lisa, but to focus on finding Ben. The most logical place to start would be the city of Aeterna."
 		isMainQuest="1">
 		<Map
 			name="r1m1"
@@ -225,7 +225,7 @@
 	<QuestInfo
 		questName="BenStaruha_Quest"
 		briefDiz="Meet the village witch"
-		fullDiz="The mechanic at Eastern was frightened when he found out that Ben The Throttle was an explorer, and told me to look for the village witch, because only she could know where his house is. Sounds crazy, but I had no other clues."
+		fullDiz="The mechanic at Aeterna was frightened when he found out that Ben The Throttle was an explorer, and told me to look for the village witch, because only she could know where his house is. Sounds crazy, but I had no other clues."
 		isMainQuest="1">
 		<Map
 			name="r1m2"
@@ -661,8 +661,8 @@
 
 	<QuestInfo
 		questName="EastTalkKollizey_Quest"
-		briefDiz="Inform Eastern’s people"
-		fullDiz="Tell about the opening of the Colosseum to the citizens of Eastern. "
+		briefDiz="Inform Aeterna’s people"
+		fullDiz="Tell about the opening of the Colosseum to the citizens of Aeterna. "
 		isMainQuest="0">
 		<Map
 			name="r1m2"

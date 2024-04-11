@@ -2767,7 +2767,7 @@
 
 	<Reply
 		name="Gadad_Bar_Customer1_01_N05"
-		text="Argh!!! It is the vicious rakshases who raid our dwellings, destroying everything in their path! Almost every single day we have to repel their attacks! That is why we have no time to keep the cultural monuments in proper condition. What a pity..."
+		text="Argh! It is the vicious rakshases who raid our dwellings, destroying everything in their path! Almost every single day we have to repel their attacks! That is why we have no time to keep the cultural monuments in proper condition. What a pity..."
 		role="NPC"
 		nextReplies="Gadad_Bar_Customer1_01_P06" />
 
@@ -12883,7 +12883,7 @@
 
 	<Reply
 		name="Dlg_pl_003042"
-		text="Yes. Here's 1000 coins, which should be enough for a &quot;nice drink&quot;."
+		text="Yes. Here's a thousand coins, which should be enough for a &quot;nice drink&quot;."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney() &gt;= 1000"
 		scriptResult="CompleteQuest('SharkyVyshka')"
@@ -13139,7 +13139,7 @@
 
 	<Reply
 		name="Professor_hellodlg0_P1_1"
-		text="Mysterious signs appeared in the field near Eastern, residents of the nearby village are frightened."
+		text="Mysterious signs appeared in the field near Aeterna, residents of the nearby village are frightened."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001712" />
 
@@ -13398,7 +13398,7 @@
 
 	<Reply
 		name="Dlg_npc_001720"
-		text="Visit the three nearest major cities - Porto, Midgard and Eastern - and tell the locals about the opening of the Colosseum. Come back here, when you've done."
+		text="Visit the three nearest major cities - Porto, Midgard and Aeterna - and tell the locals about the opening of the Colosseum. Come back here, when you've done."
 		role="NPC"
 		nextReplies="Dlg_pl_001721 Dlg_pl_001722" />
 
@@ -13853,7 +13853,7 @@
 
 	<Reply
 		name="Dlg_npc_001632"
-		text="Guards, guards!!! I was attacked!"
+		text="Guards, guards! I was attacked!"
 		role="NPC"
 		nextReplies="Dlg_pl_001633" />
 
@@ -14635,7 +14635,7 @@
 
 	<Reply
 		name="Dlg_npc_001577"
-		text="There's a little village not far from Eastern, called Yarr. A friend of mine, Valery, lives there. I need you to give him this package. Can you do that?"
+		text="There's a little village not far from Aeterna, called Yarr. A friend of mine, Valery, lives there. I need you to give him this package. Can you do that?"
 		role="NPC"
 		nextReplies="Dlg_pl_001578" />
 
@@ -16666,7 +16666,7 @@
 
 	<Reply
 		name="Dlg_pl_001473"
-		text="Absolutely! As they say, there's a little break between the first glass and the second!"
+		text="Absolutely! As they say, there should be a little break between the first glass and the second one!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001474" />
 
@@ -16696,7 +16696,7 @@
 
 	<Reply
 		name="Dlg_npc_001478"
-		text="There's the full bottle. I'll get some more, don't go anywhere!!!"
+		text="Man, we've emptied the bootle already! I'll get some more, don't go anywhere!"
 		role="NPC"
 		nextReplies="Dlg_pl_001479" />
 
@@ -16841,7 +16841,7 @@
 
 	<Reply
 		name="Dlg_npc_001502"
-		text="It's not odd! It's real ananaga, not Sowth's garbage! Speaking of the recipe, here you go! But just promise not to tell anyone else! And that you will not sell it! I'm going to maintain a monopoly here, you see."
+		text="It's not odd! It's real ananaga, not Sowth's garbage! Speaking of the recipe, here you go! But just promise not to tell anyone! And that you will not sell it! I'm going to maintain a monopoly here, you see."
 		role="NPC"
 		nextReplies="Dlg_pl_001503" />
 
@@ -16933,7 +16933,7 @@
 
 	<Reply
 		name="WorkGiver_hellodlg2"
-		text="Damn, what a piece of junk your car is! I'm surprised we made it. You know, I'll find another vehicle to drive me back. Get lost!"
+		text="Damn, what a piece of junk your truck is! I'm surprised we made it. You know, I'll find another vehicle to drive me back. Get lost!"
 		role="NPC"
 		scriptCondition="IsQuestTaken( 'WorkGiver_Quest1' )   and   not(IsQuestComplete( 'WorkGiver_Quest1' ))   and   not(IsQuestFailed( 'WorkGiver_Quest1' ))"
 		nextReplies="Dlg_pl_000558" />
@@ -16946,7 +16946,7 @@
 
 	<Reply
 		name="Dlg_npc_000559"
-		text="Money? What money? Did I say one word to you in Sowth's bar about money?"
+		text="Money? What money? Did I say one word to you about money?"
 		role="NPC"
 		nextReplies="Dlg_pl_000557" />
 
@@ -17007,7 +17007,7 @@
 
 	<Reply
 		name="Dlg_npc_001438"
-		text="Man, I don't even have a truck! I'm just a country boy who sells information for a living. If you don't want to, don't pay, I'm not forcing you to!"
+		text="Man, I don't even have a truck! I'm just a hillbilly boy who sells information for a living. If you don't want to, don't pay, I'm not insisting!"
 		role="NPC"
 		nextReplies="Dlg_pl_001439 Dlg_pl_001440 Dlg_pl_001527" />
 
@@ -17045,7 +17045,7 @@
 
 	<Reply
 		name="Dlg_npc_001441"
-		text="Do you know the village of Troyitskoe? Well, there is a path next to it that leads to the hills. Go straight ahead and turn right at the crossroads. If you don't get it wrong, you'll come to a huge ruin. That's the abandoned hospital. Just keep in mind that the bandits know about this place too, so stay alert. You can sell what you find to the hermit who lives on the mountain near the road to Vaterland."
+		text="Do you know the village of Troyitskoe? Well, there is a path next to it that leads to the hills. Go straight ahead and turn right at the crossroads. If you don't get it wrong, you'll come to a huge ruins. That's the abandoned hospital. Just keep in mind that the bandits know about this place too, so stay alert. You can sell what you find to the hermit who lives on the mountain near the road to Vaterland."
 		role="NPC"
 		nextReplies="Dlg_pl_001442" />
 
@@ -17172,14 +17172,14 @@
 
 	<Reply
 		name="Dlg_pl_001461"
-		text="Bartender!!"
+		text="Bartender!"
 		role="PLAYER"
 		scriptResult="AddPlayerMoney( -25 );"
 		nextReplies="Dlg_npc_001462" />
 
 	<Reply
 		name="Dlg_npc_001462"
-		text="Anyway, they had enough of each other, got dressed quickly, and left. I had lost all appetite, so I got out of the car to find a local chick, and I saw that our trailer had all four wheels screwed off! What a bastards! Not only did I spend all the money on new tires instead of girls, but my employer refused to compensate me my expenses. That's the story, kid."
+		text="Anyway, they had enough of each other, got dressed quickly, and left. I had lost all appetite, so I got out of the car to find a local chick, and I saw that our trailer had all four wheels screwed off! What a bastards! Not only did I spend all the money on new tires instead of girls, but my employer refused to compensate expenses. That's the story, kid."
 		role="NPC"
 		nextReplies="Dlg_pl_001463" />
 
@@ -17210,7 +17210,7 @@
 
 	<Reply
 		name="Dlg_pl_001507"
-		text="A guy from Zaimka told me that you buy all kinds of rare stuff."
+		text="One guy from Zaimka told me that you buy all kinds of rare stuff."
 		role="PLAYER"
 		scriptCondition="IsQuestTaken( 'r1m1_Botanik_Quest' )"
 		nextReplies="Dlg_npc_001509" />
@@ -17372,7 +17372,7 @@
 
 	<Reply
 		name="Dlg_pl_001379"
-		text="I'm very sad to hear that. You have always offered the best price. Am I correct in assuming that only traders from the south will be staying in our area from now on?"
+		text="It's very sad to hear that. You have always offered the best price. Am I correct in assuming that only traders from the south will be staying in our area from now on?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001380" />
 
@@ -17396,7 +17396,7 @@
 
 	<Reply
 		name="Dlg_pl_001383"
-		text="Oh, yes, it completely slipped my mind. I'll be sure to pass that on. Have a nice day."
+		text="Oh, yes, it completely slipped my mind. Have a nice day."
 		role="PLAYER"
 		scriptResult="SetRadarUpgrade(1); AddPlayerMoney(200); AddFadingMsgByStrIdFormatted( 'fm_player_rem_thing', 'quest_potato');  RemoveQuestItem('quest_potato');  CompleteQuest( 'Buyer_Quest1' );  AddBook('r1_book_the_mask'); GetCurNpc():SetSpokenCount( 1 ); TDeactivate('ZASADA_1');  EndConversation()" />
 
@@ -17525,7 +17525,7 @@
 
 	<Reply
 		name="Dlg_pl_001414"
-		text="You can go to Sowth and ask him yourself. Just keep in mind that I don't have time for all this clownery, so either you give me that gun right now, or..."
+		text="You can go to Sowth and ask him yourself. But keep in mind that I don't have time for all this clownery, so either you give me that gun right now, or..."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001415" />
 
@@ -17543,7 +17543,7 @@
 
 	<Reply
 		name="Dlg_npc_001417"
-		text="Never heard of these? Surely, you don't see such weapons in these lands. Let me explain. The Storm is a shotgun. It's a powerful weapon, but you have to shoot at close range. Kord is a machine gun. It's a better gun than yours, but you can't expect it to kill your enemy by one shot. You got to aim it from a distance. So, what are you taking?"
+		text="Never heard of these? Surely, you don't see such weapons in these lands. Let me explain. The Storm is a shotgun. It's a powerful weapon, but you have to shoot at close range. Kord is a machine gun. Better than yours, but you can't expect it to kill your enemy by one shot. You got to aim it from a distance. So, what are you taking?"
 		role="NPC"
 		nextReplies="Dlg_pl_001418 Dlg_pl_001427" />
 
@@ -17600,7 +17600,7 @@
 
 	<Reply
 		name="HurdTrucker_hellodlg0_P1_1"
-		text="I buried everyone I could find, but there are still many people left under the rubble. Once the flames have died down, will you go there to bury the rest? I don't want to go back there again."
+		text="I buried everyone I could find, but there are still many people left under the rubble. May I ask you to go there and to bury them, once the flames have died down? I don't want to go back there again."
 		role="PLAYER"
 		nextReplies="HurdTrucker_hellodlg0_2" />
 
@@ -17642,7 +17642,7 @@
 
 	<Reply
 		name="Dlg_pl_001389"
-		text="Before he died, my... my father told me about Ben The Throttle. The explorer. I need to find him."
+		text="My... my father told me about Ben The Throttle before he died. I need to find him. Father said that he is an explorer."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001391" />
 
@@ -17690,13 +17690,13 @@
 
 	<Reply
 		name="Dlg_pl_001398"
-		text="In the South. You're right, as always. Thank you for everything. One last drink. I'll stay here and head south in the morning. What's the best place to start?"
+		text="In the south. You're right, as always. Thank you for everything. One last drink. I'll stay here and head south in the morning. What's the best place to start?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001399" />
 
 	<Reply
 		name="Dlg_npc_001399"
-		text="Try Eastern. It will be the first big town on your way. The people there aren't very friendly, but I know a farmer from there. He spends all his spare time in a bar. Tell him I sent you, and he'll help. Probably."
+		text="Try Aeterna. It will be the first big town on your way. The people there aren't very friendly, but I know a farmer from there. He spends all his spare time in a bar. Tell him I sent you, and he'll help. Probably."
 		role="NPC"
 		nextReplies="Dlg_pl_001400" />
 
@@ -17740,7 +17740,7 @@
 
 	<Reply
 		name="Dlg_pl_001404"
-		text="Felix... I ran into him near the big stone archway as he was coming back from Glukhoe. Yesterday I had helped a stranger girl to go around all the local villages, and he didn't like it very much. He demanded a fee from me, and when I refused to pay, he attacked me. I managed to overpower him, but he said he would have his revenge."
+		text="Felix... I ran into him near the big stone archway as he was coming back from Glukhoe. Yesterday I had helped a stranger girl to go around all the local villages, and he didn't like it very much. He demanded a fee from me, and when I refused to pay, attacked me. I managed to overpower him, but he said he would have his revenge."
 		role="PLAYER"
 		scriptCondition="GetVar('FelixChoise').AsInt==0"
 		scriptResult="SetVar('FelixChoise',3)"
@@ -17748,7 +17748,7 @@
 
 	<Reply
 		name="Dlg_npc_001405"
-		text="And he will keep his promise. The man never forgives offenses. But he has never destroyed a village before. Especially because of such little issue..."
+		text="And he will keep his promise. This man never forgives offenses. But he has never attacked any villages before. Especially for such little issue..."
 		role="NPC"
 		nextReplies="Dlg_pl_001406" />
 
@@ -17772,7 +17772,7 @@
 
 	<Reply
 		name="Dlg_npc_001409"
-		text="Once again, I have very little faith that Felix had anything to do with it. But you don't seem to be interested in my opinion. "
+		text="Once again, I have a very little faith that Felix had anything to do with it. But you don't seem to be interested in my opinion. "
 		role="NPC"
 		nextReplies="Dlg_pl_002595 Dlg_pl_001410" />
 
@@ -17821,31 +17821,31 @@
 
 	<Reply
 		name="Dlg_pl_001410"
-		text="Watch what you're saying! That's my father! And dozens of innocent people! The killers must be punished! "
+		text="Watch what you're saying! That's my father! And dozens of innocent people! The killers must be punished!"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001411" />
 
 	<Reply
 		name="Dlg_npc_001411"
-		text="It's impossible to talk to you! Let me put it this way: I will give you a powerful weapon, and with it you will go to smash Felix's base. "
+		text="It's impossible to talk to you! Let me put it this way: what if I'll give you some powerful weapon that will help you to smash Felix's base."
 		role="NPC"
 		nextReplies="Dlg_pl_001412" />
 
 	<Reply
 		name="Dlg_pl_001412"
-		text="Powerful weaponry? For nothing? "
+		text="Powerful weapon? For nothing?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001421" />
 
 	<Reply
 		name="Dlg_npc_001421"
-		text="No. Think of it as payment. "
+		text="No. Think of it as payment."
 		role="NPC"
 		nextReplies="Dlg_pl_001422" />
 
 	<Reply
 		name="Dlg_pl_001422"
-		text="All right. Where can I get it? "
+		text="All right. Where can I get it?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001423" />
 
@@ -17869,7 +17869,7 @@
 
 	<Reply
 		name="Dlg_pl_001431"
-		text="I hope so. All right, now I'm going to sleep. Tell it to get my room ready. And tomorrow I'll go see your friend. "
+		text="I hope so. All right, now I'm going to sleep. Tell to get my room ready. And tomorrow I'll go see your friend. "
 		role="PLAYER"
 		nextReplies="Dlg_npc_002597" />
 
@@ -17918,7 +17918,7 @@
 
 	<Reply
 		name="Dlg_pl_001420"
-		text="Yes, you're right. Thank you again. I don't have the words to describe how grateful I am to you. "
+		text="Yes, you're right. Thank you again. I don't have much words to describe how grateful I am to you. "
 		role="PLAYER"
 		nextReplies="Dlg_npc_001432" />
 
@@ -17949,7 +17949,7 @@
 
 	<Reply
 		name="Lisa_hellodlg0_2"
-		text="Yes. Don't worry, I'll pay you for your time."
+		text="Yes. Don't worry, I'll pay for your time."
 		role="NPC"
 		nextReplies="Lisa_hellodlg0_P1_2" />
 
@@ -17967,7 +17967,7 @@
 
 	<Reply
 		name="Lisa_hellodlg0_P1"
-		text="Of course, girl, I'll help in any way I can."
+		text="Of course, lady, I'll help in any way I can."
 		role="PLAYER"
 		nextReplies="Lisa_hellodlg0_1" />
 

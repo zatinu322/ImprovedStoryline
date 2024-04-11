@@ -2,7 +2,7 @@
 <ObjectNames>
 	<Object
 		Name="Esting"
-		FullName="EASTERN" />
+		FullName="AETERNA" />
 
 	<Object
 		Name="MrShlyapa"
@@ -338,7 +338,7 @@
 
 	<Object
 		Name="Esting_enter"
-		FullName="EASTERN" />
+		FullName="AETERNA" />
 
 	<Object
 		Name="Midragd_enter"

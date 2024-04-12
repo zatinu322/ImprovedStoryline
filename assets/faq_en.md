@@ -6,7 +6,7 @@
 - [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
 - [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
 
-## `v1.2 build 240412a`
+## v1.2 build 240412a
 
 ### General
 - Added English localization.

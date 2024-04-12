@@ -53,7 +53,9 @@ patcher_version_requirement: "2.1.1"
 prerequisites:
   - name: [community_patch]
     versions: 
-     - "1.14.1"
+      - "1.14.1"
+    optional_content:
+      - english_localization
 
 # optional mod content
 optional_content:

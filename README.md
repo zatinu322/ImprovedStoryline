@@ -2,6 +2,25 @@
 
   <img src="https://repository-images.githubusercontent.com/364315459/cf02f200-c30d-11eb-86cc-dd9360a6a2a4" alt="Logo" width="600">
 
+  <br>
+  <p align="center">
+    <a href="https://discord.gg/sPrGBP9aFd">
+        <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/8287ebff-222d-4afa-bb69-a9fac3eba411", width="50", height="50", alt="Author's Discord">
+    </a>&emsp;
+    <a href="https://www.youtube.com/@pavlikrpg">
+        <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/8511cfe3-99e1-49d7-bc66-bfdd108dc189", width="50", height="50", alt="Author's YouTube">
+    </a>&emsp;
+    <a href="https://discord.gg/qKK2Efx">
+        <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/3d63e8f9-653c-4b4d-8ad2-6aa2d079fd2e", width="50", height="50", alt="Community Discord">
+    </a><br/><br/>
+    <a href="https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a">
+        <img src="https://img.shields.io/badge/Improved_Storyline-v1.2-0c7307" alt="Latest release"/>
+    </a><br/>
+    <img src="https://img.shields.io/badge/Community_Patch/Remaster_support-v1.14.1-blue" alt="Development status"/><br/>
+    <img src="https://img.shields.io/badge/Vanilla_support-v1.02-blue" alt="Development status"/><br>
+    <img src="https://img.shields.io/badge/Release_date-12/04/2024-0c7307" alt="Release date"/>
+  </p>
+
 **Подробный веб-мануал находится [здесь](https://github.com/zatinu322/ImprovedStoryline/wiki/).**
 
 **Full web-manual is avaliable [here](https://github.com/zatinu322/ImprovedStoryline/wiki/).**
@@ -39,10 +58,6 @@
     <tr>
       <td><a href="#other_mods_rus">Мои другие проекты</a></td>
       <td><a href="#other_mods_eng">My other projects</a></td>
-    </tr>
-    <tr>
-      <td><a href="#contacts_rus">Контакты</a></td>
-      <td><a href="#contacts_eng">Contacts</a></td>
     </tr>
     <tr>
       <td><a href="#licensing_rus">Лицензирование</a></td>
@@ -115,31 +130,11 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Мои другие проекты
 
-* [Ex Machina Randomizer](https://github.com/zatinu322/Var-Mod-Trash-Machina) (также известен как `Var Mod` или `Trash Machina`)
+* [Ex Machina Randomizer](https://github.com/zatinu322/Var-Mod-Trash-Machina)
 
 * [Қатын Жүк Авокалипси](https://github.com/zatinu322/hta_kazakh_autotranslation)
 
 * [Community Disaster](https://github.com/zatinu322/stream_builds)
-
-<a id="contacts_rus"></a>
-
-# Контакты автора
-
-<div align="left">
-  <a href="https://discord.gg/sPrGBP9aFd">
-    <img src="https://i.imgur.com/1p7N4lm.png" alt="Discord" height="55">
-  </a>
-  <a href="https://discord.gg/qKK2Efx">
-    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/68562524/247600262-a332fc85-7552-4edb-aa10-e85ec4c14dab.png" alt="Discord DEM" height="55">
-  </a>
-  <a href="https://www.youtube.com/user/rpggameland">
-    <img src="https://i.imgur.com/eZj65ig.png" alt="YT" height="55">
-  </a>
-  <a href="https://vk.com/id316894646">
-    <img src="https://i.imgur.com/4lcRJSW.png" alt="VK" height="55">
-  </a>
-
-</div>
 
 <a id="licensing_rus"></a>
 
@@ -214,31 +209,11 @@ More information about all changes and innovations can be found in the mod's [we
 
 # My other projects
 
-* [Ex Machina Randomizer](https://github.com/zatinu322/Var-Mod-Trash-Machina) (also known as `Var Mod` or `Trash Machina`)
+* [Ex Machina Randomizer](https://github.com/zatinu322/Var-Mod-Trash-Machina)
 
 * [Қатын Жүк Авокалипси](https://github.com/zatinu322/hta_kazakh_autotranslation)
 
 * [Community Disaster](https://github.com/zatinu322/stream_builds)
-
-<a id="contacts_eng"></a>
-
-# Contacts
-
-<div align="left">
-  <a href="https://discord.gg/sPrGBP9aFd">
-    <img src="https://i.imgur.com/1p7N4lm.png" alt="Discord" height="55">
-  </a>
-  <a href="https://discord.gg/qKK2Efx">
-    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/68562524/247600262-a332fc85-7552-4edb-aa10-e85ec4c14dab.png" alt="Discord DEM" height="55">
-  </a>
-  <a href="https://www.youtube.com/user/rpggameland">
-    <img src="https://i.imgur.com/eZj65ig.png" alt="YT" height="55">
-  </a>
-  <a href="https://vk.com/id316894646">
-    <img src="https://i.imgur.com/4lcRJSW.png" alt="VK" height="55">
-  </a>
-
-</div>
 
 <a id="licensing_eng"></a>
 

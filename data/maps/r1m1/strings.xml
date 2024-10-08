@@ -159,7 +159,7 @@
 		modelSkin="0"
 		modelCfg="172"
 		modelSlot="1"
-		value="БАНДИТ ФЕЛИКС|А вот и наш возмутитель спокойствия. Мои источники сообщают, что ты подвязался к Лисе в помощники, а она – девушка щедрая... За скромный вклад в тысячу монет ты можешь продолжать свои грязные делишки и даже рассчитывать на нашу поддержку."
+		value="БАНДИТ ФЕЛИКС|А вот и наш возмутитель спокойствия. Мои источники сообщают, что ты подвязался к Лисе в помощники, а она – девушка щедрая... За скромный вклад в 1000 монет ты можешь продолжать свои грязные делишки и даже рассчитывать на нашу поддержку."
 		sound="data\sounds\Speech\r1m1\r1m1_1131_felix.ogg"
 		time="19" />
 
@@ -745,7 +745,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@ffffa600«Improved Storyline»| | | |@ffffa600Заимствования из модов| |@ffffffffBooster Mod - карты, текстуры, иконки|@ffffffffKraycity - импортирован полностью|@ffffffffSteel Dawn - иконки| | |@ffffa600Музыкальные композиции| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffЦифеi - Футуро|@ffffffffЦифеi - Прощай, Атлантис|@ffffffffЦифеi - Праздник жизни|@ffffffffЦифеi - Когда возвращаются близкие| | |@ffffa600Отдельное спасибо| |@ffffffffLynne за модель локомотива|@ffffffffSuslo Red за модель медали АР|@ffffffffVarisane за многочисленные текстовые правки|@ffffffffOverLine за зимние лайтмепы| |@ffffffffА также всем тестировщикам, багрепортерам|@ffffffffи тем, кто просто помог советом"
+		value="@ffffa600«Improved Storyline»| | | |@ffffa600Заимствования из модов| |@ffffffffBooster Mod - карты, текстуры, иконки|@ffffffffKraycity - импортирован полностью|@ffffffffSteel Dawn - иконки| | |@ffffa600Музыкальные композиции| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffЦифеi - Футуро|@ffffffffЦифеi - Прощай, Атлантис|@ffffffffЦифеi - Праздник жизни|@ffffffffЦифеi - Когда возвращаются близкие| | |@ffffa600Отдельное спасибо| |@ffffffffLynne за модель локомотива|@ffffffffSuslo Red, Traygen за модель медали АР|@ffffffffVarisane, Traygen за многочисленные текстовые правки|@ffffffffOverLine за зимние лайтмепы| |@ffffffffА также всем тестировщикам, багрепортерам|@ffffffffи тем, кто просто помог советом"
 		sound=""
 		fontSize="18"
 		scrollSpeed="2.55"
@@ -889,7 +889,7 @@
 		image="data\if\ico\CinemaPanel\foreground_movie_shade_midle.dds"
 		upOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
 		downOverlay="data\if\ico\CinemaPanel\foreground_movie_shade_midle121.dds"
-		value="@ffffa600«Improved Storyline»| | | |@ffffa600Заимствования из модов| |@ffffffffBooster Mod - карты, текстуры, иконки|@ffffffffKraycity - импортирован полностью|@ffffffffSteel Dawn - иконки| | |@ffffa600Музыкальные композиции| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffЦифеi - Футуро|@ffffffffЦифеi - Прощай, Атлантис|@ffffffffЦифеi - Праздник жизни|@ffffffffЦифеi - Когда возвращаются близкие| | |@ffffa600Отдельное спасибо| |@ffffffffLynne за модель локомотива|@ffffffffSuslo Red за модель медали АР|@ffffffffVarisane за многочисленные текстовые правки|@ffffffffOverLine за зимние лайтмепы| |@ffffffffА также всем тестировщикам, багрепортерам|@ffffffffи тем, кто просто помог советом"
+		value="@ffffa600«Improved Storyline»| | | |@ffffa600Заимствования из модов| |@ffffffffBooster Mod - карты, текстуры, иконки|@ffffffffKraycity - импортирован полностью|@ffffffffSteel Dawn - иконки| | |@ffffa600Музыкальные композиции| |@ffffffffNick Perito - The Green Leaves of Summer|@ffffffffAkira Yamaoka - Promise (Acoustic)|@ffffffffLee Jackson - Dukelinka|@ffffffffJeff Russo - Fargo Theme|@ffffffffGodless – Don’t Forget The Girls of La Belle|@ffffffffЦифеi - Футуро|@ffffffffЦифеi - Прощай, Атлантис|@ffffffffЦифеi - Праздник жизни|@ffffffffЦифеi - Когда возвращаются близкие| | |@ffffa600Отдельное спасибо| |@ffffffffLynne за модель локомотива|@ffffffffSuslo Red, Traygen за модель медали АР|@ffffffffVarisane, Traygen за многочисленные текстовые правки|@ffffffffOverLine за зимние лайтмепы| |@ffffffffА также всем тестировщикам, багрепортерам|@ffffffffи тем, кто просто помог советом"
 		sound=""
 		fontSize="18"
 		scrollSpeed="3.2"

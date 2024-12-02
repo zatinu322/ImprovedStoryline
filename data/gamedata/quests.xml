@@ -2743,8 +2743,7 @@
 		CheckAll="1"
 		ConditionToGive="all complete"
 		PrecedingQuests="FindGomer2_Quest"
-		OnComplete="AddPlayerMoney(2000)"
-		Levels="r1m4" />
+		OnComplete="AddPlayerMoney(2000)" />
 <!--Root/r1m4/Освободить лидера экстремистов -->
 	<quest
 		Name="FreeExtremistLeader_Quest1"
@@ -3989,8 +3988,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="r3m2_TalkWithLisa"
-		OnTake='ShowCircleOnMinimapByName("TheRace")'
-		Levels="r3m2 r3m1 r2m1 r2m2 r1m4 r1m3 r1m2" />
+		OnTake='ShowCircleOnMinimapByName("TheRace")' />
 
 	<quest
 		Name="OpenMid2_Quest"
@@ -4023,8 +4021,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		PrecedingQuests="TalkBeforeDesert"
-		Levels="r1m2" />
+		PrecedingQuests="TalkBeforeDesert" />
 
 	<quest
 		Name="Chehly_Quest"
@@ -4432,8 +4429,7 @@
 		CheckAll="0"
 		ConditionToGive="all taken"
 		PrecedingQuests="Buyer_Quest1"
-		OnTake='ShowCircleOnMinimapByName("TheGloohoe")'
-		Levels="r1m1" />
+		OnTake='ShowCircleOnMinimapByName("TheGloohoe")' />
 
 	<quest
 		Name="CheckTheEast"
@@ -4442,8 +4438,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		PrecedingQuests="TalkToVasily"
-		OnTake='ShowCircleOnMinimapByName("Ending3")'
-		Levels="r1m1" />
+		OnTake='ShowCircleOnMinimapByName("Ending3")' />
 <!--Root/r1m1/Сюжетные/Поиски Бена-->
 	<quest
 		Name="BenSouth_Quest"

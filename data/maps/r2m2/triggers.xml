@@ -7,6 +7,7 @@
 		<script>
 			SetVar("KnownMap",0)
 			SetVar("MarezziaCutscene", 0)
+			SetVar("EretikSkin", 0)
 			if GAME_VERSION then SetVar("ISLVersion", GAME_VERSION) end
 
 			local zeon = getObj("Zeon_enter")
@@ -137,14 +138,6 @@
 			tp:SetOpenGateToPlayer( true )
 
 			SetConditionalClosingForTown( "Marezzia", "r2m2", false )
-
-			local town = GetEntityByName ("Monastery")
-				if town then
-					town:SetRuined(true)
-					town:SetOpenGateToPlayer( false )
-				end
-
-			SetConditionalClosingForTown( "Monastery", "r2m2", true )
 
 			local sucks = GetEntityByName("MarezziaSucks_loc")
 			if sucks then sucks:SetProperty("Active", 0) end
@@ -335,6 +328,22 @@
 		</script>
 	</trigger>
 
+	<!-- Разрушение монастыря -->
+	<trigger Name="SetMonasteryRuined" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local town = GetEntityByName ("Monastery")
+				if town then
+					town:SetRuined(true)
+					town:SetOpenGateToPlayer( false )
+				end
+
+			SetConditionalClosingForTown( "Monastery", "r2m2", true )
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 <!-- АР -->
 	<!-- Создание колонны СНГ -->
 	<trigger Name="SNGPROVIANT" active="0">
@@ -467,6 +476,8 @@
 				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(2983.596, 320.756, 999.595), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE06", -1, -1, CVector(3007.236, 319.616, 1074.728), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE07", -1, -1, CVector(2984.372, 320.633, 1024.796), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+
+				TActivate("SetMonasteryRuined")
 			end
 
 			for team = 1,2 do

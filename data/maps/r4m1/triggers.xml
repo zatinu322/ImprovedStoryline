@@ -5,7 +5,7 @@
 		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			SetVar("MaxLap",2)
-			SetVar("BuhPoint",0)
+			SetVar("BuhPoint", 0)
 			SetVar("CountCar",8)
 			SetVar("PlayerCarNameRace",0)
 			SetVar("Gonka",0)
@@ -416,20 +416,18 @@
 				local FVehicle = getObj("Buharers_vehicle_"..i)
 				if FVehicle then
 					FVehicle:SetExternalPathByName("BuharsEvac_Path"..(i+1).."_1")
-					FVehicle:SetCruisingSpeed(40)
+					FVehicle:SetCruisingSpeed(23)
 					FVehicle:SetSkin(i+1)
 				end
 			end
 
-			SetVar("BuhCurPoint",1)
-			SetVar("BuhPoint1",0)
-			SetVar("BuhPoint2",0)
-			SetVar("BuhPoint3",0)
-			SetVar("BuhPoint4",0)
-			SetVar("BuhPoint5",0)
+			SetVar("BuhPoint", 0)
 
 			TActivate("trBuharsDie")
+			TActivate("trBuharersCarsDist")
 			TActivate("trBuhReachPoint")
+			TActivate("trActiveBuhReach")
+			TActivate("trBuharersDisableLimits")
 			TakeQuest("r4m1_RBC_Evacuate")
 
 			local a = GetEntityByName("StartGonka_loc")
@@ -439,48 +437,83 @@
 		</script>
 	</trigger>
 
+	<!-- Расстояние между машинами бухарцев -->
+	<trigger Name="trBuharersCarsDist" active="0">
+		<event        timeout="1"        eventid="GE_TIME_PERIOD" />
+		<script>
+			local buh1 = GetEntityByName("Buharers_vehicle_0")  -- ural
+			local buh2 = GetEntityByName("Buharers_vehicle_1") -- molok
+			local len
+			
+			local buh_point = getObj("FromR2M2")
+			local cur_loc = GetVar("BuhPoint").AsInt
+			local max_dist = 75
+
+
+			if cur_loc and cur_loc == 0 then
+				buh_point = getObj("BuharersDistPoint_loc")
+				max_dist = 120
+			end
+
+			if buh1 and buh1:IsAlive() and buh2 and buh2:IsAlive() then
+				len = Dist(buh2, buh1)
+				if len > max_dist then
+					if Dist(buh1, buh_point) > Dist(buh2, buh_point) then
+						buh2:SetCustomLinearVelocity( 0 )
+						buh2:SetThrottle( 0 )
+					else
+						buh1:SetCustomLinearVelocity( 0 )
+						buh1:SetThrottle( 0 )
+					end
+				end
+			end
+
+		</script>
+	</trigger>
+
+	<!-- Переключить ориентир бухарцев, когда они выехали с кладбища кораблей -->
+	<trigger Name="trActiveBuhReach" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="BuharersDistPoint_loc" />
+		<script>
+			SetVar("BuhPoint", 1)
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+	<!-- Отключить ограничения скорости, когда Бухарцы уже в порту -->
+	<trigger Name="trBuharersDisableLimits" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="BuharersDisableLimits_loc" />
+		<script>
+			TDeactivate("trBuharersCarsDist")
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
 	<trigger	Name="trBuhReachPoint"	active="0">
 		<event eventid="GE_TARGET_REACHED" ObjName="Buharers_vehicle_0"/>
 		<event eventid="GE_TARGET_REACHED" ObjName="Buharers_vehicle_1"/>
 		<script>
+			trigger:IncCount()
 
-			local point = GetVar("BuhCurPoint").AsInt
-			local stat = GetVar("BuhPoint"..point).AsInt+1
+			local count = trigger:GetCount()
+		    if 2 > count then
+		    	return
+		    end
 
-			SetVar("BuhPoint"..point,stat)
-			if stat>=2 then
-				point = point+1
-				SetVar("BuhCurPoint",point)
-	          	for i=0,1 do
-					local FVehicle = getObj("Buharers_vehicle_"..i)
-					if FVehicle then
-						FVehicle:SetExternalPathByName("BuharsEvac_Path"..(i+1).."_"..point)
-					end
-				end
-                if point>=5 then
-                	TDeactivate("trActiveBuhReach")
-					TDeactivate("trBuharsDie")
+			TDeactivate("trBuharsDie")
+			TDeactivate("trBuharersCarsDist")
+			TDeactivate("trBuharersDisableLimits")
 
-					TActivate("cinBuhPortFirst")
+			TActivate("cinBuhPortFirst")
 
-					CompleteQuest("r4m1_RBC_Evacuate")
+			CompleteQuest("r4m1_RBC_Evacuate")
 
-					AddHistory( "r4_AfterAtackToBuhars" )
-					AddFadingMsgId( "fm_history_got" )
-				else
-					TActivate("trActiveBuhReach")
-                end
-                trigger:Deactivate() 
-			end
-		</script>
-	</trigger>
+			AddHistory( "r4_AfterAtackToBuhars" )
+			AddFadingMsgId( "fm_history_got" )
 
-	<trigger Name="trActiveBuhReach" active="0">
-		<event timeout="2" eventid="GE_TIME_PERIOD" />
-		<script>
-			TActivate("trBuhReachPoint")
-
-			trigger:Deactivate() 
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -496,6 +529,9 @@
 			TakeQuest("r4m2_LisaDieBen")
 
 			TDeactivate("trBuhReachPoint")
+			TDeactivate("trBuharersCarsDist")
+			TDeactivate("trActiveBuhReach")
+			TDeactivate("trBuharersDisableLimits")
 
 			TActivate("LisaBuharDie")
 

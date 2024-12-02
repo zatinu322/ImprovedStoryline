@@ -468,7 +468,14 @@
 
 			SetTolerance(1100,1017,RS_ENEMY)
 			
-			TeamCreate("EretikCar",1083,CVector(2764.118, 261.967, 509.506),{"r1m3_hunter03"})
+			local eretik_team = TeamCreate("EretikCar",1083,CVector(2764.118, 261.967, 509.506),{"r1m3_hunter03"})
+			if eretik_team then
+				local eretik = eretik_team:GetVehicle(0)
+				if eretik then
+					local eretik_skin = eretik:GetSkin()
+					SetVar("EretikSkin", eretik_skin)
+				end
+			end
 			
 			local vehEret = GetEntityByName("EretikCar_vehicle_0")
 			if vehEret then
@@ -526,10 +533,16 @@
 			end
 			
 			local vehEret = GetEntityByName("EretikCar_vehicle_0")
-			if vehEret then
-				vehEret:SetGamePositionOnGround( CVector(2787.482, 263.969, 508.595))
-				vehEret:SetRotation(Quaternion(0.004, -0.889, -0.009, 0.458))
-			end
+			if vehEret then vehEret:Remove() end
+
+			local eretik_skin = GetVar("EretikSkin").AsInt
+
+			CreateNewDummyObject("hunterWheel01r", "EretikBrokenWheel1", -1, -1, CVector(2784.865, 262.089, 508.652), Quaternion(-0.1369, -0.8893, 0.0664, 0.4313), eretik_skin)
+			CreateNewDummyObject("hunterWheel01r", "EretikBrokenWheel2", -1, -1, CVector(2788.840, 262.197, 511.637), Quaternion(-0.1517, -0.8830, 0.0752, 0.4378), eretik_skin)
+			CreateNewDummyObject("hunterWheel01l", "EretikBrokenWheel3", -1, -1, CVector(2786.998, 262.100, 505.769), Quaternion(0.4205 ,-0.7284 ,-0.2705, 0.4685), eretik_skin)
+			CreateNewDummyObject("hunterWheel01l", "EretikBrokenWheel4", -1, -1, CVector(2790.691, 262.005, 508.830), Quaternion(-0.1919, -0.8932, 0.0854, 0.3977), eretik_skin)
+			local eretik_cab = CreateNewDummyObject("hunterCab02_fake", "EretikBrokenCab", -1, -1, CVector(2787.703, 262.621, 508.677), Quaternion(-0.0155, -0.8889, 0.0080, 0.4578), eretik_skin)
+			if eretik_cab then eretik_cab:SetBelong(1083) end
 
 			trigger:Deactivate()
 		</script>
@@ -661,6 +674,15 @@
 			
 			RemoveQuestItem("Heretik_P")
 			AddFadingMsgByStrIdFormatted( "fm_player_rem_poput", "Heretik_P")
+
+			for wheel = 1, 4 do
+				local eretik_wheel = getObj("EretikBrokenWheel"..wheel)
+				if eretik_wheel then eretik_wheel:Remove() end
+			end
+			local eretik_cab = getObj("EretikBrokenCab")
+			if eretik_cab then
+				eretik_cab:Remove()
+			end
 			
 			trigger:Deactivate()
 		</script>

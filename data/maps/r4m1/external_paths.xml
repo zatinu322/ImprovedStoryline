@@ -121,10 +121,7 @@
 
 		<Point
 			coord="2766.512 5789.578" />
-	</Path>
 
-	<Path
-		Name="BuharsEvac_Path1_2">
 		<Point
 			coord="2724.436 5747.331" />
 
@@ -189,12 +186,6 @@
 			coord="2321.568 5160.205" />
 
 		<Point
-			coord="2327.145 5102.141" />
-	</Path>
-
-	<Path
-		Name="BuharsEvac_Path1_3">
-		<Point
 			coord="2326.921 5081.822" />
 
 		<Point
@@ -250,10 +241,7 @@
 
 		<Point
 			coord="2471.370 4338.065" />
-	</Path>
 
-	<Path
-		Name="BuharsEvac_Path1_4">
 		<Point
 			coord="2479.518 4274.558" />
 
@@ -300,7 +288,7 @@
 			coord="2207.201 3865.357" />
 
 		<Point
-			coord="2161.610 3863.851" />
+			coord="2170.216 3855.738" />
 
 		<Point
 			coord="2136.159 3848.025" />
@@ -469,10 +457,7 @@
 
 		<Point
 			coord="2761.679 5802.691" />
-	</Path>
 
-	<Path
-		Name="BuharsEvac_Path2_2">
 		<Point
 			coord="2729.555 5768.494" />
 
@@ -523,10 +508,7 @@
 
 		<Point
 			coord="2315.968 5095.220" />
-	</Path>
 
-	<Path
-		Name="BuharsEvac_Path2_3">
 		<Point
 			coord="2313.348 5048.874" />
 
@@ -583,10 +565,7 @@
 
 		<Point
 			coord="2461.443 4321.004" />
-	</Path>
 
-	<Path
-		Name="BuharsEvac_Path2_4">
 		<Point
 			coord="2467.188 4268.382" />
 
@@ -609,7 +588,7 @@
 			coord="2450.951 3893.159" />
 
 		<Point
-			coord="2405.174 3888.155" />
+			coord="2419.807 3889.907" />
 
 		<Point
 			coord="2383.886 3886.567" />
@@ -627,7 +606,7 @@
 			coord="2198.251 3876.540" />
 
 		<Point
-			coord="2145.001 3882.955" />
+			coord="2143.940 3885.958" />
 
 		<Point
 			coord="2112.932 3866.191" />

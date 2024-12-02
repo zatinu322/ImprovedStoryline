@@ -2430,8 +2430,8 @@
 
 	<QuestInfo
 		questName="d_BarForTunel_Quest"
-		briefDiz="Talk to the barman in Asgard"
-		fullDiz="It appears that the people of this town know their way through the mountains to the west."
+		briefDiz="Find the stranger in a bar"
+		fullDiz="I followed the stranger out of the tunnel until he stopped in Asgard. Now I need to strike up a conversation with him and somehow get the key."
 		isMainQuest="1">
 		<Map
 			name="r1m3"

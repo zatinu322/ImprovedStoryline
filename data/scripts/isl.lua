@@ -30,6 +30,35 @@ function SafeRemove(object)
 	end
 end
 
+-- переопределённая логика стандартных функций
+
+-- shortcut: creates Game Object and all it's children, returns it's handler (ID)
+local function _CreateNewObject( prototypeName, objName, parentId, belong )
+	local prototypeId = g_ObjCont:GetPrototypeId( prototypeName )
+
+	return g_ObjCont:CreateNewObject( prototypeId, objName, parentId, belong )
+end
+
+-- Функция создает Дамми обжект с заданной моделью
+function CreateNewDummyObject(modelName, objName, parentId, belong, pos, rot,skin)
+	println('1')
+	local prototypeName 	=  	"someDummyObject"
+	local dObj		=	_CreateNewObject( prototypeName, objName, parentId, belong )
+	local obj		=	GetEntityByID (dObj)
+	println('2')
+
+	if skin == nil then skin = 0 end
+	println('3')
+
+	obj:SetModelName( modelName )
+	obj:SetRotation ( rot )
+	obj:SetPosition ( pos )
+	obj:SetSkin ( skin )
+	println('4')
+
+	return obj
+end
+
 -- отладочные команды
 function mir(md)
 	if md == nil then

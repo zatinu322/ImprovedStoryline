@@ -180,7 +180,7 @@
 
 	<Reply
 		name="Dlg_pl_002745"
-		text="This is going to sound strange, but I'm used to this kind of difficulties. But I have to free Lisa at first. Do you have any thoughts on the best way to do this?"
+		text="This is going to sound strange, but I'm used to this kind of difficulties. I have to free Lisa at first. Do you have any thoughts on the best way to do this?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_002746" />
 
@@ -236,7 +236,7 @@
 
 	<Reply
 		name="Dlg_npc_002754"
-		text="Let's just say they don't mind. And sometimes they're very much in favor of it. But I've already said too much, so that's all you'll get from me. So, I'll continue. It's very undesirable for us to kill civilians as part of our military operation, but you... You don't have to follow orders, you have nothing to do with the locals, and you're practically impossible to be court-martialed. And we got your girlfriend. You never know what could happen to her..."
+		text="Let's just say they don't mind. And sometimes they're very much in favor, especially if the news about it doesn't leave the city walls. But I've already said too much, so that's all you'll get from me. I'll continue. It's very undesirable for us to kill civilians as part of our military operation, but you... You don't have to follow orders, you have nothing to do with the locals, and you're practically impossible to be court-martialed. And we got your girlfriend. You never know what could happen to her..."
 		role="NPC"
 		nextReplies="Dlg_pl_002755 Dlg_pl_002758" />
 
@@ -12293,7 +12293,7 @@
 		name="AsgardBarman_hellodlg2"
 		text="Changed your mind? In case you forgot, the price for the key is 15000."
 		role="NPC"
-		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 3"
+		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 3 and not(IsQuestTaken('d_BarForTunel_Quest')) and QuestStatus('d_SerchCarTunel_Quest')~=Q_TAKEN and not(IsQuestTaken('d_KillCarTunel_Quest'))"
 		nextReplies="Dlg_pl_xyz457 Dlg_pl_xyz465" />
 
 	<Reply
@@ -12375,7 +12375,7 @@
 		name="Dlg_npc_001806"
 		text="It's you again."
 		role="NPC"
-		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 2"
+		scriptCondition="IsQuestTaken('d_FindKeyInTunel_Quest')   and   not(IsQuestComplete('d_FindKeyInTunel_Quest'))   and   not(IsQuestFailed('d_FindKeyInTunel_Quest'))   and   GetCurNpc():GetSpokenCount() == 2 and not(IsQuestTaken('d_BarForTunel_Quest')) and QuestStatus('d_SerchCarTunel_Quest')~=Q_TAKEN and not(IsQuestTaken('d_KillCarTunel_Quest'))"
 		nextReplies="Dlg_pl_001807" />
 
 	<Reply

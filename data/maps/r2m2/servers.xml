@@ -448,6 +448,11 @@
 			id="hunterCab02" 
 			file="data\models\AnimModels.xml"    
 			params = "skins: 1 2 3 5 8;" />
+		
+		<Item 
+			id="hunterCab02_fake" 
+			file="data\models\AnimModels.xml"    
+			params = "skins: 1 2 3 5 8;" />
 
 		<Item 
 			id="hunterSusp01" 

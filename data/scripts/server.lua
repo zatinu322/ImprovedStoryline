@@ -11,9 +11,6 @@
 --  $Id: server.lua,v 1.53 2005/07/26 09:06:59 anton Exp $
 -- ----------------------------------------------------------------------------
 
--- include isl version assignment
-EXECUTE_SCRIPT "data\\scripts\\isl.lua"
-
 -- include cheats.lua
 EXECUTE_SCRIPT "data\\scripts\\cheats.lua"
 
@@ -29,6 +26,9 @@ EXECUTE_SCRIPT "data\\scripts\\dialoghelpers.lua"
 
 -- include queststates.lua
 EXECUTE_SCRIPT "data\\scripts\\queststates.lua"
+
+-- include isl version assignment
+EXECUTE_SCRIPT "data\\scripts\\isl.lua"
 
 anticheat = 0
 

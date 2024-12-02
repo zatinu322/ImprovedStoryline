@@ -1050,29 +1050,32 @@
 		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			local dots_killed_fin = GetVar("DotsDestroyed").AsInt
-			if dots_killed_fin == 4 then
-				SaveAllToleranceStatus(RS_NEUTRAL)
-
-				local Plf = GetPlayerVehicle()
-				local PlfID = GetPlayerVehicleId()
-				local PlfCoor = Plf:GetPosition()
-				PlfCoor.y = PlfCoor.y + 5
-				PlfCoor.z = PlfCoor.z - 15
-
-				Plf:SetCustomControlEnabled( true )
-				Plf:SetCustomLinearVelocity( 0 )
-				Plf:SetThrottle( 0 )
-				Plf:SetCustomControlEnabled( false )
-
-				FlyAround(-1, 0, 25, 9, PlfCoor, PlfID, 1, 1)
-				StartCinematic()
-
-				AddCinematicMessage(39, 1 )
-
-				TActivate("trBDDRolikEnd")
-			
+			if dots_killed_fin ~= 4 then
 				trigger:Deactivate()
+				return
 			end
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 5
+			PlfCoor.z = PlfCoor.z - 15
+
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			FlyAround(-1, 0, 25, 9, PlfCoor, PlfID, 1, 1)
+			StartCinematic()
+
+			AddCinematicMessage(39, 1 )
+
+			TActivate("trBDDRolikEnd")
+		
+			trigger:Deactivate()
 		</script>
 	</trigger>
 
@@ -1119,7 +1122,7 @@
 
 			TActivate("TRIGGER_THIEFDIE")
 
-			CompleteQuest("Zachisti2_Quest")
+			TakeQuest("Zachisti2_Quest")
 
 			trigger:Deactivate()
 		</script>

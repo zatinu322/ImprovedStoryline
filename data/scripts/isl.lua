@@ -24,10 +24,9 @@ end
 
 -- безопасное удаление объекта, который может уже не существовать
 function SafeRemove(object)
-	if object ~= nil then
-		object:Remove()
-		object = nil
-	end
+	if not object then return end
+	object:Remove()
+	object = nil
 end
 
 -- переопределённая логика стандартных функций
@@ -39,24 +38,72 @@ local function _CreateNewObject( prototypeName, objName, parentId, belong )
 	return g_ObjCont:CreateNewObject( prototypeId, objName, parentId, belong )
 end
 
--- Функция создает Дамми обжект с заданной моделью
-function CreateNewDummyObject(modelName, objName, parentId, belong, pos, rot,skin)
-	println('1')
+-- переопределение логики стандартной функции
+function CreateNewDummyObject(modelName, objName, parentId, belong, pos, rot, skin, scale)
 	local prototypeName 	=  	"someDummyObject"
 	local dObj		=	_CreateNewObject( prototypeName, objName, parentId, belong )
 	local obj		=	GetEntityByID (dObj)
-	println('2')
 
 	if skin == nil then skin = 0 end
-	println('3')
+	if scale == nil then scale = "1" end
 
 	obj:SetModelName( modelName )
 	obj:SetRotation ( rot )
 	obj:SetPosition ( pos )
 	obj:SetSkin ( skin )
-	println('4')
+	obj:SetProperty("NodeScale", scale)
 
 	return obj
+end
+
+-- special function for creating humans
+function CreateHuman(PrototypeName, Belong, Pos, HumanName, PathName, HumanSkin)
+	local nameHuman = "Human"..tostring(random(9999))
+	if HumanName then
+		nameHuman = HumanName
+	end
+
+   	local bel = 1100
+	if belong then
+		bel = belong
+	end
+
+	local id = CreateNewObject{
+		prototypeName = PrototypeName,
+		objName = nameHuman,
+		belong = bel
+	}
+
+	local human = GetEntityByID( id )
+	if not human then
+		println( "Error: human ".. PrototypeName .. " is not created" )
+		return nil
+	end
+
+	Pos.y = g_ObjCont:GetHeight( Pos.x, Pos.z )
+
+	human:SetPosition( Pos )
+
+	if PathName then
+		if not human:AddWalkPathByName( PathName  ) then
+			println( "Error: path ".. PathName .." for human ".. nameHuman .. " is not added" )
+			return nil
+		end
+	
+		if not human:SetWalkPathByName( PathName  ) then
+			println( "Error: path ".. PathName .." for human ".. nameHuman .. " is not set" )
+			return nil
+		end
+	end
+
+	local skin = 0
+	if HumanSkin then
+		skin = HumanSkin
+	end
+
+	human:SetSkin(skin)
+
+	return human
 end
 
 -- отладочные команды

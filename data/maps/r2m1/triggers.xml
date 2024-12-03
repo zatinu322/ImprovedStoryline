@@ -18,6 +18,102 @@
 			if oldS then oldS:SetProperty("Active", 0) end
 
 			TActivate("ChangeTownsBelongR2M1")
+			TActivate("trCreateBossTrash")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Создание куч мусора у Босса -->
+	<trigger	Name="trCreateBossTrash"	active="0">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local models = {
+				"car_cemetery03",
+				"metal_plate3",
+				"car_cemetery03",
+				"metal_tube_angle",
+				"metal_tube_angle",
+				"segments_big_06",
+				"segments_big_06",
+				"metal_tube_angle",
+				"segments_big_05",
+				"brick_debris2",
+				"segments_big_05",
+				"segments_big_05",
+				"metal_tube1",
+			}
+			local positions = {
+				CVector(2140.085, 233.013, 5900.488),
+				CVector(2137.410, 235.530, 5903.553),
+				CVector(2161.968, 233.010, 5855.021),
+				CVector(2141.712, 233.008, 5898.951),
+				CVector(2147.146, 233.000, 5898.309),
+				CVector(2141.487, 233.000, 5895.302),
+				CVector(2146.983, 233.000, 5893.140),
+				CVector(2152.062, 234.647, 5841.080),
+				CVector(2158.592, 233.000, 5842.666),
+				CVector(2160.494, 233.000, 5842.207),
+				CVector(2162.243, 233.000, 5839.485),
+				CVector(2163.307, 233.000, 5836.427),
+				CVector(2164.769, 235.089, 5845.754),
+			}
+			local rotations = {
+				Quaternion(0.0000, 0.2798, 0.0000, -0.9600),
+				Quaternion(-0.6780, -0.2359, 0.6620, 0.2154),
+				Quaternion(0.0000, 0.9091, 0.0000, 0.4167),
+				Quaternion(0.0000, 0.6756, 0.0000, -0.7373),
+				Quaternion(0.0000, 0.7880, 0.0000, -0.6157),
+				Quaternion(0.0000, 0.4462, 0.0000, -0.8949),
+				Quaternion(0.0000, 0.5519, 0.0000, 0.8339),
+				Quaternion(0.0000, 0.0000, -0.3256, 0.9455),
+				Quaternion(0.0000, 0.5519, 0.0000, -0.8339),
+				Quaternion(0.0000, 0.8526, 0.0000, 0.5225),
+				Quaternion(0.0000, 0.0523, 0.0000, -0.9986),
+				Quaternion(0.0000, 0.6756, 0.0000, -0.7373),
+				Quaternion(-0.0995, 0.4269, 0.2041, 0.8753),
+			}
+
+			local scales = {
+				"1",
+				"0.754",
+				"1",
+				"1.120",
+				"1.080",
+				"0.920",
+				"0.930",
+				"1.319",
+				"1.120",
+				"0.870",
+				"1.060",
+				"1.120",
+				"0.830",
+			}
+
+			for i = 1, 13 do
+				local trash = CreateNewDummyObject(models[i], "boss02_trash"..i, -1, -1, positions[i], rotations[i], nil, scales[i])
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<!-- Удаление куч мусора у Босса -->
+	<trigger	Name="trRemoveBossTrash"	active="0">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(2145.364, 233.000, 5900.564), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(2134.502, 233.016, 5898.296), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(2170.911, 233.214, 5860.844), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(2160.996, 233.003, 5855.334), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(2158.121, 233.000, 5840.650), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+
+			for i = 1, 13 do
+				local trash = getObj("boss02_trash"..i)
+				SafeRemove(trash)
+			end
+
+			CreateNewDummyObject("metal_tube1", "boss02_trash_tube", -1, -1, CVector(2165.481, 234.591, 5844.640), Quaternion(-0.2241, 0.0152, 0.2871, 0.9312), nil, "0.830")
 
 			trigger:Deactivate()
 		</script>

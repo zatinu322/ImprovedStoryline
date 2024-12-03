@@ -136,7 +136,7 @@
 
 	<Reply
 		name="Dlg_npc_002734"
-		text="...So as soon as I found out that the girl had been captured and that the key to the gate had been irretrievably lost, I ordered Mikolka to take some dynamite and blow up the hinges. By the way, why did you come to these lands in the first place?"
+		text="...So as soon as I found out that the girl had been captured and that the key to the gate had been irretrievably lost, I asked Nikolay to take some dynamite and blow up the hinges. By the way, why did you come to these lands in the first place?"
 		role="NPC"
 		scriptCondition="QuestStatus('CivilOrAdept_Quest')==Q_CANBEGIVEN"
 		scriptResult="TakeQuest('CivilOrAdept_Quest')"
@@ -706,7 +706,7 @@
 
 	<Reply
 		name="Dlg_npc_002834"
-		text="To attack Kateberg. You, Mikolka on the grader and a couple more of our fighters will attack the city from the outside and take out the pillboxes and the outer guard, while others will use these blueprints to get inside the city through the sewers and hit it from the rear. Such tactics should minimize civilian casualties."
+		text="To attack Kateberg. You, Nikolay on the grader and a couple more of our fighters will attack the city from the outside and take out the pillboxes and the outer guard, while others will use these blueprints to get inside the city through the sewers and hit it from the rear. Such tactics should minimize civilian casualties."
 		role="NPC"
 		nextReplies="Dlg_pl_002835" />
 
@@ -13308,7 +13308,7 @@
 		name="Signer_hellodlg0"
 		text="What, come to see the cursed one, too? Well, look! Here I am! Marked by the devil!"
 		role="NPC"
-		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and IsQuestTaken('Chifir_Quest') and not(QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED)"
+		scriptCondition="GetCurNpc():GetSpokenCount() == 0 and (IsQuestTaken('Chifir_Quest') or IsQuestComplete('QuickFindBen')) and not(QuestStatus('d_FindRealFatherRoom_Quest')==Q_COMPLETED)"
 		nextReplies="Signer_hellodlg0_P1" />
 
 	<Reply

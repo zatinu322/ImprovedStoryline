@@ -434,7 +434,7 @@
 
 	<!-- Удаление машины Серафимы у её дома и Северки -->
 	<trigger Name="SerafimaVehRemove" active="0">
-		<event	timeout="3"		eventid="GE_TIME_PERIOD" />
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
 		<script>
 			if QuestStatus("CaptureMoskaBefore")==Q_TAKEN then
 				local ser = GetEntityByName("SeraDoz1")

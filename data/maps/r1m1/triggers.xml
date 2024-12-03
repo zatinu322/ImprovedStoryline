@@ -85,6 +85,33 @@
 		</script>
 	</trigger>
 
+	<!-- Создание ходящих человечков в Южном и Заимке -->
+	<trigger	Name="trCreateHumans"	active="0">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local names = {"Human40", "Human37", "Human59", "Human99", "Human29", "Human7", "Human89"}
+			local prototypes = {"Human3", "Human2", "Human2", "Human", "Human3", "Human3", "Human"}
+			local positions = {
+				CVector(1990.637, 300.989, 817.629),
+				CVector(1044.488, 289.802, 2861.574),
+				CVector(1061.462, 288.784, 2910.462),
+				CVector(1073.641, 288.649, 2980.169),
+				CVector(1023.262, 289.014, 2905.218),
+				CVector(963.492, 289.719, 2952.438),
+				CVector(952.313, 290.338, 2976.742)
+			}
+			local paths = {"h22_m1", "h10_m1", "h9_m1", "h8_m1", "h12_m1", "h11_m1", "h13_m1"}
+			local skins = {1, 0, 1, 0, 1, 0, 1}
+
+			for i = 1, 7 do
+				CreateHuman(prototypes[i], 1001, positions[i], names[i], paths[i], skins[i])
+				println('Human '..names[i]..'created!')
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
 	<!-- Создание и задание пути Трактору у Южного -->
 	<trigger Name="TRAKTOR_FUN" active="1">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
@@ -148,10 +175,6 @@
 								CVector(2080,314,3718)
 			}
 
-			local RandBelong = {	1002,
-							1005
-			}
-
 			local r4 = random(2)
 			local r
 
@@ -163,7 +186,7 @@
 			local r2 = random(2)
 			local nom = random(1000)
 
-			TeamCreateWithWarez("BrodiagaCar"..nom,RandBelong[r4], RandCoordStart[r2], {RandModel[r1]}, nil, 1)
+			TeamCreateWithWarez("BrodiagaCar"..nom, 1013, RandCoordStart[r2], {RandModel[r1]}, nil, 1)
 			
 			local RandWay = {		CVector(1318, 287, 2841),
 							CVector(1129, 289, 1375),
@@ -897,7 +920,7 @@
 	<trigger Name="ZASADA_2" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VeryBigFun1_Loc" />
 		<script>
-			local terr = TeamCreate("SecondB",1002,CVector(2099,339,2343),{"Sml101","Sml101"},CVector(2429,334,2354), 1)
+			local terr = TeamCreate("SecondB",1013,CVector(2099,339,2343),{"Sml101","Sml101"},CVector(2429,334,2354), 1)
 			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
 			terr:_AdjustBehaviour ()
 
@@ -908,7 +931,7 @@
 	<trigger Name="ZASADA_3" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VeryBigFun2_Loc" />
 		<script>
-			local terr = TeamCreate("ThirdB",1002,CVector(1136,289,2257),{"r1m1_scout03"},CVector(1260,287,2650), 1)
+			local terr = TeamCreate("ThirdB",1013,CVector(1136,289,2257),{"r1m1_scout03"},CVector(1260,287,2650), 1)
 			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
 			terr:_AdjustBehaviour ()
 
@@ -919,7 +942,7 @@
 	<trigger Name="ZASADA_4" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			local terr = TeamCreate("FourthB",1005,CVector(2022.755, 315, 2426.375),{"Sml101","Sml201"}, nil, 1)
+			local terr = TeamCreate("FourthB",1013,CVector(2022.755, 315, 2426.375),{"Sml101","Sml201"}, nil, 1)
 			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
 			terr:_AdjustBehaviour ()
 
@@ -930,7 +953,7 @@
 	<trigger Name="ZASADA_5" active="0">
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
-			local terr = TeamCreate("FivthB", 1005, CVector(3116.254, 335.064, 2483.916), {"Sml201","Sml201"}, nil, 1)
+			local terr = TeamCreate("FivthB", 1013, CVector(3116.254, 335.064, 2483.916), {"Sml201","Sml201"}, nil, 1)
 			terr:SetProperty ("TeamTacticPrototype", "TeamTacticTerroristsR1M1")
 			terr:_AdjustBehaviour ()
 

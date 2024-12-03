@@ -1539,44 +1539,6 @@
 	</Object>
 
 	<Object
-		Name="Human29"
-		Belong="1001"
-		Prototype="Human3"
-		Pos="1023.262 289.014 2905.218"
-		Skin="1"
-		PathsNames="h12_m1" />
-
-	<Object
-		Name="Human37"
-		Belong="1001"
-		Prototype="Human2"
-		Pos="1044.488 289.802 2861.574"
-		PathsNames="h10_m1" />
-
-	<Object
-		Name="Human89"
-		Belong="1001"
-		Prototype="Human"
-		Pos="952.313 290.338 2976.742"
-		Skin="1"
-		PathsNames="h13_m1" />
-
-	<Object
-		Name="Human7"
-		Belong="1001"
-		Prototype="Human3"
-		Pos="963.492 289.719 2952.438"
-		PathsNames="h11_m1" />
-
-	<Object
-		Name="Human59"
-		Belong="1001"
-		Prototype="Human2"
-		Pos="1061.462 288.784 2910.462"
-		Skin="1"
-		PathsNames="h9_m1" />
-
-	<Object
 		Name="Human84444444444"
 		Belong="1001"
 		Prototype="Human"
@@ -1627,14 +1589,6 @@
 		Prototype="Human"
 		Pos="2130.583 301.239 779.471"
 		PathsNames="h20_m1" />
-
-	<Object
-		Name="Human40"
-		Belong="1001"
-		Prototype="Human3"
-		Pos="1990.637 300.904 817.629"
-		Skin="1"
-		PathsNames="h22_m1" />
 
 	<Object
 		Name="Human5qqq1"

@@ -16,7 +16,7 @@
 			modelSkin="0"
 			modelCfg="294"
 			showTime="5"
-			fontSize="30" />
+			fontSize="40" />
 
 		<Page
 			id="2"
@@ -25,7 +25,7 @@
 			modelSkin="0"
 			modelCfg="182"
 			showTime="5"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="3"
@@ -34,16 +34,16 @@
 			modelSkin="2"
 			modelCfg="368"
 			showTime="5"
-			fontSize="14" />
+			fontSize="22" />
 
 		<Page
 			id="4"
-			text="Special thanks to:| |Lynne for the locomotive model| |Suslo Red, Traygen for the model of the CD medal| |Varisane for numerous text edits| |OverLine for the winter lightmaps| |And also to all testers, bug reporters and those who just helped with advice|@00FFFFFFghghg|"
+			text="Special thanks to:| |Lynne for the locomotive model| |Suslo Red, Traygen for the model of the CD medal| |Varisane for numerous text edits| |OverLine for the winter lightmaps| |And also to all testers, bug reporters|and those who just helped with advice|@00FFFFFFghghg|"
 			modelName="r2_man"
 			modelSkin="1"
 			modelCfg="140"
 			showTime="5"
-			fontSize="14" />
+			fontSize="22" />
 
 		<Page
 			id="5"
@@ -52,7 +52,7 @@
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="30" />
+			fontSize="40" />
 
 		<Page
 			id="6"
@@ -70,7 +70,7 @@
 			modelSkin="2"
 			modelCfg="765"
 			showTime="3"
-			fontSize="12" />
+			fontSize="18" />
 
 		<Page
 			id="8"
@@ -79,7 +79,7 @@
 			modelSkin="1"
 			modelCfg="761"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="9"
@@ -88,7 +88,7 @@
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="10"
@@ -97,7 +97,7 @@
 			modelSkin="1"
 			modelCfg="1531"
 			showTime="3"
-			fontSize="18" />
+			fontSize="28" />
 		
 		<Page
 			id="11"
@@ -106,7 +106,7 @@
 			modelSkin="0"
 			modelCfg="104"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="12"
@@ -115,7 +115,7 @@
 			modelSkin="1"
 			modelCfg="381"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="13"
@@ -124,7 +124,7 @@
 			modelSkin="2"
 			modelCfg="765"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="14"
@@ -133,7 +133,7 @@
 			modelSkin="2"
 			modelCfg="1917"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="15"
@@ -142,7 +142,7 @@
 			modelSkin="2"
 			modelCfg="168"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="16"
@@ -151,7 +151,7 @@
 			modelSkin="0"
 			modelCfg="91"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="17"
@@ -160,7 +160,7 @@
 			modelSkin="0"
 			modelCfg="14"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="18"
@@ -169,7 +169,7 @@
 			modelSkin="2"
 			modelCfg="2169"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="19"
@@ -178,7 +178,7 @@
 			modelSkin="1"
 			modelCfg="4"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="20"
@@ -187,7 +187,7 @@
 			modelSkin="1"
 			modelCfg="91"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="21"
@@ -196,7 +196,7 @@
 			modelSkin="2"
 			modelCfg="85"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="22"
@@ -205,7 +205,7 @@
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="26" />
+			fontSize="36" />
 		
 		<Page
 			id="23"
@@ -214,7 +214,7 @@
 			modelSkin="1"
 			modelCfg="379"
 			showTime="5"
-			fontSize="20" />
+			fontSize="30" />
 		
 		<Page
 			id="24"
@@ -223,7 +223,7 @@
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="26" />
+			fontSize="36" />
 		
 		<Page
 			id="25"
@@ -232,7 +232,7 @@
 			modelSkin="2"
 			modelCfg="635"
 			showTime="5"
-			fontSize="18" />
+			fontSize="28" />
 		
 		<Page
 			id="26"
@@ -241,16 +241,16 @@
 			modelSkin="2"
 			modelCfg="92"
 			showTime="5"
-			fontSize="14" />
+			fontSize="24" />
 
 		<Page
 			id="27"
-			text="As well as:||«Ïàâëèê RPG»’s channel viewers||Our wifes, girlfriends, husbands, relatives and cats, who tolerated us during the development||To all of those who waited for and supported this project"
+			text="As well as:||«Ïàâëèê RPG»’s channel viewers||Our wifes, girlfriends, husbands, relatives and cats,|who tolerated us during the development||To all of those who waited for and supported this project"
 			modelName="r1_man"
 			modelSkin="1"
 			modelCfg="102"
 			showTime="7"
-			fontSize="14" />
+			fontSize="24" />
 
 		<Page
 			id="28"
@@ -268,7 +268,7 @@
 			modelSkin="0"
 			modelCfg="294"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="30"
@@ -277,7 +277,7 @@
 			modelSkin="0"
 			modelCfg="182"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="31"
@@ -286,7 +286,7 @@
 			modelSkin="2"
 			modelCfg="368"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="32"
@@ -295,7 +295,7 @@
 			modelSkin="0"
 			modelCfg="87"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="33"
@@ -304,7 +304,7 @@
 			modelSkin="0"
 			modelCfg="20"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="34"
@@ -313,7 +313,7 @@
 			modelSkin="0"
 			modelCfg="87"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="35"
@@ -322,7 +322,7 @@
 			modelSkin="2"
 			modelCfg="8"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="36"
@@ -331,7 +331,7 @@
 			modelSkin="2"
 			modelCfg="1917"
 			showTime="5"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="37"
@@ -340,7 +340,7 @@
 			modelSkin="1"
 			modelCfg="140"
 			showTime="5"
-			fontSize="18" />
+			fontSize="28" />
 
 		<Page
 			id="38"
@@ -349,7 +349,7 @@
 			modelSkin="1"
 			modelCfg="1529"
 			showTime="6"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="39"
@@ -358,7 +358,7 @@
 			modelSkin="1"
 			modelCfg="1529"
 			showTime="6"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="40"
@@ -367,109 +367,118 @@
 			modelSkin="2"
 			modelCfg="1917"
 			showTime="4"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="41"
-			text="Interface designer||Mikhail «Rai» Matvienko||FX||Alexey «Hal» Lobanov"
+			text="Interface designer||Mikhail «Rai» Matvienko"
 			modelName="r2_man"
 			modelSkin="2"
 			modelCfg="104"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="42"
+			text="FX||Alexey «Hal» Lobanov"
+			modelName="r3_man"
+			modelSkin="1"
+			modelCfg="2300"
+			showTime="3"
+			fontSize="30" />
+		
+		<Page
+			id="43"
 			text="Sound director||Anton Popov|Ekaterina Shvemmer"
 			modelName="r2_man"
 			modelSkin="1"
 			modelCfg="330"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="43"
+			id="44"
 			text="Quality assurance||Vyacheslav «ls» Avdeev"
 			modelName="r2_man"
 			modelSkin="2"
 			modelCfg="84"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="44"
+			id="45"
 			text="PR-manager||Svetlana «Ñrystal» Tchestnikh"
 			modelName="r2_woman"
 			modelSkin="0"
 			modelCfg="20"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="45"
-			text="The soundtrack includes tracks of the music contest winners:||Alexander Chekster|Boris Vedensky and Alexander Treger|Mikhail Sidorov|Alexander Lisenkov|Paralaxeen|Igor Belousov"
+			id="46"
+			text="The soundtrack includes tracks|of the music contest winners:||Alexander Chekster|Boris Vedensky and Alexander Treger|Mikhail Sidorov|Alexander Lisenkov|Paralaxeen|Igor Belousov"
 			modelName="r2_man"
 			modelSkin="1"
 			modelCfg="132"
 			showTime="4"
-			fontSize="14" />
+			fontSize="24" />
 
 		<Page
-			id="46"
+			id="47"
 			text="Special thanks to:||Constantine Sokharev - programming|Svyatoslav Patashnikov - management|Alexey Andruschenko – web design"
 			modelName="r2_man"
 			modelSkin="2"
 			modelCfg="24"
 			showTime="3"
-			fontSize="16" />
+			fontSize="26" />
 
 		<Page
-			id="47"
+			id="48"
 			text="Publisher «Buka Entertainment»"
 			modelName="r2_man"
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="40" />
+			fontSize="50" />
 
 		<Page
-			id="48"
+			id="49"
 			text="Producer||Ivan Bunakov"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="2812"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="49"
+			id="50"
 			text="Senior executive producer||Ivan Moroz"
 			modelName="r2_man"
 			modelSkin="0"
 			modelCfg="198"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="50"
+			id="51"
 			text="Sales managers||Youriy Virich|Alexey Pisklukov"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="2298"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="51"
+			id="52"
 			text="Technical expert||Kirill Bestemyanov"
 			modelName="r3_man"
 			modelSkin="0"
 			modelCfg="57"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="52"
+			id="53"
 			text="Sound expert||Ruslan Dmitriev"
 			modelName="r3_man"
 			modelSkin="2"
@@ -478,228 +487,228 @@
 			fontSize="20" />
 
 		<Page
-			id="53"
+			id="54"
 			text="Cover designers||Sanan Ushanov|Daniella Klimashevskaya"
 			modelName="r2_woman"
 			modelSkin="2"
 			modelCfg="43"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="54"
+			id="55"
 			text="PR manager||Alexey Pastushenko"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="765"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="55"
+			id="56"
 			text="PR manager’s assistant||Oleg Morozov"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="456"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="56"
+			id="57"
 			text="Producer’s assistant||Alexey Peshekhonov|Nikolay Safronov"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="761"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="57"
+			id="58"
 			text="Manager of new teams||Nikolay Safronov"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="635"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="58"
+			id="59"
 			text="Executive producer||Alexander Pak"
 			modelName="r3_man"
 			modelSkin="0"
 			modelCfg="253"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="59"
+			id="60"
 			text="QA supervisor||Evgeny Popov|Ivan Rid"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="379"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="60"
+			id="61"
 			text="QA team||Anton Epishin|Dmitry Lesin|Alexander Poloshin|Evgeny Popov|Ivan Raynov|Ivan Rid|Alexey Chebotarev"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="456"
 			showTime="5"
-			fontSize="20" />
+			fontSize="28" />
 
 		<Page
-			id="61"
+			id="62"
 			text="External testing||Peter Beliaev|Alexey Bunak|Igor Dmitriev|Michael Matushov|Denis Sokolov"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="0"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="62"
+			id="63"
 			text="External testing||Igor Peshekhontsev|Dmitry Chichikov|Alexey SHekhovtsev|Ilia Yusipov|Timur Yusipov"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="0"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="63"
+			id="64"
 			text="Sales department||Maxim Î. Alexeev|Maxim U. Alexeev|Maxim A. Alexeev|Natalia Ankundinova|Elena Antonova|Ilia Brovchenko|Pavel Grigoriev|Victoria Kiseleva|Alexander Kochetkov"
 			modelName="r3_man"
 			modelSkin="0"
 			modelCfg="123"
 			showTime="5"
-			fontSize="14" />
+			fontSize="22" />
 
 		<Page
-			id="64"
+			id="65"
 			text="Sales department||Andrey Osipov|Alexandr Petrinsky|Olga Polkovnikova|Larisa Savelieva|Evgeny Samsonov|Svetlana Samsonova|Valery Tikhvonski|Sergey Fedosof"
 			modelName="r2_woman"
 			modelSkin="0"
 			modelCfg="4"
 			showTime="5"
-			fontSize="14" />
+			fontSize="22" />
 
 		<Page
-			id="65"
+			id="66"
 			text="Marketing||Tatiana Vasekina"
 			modelName="r2_woman"
 			modelSkin="2"
 			modelCfg="113"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="66"
+			id="67"
 			text="Community manager||Alexander Kovalev"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="97"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="67"
+			id="68"
 			text="Experts’ council||Vladimir Miniaev|Maxim N. Mikhalev|Ivan Moroz|Sergey Rudenko|Vitaly Kharitonenko"
 			modelName="r3_man"
 			modelSkin="0"
 			modelCfg="225"
 			showTime="5"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="68"
+			id="69"
 			text="Juridical support||Georgy Vitaliev"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="369"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="69"
+			id="70"
 			text="Technical support||Evgeny Dmitriev"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="381"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="70"
+			id="71"
 			text="CEO||Alexander Mikhailov"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="2300"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="71"
+			id="72"
 			text="CFO||Marina Ravoon"
 			modelName="r2_woman"
 			modelSkin="2"
 			modelCfg="108"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="72"
+			id="73"
 			text="Marketing department’s head||Maxim N. Mikhalev"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="635"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="73"
+			id="74"
 			text="Sales department’s head||Tatiana Ustinova"
 			modelName="r2_woman"
 			modelSkin="0"
 			modelCfg="100"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="74"
+			id="75"
 			text="Development department’s head||Ivan Bunalov"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="2812"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
-			id="75"
+			id="76"
 			text="Special thanks:||Youlia Belova|Sergey Bobkov|Ilia Brovchenko|Dmitry Zakharov|Dmitry Kuleshov|Dmitry Lesin|Vladimir Miniaev|Ivan Moroz"
 			modelName="r3_man"
 			modelSkin="2"
 			modelCfg="1745"
 			showTime="5"
-			fontSize="14" />
+			fontSize="24" />
 
 		<Page
-			id="76"
+			id="77"
 			text="Special thanks:||Marina Ravoon|Ivan Rid|Inna Sutsepina|Igor Ustinov|Irina Tsareva|Victoria Enns"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="57"
 			showTime="5"
-			fontSize="14" />
+			fontSize="24" />
 
 		<Page
-			id="77"
+			id="78"
 			text="Thanks for playing!"
 			modelName="r3_man"
 			modelSkin="1"
 			modelCfg="1529"
 			showTime="5"
-			fontSize="40" />
+			fontSize="50" />
 	</Pages>
 </Credits>

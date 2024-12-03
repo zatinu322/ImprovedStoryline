@@ -1321,7 +1321,7 @@
 		ConditionToGive="all taken"
 		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(10000)"
-		Levels="r3m1 r3m2 r1m4 r1m3 r1m2 r2m1 r2m2">
+		Levels="r3m1 r3m2 r1m4 r1m3 r1m2 r2m1 r2m2 r1m1">
 		<quest
 			Name="q_PWS1"
 			Automatic="1"
@@ -1341,7 +1341,7 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="q_PWS1"
 			OnTake='ShowCircleOnMinimapByName("MidgardProfessor")'
-			Levels="r3m1 r3m2 r1m4 r1m3 r1m2 r2m1 r2m2" />
+			Levels="r3m1 r3m2 r1m4 r1m3 r1m2 r2m1 r2m2 r1m1" />
 	</quest>
 <!--Root/r3m2/Сюжетные/Преодолеть защитников оракула-->
 	<quest
@@ -3716,7 +3716,7 @@
 		SubQuestsCondition="and"
 		CheckAll="1"
 		ConditionToGive="all taken"
-		PrecedingQuests="Chifir_Quest"
+		PrecedingQuests="BenEast_Quest"
 		OnComplete="AddPlayerMoney(80)"
 		OnFail='TDeactivate("THESIGNONFIELD")'
 		Levels="r1m2">

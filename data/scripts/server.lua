@@ -27,9 +27,6 @@ EXECUTE_SCRIPT "data\\scripts\\dialoghelpers.lua"
 -- include queststates.lua
 EXECUTE_SCRIPT "data\\scripts\\queststates.lua"
 
--- include isl version assignment
-EXECUTE_SCRIPT "data\\scripts\\isl.lua"
-
 anticheat = 0
 
 -- global object repository
@@ -126,7 +123,6 @@ function TActivate( TriggerName )
 	if trig1 then 
 		trig1:Activate()
 	else
-		LOG("ERROR! Trigger "..TriggerName.." does not exists.")
 		println("ERROR! Trigger "..TriggerName.." does not exists.")
 	end
 end
@@ -138,7 +134,6 @@ function TDeactivate( TriggerName )
 	if trig1 then 
 		trig1:Deactivate() 
 	else
-		LOG("ERROR! Trigger "..TriggerName.." does not exists.")
 		println("ERROR! Trigger "..TriggerName.." does not exists.")
 	end
 end
@@ -1434,3 +1429,6 @@ function DefineTheEnding()
 
 	return good
 end
+
+-- include isl version assignment
+EXECUTE_SCRIPT "data\\scripts\\isl.lua"

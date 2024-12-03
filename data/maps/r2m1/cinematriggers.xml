@@ -2042,6 +2042,7 @@
 					CreateEffectInsertedInRemove( "ET_PS_VEH_PART_BLOW_BIG_CARGO", ContPos.z-5, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
 					CreateEffectInsertedInRemove( "ET_PS_VEH_EXP1_MED1", ContPos, Quaternion(0.0000, 0.0000, 0.0000, 1.0000), true )
 					TActivate("ContainerEffectsCreate2")
+					TActivate("trRemoveBossTrash")
 				end
 				trigger:Deactivate()
 			end

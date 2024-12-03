@@ -189,7 +189,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|Hello, is anyone there? Your friend Lisa sent us to open the gate for you."
+		value="MECHANIC NIKOLAY|Hello, is anyone there? Your friend Lisa sent us to open the gate for you."
 		time="8" />
 
 	<string
@@ -207,7 +207,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|Get away from the gates, I'm going to blow the hinges."
+		value="MECHANIC NIKOLAY|Get away from the gates, I'm going to blow the hinges."
 		time="6" />
 
 	<string
@@ -225,7 +225,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|We'll explain everything to you, but first let's get to the village. It looks like a snowstorm is about to start."
+		value="MECHANIC NIKOLAY|We'll explain everything to you, but first let's get to the village. It looks like a snowstorm is about to start."
 		time="8" />
 
 	<string
@@ -527,7 +527,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|There you are! We've been doing a little recon. There are two ways to get close to Kateberg: either attack head-on, or try to attack from the factory. In both cases we risk a lot, but there's nowhere to retreat to."
+		value="MECHANIC NIKOLAY|There you are! We've been doing a little recon. There are two ways to get close to Kateberg: either attack head-on, or try to attack from the factory. In both cases we risk a lot, but there's nowhere to retreat to."
 		time="17" />
 
 	<string
@@ -545,7 +545,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|Our main task is to destroy the pillboxes and the outer guards of the city, the rest will be done by another group. You choose tactics, we will follow you. Good luck to all, and may the higher powers protect us!"
+		value="MECHANIC NIKOLAY|Our main task is to destroy the pillboxes and the outer guards of the city, the rest will be done by another group. You choose tactics, we will follow you. Good luck to all, and may the higher powers protect us!"
 		time="13" />
 
 	<string
@@ -563,7 +563,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|Velimir has something important to tell you, he's already here in Kateberg. You'd better hurry!"
+		value="MECHANIC NIKOLAY|Velimir has something important to tell you, he's already here in Kateberg. You'd better hurry!"
 		time="9" />
 
 	<string
@@ -591,7 +591,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|We did it! Yes! Moska has fallen!"
+		value="MECHANIC NIKOLAY|We did it! Yes! Moska has fallen!"
 		time="6" />
 
 	<string
@@ -609,7 +609,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|The warehouse is unharmed, and all the engine parts are still there. The Adepts have left our land, but they'll be back with reinforcements soon, so we need to act quickly. Take the parts to Severka, that's the last thing we ask of you."
+		value="MECHANIC NIKOLAY|The warehouse is unharmed, and all the engine parts are still there. The Adepts have left our land, but they'll be back with reinforcements soon, so we need to act quickly. Take the parts to Severka, that's the last thing we ask of you."
 		time="16" />
 
 	<string
@@ -627,7 +627,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|In the meantime, we'll launch preemptive strikes against the ice wasteland. If we fire every missile we have here, it'll take a long, long time for the Adepts to get here again."
+		value="MECHANIC NIKOLAY|In the meantime, we'll launch preemptive strikes against the ice wasteland. If we fire every missile we have here, it'll take a long, long time for the Adepts to get here again."
 		time="11" />
 
 	<string
@@ -637,7 +637,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|There you are. Let me tell you the plan of action. Velimir is already in place, but you'd better not disturb him, he wants to be alone right now. The operation will begin as soon as he moves."
+		value="MECHANIC NIKOLAY|There you are. Let me tell you the plan of action. Velimir is already in place, but you'd better not disturb him, he wants to be alone right now. The operation will begin as soon as he moves."
 		time="14" />
 
 	<string
@@ -655,7 +655,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|She stayed in Kateberg. She says she can't watch it with her own eyes, but she respects her father's decision and is very proud of him. As soon as the detonator is triggered, we move out to finish off the rest of the adepts. Is everyone ready?"
+		value="MECHANIC NIKOLAY|She stayed in Kateberg. She says she can't watch it with her own eyes, but she respects her father's decision and is very proud of him. As soon as the detonator is triggered, we move out to finish off the rest of the adepts. Is everyone ready?"
 		time="16" />
 
 	<string
@@ -673,7 +673,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|Thank you for everything, stranger. Thanks to you, we have survived and can leave these troubled lands. Velimir would be proud of you."
+		value="MECHANIC NIKOLAY|Thank you for everything, stranger. Thanks to you, we have survived and can leave these troubled lands. Velimir would be proud of you."
 		time="10" />
 
 	<string
@@ -719,7 +719,7 @@
 		modelCfg="132"
 		modelSlot="1"
 		sound=""
-		value="MIKOLKA|And yes, we've deactivated all the turrets on the bridge, so you can now enter the sage's lands unhindered. I hope you find what you came here for. Farewell. And thank you for your help!"
+		value="MECHANIC NIKOLAY|And yes, we've deactivated all the turrets on the bridge, so you can now enter the sage's lands unhindered. I hope you find what you came here for. Farewell. And thank you for your help!"
 		time="14" />
 
 	<string

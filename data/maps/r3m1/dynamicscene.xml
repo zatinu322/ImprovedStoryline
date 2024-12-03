@@ -1005,7 +1005,22 @@
 					Flags="16"
 					Prototype="BelazForSale"
 					Pos="0.000 352.352 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="belazCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="belazCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="belazChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -1402,7 +1417,22 @@
 					Flags="16"
 					Prototype="UralForSale"
 					Pos="0.000 351.914 0.000">
-					<Parts />
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
 
 					<Repository />
 				</Item>
@@ -3365,8 +3395,8 @@
 			Name="barricade7_GwG86_Child2"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="919.494 288.458 993.684"
-			Rot="0.000 -0.309 0.000 0.951">
+			Pos="1004.675 274.126 843.015"
+			Rot="0.000 -0.227 0.000 0.974">
 			<Parts />
 		</Object>
 
@@ -3374,8 +3404,8 @@
 			Name="barricade7_GwG86_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun08"
-			Pos="929.202 288.422 1000.737"
-			Rot="0.000 -0.309 0.000 0.951">
+			Pos="1015.437 274.119 848.322"
+			Rot="0.000 -0.227 0.000 0.974">
 			<Parts />
 		</Object>
 	</Object>
@@ -3407,8 +3437,8 @@
 			Name="barricade6_wGw45_Child3"
 			Belong="1002"
 			Prototype="staticAutoGun07"
-			Pos="873.453 288.509 1048.192"
-			Rot="0.000 -0.393 0.000 0.920">
+			Pos="676.658 288.620 1215.960"
+			Rot="0.000 -0.973 0.000 -0.229">
 			<Parts />
 		</Object>
 	</Object>
@@ -25887,22 +25917,22 @@
 		Name="sack_wall12705"
 		Belong="-1"
 		Prototype="Breakable_SackWall1"
-		Pos="924.348 288.524 997.210"
-		Rot="0.000 -0.309 0.000 0.951" />
+		Pos="1010.056 274.211 845.668"
+		Rot="0.000 -0.227 0.000 0.974" />
 
 	<Object
 		Name="sack_wall22706"
 		Belong="-1"
 		Prototype="Breakable_SackWall2"
-		Pos="869.304 288.416 1043.857"
-		Rot="0.000 -0.393 0.000 0.920" />
+		Pos="682.709 288.505 1218.433"
+		Rot="0.000 -0.973 0.000 -0.229" />
 
 	<Object
 		Name="sack_wall12707"
 		Belong="-1"
 		Prototype="Breakable_SackWall1"
-		Pos="877.602 288.419 1052.526"
-		Rot="0.000 -0.393 0.000 0.920" />
+		Pos="671.290 288.505 1213.286"
+		Rot="0.000 -0.973 0.000 -0.229" />
 
 	<Object
 		Name="sack_wall22708"

@@ -2,7 +2,7 @@
 <World
 	name="Object13"
 	class="SgNode"
-	LastId="76479034">
+	LastId="76479109">
 	<Node
 		name="Object3"
 		class="SgAnimatedModelNode"
@@ -17565,15 +17565,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object8262"
-		class="SgAnimatedModelNode"
-		org="2161.968 0.000 5855.021"
-		orgRel="1"
-		rot="0.0000 0.9091 0.0000 0.4167"
-		id="car_cemetery03"
-		ndmAction="0" />
-
-	<Node
 		name="Object8263"
 		class="SgAnimatedModelNode"
 		org="2078.142 0.400 5934.083"
@@ -17589,15 +17580,6 @@
 		orgRel="1"
 		rot="0.0321 0.7301 -0.0493 -0.6808"
 		id="car_cemetery01"
-		ndmAction="0" />
-
-	<Node
-		name="Object8265"
-		class="SgAnimatedModelNode"
-		org="2140.085 0.000 5900.488"
-		orgRel="1"
-		rot="0.0000 0.2798 0.0000 -0.9600"
-		id="car_cemetery03"
 		ndmAction="0" />
 
 	<Node
@@ -17785,26 +17767,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object8288"
-		class="SgAnimatedModelNode"
-		org="2147.146 0.000 5898.309"
-		orgRel="1"
-		rot="0.0000 0.7880 0.0000 -0.6157"
-		scale="1.080 1.080 1.080"
-		id="metal_tube_angle"
-		ndmAction="0" />
-
-	<Node
-		name="Object8289"
-		class="SgAnimatedModelNode"
-		org="2141.712 0.000 5898.951"
-		orgRel="1"
-		rot="0.0000 0.6756 0.0000 -0.7373"
-		scale="1.120 1.120 1.120"
-		id="metal_tube_angle"
-		ndmAction="0" />
-
-	<Node
 		name="Object8290"
 		class="SgAnimatedModelNode"
 		org="2133.841 0.000 5891.008"
@@ -17822,26 +17784,6 @@
 		rot="0.0000 0.9239 0.0000 -0.3827"
 		scale="0.880 0.880 0.880"
 		id="metal_tube1"
-		ndmAction="0" />
-
-	<Node
-		name="Object8292"
-		class="SgAnimatedModelNode"
-		org="2164.769 2.089 5845.754"
-		orgRel="1"
-		rot="-0.0995 0.4269 0.2041 0.8753"
-		scale="0.830 0.830 0.830"
-		id="metal_tube1"
-		ndmAction="0" />
-
-	<Node
-		name="Object8293"
-		class="SgAnimatedModelNode"
-		org="2152.062 1.647 5841.080"
-		orgRel="1"
-		rot="0.0000 0.0000 -0.3256 0.9455"
-		scale="1.319 1.319 1.319"
-		id="metal_tube_angle"
 		ndmAction="0" />
 
 	<Node
@@ -18240,16 +18182,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object8583"
-		class="SgAnimatedModelNode"
-		org="2137.410 2.508 5903.553"
-		orgRel="1"
-		rot="-0.6780 -0.2359 0.6620 0.2154"
-		scale="0.754 0.754 0.754"
-		id="metal_plate3"
-		ndmAction="0" />
-
-	<Node
 		name="Object8584"
 		class="SgAnimatedModelNode"
 		org="2169.158 1.583 5847.770"
@@ -18445,36 +18377,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object8616"
-		class="SgAnimatedModelNode"
-		org="2156.055 0.000 5840.430"
-		orgRel="1"
-		rot="0.0000 0.4617 0.0000 -0.8870"
-		scale="0.840 0.840 0.840"
-		id="segments_big_04"
-		ndmAction="0" />
-
-	<Node
-		name="Object8617"
-		class="SgAnimatedModelNode"
-		org="2153.612 0.000 5838.533"
-		orgRel="1"
-		rot="0.0000 0.9724 0.0000 0.2334"
-		scale="1.120 1.120 1.120"
-		id="segments_big_04"
-		ndmAction="0" />
-
-	<Node
-		name="Object8618"
-		class="SgAnimatedModelNode"
-		org="2158.481 0.000 5841.502"
-		orgRel="1"
-		rot="0.0000 0.9962 0.0000 0.0872"
-		scale="1.110 1.110 1.110"
-		id="segments_big_04"
-		ndmAction="0" />
-
-	<Node
 		name="Object8619"
 		class="SgAnimatedModelNode"
 		org="2164.182 0.000 5842.215"
@@ -18482,36 +18384,6 @@
 		rot="0.0000 0.9962 0.0000 0.0872"
 		scale="0.840 0.840 0.840"
 		id="segments_big_04"
-		ndmAction="0" />
-
-	<Node
-		name="Object8620"
-		class="SgAnimatedModelNode"
-		org="2163.307 0.000 5836.427"
-		orgRel="1"
-		rot="0.0000 0.6756 0.0000 -0.7373"
-		scale="1.120 1.120 1.120"
-		id="segments_big_05"
-		ndmAction="0" />
-
-	<Node
-		name="Object8621"
-		class="SgAnimatedModelNode"
-		org="2162.243 0.000 5839.485"
-		orgRel="1"
-		rot="0.0000 0.0523 0.0000 -0.9986"
-		scale="1.060 1.060 1.060"
-		id="segments_big_05"
-		ndmAction="0" />
-
-	<Node
-		name="Object8622"
-		class="SgAnimatedModelNode"
-		org="2158.592 0.000 5842.666"
-		orgRel="1"
-		rot="0.0000 0.5519 0.0000 -0.8339"
-		scale="1.120 1.120 1.120"
-		id="segments_big_05"
 		ndmAction="0" />
 
 	<Node
@@ -18651,26 +18523,6 @@
 		orgRel="1"
 		rot="0.0000 0.6361 0.0000 0.7716"
 		scale="0.940 0.940 0.940"
-		id="segments_big_06"
-		ndmAction="0" />
-
-	<Node
-		name="Object8637"
-		class="SgAnimatedModelNode"
-		org="2146.983 0.000 5893.140"
-		orgRel="1"
-		rot="0.0000 0.5519 0.0000 0.8339"
-		scale="0.930 0.930 0.930"
-		id="segments_big_06"
-		ndmAction="0" />
-
-	<Node
-		name="Object8638"
-		class="SgAnimatedModelNode"
-		org="2141.487 0.000 5895.302"
-		orgRel="1"
-		rot="0.0000 0.4462 0.0000 -0.8949"
-		scale="0.920 0.920 0.920"
 		id="segments_big_06"
 		ndmAction="0" />
 
@@ -18892,16 +18744,6 @@
 		rot="0.0000 0.7373 0.0000 -0.6756"
 		scale="0.870 0.870 0.870"
 		id="grib8"
-		ndmAction="0" />
-
-	<Node
-		name="Object8661"
-		class="SgAnimatedModelNode"
-		org="2160.494 0.000 5842.207"
-		orgRel="1"
-		rot="0.0000 0.8526 0.0000 0.5225"
-		scale="0.870 0.870 0.870"
-		id="brick_debris2"
 		ndmAction="0" />
 
 	<Node

@@ -491,6 +491,7 @@
 			TActivate("triggerExitToMap12")
 			TActivate("loc_lisa")
 			TActivate("BotanikVanCreate")
+			TActivate("trCreateHumans")
 
 			trigger:Deactivate() 
 		</script>
@@ -1725,7 +1726,7 @@
 				vehFelix2:SetRandomSkin()
 			end
 
-			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(2006.351, 321.215, 2434.379), Quaternion(0.000, -0.715, 0.000, 0.699), 1)
+			CreateNewDummyObject( "dweller_felix", "felix01", -1, -1, CVector(2006.351, 321.173, 2434.379), Quaternion(0.000, -0.715, 0.000, 0.699), 1)
 
 			local Plf = GetPlayerVehicle()
 			if Plf then

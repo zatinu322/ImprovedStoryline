@@ -212,9 +212,9 @@ function testpath()
 end
 
 function AddPlayerVehicle(modelname, PositionOnGround)
--- добавляет игроку машину (если только у него ее нет)
--- можно использовать, когда убъют или типа того.
--- modelname - модель машины, которую надо. По умолчанию дается Урал
+	-- добавляет игроку машину (если только у него ее нет)
+	-- можно использовать, когда убъют или типа того.
+	-- modelname - модель машины, которую надо. По умолчанию дается Урал
     if not modelname then
 		modelname="Ural01"
 	end
@@ -236,17 +236,17 @@ function AddPlayerVehicle(modelname, PositionOnGround)
 	end
 	local id = CreateNewObject{
 		prototypeName = modelname,
---	 by Anton: name is set automatically in code --	objName = "PlayerVehicle"..tostring(random(9999)),
+	-- by Anton: name is set automatically in code --	objName = "PlayerVehicle"..tostring(random(9999)),
 		objName = "",
 		belong = 1100
 	}
 	local vehicle = GetEntityByID(id)
 	local pl=g_Player
 	if vehicle and pl then
-	    println("Car name: "..vehicle:GetName())
+	    -- println("Car name: "..vehicle:GetName())
 		local hover = 1.5 * vehicle:GetSize().y
     	local pos, yaw, pitch, roll, lookAt = GetCameraPos()
-		println(pos)
+		-- println(pos)
 		vehicle:SetPosition(pos)
 		pl:AddChild(vehicle)
     end

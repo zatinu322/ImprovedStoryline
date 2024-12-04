@@ -61,7 +61,7 @@
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="26" />
+			fontSize="36" />
 		
 		<Page
 			id="7"
@@ -484,7 +484,7 @@
 			modelSkin="2"
 			modelCfg="1745"
 			showTime="3"
-			fontSize="20" />
+			fontSize="30" />
 
 		<Page
 			id="54"

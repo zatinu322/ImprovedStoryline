@@ -1739,27 +1739,27 @@
 
 	<Item
 		id="hunterCab01"
-		locForm="0"
+		locForm="1"
 		value="Hunter cabin" />
 
 	<Item
 		id="hunterCab02"
-		locForm="0"
+		locForm="1"
 		value="Hunter cabin" />
 
 	<Item
 		id="fighterCab01"
-		locForm="0"
+		locForm="1"
 		value="Fighter cabin" />
 
 	<Item
 		id="fighterCab02"
-		locForm="0"
+		locForm="1"
 		value="Fighter cabin" />
 
 	<Item
 		id="arcadescoutCab"
-		locForm="0"
+		locForm="1"
 		value="Scout GT cabin" />
 
 	<Item
@@ -1769,12 +1769,12 @@
 
 	<Item
 		id="cruiserCab01"
-		locForm="0"
+		locForm="1"
 		value="Cruiser’s cabin" />
 
 	<Item
 		id="cruiserCab02"
-		locForm="0"
+		locForm="1"
 		value="Cruiser’s cabin" />
 
 	<Item

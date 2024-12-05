@@ -239,4 +239,8 @@
 	<string
 		id="fm_mr_shlyapa_off"
 		value="Мистер Шляпа отключен." />
+	
+	<string
+		id="fm_easy_mode_on"
+		value="Лёгкий режим активирован." />
 </resource>

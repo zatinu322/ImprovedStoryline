@@ -204,8 +204,8 @@
 		Name="LisaInBanditPlen"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="5433.014 44.803 4621.736"
-		Radius="125.000"
+		Pos="5561.864 53.311 4523.705"
+		Radius="201.000"
 		LookingTimeOut="70.000" />
 
 	<Object

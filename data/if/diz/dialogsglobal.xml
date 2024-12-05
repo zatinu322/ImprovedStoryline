@@ -4408,20 +4408,52 @@
 
 	<Reply
 		name="r3m2_AloneDruid1_1_N01"
-		text="Что ты ищешь путник в этих убогих местах?"
+		text="Что ты ищешь, путник, в этих убогих местах?"
 		role="NPC"
 		scriptCondition="not(QuestStatus('q_VisitDruid')==Q_TAKEN) and GetCurNpc():GetSpokenCount( ) == 0 and not(QuestStatus('d_OpenTunel_Quest')==Q_COMPLETED)"
-		nextReplies="r3m2_AloneDruid1_1_N02" />
+		nextReplies="r3m2_AloneDruid1_1_N02 Dlg_pl_003404" />
+
+	<Reply
+		name="Dlg_pl_003404"
+		text="Я приехал сюда в поисках Оракула, но я уже знаю, как к нему попасть."
+		role="PLAYER"
+		scriptCondition="not(IsQuestTaken('r3m2_OvercomeOracleGuard'))"
+		nextReplies="Dlg_npc_003405" />
+
+	<Reply
+		name="Dlg_npc_003405"
+		text="Отрадно это слышать. Издалека путь держишь?"
+		role="NPC"
+		nextReplies="Dlg_pl_003406" />
+
+	<Reply
+		name="Dlg_pl_003406"
+		text="Ты даже не представляешь, насколько издалека."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003407" />
+
+	<Reply
+		name="Dlg_npc_003407"
+		text="В таком случае, может быть, ты встречался со странными следами на полях?"
+		role="NPC"
+		nextReplies="Dlg_pl_003408" />
+
+	<Reply
+		name="Dlg_pl_003408"
+		text="Что ты имеешь в виду?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_002032" />
 
 	<Reply
 		name="r3m2_AloneDruid1_1_N02"
 		text="Я ищу Оракула."
 		role="PLAYER"
+		scriptCondition="IsQuestTaken('r3m2_OvercomeOracleGuard')"
 		nextReplies="r3m2_AloneDruid1_1_N03" />
 
 	<Reply
 		name="r3m2_AloneDruid1_1_N03"
-		text="Здесь его нет. Езжай на северо-запад. Может быть, там ты найдешь свою цель."
+		text="Здесь его нет. Езжай на северо-запад, там ты найдешь свою цель."
 		role="NPC"
 		nextReplies="r3m2_AloneDruid1_1_N04" />
 

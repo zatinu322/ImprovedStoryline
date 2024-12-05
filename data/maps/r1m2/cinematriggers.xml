@@ -250,7 +250,7 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
-			Fly("LisaPlen_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+			Fly("LisaPlen_cam01", CINEMATIC_NO_AIM, 0, 7, 1, 0 )
 			Fly("LisaPlen_cam02", CINEMATIC_NO_AIM, 0, 8, 0, 1 )
 			StartCinematic()
 			AddCinematicMessage( 20, 1.0 )
@@ -265,15 +265,9 @@
 	<trigger Name="trLisaPlen" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
 		<script>
-			local Plf = GetPlayerVehicle()
-			Plf:SetCustomControlEnabled( true )
-			Plf:SetCustomLinearVelocity( 0 )
-			Plf:SetThrottle( 0 )
-			Plf:SetCustomControlEnabled( false )
-
 			CreateNewDummyObject( "dweller_white", "HumanBandit01", -1, -1, CVector(5356.497, 49.494, 4665.973), Quaternion( 0.000, 0.111, 0.000, 0.994 ), 0)
 			CreateNewDummyObject( "dweller_white", "HumanBandit02", -1, -1, CVector(5356.165, 49.558, 4668.618), Quaternion( -0.000, -1.000, 0.000, -0.022 ), 0)
-			CreateNewDummyObject( "dweller_white", "HumanBandit03", -1, -1, CVector(5292.229, 99.638, 4656.556), Quaternion( -0.032, 0.549, 0.049, 0.834 ), 0)
+			CreateNewDummyObject( "dweller_white", "HumanBandit03", -1, -1, CVector(5292.229, 99.638, 4656.556), Quaternion(-0.050, 0.851, 0.031, 0.522), 0)
 
 			CreateVehicleEx("MolokovozMenu","MolokovozMenu",CVector(5320.740, 53.949, 4678.966), 1011)
 			local vehLisa = GetEntityByName("MolokovozMenu")
@@ -282,6 +276,17 @@
 				vehLisa:SetGamePositionOnGround( CVector(5320.740, 53.949, 4678.966))
 				vehLisa:SetRotation(Quaternion(0.121, 0.990, -0.036, -0.056))
 				vehLisa:TakeOffAllGuns()
+			end
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+				Plf:SetGamePositionOnGround(CVector(5702.331, 53.283, 4367.744))
+				Plf:SetRotation(Quaternion(-0.034, 0.377, -0.001, -0.926))
+				Plf:SetExternalPathByName("Player_path05")
 			end
 
 			trigger:Deactivate()
@@ -294,32 +299,28 @@
 		<script>
 			RestoreAllToleranceStatus()
 
-			local vehLisa = GetEntityByName("MolokovozMenu")
-			if vehLisa then
-				vehLisa:Remove()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:PlaceToEndOfPath("Player_path05")
+				Plf:SetGamePositionOnGround( CVector(5551.579, 53.896, 4520.887))
+				Plf:SetRotation(Quaternion(-0.009, 0.392, -0.003, -0.920))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
 			end
-			local Bandit1 = GetEntityByName("HumanBandit01")
-			if Bandit1 then
-				Bandit1:Remove()
-			end
-			local Bandit2 = GetEntityByName("HumanBandit02")
-			if Bandit2 then
-				Bandit2:Remove()
-			end
-			local Bandit3 = GetEntityByName("HumanBandit03")
-			if Bandit3 then
-				Bandit3:Remove()
+
+			local vehs = {"MolokovozMenu", "HumanBandit01", "HumanBandit02", "HumanBandit03"}
+			for i = 1, 4 do
+				SafeRemove(getObj(vehs[i]))
 			end
 
 			TDeactivate( "trLisaPlen" )
 
 			StopPlayingCustomMusic()
 
+			local belong = 1002
 			if IsQuestTaken("d_SinFather_Quest") then
 				belong = 1013
-				SetTolerance(1100,1013,RS_ENEMY)
-			else
-				belong = 1002
+				SetTolerance(1100, 1013, RS_ENEMY)
 			end
 
 			TeamCreate("LisaInBanditDen",belong,CVector(5476,49,4567),{"molokovozBandos","r1m2_bug04", "r1m1_scout01"})

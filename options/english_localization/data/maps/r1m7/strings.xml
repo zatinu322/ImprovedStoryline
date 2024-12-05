@@ -171,5 +171,10 @@
 		value="Farewell."
 		sound=""
 		time="3" />
+	
+	<string
+		id="8801"
+		value="Would you like to activate easy mode?"
+		numButtons="2" />
 
 </resource>

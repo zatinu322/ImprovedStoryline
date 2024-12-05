@@ -105,7 +105,6 @@
 
 			for i = 1, 7 do
 				CreateHuman(prototypes[i], 1001, positions[i], names[i], paths[i], skins[i])
-				println('Human '..names[i]..'created!')
 			end
 
 			trigger:Deactivate()

@@ -1013,7 +1013,7 @@
 		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToSubmarine_loc" />
 		<script>
 			if IsQuestItemPresent( "quest_key_for_submarine" ) or  IsQuestItemPresent( "quest_key_for_submarine1" ) then
-				if QuestStatus("r4m2_TalkWithScientific")==Q_COMPLETED then
+				if QuestStatus("r4m2_TalkWithScientific")==Q_COMPLETED and not(QuestStatus("r4m2_DestroyPlate")==Q_TAKEN) then
 					trigger:Deactivate()
 				
 					local Plf = GetPlayerVehicle()

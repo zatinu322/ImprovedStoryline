@@ -39,6 +39,8 @@
 				AllowSave(false)
 			end
 
+			TActivate("trActivateEasyMode")
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -83,6 +85,54 @@
 		</script>
 	</trigger>
 
+	<!-- Имплементация Easy Mode -->
+	<trigger Name="trActivateEasyMode" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local file, error, code = io.open("data\\maps\\r1m7\\labyrinth.txt", "r")
+			if not file then
+				return
+			end
+
+			file:close()
+
+			local b = SpawnMessageBox("8801")
+			if b ~= 1 then
+				return
+			end
+
+			TActivate("trCreateHelpers")
+		</script>
+	</trigger>
+
+	<trigger Name="trCreateHelpers" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewDummyObject("arena_barricade12", "lab_hint_1", -1, -1, CVector(2199.144, 267.094, 1654.627), Quaternion(0.7071, -0.0015, -0.7071, -0.0015), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_2", -1, -1, CVector(2655.886, 254.524, 1796.959), Quaternion(0.1332, -0.6068, -0.0914, 0.7783), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_3", -1, -1, CVector(3146.504, 264.916, 1782.607), Quaternion(0.0000, 0.0175, 0.0000, 0.9998), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_4", -1, -1, CVector(2917.665, 254.475, 1586.790), Quaternion(-0.0486, 0.7497, -0.1184, 0.6493), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_5", -1, -1, CVector(2742.219, 254.374, 1585.169), Quaternion(0.1124, 0.8274, 0.0585, 0.5471), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_6", -1, -1, CVector(2311.921, 269.799, 1602.510), Quaternion(-0.0021, 0.0009, -1.0000, -0.0044), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_7", -1, -1, CVector(2356.846, 268.765, 1319.912), Quaternion(0.0000, 0.7071, 0.0000, 0.7071), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_8", -1, -1, CVector(1726.557, 267.825, 1611.884), Quaternion(-0.0022, 0.0065, 1.0000, 0.0004), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_9", -1, -1, CVector(1708.955, 254.518, 1707.441), Quaternion(0.0000, -0.7056, 0.0000, 0.7086), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_10", -1, -1, CVector(1815.065, 264.666, 1774.611), Quaternion(-0.0153, -0.9999, 0.0065, 0.0001), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_11", -1, -1, CVector(2169.147, 255.019, 2386.642), Quaternion(-0.7036, 0.7069, 0.0494, -0.0523), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_12", -1, -1, CVector(2189.314, 268.338, 2905.119), Quaternion(-0.7056, 0.0015, -0.7086, -0.0015), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_13", -1, -1, CVector(1716.701, 255.045, 2839.950), Quaternion(-0.0515, 0.0446, -0.7172, 0.6935), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_14", -1, -1, CVector(1487.224, 266.004, 2535.789), Quaternion(0.0000, 0.0044, 1.0000, -0.0001), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_15", -1, -1, CVector(2356.340, 268.858, 1654.521), Quaternion(0.7071, -0.0031, -0.7071, -0.0031), 0)
+			CreateNewDummyObject("arena_barricade12", "lab_hint_16", -1, -1, CVector(1696.345, 266.867, 2655.719), Quaternion(-0.7071, -0.0015, 0.7071, -0.0015), 0)
+
+			AddImportantFadingMsgId("fm_easy_mode_on")
+		</script>
+	</trigger>
+
 	<!-- Завал входа в лабиринт -->
 	<trigger Name="trExitExplosion" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Explos_loc" />
@@ -101,6 +151,7 @@
 		<script>
 			if QuestStatus("LastIspytanie_Quest3")==Q_TAKEN then
 				GetPlayerVehicle():AddModifier( "hp", "= 0" )
+				local file, error, code = io.open("data\\maps\\r1m7\\labyrinth.txt", "w")
 			end
 
 			trigger:Deactivate()

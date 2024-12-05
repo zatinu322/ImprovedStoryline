@@ -433,7 +433,7 @@ function SetGameTime( h, m )
 
 end
 
-function LogObjHeight(x, z, y, objName)
+function LogObjHeight(x, y, z, objName)
 
 	if objName == nil then
 		objName = "Object name missing"
@@ -451,9 +451,8 @@ function LogObjHeight(x, z, y, objName)
 			height = math.ceil(height*1000)
 		end
 
-		LOG("\""..name.."\" on level "..level)
-		LOG(string.format( "%.3f", height/1000))
-		println(string.format( "%.3f", height/1000))
+		println("\""..name.."\" on level "..level)
+		println("CVector("..x..", "..string.format("%.3f", height/1000)..", "..z..")")
 
 	else
 		LOG("g_ObjCont is missing!!!")

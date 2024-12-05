@@ -616,6 +616,15 @@
 	</Path>
 
 	<Path
+		Name="Player_path05">
+		<Point
+			coord="5632.206 4440.471" />
+
+		<Point
+			coord="5551.579 4520.887" />
+	</Path>
+
+	<Path
 		Name="PtoM_path">
 		<Point
 			coord="6822.016 6501.322" />

@@ -239,4 +239,8 @@
 	<string
 		id="fm_mr_shlyapa_off"
 		value="Mr. Hat's quests is disabled." />
+	
+	<string
+		id="fm_easy_mode_on"
+		value="Easy mode activated." />
 </resource>

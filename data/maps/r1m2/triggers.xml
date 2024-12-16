@@ -258,11 +258,10 @@
 		<event timeout="0" eventid="GE_TIME_PERIOD" />
 		<script>
 
+			local belong = 1002
 			if IsQuestTaken("d_SinFather_Quest") then
 				belong = 1013
 				SetTolerance(1100,1013,RS_ENEMY)
-			else
-				belong = 1002
 			end
 
 			TeamCreate("CarOfRaider",belong,CVector(6471.031, 73.844, 546.496),{"DemoMolokovoz1","Scout03"})
@@ -270,8 +269,6 @@
 			TakeQuest("BenMZ2_Quest")
 
 			TActivate ("RaidersDie")
-
-			belong = nil
 			
 			trigger:Deactivate()
 		</script>

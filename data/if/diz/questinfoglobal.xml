@@ -3432,6 +3432,10 @@
 		briefDiz="Сообщить в Мидгард ученым о знаках"
 		isMainQuest="0">
 		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
 			name="r1m2"
 			targetObjName="MidgardProfessor" />
 

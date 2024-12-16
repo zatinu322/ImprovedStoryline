@@ -2245,8 +2245,8 @@
 			if vehPlayer then
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetThrottle( 0 )
-				vehPlayer:SetGamePositionOnGround( CVector(715.286, 217.935, 762.374))
-				vehPlayer:SetRotation(Quaternion(-0.000, -1.000, -0.000, 0.020))
+				vehPlayer:SetGamePositionOnGround(CVector(772.478, 216.369, 759.342))
+				vehPlayer:SetRotation(Quaternion(0.000, -1.000, 0.000, 0.001))
 			end
 
 			local stat = GetVar("SubMarPh").AsInt
@@ -2285,6 +2285,14 @@
 	<trigger Name="cinMovePlToR3M1_cam03" active="0">
 	<event flypath="lodka3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetGamePositionOnGround(CVector(715.264, 210.065, 724.750))
+				vehPlayer:SetRotation(Quaternion(0.003, 0.999, -0.036, 0.032))
+			end
+
 			local stat = GetVar("SubMarPh").AsInt
 			local podlodka = getObj("Subm")
 			if podlodka then

@@ -3211,7 +3211,7 @@
 				vehPlayer:SetCustomControlEnabled( true )
 				vehPlayer:SetGamePositionOnGround( CVector(3074.432, 317.903, 431.046) )
 				vehPlayer:SetRotation(Quaternion(-0.010, -0.517, -0.021, -0.855))
-				vehPlayer:SetExternalPathByName("player_path03")
+				vehPlayer:SetExternalPathByName("player_path09")
 				vehPlayer:SetCustomControlEnabled( false )
 				vehPlayer:SetThrottle( 1 )
 				vehPlayer:SetCustomLinearVelocity( 10 )
@@ -3246,7 +3246,7 @@
 				vehPlayer:SetCustomLinearVelocity( 0 )
 				vehPlayer:SetGamePositionOnGround( CVector(3143.495, 319.796, 370.701) )
 				vehPlayer:SetRotation(Quaternion(0.000, -0.849, -0.000, 0.529))
-				vehPlayer:PlaceToEndOfPath("player_path03")
+				vehPlayer:PlaceToEndOfPath("player_path09")
 			end
 
 			local vehLisa = GetEntityByName("vehLisaGood")

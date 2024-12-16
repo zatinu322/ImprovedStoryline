@@ -2,7 +2,7 @@
 <World
 	name="Object31"
 	class="SgNode"
-	LastId="76489096">
+	LastId="76489166">
 	<Node
 		name="Object9"
 		class="SgAnimatedModelNode"
@@ -19373,10 +19373,10 @@
 	<Node
 		name="Object8843"
 		class="SgAnimatedModelNode"
-		org="715.216 9.128 746.223"
+		org="714.945 7.127 746.163"
 		orgRel="1"
-		rot="-0.1457 0.0000 0.0000 0.9893"
-		scale="1.103 1.103 1.103"
+		rot="-0.1671 -0.0148 -0.0045 0.9858"
+		scale="1.300 1.300 1.300"
 		id="quay_cube"
 		ndmAction="0" />
 
@@ -20942,5 +20942,14 @@
 		rot="0.0000 0.2920 0.0000 0.9560"
 		scale="0.800 0.800 0.800"
 		id="elka1"
+		ndmAction="0" />
+
+	<Node
+		name="Object76489165"
+		class="SgAnimatedModelNode"
+		org="716.170 21.129 713.163"
+		orgRel="1"
+		rot="-0.0030 -0.9992 0.0296 -0.0261"
+		id="berth"
 		ndmAction="0" />
 </World>

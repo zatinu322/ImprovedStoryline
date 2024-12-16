@@ -177,7 +177,7 @@
 		id="31"
 		modelName="mask_hero"
 		sound="data\sounds\Speech\r1m3\r1m3_31_hero.ogg"
-		value="The enemy is defeated! I have the disc! Time to go to the Oracle!"
+		value="The enemy is defeated! I have the disc! Time to go to Oracle!"
 		time="4" />
 
 	<string

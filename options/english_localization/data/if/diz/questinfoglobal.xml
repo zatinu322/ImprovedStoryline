@@ -3432,6 +3432,10 @@
 		briefDiz="Report the signs to the scientists in Midgard"
 		isMainQuest="0">
 		<Map
+			name="r1m1"
+			targetObjName="ToR1M2" />
+
+		<Map
 			name="r1m2"
 			targetObjName="MidgardProfessor" />
 

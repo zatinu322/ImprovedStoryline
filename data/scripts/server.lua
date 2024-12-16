@@ -1326,6 +1326,11 @@ end
 
 
 function SaveAllToleranceStatus(SetStatus)
+	if GL_ToleranceStatus then
+		AddImportantFadingMsgId("fm_tolerance_bug")
+		println("ERROR: TOLERANCE BUG!")
+	end
+
 	GL_ToleranceStatus = {}
 	for i=1,100 do
 		GL_ToleranceStatus[i] = {}
@@ -1334,22 +1339,31 @@ function SaveAllToleranceStatus(SetStatus)
 			
 	    end
   	end
-  	if SetStatus then 
+
+  	if SetStatus then
 		for i=1,100 do
 			for j=1,100 do
 				SetTolerance(i+1000, j+1000, SetStatus)
 		    end
   		end
-
+	else
+		GL_ToleranceStatus = nil
   	end
-end                     
+end
 
 function RestoreAllToleranceStatus()
+	if not GL_ToleranceStatus then
+		println("Error: GL_ToleranceStatus not set!")
+		return
+	end
+
 	for i=1,100 do
 		for j=1,100 do
 		   SetTolerance(i+1000, j+1000, GL_ToleranceStatus[i][j])
     	end
     end
+
+	GL_ToleranceStatus = nil
 end
 
 function DefineTheEnding()

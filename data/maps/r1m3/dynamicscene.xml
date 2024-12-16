@@ -9,7 +9,7 @@
 		Name="FromR2M1"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1486.733 289.035 5540.105"
+		Pos="1495.481 289.488 5540.054"
 		Radius="10.000"
 		LookingTimeOut="10.000"
 		ExitLocation="ToR2M1" />

@@ -226,7 +226,7 @@
 
 	<string
 		id="fm_wrong_game_version"
-		value="@FFFF0000You are using a save from an outdated or incorrect build: %1p" />
+		value="@FFFF0000You are using a save from an outdated or incorrect build: %1p." />
 
 	<string
 		id="fm_petro_death"
@@ -243,4 +243,8 @@
 	<string
 		id="fm_easy_mode_on"
 		value="Easy mode activated." />
+	
+	<string
+		id="fm_tolerance_bug"
+		value="@FFFF0000Error handling clans relationships.|Please report this bug to the developer." />
 </resource>

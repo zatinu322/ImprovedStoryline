@@ -630,7 +630,7 @@
 				Prototype="NPC"
 				ModelName="mask_lisa"
 				cfg="92"
-				helloReplyNames="Dlg_npc_002367 Dlg_npc_002389"
+				helloReplyNames="Dlg_npc_002367 Dlg_npc_002389 Dlg_npc_003409"
 				SpokenCount="0" />
 
 			<Object

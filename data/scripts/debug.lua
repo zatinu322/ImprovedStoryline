@@ -34,7 +34,7 @@ end
 ------------------------------
 --Player pos to log
 function plp()
-LOG("SetPosition( CVector"..tostring(GetPlayerVehicle():GetPosition())..")")
+LOG("SetPosition(CVector"..tostring(GetPlayerVehicle():GetPosition())..")")
 LOG('SetRotation(Quaternion'..tostring(GetPlayerVehicle():GetRotation(Quaternion()))..')')
 end
 

@@ -454,37 +454,14 @@
 		<event timeout="4" eventid="GE_TIME_PERIOD" />
 		<script>
 
-		PlayCustomMusic("Battle02")
+			PlayCustomMusic("Battle02")
 
-		local vehTraitor01 = GetEntityByName("UlukAmbGuard01")
-		local vehTraitor02 = GetEntityByName("UlukAmbGuard02")
-		local vehTraitor03 = GetEntityByName("UlukAmbGuard03")
-		local vehTraitor04 = GetEntityByName("UlukAmbGuard04")
-		local vehTraitor05 = GetEntityByName("UlukAmbGuard05")
-
-		if vehTraitor01 then 
-			vehTraitor01:setImmortalMode(1)
-			vehTraitor01:SetExternalPathByName("UlukAmbGuard_path01")
-		end
-
-		if vehTraitor02 then 
-			vehTraitor02:SetExternalPathByName("UlukAmbGuard_path02")
-			vehTraitor02:setImmortalMode(1)
-		end
-
-			if vehTraitor03 then 
-				vehTraitor03:SetExternalPathByName("UlukAmbGuard_path03")
-				vehTraitor03:setImmortalMode(1)
-			end
-
-			if vehTraitor04 then 
-				vehTraitor04:SetExternalPathByName("UlukAmbGuard_path04")
-				vehTraitor04:setImmortalMode(1)
-			end
-
-			if vehTraitor05 then 
-				vehTraitor05:SetExternalPathByName("UlukAmbGuard_path05")
-				vehTraitor05:setImmortalMode(1)
+			for i = 1, 5 do
+				local vehTraitor = GetEntityByName("UlukAmbGuard0"..i)
+				if vehTraitor then
+					vehTraitor:setImmortalMode(1)
+					vehTraitor:SetExternalPathByName("UlukAmbGuard_path0"..i)
+				end
 			end
 
 			AddCinematicMessage( 1001, 5 )
@@ -525,14 +502,6 @@
 	<trigger Name="trAmbushDruid_cam06" active="0">
 		<event flypath="AmbushDruid_cam06" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
-
-			local vehTraitor02 = GetEntityByName("UlukAmbGuard02")
-			local vehDruid = GetEntityByName("vehDruid")
-			if vehTraitor02 and vehDruid then
-				vehTraitor02:SetCustomControlWeaponsTargetObj(vehDruid:GetId())
-				vehTraitor02:FireFromWeaponCustom2(1, vehDruid:GetId())
-			end
-
 			TActivate("trFure")
 			trigger:Deactivate()
 		</script>
@@ -541,41 +510,20 @@
 	<trigger Name="trFure" active="0">
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
-
-		local vehTraitor01 = GetEntityByName("UlukAmbGuard01")
-		local vehTraitor03 = GetEntityByName("UlukAmbGuard03")
-		local vehTraitor04 = GetEntityByName("UlukAmbGuard04")
-		local vehTraitor05 = GetEntityByName("UlukAmbGuard05")
 		local vehDruid = GetEntityByName("vehDruid")
+		if vehDruid then
+			vehDruid:setImmortalMode(1)
+		end
 
 		if vehDruid then
-			if vehTraitor01 and vehDruid then
-				vehTraitor01:SetCustomControlEnabled(1)
-				vehTraitor01:SetCustomControlWeapons(2)
-				vehTraitor01:SetCustomControlWeaponsTargetObj(vehDruid:GetId())
-				vehTraitor01:FireFromWeaponCustom2(1, vehDruid:GetId())
-				vehDruid:setImmortalMode(1)
-			end
-
-			if vehTraitor03 and vehDruid then
-				vehTraitor03:SetCustomControlEnabled(1)
-				vehTraitor03:SetCustomControlWeapons(2)
-				vehTraitor03:SetCustomControlWeaponsTargetObj(vehDruid:GetId())
-				vehTraitor03:FireFromWeaponCustom2(1, vehDruid:GetId())
-			end
-
-			if vehTraitor04 and vehDruid then
-				vehTraitor04:SetCustomControlEnabled(1)
-				vehTraitor04:SetCustomControlWeapons(2)
-				vehTraitor04:SetCustomControlWeaponsTargetObj(vehDruid:GetId())
-				vehTraitor04:FireFromWeaponCustom2(1, vehDruid:GetId())
-			end
-
-			if vehTraitor05 and vehDruid then
-				vehTraitor05:SetCustomControlEnabled(1)
-				vehTraitor05:SetCustomControlWeapons(2)
-				vehTraitor05:SetCustomControlWeaponsTargetObj(vehDruid:GetId())
-				vehTraitor05:FireFromWeaponCustom2(1, vehDruid:GetId())
+			for i = 1, 5 do
+				local vehTraitor = GetEntityByName("UlukAmbGuard0"..i)
+				if vehTraitor and vehDruid then
+					vehTraitor:SetCustomControlEnabled(1)
+					vehTraitor:SetCustomControlWeapons(2)
+					vehTraitor:SetCustomControlWeaponsTargetObj(vehDruid:GetId())
+					vehTraitor:FireFromWeaponCustom2(1, vehDruid:GetId())
+				end
 			end
 		end
 		</script>
@@ -585,13 +533,6 @@
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
-
-		local vehTraitor01 = GetEntityByName("UlukAmbGuard01")
-		local vehTraitor02 = GetEntityByName("UlukAmbGuard02")
-		local vehTraitor03 = GetEntityByName("UlukAmbGuard03")
-		local vehTraitor04 = GetEntityByName("UlukAmbGuard04")
-		local vehTraitor05 = GetEntityByName("UlukAmbGuard05")
-		local vehDruid = GetEntityByName("vehDruid")
 		local vehPlayer = GetPlayerVehicle()
 		if vehPlayer then
 			vehPlayer:SetExternalPathByName("player_path03")
@@ -599,11 +540,12 @@
 			vehPlayer:setGodMode(0)
 		end
 
-		if  vehTraitor01 then vehTraitor01:Remove() end
-		if  vehTraitor02 then vehTraitor02:Remove() end
-		if  vehTraitor03 then vehTraitor03:Remove() end
-		if  vehTraitor04 then vehTraitor04:Remove() end
-		if  vehTraitor05 then vehTraitor05:Remove() end
+		for i = 1,5 do
+			local vehTraitor = GetEntityByName("UlukAmbGuard0"..i)
+			SafeRemove(vehTraitor)
+		end
+
+		local vehDruid = GetEntityByName("vehDruid")
 		if  vehDruid then 
 			vehDruid:SetGamePositionOnGround( CVector(1762.052, 300, 1431.070))
 			vehDruid:setImmortalMode(0)
@@ -619,6 +561,7 @@
 		TDeactivate("trAmbushDruid_cam06")
 		TDeactivate("trZasada")
 		TDeactivate("trFure")
+
 		StopPlayingCustomMusic()
 
 		SetCameraBehindPlayerVehicle()
@@ -858,7 +801,9 @@
 			FlyLinked( "linkedcam", CTochID, 12, 0, 1, camCarID )
 			StartCinematic()
 
-			CreateHuman( "Human", 1100, CVector( 1422.838, 261.208, 876.479 ), "Human_dead", "HumanRolik_Path04" )
+			CreateHuman("Human", 1100, CVector(1422.838, 261.208, 876.479), "Human_dead1", "HumanRolik_Path04" )
+			CreateHuman("Human2", 1100, CVector(1496.745, 259.062, 850.201), "Human_dead2", "HumanRolik_Path04" )
+			CreateHuman("Human3", 1100, CVector(1502.269, 260.708, 906.29), "Human_dead3", "HumanRolik_Path04" )
 
 			TActivate("RolikEnd_RescuePeople")
 			TActivate("trRescuePeople_cam01")
@@ -985,18 +930,35 @@
 		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 
-		local vehUlukArmy02 = GetEntityByName("vehUlukArmy01")
-		local HumanDead = GetEntityByName("Human_dead")
+			local vehUlukArmy02 = GetEntityByName("vehUlukArmy01")
+			local HumanDead = GetEntityByName("Human_dead1")
+			local HumanDead2 = GetEntityByName("Human_dead2")
+			local HumanDead3 = GetEntityByName("Human_dead3")
+			local humanId
 
-		if HumanDead then
-			if vehUlukArmy02 and HumanDead then
+			if HumanDead then
+				humanId = HumanDead:GetId()
+			elseif HumanDead2 then
+				humanId = HumanDead2:GetId()
+			elseif HumanDead3 then
+				humanId = HumanDead3:GetId()
+			else
+				if vehUlukArmy02 then
+					vehUlukArmy02:SetCustomControlEnabled(0)
+					vehUlukArmy02:SetCustomControlWeapons(0)
+					vehUlukArmy02:SetCustomControlWeaponsTargetObj(GetPlayerVehicleId())
+					vehUlukArmy02:FireFromWeaponCustom2(0, GetPlayerVehicleId())
+				end
+				trigger:Deactivate()
+				return
+			end
+
+			if vehUlukArmy02 and humanId then
 				vehUlukArmy02:SetCustomControlEnabled(1)
 				vehUlukArmy02:SetCustomControlWeapons(2)
-				vehUlukArmy02:SetCustomControlWeaponsTargetObj(HumanDead:GetId())
-				vehUlukArmy02:FireFromWeaponCustom2(1, HumanDead:GetId())
+				vehUlukArmy02:SetCustomControlWeaponsTargetObj(humanId)
+				vehUlukArmy02:FireFromWeaponCustom2(1, humanId)
 			end
-		end
-
 		</script>
 	</trigger>
 
@@ -1007,37 +969,45 @@
 
 			TeamCreate("UlukArmy",1020,CVector(1625.560, 259.948, 879.053),{"Bug01","Ural01"}, CVector(1913.881, 260.062, 989.066), 1, Quaternion(0.014, 0.504, -0.016, 0.864))
 
-			for i = 0,1 do
-				if getObj("UlukArmy_vehicle_"..i) then getObj("UlukArmy_vehicle_"..i):SetSkin(2) end
+			for i = 1, 2 do
+				local vehUlukArmy = GetEntityByName("vehUlukArmy0"..i)
+				SafeRemove(vehUlukArmy)
 			end
 
-			TActivate("trUlukArmyDie")
+			for i = 1, 3 do 
+				local HumanDead = GetEntityByName("Human_dead"..i)
+				SafeRemove(HumanDead)
+			end
 
-			local vehUlukArmy01 = GetEntityByName("vehUlukArmy01")
-			local vehUlukArmy02 = GetEntityByName("vehUlukArmy02")
-			local HumanDead = GetEntityByName("Human_dead")
 			local CToch = GetEntityByName("CamTochka")
+			SafeRemove(CToch)
+
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
 				vehPlayer:SetExternalPathByName("player_path06")
 				vehPlayer:PlaceToEndOfPath("player_path06")
 			end
 
-			if vehUlukArmy01 then vehUlukArmy01:Remove() end
-			if vehUlukArmy02 then vehUlukArmy02:Remove() end
-			if HumanDead	 then HumanDead:Remove() end
-			if CToch then CToch:Remove() end
-
 			StopPlayingCustomMusic()
+
 			TDeactivate("trRescuePeople_cam01")
 			TDeactivate("trRescuePeople_cam02")
 			TDeactivate("trRescuePeople_cam03")
 			TDeactivate("trShootingOnPeople")
 			TDeactivate("trShooting")
 			TActivate("trRescArmyDie")
+			TActivate("trUlukArmyDie")
+
 			SetCameraBehindPlayerVehicle()
+
 			RestoreAllToleranceStatus()
+
 			TakeQuest("r3m1_RescueUlukCivil_RepelAttack")
+
+			for i = 0, 1 do
+				if getObj("UlukArmy_vehicle_"..i) then getObj("UlukArmy_vehicle_"..i):SetSkin(2) end
+			end
+
 			trigger:Deactivate()
 		</script>
 	</trigger>
@@ -1310,7 +1280,7 @@
 
 			local vehPlayer = GetPlayerVehicle()
 			if vehPlayer then
-				vehPlayer:SetPosition( CVector(3945.953, 249.211, 1916.991))
+				vehPlayer:SetPosition( CVector(3945.485, 249.211, 1914.332))
 				vehPlayer:SetRotation(Quaternion(-0.007, -0.682, -0.001, 0.731))
 				vehPlayer:SetThrottle( 0 )
 				vehPlayer:SetCustomLinearVelocity( 0 )

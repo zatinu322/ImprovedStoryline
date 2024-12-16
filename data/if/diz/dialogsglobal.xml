@@ -2678,9 +2678,34 @@
 
 	<Reply
 		name="Dlg_pl_003359"
-		text="И всё-таки он ненастоящий. Да, ну не может он быть настоящим. Бред."
+		text="Кажется, я всё же схожу с ума...|Лиса, ты ведь тоже его видела, да?"
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1); StartConversation('LisaKef'); " />
+
+	<Reply
+		name="Dlg_npc_003409"
+		text="Кого видела? Ты о чём?"
+		role="NPC"
+		scriptCondition="getObj('MrShlyapaAbs'):GetSpokenCount() == 1"
+		nextReplies="Dlg_pl_003410" />
+
+	<Reply
+		name="Dlg_pl_003410"
+		text="Человека в шляпе, с которым я только что разговаривал."
+		role="PLAYER"
+		nextReplies="Dlg_npc_003411" />
+
+	<Reply
+		name="Dlg_npc_003411"
+		text="Ты просто вышел из бара и вернулся спустя пять минут. Я понятия не имею, с кем ты там разговаривал. И разговаривал ли вообще."
+		role="NPC"
+		nextReplies="Dlg_pl_003412" />
+
+	<Reply
+		name="Dlg_pl_003412"
+		text="Ничего не понимаю... Да и чёрт с ним, тут и без этого вокруг хватает странностей! Куда нам там дальше нужно?.."
+		role="PLAYER"
+		scriptResult="getObj('MrShlyapaAbs'):SetSpokenCount(2); EndConversation()" />
 <!--Root/r4m1/Опциональные/Торговец картой-->
 	<Reply
 		name="Dlg_npc_003032"
@@ -4417,7 +4442,7 @@
 		name="Dlg_pl_003404"
 		text="Я приехал сюда в поисках Оракула, но я уже знаю, как к нему попасть."
 		role="PLAYER"
-		scriptCondition="not(IsQuestTaken('r3m2_OvercomeOracleGuard'))"
+		scriptCondition="IsQuestTaken('r3m2_OvercomeOracleGuard')"
 		nextReplies="Dlg_npc_003405" />
 
 	<Reply
@@ -4448,7 +4473,7 @@
 		name="r3m2_AloneDruid1_1_N02"
 		text="Я ищу Оракула."
 		role="PLAYER"
-		scriptCondition="IsQuestTaken('r3m2_OvercomeOracleGuard')"
+		scriptCondition="not(IsQuestTaken('r3m2_OvercomeOracleGuard'))"
 		nextReplies="r3m2_AloneDruid1_1_N03" />
 
 	<Reply
@@ -13208,7 +13233,7 @@
 
 	<Reply
 		name="Dlg_pl_000553"
-		text="В деревне возле города Тосканы есть поле, на котором периодически появляются крупные знаки!!!"
+		text="В деревне возле города Тоскана есть поле, на котором периодически появляются крупные знаки."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000554" />
 

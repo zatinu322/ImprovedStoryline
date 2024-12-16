@@ -1,4 +1,4 @@
-if NO_BONUS == nil then
-    NO_BONUS = true
+if BONUS_ACTIVE == nil then
+    BONUS_ACTIVE = false
     LOG("INFO: Bonus ending is not installed.")
 end

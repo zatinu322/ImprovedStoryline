@@ -2586,7 +2586,6 @@
 			end
 
 			FailQuestIfTaken("r2m1_DeployBloks")
-			FailQuestIfTaken("r4m2_DestroyPlate")
 
 			RemoveQuestItem("quest_blokirator")
 			AddFadingMsgByStrIdFormatted( "fm_player_rem_thing", "quest_blokirator")
@@ -2640,8 +2639,6 @@
 				local rk = GetEntityByName("qa"..rock)
 				if rk then rk:Remove() end
 			end
-			
-			CompleteQuest("r4m2_DestroyPlate")
 
 			AllowSave(true)
 

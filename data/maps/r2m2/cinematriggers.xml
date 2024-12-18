@@ -410,6 +410,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			
+			RestoreAllToleranceStatus()
+
 			StopPlayingCustomMusic()
 			
 			CompleteQuest("EscapeArzhan")

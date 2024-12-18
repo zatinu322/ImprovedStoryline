@@ -1100,6 +1100,8 @@
 	<trigger Name="BadEndSkip" active="0">
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
+
+			RestoreAllToleranceStatus()	
 		
 			StopPlayingCustomMusic()
 			
@@ -1580,7 +1582,12 @@
 			Plf:SetThrottle(0)
 
 			local arch = GetEntityByName("CarOfSiencer_vehicle_0")
-			if arch then arch:SetMaxSpeed(0) end
+			if arch then
+				arch:SetMaxSpeed(0)
+				arch:SetMaxTorque(0)
+				arch:SetThrottle(0)
+				arch:SetCustomLinearVelocity(0)
+			end
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 

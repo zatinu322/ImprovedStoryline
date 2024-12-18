@@ -756,7 +756,7 @@
 
 	<Reply
 		name="Dlg_npc_002823"
-		text="The locals were much more clever than we thought. They skillfully tricked us into believing that Severka was their only village."
+		text="The locals were much more clever than we thought. We underestimated their awareness of our actions, and they skillfully fooled us into believing that Severлa was their only village."
 		role="NPC"
 		scriptCondition="QuestStatus('KillStar1_Quest3')==Q_TAKEN"
 		scriptResult="CompleteQuest('KillStar1_Quest3');"
@@ -7526,7 +7526,7 @@
 		name="Dlg_pl_003392"
 		text="Deliver the blocker."
 		role="PLAYER"
-		scriptResult="TakeQuest('r2m1_DeployBloks'); TActivate('trUFODIOLOG_cam10'); EndConversation()" />
+		scriptResult="TakeQuest('r2m1_DeployBloks'); FailQuestIfTaken('r4m2_DestroyPlate'); TActivate('trUFODIOLOG_cam10'); EndConversation()" />
 <!--Root/r2m1/Сюжетные/Антимилитаристы/Старая Сибилла-->
 	<Reply
 		name="Dlg_npc_002230"

@@ -2077,6 +2077,7 @@
 			TDeactivate("BOSSDIE_RolikFade")
 
 			TActivate("RemoveFireNodes")
+			TActivate("trRemoveBossTrash")
 
 			StopPlayingCustomMusic()
 

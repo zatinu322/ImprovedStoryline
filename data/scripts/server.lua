@@ -1325,7 +1325,7 @@ function RotationPlayerByPoints(point2, point1)
 end
 
 
-function SaveAllToleranceStatus(SetStatus)
+function SaveAllToleranceStatus(SetStatus, NoRestore)
 	if GL_ToleranceStatus then
 		AddImportantFadingMsgId("fm_tolerance_bug")
 		println("ERROR: TOLERANCE BUG!")
@@ -1349,6 +1349,10 @@ function SaveAllToleranceStatus(SetStatus)
 	else
 		GL_ToleranceStatus = nil
   	end
+
+	if NoRestore then
+		GL_ToleranceStatus = nil
+	end
 end
 
 function RestoreAllToleranceStatus()

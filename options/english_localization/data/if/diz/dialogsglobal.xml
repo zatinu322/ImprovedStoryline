@@ -9258,7 +9258,7 @@
 		name="Dlg_pl_003126"
 		text="Well, since you're so sure about that."
 		role="PLAYER"
-		scriptResult="SaveAllToleranceStatus(RS_ALLY); TDeactivate('trMorassTeleportBefore'); TActivate('RolikBegin_PlaneOut'); AddQuestItem('AivenGo_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'AivenGo_P');  EndConversation()" />
+		scriptResult="SaveAllToleranceStatus(RS_ALLY, true); TDeactivate('trMorassTeleportBefore'); TActivate('RolikBegin_PlaneOut'); AddQuestItem('AivenGo_P'); AddFadingMsgByStrIdFormatted( 'fm_player_add_poput', 'AivenGo_P');  EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_003121"
@@ -12141,7 +12141,7 @@
 		name="Dlg_pl_003140"
 		text="Well, since you're so sure about that."
 		role="PLAYER"
-		scriptResult="CompleteQuest('ATKordan_Quest'); SaveAllToleranceStatus(RS_ALLY); EndConversation()" />
+		scriptResult="CompleteQuest('ATKordan_Quest'); SaveAllToleranceStatus(RS_ALLY, true); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_003135"

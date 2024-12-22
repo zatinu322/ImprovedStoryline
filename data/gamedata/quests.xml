@@ -1656,6 +1656,7 @@
 		ConditionToGive="all taken"
 		PrecedingQuests="d_FindOracul_Quest"
 		OnComplete="AddPlayerMoney(3000)"
+		OnFail="TDeactivate('tr_PlayerLeavesUluk')"
 		Levels="r3m1">
 		<quest
 			Name="r3m1_KnowAboutUluk_GotoUluk"

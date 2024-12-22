@@ -423,7 +423,9 @@ end
 -- Забрать квестовый предмет у игрока. Параметр - имя прототипа предмета
 
 function RemoveQuestItem( itemPrototypeName )
-	g_Player:RemoveQuestItem( itemPrototypeName )
+	if g_Player:IsQuestItemPresent( itemPrototypeName ) then
+		g_Player:RemoveQuestItem( itemPrototypeName )
+	end
 end
 
 

@@ -256,7 +256,7 @@
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="40" />
+			fontSize="30" />
 
 		<Page
 			id="29"
@@ -431,12 +431,12 @@
 
 		<Page
 			id="48"
-			text="Publisher «Buka Entertainment»"
+			text="Publisher|«Buka Entertainment»"
 			modelName="r2_man"
 			modelSkin="0"
 			modelCfg="0"
 			showTime="3"
-			fontSize="40" />
+			fontSize="30" />
 
 		<Page
 			id="49"
@@ -553,7 +553,7 @@
 			modelSkin="1"
 			modelCfg="456"
 			showTime="5"
-			fontSize="20" />
+			fontSize="18" />
 
 		<Page
 			id="62"
@@ -706,6 +706,6 @@
 			modelSkin="1"
 			modelCfg="1529"
 			showTime="5"
-			fontSize="40" />
+			fontSize="30" />
 	</Pages>
 </Credits>

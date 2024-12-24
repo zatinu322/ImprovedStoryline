@@ -47,7 +47,7 @@ data_dirs:
 options_base_dir: options
  
 # installator compatibility
-patcher_version_requirement: "2.1.1"
+patcher_version_requirement: "2.2.1"
 
 # community patch requirements
 prerequisites:

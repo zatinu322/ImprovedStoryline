@@ -117,8 +117,9 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Предыдущие версии
 
-### Для Community Patch/Remaster v1.14
+### Для Community Patch/Remaster v1.14.1
   * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
+### Для Community Patch/Remaster v1.14
   * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a) [RUS]
 
 ### Для Community Patch/Remaster v1.13
@@ -196,9 +197,10 @@ More information about all changes and innovations can be found in the mod's [we
 <a id="previous_versions_eng"></a>
 
 # Previous versions
-
+### For Community Patch/Remaster v1.14.1
+  * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
 ### For Community Patch/Remaster v1.14
- * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
+  * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
   * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
 
 ### For Community Patch/Remaster v1.13

@@ -13,11 +13,15 @@
     <a href="https://forum.deuswiki.com">
         <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/3d63e8f9-653c-4b4d-8ad2-6aa2d079fd2e", width="50", height="50", alt="Community Forum">
     </a><br/><br/>
-    <a href="https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a">
+    <a href="https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2.1-build241222a">
         <img src="https://img.shields.io/badge/Improved_Storyline-v1.2.1-0c7307" alt="Latest release"/>
     </a><br/>
-    <img src="https://img.shields.io/badge/Community_Patch/Remaster_support-v1.14.1-blue" alt="Development status"/><br/>
-    <img src="https://img.shields.io/badge/Vanilla_support-v1.02-blue" alt="Development status"/><br>
+    <a href="https://github.com/DeusExMachinaTeam/EM-CommunityPatch">
+      <img src="https://img.shields.io/badge/Community_Patch/Remaster_support-v1.14.1-blue" alt="Community Patch and Remaster support"/>
+    </a><br/>
+    <a href="https://store.steampowered.com/app/285500/Hard_Truck_Apocalypse__Ex_Machina">
+      <img src="https://img.shields.io/badge/Vanilla_support-v1.02-blue" alt="Original game support"/>
+    </a><br>
     <img src="https://img.shields.io/badge/Release_date-26/12/2024-0c7307" alt="Release date"/>
     
   </p>

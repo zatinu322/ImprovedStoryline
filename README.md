@@ -10,15 +10,16 @@
     <a href="https://www.youtube.com/@pavlikrpg">
         <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/8511cfe3-99e1-49d7-bc66-bfdd108dc189", width="50", height="50", alt="Author's YouTube">
     </a>&emsp;
-    <a href="https://discord.gg/qKK2Efx">
-        <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/3d63e8f9-653c-4b4d-8ad2-6aa2d079fd2e", width="50", height="50", alt="Community Discord">
+    <a href="https://forum.deuswiki.com">
+        <img src="https://github.com/zatinu322/Var-Mod-Trash-Machina/assets/68562524/3d63e8f9-653c-4b4d-8ad2-6aa2d079fd2e", width="50", height="50", alt="Community Forum">
     </a><br/><br/>
     <a href="https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a">
-        <img src="https://img.shields.io/badge/Improved_Storyline-v1.2-0c7307" alt="Latest release"/>
+        <img src="https://img.shields.io/badge/Improved_Storyline-v1.2.1-0c7307" alt="Latest release"/>
     </a><br/>
     <img src="https://img.shields.io/badge/Community_Patch/Remaster_support-v1.14.1-blue" alt="Development status"/><br/>
     <img src="https://img.shields.io/badge/Vanilla_support-v1.02-blue" alt="Development status"/><br>
-    <img src="https://img.shields.io/badge/Release_date-12/04/2024-0c7307" alt="Release date"/>
+    <img src="https://img.shields.io/badge/Release_date-26/12/2024-0c7307" alt="Release date"/>
+    
   </p>
 
 **Подробный веб-мануал находится [здесь](https://github.com/zatinu322/ImprovedStoryline/wiki/).**
@@ -76,7 +77,7 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 В этой модификации вас ждут переработанные диалоги, более полно раскрывающие персонажей и саму вселенную игры, новые сюжетные повороты, более разнообразные концовки и другие качественные улучшения истории.
 
-Особая благодарность Lynne, [Suslo Red](https://github.com/SusloRed), [Varisane](https://github.com/Varisane), [OverLine](https://github.com/lineisover) и всему [DEM-сообществу](https://discord.gg/qKK2Efx) за помощь в разработке.
+Особая благодарность Lynne, Traygen, [Suslo Red](https://github.com/SusloRed), [Varisane](https://github.com/Varisane), [OverLine](https://github.com/lineisover) и всему [DEM-сообществу](https://discord.gg/qKK2Efx) за помощь в разработке.
 
 <a id="changelist_rus"></a>
 
@@ -95,10 +96,10 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Скачать
 
-* ## Для Community Patch/Remaster v1.14.1
-  * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
+## Для Community Patch/Remaster v1.14.1
+  * [Improved Storyline v1.2.1]() [RUS/EN]
 
-* ## Для оригинальной игры (steam, v1.02)
+## Для оригинальной игры (steam, v1.02)
   * [Improved Storyline v1.0.5.3](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
 
 
@@ -112,14 +113,15 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 # Предыдущие версии
 
-* Для Community Patch/Remaster v1.14
+### Для Community Patch/Remaster v1.14
+  * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
   * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a) [RUS]
 
-* Для Community Patch/Remaster v1.13
+### Для Community Patch/Remaster v1.13
   * [Improved Storyline v1.1 для Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
   * [Improved Storyline v1.1 для Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
 
-* Для оригинальной игры:
+### Для оригинальной игры:
   * [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052) [RUS]
   * [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051) [RUS]
   * [Improved Storyline v1.0.5](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline105) [RUS]
@@ -156,7 +158,7 @@ _Improved Storyline_ is a storyline modification for the _Hard Truck Apocalypse_
 
 This modification features redesigned dialogues that more fully reveal the characters and the game's world itself, as well as new plot twists, more varied game endings, and other quality story enhancements.
 
-Special thanks to Lynne, [Suslo Red](https://github.com/SusloRed), [Varisane](https://github.com/Varisane), [OverLine](https://github.com/lineisover) and the entire [DEM community](https://discord.gg/qKK2Efx) for their help in development.
+Special thanks to Lynne, Traygen, [Suslo Red](https://github.com/SusloRed), [Varisane](https://github.com/Varisane), [OverLine](https://github.com/lineisover) and the entire [DEM community](https://discord.gg/qKK2Efx) for their help in development.
 
 <a id="changelist_eng"></a>
 
@@ -175,10 +177,10 @@ More information about all changes and innovations can be found in the mod's [we
 
 # Download Links
 
-* ## For Community Patch/Remaster v1.14.1
-  * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
+## For Community Patch/Remaster v1.14.1
+  * [Improved Storyline v1.2.1]() [RUS/EN]
 
-* ## For original vanilla game (steam, v1.02)
+## For original vanilla game (steam, v1.02)
   * [Improved Storyline v1.0.5.3](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906) [RUS]
 
 <a id="installation_eng"></a>
@@ -191,14 +193,15 @@ More information about all changes and innovations can be found in the mod's [we
 
 # Previous versions
 
-* For Community Patch/Remaster v1.14
+### For Community Patch/Remaster v1.14
+ * [Improved Storyline v1.2](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a) [RUS/EN]
   * [Improved Storyline v1.1](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
 
-* For Community Patch/Remaster v1.13
+### For Community Patch/Remaster v1.13
   * [Improved Storyline v1.1 for Community Patch](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518) [RUS]
   * [Improved Storyline v1.1 for Community Remaster](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518) [RUS]
 
-* For original vanilla Hard Truck Apocalypse:
+### For original vanilla Hard Truck Apocalypse:
   * [Improved Storyline v1.0.5.2](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052) [RUS]
   * [Improved Storyline v1.0.5.1](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1051) [RUS]
   * [Improved Storyline v1.0.5](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline105) [RUS]

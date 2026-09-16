@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://repository-images.githubusercontent.com/364315459/cf02f200-c30d-11eb-86cc-dd9360a6a2a4" alt="Logo" width="600">
+  <img src="./assets/isl-logo.png" alt="Logo" width="600">
 
   <br>
   <div>
@@ -14,6 +14,17 @@
 **Подробный веб-мануал находится [здесь](https://github.com/zatinu322/ImprovedStoryline/wiki/).**
 
 **Full web-manual is avaliable [here](https://github.com/zatinu322/ImprovedStoryline/wiki/).**
+
+***
+
+  <div>
+    <h3>Контакты автора / Author's contacts</h3>
+    <a href="https://www.youtube.com/@pavlikrpg"><img src="https://img.shields.io/badge/Youtube-333333?style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Youtube channel"/></a>
+    <a href="https://www.twitch.tv/pavlikrpg"><img src="https://img.shields.io/badge/Twitch-333333?style=for-the-badge&logo=twitch" alt="Twitch channel"/></a>
+    <a href="https://t.me/pavlikrpg"><img src="https://img.shields.io/badge/Telegram-333333?style=for-the-badge&logo=telegram" alt="Telegram channel"/></a>
+    <a href="https://discord.gg/sPrGBP9aFd"><img src="https://img.shields.io/badge/Discord-333333?style=for-the-badge&logo=discord" alt="Discord server"/></a>
+    <a href="https://vk.ru/pavlikrpg"><img src="https://img.shields.io/badge/VK-333333?style=for-the-badge&logo=vk&logoColor=0077FF" alt="Telegram channel"/></a>
+  </div>
 
 ***
 
@@ -54,17 +65,7 @@
 
 ***
 
-  <div>
-    <h3>Контакты автора / Author's contacts</h3>
-    <a href="https://www.youtube.com/@pavlikrpg"><img src="https://img.shields.io/badge/Youtube-333333?style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Youtube channel"/></a>
-    <a href="https://www.twitch.tv/pavlikrpg"><img src="https://img.shields.io/badge/Twitch-333333?style=for-the-badge&logo=twitch" alt="Twitch channel"/></a>
-    <a href="https://t.me/pavlikrpg"><img src="https://img.shields.io/badge/Telegram-333333?style=for-the-badge&logo=telegram" alt="Telegram channel"/></a>
-    <a href="https://discord.gg/sPrGBP9aFd"><img src="https://img.shields.io/badge/Discord-333333?style=for-the-badge&logo=discord" alt="Discord server"/></a>
-    <a href="https://vk.ru/pavlikrpg"><img src="https://img.shields.io/badge/VK-333333?style=for-the-badge&logo=vk&logoColor=0077FF" alt="Telegram channel"/></a>
-  </div>
 </div>
-
-***
 
 <a id="description_rus"></a>
 
@@ -94,10 +95,10 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 
 |Версия мода|Поддерживаемая версия игры|Локализация|Ссылка|
 |-|-|-|-|
-|v1.2.1|Community Patch/Remaster v1.14.1|RUS, EN|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2.1-build241222a)|
+|v1.2.1|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS, EN|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2.1-build241222a)|
 |v1.0.5.3|Steam v1.02|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906)|
-|v1.2|Community Patch/Remaster v1.14.1|RUS, EN|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a)|
-|v1.1|Community Patch/Remaster v1.14|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a)|
+|v1.2|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS, EN|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a)|
+|v1.1|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a)|
 |v1.1|Community Remaster v1.13|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518)|
 |v1.1|Community Patch v1.13|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518)|
 |v1.0.5.2|Steam v1.02|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052)|

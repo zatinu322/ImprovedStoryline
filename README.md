@@ -98,7 +98,7 @@ _Improved Storyline_ - сюжетная модификация к игре _Ex M
 |v1.2.1|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS, EN|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2.1-build241222a)|
 |v1.0.5.3|Steam v1.02|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906)|
 |v1.2|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS, EN|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a)|
-|v1.1|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a)|
+|v1.1|Community Remaster v1.14<br>Community Patch v1.14|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a)|
 |v1.1|Community Remaster v1.13|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518)|
 |v1.1|Community Patch v1.13|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518)|
 |v1.0.5.2|Steam v1.02|RUS|[Ссылка](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052)|
@@ -165,10 +165,10 @@ More information about all changes and innovations can be found in the mod's [we
 
 |Mod version|Supported game version|Localisation|Download link|
 |-|-|-|-|
-|v1.2.1|Community Patch/Remaster v1.14.1|RUS, EN|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2.1-build241222a)|
+|v1.2.1|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS, EN|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2.1-build241222a)|
 |v1.0.5.3|Steam v1.02|RUS|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.0.5.3-build-220906)|
-|v1.2|Community Patch/Remaster v1.14.1|RUS, EN|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a)|
-|v1.1|Community Patch/Remaster v1.14|RUS|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a)|
+|v1.2|Community Remaster v1.14.1<br>Community Patch v1.14.1|RUS, EN|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v1.2-build-240412a)|
+|v1.1|Community Remaster v1.14<br>Community Patch v1.14|RUS|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230621a)|
 |v1.1|Community Remaster v1.13|RUS|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-hd-dev-build-230518)|
 |v1.1|Community Patch v1.13|RUS|[Download](https://github.com/zatinu322/ImprovedStoryline/releases/tag/v.1.1-dev-build-230518)|
 |v1.0.5.2|Steam v1.02|RUS|[Download](https://github.com/zatinu322/ImprovedStoryline/tree/ImprovedStoryline1052)|

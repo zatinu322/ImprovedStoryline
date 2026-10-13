@@ -1,0 +1,15 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+indent_style = space
+
+[*.py]
+indent_size = 4
+
+[*.{xml,lua}]
+end_of_line = crlf
+charset = cp1251

@@ -1,4 +1,4 @@
-### Вся информация, инструкция по установке и советы по прохождению находятся в [веб-мануале](https://github.com/zatinu322/ImprovedStoryline/wiki) к моду.
+# Вся информация, инструкция по установке и советы по прохождению находятся в [веб-мануале](https://github.com/zatinu322/ImprovedStoryline/wiki) к моду.
 
 - [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
 - [https://github.com/zatinu322/ImprovedStoryline/wiki](https://github.com/zatinu322/ImprovedStoryline/wiki)
@@ -10,6 +10,9 @@
 ## v1.0.6
 
 1. Добавлена возможность установить мод через [ComMod](https://github.com/Zvetkov/ComMod).
+2. Скорректировано центрирование текста в титрах и катсценах.
+3. Прочие обновления безопасности.
+4. Обновлена [ISL Wiki](https://github.com/zatinu322/ImprovedStoryline/wiki). PDF-мануал больше не обновляется и распространяется в составе мода.
 
 ## v1.0.5.3 build 220906
 

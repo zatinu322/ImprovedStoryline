@@ -136,7 +136,7 @@
 
 	<Reply
 		name="Dlg_npc_002734"
-		text="...Ну и как только я узнал, что девушку захватили в плен, а ключ от ворот был безвозвратно утерян, я приказал Миколке взять немного динамита и взорвать петли. Кстати, а зачем вы вообще прибыли в эти места?"
+		text="...Ну и как только я узнал, что девушку захватили в плен, а ключ от ворот был безвозвратно утерян, я приказал Николаю взять немного динамита и взорвать петли. Кстати, а зачем вы вообще прибыли в эти места?"
 		role="NPC"
 		scriptCondition="QuestStatus('CivilOrAdept_Quest')==Q_CANBEGIVEN"
 		scriptResult="TakeQuest('CivilOrAdept_Quest')"
@@ -706,7 +706,7 @@
 
 	<Reply
 		name="Dlg_npc_002834"
-		text="Напасть на Кейтберг. Ты, Миколка на Грейдере и ещё пара наших бойцов нападёте на город снаружи и поснимаете доты, а другие с помощью этих чертежей проникнут внутрь города через канализационные трубы и ударят с тыла. Подобная тактика должна минимизировать потери среди мирного населения."
+		text="Напасть на Кейтберг. Ты, Николай на Грейдере и ещё пара наших бойцов нападёте на город снаружи и поснимаете доты, а другие с помощью этих чертежей проникнут внутрь города через канализационные трубы и ударят с тыла. Подобная тактика должна минимизировать потери среди мирного населения."
 		role="NPC"
 		nextReplies="Dlg_pl_002835" />
 
@@ -6137,7 +6137,7 @@
 		name="Dlg_pl_000474"
 		text="Трудности меня не пугают!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromVillage'); 
+		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromVillage');
  EndConversation()" />
 
 	<Reply
@@ -6175,7 +6175,7 @@
 		name="Dlg_pl_000480"
 		text="Слушаюсь!"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromKaravanSNG'); 
+		scriptResult="CompleteQuest('r2m2_ReturnToMarecciaFromKaravanSNG');
  EndConversation()" />
 
 	<Reply
@@ -10987,7 +10987,7 @@
 		name="Dlg_pl_003240"
 		text="Ладно, ладно, сам выйду."
 		role="PLAYER"
-		scriptResult="CompleteQuest( 'd_BombInAsgard_Quest' ); 
+		scriptResult="CompleteQuest( 'd_BombInAsgard_Quest' );
  EndConversation()" />
 <!--Root/r1m3/Сюжетные/Шахтер со взрывчаткой для моста -->
 	<Reply
@@ -11161,7 +11161,7 @@
 		name="Dlg_pl_001815"
 		text="Никуда не уходи, сейчас добуду пару золотых."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); 
+		scriptResult="GetCurNpc():SetSpokenCount(1);
  EndConversation()" />
 
 	<Reply
@@ -12254,7 +12254,7 @@
 		name="Dlg_pl_d3d204"
 		text="В данный момент мне нечем мотивировать твои умственные способности..."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount(1); 
+		scriptResult="GetCurNpc():SetSpokenCount(1);
  EndConversation()" />
 
 	<Reply
@@ -12323,7 +12323,7 @@
 		name="Dlg_pl_d3d230"
 		text="Посмотрю, что я смогу сделать с работниками. Попытаюсь их уговорить."
 		role="PLAYER"
-		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest'); 
+		scriptResult="CompleteQuest('d_ReturntoMerOfMinin_Quest');
  EndConversation()" />
 
 	<Reply
@@ -12452,7 +12452,7 @@
 		name="Dlg_pl_d3d276"
 		text="Раз другого пути нет, придется мне ехать. Так что не поминайте лихом."
 		role="PLAYER"
-		scriptResult="CompleteQuest('d_FindLisaInPesht_Quest'); 
+		scriptResult="CompleteQuest('d_FindLisaInPesht_Quest');
  EndConversation()" />
 
 	<Reply
@@ -12477,7 +12477,7 @@
 		name="Dlg_pl_dd2154"
 		text="[про себя] А у самих-то что, ноги отсохли? Трусы…"
 		role="PLAYER"
-		scriptResult="TakeQuest( 'd_GetBomb_Quest' ); 
+		scriptResult="TakeQuest( 'd_GetBomb_Quest' );
  EndConversation()" />
 
 	<Reply
@@ -13490,7 +13490,7 @@
 		name="MainSigner_hellodlg0_P1_2"
 		text="Не думаю, что проблемы крестьян меня заинтересуют."
 		role="PLAYER"
-		scriptResult="GetCurNpc():SetSpokenCount( 1 ); 
+		scriptResult="GetCurNpc():SetSpokenCount( 1 );
  EndConversation()" />
 <!--Root/r1m2/Опциональные/Профессор в Мидгарде-->
 	<Reply

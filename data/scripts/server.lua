@@ -1,12 +1,12 @@
 -- ----------------------------------------------------------------------------
--- 
+--
 -- Workfile: server.lua
 -- Created by: Plus
 -- Copyright (C) 2000-2003 Targem Ltd. All rights reserved.
--- 
+--
 -- Global server related stuff. This script is executed on server init,
 -- from CServer::Init().
--- 
+--
 -- ----------------------------------------------------------------------------
 --  $Id: server.lua,v 1.53 2005/07/26 09:06:59 anton Exp $
 -- ----------------------------------------------------------------------------
@@ -27,9 +27,9 @@ EXECUTE_SCRIPT "data\\scripts\\dialoghelpers.lua"
 -- include queststates.lua
 EXECUTE_SCRIPT "data\\scripts\\queststates.lua"
 
-LOG("IMPROVED STORYLINE V1.0.5.3 BUILD 220906")
+LOG("IMPROVED STORYLINE V1.0.6 BUILD 241014")
 
-ISL_VERSION = "1053-220906"
+ISL_VERSION = "106-241014"
 
 -- global object repository
 g_ObjCont = GET_GLOBAL_OBJECT "g_ObjContainer"
@@ -93,14 +93,14 @@ end
 
 -- shortcut: object constructor
 function CreateNewObject( arg )
-	if not arg.parentId then 
-		arg.parentId = -1 
+	if not arg.parentId then
+		arg.parentId = -1
 	end
-	
-	if not arg.belong then 
-		arg.belong = 1001 
+
+	if not arg.belong then
+		arg.belong = 1001
 	end
-	
+
 	return _CreateNewObject( arg.prototypeName, arg.objName, arg.parentId, arg.belong )
 end
 
@@ -122,8 +122,8 @@ end
 --Activate trigger
 function TActivate( TriggerName )
 	local trig1 = GetEntityByName(TriggerName)
-	if trig1 then 
-		trig1:Activate() 
+	if trig1 then
+		trig1:Activate()
 	end
 end
 
@@ -131,15 +131,15 @@ end
 --Deactivate trigger
 function TDeactivate( TriggerName )
 	local trig1 = GetEntityByName(TriggerName)
-	if trig1 then 
-		trig1:Deactivate() 
+	if trig1 then
+		trig1:Deactivate()
 	end
 end
 
 
 function SetVar(Name, Value)
 	local trig1 = GetEntityByName("GlobalVar")
-	if trig1 then 
+	if trig1 then
 		local tmpv=Value
 	 	if type(Value)=="table" then
 	 		tmpv=Value[1]
@@ -148,14 +148,14 @@ function SetVar(Name, Value)
 	 		end
 	 	end
 		local GAIParam v = tmpv
-		trig1:SetVar(Name, v ) 
+		trig1:SetVar(Name, v )
 	end
 end
 
 function GetVar(Name)
 	local trig1 = GetEntityByName("GlobalVar")
-	if trig1 then 
-		return trig1:Var(Name) 
+	if trig1 then
+		return trig1:Var(Name)
 	else
 		return nil
 	end
@@ -182,17 +182,17 @@ CINEMATIC_AIM_TO_POINT	= 2
 CINEMATIC_FROM_POS		= 3
 CINEMATIC_NO_AIM		= 4
 
-function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPanel, RelativeRotations, 
+function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPanel, RelativeRotations,
 	WaitWhenStop, InterpolateFromPrevious )
-	
+
 	local cinematic = GetCinematic()
-	-- RuleConsole("FogOfWar 0")	
+	-- RuleConsole("FogOfWar 0")
 
 	SetCinematicFadeParams( StartFade, EndFade )
 
 	ChangeMode("GS_CINEMATIC")
 	--cinematic:ResetAim()
-	
+
 	if VisPanel ~= nil then
         	SetCinematicCinemaPanel( VisPanel )
 	else
@@ -200,7 +200,7 @@ function FlyLinked( PathName, Id, PlayTime, StartFade, EndFade, LookToId, VisPan
 	end
 
 	cinematic:Load("camera_paths.xml")
-	cinematic:SetPath(PathName)	
+	cinematic:SetPath(PathName)
 
 	cinematic:SetRelativePoints(1)
 	cinematic:SetRelativeRotations(0)
@@ -223,22 +223,22 @@ end
 -- Регистрирует вращение камеры
 function FlyAround( Phi, Theta, Radius, PlayTime, curPos, Id, StartFade, EndFade, PathName, VisPanel,
 	WaitWhenStop, InterpolateFromPrevious )
-	
+
 	local cinematic = GetCinematic()
 	-- RuleConsole("FogOfWar 0")
 
 	SetCinematicFadeParams( StartFade, EndFade )
-	
+
 	if not cinematic then
 		println( "Error: couldn't get cinematic" )
 		return
 	end
-	
+
 	if not PathName then
 		PathName = ""
-	end	
+	end
 
-	ReadyCinematic()	
+	ReadyCinematic()
 --	ChangeMode("GS_CINEMATIC")
 --	cinematic:ResetAim()
 	cinematic:SetAimToID(Id)
@@ -258,7 +258,7 @@ end
 -- Регистрирует пролет камеры по пути
 function Fly( PathName, AimType, Target, Time, StartFade, EndFade, VisPanel,
 	WaitWhenStop, InterpolateFromPrevious )
-	
+
 	local cinematic = GetCinematic()
 	-- RuleConsole("FogOfWar 0")
 
@@ -276,7 +276,7 @@ function Fly( PathName, AimType, Target, Time, StartFade, EndFade, VisPanel,
 		println( "Error: EndFade parameter missing" )
 		return
 	end
-	
+
 --	ReadyCinematic()
 	cinematic:Load("camera_paths.xml")
 	SetCinematicFadeParams( StartFade, EndFade )
@@ -291,21 +291,21 @@ function Fly( PathName, AimType, Target, Time, StartFade, EndFade, VisPanel,
 
 	--cinematic:SetPath(PathName)
 
-	if AimType == CINEMATIC_AIM_TO_ID then 
+	if AimType == CINEMATIC_AIM_TO_ID then
 		cinematic:SetAimToID( Target )
 		cinematic:SetLookTo( true )
 	end
-	
-	if AimType == CINEMATIC_AIM_TO_POINT then 
+
+	if AimType == CINEMATIC_AIM_TO_POINT then
 		cinematic:SetAim( Target )
 		cinematic:SetLookTo( true )
-	end	
-	
-	if AimType == CINEMATIC_FROM_POS or AimType == CINEMATIC_NO_AIM then 
+	end
+
+	if AimType == CINEMATIC_FROM_POS or AimType == CINEMATIC_NO_AIM then
 		cinematic:SetLookTo( false )
 	end
-	
-	if AimType == CINEMATIC_FROM_POS then 
+
+	if AimType == CINEMATIC_FROM_POS then
 		local pos, rot, lookAt = GetCameraPos()
 		cinematic:SetPathFromPos( pos, rot, PathName )
 	else
@@ -317,19 +317,19 @@ function Fly( PathName, AimType, Target, Time, StartFade, EndFade, VisPanel,
 
 	cinematic:SetWaitWhenStop( WaitWhenStop )
 	cinematic:SetLerpFromPreviousItem( InterpolateFromPrevious )
-	
-	cinematic:Play(Time)		
+
+	cinematic:Play(Time)
 end
 
 -- Запускает все зарегистрированные ролики на проигрывание
 function StartCinematic()
 	local cinematic = GetCinematic()
 	cinematic:StartCinematic()
-	
+
 	if g_CinemaPanel then
-		g_CinemaPanel:ClearMessages()	
+		g_CinemaPanel:ClearMessages()
 	end
-	
+
 	UpdateCinematic( 0 ) -- by Anton: don't touch this!
 
 	IMPULSES = GET_GLOBAL_OBJECT "IMPULSES"
@@ -339,7 +339,7 @@ end
 -- Подготавливает игру к проигрыванию скриптового ролика
 function ReadyCinematic()
 	local cinematic = GetCinematic()
-	
+
 	if not cinematic then
 		println( "Error: couldn't get cinematic" )
 		return
@@ -356,7 +356,7 @@ end
 
 
 
--- shortcut: Play Camera rout   
+-- shortcut: Play Camera rout
 function FlyCamera( PathName, AimType, Target, Time, StartFade, EndFade )
 	Fly( PathName, AimType, Target, Time, StartFade, EndFade )
 end
@@ -373,10 +373,10 @@ function GameCamera()
 	if (GetVar("PlayerModel").AsInt == 1) then
 		ShowPlayerModel(1)
 		SetVar("PlayerModel", 2)
-	end                         
+	end
 	local oldSpeed = GetVar("Speed").AsFloat
 	if oldSpeed == 0 then
-	  oldSpeed = 1 
+	  oldSpeed = 1
 	end
 	SetGameSpeed( oldSpeed )
 	local IsSetCameraPos = GetVar("IsSetCameraPos").AsInt
@@ -385,26 +385,26 @@ function GameCamera()
 -- 		println("IsSetCameraPos")
 	end
 	SetVar("IsSetCameraPos",0)
--- Удаление актеров			
+-- Удаление актеров
 	local DA = getObj("Destroy_Actors")
-	if not(DA) then	
-		RemoveAPlayer()	
+	if not(DA) then
+		RemoveAPlayer()
 	else
 		DA:SetVar( "NPCID", 0 )
 		DA:Activate()
 	end
 -- 	Работа с авто-НПС после npc_fly
 	local NPCID = GetVar( "NPCID" ).AsInt
---	println(NPCID)	
+--	println(NPCID)
 	if ( NPCID > 0 ) then
 		SetVar( "NPCID", 0 )
 		if GetEntityByID( NPCID ) then
 			GetEntityByID( NPCID ):AddModifier( "Belong", "= "..tostring( GetVar( "NPCBelong" ).AsInt ) )
-			if GetVar( "NPCH" ).AsInt == 1 then 
+			if GetVar( "NPCH" ).AsInt == 1 then
 				if DA then
 					DA:SetVar( "NPCID", NPCID )
 				else
-					GetEntityByID( NPCID ):Hide() 
+					GetEntityByID( NPCID ):Hide()
 				end
 			end
 		end
@@ -434,7 +434,7 @@ function getObj( name )
 	local obj = nil
 	if type(name) == "string" then
 		obj = GetEntityByName( name )
-	else if type(name) == "number" then 
+	else if type(name) == "number" then
 			obj = GetEntityByID( name )
 		else
 			obj = name
@@ -491,7 +491,7 @@ function CreateTeam(Name, Belong, CreatePos, ListOfVehicle, WalkPos, IsWares, Ro
 -- TeamCreate("ExtrGuardTeam",1012,CVector(985.260, 306.000, 2541.873),{"Revolutioner1","Revolutioner2","Bug01","Bug01","Revolutioner2"})
 -- Будет создана команда из 5 машин. У команды будет имя ExtrGuardTeam, а у машин
 -- ExtrGuardTeam_vehicle_0, ExtrGuardTeam_vehicle_1, .. ExtrGuardTeam_vehicle_4.
--- Машины выстоятся в ряд по оси Z (друг за другом). 
+-- Машины выстоятся в ряд по оси Z (друг за другом).
 	local teamID = CreateNewObject{
 			prototypeName = "team",
 			objName = Name,
@@ -530,7 +530,7 @@ function CreateTeam(Name, Belong, CreatePos, ListOfVehicle, WalkPos, IsWares, Ro
 
 				vehicle:AddItemsToRepository(RandWarez[r], 1)
 			end
-			
+
 			-- by Anton: это не нужно, т.к. вызываем SetGamePositionOnGround()
 			-- CreatePos.y = g_ObjCont:GetHeight(CreatePos.x, CreatePos.z) + 1.3 * vehicle:GetSize().y
 				if Rotate then
@@ -538,7 +538,7 @@ function CreateTeam(Name, Belong, CreatePos, ListOfVehicle, WalkPos, IsWares, Ro
 					vehicle:SetRotation(Quaternion(Rotate))
 				end
 			vehicle:SetGamePositionOnGround(CreatePos)
-			
+
 			 team:AddChild(vehicle)
 		 local vh_length=1.7 * vehicle:GetSize().z
 		 CreatePos.z=CreatePos.z+vh_length
@@ -564,7 +564,7 @@ function Dist(obj1, obj2)
 		println ("ERROR! Zero-Object...")
 	end
 
-	if obj1 and obj2 then 
+	if obj1 and obj2 then
 		L = (obj1:GetPosition() - obj2:GetPosition()):length()
 	end
 
@@ -587,7 +587,7 @@ end
 
 function setPos(name, position)
 	local obj = getObj( name )
-	if obj then 
+	if obj then
 		if obj:GetClassName()=="Vehicle" then
 			obj:SetGamePositionOnGround(position)
 		else
@@ -606,7 +606,7 @@ end
 
 function setRot(name, rotation)
 	local obj = getObj( name )
-	if obj then 
+	if obj then
 		obj:SetRotation(rotation)
 		return rotation
 	else
@@ -676,7 +676,7 @@ function CreateHuman( PrototypeName, Belong, Pos, HumanName, PathName )
 		nameHuman = "Human"..tostring(random(9999))
 	end
 
-	-- Create human belong	
+	-- Create human belong
    	local bel
 
 	if belong then
@@ -693,7 +693,7 @@ function CreateHuman( PrototypeName, Belong, Pos, HumanName, PathName )
 	}
 
 	local human = GetEntityByID( id )
-	
+
 	if not human then
 		println( "Error: human ".. PrototypeName .. " is not created" )
 		return nil
@@ -708,7 +708,7 @@ function CreateHuman( PrototypeName, Belong, Pos, HumanName, PathName )
 		println( "Error: path ".. PathName .." for human ".. nameHuman .. " is not added" )
 		return nil
 	end
-	
+
 	if not human:SetWalkPathByName( PathName  ) then
 		println( "Error: path ".. PathName .." for human ".. nameHuman .. " is not set" )
 		return nil
@@ -768,7 +768,7 @@ function AddPlayerItemsWithBox(name, count, boxtype, pos)
 		-- println("count>WasAdd")
 		local chestID = CreateNewObject{	prototypeName = "someChest",
 											objName = "ItemsChest"..random(1000)
-								  	   }	
+								  	   }
 		local MyChest=GetEntityByID(chestID)
 		if pos==nil then
 			pos = CVector(GetPlayerVehicle():GetPosition())
@@ -810,10 +810,10 @@ function AddChildByPrototype( obj, protName)
 			local pr_id = CreateNewObject{
 											prototypeName = protName,
 											objName = protName..random(10000)
-								  	   }	
+								  	   }
 			local mych = GetEntityByID( pr_id )
 			if mych then
-				if myobj then 
+				if myobj then
 					myobj:AddChild( mych )
 				end
 			end
@@ -823,13 +823,13 @@ function AddChildByPrototype( obj, protName)
 				local id = CreateNewObject{
 												prototypeName = protName[i],
 												objName = protName[i]..random(10000)
-									  	   }	
+									  	   }
 				local child = GetEntityByID( id )
-				if myobj then 
+				if myobj then
 					myobj:AddChild( child )
 				end
 				i = i+1
-			end			
+			end
 		end
 	end
 end
@@ -855,7 +855,7 @@ function CreateNewBreakableObject(prototypeName, objName, belong, pos, rot,skin)
 	local obj		=	GetEntityByID (dObj)
 
 	if skin == nil then skin = 0 end
-	
+
 	obj:SetRotation ( rot )
 	obj:SetPosition ( pos )
 	obj:SetSkin ( skin )
@@ -952,7 +952,7 @@ function PlayerDead ( ppp )
 	CreateNewDummyObject("cub", "yashik", -1, 1100, pos, Quaternion(0.0, 0.0, 0.0, 1.0), 0)
     local obj = getObj("yashik")
     if obj==nil then
-    	return 
+    	return
     end
     local objid = obj:GetId()
 	pos.y = pos.y + 20
@@ -1031,10 +1031,10 @@ function GenerateRandomAffixList(CountAffixes, ClassAffixes)
 		local sub = affcount-i
 
         local rndgr
-        repeat 
+        repeat
 			rndgr = random (3)
 	    until canused [rndgr] == 1
-	 
+
 		canused [rndgr] = 0
 
 		if rndgr == 1 then
@@ -1077,7 +1077,7 @@ function GenerateRandomAffixList(CountAffixes, ClassAffixes)
 			listaff[i] = listaff3 [rndsubgr][rndnum]
 			TotalClass = TotalClass + rndnum
 		else
-			LOG("TRIGGER ERROR: Create Affixes - internal error. Out of range")	
+			LOG("TRIGGER ERROR: Create Affixes - internal error. Out of range")
 		end
 	end
 
@@ -1087,27 +1087,27 @@ end
 
 function CreateBoxWithAffixGun(pos, GunPrototype, CountAffixes, ClassAffixes, BoxName)
 -- Создает бокс с именем name в позиции pos
--- 
--- 
+--
+--
 	local name = BoxName
-	if name==nil then 
+	if name==nil then
 		name = "ItemsChest"..random(10000)
 	end
 	if pos==nil or GunPrototype==nil then
-		LOG("TRIGGER ERROR: Can't create box or gun. Not positiun ot gun prototype")			
+		LOG("TRIGGER ERROR: Can't create box or gun. Not positiun ot gun prototype")
 		return nil
 	end
 	local afflist = GenerateRandomAffixList ( CountAffixes, ClassAffixes )
 	local chestID = CreateNewObject{	prototypeName = "someChest",
 										objName = name
-							  	   }	
+							  	   }
 
 	local MyChest=GetEntityByID(chestID)
 	if MyChest==nil then
 		LOG("TRIGGER ERROR: Can't create box ")
 		return nil
 	end
-		
+
 	MyChest:SetPosition(pos)
 	local id = CreateNewObject{ prototypeName = GunPrototype, objName = "RandomGuns"..random(10000), belong = 1100 }
     local gun = GetEntityByID( id )
@@ -1128,7 +1128,7 @@ function AddVehicleGunsWithAffix( ObjName, GunPrototype, ListOfAffixes, GunName)
 --	ASSERT ( ObjPrototype~=nil, "Create Affix Assert: No Object Prototype ")
 --	ASSERT ( GetPlayerVehicle~=nil, "Create Affix Assert: Player Vehicle Not Exists")
 	local veh = getObj(ObjName)
-    if GunPrototype==nil or veh==nil then 
+    if GunPrototype==nil or veh==nil then
        LOG("TRIGGER ERROR: Create Affixes - No Object Prototype or Object not exists")
        return nil
     end
@@ -1136,7 +1136,7 @@ function AddVehicleGunsWithAffix( ObjName, GunPrototype, ListOfAffixes, GunName)
 
 	local name = GunName
 
-	if name==nil then 
+	if name==nil then
 		name = "RandomGuns"..random(10000)
 	end
 
@@ -1210,7 +1210,7 @@ function AddPlayerGunsWithAffixOrMoney( Money, GunPrototype, ListOfAffixes, GunN
 --	ASSERT ( GetPlayerVehicle~=nil, "Create Affix Assert: Player Vehicle Not Exists")
 	if GetPlayerVehicle():CanPlaceItemsToRepository( GunPrototype, 1 )~=nil then
 		local gun = AddVehicleGunsWithAffix (GetPlayerVehicle(), GunPrototype, ListOfAffixes, GunName)
-		if gun then 
+		if gun then
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", GunPrototype)
 		else
 			AddPlayerMoney(Money)
@@ -1227,7 +1227,7 @@ function AddPlayerGunsWithRandomAffixOrMoney( Money, GunPrototype, CountAffixes,
 --	ASSERT ( GetPlayerVehicle~=nil, "Create Affix Assert: Player Vehicle Not Exists")
 	if GetPlayerVehicle():CanPlaceItemsToRepository( GunPrototype, 1 )~=nil then
 		local gun = AddVehicleGunsWithRandomAffix( GetPlayerVehicle(), GunPrototype, CountAffixes, ClassAffixes, GunName)
-		if gun then 
+		if gun then
 			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", GunPrototype)
 		else
 			AddPlayerMoney(Money)
@@ -1272,10 +1272,10 @@ function SaveAllToleranceStatus(SetStatus)
 		GL_ToleranceStatus[i] = {}
 		for j=1,100 do
 			GL_ToleranceStatus[i][j] = GetTolerance(i+1000, j+1000)
-			
+
 	    end
   	end
-  	if SetStatus then 
+  	if SetStatus then
 		for i=1,100 do
 			for j=1,100 do
 				SetTolerance(i+1000, j+1000, SetStatus)
@@ -1283,7 +1283,7 @@ function SaveAllToleranceStatus(SetStatus)
   		end
 
   	end
-end                     
+end
 
 function RestoreAllToleranceStatus()
 	for i=1,100 do

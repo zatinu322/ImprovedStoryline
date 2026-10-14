@@ -580,7 +580,7 @@
 		id="uralCab05"
 		locForm="0"
 		value="Витязь" />
-	
+
 	<Item
 		id="uralCab06"
 		locForm="0"
@@ -610,7 +610,7 @@
 		id="uralCargo05"
 		locForm="0"
 		value="Тигр" />
-	
+
 	<Item
 		id="uralCargo06"
 		locForm="0"
@@ -1945,8 +1945,8 @@
 	<Item
 		id="Dozer02"
 		locForm="0"
-		value="Миколка" />
-	
+		value="Николай" />
+
 	<Item
 		id="UralTikhomir"
 		locForm="0"

@@ -10,27 +10,26 @@ description: |
 authors: pavlikrpg
 
 logo: assets/logo.jpg
-release_date: "14.10.2026"
+release_date: "15.10.2026"
 link: https://github.com/zatinu322/ImprovedStoryline/
 trailer_url: https://www.youtube.com/watch?v=c7kZsW94dWY
 tags: [story]
 change_log: assets/changelog.md
 other_info: assets/faq.md
 
-
-# screenshots:
-# - img: assets/screen_0.jpg
-#   text: Новый зимний регион, состоящий из трёх локаций.
-# - img: assets/screen_1.jpg
-#   text: Один из множества переработанных игровых диалогов.
-# - img: assets/screen_2.jpg
-#   text: Дополненная начальная катсцена - Лиса разговаривает с Феликсом на его базе.
-# - img: assets/screen_3.jpg
-#   text: Катсцена с подлодкой в Хеле с восстановленными вырезанными фразами главного героя.
-# - img: assets/screen_4.jpg
-#   text: Система отображения текущих попутчиков игрока.
-# - img: assets/screen_5.jpg
-#   text: Катсцена в начале нового второстепенного квеста.
+screenshots:
+- img: assets/screenshots/screen_0.jpg
+  text: Новый зимний регион, состоящий из трёх локаций.
+- img: assets/screenshots/screen_1.jpg
+  text: Один из множества переработанных игровых диалогов.
+- img: assets/screenshots/screen_2.jpg
+  text: Дополненная начальная катсцена - Лиса разговаривает с Феликсом на его базе.
+- img: assets/screenshots/screen_3.jpg
+  text: Катсцена с подлодкой в Хеле с восстановленными вырезанными фразами главного героя.
+- img: assets/screenshots/screen_4.jpg
+  text: Система отображения текущих попутчиков игрока.
+- img: assets/screenshots/screen_5.jpg
+  text: Новая сюжетная линия во втором регионе.
 
 no_base_content: false
 strict_requirements: true
